@@ -1,0 +1,42 @@
+Ting som gjenstår:
+
+- Kapittel-nav må fjernes når det ikke finnes kapitler [J&P]
+
+- Søk må funke
+- - Søkeboks må tømmes på fokus [J]
+- - Søkesiden må styles [J]
+
+- Avansert søk synes fortsatt i IE [J]
+
+- Fjerne farger på overskrifter i innledning (overskriv TEI stilark) [J]
+
+- Veiledninger må inn [J]
+- Lenker til veiledninger må inn [J]
+
+- Forsidetekst må inn [J]
+
+- Tidslinje-data må inn [J]
+
+- Faksimile må sentreres på window_resize [J]
+
+- Fjerne unødvendig tekst fra filene, f.eks "A TEI project" + lenker i bunn av tekstene osv
+
+- Root-text må inn i variant-dropdown i hovedtekst-kolonnen
+
+- Faksimile trenger sidetall mellom forrige/neste-lenkene
+
+- "[Page]" må bli sidetall-spans
+
+- I "notater"-fanen trenger vi liste over lemma under hvert notat
+
+- Hvis man lukker alle høyrekolonner og så trykker på et notat, åpnes en ny kolonne og notatfanen vises, men det skrolles ikke til riktig notat..trengs det et delay for at det skal funke?
+
+- Dobbeltsjekke at all funksjonalitet funker i *alle* nettlesere (Chrome, Firefox, Opera?, IE8/9) [J/P]
+
+- Bakgrunnen scroller ikke med hovedtekst [J]
+
+- Ny loading-animasjon på tooltips i kommentarer [J] [done]
+
+- Når man har søkt på noe erstattes "Verk"-menyen i headeren med feil liste
+
+- Footeren trenger en liste med verk (som i headeren) [J]

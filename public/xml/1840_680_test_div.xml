@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng&#x201D; type="xml"?>
+<TEI
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:math="http://www.w3.org/1998/Math/MathML"
+    xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Danske H&#x00F8;itids-Psalmer ...</title>
+                <author>Nicolai Frederik Severin Grundtvig</author>
+                <editor>Krista Stinne Greve Rasmussen</editor>
+                <editor>Else Riisager</editor>
+            </titleStmt>
+            <editionStmt>
+                <p>Edition Statement</p>
+            </editionStmt>
+            <extent>19 KB</extent>
+            <publicationStmt>
+                <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+                <distributor>Grundtvig Centeret, Vartov</distributor>
+                <authority/>
+                <idno>433A</idno>
+                <date/>
+            </publicationStmt>
+            <seriesStmt>
+                <title/>
+                <idno/>
+                <respStmt>
+                    <resp/>
+                    <name/>
+                </respStmt>
+                <idno/>
+            </seriesStmt>
+            <notesStmt>
+                <note>Note1</note>
+                <note>Note2</note>
+                <note>Note3</note>
+                <note>Note4</note>
+                <note>Note5</note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <title>Danske<lb/> H&#x00F8;itids-Psalmer<lb/> til<lb/> Tusindaars-Festen. </title>
+                    <author>Nik. Fred. Sev. Grundtvig<lb/>
+                        <note>residerende Capellan ved <placeName key="fak9">Vor Frelsers Kirke</placeName>.</note>
+                    </author>
+                    <pubPlace><placeName key="fak8">Ki&#x00F6;benhavn</placeName>.</pubPlace>
+                    <publisher>
+                        <note>Trykt paa den Wahlske Boghandlings Forlag,</note>
+                        <note>hos C. Gr&#x00E6;be.</note>
+                    </publisher>
+                    <date>1826.</date>
+                </bibl>
+                <listWit>
+                    <witness xml:id="A">Danske H&#x00F8;itids-Psalmer, K&#x00F8;benhavn
+                        1826</witness>
+                    <witness xml:id="B">Andettryk</witness>
+                    <witness xml:id="GSV">Grundtvigs Sang-V&#x00E6;rk</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+                <p>Grundtvig Centeret arbejder med:</p>
+                <p>1.En digital og kommenteret udgave af Grundtvigs skrifter</p>
+                <p>2.En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede
+                    sig</p>
+                <p>2.a.Teologi og kirke</p>
+                <p>2.b.Demokrati og folkelighed</p>
+                <p>3.c.P&#x00E6;dagogik og folkeoplysning</p>
+                <p>3.Videnudveksling, undervisning og formidling</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date>Date</date>
+                <note>Note</note>
+            </creation>
+        </profileDesc>
+        <revisionDesc>
+            <change xml:id="KSR" who="KSR" when="2010-12-10">test: div, sideskift</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage type="main">
+                <docTitle>
+                    <titlePart type="main"> <pb n="1" type="gv"/>B&#x00F8;n og Begreb<lb/>om en<lb/>Dansk H&#x00F8;iskole i
+                        S&#x00F8;er.</titlePart>
+                    <titlePart type="sub"/>
+                    <fw type="graphic"/>
+                </docTitle>
+                <byline>af<lb/>
+                    <docAuthor>Nik. Fred. Sev. Grundtvig.</docAuthor>
+                </byline>
+                <epigraph> </epigraph>
+                <fw type="graphic"/>
+                <docEdition/>
+                <fw type="graphic"/>
+                <docImprint>
+                    <pubPlace>Ki&#x00F8;benhavn</pubPlace>.<lb/>Paa den Wahlske Boghandlings
+                    Forlag.<lb/>Trykt hos C. Gr&#x00E6;be &amp; S&#x00F8;n.<lb/>
+                    <docDate>1840</docDate>. </docImprint>
+            </titlePage>
+        </front>
+        <body>
+        <div type="main">
+            <div type="poem">
+                <head rend="center"> <pb n="2" type="gv"/><pb n="3" type="gv"/>B&#x00F8;n til Majest&#x00E6;ten</head>
+                <head rend="center">for</head>
+                <head rend="center">Danskhed og Modersmaal.</head>
+                <lg>
+                    <l><hi rend="initial">H</hi>&#x00F8;ibaarne Konning over Svane-Vangen,</l>
+                    <l>Hvor Lykke-Skibets Ki&#x00F8;lvand staaer endnu!</l>
+                    <l><hi rend="italic">Skjoldungers</hi> Arving til <hi rend="italic">Valhalla</hi>-Sangen,</l>
+                    <l>Som Lundens Fugle komme end ihu!</l>
+                    <l>Jeg har en B&#x00F8;n til <hi rend="italic">Danmarks</hi> Folke-Fader,</l>
+                    <l>Til Mildheds Konge-Speil og Urets Hader,</l>
+                    <l>O, laan den Øre i beleilig Tid!</l>
+                </lg>
+                <lg>
+                    <l>Jeg beder ei om Deel i Magt og V&#x00E6;lde,</l>
+                    <l>Udeelt de hvile i Kong <hi rend="italic">Christjans</hi> Haand!</l>
+                    <l>Vor Konges Haand, selv rystende af Ælde,</l>
+                    <l>Omvindes kun af <hi rend="italic">Ki&#x00E6;rlighedens Baand</hi>,</l>
+                    <l>Mens Marken fryder sig i Hegn af Loven,</l>
+                    <l>Og Spiret gr&#x00F8;nnes som en B&#x00F8;g i Skoven,</l>
+                    <l>Og Dag indslumrer s&#x00F8;dt ved Aften-Sang!</l>
+                </lg>
+                <lg>
+                    <l>Jeg beder ei om Baand paa nogen Tunge,</l>
+                    <l>Og ei om Herreskjold for nogen Tro,</l>
+                    <l>Thi <hi rend="italic">frit</hi> at troe, at tale og at sjunge,</l>
+                    <l>Jeg &#x00F8;nsker alle dem, paa Marken boe,</l>
+                    <l>Og ikkun <hi rend="italic">Een</hi> tilgavns kan lukke Munde,</l>
+                    <l>Og ene <hi rend="italic">Han</hi>, som Hjerter kan udgrunde,</l>
+                    <l>Har over <hi rend="italic">Tro</hi> og <hi rend="italic">Tanke</hi> Hals og Haand.</l>
+                </lg>
+                <lg>
+                    <l><pb n="4"/>Jeg beder ei om Guld og gr&#x00F8;nne Skove,</l>
+                    <l>Og endnu mindre om en <hi rend="italic">Bispe &#x2013; Stol</hi>;</l>
+                    <l>Gid kun mit Øie, til jeg skal hensove,</l>
+                    <l>Som nu tilfreds maa see den gyldne Soel!</l>
+                    <l>For Øret lyde Fugle-Sang fra Lunden!</l>
+                    <l>I Hjertet varmt, og Smeltende i Munden,</l>
+                    <l>Mig v&#x00E6;re alle Dage <hi rend="italic">Livets</hi> Ord!</l>
+                </lg>
+                <lg>
+                    <l>Jeg beder om Opreisning for en <hi rend="italic">Dronning</hi>,</l>
+                    <l>Langt &#x00E6;dlere og s&#x00F8;dere end <hi rend="italic">hun</hi>,</l>
+                    <l>Der har sin Throne hvor der virkes Honning</l>
+                    <l>Af Fugle smaa, som kysse Blomstermund;</l>
+                    <l>Hun tr&#x00E6;llet har, taalmodig uden Mage,</l>
+                    <l>For Hexen leed, fra <hi rend="italic">Valdemarers</hi> Dage,</l>
+                    <l>Og ventet, <hi rend="italic">Konge</hi>! paa Dit <hi rend="italic">Gyldenaar</hi>.</l>
+                </lg>
+                <lg>
+                    <l>Den Ømmeste, som L&#x00E6;ber end har n&#x00E6;vnet,</l>
+                    <l>Blandt Dronninger, som smiled under Soel,</l>
+                    <l>For <hi rend="italic">Barbari</hi> dog sigtet blev og st&#x00E6;vnet,</l>
+                    <l>Med Uret styrtet fra sin <hi rend="italic">Dronning-Stol</hi>;</l>
+                    <l>Med &#x201C;Sort paa Hvidt&#x201D; frikiendtes hun alt l&#x00E6;nge,</l>
+                    <l>Blev Dronning <hi rend="italic">kaldt i</hi> &#x201C;deiligst Vang og V&#x00E6;nge",</l>
+                    <l>Men tr&#x00E6;ller dog for Hexen leed endnu.</l>
+                </lg>
+                <lg>
+                    <l>I <hi rend="italic">Chorets</hi> Navn, som slog Guldharpens Str&#x00E6;nge</l>
+                    <l>For Danmarks Dronning i den gr&#x00F8;nne Lund,</l>
+                    <l>Og Krandse bandt af Blomsterne i Enge</l>
+                    <l>For s&#x00F8;de Ord af hendes r&#x00F8;de Mund,</l>
+                    <l>Jeg beder, Konge! lad paa gamle Dage</l>
+                    <l>Vor Enke-Dronning, Ægteviv af <hi rend="italic">Brage</hi>,</l>
+                    <l>Faae Bod for Vaanden i sexhundred Aar!</l>
+                </lg>
+                <lg>
+                    <l><pb n="5"/>I <hi rend="italic">Ki&#x00F8;nnets</hi> Navn, som er vort Hjertes Gl&#x00E6;de,</l>
+                    <l>Og Dane-Vangens bedste Blomster-Krands,</l>
+                    <l>Som pryder selv det ski&#x00F8;nneste H&#x00F8;is&#x00E6;de,</l>
+                    <l>Og kaster end paa Straatags-Hytten Glands,</l>
+                    <l>Jeg beder, Konge! gi&#x00F8;r den Dronnings Lykke,</l>
+                    <l>Hvis S&#x00F8;dhed de saa Smeltende udtrykke</l>
+                    <l>I hver en Sang paa deres <hi rend="italic">Moders</hi> Maal!</l>
+                </lg>
+                <lg>
+                    <l>I <hi rend="italic">Bondens</hi> Navn, som Satte Neg paa Rode</l>
+                    <l>Til Konge-Stol for Barne-Drotten <hi rend="italic">Skjold</hi>,</l>
+                    <l>I <hi rend="italic">Deres</hi> Navn, som <hi rend="italic">Frederik</hi> og <hi rend="italic">Frode</hi></l>
+                    <l>Paa varme H&#x00E6;nder bar til Salen kold,</l>
+                    <l>Jeg beder, Konge! gj&#x00F8;r den Dronning Ære,</l>
+                    <l>Hvis Navn endnu paa <hi rend="italic">Tungerne</hi> de b&#x00E6;re,</l>
+                    <l>Og elske &#x00F8;mmere end selv de veed!</l>
+                </lg>
+                <lg>
+                    <l>I <hi rend="italic">Aandens</hi> Navn, som under Øielaaget</l>
+                    <l>Har Stjerner klare paa Skyhimmel bleg,</l>
+                    <l>I Aandens Navn, som elsker Hjertesproget,</l>
+                    <l>Og kalder det Havfruens Str&#x00E6;ngeleg,</l>
+                    <l>Jeg beder, Konge! bliv den Dronnings V&#x00E6;rge,</l>
+                    <l>Hvis Roes sig svinger over alle Bjerge,</l>
+                    <l>Naar Aanden taler <hi rend="italic">Hjertets Tungemaal!</hi></l>
+                </lg>
+                <lg>
+                    <l>Der er en L&#x00F8;vsal i Dit Kongerige,</l>
+                    <l>I <hi rend="italic">S&#x00E6;llands</hi> Hjerte, ved den blanke S&#x00F8;,</l>
+                    <l>Lad der i Mag den Yndige bestige</l>
+                    <l>Sit gr&#x00F8;nne Dronning-S&#x00E6;de under Øe,</l>
+                    <l>Med Hynde bl&#x00F8;dt af venlige Ki&#x00E6;rminder,</l>
+                    <l>Som blaane lyst saal&#x00E6;nge Blodet rinder</l>
+                    <l>Og Hjertet banker hos vor Moders B&#x00F8;rn!</l>
+                </lg>
+                <lg>
+                    <l><pb n="6"/>Hvor <hi rend="italic">Axel</hi> blunder under hvalvte Bue,</l>
+                    <l>Og Danmarks Adel har sin Vaaben-Krands,</l>
+                    <l>Lad Folket der sin gamle Dronning skue</l>
+                    <l>Forynget ski&#x00F8;nt i Nyaarstidens Glands!</l>
+                    <l>Lad Sammensmelte der paa <hi rend="italic">Danmarks</hi> Tunge</l>
+                    <l>De gamle Hjerte-Toner med de Unge,</l>
+                    <l>Til Dronningens og <hi rend="italic">Danner-Kongens</hi> Priis!</l>
+                </lg>
+                <lg>
+                    <l>Ja, hvor i Glands vor gamle Dronning throner,</l>
+                    <l>I B&#x00F8;ge-Lunden paa Ki&#x00E6;rminder blaa,</l>
+                    <l>Der <hi rend="italic">Kongens</hi> Priis i Folke-Sangen toner,</l>
+                    <l>Som L&#x00E6;rker og som Nattergale slaae,</l>
+                    <l>Der, som i <hi rend="italic">Valhal</hi>, leve op de D&#x00F8;de,</l>
+                    <l>Hver Morgenstund ved Hjerte-Toner s&#x00F8;de,</l>
+                    <l>Og b&#x00E6;nkes trindt om Bord hos <hi rend="italic">Christian</hi>.</l>
+                </lg>
+                <lg>
+                    <l>O Konge! Du det f&#x00F8;lde dybt og l&#x00E6;nge,</l>
+                    <l>At &#x00E6;gte <hi rend="italic">Dansk</hi> er intet <hi rend="italic">Barbari,</hi></l>
+                    <l>Men Tonerne fra Danmarks Harpe-Str&#x00E6;nge,</l>
+                    <l>Dem er der baade Aand og Hjerte i;</l>
+                    <l>O, lad da, Konge! Aand og Hjerte seire,</l>
+                    <l>Som kv&#x00E6;de h&#x00F8;it for <hi rend="italic">Kongerne</hi> i Leire,</l>
+                    <l>Opr&#x00F8;re sig mod <hi rend="italic">Keiserne i Rom</hi>!</l>
+                </lg>
+                <lg>
+                    <l>Saa &#x00F8;mme Hjerter og saa ski&#x00F8;nne Minder,</l>
+                    <l>Saa kongeligt og bildt et Skjalde-Chor,</l>
+                    <l>Saa bl&#x00F8;de B&#x00F8;nder og saa s&#x00F8;de Kvinder,</l>
+                    <l>Som <hi rend="italic">Danevang</hi>, har intet Land paa Jord;</l>
+                    <l>Gi&#x00F8;r end <hi rend="italic">Latinerne</hi> sig nok saa vrede,</l>
+                    <l>Lad os med Aand dog ei forgi&#x00E6;ves bede</l>
+                    <l>For <hi rend="italic">Dronningen</hi> og <hi rend="italic">Folkets</hi> Tungemaal!</l>
+                </lg>
+                <fw type="graphic"/><!-- skillestreg -->
+            </div>
+            <div type="part" name="PETTERS">
+                <pb n="7" type="gv"/>
+                <head>Begreb om en kongelig Dansk H&#x00F8;iskole.</head>
+                <p><hi rend="initial">A</hi>t Modersmaalet i det Mindste b&#x00F8;r have <hi rend="italic">een</hi> 
+                    Plet i F&#x00E6;drenelandet, hvor det dyrkes for sin egen Skyld og for de
+                    V&#x00E6;rkers, som har gjort det navnkundigt, det er den Ene af mine gamle Paastande,
+                    som Ingen endnu har str&#x00E6;bt at sv&#x00E6;kke, og det Samme er Tilf&#x00E6;ldet med den Anden,
+                    at naar det skal v&#x00E6;re andet end Spas, at hos os sidde &#x201C;Haandv&#x00E6;rksm&#x00E6;nd og B&#x00F8;nder"
+                    i Stats-Raadet, da maa der dog i det Mindste v&#x00E6;re <hi rend="italic">eet</hi>
+                    Sted i Danmark, hvor de, der ikke kan andet Sprog end deres Modersmaal, paa det
+                    kan oplyses om Alt hvad man beh&#x00F8;&#x00F8;ver at vide, for ikke blot at have S&#x00E6;de men
+                    Stemme i Folke-Raadet, og til ei blot at kunne afgive sin Stemme, men gi&#x00F8;re den
+                    gi&#x00E6;ldende. Begge disse Ting foruds&#x00E6;tter jeg da, som uimodsigelige, og at der dog
+                    intet saadant Sted gives, ingen offenlig Anstalt findes hos os, hvor enten
+                    Modersmaalet og V&#x00E6;rkerne paa Det er Hovedsagen, eller noget Sted, hvor de som
+                    kun kan Dansk, finde Leilighed til at oplyses om, hvad de som Danske Borgere, og
+                    i sin Tid som Kongens Raadgivere, maatte &#x00F8;nske
+                    <pb n="8"/> og tr&#x00E6;ngde til at vide, det er ogsaa vist; thi vel
+                    str&#x00E6;bde Kong <hi rend="italic">Frederik</hi> den <hi rend="italic">Sjette</hi>
+                    at aabne &#x201C;<hi rend="italic">Sor&#x00F8; Academi</hi>&#x201D; for <hi rend="italic">Ustuderede</hi>, 
+                    men hvordan det end gik til, saa bortfortolkede man det
+                    Halve af Tilladelsen, ved at fordre af Vedkommende at de skulde gaae <hi rend="italic">Drenge-Skolen</hi> 
+                    igiennem, og tilintetgjorde den anden
+                    Halvdeel ved at paan&#x00F8;de de Ustuderende <hi rend="italic">Latinske</hi> Timer i
+                    Skolen, som man endog nylig har <hi rend="italic">formeret</hi>.</p>
+                <p>At imidlertid Kong <hi rend="italic">Frederik</hi> den <hi rend="italic">Sjette</hi> 
+                    med Rette d&#x00F8;mde, at Academiet i Soer var Pletten, hvor Dansken
+                    fremfor Alt havde Ret til at herske, og Danske Folk billigt Krav paa at finde
+                    den Oplysning, de tr&#x00E6;ngde til for at &#x00E6;re og tjene F&#x00E6;drenelandet, det er ogsaa
+                    klart, thi det <hi rend="italic">Ridderlige Academi</hi>, Kong <hi rend="italic">Christian</hi> 
+                    den <hi rend="italic">Fjerde</hi> her oprettede, <hi rend="italic">Christian</hi> 
+                    den <hi rend="italic">Sjette</hi> fornyede, og <hi rend="italic">Holberg</hi> berigede, 
+                    var jo en <hi rend="italic">Patriotisk H&#x00F8;iskole</hi> efter Tidernes Begreb og Leilighed, der kun ved en
+                    Feiltagelse, for ikke fuldt tyve Aar siden, faldt i <hi rend="italic">Latinernes</hi> Vold, 
+                    og vi t&#x00F8;r derfor haabe, at &#x201C;Kongens N&#x00F8;gel&#x201D; vil blive
+                    brugt anden Gang til at aabne D&#x00F8;ren for Dansken, saa Latinerne lade den
+                    staae.</p>
+                <p>Kun med dette Haab kan jeg endnu engang gribe Pennen i en Sag, hvori den hidtil
+                    synes at have udrettet mindre end Intet, og kun under denne Foruds&#x00E6;tning nytter
+                    det at tale om, hvordan Sor&#x00F8; Academi kan blive en saadan Kongelig Dansk
+                    H&#x00F8;iskole, som Modersmaalet fortjener og F&#x00E6;drenelandet i alle Hen
+                    <pb n="9"/>seender, men ret soleklart for Folkeraadets Skyld,
+                    beh&#x00F8;ver.</p>
+                <p>Skal nu Academiet blive en saadan H&#x00F8;iskole, som Dansken kan have Ære og Danmark
+                    Nytte af, da maa det allerf&#x00F8;rst oph&#x00F8;re at v&#x00E6;re et Anhang til Ki&#x00F8;benhavns
+                    Universitet, saa det ikke alene, som f&#x00F8;r, faaer sin egen Bestyrelse, men bliver
+                    <hi rend="italic">Latinerne</hi> kvit, som udgaae fra Skolen ved Dets Side;
+                    thi saal&#x00E6;nge der ved Academiet skal tages f&#x00F8;rste og l&#x00E6;ses til anden Examen,
+                    faaer det aldrig nogen Art med en fri paa den ustuderende Ungdom beregnet
+                    folkelig Dannelse.</p>
+                <p>Paa tre Maader kan nu Academiet blive Latinerne kvit, enten ved at de afgaae til
+                    <hi rend="italic">Ki&#x00F8;benhavn</hi>, der jo ligesaa godt kan have det Par
+                    Stykker som hele Resten, eller derved, at <hi rend="italic">Drenge-Skolen</hi>
+                    gik ind, hvorved der neppe tabdes synderligt, da vi har Latin-Skoler nok endda,
+                    eller endelig derved, at den omskabdes til en <hi rend="italic">Dansk</hi>
+                    Skole, hvad ogsaa kunde v&#x00E6;re godt, men vilde for Øieblikket have sine store,
+                    maaskee uovervindelige Vanskeligheder.</p>
+                <p>Siden derfor denne Drenge-Skole engang er blevet til, og forbundet med et eget
+                    Kostg&#x00E6;ngeri, var det vel bedst den vedblev som l&#x00E6;rd Skole, og benyttedes til at
+                    vise, hvad der i en Saadan lod sig gi&#x00F8;re for Modersmaalet og en naturligere
+                    Udvikling, naar den <hi rend="italic">Latinske Stil</hi>, med alt det <hi
+                    rend="italic">tvungne</hi> Latin-Skriveri og Latin-Snak ved Universitetet,
+                    faldt bort. Jeg mener ingenlunde hermed, at det skulde 
+                    <hi rend="italic">forby</hi><pb n="10"/><hi rend="italic">des</hi> Nogen enten at gj&#x00F8;re Latinsk Stil til f&#x00F8;rste Examen,
+                    eller at skrive og snakke saameget Latin ved Universitetet, som han vilde, thi
+                    da Endeel af de L&#x00E6;rde endnu har den Tro, at den Latinske Grammatik er &#x201C;de Vises
+                    Steen&#x201D; og den Latinske Stil Indskrivningen i de t&#x00E6;nkende V&#x00E6;seners Bog, saa b&#x00F8;r
+                    de beholde Leilighed til levende at forf&#x00E6;gte deres Mening; og Oplysningen vil
+                    immer vinde ved at kunne sammenligne de <hi rend="italic">Latinske</hi> og de
+                    <hi rend="italic">blot Danske</hi> Stilisters &#x00F8;vrige Dygtighed og
+                    videnskabelige Fremskridt; men selv for denne Sammenlignings Skyld er det
+                    n&#x00F8;dvendigt, at man <hi rend="italic">kan</hi> blive baade Student og Professor
+                    uden <hi rend="italic">Latinsk Stil</hi>, og desuden vil man sikkert finde, at
+                    <hi rend="italic">Dansken</hi> maa stedmoderlig behandles i de offenlige
+                    Skoler, naar Drengene skal afrettes til i 17 Aars Alder at skrive et <hi
+                    rend="italic">d&#x00F8;dt</hi> fra Dansken vidt afvigende Sprog efter
+                    grammatikalske Regler.</p>
+                <p>Vist nok er, efter min fulde og jeg t&#x00F8;r sige velgrundede Overbeviisning, hele den
+                    <hi rend="italic">Byzantinske</hi> Drenge-Videnskabelighed og hele det <hi
+                    rend="italic">Chinesiske</hi> Examens-V&#x00E6;sen noget deels saa Tomt og deels
+                    saa Unaturligt og Forskruet, at det vil v&#x00E6;re Menneske-Aandens Triumf og hver
+                    Alders Gavn og Gl&#x00E6;de, naar det Altsammen synker i Forglemmelse hos os; men da
+                    det altid er en stor Feil, der straffer sig selv, at ville ved <hi rend="italic">Magtsprog</hi> 
+                    forandre det Mindste i Aandens Verden, saa har det vel lange
+                    Udsigter med <hi rend="italic">Grund-Forbedringen</hi> af vort <hi rend="italic">Skole-V&#x00E6;sen</hi>; 
+                    thi saal&#x00E6;nge n&#x00E6;sten alle de, der gi&#x00E6;lde for Videnskabs
+                    <pb n="11"/>M&#x00E6;nd, paastaae, de skylde Drenge-Skolen Alt hvad de
+                    har, og saal&#x00E6;nge baade L&#x00E6;rde og Ul&#x00E6;rde s&#x00E6;dvanlig troe at <hi rend="italic">Examiner</hi> 
+                    kan skabe alleslags duelige Embedsm&#x00E6;nd og l&#x00E6;rde Folk af Intet
+                    eller dog af en ubekvem Materie, <hi rend="italic">saal&#x00E6;nge</hi> vilde enhver
+                    Lov derimod aldeles forfeile sin Hensigt. Den eneste virksomme Maade, hvorpaa
+                    disse herskende Indbildninger og indgroede Fordomme kan bek&#x00E6;mpes, er da at give
+                    Frihed og aabne Leilighed til en naturlig Udvikling og sand Dannelse, som kan
+                    uimodsigelig bevise, man tog m&#x00E6;rkelig feil, da man paastod, at jo <hi rend="italic">tidligere</hi> 
+                    man begyndte at lade L&#x00E6;rd, des grundigere
+                    Videnskabs-Mand blev man, og jo flere d&#x00F8;de og levende Sprog man fuskede paa, des
+                    st&#x00F8;rre Mester blev man i det tilsidesatte Modersmaal, og jo stadigere man h&#x00E6;ngde
+                    over B&#x00F8;gerne fra Barnsbeen, des klogere blev man paa det Menneske-Liv, man slet
+                    ikke befattede sig med. Dette slaaende (praktiske) Beviis kan imidlertid ikke
+                    f&#x00F8;res, saal&#x00E6;nge Latin-Skolerne og den paa dem grundede H&#x00F8;iskole enten er de
+                    eneste aandelige V&#x00E6;rksteder, eller dog Kilden og M&#x00F8;nsteret for dem Alle, saa en
+                    reen Dansk, folkelig H&#x00F8;iskole er ikke blot Modersmaalets Ret og Borger-Livets
+                    Krav, men ogsaa den eneste rette Forberedelse til en Grund-Forbedring af hele
+                    vort Skolev&#x00E6;sen. Hvad der imidlertid, uden at afskaffe Drenge-Videnskabeligheden
+                    og Hukommelses-Pr&#x00F8;verne, lader sig gi&#x00F8;re til at formindske og formilde deres
+                    bedr&#x00F8;velige F&#x00F8;lger, burde vist nok ikke undlades, og dertil h&#x00F8;rer f&#x00F8;rst og
+                    fremmerst <hi rend="italic">Fritagelse</hi> for den <hi rend="italic">Latin</hi>
+                    <pb n="12"/>
+                    <hi rend="italic">ske</hi> Stil, da det derved dog bliver mueligt for de L&#x00E6;rere,
+                    der veed at skatte <hi rend="italic">Livet</hi> og <hi rend="italic">Modersmaalet</hi>, 
+                    at gi&#x00F8;re Drenge-Studeringen langt mindre unaturlig og
+                    aandsfort&#x00E6;rende. Selv den overfl&#x00F8;dige Latin-L&#x00E6;sning, som kunde gjemmes til
+                    Sidst, lod sig da til N&#x00F8;d b&#x00E6;re; men dog vilde ogsaa her en <hi rend="italic">Fritagelse</hi> 
+                    for hvem der &#x00F8;nskede den, v&#x00E6;re en stor Velgierning af
+                    Regieringen baade mod B&#x00F8;rnene, Folket og sig selv, thi det Meste af den
+                    saakaldte <hi rend="italic">classiske</hi> Skrift paa <hi rend="italic">Latin</hi> 
+                    er i Drenge-Aarene kiedsommeligt og uford&#x00F8;ieligt, og hvad der er
+                    anderledes, er enten saa konge og folke-fiendsk, eller saa hjertel&#x00F8;st, us&#x00E6;deligt
+                    og tit ugudeligt, at det maa kaldes Edder og Forgift for alle barnlige Sj&#x00E6;le,
+                    hvad der is&#x00E6;r maa have de s&#x00F8;rgeligste F&#x00F8;lger, saal&#x00E6;nge hardtad alle <hi rend="italic">Kongelige 
+                    Embedsm&#x00E6;nd</hi> udgaae af den Latinske Plante-Skole.
+                    Vilde man derfor give den l&#x00E6;rde Skole i <hi rend="italic">Sor&#x00F8;</hi> en forbedret
+                    Skikkelse, da burde man der ikke blot lade den <hi rend="italic">Latinske</hi> Stil bortfalde, men
+                    ogsaa indskr&#x00E6;nke Latin-L&#x00E6;sningen til nogle faa taalelige B&#x00F8;ger, og derimod l&#x00E6;gge
+                    Vind paa <hi rend="italic">Islandsk, Gr&#x00E6;sk</hi>, og is&#x00E6;r paa <hi rend="italic">Modersmaalet</hi>, 
+                    som baade er det, Drenge lettest kan faae Smag paa og
+                    samle Tanker i, og som jo selv for de L&#x00E6;rdeste iblandt os, end sige da for de
+                    praktiske Embedsm&#x00E6;nd, maa v&#x00E6;re Udviklingens og Dannelsens faste og levende
+                    Grundvold, naar <hi rend="italic">Danske</hi> Folk og den <hi rend="italic">Danske</hi> 
+                    Regiering skal have Nytte og Gl&#x00E6;de deraf. At Folket kun skulde
+                    v&#x00E6;re til for Regieringens Skyld, er vist nok en 
+                    <pb n="13"/>
+                    <hi rend="italic">Tyrkisk</hi> Grunds&#x00E6;tning, som Ingen kraftigere har fralagt
+                    sig end Danmarks seneste Enevolds-Konger; men at baade <hi rend="italic">Regiering</hi> 
+                    og <hi rend="italic">Folk</hi> kun skulde v&#x00E6;re til for de gamle <hi rend="italic">Classikers</hi> og 
+                    de <hi rend="italic">Latinske Skolemestres</hi> Skyld,
+                    det vilde v&#x00E6;re Daarekiste-Snak, og dog kunde det blot under denne fortvivlede
+                    Foruds&#x00E6;tning v&#x00E6;re hensigtm&#x00E6;ssigt fra Barnsbeen at danne de tilkommende
+                    Folke-L&#x00E6;rere og Kongelige Embedsm&#x00E6;nd til det <hi rend="italic">Modsatte</hi> af
+                    hvad baade Kongen og Folket maae &#x00F8;nske hos dem, og tabe uberegnelig ved at
+                    savne: det Modsatte af fortroligt Bekiendtskab med Folke og Borger-Livet, med
+                    Modersmaalet og <hi rend="italic">Dets</hi> Classiske V&#x00E6;rker, saa al muelig <hi rend="italic">Frihed</hi> til at bane bedre Veie er det ligesaavel klogt som
+                    billigt at give.</p>
+            </div>
+            <div type="part">
+                <p>Hermed har jeg da sagt min Mening om <hi rend="italic">Latin-Skolen</hi> i Sor&#x00F8;,
+                    men da <hi rend="italic">Friheden</hi> kun gi&#x00F8;r en bedre Fremgangs-Maade muelig,
+                    og jeg ikke veed, hvorvidt Skolen har eller for Øieblikket kunde faae L&#x00E6;rere,
+                    med Lyst og Evne til virkelig at f&#x00F8;lge den, saa kan jeg umuelig sige, om
+                    Forandringen vilde nytte, men maa l&#x00E6;gge al V&#x00E6;gten derpaa, at <hi rend="italic">Academiet</hi>,
+                    naar det skal v&#x00E6;re en folkelig H&#x00F8;iskole, paa en eller anden
+                    Maade bliver <hi rend="italic">Latin-Skolen</hi> kvit, og faaer sin egen
+                    Bestyrelse i en tilst&#x00E6;dev&#x00E6;rende H&#x00E6;dersmand, til hvem (ligesom til Hovmesteren
+                    fordum) Majest&#x00E6;ten t&#x00F8;r betroe en saa vigtig Oplysnings-Anstalt, der naturligviis
+                    skal v&#x00E6;re ligesaa <hi rend="italic">Kongelig</hi> som <hi rend="italic">folkelig</hi>, 
+                    ligesaavel i vor <hi rend="italic">Stats-For</hi>
+                    <pb n="14"/>
+                    <hi rend="italic">fatnings</hi> som i vort <hi rend="italic">Folke-Livs
+                    </hi>Aand, thi medens det aldrig nytter at ville beherske Oplysnings-V&#x00E6;rket i
+                    det Hele, der maa gaae sin egen Gang, f&#x00F8;lger det dog af sig selv, at i de
+                    V&#x00E6;rksteder for folkelig og borgerlig Oplysning, <hi rend="italic">Regieringen
+                    selv</hi> opretter og bestyrer, maa der <hi rend="italic">ikke</hi> virkes
+                    <hi rend="italic">imod</hi> den, men skal af alle Kr&#x00E6;fter virkes <hi rend="italic">for den</hi>. En
+                    Regiering og Statsforfatning kan vist nok lettelig t&#x00E6;nkes saa slette og
+                    ufolkelige, at en Oplysnings-Anstalt umuelig kunde v&#x00E6;re baade i deres og i
+                    Folkets Aand, men deels vil det v&#x00E6;re yderst sjeldent, deels var det dog lige
+                    dumt af en Regiering at undergrave sig selv, og endelig kiender jeg saa meget
+                    baade til det Danske Folk og til den Danske Regiering og Stats-Forfatning, at
+                    jeg veed, de stemme i Grunden saa ypperlig overeens, at det er kun <hi rend="italic">Oplysning</hi> 
+                    om denne herlige Overensstemmelse, vi fattes,
+                    for, med Guds Hjelp, at blive saa lykkelige, som det paa Jorden er mueligt.
+                    Havde vi derfor blot saal&#x00E6;nge havt en Kongelig Dansk H&#x00F8;iskole i Sor&#x00F8;, som den i
+                    alt Fald overfl&#x00F8;dige Universitets-Hale, der kostede store Penge, da er jeg vis
+                    paa, al dette Aars Uro og urimelige Forlangender vilde v&#x00E6;re undgaaet; men Dette
+                    h&#x00F8;rde vel ogsaa til for at overbevise baade H&#x00F8;ie og Lave om, at vi tr&#x00E6;nge h&#x00F8;it
+                    til Almeen-Oplysning om den virkelige Beskaffenhed af det Borgerlige Selskab,
+                    som hveranden Pen nu vil kalfatre, og dog kun saare faa Øine endnu har seet fra
+                    alle Sider, end sige <hi rend="italic">giennemskuet</hi>, som de 
+                    <pb n="15"/> dog maatte for at anstille en forsvarlig
+                    Sammenligning og beregne F&#x00F8;lgerne af en Forandring.</p>
+                <p>Naar jeg imidlertid siger, at vor folkelige H&#x00F8;iskole maa v&#x00E6;re i vor <hi rend="italic">Stats-Forfatnings</hi> Aand, 
+                    da mener jeg naturligviis <hi rend="italic">den</hi> Stats-Forfatning, vi nu virkelig har, og hverken den,
+                    vi kun engang har havt, eller den, man saa tit i Bladene vil paadutte os, vi
+                    har, hverken altsaa i Egenraadighedens (Absolutismens) eller i Tr&#x00E6;ldommens
+                    (Servilitetens), men i Enevolds-Magtens og Folke-Raadets Aand; thi uagtet vi
+                    kunde &#x00F8;nske Sort paa Hvidt for at <hi rend="italic">Folke-Raadet</hi> h&#x00F8;rer <hi rend="italic">
+                    ligesaav&#x00E6;senlig</hi> til vor Stats-Forfatning, som <hi rend="italic">Enevolds-Magten</hi>, 
+                    saa er den Sag dog i Grunden lige vis,
+                    og vilde sikkert v&#x00E6;re gjort &#x201C;Alle vitterlig,&#x201D; naar Folke-Raadet havde v&#x00E6;ret
+                    Dansk oplyst nok til at see, det var den Sikkerhed med Hensyn paa Fremtiden (den
+                    statsretlige Garanti) de i Folkets Navn skulde bedet Kongen om. For imidlertid
+                    at virke i vor Stats-Forfatnings, baade Kongens og Folkets Aand, maatte <hi rend="italic">H&#x00F8;iskolen</hi> 
+                    ogsaa bestyres ligesom Riget, saa <hi rend="italic">Hovmesteren</hi> (eller hvad Bestyreren skulde hedde) vel, paa
+                    eget Ansvar, kunde forordne hvad han vilde, men maatte i alt Vigtigt f&#x00F8;rst h&#x00F8;re
+                    <hi rend="italic">Skole-Raadet</hi>, hvis Medlemmer n&#x00E6;sten Alle valgdes af
+                    <hi rend="italic">Ungdommen</hi> selv; thi Dette vilde baade i det Hele v&#x00E6;re
+                    Oplysnings-V&#x00E6;rket tjenligst, og i S&#x00E6;rdeleshed give Stats-Forfatningen langt mere
+                    Anskuelighed, Liv og Fasthed hos Folket, medens de valgte Medlemmer vilde finde, det 
+                    <pb n="16"/> var en god Forberedelse til Folke-Raadet. Man veed jo
+                    nok, de gamle Skolemester-Nykker stikke i os endnu, ski&#x00F8;ndt vi har lagt
+                    Parykken, der h&#x00F8;rde til, saa vi synes bedst om at Ungdommen h&#x00F8;rer and&#x00E6;gtig paa
+                    Alt hvad vi siger og s&#x00E6;tter sin Ære i at snakke os efter Munden; men vi maae
+                    l&#x00E6;re at indsee, det passer slet ikke paa en <hi rend="italic">folkelig</hi>
+                    H&#x00F8;iskole, som Ungdommen hverken drives til med B&#x00F8;der eller lokkes til med
+                    Levebr&#x00F8;d, men kun vil bes&#x00F8;ge og skatte, naar de finde den baade <hi rend="italic">nyttig</hi> og 
+                    <hi rend="italic">forn&#x00F8;ielig</hi>, og om de
+                    finde den saaledes, kan Ingen sige uden de selv, saa dertil maa gives dem en <hi rend="italic">ordenlig</hi> 
+                    Leilighed i Skole-Raadet, og hvad de saa at sige
+                    eenstemmig er misforn&#x00F8;iede med, kan i visse Henseender desuagtet vel v&#x00E6;re meget
+                    godt, men duer dog ikke paa den folkelige H&#x00F8;iskole.</p>
+                <p>Her seer man een af de vigtige Grunde, hvorfor jeg kun n&#x00F8;dig indlader mig dybere
+                    i Udviklingen af den folkelige H&#x00F8;iskoles Indretning, da det ligger i Sagens
+                    Natur, at naar V&#x00E6;rket skal lykkes, maa Indretningen ikke v&#x00E6;re efter
+                    Enkelt-Mandens men efter Folkets Hoved, og ligesaameget efter Ungdommens som
+                    efter Alderdommens Hjerte, saa man skal, saavidt mueligt, lade Indretningen
+                    skabe og udvikle sig selv, hvad man uden al Fare kan, naar <hi rend="italic">Bestyreren</hi> 
+                    kun er en <hi rend="italic">paalidelig</hi> Mand og har fri
+                    Haand.</p>
+                <p>En anden ligesaa vigtig Grund, hvi jeg hidtil har krympet mig ved at udvikle mine
+                    Tanker n&#x00F8;iere om, hvad Oplysnings-V&#x00E6;rket skulde omfatte og hvor
+                    <pb n="17"/>
+                    dan det med Held kunde drives, er ligefrem den, jeg
+                    har angivet, at enhver Livs og Levnets Beskrivelse, altsaa ogsaa den Folkelige
+                    H&#x00F8;iskoles, maa v&#x00E6;re en <hi rend="italic">Historie</hi>, der <hi rend="italic">f&#x00F8;lger efter</hi> 
+                    Bedriften og Begivenheden, og kan umuelig <hi rend="italic">gaae forud;</hi> thi Alt hvad jeg derfor kan sige derom, maa
+                    kaldes Spaadom, Gi&#x00E6;tning, Dr&#x00F8;m eller Formodning, og jeg er saa vant til at h&#x00F8;re
+                    mine Formodninger gjort latterlige, at jeg ikke b&#x00F8;r knytte flere af dem end
+                    h&#x00F8;ist n&#x00F8;dvendig til en i sig selv saa god og klar Sag, der ei maatte lide enten
+                    under Dunkelheden af mine Forestillinger eller under Andres Lyst til at spotte
+                    med dem. Naar jeg derfor nu vil str&#x00E6;be at give et tydeligere Omrids af en for
+                    hele Landets Ungdom aaben H&#x00F8;iskole, hvor Alt dreiede sig paa <hi rend="italic">Modersmaalet</hi> 
+                    om <hi rend="italic">F&#x00E6;drenelandet</hi>, da maa jeg dog
+                    gi&#x00F8;re det kort og holde det sv&#x00E6;vende, og endda udtrykkelig tilf&#x00F8;ie, at Eet er<hi rend="italic">Trangen</hi> 
+                    til en saadan Anstalt for Ungdommen til
+                    Oplysning om Danmark og Danskhed i alle Maader paa Modersmaalet, og noget ganske
+                    Andet er <hi rend="italic">mine Tanker</hi> om, hvad der enten for Øieblikket
+                    eller i L&#x00E6;ngden kan vindes derved, og om Maaden, hvorpaa man helst skal gaae
+                    frem; thi disse Tanker kunde v&#x00E6;re meget tossede, og Indretningen blev dog lige
+                    n&#x00F8;dvendig.</p>
+                <p>Var det en Efterligning paa Dansk af Universitetet, med Examen for og bag, jeg
+                    foreslog, da var det vist nok nemt at opregne hvilke B&#x00F8;ger, foruden Dansk
+                    Grammatik, man maatte have l&#x00E6;rt udenad 
+                    <pb n="18"/>
+                    for at faae Lov til at indgaae i Helligdommen, og i
+                    hvilke Fag der skulde holdes Forel&#x00E6;sninger daglig eller ugenlig, hvert Halvaar,
+                    og da var det ligesaa let at forudsige F&#x00F8;lgen, nemlig at enten slet Ingen
+                    frivillig gi&#x00E6;stede et saadant Lighuus, eller at dog det Hele snart hensov eller
+                    hend&#x00F8;de, uden at have havt meer end Skin af Liv og Aarvaagenhed; men nu er det
+                    noget, desv&#x00E6;rre; blandt os aldeles Nyt, jeg har for Øie, en Oplysnings-Anstalt
+                    nemlig, hvorved Folket efterhaanden vaagnede til Selv-Bevidsthed, og hvor
+                    Lederne l&#x00E6;rde ligesaameget af Ungdommen, som den af dem, en saadan levende
+                    Vexel-Virkning og indbyrdes Underviisning, hvorved der lagdes Bro over det
+                    sv&#x00E6;lgende Dyb, Hierarchi, Aristokrati, Latinen og honet Ambition har bef&#x00E6;stet
+                    mellem hardtad hele Folket paa den ene, og Dets Ledere og L&#x00E6;rere, med en
+                    Haandfuld saakaldte Dannede og Oplyste, paa den anden Side, dette sv&#x00E6;lgende Dyb,
+                    hvori ellers snart hele det <hi rend="italic">Borgerlige Selskab</hi> og al
+                    rolig, historisk fremskridende Udvikling maatte gaae til Grunde. Ingen kan agte
+                    Folke-Raadets Oprettelse og dets saakaldte demokratiske og materialistiske
+                    (folkelige og grundfaste) Sammens&#x00E6;tning for mere betimelig og velbet&#x00E6;nkt end
+                    jeg, og Stemme-Samlingerne hos Folke-M&#x00E6;ngden om Raadets V&#x00E6;rd og Tilstr&#x00E6;kkelighed
+                    nu og herefter, som, hvor urimelige de end maae findes, alt er begyndte, vil
+                    neppe oph&#x00F8;re; men F&#x00F8;lgerne maatte jo blive de s&#x00F8;rgeligste, naar ikke <hi rend="italic">
+                    Borger</hi> og <hi rend="italic">Bonde</hi> baade i og udenfor
+                    Folke-Raadet l&#x00E6;re at forstaae sig selv og 
+                    <pb n="19"/>
+                    os, at t&#x00E6;nke paa det Heles Tarv, paa <hi rend="italic">
+                    F&#x00E6;drenelandet</hi> fordum og herefter, og selv naar Man har
+                    st&#x00F8;rst Overtro paa <hi rend="italic">Folkets</hi> Bogl&#x00E6;sning og <hi rend="italic">Bogstavers</hi> 
+                    Magt, maa man kun grue desmeer for den Oplysning, <hi rend="italic">Folke-Bladene</hi> udbrede. 
+                    Om derfor end Folkets og F&#x00E6;drenelandets sande Venner tvivlede om, at en saadan <hi rend="italic">
+                    folkelig H&#x00F8;iskole</hi>, som jeg foreslaaer, vilde findes muelig eller
+                    kunde lykkes, saa burde man dog, jo f&#x00F8;r, jo heller, gi&#x00F8;re en Pr&#x00F8;ve, hvorved det
+                    var <hi rend="italic">slet Intet</hi> at <hi rend="italic">tabe</hi>, Men Ingen
+                    veed hvormeget, maaskee <hi rend="italic">Alt</hi> at <hi rend="italic">vinde</hi>. 
+                    Under <hi rend="italic">fortvivlede</hi> Omst&#x00E6;ndigheder
+                    foretager man sig dog ellers i vore Dage de &#x00E6;ventyrligste og tit i borgerlig
+                    Henseende de ford&#x00E6;rveligste Ting, saa vi maae dog vel have Mod til at pr&#x00F8;ve saa
+                    uskyldig og paa ingen Maade urimelig en Ting, som at oplyse det fredeligste Folk
+                    under Solen om hvad der tjener til dets Fred, det ki&#x00E6;rligste Folk om hvad <hi rend="italic">
+                    Ki&#x00E6;rlighed</hi> til <hi rend="italic">F&#x00E6;drenelandet</hi> vil
+                    sige, og endelig at oplyse det til alt Muntert og Forn&#x00F8;ieligt letnemme Folk om,
+                    hvilken Uudt&#x00F8;mmelig Kilde til uskyldigt Morskab og f&#x00E6;lles Forn&#x00F8;ielse de har i
+                    dem selv, i gamle og nye Viser, i folkelige B&#x00F8;ger og i &#x201C;deiligst Vang og V&#x00E6;nge,"
+                    naar de kun l&#x00E6;re at benytte sig deraf.</p>
+            </div>
+            <div type="part">
+                <p>Hermed er nu egenlig sagt, hvad der paa den folkelige H&#x00F8;iskole maa str&#x00E6;bes efter,
+                    f&#x00F8;rst nemlig: Forstand paa Folket, uden hvilket vi ei kan tiltale dem, saa de
+                    forstaae os, og dern&#x00E6;st <hi rend="italic">Meddelelse</hi> af Alt hvad der til
+                    Gavn og Gl&#x00E6;de kan v&#x00E6;re <hi rend="italic">F&#x00E6;lles</hi>
+                    <pb n="20"/>gods, og endelig den <hi rend="italic">Oplysning</hi>, der maa findes hos de bedste Hoveder i alle Kredse, for at
+                    Folke-Raadet baade kan v&#x00E6;lges og virke til <hi rend="italic">f&#x00E6;lles Bedste</hi>,
+                    som maa v&#x00E6;re den uforanderlige Grundlov i ethvert <hi rend="italic"
+                    >Selskab</hi>, der skal bestaae med Folkets Villie og blive gammelt med Æren.
+                    Dette er klarlig <hi rend="italic">Maalet</hi>, og om <hi rend="italic">Veien</hi> 
+                    kan der ikke siges stort, da den f&#x00F8;rst skal <hi rend="italic">banes</hi> og for en 
+                    stor Deel <hi rend="italic">brydes</hi>, hvad
+                    naturligviis kun vil lykkes i Forhold til De Evner, som m&#x00F8;des, og den Umage, man
+                    vil gi&#x00F8;re sig paa <hi rend="italic">begge</hi> Sider. Nemt er det vist nok at
+                    sige, at det baade f&#x00F8;rst og sidst er <hi rend="italic">Munden</hi>, der maa
+                    bruges, deels fordi den er det eneste <hi rend="italic">levende</hi> Redskab,
+                    Aanden har paa Jorden, og deels fordi vi aldrig faae meer tilf&#x00E6;lles med Folket
+                    end hvad der baade kan rummes i den og af sig selv gaae fra Mund til Mund, og
+                    det er ligesaa nemt sagt, at kun i samme Forhold, som <hi rend="italic">Talen</hi> 
+                    bliver til en <hi rend="italic">Sam-Tale</hi>, deels mellem
+                    Gamle og Unge, og deels mellem de Unge indbyrdes, kun i samme Forhold lykkes
+                    Oplysningen; men hvorvidt Vedkommende vil have Sind til at hjelpes ad og b&#x00E6;re
+                    over med hverandre, til Munden kommer ret paa Gang, det maa Tiden vise, og
+                    ski&#x00F8;ndt jeg er sikker paa, Vanskelighederne lade sig overvinde, fordi Munden paa
+                    begge Sider dog er gjort til at tale med og kun ved en gal Dreining sprunget i
+                    Baglaas, saa veed jeg dog endnu meget vissere, at Vanskelighederne ikke lade sig
+                    bortsnakke.</p>
+                <p>Naar jeg derfor udlader mig lidt yderligere om 
+                    <pb n="21"/> begge Dele, er det mest kun for at vise, jeg virkelig
+                    godt veed, hvad der skulde frem for en Dag, men kun maa v&#x00E6;re min Uvidenhed
+                    bekiendt om hvad Andre kan gi&#x00F8;re, da jeg tit ikke veed hvad jeg selv kan enten
+                    sige eller gi&#x00F8;re, f&#x00F8;r jeg <hi rend="italic">pr&#x00F8;ver</hi> paa det, og naar noget
+                    Godt ei findes aldeles umueligt, bliver ved at pr&#x00F8;ve, til det lykkes.</p>
+                <p>Hvad jeg nu f&#x00F8;rst mener ved at forstaae Folket, kan jeg ikke udtrykke mere kort
+                og fyndigt end jeg gjorde alt for sexten Aar siden saaledes:</p>
+            </div>
+            <div type="poem">
+                <lg>
+                    <l>Hvo Folket vil tr&#x00E6;ffe</l>
+                    <l>Tilbunds under Øe,</l>
+                    <l>Med Folket maa bj&#x00E6;ffe,</l>
+                    <l>Om ei det kan gi&#x00F8;e,</l>
+                    <l>Hvo for det vil sjunge,</l>
+                    <l>Maa laane dets Tunge,</l>
+                    <l>Og l&#x00E6;re at aande paa den.</l>
+                </lg>
+                <lg>
+                    <l>Hvad end vi har skrevet,</l>
+                    <l>Hvad end vi har talt,</l>
+                    <l>Hvad <hi rend="italic">Dansk</hi> har fordrevet,</l>
+                    <l>For <hi rend="italic">Dansken</hi> er galt;</l>
+                    <l>Skal Folket op&#x00F8;se,</l>
+                    <l>Med Bagen af Haand,</l>
+                    <l>Vor L&#x00E6;rdoms Bundl&#x00F8;se</l>
+                    <l>Af Lyst til vor Aand,</l>
+                    <l>Da reen er den Regning,</l>
+                    <l>Vi spildte vor Tegning,</l>
+                    <l>Men Folket ei spilder sin Tid.<note type="footnote"><p>Nyaars-Morgen 1824. S. 99-100.</p></note></l>
+                </lg>
+            </div>
+            <div type="part">
+                <pb n="22"/>
+                <p>Men da jeg baade har pr&#x00F8;vet og l&#x00E6;rt endeel siden, kan jeg vel nok gi&#x00F8;re det lidt
+                    tydeligere, at jeg mener noget ganske Andet end hvad man har kaldt &#x201C;<hi rend="italic">Popularitet</hi>&#x201D; 
+                    og allerede ved <hi rend="italic">Navnet</hi> viist, var noget Udenlandsk, man ei engang kunde fordanske,
+                    langt mindre indbilde Folket, man havde l&#x00E6;rt af dem. Enten str&#x00E6;bde nemlig vore
+                    popul&#x00E6;re Skole-Mestre kun at oplyse B&#x00F8;rn om hvad de godt vidste, men Syndes, var
+                    ikke Umagen v&#x00E6;rdt at tale om: at Grisene havde fire Been, men H&#x00F8;nsene kun To, og
+                    at N&#x00E6;sen sad midt imellem begge Øinene og var egenlig gjort til at lugte med,
+                    eller de forklarede Morskab ved hvad der var &#x201C;interessant,&#x201D; Himlen ved
+                    &#x201C;Firmamentet,&#x201D; og Ligegyldighed ved en &#x201C;Miskiendelse af Gienstandenes V&#x00E6;rd og
+                    Vigtighed,&#x201D; eller, naar det gik bedst, &#x00F8;vede de sig dog kun i at &#x201C;snakke for
+                    B&#x00F8;rn&#x201D; hvad ei er at laste, men huer dog hverken M&#x00E6;nd eller Ungersvende, og
+                    oplyser intet Folk om sin naturlige Beskaffenhed, Tarv og Trang, L&#x00E6;s og Lykke,
+                    Lyst og N&#x00F8;d, og dog er det herom vi skal l&#x00E6;re at tiltale dem, saa de forstaae
+                    os, og tale med dem, saa det opmuntrer, opliver og oplyser dem.</p>
+                <p>For nu at forstaae et Folk, saa vi kan tale ud af Dets Hjerte, maa Folket have
+                    Deel i vort Hjerte, og laane os sin Tunge, saa hvis vi ringeagte de Smaa og
+                    Modersmaalet, som det er i <hi rend="italic">Folke-Munde</hi>, da blive vi
+                    naturligviis aldrig folkelige; men selv naar ingen af Delene er Tilf&#x00E6;ldet, og vi
+                    med Flid bruge alle baade indvortes og udvortes Hjelpemidler til at 
+                    <pb n="23"/> s&#x00E6;tte os ind i Folkets naturlige Tankegang og tilegne
+                    os, ikke det Flaue, Dr&#x00E6;bende og St&#x00F8;dende, men det Levende, Eiendommelige i deres
+                    Talemaade, saa gi&#x00F8;r dog det Fremmede og Unaturlige i vor Dannelse, saavelsom den
+                    sorte Armod i aandelig Forstand hos Folket, at vi kun meget vanskelig og enstund
+                    meget ufuldkommen l&#x00E6;re at forstaae hinanden. Hvad mig selv angaaer, der dog
+                    baade som Skjald, som S&#x00E6;llandsfar og Jydefostre, og som en gammel Orm i de
+                    Danskeste B&#x00F8;ger, har endeel forud for de Fleste, da maa jeg bekiende, at jeg kun
+                    sjelden engang kan tale saa godt Dansk og saa folkelig, som jeg kan skrive, og
+                    det skulde derfor slet ikke undre mig, om de fleste Ledere i Begyndelsen ret
+                    bogstavelig maatte holde &#x201C;Fore-L&#x00E6;sninger,&#x201D; og naar kun det, de l&#x00E6;ste for, var
+                    tydeligt og folkeligt, vilde ogsaa Det have sin Nytte, men var dog immer en
+                    N&#x00F8;dhjelp, der ingenlunde maatte gi&#x00F8;res til Regel.</p>
+                <p>Saameget om hvad man vilde kalde L&#x00E6;re-Maaden (Methoden,) men hvad jeg kalder
+                    Tale-Gaverne, og Folket Forstand paa at bel&#x00E6;gge sine Ord, og jeg vil kun
+                    tilf&#x00F8;ie, at det l&#x00E6;rer man slet ikke af nogen <hi rend="italic">Dansk
+                    Grammatik</hi>, men kun, naar man er folkelig sindet, ved at bruge sine Øren
+                    og med Eftertanke l&#x00E6;se flittig i saadanne B&#x00F8;ger som den <hi rend="italic">Danske
+                    Rimkr&#x00F8;nike</hi> og Peer <hi rend="italic">Syvs Ordsprog</hi>.</p>
+                <p>Komme vi nu til Sp&#x00F8;rgsmaalet om <hi rend="italic">hvad</hi> der ved Hjelp af saa
+                    livlig Tale, som man kan f&#x00F8;re, skal meddeles ungdommen paa den folkelige
+                    H&#x00F8;iskole, da 
+                    <pb n="24"/> giver det vist nok ikke stor Oplysning at sige:
+                    ingenlunde Alt hvad vi veed, men Alt hvad deraf til Gavn og Gl&#x00E6;de kan v&#x00E6;re <hi rend="italic">F&#x00E6;llesgods</hi>; 
+                    men dog lader sig forud ei sige stort mere
+                    med Sikkerhed, da Ingen kan give mere end han har, og kun Erfaring kan l&#x00E6;re <hi rend="italic">hvormeget</hi> 
+                    deraf Folket baade kan finde Smag i og ordenlig ford&#x00F8;ie.</p>
+                <p>I den korte Grunds&#x00E6;tning ligger desuden en Advarsel for den S&#x00E6;dvanlige
+                    Skolemester-Feil, at ville proppe selv i B&#x00F8;rn, end sige da i Ungersvende, <hi rend="italic">Alt</hi> 
+                    hvad man veed, og is&#x00E6;r det T&#x00F8;rreste og mest
+                    Uford&#x00F8;ielige, saa naar <hi rend="italic">Professorer</hi> har nogen anden
+                    Hensigt med deres Forel&#x00E6;sninger end at holde dem, maa det v&#x00E6;re at danne
+                    ligesaadanne Professorer som de selv er i Snese og Hundrede-Viis, hvad til N&#x00F8;d
+                    gaaer an i <hi rend="italic">Tydskland</hi>, hvor Universiteternes Navn er
+                    Legio, men er fortvivlet i Danmark, hvor Universitetet kun er eet, og
+                    Professorerne i de fleste Fag kun sjelden To ad Gangen. Gjorde man nu noget
+                    Lignende paa den folkelige H&#x00F8;iskole, i den Tanke, at der h&#x00E6;ngde dog immer Lidt
+                    ved, saa der vandtes et vist <hi rend="italic">videnskabeligt Anstr&#x00F8;g</hi>, da
+                    begik man en uhyre Daarlighed, og plagede de ni Tiendedele af Ungdommen for at
+                    gi&#x00F8;re den ene Tiendedel enten latterlig eller dog misforn&#x00F8;iet med sin
+                    Livs-Stilling og ufrugtbar i den. Men selv naar Dette staaer os levende for
+                    Øine, saa vi med Flid str&#x00E6;be hos os selv at adskille hvad der kun tilh&#x00F8;rer os
+                    som <hi rend="italic">Enkeltm&#x00E6;nd</hi>, det v&#x00E6;re nu en vis Tro og Forki&#x00E6;rlighed,
+                    <pb n="25"/> 
+                    eller en vis L&#x00E6;rdom, Konst eller Vidskab, fra hvad vi
+                    kan have <hi rend="italic">tilf&#x00E6;lles</hi> med <hi rend="italic">Folket</hi>, og
+                    str&#x00E6;be kun at meddele Dette, saa er dog Feiltagelser uundgaaelige, og vil is&#x00E6;r i
+                    Begyndelsen v&#x00E6;re hyppige, saa man giver baade for meget og for lidet, uden at
+                    derom er andet at sige, end at man maa s&#x00F8;rge for saa gode Ledere, som mueligt,
+                    og lade dem selv see til, hvordan de komme ud af det, men de maae da ogsaa kunne
+                    r&#x00F8;re sig frit efter bedste Ski&#x00F8;n.</p>
+            </div>
+            <div type="part">
+                <p>Man kan jo saaledes nok, baade efter Sagens Natur og vort Folks Eiendommelighed,
+                    forudsige, at det is&#x00E6;r vil v&#x00E6;re <hi rend="italic">Historie</hi> og <hi rend="italic">Poesi</hi>, 
+                    og deraf igien F&#x00E6;drenelandets <hi rend="italic">Historie</hi> og <hi rend="italic">Viserne</hi>, 
+                    der paa vor folkelige H&#x00F8;iskole vil spille Mester, og det aabner i mine Øine de lyseste Udsigter; thi
+                    naar denne Tilb&#x00F8;ielighed n&#x00E6;res og godt benyttes, da vil Folket see, de har et
+                    navnkundigt F&#x00E6;dreneland, hvis Ære er en Arv, de skylde deres B&#x00F8;rn, og
+                    Folke-Livet baade i hver Mands Huus og ved Gilder og Samkvem vil faae et
+                    anderledes &#x00E6;delt og muntert Pr&#x00E6;g, end i mange Aarhundreder. Men Selv om vi med
+                    Rette kunde indskr&#x00E6;nke Meddelelsen til Historie og Poesi, saa var dog dermed
+                    lidet eller intet sagt, da Intet er lettere at mishandle, medens rigtig og
+                    folkelig Anvendelse beroer paa den Rigdom, Sands og Takt, der findes hos
+                    Lederne, og den Erfaring, de efterhaanden indsamle.</p>
+                <p>Men ligesom der allerede i denne Henseende vil kiendes m&#x00E6;rkelig Forskiel mellem
+                    &#x201C;S&#x00E6;llandsfar og 
+                    <pb n="26"/> Jyde,&#x201D; saaledes kan H&#x00F8;iskolen slet ikke indskr&#x00E6;nkes
+                    til visse Fag, da der i alt Menneskeligt er endeel Folkeligt, og is&#x00E6;r maa man
+                    &#x00F8;nske, at Folket vil ski&#x00E6;nke hele F&#x00E6;drenelandets <hi rend="italic">n&#x00E6;rv&#x00E6;rende</hi> 
+                    Tilstand, Dets Stats-Forfatning, Love og Indretninger,
+                    saavelsom dets Handel og S&#x00F8;fart, N&#x00E6;ringsgrene og naturlige Beskaffenhed en god
+                    Deel af sin Opm&#x00E6;rksomhed, hvad i vore Dage heller aldrig kan feile, naar der
+                    blot kan findes Sagkyndige, der vil v&#x00E6;re barmhjertigere end <hi rend="italic">Juristerne i Roeskilde</hi>, 
+                    forstaae at gi&#x00F8;re hvad de veed anskueligt og
+                    levende, og har Vid til at kryddre hvad ellers vilde falde for t&#x00F8;rt. Heller ikke
+                    her nytter det da forud at ville foreskrive Noget, da Alt beroer paa hvad
+                    Vedkommende har at give og hvormegen Umage de vil gi&#x00F8;re sig for at oplyse og
+                    opmuntre Folket. Opgaven er her saameget vanskeligere, som de bedste Hoveder
+                    skulde l&#x00E6;re ikke blot at danne sig en tydelig Forestilling om Alt hvad der kan
+                    m&#x00F8;de dem i <hi rend="italic">Folke-Raadet</hi>, men ogsaa at udtrykke med
+                    Lethed hvad de t&#x00E6;nke derom; thi under sin lange Skind&#x00F8;d har Folket n&#x00E6;sten glemt
+                    hele den &#x00E6;dlere Deel af Modersmaalet, og ved at snakke enten os efter Munden
+                    eller &#x201C;tale efter Skriften&#x201D; som Jyden siger, falder Borger og Bonde n&#x00F8;dvendig i
+                    en stiv Pr&#x00E6;ke-Tone eller Skolemester-Stil, som kl&#x00E6;der dem grumme stygt og
+                    ber&#x00F8;ver deres Ord n&#x00E6;sten al Virkning undtagen den Latterlige. Her er gode Raad
+                    dyre, men heller d&#x00F8;d end raadvild, siger Ordsproget, og derved mindes vi om, at
+                    en Levning af Modersmaalets Fynd og 
+                    Her<pb n="27"/>lighed har Folket dog bevaret i <hi rend="italic">Ordsprogene</hi>, 
+                    som her kan komme dem ypperlig tilpas, naar de l&#x00E6;re at
+                    anvende dem paa Andet end Hverdags-Ting. Her m&#x00F8;der nu vel igien den
+                    Vanskelighed, at vi kiende for det meste kun lidt til Folkets Ordsprog, og kimse
+                    gierne ad dem, men det Sidste er aabenbar en Uvane, vi skal l&#x00E6;gge af, og for det
+                    F&#x00F8;rste er der Hjelp; thi deels har vi Øren for at bruge dem, deels mindes vi dog
+                    immer endeel gamle Bekiendtere, naar vi st&#x00F8;de paa dem hos <hi rend="italic">
+                    Syv</hi> eller <hi rend="italic">Laale</hi>, og endelig har jeg alt i
+                    Ungdommen v&#x00E6;ret saa forsynlig at optegne alle de <hi rend="italic">Ordsprog</hi>
+                    jeg kunde mindes at have <hi rend="italic">h&#x00F8;rt</hi>, og det blev ventelig den
+                    f&#x00F8;rste lille Bog, jeg gav ud efter H&#x00F8;jskolens Stiftelse, for at bringe min
+                    Ski&#x00E6;rv og opmuntre Andre til at gi&#x00F8;re ligesaa. Mange t&#x00E6;nke vel endnu, det er
+                    ligegyldigt om man finder et Ordsprog i Munden eller tager det op af en Bog, men
+                    deels vil Erfaring l&#x00E6;re, det gi&#x00F8;r hos Folket en m&#x00E6;rkelig Forskiel, og deels
+                    giver Fornuften, at et Ordsprog, vi aldrig har h&#x00F8;rt i Sammenh&#x00E6;ng, kan vi selv
+                    sjelden eller aldrig gi&#x00F8;re levende Brug af,</p>
+                <p>Jeg t&#x00F8;r nu troe at have viist, at Grunden hvi der ingen egenlige <hi rend="italic">
+                    Forskrifter</hi> lade sig give enten om Indholdet af
+                    Meddelelsen, eller om <hi rend="italic">Fremgangsmaaden</hi> paa den folkelige
+                    H&#x00F8;iskole, ligger deri, at det ikke skal v&#x00E6;re en Skole for D&#x00F8;den men for Livet,
+                    saa Alt kommer an paa hvormegen Livskraft der m&#x00F8;des, og hvor godt den anvendes;
+                    men det kan vel v&#x00E6;re, at Mange just derfor vil t&#x00E6;nke at 
+                    <pb n="28"/> Vanskelighederne er uovervindelige, og dertil kan jeg
+                    blot svare, at pr&#x00F8;ver man ikke engang paa det, overvindes de naturligviis ikke,
+                    men at det er Feighed at give tabt for en Fiende, f&#x00F8;r man har pr&#x00F8;vet Styrke med
+                    ham, og dog er den herskende <hi rend="italic">Uforstand</hi> paa Livet, parret
+                    med latterlig <hi rend="italic">Selvklogskab</hi>, den frygteligste
+                    F&#x00E6;drenelandets Fiende, der endnu oprandt. At det fra F&#x00F8;rst af vil v&#x00E6;re
+                    vanskeligt at finde Ledere, som med den n&#x00F8;dvendige Kundskab og Indsigt forbinde
+                    Liv og Lyst til at arbeide paa L&#x00F8;sningen af den store, men blandt de L&#x00E6;rde
+                    s&#x00E6;dvanlig foragtede eller forhadte Opgave, det f&#x00F8;lger af Tidens Pinagtighed; men
+                    dog formoder jeg at Endeel af Professorerne i <hi rend="italic">Sor&#x00F8;</hi> vilde
+                    med Forn&#x00F8;ielse gi&#x00F8;re deres Bedste, nogle gode Medhjelpere vilde ogsaa sikkert
+                    findes, og selv skulde jeg, naar det &#x00F8;nskedes, gierne, saal&#x00E6;nge jeg kunde,
+                    aarlig nogle Maaneder tage Deel i en Ki&#x00E6;rligheds-Gierning, jeg er vis paa vilde
+                    gavne og gl&#x00E6;de F&#x00E6;drenelandet til de sildigste Sl&#x00E6;gter og saaledes v&#x00E6;re sin egen
+                    rige L&#x00F8;n. Hvor det imidlertid aldeles kommer an paa Vedkommendes <hi rend="italic">Liv</hi> 
+                    og <hi rend="italic">Lyst, Evner</hi> og <hi rend="italic">Flid</hi>, om et Storv&#x00E6;rk skal lykkes eller ikke, 
+                    der maatte ethvert Misgreb have de s&#x00F8;rgeligste F&#x00F8;lger, naar det ikke snart og let kunde
+                    rettes, og dog maatte det oftere blive Tilf&#x00E6;ldet, at man skuffedes i sine
+                    Forventninger, saa Erfaring viste, at her var Lysten og Fliden uden tilsvarende
+                    Evner, og hist Evnerne uden Lysten og Driften unyttige; derfor maatte alle de
+                    nye Ledere, der ansattes ved H&#x00F8;iskolen, kun antages 
+                    <pb n="29"/> &#x201C;indtil videre,&#x201D; uden alt Krav paa nogen
+                    Godtgi&#x00F8;relse, hvis man ikke fandt sig tjent med dem. Dette vilde v&#x00E6;re saameget
+                    n&#x00F8;dvendigere, som Lederne, for at kunne opoffre sig til deres Kald, maatte
+                    l&#x00F8;nnes godt saal&#x00E6;nge de var det, og uv&#x00E6;rdige Personer derfor ved allehaande
+                    Midler vilde str&#x00E6;be at indsnige sig, naar Ans&#x00E6;ttelserne enten gav &#x201C;visse
+                    Levebr&#x00F8;d,&#x201D; eller Ret til, naar man fandtes uduelig, at faae Penge for ingen Ting
+                    at gi&#x00F8;re. Naar derimod Stillingen var uden N&#x00E6;rings-Sorger, saal&#x00E6;nge den varede,
+                    men Varigheden uvis, og slet ingen Fordeel fulgde med Aftakkelsen, undtagen naar
+                    man f&#x00F8;rst havde tjent i en R&#x00E6;kke af Aar (ti eller derover) til Takke, da kunde
+                    man v&#x00E6;re sikker paa i Regelen altid at faae de dueligste Ledere, der fandtes i
+                    Riget, og videre kan man naturligviis ikke komme.</p>
+            </div>
+            <div type="part">
+                <p>Man kan nu vist nok ogsaa tvivle om, hvorvidt en H&#x00F8;iskole blot for 
+                    <hi rend="italic">Danskhed</hi> og <hi rend="italic">Modersmaal</hi> fra F&#x00F8;rst
+                    af vilde blive synderlig bes&#x00F8;gt; thi paa den ene Side er der intet Land i
+                    Christenheden, hvor man har saa store Tanker om det Fremmede og saa ringe om sit
+                    Eget, som i <hi rend="italic">Danmark</hi>, og paa den anden Side har de Fleste
+                    fra Barnsbeen en saadan R&#x00E6;dsel i Blodet eller dog afgjort Modbydelighed for Alt
+                    hvad der hedder <hi rend="italic">Skole</hi>, at de i Ungdoms-Aarene ei
+                    lettelig gi&#x00E6;ste en saadan Indretning, naar den hverken lover dem visse Levebr&#x00F8;d
+                    eller Rang og Anseelse for det; men deels har dog ogsaa hos os opvakte unge
+                    Mennesker Lyst til at pr&#x00F8;ve Nyt, hvor 
+                    <pb n="30"/> de kan <hi rend="italic">frit</hi> gaae ind og ud og
+                    skal ikke i &#x201C;pinligt Forh&#x00F8;r", og deels maa <hi rend="italic">Ki&#x00E6;rlighed</hi> til
+                    <hi rend="italic">F&#x00E6;dreneland</hi> og <hi rend="italic">Modersmaal</hi> dog,
+                    trods alle Bet&#x00E6;nkeligheder, snart samle den bedste Deel af Ungdommen, hvor <hi rend="italic">
+                    F&#x00E6;drenes</hi> Banner vaier og hvor den h&#x00F8;rer sin <hi rend="italic">Moders</hi> R&#x00F8;st. 
+                    Derfor skader det slet ikke, om man kun har
+                    Faa at begynde med, thi selv har vi kun Lidt at begynde med, og maatte vel, om
+                    vi saae Folket str&#x00F8;mme til os, mismodig t&#x00E6;nke: hvad er det iblandt Saamange, saa
+                    vi kan have godt af lidt Pusterum, og Folket meget godt af, at Erfaring l&#x00E6;rer
+                    os at undgaae de v&#x00E6;rste Misgreb, for de kunde gi&#x00F8;re Skade.</p>
+                <p>Endelig kan man ogsaa mene at H&#x00F8;iskolen, selv naar den blev allerbedst, og trindt
+                    i Landet skattet efter Fortjeneste, vilde v&#x00E6;re utilstr&#x00E6;kkelig til at oplyse hele
+                    Folkets Ungdom, ja, selv naar man husker, hvad nu s&#x00E6;dvanlig glemmes, at
+                    H&#x00F8;iskolen ingenlunde er til for Ki&#x00F8;dhoveder, men kun for de Opvakte, da kan man
+                    dog sige, at de uundgaaelige udgifter ved Bes&#x00F8;get af H&#x00F8;iskolen vil hindre Mange
+                    derfra; men naar kun V&#x00E6;rket kommer i Gang og bliver et folkeligt Storv&#x00E6;rk, da er
+                    det kun unyttige Sorger man gi&#x00F8;r sig for dets n&#x00F8;dvendige ufuldkommenheder, og
+                    det er desuden soleklart, at jo l&#x00E6;ngere H&#x00F8;iskolen virker, des flere og des bedre
+                    Medhjelpere faaer den trindt i Landet, saa, ski&#x00F8;ndt den aldrig bliver
+                    overfl&#x00F8;dig, bliver den dog immer mindre uundv&#x00E6;rlig. Den naturlige og folkelige
+                    Oplysning forholder sig nemlig i alle Maader til den 
+                    <pb n="31"/> Unaturlige og Fremmede, som <hi rend="italic">Liv</hi> 
+                    til <hi rend="italic">D&#x00F8;d</hi>, saa de Samme Natur-Love, som gi&#x00F8;r,
+                    at den <hi rend="italic">Latinske</hi> Oplysning, efterat v&#x00E6;re drevet af alle
+                    Kr&#x00E6;fter i <hi rend="italic">trehundrede</hi> Aar, nu knap er at finde paa <hi rend="italic">
+                    Universitetet</hi> selv, end sige andensteds, de samme
+                    Natur-Love vil gi&#x00F8;re, at naar den <hi rend="italic">Danske</hi> Oplysning er
+                    drevet blot med skikkelig Kraft i een Menneske-Alder, da vil man m&#x00F8;de den selv i
+                    Hytterne paa Heden, og Dens H&#x00F8;iskole vil kun staae i Midten, som den store
+                    Br&#x00E6;ndpunkt, hvori alle Straaler samle sig, for med fornyet Kraft at vende
+                    tilbage og oplyse <hi rend="italic">Livet</hi> og opklare Aasyn i alle Kroge.
+                    Hvad man kun l&#x00E6;rer for en Examens og et Levebr&#x00F8;ds Skyld, det skynder man sig
+                    naturligviis at glemme, naar Examen er overstaaet og Levebr&#x00F8;det opnaaet, og gi&#x00F8;r
+                    det med saameget bedre Samvittighed, som man seer, det ingenlunde oplyser eller
+                    fors&#x00F8;der, men fordunkler og forbittrer <hi rend="italic">Livet</hi>; men hvad
+                    man kun l&#x00E6;rer, fordi man har Lyst dertil, det glemmer man i Grunden aldrig, og
+                    det str&#x00E6;ber man des ivrigere at forplante, jo tydeligere man af Erfaring
+                    overbevises om, at det f&#x00F8;rer til en sand og munter Livs-Anskuelse, gi&#x00F8;r os
+                    dygtigere til vor Gierning og mere tilfreds med vor Stilling end vi ellers vilde
+                    v&#x00E6;ret. Derfor vil man finde, at fremfor Alt med en <hi rend="italic">Kongelig
+                    Dansk</hi> H&#x00F8;iskole, hvor <hi rend="italic">Modersmaalet</hi> udfolder sig i
+                    hele sin de Fleste ubekiendte Rigdom og magel&#x00F8;se Yndighed, hvor <hi rend="italic">
+                    F&#x00E6;drenelandet</hi> i al sin Deilighed, i Lys og Skygge, staaer
+                    afbildet for vore Øine, med Veiene til Ære 
+                    <pb n="32"/> og Lykke, som Stier der snoe sig giennem Kornmarker,
+                    og hvor alle <hi rend="italic">Folkets</hi> gamle <hi rend="italic">Helte</hi>
+                    vaagne ved <hi rend="italic">K&#x00E6;mpeviserne</hi>, for aandelig at gientage deres
+                    Helte-Gierninger, med en saadan H&#x00F8;iskole er det bogstavelig kun det <hi rend="italic">
+                    f&#x00F8;rste</hi> Skridt, der koster. Og <hi rend="italic">hvad</hi>
+                    koster saa vel det f&#x00F8;rste Skridt? <hi rend="italic">Af Penge</hi> slet ikke
+                    Andet end hvad der af F&#x00E6;drene og deres Konger var bestemt til en &#x201C;Patriotisk
+                    H&#x00F8;iskole&#x201D; som ikke selv Aarhundreder kunde give <hi rend="italic">Latinerne</hi>
+                    Hjemmel paa, og som de ikke engang upaatalt besad i den laveste Hjemmels-Tid.
+                    <hi rend="italic">Af Kr&#x00E6;fter</hi> kun de svage Levninger, som end er tilbage
+                    af hvad der opflammede <hi rend="italic">Danmarks</hi> Landsf&#x00E6;dre, Helte,
+                    Skjalde, Sagam&#x00E6;nd, Kvinder, Borgere og B&#x00F8;nder, til at elske, &#x00E6;re og tjene
+                    F&#x00E6;drenelandet, og til, saavidt de kunde, at sikkre al &#x00E6;del Daad et priseligt
+                    Efterm&#x00E6;le paa Modersmaalet og et ki&#x00E6;rligt Minde hos Eftersl&#x00E6;gten, kun disse
+                    Kr&#x00E6;fter koster Oprettelsen af den Danske H&#x00F8;iskole, og hvortil kan de bruges
+                    bedre end, som et St&#x00F8;d i <hi rend="italic">Gjallarhornet,</hi> til at v&#x00E6;kke de
+                    hensovne K&#x00E6;mper til den sidste Strid for F&#x00E6;dreland og Modersmaal, v&#x00E6;kke hvad nu
+                    maa vaagne eller sove den evige S&#x00F8;vn. Og nu endelig <hi rend="italic">Mod,</hi> hvoraf vi vist nok
+                    Intet har at miste, hvormeget af det skulde der vel beh&#x00F8;ves for at raabe om
+                    Hjelp til at bygge <hi rend="italic">Dannevirke</hi>? Hvormeget Mod beh&#x00F8;ve vi,
+                    det gamle Danmarks erkl&#x00E6;rede Venner, eenlige, adspredte, som vi staae, omringede
+                    af <hi rend="italic">Latinismer, Gallicismer</hi> og <hi rend="italic">
+                    Germanismer</hi>, for at samle alt det 
+                    <pb n="33"/> Besl&#x00E6;gtede hos Folket omkring os og pr&#x00F8;ve, om 
+                    <hi rend="italic">Dansk</hi> dog ikke endnu er det St&#x00E6;rkeste paa Marken? Havde
+                    vi ikke engang saameget Mod, da maatte vi v&#x00E6;re glade ved de gamle K&#x00E6;mpers D&#x00F8;d,
+                    thi de vilde sparket til os som <hi rend="italic">Thor</hi> til Dv&#x00E6;rgen ved
+                    Balders-Baalet.</p>
+                <p>Altsaa, det f&#x00F8;rste Skridt koster ubetydeligt, og det er Alt, thi mislykkedes det,
+                    da var &#x201C;Historien&#x201D; ude, og lykkes det, da har vi seiret, da seirer med os baade
+                    <hi rend="italic">Nordens Aand</hi> og <hi rend="italic">Danmarks
+                    Hjerte</hi>, og da kan vi ikke sinde det v&#x00E6;rdt at n&#x00E6;vne hvad Seiren kostede,
+                    men maae finde, vi for Spotpriis have faaet Deel i den Ud&#x00F8;delighed, ingen
+                    Himmelegn gav sine K&#x00E6;mper saa stolt som <hi rend="italic">Norden</hi> og intet
+                    Land sine Ki&#x00E6;re saa liflig som <hi rend="italic">Danmark</hi>.</p>
+                <p>Her vil jeg standse, thi i Danmarks Ski&#x00F8;d er s&#x00F8;dt at hvile, saa selv naar
+                    Dannem&#x00E6;nd f&#x00F8;le, deres Kald er Kamp, vil deres Lyst dog v&#x00E6;re Hvile, og for mine
+                    Øine er Kampen egenlig alt overstaaet og Seieren vundet, saa det kun gi&#x00E6;lder om
+                    at benytte sig mildt men virksomt af den, og i den Danske H&#x00F8;iskole reise et <hi rend="italic">
+                    Dannevirke</hi> ingenlunde paa Strid, men kun til V&#x00E6;rn i en
+                    Fremtid, der vil have sine store Farer og maa ikke fattes Mod til at see dem
+                    under Øine eller samlede Kr&#x00E6;fter til at overvinde dem. Alle Danmarks Helte var
+                    d&#x00F8;de, saa n&#x00E6;r som <hi rend="italic">Holger Danske</hi>, men han slog alt for
+                    mine Øine Fienderne af Marken, <hi rend="italic">K&#x00E6;mpevisen</hi> var forstummet
+                    i Palladserne, og nynnedes kun svagt i Hytterne, 
+                    <pb n="34"/> i Skoven og paa Heden, men under Seiers-F&#x00F8;lelsen
+                    blev den atter h&#x00F8;ir&#x00F8;stet trindt paa Marken, og har begyndt paany at udbryde i en
+                    Toners Mangfoldighed, som maa forbause alle Lydh&#x00F8;re. Vist nok vil dette Tone-Hav
+                    ved en <hi rend="italic">Dansk H&#x00F8;iskole</hi> baade kiendelig voxe og langt
+                    klarere udbrede sig, men at K&#x00E6;mpevisen endnu f&#x00F8;r Skolen reiste sig, ved
+                    Livs-Kraften i det Danske Hjerte, har overvundet D&#x00F8;den, og sammensmeltet <hi rend="italic">
+                    Fredriks</hi> og <hi rend="italic">Christjans</hi> Kongenavne
+                    med <hi rend="italic">Skjoldungers</hi> og <hi rend="italic">Valdemarers,
+                    Maries</hi> og <hi rend="italic">Carolines</hi> med <hi rend="italic">Dannebods</hi> 
+                    og <hi rend="italic">Dagmars</hi>, det er dog en
+                    Kiendsgierning, som Eftersl&#x00E6;gten h&#x00F8;ilig vil undres over, vore Samtidige kunde
+                    oversee, men vil finde, retf&#x00E6;rdiggjorde mine dristigste Forventninger om et <hi rend="italic">
+                    Dansk Gyldenaar</hi>, der i <hi rend="italic">Christian</hi>
+                    den <hi rend="italic">Ottendes</hi> Dage skal f&#x00F8;de i Lys hvad i <hi rend="italic">
+                    Frederik</hi> den <hi rend="italic">Sjettes</hi> undfangedes i
+                    L&#x00F8;n, og som et venligt Skyggebillede af denne gl&#x00E6;delige Begivenhed, vil jeg her
+                    lade et Kvad om <hi rend="italic">Sor&#x00F8;</hi> komme for Lyset, som, for mange Aar
+                    siden, undfangedes i L&#x00F8;n i &#x201C;Nyaarsmorgen-Stunden.&#x201D;</p>
+                <fw type="graphic"/>
+            </div>
+            <div type="poem">                
+                <head rend="center"> <pb n="34" type="gv"/>Morgendr&#x00F8;m om Sor&#x00F8;.</head>
+                <lg>
+                    <l><hi rend="initial">Ti</hi>l Kirke din i <hi rend="italic">Nyaars &#x2013; Nat</hi>
+                        <note type="footnote"><p>Mit Kvad om &#x201C;Sor&#x00F8; Kirke&#x201D; udkom nemlig f&#x00F8;rst i en lille Samling 1810, kaldt &#x201C;<hi rend="italic">Nyaars-Nat.</hi>&#x201D;</p></note>,
+                    </l>
+                    <l>Du By af Kloster-Stene!</l>
+                    <l>Med viet Lys, paa Syn opsat,</l>
+                    <l>Jeg gik engang fuldene,</l>
+                    <l>Og som jeg saae, med Fieder-Stav</l>
+                    <l>Paa gamle Danmarks Adel-Grav</l>
+                    <l>Jeg risted Saga-Runer.</l>
+                </lg>
+                <lg>
+                    <l>Fra Himlen h&#x00F8;it, mig tykdes, klang</l>
+                    <l>Da Ord om Liv af D&#x00F8;de,</l>
+                    <l>Og var det saa, bet&#x00F8;d min Sang</l>
+                    <l>En Paaske-Morgenr&#x00F8;de,</l>
+                    <l>En Straale af forklaret St&#x00F8;v,</l>
+                    <l>En Maidag for det brune L&#x00F8;v</l>
+                    <l>I Glandsen af Ki&#x00E6;rminder.</l>
+                </lg>
+                <lg>
+                    <l>Alt fra den Stund fuldmeget Vand</l>
+                    <l>Vel l&#x00F8;bet er til Strande,</l>
+                    <l>Og end ei saae jeg St&#x00F8;v af <hi rend="italic">Dan</hi></l>
+                    <l>Forklaret op at stande;</l>
+                    <l>Men hvad der f&#x00F8;dtes, som mit Haab,</l>
+                    <l>Af Saga-Aand i Lue-Daab,</l>
+                    <l>Det trodser Tidens B&#x00F8;lger.</l>
+                </lg>
+                <lg>
+                    <l> <pb n="36"/>Vel speiler sig i Verdens Hav</l>
+                    <l>Cometens vilde Flammer,</l>
+                    <l>Og B&#x00F8;lgen r&#x00F8;dmer til en Grav</l>
+                    <l>For stolte Folke-Stammer,</l>
+                    <l>Men i det r&#x00F8;de Hav forgaaer</l>
+                    <l>Kun hvad sin Lid til Verden staaer,</l>
+                    <l>Ei hvad paa Himlen stoler.</l>
+                </lg>
+                <lg>
+                    <l>Den gyldne Soel, hvis Straaler faldt</l>
+                    <l>Paa Øster-Ledens H&#x00F8;ie,</l>
+                    <l>Sig Speiler end i Øster-Salt</l>
+                    <l>Skinbarlig for mit Øie;</l>
+                    <l>Med lige s&#x00F8;d og liflig Klang</l>
+                    <l>De Danske B&#x00F8;lgers Havfru-Sang</l>
+                    <l>End tykkes mig at tone.</l>
+                </lg>
+                <lg>
+                    <l>Ja, da med Haanden under Kind,</l>
+                    <l>Jeg sad paa K&#x00E6;mpe-H&#x00F8;ie,</l>
+                    <l>Og f&#x00E6;stede ved Lampe-Skin</l>
+                    <l>Paa Urnerne mit Øie,</l>
+                    <l>Da tordned det fra Østerled</l>
+                    <l>Med Lyn i Lyn og slog saa ned</l>
+                    <l>I Asken af de Gi&#x00E6;ve.</l>
+                </lg>
+                <lg>
+                    <l>Da h&#x00F8;rde lydt jeg Hyl og Hvin</l>
+                    <l>Af tordenslagne Trolde,</l>
+                    <l>Da steg der som en Straale fin</l>
+                    <l>Fra Asken af de Bolde,</l>
+                    <l>En Fugl, paa Brystet askegraa,</l>
+                    <l>Guldtoppet flux jeg flagre saae</l>
+                    <l>Med regnbufagre Vinger.</l>
+                </lg>
+                <lg>
+                    <l> <pb n="37"/>Den fl&#x00F8;i kun lavt og knap saa fast,</l>
+                    <l>Som Struds paa Jord mon hoppe,</l>
+                    <l>Holdt H&#x00F8;iden mest med Orlogs-Mast,</l>
+                    <l>Og <hi rend="italic">S&#x00E6;llands</hi> B&#x00F8;ge-Toppe,</l>
+                    <l>Men hvor den fl&#x00F8;i, det lysned trindt,</l>
+                    <l>Og hvor den sang, der sprang i Flint</l>
+                    <l>Hver Dv&#x00E6;rg af Jette-Sl&#x00E6;gten.</l>
+                </lg>
+                <lg>
+                    <l>Den sang afbrudt, kun hist og her,</l>
+                    <l>Hvor der laae St&#x00F8;v af Helte,</l>
+                    <l>Som fordum bar i Marken Sv&#x00E6;rd</l>
+                    <l>Med Sandheds Styrke-B&#x00E6;lte;</l>
+                    <l>Ved Hanegal og Morgengry</l>
+                    <l>Da vaagned K&#x00E6;mper op paany,</l>
+                    <l>Som havde ret udsovet.</l>
+                </lg>
+                <lg>
+                    <l>Hvor vidt Den fl&#x00F8;i i Syd og Nord,</l>
+                    <l>Den Fugl, jeg kan ei sige,</l>
+                    <l>Men grandt jeg saae, Den kom til Soer,</l>
+                    <l>Som til de <hi rend="italic">D&#x00F8;des Rige,</hi></l>
+                    <l>Der sang den h&#x00F8;it, der sad den fast,</l>
+                    <l>Der Kampesteen og Marmor brast</l>
+                    <l>Paa Danmarks Adel-Grave.</l>
+                </lg>
+                <lg>
+                    <l>Der steg af Aske og af St&#x00F8;v</l>
+                    <l>Forklaret <hi rend="italic">Skjalm</hi> hin <hi rend="italic">Hvide,</hi></l>
+                    <l>Og <hi rend="italic">Asger Ryg</hi> fra <hi rend="italic">Fjennesl&#x00F8;v,</hi></l>
+                    <l>Med <hi rend="italic">Axel</hi> ved sin Side;</l>
+                    <l>De steg med Hjelm, med Skjold og Sv&#x00E6;rd,</l>
+                    <l>Med F&#x00F8;lge prudt til Herref&#x00E6;rd</l>
+                    <l>Paa Mark og saa paa B&#x00F8;lge.</l>
+                </lg>
+                <lg>
+                    <l> <pb n="38"/>Da steg, o <hi rend="italic">Sor&#x00F8;!</hi> af sit Grus,</l>
+                    <l>Ved Siden ad din Kirke,</l>
+                    <l>Dit gamle Klosterskole-Hus,</l>
+                    <l>Fuldst&#x00F8;rre Ting at virke;</l>
+                    <l>Den Aske-Fugl, der sang det op,</l>
+                    <l>Med Phenix-Kvad fra Kirke-Top,</l>
+                    <l>Han blev og Skole-Mester.</l>
+                </lg>
+                <lg>
+                    <l>Det var fuldunderligt et Syn,</l>
+                    <l>Han blev som Mand at skue,</l>
+                    <l>Med Haar som Aske, Blik som Lyn,</l>
+                    <l>Og Taare-Smil i Bue;</l>
+                    <l>Saa skaber Gud hver Gang paany</l>
+                    <l>Med Straale-Smil i Taare-Sky</l>
+                    <l>De Regnbu-Farver ski&#x00F8;nne.</l>
+                </lg>
+                <lg>
+                    <l>Han talde som en Mester klog</l>
+                    <l>Vel med de L&#x00E6;rdes Tunge,</l>
+                    <l>Sin Fugle-Art han r&#x00F8;bed dog</l>
+                    <l>Ei blot ved lydt at Sjunge,</l>
+                    <l>Paa Vinger sig hans Ord udsvang,</l>
+                    <l>Og altid i sin Tanke-Gang</l>
+                    <l>Han Sv&#x00E6;ved over Bjerge.</l>
+                </lg>
+                <lg>
+                    <l>Hos ham ei Nogen gjaldt for klog</l>
+                    <l>Paa boglig Konst og Kierne,</l>
+                    <l>Som fandt ei til hvert Fugle-Sprog</l>
+                    <l>En N&#x00F8;gel i sin Hjerne;</l>
+                    <l>Al Daad er kun en Efter-Klang,</l>
+                    <l>Al Viisdom kun forklaret Sang,</l>
+                    <l>Det var hans Indgangs-Tale.</l>
+                </lg>
+                <lg>
+                    <l> <pb n="39"/>Men vil paa Sang du vorde klog,</l>
+                    <l>Det var hans m&#x00F8;rke Tale,</l>
+                    <l>Da s&#x00E6;t dig i den Aske-Krog,</l>
+                    <l>Hvor Fuglen laae i Dvale!</l>
+                    <l>Al L&#x00E6;rdom er kun Aske-Dom.</l>
+                    <l>Det viste klart, han ihukom,</l>
+                    <l>Hvoraf han var oprundet.</l>
+                </lg>
+                <lg>
+                    <l>Alt som <hi rend="italic">Herakles</hi> paa sit Skjold</l>
+                    <l>Sig l&#x00E6;rde selv at kiende,</l>
+                    <l>Saa l&#x00E6;rde det hver K&#x00E6;mpe bold</l>
+                    <l>Ved Blad i Bog at vende,</l>
+                    <l>Gik hver til Sit, i Mark, om Bord,</l>
+                    <l>Til Kongens Gaard og Landets Roer,</l>
+                    <l>Med Liv, med Lys og Styrke.</l>
+                </lg>
+                <lg>
+                    <l>Det var min Dr&#x00F8;m, du Kloster-By</l>
+                    <l>Fra <hi rend="italic">Valdemarers</hi> Dage!</l>
+                    <l>Det er mit Haab, din Glands paany</l>
+                    <l>Skal vende snart tilbage;</l>
+                    <l>Thi over Danmarks Adels-Been</l>
+                    <l>Du stander som en Bauta-Steen</l>
+                    <l>Med Vente-Brev paa Runen.</l>
+                </lg>
+                <lg>
+                    <l>Ja, hvor en Æt, som den af <hi rend="italic">Skjalm</hi>,</l>
+                    <l>Sit Bede-Sted har lavet,</l>
+                    <l>Og hvor saamegen &#x00E6;del Malm</l>
+                    <l>Er ret med Flid begravet,</l>
+                    <l>Der Ædlinger maae groe som Guld,</l>
+                    <l>Der end maa dages over Muld</l>
+                    <l>En Skat for Land og Rige.</l>
+                </lg>
+                <lg>
+                    <l> <pb n="40"/>Hvor Skolen h&#x00F8;i for Ridder-Tid</l>
+                    <l>Blev fat til Mindes-M&#x00E6;rke</l>
+                    <l>For Ridderne fra fordums Tid,</l>
+                    <l>Fuldtroe og k&#x00E6;mpest&#x00E6;rke,</l>
+                    <l>Selv naar den sunket er i Grus,</l>
+                    <l>Det tegner til et <hi rend="italic">Ridder-Huus</hi></l>
+                    <l><hi rend="italic">I Grunden ei</hi> desmindre.</l>
+                </lg>
+                <fw type="graphic"/>
+            </div>
+        </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,77 @@
+.viewer
+    {
+        width: 430px;
+        height: 550px;
+        border: 1px solid #ddd;
+        position: relative;
+        cursor: move;
+        cursor: -moz-grab !important;
+
+    }
+
+    .wrapper { overflow: hidden;  }
+
+
+.iviewer_common {
+    position:absolute;
+    bottom:10px;
+    border: 1px solid #555;
+    height: 28px;
+    z-index: 5000;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding:2px;
+	
+	
+}
+
+.iviewer_cursor {
+    cursor: -moz-grab;
+}
+
+.iviewer_drag_cursor {
+    cursor: -moz-grabbing;
+}
+
+.iviewer_button {
+	background-color:#fff;
+    width: 28px;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+	
+}
+	.iviewer_button:hover {
+		border: 1px solid #000;
+		background-color: #ddd;
+	}
+
+.iviewer_zoom_in {
+    left: 18px;
+    background-image: url(../images/iviewer.zoom_in.gif);
+}
+
+.iviewer_zoom_out {
+    left: 55px;
+    background-image: url(../images/iviewer.zoom_out.gif);
+}
+
+.iviewer_zoom_zero {
+    left: 92px;
+    background-image: url(../images/iviewer.zoom_zero.gif);
+}
+
+.iviewer_zoom_fit {
+    left: 129px;
+    background-image: url(../images/iviewer.zoom_fit.gif);
+}
+
+.iviewer_zoom_status {
+    left: 166px;
+    font-size: 16px;
+    line-height:1.7em;
+    color: #444;
+    background-color: #fff;
+    text-align: center;
+    width: 55px;
+}

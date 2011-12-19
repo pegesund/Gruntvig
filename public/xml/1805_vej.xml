@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Vejledning til Bogfortegnelse 1805</title>
+            <author>Vibeke A. Pedersen</author>
+            <editor role="centerManager">Michael Schelde</editor>
+            <editor role="editor">Johnny Kondrup</editor>
+            <editor role="editionManager"></editor>
+            <editor role="itManager">Kim Steen Ravn</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>Pr&#x00F8;veversion</edition>
+         </editionStmt>
+         <extent>3 KB</extent>
+         <publicationStmt>
+            <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+            <distributor>Grundtvig Centeret, Vartov</distributor>
+            <date type="2011-03-03">Pr&#x00F8;versionen</date>
+         </publicationStmt>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+            <p>Grundtvig Centeret arbejder med:</p>
+            <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+            <p>2. En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+            <p>2. a.Teologi og kirke</p>
+            <p>2. b.Demokrati og folkelighed</p>
+            <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+            <p>3. Videnudveksling, undervisning og formidling</p>
+         </projectDesc>
+         <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Kodebog</editorialDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change xml:id="KSR" who="KSR" when="2011-01-24">model for regulativer</change>
+         <change xml:id="VAP" who="VAP" when="2011-02-16">1. udkast</change>
+         <change who="VAP" when="2011-02-16">rettelser efter JK's genneml&#x00E5;sning</change>
+         <change who="VAP" when="2011-02-17">ny head og fjernet m&#x00E5;slinger</change>
+         <change who="VAP" when="2011-02-18">korrekt st&#x00F8;rrelse</change>
+         <change who="VAP" when="2011-02-25">nyt afsnit</change>
+         <change who="VAP" when="2011-02-28">validering</change>
+     </revisionDesc>
+   </teiHeader>
+ 
+  
+
+  <text>
+     <body decls="guideLines">
+        <head n="2">Vejledning til Bogfortegnelse 1805</head>
+       <div>
+           <head n="1"></head>
+         
+           <div>
+             
+              <p>I 1805 udf&#x00E5;rdigede Grundtvig en liste over de b&#x00F8;ger, han ejede: &#x201C;Optegnelse / paa / de B&#x00F8;ger / Jeg ejer / og / ejende vorder / begyndt / d. XXde Decbr / MDCCCV / Nikolaj Frederik Severin
+                 <persName key="pe4">Grundtvig</persName> / Ludomagister Egel&#x00F8;kkis.&#x201D; Den befinder sig i Grundtvig-arkivet på Det Kongelige Bibliotek i K&#x00F8;benhavn, i den såkaldte fascikel 501 (fasc. 501.1).</p>
+             
+              <p>GV viser bogfortegnelsen både i faksimile (dvs. som billeder) og i transskription. Grundtvig har opdelt fortegnelsen systematisk efter emner med historie som den f&#x00F8;rste faggruppe. Eftersom teologi dengang var bibliotekernes f&#x00F8;rste og vigtigste faggruppe, siger opprioriteringen af de historiske b&#x00F8;ger noget om, hvor Grundtvigs hovedinteresse lå.</p>
+              <p>Når man kommer til de sk&#x00F8;nlitter&#x00E5;re v&#x00E5;rker, ser man, at Grundtvig både dyrker den klassiske og den nyere litteratur, og at han har mange af v&#x00E5;rkerne på originalsprogene: engelsk, tysk, latin.</p>
+              <p>L&#x00E5;ser man ned over siderne, vil man se, at Grundtvig allerede i en alder af 22 år ejede mange sj&#x00E5;ldne og kostbare b&#x00F8;ger, fx <rs key="pe350">Anders S&#x00F8;rensen Vedel</rs>s overs&#x00E6;ttelse af Saxo fra 1575, <hi rend="italic">Den Danske Kr&#x00F8;nicke som <rs key="pe237">Saxo Grammaticus</rs> screff, halfffierde hundrede Aar forleden</hi>.</p>
+              <p>Titlen på Grundvigs f&#x00F8;rste bogfortegnelse angiver en vis usikkerhed om, hvad han faktisk har ejet, og hvad han blot måtte have &#x00F8;nsket sig eller har haft adgang til i 1805. De fleste af v&#x00E5;rkerne  genfindes imidlertid i den bogfortegnelse, som s&#x00F8;nnen Johan udarbejder i 1839, så enten har han haft dem allerede i 1805, eller også har han anskaffet dem senere.</p>
+              <p>På et senere tidspunkt bliver der knyttet moderne bibliografiske oplysninger (verificeringer) til de enkelte poster.</p>
+                          
+           </div>
+       
+       </div>
+      </body> 
+    
+  </text>
+</TEI>

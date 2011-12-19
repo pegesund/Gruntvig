@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Vejledning til de tekstkritiske noter</title>
+            <author>Johnny Kondrup</author>
+            <editor role="centerManager">Michael Schelde</editor>
+            <editor role="editionManager">Johnny Kondrup</editor>
+            <editor role="itManager">Kim Steen Ravn</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>Pr&#x00F8;veversion</edition>
+         </editionStmt>
+         <extent>3 KB</extent>
+         <publicationStmt>
+            <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+            <distributor>Grundtvig Centeret, Vartov</distributor>
+            <date type="2011-03-03">Pr&#x00F8;versionen</date>
+         </publicationStmt>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+            <p>Grundtvig Centeret arbejder med:</p>
+            <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+            <p>2. En forskningsindsats p&#x00E5; de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+            <p>2. a.Teologi og kirke</p>
+            <p>2. b.Demokrati og folkelighed</p>
+            <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+            <p>3. Videnudveksling, undervisning og formidling</p>
+         </projectDesc>
+         <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Kodebog</editorialDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change xml:id="KSR" who="KSR" when="2011-03-02">text 2 xml</change>
+     </revisionDesc>
+   </teiHeader>
+ 
+  
+
+  <text>
+     <body decls="guideLines">
+        <head n="2">Vejledning til de tekstkritiske noter</head>
+       <div>
+             
+          <p>De tekstkritiske noter oplyser is&#x00E6;r om udgivernes emendationer (dvs. rettelser) af grundteksten. De kan dog ogs&#x00E5; oplyse om tvivlsomme eller dunkle tekststeder, som ikke er blevet emenderet, enten i diskuterende form eller ved at bringe tidligere udgiveres eventuelle rettelser til stederne.</p>
+          
+          <p>De tekstkritiske noter kan v&#x00E6;lges til og fra p&#x00E5; en knap i menubj&#x00E6;lken over teksten .</p>
+          
+          <p>N&#x00E5;r noterne er valgt til, markeres de i teksten med lemmategn: ]</p>
+          
+          <p>N&#x00E5;r man klikker p&#x00E5; lemmategnet, skyder noten sig ind i teksten: Lemma (dvs. stikordet) til venstre for tegnet farves bl&#x00E5;t, og til h&#x00F8;jre for tegnet vises selve noteteksten. Det ser typisk s&#x00E5;dan ud:</p>
+          
+          <p rend="center">nedfuser] <hi rend="italic">B,</hi> nedsuser <hi rend="italic">A</hi></p>
+          
+          <p>Lemma (‘nedfuser’) er den rettelse, som udgiverne har indsat i teksten. Hvor den kommer fra, markeres af en sigel (dvs. en kode) efter lemmategnet (her B, som henviser til 2. udgave af v&#x00E6;rket). Efter siglen st&#x00E5;r den form, som teksten havde, f&#x00F8;r den blev rettet (‘nedsuser’). Til sidst st&#x00E5;r siglen A, som henviser til 1. udgave af v&#x00E6;rket, alts&#x00E5; vores grundtekst.</p>
+                          
+       
+       </div>
+      </body> 
+    
+  </text>
+</TEI>

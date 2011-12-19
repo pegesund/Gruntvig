@@ -1,0 +1,425 @@
+/* txtCSS.css til styling af tekster */
+/* KSR: 2011.09.05 */
+
+a.app 
+        {
+        color: black;
+        text-decoration: none;
+        }
+
+span.appInvisible
+         {
+         display: none;
+         }
+
+.app:hover 
+         {
+         color: green;
+         }
+
+.app:hover .appInvisible
+        {
+        display: inline;
+        }
+
+.lem
+        {
+        color: gray;
+        }
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        line-height: 110%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        }
+
+/* kolofonblad start */
+
+.kolofonBlad
+        {
+        margin: 2.5em
+        }
+
+.kolofon
+        {
+        margin: 0.5em;
+        }
+
+.kolofonTitle
+        {
+        margin: 0.5em;
+        }
+        
+table, td    
+        {
+        padding-right: 0.5em;
+        padding-left: 0em;
+        }
+
+td.sigel
+        {
+        font-style: italic;
+        text-align: left;
+        vertical-align: super;
+        width: 2em;
+        }
+        
+td.source
+        {
+        text-align: left;
+        width: 30em;
+        }
+
+/* kolofonblad end */
+
+.bold
+        {
+        font-weight: bold;
+        }
+
+.center
+        {
+        text-align: center;
+        }
+
+.editionPhilologist
+        {
+        margin-left: 50px;
+        }
+
+.emendation
+        {
+        text-align: justify;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin: 2em 2em 2em 2em;
+        }
+
+.firstIndent
+        {
+        text-indent: 2em;
+        text-align: justify;
+        }
+
+.footnote
+        {
+        color: blue;
+        font-size: 80%;
+        margin: 1em 0em 1em 2em;
+        }
+
+.footLine
+        {
+        color: blue;
+        text-align: left;
+        margin: 1em auto 0 0;
+        width: 4em;
+        }
+
+.fwLongLine
+        {
+        margin: 2em;
+        width: 5em;
+        }
+
+.fwShortLine
+        {
+        margin: 2em;
+        width: 3em;
+        }
+
+.hangingIndent
+        {
+        text-indent: -1em;
+        padding-left: 1em;
+        }
+
+/* head start */
+
+.head0, .head1, .head2, .head3, .head4, .head5, .head6   
+        {
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
+.head0
+        {
+        font-size: 100%;
+        }
+
+.head1
+        {
+        font-size: 120%;
+        }
+
+.head2
+        {
+        font-size: 144%;
+        }
+
+.head3
+        {
+        font-size: 172%;
+        }
+
+.head4
+        {
+        font-size: 207%;
+        }
+
+.head5
+        {
+        font-size: 248%;
+        }
+
+.head6
+        {
+        font-size: 298%;
+        }
+
+/* head end */
+
+.initial
+        {
+        font-style: normal;
+        font-size: 120%;
+        }
+
+.italic
+        {
+        font-style: italic;
+        }
+
+.justify
+        {
+        text-align: justify;
+        }
+
+.l_center
+        {
+        text-align: center;
+        }
+
+.lgNumber
+        {
+        font-size: 100%;
+        margin-left: 10px;
+        }
+
+.left
+        {
+        text-align: left;
+        }
+
+.lfirstIndent
+        {
+        text-indent: 1em;
+        }
+
+.lsecondIndent
+        {
+        text-indent: 2em;
+        }
+
+.lthirdIndent
+        {
+        text-indent: 4em;
+        }
+
+.lg
+        {
+        text-align: left;
+        margin: 2em 2em 2em 2em;
+        }
+
+.motto
+        {
+        font-size: 80%;
+        line-height: 110%;
+        margin: 1em 0em 1em 0em;
+        }
+
+.noIndent
+        {
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+.pageNumber
+        {
+        text-align: justify;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin: 4em 4em 4em 4em;
+        }
+
+.pbA
+        {
+        font-weight: bold;
+        }
+
+.pbA, .pb
+        {
+        font-size: 80%;
+        color: #008000;
+        }
+
+.preFace
+        {
+        text-align: justify;
+        margin-right: 150px;
+        margin-left: 150px;
+        margin: 4em 4em 4em 4em;
+        }
+
+.raised
+        {
+        font-size: 80%;
+        vertical-align: top;
+        }
+
+.right
+        {
+        text-align: right;
+        }
+
+.romanType
+        {
+        font-family: arial;
+        font-size: 80%;
+        }
+
+.secondIndent
+        {
+        text-indent: 4em;
+        text-align: justify;
+        }
+
+.size-1
+        {
+         font-size: 80%;
+        }
+
+.spaceOne
+        {
+        line-height: 200%;
+        }
+        
+.spaceTwo
+        {
+        line-height: 300%;
+        }
+
+/* titlePage start */
+
+.titlePage
+        {
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
+.main1, .main2, .main3, .main4, .main5, .main6
+        {
+        margin: 2em;
+        }
+        
+.main1
+        {
+        font-size: 120%;
+        }
+
+.main2
+        {
+        font-size: 144%;
+        }
+
+.main3
+        {
+        font-size: 172%;
+        }
+
+.main4
+        {
+        font-size: 207%;
+        line-height: 200%;
+        }
+
+.main5
+        {
+        font-size: 248%;
+        line-height: 200%;
+        }
+
+.main6
+        {
+        font-size: 298%;
+        line-height: 200%;
+        }
+
+.part1, .part2, .part3, .part4, .part5, .part6
+        {
+        margin: 2em;
+        }
+
+.part1
+        {
+        font-size: 120%;
+        }
+
+.part2
+        {
+        font-size: 144%;
+        }
+
+.part3
+        {
+        font-size: 172%;
+        }
+
+.part4
+        {
+        font-size: 207%;
+        line-height: 200%;
+        }
+
+.part5
+        {
+        font-size: 248%;
+        line-height: 200%;
+        }
+
+.part6
+        {
+        font-size: 298%;
+        line-height: 200%;
+        }
+
+.docTitle
+        {
+        margin: 2em;
+        }
+
+.byline
+        {
+        margin: 2em;
+        }
+
+/* titlePage end */
+
+.witness
+        {
+        margin-left: 50px; 
+        }
+        
+.witnessXmlId
+        {
+        font-style: italic;
+        width: 50px;
+        display: block;
+        float: left; 
+        }

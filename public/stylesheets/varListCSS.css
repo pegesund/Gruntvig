@@ -1,0 +1,41 @@
+/* varCSS.css til styling af varianter */
+/* Kim Steen Ravn
+   2011.10.11: testversion
+*/
+
+
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        line-height: 110%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 2em;
+        margin-left: 2em;
+        }
+
+.preFace
+        {
+        margin: 1em;
+        }
+        
+.head
+        {
+        font-weight: bold;
+        margin: 1em 0em 0.5em 2em;
+        }
+        
+.p
+        {
+        margin: 1em;
+        }
+        
+.table, td
+        {
+        border: 1px solid black;
+        empty-cells: show;
+        margin: 2em;
+        vertical-align: super;
+        }

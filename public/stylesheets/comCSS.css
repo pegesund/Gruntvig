@@ -1,0 +1,55 @@
+/* KSR: 2011.03.24 */
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 100px;
+        margin-left: 100px;
+        }
+
+.bold
+        {
+        font-weight: bold;
+        }
+
+.head
+        {
+        font-size: 120%;
+        margin-bottom: 2em;
+        }
+
+.italic
+        {
+        font-style: italic;
+        }
+
+li.liOrdered
+        {
+        margin: 0.25em 0em 0.25em 0em;
+        text-align: justify;
+        }
+
+.litList
+        {
+        margin: 2em 2em 2em 2em;   
+        }
+
+.readMore
+        {
+        margin: 2em 2em 2em 2em;
+        text-align: left;
+        }
+        
+.readMoreP
+        {
+        margin-right: 2em;
+        text-align: left;
+        }
+.note
+        {
+        text-align: left;
+        margin: 1em 1em 1em 1em;
+        }

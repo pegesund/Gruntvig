@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="xml"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Tekstredeg&#x00F8;relse til <hi rend="italic">Danske H&#x00F8;itids&#x2013;Psalmer til Tusindaars&#x2013;Festen</hi></title>
+        <author>xxx</author>
+        <editor>xxx</editor>
+        <editor>xxx</editor>
+      </titleStmt>
+      <editionStmt>
+        <p>Edition Statement</p>
+      </editionStmt>
+      <extent>19 KB</extent>
+      <publicationStmt>
+        <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+        <distributor>Grundtvig Centeret, Vartov</distributor>
+        <authority/>
+        <idno>1826-433A_txr.xml</idno>
+        <date/>
+      </publicationStmt>
+      <seriesStmt>
+        <title/>
+        <idno/>
+        <respStmt>
+          <resp/>
+          <name/>
+        </respStmt>
+        <idno/>
+      </seriesStmt>
+      <notesStmt>
+        <note>Note1</note>
+        <note>Note2</note>
+        <note>Note3</note>
+        <note>Note4</note>
+        <note>Note5</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Danske<lb/> H&#x00F8;itids-Psalmer<lb/> til<lb/> Tusindaars-Festen. </title>
+          <author>Nik. Fred. Sev. Grundtvig<lb/>
+            <note>residerende Capellan ved <placeName key="fak9">Vor Frelsers
+              Kirke</placeName>.</note>
+          </author>
+          <pubPlace><placeName key="fak8">Ki&#x00F6;benhavn</placeName>.</pubPlace>
+          <publisher>
+            <note>Trykt paa den Wahlske Boghandlings Forlag,</note>
+            <note>hos C. Gr&#x00E6;be.</note>
+          </publisher>
+          <date>1826.</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+        <p>Grundtvig Centeret arbejder med:</p>
+        <p>1.En digital og kommenteret udgave af Grundtvigs skrifter</p>
+        <p>2.En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+        <p>2.a.Teologi og kirke</p>
+        <p>2.b.Demokrati og folkelighed</p>
+        <p>3.c.P&#x00E6;dagogik og folkeoplysning</p>
+        <p>3.Videnudveksling, undervisning og formidling</p>
+      </projectDesc>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>Date</date>
+        <note>Note</note>
+      </creation>
+    </profileDesc>
+    <revisionDesc>
+      <change xml:id="KSR" who="#KSR" when="2010-12-14">tekstredegørelse til Høitids-Psalmer</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text>
+
+    <body>
+      <div>
+        <head>Oversigt over tryk og manuskripter</head>
+        <div>
+          <head>Manuskripter:</head>
+          <p>Der er bevaret manuskripter til salmerne &#x201C;Tusind Aar stod Christi Kirke&#x201D; samt &#x201C;Klar op, du Sky paa &#x00D8;ien&#x2013;Bryn&#x201D;. De befinder sig i fascikel 382(1) i Grundtvig Arkivet p&#x00E5; Det Kongelige Bibliotek.</p>
+        </div>
+        <div>
+          <head>Tryk:</head>
+          <p><hi rend="italic">Danske H&#x00F8;itids&#x2013;Psalmer til Tusindaars&#x2013;Festen</hi> udkom p&#x00E5; den Wahlske Boghandlings Forlag og blev annonceret i <hi rend="italic">Adresseavisen</hi> d. 28. april 1826. Andet oplag, der ogs&#x00E5; havde et nodeblad med musik af C.E.F. Weyse til &#x201C;Den signede Dag&#x201D;, udkom ligeledes p&#x00E5; den Wahlske Boghandlings Forlag og blev annonceret i Adresseavisen d. 25. maj 1826. Af denne annonce fremgik det yderligere, at: &#x201C;De som have kj&#x00F8;bt Exemplarer af 1ste Oplag, og &#x00F8;nske at eie den af Prof. Weyse componerede Musik til den 1ste Psalme, kunne afhente denne uden Betaling, naar Exemplarer af Psalmerne forevises.&#x201D; &#x005B;Adresseavisen, 25. Mai 1826, s. 2 under rubrikken "Kundskabsv&#x00E6;sen"&#x005D; </p>
+          <p><hi rend="italic">Danske H&#x00F8;itids&#x2013;Psalmer til Tusindaars&#x2013;Festen</hi> indeholder de tre salmer: &#x201C;Den signede Dag med Fryd vi seer&#x201D;, &#x201D;Tusind Aar stod Christi Kirke&#x201D; og &#x201C;Klar op, du Sky paa &#x00D8;ien&#x2013;Bryn&#x201D;. Efter udgivelsen af f&#x00F8;rste og andet oplag af <hi rend="italic">H&#x00F8;itids&#x2013;Psalmer</hi>, blev salmerne i Grundtvigs levetid genoptrykt henholdsvis xx, xx og xx gange, men aldrig siden samlede. I den videre udgivelseshistorie lever de alts&#x00E5; deres eget liv, og de behandles derfor selvst&#x00E6;ndigt i f&#x00F8;lgende oversigt i lighed med Steen Johansens inddeling i <hi rend="italic">Bibliografi over N.F.S. Grundtvigs skrifter,</hi> som fremstillingen bygger p&#x00E5;. I indledningen til <hi rend="italic">Danske H&#x00F8;itids&#x2013;Psalmer til Tusindaars&#x2013;Festen</hi> pr&#x00E6;senteres de v&#x00E6;sentligste konklusioner af den udgivelseshistorie, der er opstillet nedenfor.&#x005B;Er dette korrekt?&#x005D;</p>
+          <div>
+            <head>&#x201C;Den signede Dag med Fryd vi seer&#x201D;</head>
+            <list type="simple">
+              <item>Hagen, L.C. (1832) <hi rend="italic">Historiske Psalmer og Riim til B&#x00F8;rne&#x2013;L&#x00E6;rdom, samlede og udgivne af L. C. Hagen, Theol. Student</hi>, nr. 45</item>
+              <item>Barfod, Frederik (1835&#x2013;36) <hi rend="italic">Poetisk l&#x00E6;sebog</hi>, nr. 174</item>
+              <item>Grundtvig, N.F.S. (1837) <hi rend="italic">Sang&#x2013;V&#x00E6;rk til den Danske Kirke samlet og l&#x00E6;mpet af Nik. Fred. Sev. Grundtvig,</hi> bd. I, nr. 16</item>
+              <item>Molbech, Christian (1840) <hi rend="italic">Dansk poetisk Anthologie … ved Christian Molbech. Fierde Deel. F&#x00F8;rste Afdeling,</hi> s. 90&#x2013;93</item>
+              <item>Boisen, L. N. (1841) <hi rend="italic">Tro, Haab og Kj&#x00E6;rlighed,</hi> nr. 165</item>
+              <item>Lindberg, Jac. Chr. (1843) <hi rend="italic">Rosen&#x2013;Kj&#x00E6;den en Samling af Psalmer og aandelige Sange valgte og udgivne af Jac. Chr. Lindberg</hi>, nr. 274</item>
+              <item>Grundtvig, N.F.S. &#x005B;1843&#x005D; <hi rend="italic">Psalme&#x2013;Blade til Kirke&#x2013;Bod,</hi> nr. 30</item>
+              <item>Grundtvig, N.F.S.: &#x005B;1844&#x005D; &#x201C;Trykte Salmeblade&#x201D;, nr. 36</item>
+              <item>Fenger, J. F. &#x0026; R. Th. (1846)<hi rend="italic"> Psalmer til Himmelfartsfesten og Pindsen,</hi> nr. 31</item>
+              <item>Brandt, C. J. &#x0026; Ludwig Helweg (1846&#x2013;47) <hi rend="italic">Den danske Psalmedigtning</hi> I&#x2013;II, bd. 2, nr. 992</item>
+              <item>Grundtvig, N.F.S. (1847) salmeblade ved pinsen i Vartov</item>
+              <item>Grundtvig, N.F.S. (1848) salmeblade ved pinsen i Vartov, nr. 625</item>
+              <item>Grundtvig, N.F.S. (1849) salmeblade ved pinsen i Vartov, nr. 642</item>
+              <item>Grundtvig, N.F.S. (1850) <hi rend="italic">Fest&#x2013;Psalmer,</hi> nr. 646</item>
+              <item>Monrad, D.G. (1854) <hi rend="italic">Evangelisk&#x2013;christelig Psalmebog. Ny Udgave. Et Forslag af D. G. Monrad</hi>, nr. 507</item>
+              <item>R&#x00F8;rdam, Peter: <hi rend="italic">Festpsalmer</hi> (Mern), &#x005B;R&#x00F8;rdam: Festps. (Mern)&#x005D; nr. 655, &#x003D; R&#x00F8;rdam: <hi rend="italic">Psalmer</hi> 1856, 1. udgave &#x005B;R&#x00F8;rdam&#x005D;, nr. 717. > DET ER DENNE DER ER SCANNET</item>
+              <item>Boisen, P.O. (1853) <hi rend="italic">Bibelske og Kirkehistoriske Psalmer og Sange for Skolen,</hi> nr. 106</item>
+              <item><hi rend="italic">Psalmebog til Kirke&#x2013; og Huus&#x2013;Andagt</hi> (1855) &#x201C;Roskilde Konvents salmebog&#x201D;, nr. 74</item>
+              <item>Fenger, P.A. (1857) &#x201C;Till&#x00E6;g til evangelisk&#x2013;christelig Psalmebog&#x201D;, nr. 920</item>
+              <item>Grundtvig, N.F.S. (1864) <hi rend="italic">Fest&#x2013;Psalmer,</hi> 8. udgave, nr. 646</item>
+              <item>Grundtvig, N.F.S. (1868&#x2013;81) <hi rend="italic">Salmer og aandelige Sange I&#x2013;V</hi>, bd. III nr. 262</item>
+              <item>Grundtvig, N.F.S. (1868) <hi rend="italic">Salmer og aandelige Sange</hi>, f&#x00F8;rste del, nr. 16</item>
+              <item>Trier, Ernst (1874) <hi rend="italic">Sange for den kristelige folke&#x2013;skole samlede af Ernst Trier</hi>, nr. 142 &#x005B;Udg&#x00E5;r m&#x00E5;ske&#x005D;</item>
+            </list>
+          </div>
+          <div>
+            <head>&#x201C;Tusind Aar Stod Christi Kirke&#x201D;</head>
+            <list type="simple">
+              <item>Lindberg, Jac. Chr. (1831) <hi rend="italic">Zions Harpe. En Jule&#x2013;Gave til den christne Menighed af Jac. Chr. Lindberg</hi>, nr. 27</item>
+              <item>Grundtvig, N.F.S. (1837) <hi rend="italic">Sang&#x2013;V&#x00E6;rk til den Danske Kirke samlet og l&#x00E6;mpet af Nik. Fred. Sev. Grundtvig,</hi> nr. 15</item>
+              <item>Hjort, P. (1840) <hi rend="italic">Gamle og Nye Psalmer</hi>, 2. udg. 1840; nr. 239</item>
+              <item>Hass, L.D. (1841) <hi rend="italic">Samling af Aandelige Sange til Brug i Opbyggelsestimer. Udgivne af L. D. Hass</hi>, nr. 25</item>
+              <item>Lindberg, Jac. Chr. (1843) <hi rend="italic">Rosen&#x2013;Kj&#x00E6;den en Samling af Psalmer og aandelige Sange valgte og udgivne af Jac. Chr. Lindberg</hi>, nr. 139</item>
+              <item>Brandt, C. J. &#x0026; Ludwig Helweg (1846&#x2013;47) <hi rend="italic">Den danske Psalmedigtning,</hi> bd. II, nr. 999</item>
+              <item>Brandt, C.J. (1848&#x2013;1849) <hi rend="italic">Rim og Sange til F&#x00E6;drelandets Historie, samlede … af C. J. Brandt</hi>. I&#x2013;II 1848&#x2013;1849; bd. II s. 142&#x2013;143 &#x005B;Tjek udgivelses&#x00E5;r, evt. blot &#x00E5;r for andet bind&#x005D;</item>
+              <item>Grundtvig, N.F.S. (1868) <hi rend="italic">Salmer og aandelige Sange</hi>, 1868; f&#x00F8;rste del, nr. 15</item>
+              <item>(1872) <hi rend="italic">Till&#x00E6;g til Psalmebog for Kirke&#x2013; og Hus&#x2013;Andagt. Et forslag af Roskilde&#x2013; Pr&#x00E6;stekonvent 1872</hi> </item>
+              <item>(1873) <hi rend="italic">Till&#x00E6;g til Salmebog for Kirke&#x2013; og Hus&#x2013;Andagt. 1873</hi>; nr. 696</item>
+            </list>
+          </div>
+          <div>
+            <head>&#x201C;Klar op, du Sky paa &#x00D8;ien&#x2013;Bryn&#x201D;</head>
+            <list type="simple">
+              <item>Hagen, L.C. (1832) <hi rend="italic">Historiske Psalmer og Riim til B&#x00F8;rne&#x2013;L&#x00E6;rdom,</hi> nr. 46</item>
+              <item>Grundtvig, N.F.S. (1837) <hi rend="italic">Sang&#x2013;V&#x00E6;rk til den Danske Kirke,</hi> bd. 1, nr. 390</item>
+              <item>Grundtvig, N.F.S. (1837&#x2013;41) <hi rend="italic">Salmer og aandelige Sange</hi> I&#x2013;V, 1868&#x2013;1881, bd. V, s. 740 = den nye for&#x00F8;gede udgave af Sang&#x2013;V&#x00E6;rk til den Danske Kirke I&#x2013;II 1837&#x2013;41.)</item>
+              <item>Lindberg, Jac. Chr. (1843) <hi rend="italic">Rosen&#x2013;kj&#x00E6;den en samling af Psalmer og aandelige Sange valgte og udgivne af Jac. Chr. Lindberg</hi>, nr. 138</item>
+              <item>Fenger, J.F. &#x0026; R.Th. (1846) <hi rend="italic">Psalmer til Himmelfartsfesten og Pindsen,</hi> nr. 26</item>
+              <item>Ogs&#x00E5; i Fengers Till&#x00E6;g nr. 916.&#x005B;??&#x005D;</item>
+              <item>(1845) <hi rend="italic">Kirke&#x2013;Psalmer udgivne til pr&#x00F8;ve af Kj&#x00F8;benhavns geistlige Convents Psalme&#x2013;Comitee</hi>, nr. 106</item>
+            </list>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <head>Manuskriptbeskrivelse</head>
+        <p>Der er bevaret manuskripter til digtene &#x201C;Tusind Aar stod Christi Kirke&#x201D; samt &#x201C;Klar op, du Sky paa &#x00D8;ien&#x2013;Bryn&#x201D;. De befinder sig i fascikel 382(1) i Grundtvig Arkivet p&#x00E5; Det Kongelige Bibliotek. &#x005B;Kan man bruge den korte ms.&#x2013;beskrivelse fra <hi rend="italic">Sang&#x2013;V&#x00E6;rk</hi>? &#x201C;Hs. i fasc. 382, Ark 4<hi rend="raised">o</hi>, Vandm&#x00E6;rke Klippans Bikube 1824, afm&#x00E6;rket med 3 Prikker, har ingen melodiangivelse."&#x005D; </p>
+        <div>
+          <head>Identifikation</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Indhold</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Datering</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Omfang og struktur</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Tilstand</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Papir</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Skriveredskab</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>H&#x00E6;nder</head>
+          <p>xxx</p>
+        </div>
+        <div>
+          <head>Litteraturhenvisninger</head>
+          <list type="simple">
+            <item>xxx</item>
+            <item>xxx</item>
+            <item>xxx</item>
+          </list>
+        </div>
+      </div>
+      
+      <div>
+        <head>Tilblivelseshistorie</head>
+        <p>xxx</p>
+      </div>
+      
+      <div>
+        <head>Bibliografisk beskrivelse</head>
+        <div>
+          <head>Formatbestemmelse, kollationsformel, signaturformel og pagineringsformel</head>
+          <p>8<hi rend="raised">o</hi>, <hi rend="italic">1</hi><hi rend="raised">8</hi>, 8 blade, pagineret <hi rend="italic">1&#x2013;3</hi>, 4&#x2013;15, &#x005B;16&#x005D; &#x005B;=16&#x005D;</p>
+          <p>Bogens format er oktav. Den er trykt p&#x00E5; et enkelt ark, der er foldet til 8 oktavblade, 16 sider i alt. Der er stum paginering p&#x00E5; de f&#x00F8;rste tre sider, mens side 4&#x2013;15 er pagineret med arabertal og sidste side er blank. Der er ingen arksignaturer. St&#x00F8;rrelsen p&#x00E5; det besk&#x00E5;rne blad er ca. 113 x 196 mm. </p>
+        </div>
+        <div>
+          <head>Indholdsoversigt</head>
+          <p>&#x005B;1&#x005D; <hi rend="italic">Titelblad.</hi> &#x005B;2&#x005D; <hi rend="italic">fortale.</hi> &#x005B;3&#x005D;&#x2013;15 <hi rend="italic">tekst.</hi> &#x005B;16&#x005D; <hi rend="italic">blank.</hi></p>
+          <p>&#x005B;SP&#x00D8;RGSM&#x00C5;L: Hvorfor skal titelblad v&#x00E6;re med stort men ikke tekst og fortale?&#x005D;<hi rend="italic"></hi> </p>
+        </div>
+        <div>
+          <head>Typografi og papirkvalitet</head>
+          <p><hi rend="bold">Skrifttyper</hi></p>
+          <p><hi rend="italic">Danske H&#x00F8;itids&#x2013;Psalmer til Tusindaars&#x2013;Festen</hi> er trykt med den gotiske skrifttype fraktur, dog er der enkelte steder brugt den gotiske skrifttype textur&#x005B;?&#x005D;. P&#x00E5; titelbladet anvendes tre skrifttyper: &#x005B;?? &#x2013; mere&#x005D; </p>
+          <p><hi rend="bold">Skriftst&#x00F8;rrelser</hi></p>
+          <p>Der er brugt fire forskellige skriftst&#x00F8;rrelser p&#x00E5; titelbladet. &#x005B;skal det forklares yderligere&#x005D; Fortalen er trykt med en mindre skriftst&#x00F8;rrelse end de tre salmer.</p>
+          <p><hi rend="bold">Skillestreger og fremh&#x00E6;velser</hi></p>
+          <p>Der anvendes fire typer af skillestreger, der alle er centrerede:</p>
+          <list type="simple">
+          <item>&#x2013; en streg med en tykkere udposning p&#x00E5; midten (f&#x00F8;rste gang anvendt mellem titel og forfatterangivelse p&#x00E5; titelblad)</item>
+          <item>&#x2013; en dobbeltstreg best&#x00E5;ende af f&#x00F8;rst en tyk s&#x00E5; en tyndere streg, der fylder hele klummens bredde (alene brugt p&#x00E5; titelbladet)</item>
+          <item>&#x2013; en almindelig streg (alene brugt p&#x00E5; titelbladet)</item>
+          <item>&#x2013; en b&#x00F8;lgestreg (f&#x00F8;rste gang anvendt efter fortalen s. &#x005B;2&#x005D;)</item>
+          </list>
+          <p>B&#x00E5;de fortalen og de tre salmer indledes med en initial i skrifttypen ?? &#x005B;eller skal det med under skrifttyper&#x005D;</p>
+          <p>Fremh&#x00E6;velser markeres med spatiering (f&#x00F8;rste gang anvendt side &#x005B;2&#x005D;, linje 2). Spatiering gengives i GV med kursiv.</p>
+          <p>&#x005B;Tre steder er der brugt fremh&#x00E6;vning ved hj&#x00E6;lp af spatiering (linje 2: Hans Thomasens, linje 5: Tusind&#x2013;Aaret og linje 11: Solbjergs&#x2013;Lag).&#x005D; </p>
+          <p><hi rend="bold">Papirkvalitet</hi></p>
+          <p>Der findes udgaver trykt p&#x00E5; to forskellige papirkvaliteter. Den ene er mere tr&#x00E6;holdig og grov. Begge papirtyper er h&#x00E5;ndgjorte med tydelige k&#x00E6;dem&#x00E6;rker, men uden vandm&#x00E6;rker. Omslagene er i tyndt glanspapir, hvis farve varierer. </p>
+        </div>
+        <div>
+          <head>Intern varians</head>
+          <p>Der er ved intern kollation af tre eksemplarer af f&#x00F8;rstetrykket ikke konstateret intern varians. F&#x00F8;lgende tre udgaver er blevet kollationeret:</p>
+          <list type="simple">
+            <item>Grundtvig Biblioteket, ex. 1 (har tilh&#x00F8;rt Karl Sch&#x00F8;nberg)</item>
+            <item>Grundtvig Biblioteket, ex. 2 (har tilh&#x00F8;rt P. A. Fenger)</item>
+            <item>Det Kongelige Bibliotek, ex. 2 (stregkode: 130018343240)</item>
+          </list>
+          <p>&#x005B;SKAL VI BRUGE VORES EGET EX I STEDET FOR EX 1? Den er kollationeret mod ex 2&#x005D;</p>
+        </div>
+      </div>
+      
+      <div>
+        <head>Udgivelsesm&#x00E5;de</head>
+        <p>adresseavisen, b&#x00E5;de f&#x00F8;rste og andet oplag</p>
+      </div>
+      
+      <div>
+        <head>Overs&#x00E6;ttelser / senere optryk</head>
+        <p>&#x2013; Wilhelm Andreas Wexels (1840) <hi rend="italic">Christelige Psalmer,</hi> nr. 642 "Den signede dag&#x201D;, ingen forfatterangivelse, men en sammen&#x2013; og gendigtning af forl&#x00E6;gget og Grundtvigs udgave fra 1826. (&#x201C;Vers 2 og 3 svarer helt til Grundtvigs, men med et enkelt ord i vers 2 som &#x00E6;ndres: &#x2013; jorden &#x201C;bold&#x201D; bliver til jordens &#x201C;kreds&#x201D;. &#x00D8;vrige vers er sammen&#x2013; og gendigtet.&#x201D; (Kurt Hansen <hi rend="italic">N.F.S. Grundtvig Salmebogens K&#x00E6;mpe. Den signede dag med fryd vi ser. Historisk beskrevet af Kurt Hansen</hi>)</p>
+        <p>&#x005B;udg. Fra 1844 er bestilt fra KB, udg. fra 1840 kan fjernskaffes.&#x005D;</p>
+        <p>&#x2013; Stefan Thorarensen (1871), sammendigtning af Gudbrandur Thorlakssons version af dagvisen fra hans Kirkesalmebog fra 1569 og Grundtvigs &#x201C;Den signede dag&#x201D; fra 1826, fem vers. (Denne udgave optrykkes i den islandske salmebog fra 1972.)</p>
+      </div>
+    </body>
+  </text>
+</TEI>

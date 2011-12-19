@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+    
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+     <title>Vejledning til mytologisk register</title>
+         <author>Vibeke A. Pedersen</author>
+            <editor role="centerManager">Michael Schelde</editor>
+            <editor role="editor">Johnny Kondrup</editor>
+            <editor role="editionManager"></editor>
+            <editor role="itManager">Kim Steen Ravn</editor>
+    
+      </titleStmt>
+      <editionStmt>
+         <edition>Prøveversion</edition>
+      </editionStmt>
+
+      <extent>4KB</extent>
+    
+      <publicationStmt>
+         <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+         <distributor>Grundtvig Centeret, Vartov</distributor>
+         <date type="2011-03-03">Prøversionen</date>
+      </publicationStmt>
+     
+   </fileDesc>
+   <encodingDesc>
+      <projectDesc>
+         <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+         <p>Grundtvig Centeret arbejder med:</p>
+         <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+         <p>2. En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+         <p>2. a.Teologi og kirke</p>
+         <p>2. b.Demokrati og folkelighed</p>
+         <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+         <p>3. Videnudveksling, undervisning og formidling</p>
+      </projectDesc>
+      <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Kodebog</editorialDecl>
+   </encodingDesc>
+   <revisionDesc>
+       <change xml:id="KSR" who="KSR" when="2011-01-24">model for regulativer</change>
+      <change xml:id="VAP" who="VAP" when="2011-01-31">tilføjelse af afsnit</change>
+      <change who="VAP" when="2011-02-15">tilføjelse af afsnit om bibelske personer</change>
+      <change who="VAP" when="2011-02-17">tilføjelse af nye ting i head'er. Tilpasset titel på Saxooversættelsen. Opmærket navne</change>
+      <change who="VAP" when="2011-02-25">smårettelser</change>
+   </revisionDesc>
+</teiHeader>
+  <text>
+     <body decls="guideLines">
+        <head n="2">Vejledning til mytologisk register</head>
+       
+       <div>
+         
+         
+           <div>
+             
+              <p>Det mytologiske register rummer oplysninger om personer, steder, ting og begivenheder –  forel&#x00F8;big fra den nordiske, gr&#x00E6;ske, romerske, &#x00E6;gyptiske og indiske mytologi og sagnhistorie. Bibelske personer kan findes i personregisteret.</p>
+             
+             <p>Eftersom registeret kun vokser i takt med, at udgiverne finder eksempler p&#x00E5; disse personer, steder, ting og begivenheder i Grundtvigs v&#x00E6;rker, vil det ikke udg&#x00F8;re et alment mytologisk og sagnhistorisk opslagsv&#x00E6;rk. Det vil kun omfatte elementer fra det mytologiske univers i de v&#x00E6;rker, GV p&#x00E5; et givent tidspunkt har publiceret.</p>
+              
+             
+             <p>Registeret er bygget op, s&#x00E5; man f&#x00F8;rst f&#x00E5;r den moderne ben&#x00E6;vnelse p&#x00E5; personer, steder, ting og begivenheder og derefter en forklaring. Desuden er der ved talrige opslag alternative navne eller stavem&#x00E5;der, herunder ogs&#x00E5; Grundtvigs. Endelig kan der v&#x00E6;re oplysninger om, i hvilket v&#x00E6;rk Grundtvig eventuelt har kunnet l&#x00E6;se om det p&#x00E5;g&#x00E6;ldende emne.</p>
+              <p>Grundtvigs hovedkilde til nordisk mytologi var <rs key="pe7"></rs>Peter Frederik Suhm (1771): <rs key="bib23"><hi rend="italic">Om Oden og den Hedniske Gudelære og Gudstieneste udi Norden</hi></rs>, der blev trykt i K&#x00F8;benhavn. Allerede i skoletiden stiftede Grundtvig bekendtskab med v&#x00E6;rket, og han vendte gennem &#x00E5;rene gentagne gange tilbage til det. Til denne bog henvises med: “(Suhm 1771)”.</p>
+             
+              <p>En s&#x00E6;rlig tak til <rs key="pe57">Finn Stef&#x00E1;nsson</rs> og Gyldendal, der har ladet GV overtage kortere formuleringer fra <hi rend="italic">Gyldendals Leksikon om Nordisk Mytologi</hi> (K&#x00F8;benhavn 2009) uden kildehenvisninger. Af andre v&#x00E6;rker, der har tjent til inspiration, skal n&#x00E6;vnes <rs key="pe310">Rudolf Simek</rs>: <hi rend="italic">Lexikon der germanischen Mythologie</hi> (Stuttgart 2009) og <rs key="pe311">Christian Gorm Tortzen</rs>: <rs key="bib177"><hi rend="italic">Antik Mytologi</hi></rs> (K&#x00F8;benhavn 2009). Hertil kommer opslagsv&#x00E6;rker fra Grundtvigs egen tid.</p>
+             
+           </div>
+       
+       </div>
+       
+    </body>
+  </text>
+</TEI>

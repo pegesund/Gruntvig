@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+    
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+         <title>Vejledning til manuskriptvisning</title>
+         <author>Krista Stinne Greve Rasmussen</author>
+         <editor role="centerManager">Michael Schelde</editor>
+         <editor role="editor">Johnny Kondrup</editor>
+         <editor role="editionManager"></editor>
+         <editor role="itManager">Kim Steen Ravn</editor>
+      </titleStmt>
+      <editionStmt>
+         <edition>Prøveversion</edition>
+      </editionStmt>
+      <extent>5 KB</extent>
+      <publicationStmt>
+         <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+         <distributor>Grundtvig Centeret, Vartov</distributor>
+         <date type="2011-03-03">Prøversionen</date>
+      </publicationStmt>
+   </fileDesc>
+   <encodingDesc>
+    <projectDesc>
+      <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+      <p>Grundtvig Centeret arbejder med:</p>
+      <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+      <p>2. En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+      <p>2. a.Teologi og kirke</p>
+      <p>2. b.Demokrati og folkelighed</p>
+      <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+      <p>3. Videnudveksling, undervisning og formidling</p>
+    </projectDesc>
+      <editorialDecl xml:id="msGuideLines.xml" n="0.1">Retningslinjer for manuskriptvisning- og transskription</editorialDecl>
+   </encodingDesc>
+   <revisionDesc>
+      <change xml:id="KSR" who="KSR" when="2011-02-16">text til xml</change>
+      <change who="KSR" when="2011-02-17">kursiv, etc</change>
+   </revisionDesc>
+</teiHeader>
+   
+   <text>
+     <body decls="guideLines">
+          
+       <head n="2">Vejledning til manuskriptvisning</head>
+       
+       <div>
+          
+          <head n="1">Visningn&#x00F8;gle</head>
+             
+          <p>Grundtvigs manuskripter vises transskriberet med markeringer for interne varianter (dvs. &#x00E6;ndringer foretaget i selve manuskriptet) og eksterne varianter (dvs. &#x00E6;ndringer i forhold til førstetrykket). De eksterne varianter vises automatisk, men kan frav&#x00E6;lges. De interne varianter kan til- og frav&#x00E6;lges.</p>
+          
+          <p>De interne varianter vises med følgende markeringer:</p>
+             
+          <p><hi rend="darkGreen">Farvede bogstaver i mørk nuance:</hi> <hi rend="italic">straks&#x00E6;ndringer,</hi> dvs. &#x00E6;ndringer, som Grundtvig foretog, mens han skrev. Enten skrev han oven i et bogstav, eller han slettede et eller flere ord, inden han skrev videre.</p>
+              
+          <p><hi rend="lightGreen">Farvede bogstaver i lys nuance:</hi> <hi rend="italic">snarlig &#x00E6;ndring,</hi> dvs. en &#x00E6;ndring foretaget, mens Grundtvig skrev p&#x00E5; strofen. Adskiller sig fra en straks&#x00E6;ndring ved at v&#x00E6;re foretaget lidt senere og kan have en lille følgetekst. Det kan fx v&#x00E6;re en rettelse af det første ord i en verslinje, der er foretaget, efter at hele strofen er skrevet.</p>
+             
+          <p><hi rend="lineThrough">Gennemstregning:</hi> <hi rend="italic">senere &#x00E6;ndring,</hi> dvs. &#x00E6;ndring, der ikke er sket i selve skriveprocessen.</p>
+              
+          <p><hi rend="shading">Skravering:</hi> ogs&#x00E5; <hi rend="italic">senere &#x00E6;ndring.</hi> Bruges, hvis der i forvejen er en senere &#x00E6;ndring og s&#x00E5;ledes er behov for at markere to niveauer.</p>
+          
+          <p>&#x005B;Kantede parenteser&#x005D;: tilføjet tekst. </p>
+          
+          <p><hi rend="red">&#x003C;?&#x003E;</hi>: tvivlsom l&#x00E6;sning.</p>
+          
+          <p><hi rend="underLine">Understregning</hi>: understregning i Grundtvigs manuskript.</p>
+          
+          <head n="1">Transskriptionsprincipper</head>
+          
+          <p>Der anvendes et tillempet integralt apparat, som kombinerer positionelle iagttagelser med semantisk analyse og konkluderer genetisk. De genetiske konklusioner betyder, at transskriptionen ikke er positionelt tro mod forl&#x00E6;gget. Varianterne vises alts&#x00E5; i en genetisk r&#x00E6;kkefølge, der tilgodeser l&#x00E6;seretningen.</p>
+           
+       </div>
+       
+    </body>
+  </text>
+</TEI>

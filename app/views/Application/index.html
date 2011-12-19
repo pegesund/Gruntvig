@@ -1,0 +1,74 @@
+#{extends 'main.html' /}
+#{ header /}
+
+<script>
+
+  $(document).ready(function() {
+// load intro
+ var introUrl = "ajax/getVeiledning/gv_intro";
+         $.ajax({
+             url: introUrl,
+             success: function(data) {
+                 var introContent = $("#intro_tekst");
+                 introContent.html(data);
+             }
+         });
+  });
+  </script>
+
+<div id="main">
+
+	<div class="container" id="underside_innhold">
+
+		<div id="submenu">
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; </div>
+
+		</div>
+
+	<div class="kolonne1">
+
+		<ul id="kolonne1_meny">
+			<li class="header">Værker</li>
+				
+				
+				<li><a href="../tekstvisning/2/0">Bøn og Begreb (1840)</a></li>
+                                <li><a href="../tekstvisning/139/0">Danske Høitids-Psalmer (1826)</a></li>
+                                <li class="last"><a href="../tekstvisning/1/0">Om Asalæren (1807)</a></li>
+
+			<li class="header">Register</li>
+
+				<li><a href="#">Registranten</a></li>
+                                <li><a href="#">Bogfortegnelse 1805</a></li>
+                                <li><a href="../myter">Mytologisk register</a></li>
+                                <li><a href="../personer">Personregister</a></li>
+                                <li class="last"><a href="../steder">Stedregister</a></li>
+
+			<li class="header">Verktøj</li>
+
+				<li><a href="../tidslinje">Tidslinje</a></li>
+				<li class="last"><a href="#">Avanceret søgning</a></li>
+
+
+			<li class="header">Om GV</li>
+				<li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>
+                                <li class="last"><a href="#">Kontakt</a></li>
+		<ul>
+
+	</div>
+
+	<div class="kolonne2" id="intro_tekst">
+
+		
+
+	</div>
+
+	<div class="kolonne3">
+	</div>
+
+
+	</div>
+</div>
+
+</body>
+
+</html>

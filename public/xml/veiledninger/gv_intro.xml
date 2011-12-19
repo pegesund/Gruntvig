@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="introTest.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+    
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+         <title>Om Grundtvigs V&#x00E6;rker</title>
+         <author>Johnny Kondrup</author>
+         <editor role="centerManager">Michael Schelde</editor>
+         <editor role="editor">Johnny Kondrup</editor>
+         <editor role="editionManager">Johnny Kondrup</editor>
+         <editor role="itManager">Kim Steen Ravn</editor>
+      </titleStmt>
+      <editionStmt>
+         <edition>Pr&#x00F8;veversion</edition>
+      </editionStmt>
+      <extent>??</extent>
+      <publicationStmt>
+         <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+         <distributor>Grundtvig Centeret, Vartov</distributor>
+         <date type="2011-03-03">Pr&#x00F8;versionen</date>
+      </publicationStmt>
+   </fileDesc>
+   <encodingDesc>
+    <projectDesc>
+      <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+      <p>Grundtvig Centeret arbejder med:</p>
+      <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+      <p>2. En forskningsindsats p&#x00E5; de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+      <p>2. a.Teologi og kirke</p>
+      <p>2. b.Demokrati og folkelighed</p>
+      <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+      <p>3. Videnudveksling, undervisning og formidling</p>
+    </projectDesc>
+      <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Retningslinjer for kodning af Grundtvigs v&#x00E6;rker</editorialDecl>
+   </encodingDesc>
+   <revisionDesc>
+      <change xml:id="KSR" who="KSR" when="2011-02-28">text</change>
+   </revisionDesc>
+</teiHeader>
+   
+   <text>
+     <body decls="introduction">
+          
+        <head>Om Grundtvigs V&#x00E6;rker</head> 
+        
+          <div>
+             <p><hi rend="italic">Grundtvigs v&#x00E6;rker</hi> er en tekstkritisk og kommenteret udgave af de v&#x00E6;rker, som den danske digter, teolog, historiker, politiker m.m. N.F.S. Grundtvig fik trykt.</p>
+             
+             <p>Udgaven er <hi rend="italic">tekstkritisk:</hi> Det vil sige, at grundteksterne er blevet gennemg&#x00E5;et systematisk og fejl rettet. Rettelserne er blevet noteret, s&#x00E5; de kan efterpr&#x00F8;ves.</p>
+             
+             <p>Grundteksterne er de trykte f&#x00F8;rsteudgaver, som udkom i Grundtvigs levetid. Hans breve, dagb&#x00F8;ger, pr&#x00E6;dikenmanuskripter osv. er som regel ikke med. Grundteksterne kan ses i fotografiske <hi rend="italic">faksimiler</hi> ved siden af den kritisk etablerede tekst.</p>
+             
+             <p>Udgaven er <hi rend="italic">kommenteret:</hi> Det vil sige, at udgiverne har forsynet Grundtvigs tekster med forklaringer af forskellig art. Der er tre slags:</p>
+             
+             <p>
+                <list type="simple">
+                
+                <item><hi rend="italic">Indledninger,</hi> der forklarer den historiske baggrund for v&#x00E6;rket.</item>
+                   
+                <item><hi rend="italic">Tekstredeg&#x00F8;relser,</hi> der beskriver de relevante manuskripter og tryk.</item>
+                   
+                <item><hi rend="italic">Punktkommentarer,</hi> der letter l&#x00E6;sningen ved at forklare vanskelige ord, historiske begivenheder, litter&#x00E6;re hentydninger osv.</item>
+                   
+                </list>
+             </p>
+             
+             <p>Desuden er der <hi rend="italic">variantapparat </hi> til nogle af v&#x00E6;rkerne, nemlig Grundtvigs lyrik.</p>
+             
+             <p>Endelig rummer udgaven en r&#x00E6;kke <hi rend="italic">ressourcer,</hi> som g&#x00F8;r det lettere at arbejde med udgaven: En historisk tidslinje, en registrant over Grundtvigs efterladte papirer, fortegnelser over hans bibliotek og registre af forskellig art.</p>
+             
+             <p>Der kan <hi rend="italic">s&#x00F8;ges</hi> i alle udgavens tekster.</p>
+             
+             <p><hi rend="italic">Grundtvigs v&#x00E6;rker </hi>  udgives af Grundtvig Centeret ved Aarhus Universitet.</p>
+             
+             <p>En fyldigere vejledning til udgaven findes <ref target="om_gv_vej.xml" type="intro" n="intro1">her</ref>.</p>
+          </div>
+             
+    </body>
+  </text>
+</TEI>

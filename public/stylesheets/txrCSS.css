@@ -1,0 +1,287 @@
+/* 
+KSR: 2011.10.04: list-style: alpha, roman and simple
+KSR: 2011.09.26: hi-element
+*/
+
+a.toc
+        {
+        text-decoration: none;
+        color: #000000;
+        }
+
+a.toc:hover
+        {
+        color: #006633;
+        }
+.author
+        {
+        text-align: left;
+        }
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        margin: 2em 2em 2em 2em;
+        text-align: justify;
+        }
+        
+.bold
+        {
+        font-weight: bold;
+        }
+        
+.cell
+        {
+        margin: 0em 3em 0em 3em;
+        }
+
+.center
+        {
+        text-align: center;
+        }
+
+.div
+        {
+        text-align: justify;
+        }
+
+.editor
+        {
+        text-align: left;
+        }
+
+.firstIndent
+        {
+        margin: 1em 0em 1em 0em;
+        }
+
+.fwLongLine
+        {
+        width: 5em;
+        }
+
+.fwShortLine
+        {
+        width: 3em;
+        }
+
+/* indhold hyperlink start */
+
+.toc
+        {
+        text-align: left;
+        font-size: 100%;
+        margin: 0em;
+        margin-left: 1em;
+        }
+
+.head
+        {
+        font-size: 200%;
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
+.div .head
+        {
+        font-size: 144%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+.div .div .head
+        {
+        font-size: 120%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+/* indhold hyperlink end */
+
+/* element hi start */
+
+.lowered
+        {
+        font-size: 80%;
+        vertical-align: sub;
+        }
+
+.raised
+        {
+        font-size: 80%;
+        vertical-align: super;
+        }
+
+.initial
+        {
+        font-style: normal;
+        font-size: 120%;
+        }
+
+.italic
+        {
+        font-style: italic;
+        }
+
+.litList
+        {
+        list-style: circle;
+        }
+
+.item
+        {
+        margin: 1em 1em 1em 1em;
+        }
+
+.justify
+        {
+        text-align: justify;
+        }
+
+.left
+        {
+        text-align: left;
+        }
+
+/* element h start */
+
+h2
+        {
+        font-size: 120%;
+        margin: 0em 0em 0em 2em;
+        }
+
+/* element h start */
+
+/* element hi end */
+
+.lgNumber
+        {
+        font-size: 100%;
+        margin-left: 10px;
+        }
+
+.lg
+        {
+        text-align: left;
+        margin: 2em 2em 2em 2em;
+        }
+
+/* list begynd */
+
+.upperAlpha
+        {
+        list-style-type: upper-alpha;
+        margin: 1em;
+        }
+
+.lowerAlpha
+        {
+        list-style-type: lower-alpha;
+        margin: 1em;
+        }
+
+.upperRoman
+        {
+        list-style-type: upper-Roman;
+        margin: 1em;
+        }
+
+.lowerRoman
+        {
+        list-style-type: lower-roman;
+        margin: 1em;
+        }
+
+.simple
+        {
+        list-style-type: circle;
+        margin: 1em;
+        }
+
+/* list slut */
+
+.noIndent
+        {
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+.pageNumber
+        {
+        text-align: justify;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin: 4em 4em 4em 4em;
+        }
+
+/* element p start */
+
+.p
+        {
+        margin: 2em 2em 2em 2em;
+        }
+
+.right
+        {
+        text-align: right;
+        }
+
+/* element p end */
+
+.romanType
+        {
+        font-family: arial;
+        }
+
+.secondIndent
+        {
+        text-indent: 4em;
+        text-align: justify;
+        }
+
+.spaceOne
+        {
+        line-height: 200%;
+        }
+        
+.spaceTwo
+        {
+        line-height: 300%;
+        }
+
+.quote, .unQuote
+        {
+        margin: 1em 0em 1em 0em
+        }
+
+/* element table start */
+
+.table
+        {
+        margin: 0em 2em 0em 2em
+        }
+
+/* element table end */
+
+.titlePage
+        {
+        margin-right: 50px;
+        margin-left: 50px;
+        }
+
+.witness
+        {
+        margin-left: 50px; 
+        }
+
+/*<span style="width:50px;display:block;float:left;">Tel.</span>*/
+
+.witnessXmlId
+        {
+        font-style: italic;
+        width: 50px;
+        display: block;
+        float: left; 
+        }

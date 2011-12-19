@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /verk1                                  Application.tekstvisning
+
+# Map static resources from the /app/public folder to the /public path
+GET     /tidslinje                              Application.tidslinje
+GET     /vejledning/{fileName}                  ShowAsset.vejledning
+GET     /register_side                          Application.register_side
+GET     /js/                                    staticDir:public/javascripts
+GET     /public/                                staticDir:public
+GET     /img/                                   staticDir:public/images
+GET     /css/img/                               staticDir:public/images
+GET     /css/images/                            staticDir:public/images
+GET     /css/                                   staticDir:public/stylesheets
+GET     /public/stylesheets/                    staticDir:public/stylesheets
+GET     /admin/removeXmlFile/{fileId}           Admin.removeXmlFile
+GET     /admin/deleteAll                        Admin.removeAllData
+GET     /tekstvisning/{assetId}/{chapterNum}    ShowAsset.tekstvisning
+GET     /steder                                 ShowAsset.placevisning
+GET     /personer                               ShowAsset.personvisning
+GET     /myter                                  ShowAsset.mythvisning
+GET     /ajax/getKommentar/{assetId}            Ajax.getKommentar
+GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
+GET     /ajax/getVariantByName/{fileName}                     Ajax.getVariantByName
+GET     /ajax/getManusByName/{fileName}                       Ajax.getManusByName
+GET     /ajax/getVariant/{assetId}/{variantNum}               Ajax.getVariant
+GET     /ajax/getReference/{textId}                           Ajax.getRef
+# GET     /ajax/getReference/{fileName}/{textId}              Ajax.getReference
+GET     /ajax/getIntro/{id}                                   Ajax.getIntro
+GET     /ajax/getComment/{id}                                 Ajax.getComment
+GET     /search                                               DoSearch.doSearch
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

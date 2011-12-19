@@ -1,0 +1,264 @@
+/* KSR: 2011.03.30 */
+
+a.toc
+        {
+        text-decoration: none;
+        color: #000000;
+        }
+
+a.toc:hover
+        {
+        color: #006633;
+        }
+.author
+        {
+        text-align: left;
+        }
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        margin: 2em 2em 2em 2em;
+        text-align: justify;
+        }
+        
+.bold
+        {
+        font-weight: bold;
+        }
+        
+.cell
+        {
+        margin: 0em 3em 0em 3em;
+        }
+
+.center
+        {
+        text-align: center;
+        }
+
+.div
+        {
+        text-align: justify;
+        }
+
+.editor
+        {
+        text-align: left;
+        }
+
+.firstIndent
+        {
+        text-indent: 1em;
+        }
+
+.fwLongLine
+        {
+        width: 5em;
+        }
+
+.fwShortLine
+        {
+        width: 3em;
+        }
+
+/*nivo 0*/
+
+.toc
+        {
+        text-align: left;
+        font-size: 100%;
+        margin: 0em;
+        margin-left: 1em;
+        }
+
+.head
+        {
+        font-size: 200%;
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
+.div .head
+        {
+        font-size: 144%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+.div .div .head
+        {
+        font-size: 120%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+.initial
+        {
+        font-style: normal;
+        font-size: 120%;
+        }
+
+.italic
+        {
+        font-style: italic;
+        }
+
+.lgNumber
+        {
+        font-size: 100%;
+        margin-left: 10px;
+        }
+
+/* lister start */
+
+li.liSimple
+        {
+        margin: 0.25em 0em 0.25em 0em;
+        text-align: justify;
+        }
+
+.litList
+        {
+        margin: 2em 2em 2em 2em;   
+        }
+
+.lowerAlpha
+        {
+        list-style-type: lower-alpha;
+        margin: 1em;
+        }
+
+.lowerRoman
+        {
+        list-style-type: lower-roman;
+        margin: 1em;
+        }
+
+.number
+        {
+        list-style-type: decimal;
+        margin: 1em;
+        }
+
+.simple
+        {
+        list-style-type: circle;
+        margin: 1em;
+        }
+
+.upperAlpha
+        {
+        list-style-type: upper-alpha;
+        margin: 1em;
+        }
+
+.upperRoman
+        {
+        list-style-type: upper-Roman;
+        margin: 1em;
+        }
+
+/* lister end */
+
+.justify
+        {
+        text-align: justify;
+        }
+
+.left
+        {
+        text-align: left;
+        }
+
+.lg
+        {
+        text-align: left;
+        margin: 2em 2em 2em 2em;
+        }
+
+.noIndent
+        {
+        margin: 1em;
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+.pageNumber
+        {
+        text-align: justify;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin: 4em 4em 4em 4em;
+        }
+
+.p
+        {
+        margin: 2em 2em 2em 2em;
+        }
+
+.quote, headQuote
+        {
+        margin: 1em 1em 1em 1em
+        }
+        
+.headQuote
+        {
+        font-weight: bold;
+        text-align: center;
+        }
+
+.right
+        {
+        text-align: right;
+        }
+
+.romanType
+        {
+        font-family: arial;
+        }
+
+.secondIndent
+        {
+        text-indent: 4em;
+        text-align: justify;
+        }
+
+/*
+.seg
+        {
+        color: gray;
+        }
+*/
+
+.spaceOne
+        {
+        line-height: 200%;
+        }
+        
+.spaceTwo
+        {
+        line-height: 300%;
+        }
+
+.titlePage
+        {
+        margin-right: 50px;
+        margin-left: 50px;
+        }
+
+.witness
+        {
+        margin-left: 50px; 
+        }
+
+/*<span style="width:50px;display:block;float:left;">Tel.</span>*/
+
+.witnessXmlId
+        {
+        font-style: italic;
+        width: 50px;
+        display: block;
+        float: left; 
+        }

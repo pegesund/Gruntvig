@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet 
+    xmlns:TEI="http://www.tei-c.org/ns/1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    version="1.0">
+
+<!-- Kim Steen Ravn:
+    2011.10.04: list-style: alpha, roman and simple
+    2011.06.27: sic and supp, note element
+    2011.03.21
+    2011.03.18 
+-->
+
+    <xsl:template match="TEI:TEI">
+        
+        <html>
+            <head>
+                <link rel="stylesheet" href="txrCSS.css" type="text/css"/>
+                <!--<link rel="stylesheet" href="txrEditCSS.css" type="text/css"/>-->
+                <title><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></title>
+            </head>
+            <body>
+                <p class="author">Forfatter:</p>
+                <i>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                </i>
+                <p class="author">Redaktør:</p>
+                <i>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']"/>
+                </i>
+                <hr/>
+                <div class="head">
+                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/>
+                </div>
+                <h2>Indhold</h2>
+                <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
+                <xsl:apply-templates select="TEI:text"/>
+            </body>
+        </html>
+        
+    </xsl:template>
+    
+    <xsl:template match="TEI:div" mode="toc">
+        <div class="toc">
+            <a class="toc">
+                <xsl:attribute name="href">
+                    <xsl:text>#A</xsl:text>
+                    <xsl:number level="multiple" count="TEI:div"/>
+                </xsl:attribute>
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="TEI:head"/>
+            </a>
+            <xsl:for-each select="TEI:div">
+                <xsl:apply-templates mode="toc" select="."/>
+            </xsl:for-each>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:author">        
+        <div class="author">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
+        <div class="editor">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:head">
+        <a>
+            <xsl:attribute name="id">
+                <xsl:text>A</xsl:text>
+                <xsl:number level="multiple" count="TEI:div"/>
+            </xsl:attribute>
+        </a>
+        <div class="head{@rend}">
+            <xsl:number level="multiple" count="TEI:div"/>
+            <xsl:text> </xsl:text>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:hi">        
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div">        
+        <div class="div">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:fw[@type='longLine']">
+        <hr class="fwLongLine"/>        
+    </xsl:template>
+    
+    <xsl:template match="TEI:fw[@type='shortLine']">
+        <hr class="fwShortLine"/>
+    </xsl:template>
+    
+    <xsl:template match="TEI:lb">        
+        <br>
+            <xsl:apply-templates/>
+        </br>        
+    </xsl:template>
+
+<!--
+    henter nummer på stofe; konflikt med næste template?
+    <xsl:template match="TEI:lg[@n]">        
+        <div class="lgNumber">
+                <xsl:value-of select="@n"/>
+            <xsl:apply-templates/>
+            <br/>
+        </div>        
+    </xsl:template>
+-->
+
+    <xsl:template match="TEI:lg|TEI:l">
+        <div class="{name()}">
+            <!--xsl:attribute name="class"><xsl:value-of select="name()"/></xsl:attribute-->
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <!--
+    <xsl:template match="TEI:list">        
+        <div class="list">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    -->
+    
+    <xsl:template match="TEI:list">
+        <xsl:if test="@type='upperAlpha'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="upperAlpha">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='lowerAlpha'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="lowerAlpha">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='upperRoman'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="upperRoman">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='lowerRoman'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="lowerRoman">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='simple'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="simple">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='addendon'  or @type='litList' or @type='webList'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="simple">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='sic']">
+        <span class="sic">
+            <xsl:apply-templates/>
+            <xsl:text>
+                [sic]
+            </xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='supp']">
+        <span class="supp">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend and @rend!='quote' and @rend!='unQuote']">        
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='quote']">        
+        <div class="{@rend}">
+            <br/>
+            <xsl:text>&#x201C;</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>&#x201D;</xsl:text>
+            <br/>
+            <br/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='unQuote']">        
+        <div class="{@rend}">
+            <br/>
+            <xsl:apply-templates/>
+            <br/>
+            <br/>
+        </div>
+    </xsl:template>
+    
+    <!--
+    <xsl:template match="TEI:quote">
+        <div class="quote">
+            <br/>
+            <xsl:text>&#x201C;</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>&#x201D;</xsl:text>
+            <br/>
+            <br/>
+        </div>
+    </xsl:template>
+    -->
+    
+    <xsl:template match="TEI:table">        
+        <div class="table">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row">        
+        <div class="row">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell">        
+        <span class="cell">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!-- til brugs for txtEditCSS-css start -->
+    
+    <xsl:template match="TEI:persName">
+        <span class="persName">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:placeName">
+        <span class="placeName">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='bible']">
+        <span class="rs_bible">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='myth']">
+        <span class="rs_myth">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='title']">
+        <span class="rs_title">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!-- til brugs for txtEditCSS-css end -->
+    
+</xsl:stylesheet>

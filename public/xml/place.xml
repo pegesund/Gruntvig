@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="persKorr.xsl"?>
+<?oxygen RNGSchema="placeTest.rnc" type="compact"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="place.xml">Stedregister</title>
+        <author></author>
+      </titleStmt>
+      <editionStmt></editionStmt>
+      <extent></extent>
+      <publicationStmt>
+        <publisher></publisher>
+        <distributor></distributor>
+        <date type="2011-03-03"></date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title></title>
+          <author></author>
+          <pubPlace></pubPlace>
+          <publisher></publisher>
+          <date></date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc></encodingDesc>
+    <revisionDesc>
+        <change xml:id="KSR" who="KSR" when="2010-10-21">eksemple p tabel med navne</change>
+        <change who="KSR" when="2010-11-15">tilbage til oprindelig ide; skema rcn</change>
+        <change who="KSR" when="2010-10-25">ny version; ekstra celle</change>
+        <change who="KSR" when="2010-11-03">nye attributter</change>
+        <change xml:id="VAP" who="VAP" when="2010-11-25">navneindførsel</change>
+        <change xml:id="KSG" who="KSG" when="2010-12-02">navneindførsel</change>
+        <change who="KSG" when="2011-01-09">fak11 indsat</change>
+        <change who="HY" when="2011-01-28">tilf&#x00F8;jet steder 13-27</change>
+        <change who="HY" when="2011-02-15">tilf&#x00F8;jet steder 28-51</change>
+        <change who="VAP" when="2011-02-15">navneindførsel 52-75 på vegne af HY</change>      
+    </revisionDesc>
+  </teiHeader>
+  
+  
+<text>
+<body>
+<div>
+
+<head>Grundtvigs v&#x00E6;rker: Stedregsiter</head>
+    
+<table>
+    
+    <!--  <row xml:id="fi1"><cell>Atlantis</cell><cell type="place"></cell></row> --> 
+    <row xml:id="fak1">
+      <cell type="norm">Udby</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak2">
+      <cell type="norm">Egel&#x00F8;kke</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak3">
+      <cell type="norm">Langeland</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak4">
+      <cell type="norm">Island</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak5">
+      <cell type="norm">England</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak6">
+      <cell type="norm">Universitetsbiblioteket</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak7">
+      <cell type="norm">Sor&#x00F8; Akademi</cell>
+      <cell type="place"></cell>
+    </row> 
+    <row xml:id="fak8">
+      <cell type="norm">K&#x00F8;benhavn</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak9">
+      <cell type="norm">Vor Frelsers Kirke</cell>
+      <cell type="place">Christianshavn</cell>
+    </row>
+
+    <row xml:id="fak10">
+      <cell type="norm">Jerusalem</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak11">
+      <cell type="norm">Ulfeldts Plads</cell>
+      <cell type="place">Gr&#x00E5;br&#x00F8;dretorv</cell>
+    </row>
+
+    <row xml:id="fak12">
+      <cell type="norm">Europa</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak13">
+      <cell type="norm">Sor&#x00F8;</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak14">
+      <cell type="norm">Danmark</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak15">
+      <cell type="norm">Sj&#x00E6;lland</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak16">
+      <cell type="norm">Lejre</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak17">
+      <cell type="norm">Rom</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak18">
+      <cell type="norm">Europa</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak20">
+      <cell type="norm">K&#x00F8;benhavns Universitet</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak21">
+      <cell type="norm">Tyskland</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak22">
+      <cell type="norm">Roskilde</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak23">
+      <cell type="norm">Dannevirke</cell>
+      <cell type="place">ogs&#x00E5; som begreb</cell>
+    </row>
+
+    <row xml:id="fak24">
+      <cell type="norm">Norden</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fik25">
+      <cell type="norm">&#x00D8;sterled</cell>
+      <cell type="place">poetisk om &#x00D8;sten</cell>
+    </row>
+
+    <row xml:id="fak26">
+      <cell type="norm">&#x00D8;stersøen</cell>
+      <cell type="place">poetisk: &#x00D8;ster-Salt</cell>
+    </row>
+
+    <row xml:id="fak27">
+      <cell type="norm">Fjenneslev</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak28">
+      <cell type="norm">Gammel Kongevej</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak29">
+      <cell type="norm">Villa Gladhjem</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak30">
+      <cell type="norm">N&#x00F8;rrebro</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak31">
+      <cell type="norm">Valkendorfs Kollegium</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak32">
+      <cell type="norm">Christianshavn</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak33">
+      <cell type="norm">Bristol</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak34">
+      <cell type="norm">London</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak35">
+      <cell type="norm">Oxford</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak36">
+      <cell type="norm">Cambridge</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak37">
+      <cell type="norm">Birmingham</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak38">
+      <cell type="norm">Hamburg</cell>
+      <cell type="place">Tyskland</cell>
+    </row>
+
+    <row xml:id="fak39">
+      <cell type="norm">British Museum</cell>
+      <cell type="place">England</cell>
+    </row>
+
+    <row xml:id="fak40">
+      <cell type="norm">Vor Frelsers Kirke</cell>
+      <cell type="place">Kristiania, Norge</cell>
+    </row>
+
+    <row xml:id="fak41">
+      <cell type="norm">Norge</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak42">
+      <cell type="norm">Kristiania</cell>
+      <cell type="place">(Oslo)</cell>
+    </row>
+
+    <row xml:id="fak43">
+      <cell type="norm">Frederiks Tyske Kirke</cell>
+      <cell type="place">(Christianskirken), Christianshavn</cell>
+    </row>
+
+    <row xml:id="fak44">
+      <cell type="norm">Frederiksberg Kirke</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak45">
+      <cell type="norm">Villa Solvang</cell>
+      <cell type="place">Strandvejen</cell>
+    </row>
+
+    <row xml:id="fak46">
+      <cell type="norm">Strandvejen</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak47">
+      <cell type="norm">Store Tuborg</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak48">
+      <cell type="norm">Emiliekilde</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak49">
+      <cell type="norm">Lille Tuborg</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak50">
+      <cell type="norm">Gottorp</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak51">
+      <cell type="norm">Dansk-Vestindiske &#x00D8;er</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak52">
+      <cell type="norm">Det kongelige Teater</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak53">
+      <cell type="norm">Bøstrup Kirke</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak54">
+      <cell type="norm">K&#x00F8;benhavn</cell>
+      <cell type="place">(Kj&#x00F8;benhavn)</cell>
+    </row>
+
+    <row xml:id="fak55">
+      <cell type="norm">Hou</cell>
+      <cell type="place">Langeland</cell>
+    </row>
+
+    <row xml:id="fak56">
+      <cell type="norm">Schouboes Institut</cell>
+      <cell type="place">K&#x00F8;benhavn</cell>
+    </row>
+
+    <row xml:id="fak57">
+      <cell type="norm">Roskilde Domkirke</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak58">
+      <cell type="norm">Selskabet for Norges Vel</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak59">
+      <cell type="norm">Marielyst Høiskole</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak60">
+      <cell type="norm">Maribo Domkirke</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak61">
+      <cell type="norm">Maribo</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak62">
+      <cell type="norm">Torkilstrup</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak63">
+      <cell type="norm">Tivoli</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak64">
+      <cell type="norm">Landsretten</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak65">
+      <cell type="norm">Stigsbjergby</cell>
+      <cell type="place">ved Jyderup</cell>
+    </row>
+
+    <row xml:id="fak66">
+      <cell type="norm">Jyderup</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak67">
+      <cell type="norm">Den Danske Forening</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak68">
+      <cell type="norm">Dyrehaven</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak69">
+      <cell type="norm">Vallekilde Højskole</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak70">
+      <cell type="norm">Fyn</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak71">
+      <cell type="norm">Dalum</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak72">
+      <cell type="norm">Dalby</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak73">
+      <cell type="norm">Claras Kirkegaard</cell>
+      <cell type="place">ved Køge</cell>
+    </row>
+
+    <row xml:id="fak74">
+      <cell type="norm">Køge</cell>
+      <cell type="place"></cell>
+    </row>
+
+    <row xml:id="fak75">
+      <cell type="norm">Køge ås</cell>
+      <cell type="place"></cell>
+    </row> 
+    
+</table>
+</div>
+</body>
+</text>
+</TEI>

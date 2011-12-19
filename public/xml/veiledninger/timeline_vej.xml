@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+    
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+     <title>Vejledning til tidslinjen</title>
+     <author>Henrik Yde</author>
+         <editor role="editor">Johnny Kondrup</editor>
+      </titleStmt>
+      <editionStmt></editionStmt>
+      <extent>KB</extent>
+      <publicationStmt>
+         <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+         <distributor>Grundtvig Centeret, Vartov</distributor>
+          <date type="2011-03-03">2011.01.27</date>
+      </publicationStmt>
+   </fileDesc>
+   <encodingDesc>
+      <projectDesc>
+         <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+         <p>Grundtvig Centeret arbejder med:</p>
+         <p>1.En digital og kommenteret udgave af Grundtvigs skrifter</p>
+         <p>2.En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+         <p>2.a.Teologi og kirke</p>
+         <p>2.b.Demokrati og folkelighed</p>
+         <p>3.c.P&#x00E6;dagogik og folkeoplysning</p>
+         <p>3.Videnudveksling, undervisning og formidling</p>
+      </projectDesc>
+      <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Kodebog</editorialDecl>
+   </encodingDesc>   
+   <revisionDesc>
+      <change xml:id="KSR" who="KSR" when="2011-01-24">model for regulativer</change>
+      <change who="HY" when="2011-01-27">rettelse efter JKs redaktion samt korrektur p&#x00E5; XML, herunder specialtegn</change>
+      <change who="HY" when="2011-02-16">tilføjelse af, at man kan klikke på navnene. Rettelse af Nicolaj til Nicolai.</change>
+      <change who="HY" when="2011-02-17">Efterkontrol af validitet; den er valid.</change>
+      <change who="HY" when="2011-02-23">Krista har hjulpet med at fjerne mæslinger</change>
+   </revisionDesc>
+</teiHeader>
+  <text>
+     <body>
+     <div type="guideLines">
+     <head n="2">Vejledning til tidslinjen</head>
+       
+       
+         
+       
+             
+              <p>GV&#x0027;s tidslinje s&#x00E6;tter Grundtvigs forfatterskab ind i dets samtid. Tidslinjen opererer med f&#x00F8;lgende fem akser:</p>
+              <p>
+              <list type="ordered">
+                 <item>liv</item>
+                 <item>utrykte skrifter</item>
+                 <item>udgivne v&#x00E6;rker</item>
+                 <item>national samtid</item>
+                 <item>international samtid.</item>
+              </list>
+              </p>
+              <p>Hvis man klikker p&#x00E5; en oplysning i tidslinjen, vil den p&#x00E5;g&#x00E6;ldende oplysning som regel blive uddybet. I aksen &#x201C;Grundtvigs liv&#x201D; f.eks.:</p>
+              <p>
+              <list type="ordered">
+                 <item>&#x201C;Sep 08 1783&#x201D;</item>  
+                 <item>&#x201C;Grundtvig f&#x00F8;des&#x201D;</item> 
+                 <item>&#x201C;Yngste barn af sognepr&#x00E6;st Johan Ottosen Grundtvig og hustru Cathrine Marie f. Bang f&#x00F8;des i Udby pr&#x00E6;steg&#x00E5;rd, hjemmed&#x00F8;bes af faderen 10. september og navngives Nicolai Frederik Severin (if. kirkebogen o.a. samtidig kilde egl.: Nicolai Frideric Severin).&#x201C;</item>
+              </list>
+              </p>
+              <p>Hvis man f&#x00F8;rer musen hen over et personnavn i tidslinjen, vil man f&#x00E5; oplyst den p&#x00E5;g&#x00E6;ldendes f&#x00F8;dsels- og d&#x00F8;ds&#x00E5;r samt profession.</p>
+              <p>Af tekniske &#x00E5;rsager anf&#x00F8;res tidslinjens datoer efter engelsk standard (m&#x00E5;ned, dato, &#x00E5;r) og med m&#x00E5;nederne forkortet til tre bogstaver, f.eks. &#x201C;Jul 14 1789&#x201D; = 14. juli 1789, &#x201C;Oct 02 1858&#x201D; = 2. oktober 1858.</p>
+              <p>Hvis der ikke findes yderligere tidsangivelse (f.eks. &#x201C;For&#x00E5;r&#x201C;) f&#x00F8;rst i den udfoldede oplysning, har begivenheden fundet sted p&#x00E5; den angivne dato.</p>
+              <p>Imidlertid kan ikke alle begivenheder henf&#x00F8;res til én bestemt dato, enten fordi de udspiller sig over et tidsrum (f.eks. en foredragsr&#x00E6;kke eller en krig), eller fordi den n&#x00F8;jagtige dato ikke kendes. I s&#x00E5;danne tilf&#x00E6;lde dateres begivenhederne b&#x00E5;de overordnet og i den uddybende oplysning. Den overordnede datering giver begivenhedens eller tidsrummets f&#x00F8;rste mulige eller omtrentlige dato. Den uddybende datering oplyser om tidsrummets eller dateringens usikkerhed.</p>
+                
+                 <p>Ved usikkerhed vedr. m&#x00E5;ned f.eks.</p>
+              <p><list type="ordered">
+                    <item>&#x201C;Feb 01&#x201D; > &#x201C;Februar (?)&#x201C;</item>
+                 </list></p>
+                 <p>Ved usikkerhed vedr. dato f.eks.</p>
+                   <p><list type="ordered">
+                    <item>&#x201C;Apr 01&#x201D; > &#x201C;Primo april&#x201D; eller &#x201C;April&#x201D;</item>
+                    <item>&#x201C;Apr 15&#x201D; > &#x201C;Medio april&#x201D;</item>
+                    <item>&#x201C;Apr 30&#x201D; > &#x201C;Ultimo april&#x201D;</item>
+                   </list></p>
+                 <p>Ved tidsrum f.eks. &#x201C;Oct 01&#x201D; > &#x201C;Oktober 1854-februar 1855&#x201C;</p>
+                 <p>Ved angivelse af &#x00E5;r alene f.eks. &#x201C;Jan 01 1809&#x201D; > &#x201C;1809&#x201C;</p>
+                 <p>Ved &#x00E5;rstidsangivelse enten</p>
+                 <p><list type="ordered">
+                    <item>&#x201C;Mar 01&#x201D; > &#x201C;For&#x00E5;r&#x201D;</item>
+                    <item>&#x201C;Jun 01&#x201D; > &#x201C;Sommer&#x201D;</item>
+                    <item>&#x201C;Sep 01&#x201D; > &#x201C;Efter&#x00E5;r&#x201D;</item>
+                    <item>&#x201C;Dec 01&#x201D; > &#x201C;Vinter&#x201D; </item>
+                 </list></p>
+                 <p n="-1">Kreditering: Tidslinjen har taget sit udgangspunkt i den tidstavle, som Gert Posselt udarbejdede til Ejvind Larsen: <hi rend="italic">Det levende ord</hi> (1983, 2.oplag). For venlig tilladelse hertil takkes Gert Posselt og Gyldendal.</p>                
+             
+           </div>
+       
+       
+   
+    </body>
+  </text>
+</TEI>

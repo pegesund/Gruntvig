@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="varXSLT.xsl"?>
+<?xml-model href="varRNC.rnc" type="application/relax-ng-compact-syntax"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="part" key="1826_433A_txt.xml">Den signede Dag med Fryd vi seer</title>
+                <title type="main" key="1826_433A_txt.xml">Danske Høitids-Psalmer til
+                Tusindaars-Festen</title>
+                <title rend="shortForm">H&#x00F8;itids-Psalmer 1826</title>
+                <author>Nicolai Frederik Severin Grundtvig</author>
+                <editor role="editionPhilologist">Krista Stinne Greve Rasmussen</editor>
+                <editor role="editionPhilologist">Else Riisager</editor>
+                <editor role="student">Rebekka Sofie Bohse Meyer</editor>
+                <editor role="student">Jesper Lorenzen</editor>
+                <editor role="student">Johanne Marie Nørrelund Rasmussen</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>Version 0.9</edition>
+            </editionStmt>
+            <extent>25 KB</extent>
+            <noteStmt>
+                <note type="txt" target="1826_433A_txt.xml">Læsetekst</note>
+                <note type="com" target="1826_433A_com.xml">Punktkommentar</note>
+                <note type="intro" target="1826_433A_intro.xml">Indledning</note>
+                <note type="txr" target="1826_433A_txr.xml">Tekstredegørelse</note>
+                <note xml:id="thisFile" type="var" target="1826_433A_v1.xml">Variant</note>
+            </noteStmt>
+            <publicationStmt>
+                <publisher>Faculty of Arts, Aarhus University</publisher>
+                <distributor>Grundtvig Centeret, Vartov, K&#x00F8;benhavn</distributor>
+                <authority/>
+                <idno type="1826_433A_txt.xml">1826_433A_v1.xml</idno>
+                <date type="2011-03-03">www.grundtvigsvaerker.dk, 15. december 2011</date>
+            </publicationStmt>
+            <seriesStmt/>
+            <sourceDesc>
+                <bibl>
+                    <title>Historiske<lb/> Psalmer og Riim<lb/> til Børne-L&#x00E6;rdom,<lb/>
+                        samlede og udgivne</title>
+                    <author>L. C. Hagen<lb/></author>
+                    <note>Theol. Student.</note>
+                    <pubPlace>Kj&#x00F6;benhavn</pubPlace>
+                    <publisher>Paa N. C. Ditlevsens Forlag.<lb/> Trykt i Fabritius de Tengnagels
+                        Officin.</publisher>
+                    <date>1832</date>
+                </bibl>
+                <!-- hvordan vises, at varianten er til "Den signede Dag"? Link mellem variantoversigten og den enkelte variant?; kaldes: Hagen 1832, nr. 45 -->
+                <listWit xml:id="variantList">
+                    <witness rend="variant1826_433A_v1.xml">L.C. Hagen (1832) Historiske Psalmer og
+                        Riim til B&#x00F8;rne-L&#x00E6;rdom, nr. 45</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+                <p>Grundtvig Centeret arbejder med:</p>
+                <p>1.En digital og kommenteret udgave af Grundtvigs v&#x00E6;rker</p>
+                <p>2.En forskningsindsats p&#x00E5; de felter, hvor Grundtvig s&#x00E6;rligt
+                    markerede sig</p>
+                <p>2.a.Teologi og kirke</p>
+                <p>2.b.Demokrati og folkelighed</p>
+                <p>2.c.P&#x00E6;dagogik og folkeoplysning</p>
+                <p>3.Videnudveksling, undervisning og formidling</p>
+            </projectDesc>
+        </encodingDesc>
+        <revisionDesc>
+            <change xml:id="KSG" who="KSG" when="2010-08-13">Variant etbaleret: Titel: Historiske /
+                Psalmer og Riim / til Børne-Lærdom, / samlede og udgivne / af L. C. Hagen, / Theol.
+                Student. / Kjöbenhavn. / Paa N. C. Ditlevsens Forlag. / Trykt i Fabritius de
+                Tengnagels Officin. / 1832</change>
+            <change who="KSG" when="2010-11-26">Ny deklaration, nyt filnavn og ekstra
+                grundkollation</change>
+            <change who="KSG" when="2010-12-21">Rettelse efter ny grundkollation</change>
+            <change who="KSG" when="2011-01-04">Grundkollationsrettelse</change>
+            <change who="KSG" when="2011-01-12">salme I lavet til egen fil; sidetal fjernet;
+                faschenvisninger fjernet; rend="align(center)" ændret til "center"</change>
+            <change who="KSG" when="2011-01-25">Ny teiHeader</change>
+            <change who="RSB" when="2011-02-10">Fjernet "initial"</change>
+            <change who="KSG" when="2011-02-21">lemma indsat</change>
+            <change who="KSG" when="2011-02-24">nye lemma indsat; anchor indsat; nyt
+                filnavn</change>
+            <change xml:id="KSR" who="KSR" when="2011-10-11">filen valideret, skema
+                justeret</change>
+            <change xml:id="ELR" who="ELR" when="2011-10-17">witness indsat; grundtekstens sidetal
+                indsat i komt.felt</change>
+            <change who="ELR" when="2011-10-18">kodning rettet i strofe 11</change>
+            <change who="ELR" when="2011-10-29">indsat sidetal, overskrift; &#x00E6;ndret kodning
+                for centrering; rettet til flere variantv&#x00E6;rdier, der st&#x00E5;r i rigtig
+                r&#x00E6;kkef&#x00F8;lge, se strofe 6</change>
+            <change who="KSR" when="2011-10-31">validering</change>
+            <change who="ELR" when="2011-11-05">filen helt valid</change>
+            <change who="ELR" when="2011-11-07">indsat korrekt dato</change>
+            <change xml:id="JMR" who="JMR" when="2011-11-11">kontrol af varianttyper</change>
+            <change who="ELR" when="2011-11-14">Johanne i teiheader; skriftgrad og centrering indsat
+                i head; filen gennemset</change>
+            <change who="ELR" when="2011-11-18">korrekt version</change>
+            <change who="ELR" when="2011-11-23">rettet skema, edition indsat</change>
+            <change who="KSR" when="2011-11-28">validering</change>
+            <change who="JEL" when="2011-12-02">flyttet sidetal</change>
+            <change who="ELR" when="2011-12-03">tilrettet teiheader; korrektur efterset</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <pb n="3" ed="A" type="supp"/>
+                <pb n="135" ed="V"/>
+
+                <head rend="2">No. 45.</head>
+
+                <anchor id="struct35a"/>
+                <p rend="center">Egen Melodie.</p>
+                <anchor id="struct35b"/>
+
+                <lg n="1">
+                    <l>Den signede <app id="var1" type="ide"><rdg>Dag med Fryd vi seer,</rdg></app></l>
+                    <l><app id="var2" type="ide"><rdg>Af Havet</rdg></app> til os <app id="var3" type="ide"><rdg>opkomme;</rdg></app></l>
+                    <l>Den lyse paa <app id="var4" type="ide"><rdg>Himlen,</rdg></app> meer og <app id="var6" type="ide"><rdg>meer,</rdg></app></l>
+                    <l>Os <app id="var7" type="ide"><rdg>alle</rdg></app> til Lyst og <app id="var8" type="ide"><rdg>Fromme!</rdg></app></l>
+                    <l>Det <app id="var9" type="ort"><rdg>kjendes</rdg></app> paa os, som <app id="var11" type="ide"><rdg>Lysets B&#x00F8;rn</rdg></app>,</l>
+                    <l>At <app id="var12" type="ide"><rdg>Natten</rdg></app><app id="var13" type="ide"><rdg>hun</rdg></app> er nu omme!</l>
+                </lg>
+
+                <lg n="2">
+                    <l>Den <app id="var14" type="ide"><rdg>signede</rdg></app> Stund, den <app id="var15" type="ide"><rdg>Midnats-Tid</rdg></app>,</l>
+                    <l><app id="var16" type="ide"><rdg>Vor Herre</rdg></app><app id="var17" type="ort"><rdg>Han</rdg></app> lod <app id="var18" type="ort"><rdg>Sig</rdg></app> f&#x00F8;de,</l>
+                    <l>Da <app id="var19" type="ort"><rdg>klared&#x0027;</rdg></app> det op i <app id="var20" type="ide"><rdg>&#x00D8;ster-Lid,</rdg></app></l>
+                    <l>Til <app id="var21" type="ide"><rdg>deiligste</rdg></app><app id="var22" type="ide"><rdg>Morgen-R&#x00F8;de:</rdg></app></l>
+                    <anchor id="struct36a"/>
+                    <l>Da <app id="var23" type="ide"><rdg>Lyset</rdg></app><app id="var24" type="ide"><rdg>oprandt,</rdg></app><app id="var25" type="ide"><rdg>som Jordens Bold</rdg></app></l>
+                    <anchor id="struct36b"/>
+                    <anchor id="struct31a"/>
+                    <l>Skal lysne udi og <app id="var26" type="ide"><rdg>gl&#x00F8;de!</rdg></app></l>
+                    <anchor id="struct31b"/>
+                </lg>
+
+                
+                <lg n="3">
+                    <l><pb n="4" ed="A"/>Om levende blev hvert Tr&#x00E6; i Skov,</l>
+                    <l>Og var saa hvert Blad en Tunge,</l>
+                    <l>De kunde dog <app id="var27" type="ide"><rdg>ei</rdg></app> Guds Naades <app id="var28" type="ide">              <rdg>Lov</rdg></app></l>
+                    <l><pb n="136" ed="V"/>Med v&#x00E6;rdelig R&#x00F8;st <app id="var29" type="ide"><rdg>udsjunge;</rdg>          </app></l>
+                    <l>Thi evig <app id="var30" type="ide"><rdg>nu skinner</rdg></app> Livets <app id="var31" type="int">            <rdg>Lys</rdg></app></l>
+                    <l>For <app id="var32" type="ide"><rdg>Gamle</rdg></app><app id="var33" type="ide"><rdg>og saa</rdg>              </app> for <app id="var34" type="ide"><rdg>Unge!</rdg></app></l>
+                </lg>
+
+                <lg n="4">
+                    <anchor id="struct1a"/>
+                    <l><app id="var35" type="int"><rdg>(Ja,</rdg></app> havde end Maal hvert Straa i Vang,</l>
+                    <l>Hver Urt udi Mark og Lunde,</l>
+                    <l>Slet ikke for os den <app id="var36" type="ide"><rdg>Takke-Sang</rdg></app></l>
+                    <l>Opstemme tilgavns de kunde,</l>
+                    <l>Som Dagen h&#x00F8;r <app id="var37" type="ide"><rdg>til,</rdg></app> for Lys og Liv,</l>
+                    <l>Mens tusinde Aar <app id="var38" type="int"><rdg>henrunde!)</rdg></app></l>
+                    <anchor id="struct1b"/>
+                </lg>
+
+                <lg n="5">
+                    <anchor id="struct33a"/>
+                    <l><app id="var39" type="ort">
+                            <rdg>Forgj&#x00E6;ves</rdg>
+                        </app>
+                        <app id="var40" type="ide">
+                            <rdg>det er,</rdg>
+                        </app> med liden <app id="var41" type="ide">
+                            <rdg>Magt,</rdg>
+                        </app></l>
+                    <l>At ville mod <app id="var42" type="ide">
+                            <rdg>Bjerg</rdg>
+                        </app>
+                        <app id="var43" type="ide">
+                            <rdg>opspringe,</rdg>
+                        </app></l>
+                    <l>Men &#x00D8;rnen er snild, han naaer sin Agt,</l>
+                    <l>Naar <app id="var44" type="ide">
+                            <rdg>Veiret</rdg>
+                        </app> ham <app id="var45" type="ort">
+                            <rdg>b&#x00E6;r&#x0027;</rdg>
+                        </app> paa <app id="var46" type="ide">
+                            <rdg>Vinge,</rdg>
+                        </app></l>
+                    <l>Og <app id="var47" type="ide">
+                            <rdg>L&#x00E6;rken</rdg>
+                        </app> hun er en lille <app id="var48" type="ide">
+                            <rdg>Fugl,</rdg>
+                        </app></l>
+                    <l>Kan lystig i Sky sig svinge!</l>
+                    <anchor id="struct33b"/>
+                </lg>
+
+                
+                <lg n="6">
+                    <anchor id="struct34a"/>
+                    <l><pb n="5" ed="A"/>Med <app id="var49" type="ort">
+                            <rdg>Suus</rdg>
+                        </app> og med <app id="var50" type="ort">
+                            <rdg>Bruus,</rdg>
+                        </app> den stride Aa</l>
+                    <l>Nedfuser fra <app id="var51" type="ide">
+                            <rdg>Klippe-Tinde,</rdg>
+                        </app></l>
+                    <l><app id="var52" type="ide">
+                            <rdg>Ei m&#x00E6;le saa lydt</rdg>
+                        </app> de B&#x00E6;kke <app id="var53" type="int ort">
+                            <rdg>smaae,</rdg>
+                        </app></l>
+                    <l><pb n="137" ed="V"/><app id="var54" type="ide">
+                            <rdg>Dog</rdg>
+                        </app>
+                        <app id="var302" type="ide">
+                            <rdg>risle</rdg>
+                        </app>
+                        <app id="var55" type="ide">
+                            <rdg>de</rdg>
+                        </app> fort og <app id="var56" type="ide">
+                            <rdg>rinde,</rdg>
+                        </app></l>
+                    <l>Saa frydelig snoe de sig <app id="var57" type="ide">
+                            <rdg>fra Eng,</rdg>
+                        </app></l>
+                    <l>Op under de gr&#x00F8;nne Linde!</l>
+                    <anchor id="struct34b"/>
+                </lg>
+
+                <lg n="7">
+                    <anchor id="struct54a"/>
+                    <l><app id="var58" type="ide">
+                            <rdg>Saa</rdg>
+                        </app> takke vi Gud, vor Fader god,</l>
+                    <l>Som L&#x00E6;rken i <app id="var59" type="ide">
+                            <rdg>Morgen-R&#x00F8;de</rdg>
+                        </app>,</l>
+                    <l>For <app id="var60" type="ide">
+                            <rdg>Dagen, Han os oprinde</rdg>
+                        </app> lod,</l>
+                    <l>For <app id="var61" type="ide">
+                            <rdg>Livet,</rdg>
+                        </app>
+                        <app id="var62" type="ide">
+                            <rdg>Han</rdg>
+                        </app> gav af <app id="var63" type="ide">
+                            <rdg>D&#x00F8;de,</rdg>
+                        </app></l>
+                    <anchor id="struct37a"/>
+                    <l>For <app id="var64" type="int">
+                            <rdg>Alt,</rdg>
+                        </app> hvad paa <app id="var65" type="ide">
+                            <rdg>Mark,</rdg>
+                        </app>
+                        <app id="var301" type="sub">
+                            <rdg>i Tidens L&#x00F8;b</rdg>
+                        </app>,</l>
+                    <anchor id="struct37b"/>
+                    <anchor id="struct38a"/>
+                    <l>Der <app id="var66" type="ort">
+                            <rdg>groed&#x0027;</rdg>
+                        </app> til <app id="var67" type="ide">
+                            <rdg>Sj&#x00E6;le-F&#x00F8;de!</rdg>
+                        </app></l>
+                    <anchor id="struct38b"/>
+                    <anchor id="struct54b"/>
+                </lg>
+
+                <lg n="8">
+                    <anchor id="struct2a"/>
+                    <anchor id="struct32a"/>
+                    <l><app id="var68" type="ort">
+                            <rdg>Saa l&#x00E6;nge</rdg>
+                        </app> vi see den gyldne <app id="var69" type="ide">
+                            <rdg>Soel</rdg>
+                        </app>,</l>
+                    <anchor id="struct32b"/>
+                    <l><app id="var70" type="ide">
+                            <rdg>Og Skoven er Daners</rdg>
+                        </app> Have,</l>
+                    <l>Da plante vi <app id="var71" type="ort">
+                            <rdg>Mai</rdg>
+                        </app> i <app id="var72" type="ort">
+                            <rdg>Kirke-Stoel,</rdg>
+                        </app></l>
+                    <l>Og <app id="var73" type="ide">
+                            <rdg>Blomster</rdg>
+                        </app> paa F&#x00E6;dres Grave,</l>
+                    <l>Til <app id="var74" type="ide">
+                            <rdg>gl&#x00E6;delig Fest, med Liv og Lyst</rdg>
+                        </app>,</l>
+                    <l>Til mindelig <app id="var75" type="ide">
+                            <rdg>Pindse-Gave!</rdg>
+                        </app></l>
+                    <anchor id="struct2b"/>
+                </lg>
+
+                
+                <lg n="9">
+                    <anchor id="struct3a"/>
+                    <l><pb n="6" ed="A"/>Da rinde vel og, som B&#x00E6;kke <app id="var76" type="ort">
+                            <rdg>smaae</rdg>
+                        </app>,</l>
+                    <l>Fra <app id="var77" type="ide">
+                            <rdg>&#x00D8;ine</rdg>
+                        </app> os Taarer milde,</l>
+                    <l>Og B&#x00E6;kke i <app id="var78" type="int">
+                            <rdg>Flok,</rdg>
+                        </app> de <app id="var79" type="ort">
+                            <rdg>gj&#x00F8;r</rdg>
+                        </app> en Aa,</l>
+                    <l><pb n="138" ed="V"/>Den higer mod Lysets Kilde,</l>
+                    <l>Den stiger i L&#x00F8;n, som <app id="var306" type="ide">
+                            <rdg>Hjerte-Suk</rdg>
+                        </app>,</l>
+                    <l>Alt <app id="var80" type="int">
+                            <rdg>aarle</rdg>
+                        </app> og dog end <app id="var81" type="int">
+                            <rdg>silde.</rdg>
+                        </app></l>
+                    <anchor id="struct3b"/>
+                </lg>
+
+                <lg n="10">
+                    <anchor id="struct4a"/>
+                    <l>Som <app id="var82" type="ide">
+                            <rdg>aldrig</rdg>
+                        </app> saa lang er <app id="var83" type="ide">
+                            <rdg>nogen Dag,</rdg>
+                        </app></l>
+                    <anchor id="struct6a"/>
+                    <l>At Aften er jo <app id="var303" type="ide">
+                            <rdg>i Vente</rdg>
+                        </app>,</l>
+                    <anchor id="struct6b"/>
+                    <l>Saa haver det <app id="var84" type="ide">
+                            <rdg>Lys og Solbjergs-Lag</rdg>
+                        </app>,</l>
+                    <anchor id="struct7a"/>
+                    <l>Som Gud udi Kirken <app id="var304" type="ide">
+                            <rdg>t&#x00E6;ndte;</rdg>
+                        </app></l>
+                    <anchor id="struct7b"/>
+                    <anchor id="struct8a"/>
+                    <l>Men immer det dages dog <app id="var85" type="ide">
+                            <rdg>paa Ny</rdg>
+                        </app>,</l>
+                    <anchor id="struct8b"/>
+                    <anchor id="struct9a"/>
+                    <l>Hvor <app id="var86" type="ide">
+                            <rdg>Hjerterne Morgen vente!</rdg>
+                        </app></l>
+                    <anchor id="struct9b"/>
+                    <anchor id="struct4b"/>
+                </lg>
+
+                <lg n="11">
+                    <anchor id="struct5a"/>
+                    <l>Nu sagtelig <app id="var87" type="ide">
+                            <rdg>skrid,</rdg>
+                        </app>
+                        <app id="var88" type="ort">
+                            <rdg>Du Pindse-Dag</rdg>
+                        </app>,</l>
+                    <l>Med Straaler i <app id="var89" type="ide">
+                            <rdg>Krands</rdg>
+                        </app> om Tinde!</l>
+                    <l>Hver <app id="var90" type="ide">
+                            <rdg>Time,</rdg>
+                        </app> til Herrens <app id="var91" type="ide">
+                            <rdg>Velbehag,</rdg>
+                        </app></l>
+                    <l>Som <app id="var92" type="ide">
+                            <rdg>B&#x00E6;kken i Eng</rdg>
+                        </app>
+                        <app id="var93" type="ide">
+                            <rdg>henrinde,</rdg>
+                        </app></l>
+                    <l><app id="var94" type="ide">
+                            <rdg>Saa</rdg>
+                        </app> frydelig <app id="var95" type="sub">
+                            <rdg>sig den Sidste snoe</rdg>
+                        </app></l>
+                    <l>Op under de gr&#x00F8;nne Linde!</l>
+                    <anchor id="struct5b"/>
+                </lg>
+
+                
+                <lg n="12">
+                    <anchor id="struct10a"/>
+                    <l><pb n="7" ed="A"/>Som Guld er den aarle <app id="var96" type="ide">
+                            <rdg>Morgen-Stund</rdg>
+                        </app>,</l>
+                    <l>Naar Dagen opstaaer af <app id="var98" type="ide">
+                            <rdg>D&#x00F8;de,</rdg>
+                        </app></l>
+                    <l>Dog kysser os <app id="var99" type="ide">
+                            <rdg>og,</rdg>
+                        </app> med Guld i <app id="var100" type="ide">
+                            <rdg>Mund,</rdg>
+                        </app></l>
+                    <l><pb n="139" ed="V"/>Den liflige <app id="var101" type="ide">
+                            <rdg>Aften-R&#x00F8;de,</rdg>
+                        </app></l>
+                    <anchor id="struct11a"/>
+                    <l><app id="var102" type="ide">
+                            <rdg>Saa</rdg>
+                        </app> tindre <app id="var103" type="ide">
+                            <rdg>end</rdg>
+                        </app> maa det matte Blik,</l>
+                    <anchor id="struct11b"/>
+                    <l><app id="var104" type="ide">
+                            <rdg>De blegnende</rdg>
+                        </app> Kinder <app id="var105" type="ide">
+                            <rdg>gl&#x00F8;de!</rdg>
+                        </app></l>
+                    <anchor id="struct10b"/>
+                </lg>
+
+                <lg n="13">
+                    <anchor id="struct39a"/>
+                    <l>Saa <app id="var106" type="ide">
+                            <rdg>reise</rdg>
+                        </app> vi til vort <app id="var107" type="ide">
+                            <rdg>F&#x00E6;dre-Land</rdg>
+                        </app>,</l>
+                    <l>Der ligger <app id="var108" type="ide">
+                            <rdg>ei</rdg>
+                        </app> Dag i Dvale,</l>
+                    <l>Der stander en <app id="var109" type="ide">
+                            <rdg>Borg,</rdg>
+                        </app> saa prud og grand,</l>
+                    <l>Med <app id="var110" type="ide">
+                            <rdg>Gammen i</rdg>
+                        </app> gyldne <app id="var111" type="ide">
+                            <rdg>Sale,</rdg>
+                        </app></l>
+                    <l>Saa frydelig <app id="var112" type="ide">
+                            <rdg>der,</rdg>
+                        </app>
+                        <app id="var113" type="ide">
+                            <rdg>til evig Tid,</rdg>
+                        </app></l>
+                    <l>Med Venner <app id="var114" type="ide">
+                            <rdg>i Lys</rdg>
+                        </app> vi <app id="var115" type="ide">
+                            <rdg>tale!</rdg>
+                        </app></l>
+                    <anchor id="struct39b"/>
+                </lg>
+            </div>
+        </body>
+    </text>
+</TEI>

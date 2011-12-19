@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+    
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+         <title>Vejledning til variantapparat</title>
+         <author>Krista Stinne Greve Rasmussen</author>
+         <editor role="centerManager">Michael Schelde</editor>
+         <editor role="editor">Johnny Kondrup</editor>
+         <editor role="editionManager">Johnny Kondrup</editor>
+         <editor role="itManager">Kim Steen Ravn</editor>
+      </titleStmt>
+      <editionStmt>
+         <edition>Pr&#x00F8;veversion</edition>
+      </editionStmt>
+      <extent>5 KB</extent>
+      <publicationStmt>
+         <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+         <distributor>Grundtvig Centeret, Vartov</distributor>
+         <date type="2011-03-03">Pr&#x00F8;versionen</date>
+      </publicationStmt>
+   </fileDesc>
+   <encodingDesc>
+    <projectDesc>
+      <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+      <p>Grundtvig Centeret arbejder med:</p>
+      <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+      <p>2. En forskningsindsats p&#x00E5; de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+      <p>2. a.Teologi og kirke</p>
+      <p>2. b.Demokrati og folkelighed</p>
+      <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+      <p>3. Videnudveksling, undervisning og formidling</p>
+    </projectDesc>
+      <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Retningslinjer for kodning af Grundtvigs v&#x00E6;rker</editorialDecl>
+   </encodingDesc>
+   <revisionDesc>
+      <change xml:id="KSG" who="KSG" when="2011-02-28">text</change>
+   </revisionDesc>
+</teiHeader>
+   
+   <text>
+     <body decls="guideLines">
+        
+     <head n="2">Vejledning til variantapparat</head>
+        
+       <div>          
+          <p><hi rend="italic">Varianttyper</hi></p>
+             
+          <p>I fanen med varianter er det muligt at f&#x00E5; vist senere varianttekster af Grundtvigs digte. Ved hans salmer kan man f&#x00E5; vist varianter b&#x00E5;de fra de senere tryk og fra manuskripterne. De enkelte varianter er fremh&#x00E6;vet med en anden baggrundsfarve, der refererer til variantens <hi rend="italic">type</hi>. Typen vises ved mouse over, og der er tre typer af varianter:</p>
+          
+          <p>
+             <list type="simple">
+                <item>Lyser&#x00F8;d: substantielle varianter. Betydningsb&#x00E6;rende afvigelser, fx &#x00E6;ndringer i ordvalg og ordr&#x00E6;kkef&#x00F8;lge.</item>
+                
+                <item>Lysegr&#x00F8;n: interpunktionsvarianter. &#x00C6;ndringer i tegns&#x00E6;tning.</item>
+                
+                <item>Lyslilla: ortografiske varianter. &#x00C6;ndringer i stavem&#x00E5;de, stort og lille begyndelsesbogstav samt fremh&#x00E6;velses&#x00E6;ndringer, fx mellem kursiv og ordin&#x00E6;r.</item>
+                
+                <item>M&#x00F8;rklilla: identisk. Bruges p&#x00E5; steder, hvor der ikke i den p&#x00E5;g&#x00E6;ldende varianttekst er variation i forhold til referenceteksten, men hvor der er variation i en af variantapparatets andre tekster.</item>
+             </list>
+          </p>
+          
+          <p><hi rend="italic">Variantoversigt</hi></p>
+          
+          <p>I variantoversigten kan man se, hvilke varianter der findes, og hvilke der vises i variantapparatet. Oversigten er kronologisk og medtager samtlige varianter fra Grundtvigs levetid. Varianterne er opstillet i kolonner, en for hver salme. De varianter, der afviger substantielt fra den tidsligt forudg&#x00E5;ende variant, er medtaget i apparatet, mens varianter, der ikke afviger substantielt, bliver repr&#x00E6;senteret af den forrige variant. Hvis fx en andenudgave ikke indeholder substantielle varianter i forhold til f&#x00F8;rsteudgaven, s&#x00E5; vil den fremg&#x00E5; af variantoversigten, men ikke v&#x00E6;re optaget i variantapparatet.</p>
+       </div>
+       
+    </body>
+  </text>
+</TEI>

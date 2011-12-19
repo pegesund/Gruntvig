@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+
+<div class="container" id="admin_container">
+    <h4 class="admin">GV &raquo; Administrasjon &raquo;</h4>
+    <h2 class="admin">Opplastede filer i GV</h2>
+<br/>
+<p>Dette er en liste over alle opplastede filer (merk at hvis man laster opp en fil med et navn som allerede eksisterer, så overskrives gammel versjon)</p>
+
+<a href="../uploadxml/uploadform">Last opp ny fil &raquo;</a>
+
+<table id="listXMLfiles">
+   <tr>
+    <th>Navn</th>
+    <th>Type</th>
+    <th>Filnavn</th>
+    <th>Variant</th>
+    <th>Dato</th>
+    <th>Kommentar</th>
+    <th>Fjern</th>
+</tr>
+
+#{list assets, as:'asset'}
+<tr>
+    <td><a href="tekstvisning/${asset.id}/0">${asset.name}</a></td>
+    <td>${asset.type}</td>
+    <td>${asset.fileName}</td>
+    <td>${asset.variant}</td>
+    <td class="ikke_viktig">${asset.importDate}</td>
+    <td class="ikke_viktig">${asset.comment}</td>
+    <td><a href="admin/removeXmlFile/${asset.id}">Fjern</a></td>
+
+</tr>
+        
+   
+
+#{/list}
+</table>
+<a href="../uploadxml/uploadform">Last opp ny fil &raquo;</a>
+</div>

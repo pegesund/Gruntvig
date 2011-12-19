@@ -1,0 +1,1953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="com.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+
+<teiHeader>
+   <fileDesc>
+      <titleStmt>
+         <title>1807_65.xml</title>
+      </titleStmt>
+      <publicationStmt>
+         <date></date>
+      </publicationStmt>
+      <sourceDesc>
+         <p>.</p>
+      </sourceDesc>
+   </fileDesc>
+   
+   <revisionDesc>
+      <change xml:id="KSR" who="KSR" when="2010-11-18">foreløbig kom-model</change>
+      <change xml:id="VAP" who="VAP" when="2010-11-19">korrekturrettelser, kursiv</change>
+      <change who="KSR" when="2010-11-23">nyt schema, og ny struktur; target slettes</change>
+      <change who="VAP" when="2010-11-25">stednavne</change>
+      <change xml:base="RBS" who="RBS" when="2010-11-25">flytte kommaer ind i kursiv-markeringer</change>
+      <change who="VAP" when="2010-11-26">mrk. til navnebase</change>
+      <change who="KSR" when="2010-11-26">komma og kursiv</change>
+      <change who="VAP" when="2010-11-26">titelmarkeringer</change>
+      <change who="VAP" when="2010-12-09">nummerering 1-100; delvis udgrænsning af elemeneter til andre baser</change>
+      <change who="VAP" when="2010-12-10">indsaettelse af com-numre 501-506 - foreloebige til basic base. Opnummerering 101-477 (dvs. alle)</change>
+   </revisionDesc>
+</teiHeader>
+
+<text type="com">
+<body>
+<div>
+
+   <note xml:id="com501">
+      <p>En alf er et guddommelige v&#x00E6;sen i den nordiske mytologi (og folketro). Alferne er mest knyttet til aser og vaner. Nogle opdeler alfer i lysalfer (gode) og svartalfer (onde)
+         .</p>
+   </note>
+   
+   <note xml:id="com502">
+      <p>En norne er en sk&#x00E6;bnegudinde i den nordiske mytolog, De tre, der optr&#x00E6;der i &#x201C;V&#x00F8;lvens Sp&#x00E5;dom&#x201D;, hvor de sidder ved Yggdrasils r&#x00F8;dder, kaldes Urd, Skuld og Verdande. Grundtvig till&#x00E6;gger nornerne en h&#x00F8;jere visdom.</p>
+   </note>
+   
+   <note xml:id="com503">
+      <p>En turse er v&#x00E6;sen i den nordiske mytologi, der ikke er p&#x00E5; det godes side. Tursene bor i Udg&#x00E5;rd sammen med j&#x00E6;tterne.</p>
+   </note>
+   
+   <note xml:id="com504">
+      <p>En as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi. De kvindelig aser kaldes ofte asynjer. I nogle sammenh&#x00E6;nge &#x00E6;ndres definitionerne s&#x00E5;ledes, at de tolv guder fra den nordiske mytologi, der bor i Asg&#x00E5;rd, kaldes aser.</p>
+   </note>
+   
+   <note xml:id="com505">
+      <p>Kvindelige guddomme fra den nordiske mytologi. De adlyder Odin og v&#x00E6;lger (k&#x00E5;rer) de krigere, der skal falde på slagmarken (valen).</p>
+   </note>
+   
+   <note xml:id="com506">
+      <p>J&#x00E6;tterne er onde v&#x00E6;sener og asernes fjender i nordisk mytologi.</p>
+   </note>
+   
+<note xml:id="com1">
+   <p><persName key="pe2">Nyerup</persName> var den mand, som <persName key="pe4"><persName key="pe4">Grundtvig</persName></persName> f&#x00F8;rst henvendte sig om projektet om <title>Asal&#x00E6;ren</title>; og de har en brevveksling om emnet, hvor dog kun <persName key="pe4">Grundtvig</persName>s breve er bevarede. Heri skriver <persName key="pe4">Grundtvig</persName> bl. a.: &#x00BB;Jeg veed ikke bedre at udtrykke Dem min H&#x00F8;iagtelse end ved det uskr&#x00F8;mtede Vidnesbyrd, at De, <persName key="pe7">Suhm</persName>s og <persName key="pe1">Sandvig</persName>s Fostbroder, er for mig gamle Nords Repr&#x00E6;sentant til hvis pr&#x00F8;vende Alvors Bifald jeg stedse skal bejle med al den Evne, Guderne sk&#x00E6;nkede mig.&#x00AB;  (15. maj 1807).</p>
+</note>
+      
+<note xml:id="com2">
+   <p>Citatet fra <title><hi rend="italic">Odins Ravnegalder</hi></title> er oversat i fodnote<!-- husk at nummerere noterne; VAP --></p> 
+</note>
+
+<note xml:id="com3">
+   <p><title><hi>Odins Ravnegalder</hi></title> er et digt i eddastil, ogs&#x00E5; kaldet <title><hi rend="italic">Forspjallslj&#x00F3;ð</hi></title> (Optaktssang), se ogs&#x00E5; mytologisk base og <ref>introduktionen</ref>. Det st&#x00E5;r i f&#x00F8;rste bind af den arnamagn&#x00E6;anske kommissions udgave, 1787, s. 205. Det citerede er uddrag af strofe 1.</p>
+</note>
+
+<note xml:id="com4">
+   <p>nemlig siden offentligg&#x00F8;relsen af <title>&#x00BB;Lidet om Sangene i Edda&#x00AB;</title> i tidsskriftet <title><hi rend="italic">Ny Minerva,</hi></title> september 1806.</p>
+</note>
+
+<note xml:id="com5">
+   <p><persName key="pe4">Grundtvig</persName> hentyder til den komiske gendigtning af eddadigtet <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd),</hi></title> se <ref> mytologisk base</ref>, som teologen <persName key="pe6"><persName key="pe6">Jens M&#x00F8;ller</persName></persName> havde offentliggjort i majnummeret af <title><hi rend="italic">Ny Minerva</hi></title> 1806, og som <persName key="pe4">Grundtvig</persName> allerede havde kommenteret negativt i spetembernummeret.</p>
+</note>
+
+<note xml:id="com6">
+   <p>Eddaen er en digtsamling, ofte ogs&#x00E5; kaldet <title><hi rend="italic">Den &#x00E6;ldre Edda,</hi></title> med fort&#x00E6;llinger fra den nordiske mytologi og med nordiske heltesagn, nedskrevet p&#x00E5; <placeName xml:id="fak4">Island</placeName> i 1200&#x2013; og 1300&#x2013;tallet. At Eddaen er vanhelliget, er en hentydning til <persName key="pe6"><persName key="pe6">Jens M&#x00F8;ller</persName></persName>s gendigtning af eddadigtet <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd,</hi></title>  i majnummeret af <title><hi rend="italic">Ny Minerva</hi></title> 1806. </p>
+</note>
+
+<note xml:id="com7">
+	<p>Alfader er i de oldnordiske tekster et d&#x00E6;knavn for Odin; se mytologisk base; se dog også <ref>introduktionen</ref>. .</p>
+</note>
+
+<note xml:id="com8">
+   <p>Sk&#x00E6;bnegudinder i den nordiske mytologi, se mytologisk base. <!-- her er dog tale om noget fra basic-basen --></p>
+</note>
+
+<note xml:id="com9">
+   <p>onde v&#x00E6;sener fra den nordiske mytologi, se mytologisk base. <!-- her er dog tale om noget fra basic-basen --></p>
+</note>
+
+<note xml:id="com10">
+   <p>as: se mytologisk base.<!-- her er dog tale om noget fra basic-basen --></p>
+</note>
+
+<note xml:id="com11">
+	<p>ogs&#x00E5; kaldet &#x0027;Odins m&#x00F8;er&#x0027;. Kvinder, der i den nordiske mytologi  p&#x00E5; slagmarken udv&#x00E6;lger de m&#x00E6;nd, der skal falde i kamp.</p>
+</note>
+
+<note xml:id="com12">
+	<p>lat.: trosbekendelse.</p>
+</note>
+
+<note xml:id="com13">
+   <p>for <persName key="pe4"><persName key="pe4">Grundtvig</persName></persName> er st&#x00F8;rre viden om den f&#x00E6;lles (old)nordiske fortid et v&#x00E6;sentligt skridt p&#x00E5; den erkendelsesvej, han mener, at han er trådt ind på</p>
+</note>
+
+<note xml:id="com14">
+	<p>SKAL IKKE MED, BESLUTNING AF 5. OKTOBER 2010.</p>
+</note>
+
+<note xml:id="com15">
+	<p>oph&#x00F8;re.</p>
+</note>
+
+<note xml:id="com16">
+   <p><persName key="pe4">Grundtvig</persName> hentyder her b&#x00E5;de til, at han har travls som husl&#x00E6;rer p&#x00E5; <placeName xml:id="fak3">Langeland</placeName> (se introduktion) og til, at det p.g.a. krigen med <placeName xml:id="fak5">England</placeName> ikke kan lade sig g&#x00F8;re at l&#x00E5;ne b&#x00F8;ger fra <placeName xml:id="fak6">Universitetsbiblioteket</placeName> i <placeName xml:id="fak8">K&#x00F8;benhavn</placeName>.</p>
+</note>
+
+<note xml:id="com17">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com18">
+   <p><persName key="pe4"><persName key="pe4">Grundtvig</persName></persName>s egen overs&#x00E6;ttelse af strofe 4 i <title><hi rend="italic">Skírnis M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd</hi></title>). &#x00BB;Alfers Bestr&#x00E5;ler&#x00AB; er en kenning for solen.</p>
+</note>
+
+<note xml:id="com19">
+   <p><persName key="pe4">Grundtvig</persName> hentyder her til den gendigtning af <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd</hi></title>), som teologen <persName key="pe6">Jens M&#x00F8;ller</persName> havde skrevet, og som <persName key="pe4">Grundtvig</persName> allerede i majnummeret af <title>Ny Minerva</title> 1806 havde kommenteret negativt, se introduktionen.</p>
+</note>
+
+<note xml:id="com20">
+	<p>nemlig guden Frejs elskovskvaler i <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd</hi></title>).</p>
+</note>
+
+<note xml:id="com21">
+	<p>guddommeligt eller overnaturligt v&#x00E6;sen i den nordiske mytologi. Lysalferne er s&#x00E6;dvanligvis p&#x00E5; det godes side, mens svartalferne er p&#x00E5; det ondes.</p>
+</note>
+
+<note xml:id="com22">
+   <p>en as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi. De kvindelig aser kaldes ofte asynjer.</p>
+</note>
+
+<note xml:id="com23">
+	<p>dragen Fafner, der vogtede en stor guldskat. Den dr&#x00E6;bes af Sigurd Fafnersbane med sv&#x00E6;rdet Gram.</p>
+</note>
+
+<note xml:id="com24">
+	<p>Det er typisk <persName key="pe4">Grundtvig</persName> at s&#x00E6;tte et bogstavrimende ord foran navnet. Her skal det vel forst&#x00E5;s h&#x00E6;drende og henvise til den interesse, <persName key="pe2">Nyerup</persName> havde vist besk&#x00E6;ftigelsen med det (old)nordiske.</p>
+</note>
+
+<note xml:id="com25">
+	<p>gamle dage, is&#x00E6;r den hedenske oldtid.</p>
+</note>
+
+<note xml:id="com26">
+   <p>I <persName key="9">Jacob B&#x00E6;rent M&#x00F8;inichen</persName>: <title><hi rend="italic">Nordiske Folks Overtroe, Guder, Fabler og Helte indtil Frode 7 tider i Bogstavorden,</hi></title> 1800, st&#x00E5;r der om Balder, at han: &#x00BB;boede i Himlen paa Breidablik, et Sted, som aldrig nogen Ondskab eller Forbandelse hvilede paa, hvor intet urent fandtes, og i hvis St&#x00F8;tter vare Runer, som endog kunne opv&#x00E6;kke de D&#x00F8;de&#x00AB; (s. 45).</p>
+</note>
+
+<note xml:id="com27">
+   <p>Mennesket er skabt af guder, men udaf masse, dvs. af j&#x00E6;tten Ymer (se mytologisk base), af hvis krop guderne ogs&#x00E5; danner Verden. <persName key="pe4">Grundtvig</persName> har ideen om de oprindeligt farvel&#x00F8;se mennesker fra <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title> hvor det om det f&#x00F8;rste menneskepar, Ask og Embla hedder: &#x00BB;Farve de mangled&#x00AB; (<persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse, 1783&#x2013;85). I den efterf&#x00F8;lgende strofe giver guderne dem forskellige ting: &#x00BB;Sk&#x00F8;nhed L&#x00F8;dr / Og yndig Farve &#x00BB; Hvilken udgave? Ogs&#x00E5; Sandvig?.</p>
+</note>
+
+<note xml:id="com28">
+   <p>dvs.: d&#x00F8;den venter enhver, da mennesket er skabt af jorden og skal blive til jord igen. <persName key="pe4">Grundtvig</persName> har udtrykket fra <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse af <title><hi rend="italic">S&#x00F3;larli&#x00F3;ð</hi></title> (<title><hi rend="italic">Solsangen,</hi></title>) se ogs&#x00E5; mytologisk base. En lignende tankegang kan man finde i en nyere overs&#x00E6;ttelse af Pr&#x00E6;dikerens Bog: &#x00BB;Alle g&#x00E5;r samme sted hen; alle er blevet til jord, alle bliver til jord igen&#x00AB; (kap. 4.20f, 1992). P&#x00E5; <persName key="pe4">Grundtvig</persName>s tid l&#x00F8;d passagen dog s&#x00E5;ledes: &#x00BB;&#x00AB;De fare Alle til eet Sted; de bleve Alle af St&#x00F8;v, og de komme Alle til St&#x00F8;v igjen&#x00AB; (1740&#x2013;autorisationen).</p>
+</note>
+
+<note xml:id="com29">
+   <p>her hentydes til <title><hi rend="italic"><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title>,</hi></title> iflg. hvilken Odin i strofe 18 (den arnamagn&#x00E6;anske kommissions udgave, strofe XVI) gav det f&#x00F8;rste menneskepar, Ask og Embla, &#x00E5;nd. Se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com30">
+   <p>nemlig af den arnamagn&#x00E6;anske kommissions udgave, b. I, fra 1787, <title><hi rend="italic">Edda S&#x00E6;mundar hinns Fr&#x00F3;da</hi></title>. Forordet er underskrevet af &#x00BB;<persName key="pe12">Luxdorph</persName>. <persName key="pe7">Suhm</persName>. <persName key="pe13">Thorlacius</persName>. <persName key="pe11">A. Kall</persName>. <persName key="pe10">Baden</persName>.&#x00AB;</p>
+</note>
+
+<note xml:id="com31">
+	<p>Eddaens udgivere har forsynet deres udgave med et 42 sider langt forord p&#x00E5; latin. Heri tager de afstand fra de mennesker, der mener, at det er unyttigt at udgive Eddaen overhovedet. I overs&#x00E6;ttelse lyder et uddrag af s. VIII: &#x00BB;Men vi mener her at h&#x00F8;re visse personers uvillige r&#x00F8;ster, der nu skriger deres &#x00BB;rend og hop!&#x00AB; til os. Det er nemlig deres opfattelse, at hele Eddaforskningen, som naturligvis kr&#x00E6;ver meget arbejde og er forbundet med stor usikkerhed,  men ellers er lidet nyttig, hvis ikke ganske unyttig, ikke p&#x00E5; nogen m&#x00E5;de forekommer s&#x00E5; betydningsfuld, at den l&#x00E6;rde verden kan bruge energi og kr&#x00E6;fter p&#x00E5; den, kr&#x00E6;fter, som mere klogt burde anvendes p&#x00E5; gode og nyttige sager. Disse personer r&#x00E5;ber op om, at dette v&#x00E6;rdil&#x00F8;se og mere end halvbarbariske sludder b&#x00F8;r overlades til dem, der har skrevet det, og deres hjernespind bortvejres som spindelv&#x00E6;v. Vi for vort vedkommende vil ikke bruge mange kr&#x00E6;fter p&#x00E5; at g&#x00E5; i rette med disse menneskers afvisende holdning, for det er vor opfattelse, at studiet af nordisk mytologi ikke b&#x00F8;r p&#x00E5;n&#x00F8;des alle eller dem, der ikke &#x00F8;nsker det. Hvis der imidlertid findes nogen, som har en lidt anden mening om denne del af de nordiske oldtidsminder, s&#x00E5; skal de vel have lov til at f&#x00F8;lge deres overbevisning uden at andre, der finder det foragteligt, begynder at protestere? &#x00BB; (oversat af Niels W. Bruun, 2010).</p>
+</note>
+
+<note xml:id="com32">
+   <p><persName key="pe3">Oehlenschl&#x00E4;ger</persName> havde i 1803 [1802&#x005D; udgivet <title><hi rend="italic">Digte 1803</hi></title>og i 1805 <title><hi rend="italic">Poetiske Skrifter</hi></title>. Begge udgivelser indeholder gendigtninger af emner fra den nordiske fortid.</p>
+</note>
+
+<note xml:id="com33">
+   <p>i sin ungdom. Et lignende udtryk,  &#x00BB;Alderens Vaar&#x00AB;, kan <persName key="pe4">Grundtvig</persName> have set i <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse af <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> <title><hi rend="italic">(Skirners F&#x00E6;rd)</hi></title> 1783.</p>
+</note>
+
+<note xml:id="com34">
+	<p>Formentlig en hentydning til Odin, se mytologisk base. I digtet H&#x00E1;vam&#x00E1;l (Den h&#x00F8;jes Tale) beretter afsnittet &#x00BB;Odins Indvielse&#x00AB; om, hvordan Odin, s&#x00E5;ret med en spydsod, ni dage og i ni n&#x00E6;tter hang i et tr&#x00E6; i for at opn&#x00E5; visdom.</p>
+</note>
+
+<note xml:id="com35">
+   <p><persName key="pe4">Grundtvig</persName> hentyder til den fortvivlelse, som hans lykkeligt&#x2013;ulykkelige forelskelse i <persName key="pe14">Constance Leth</persName> har sat ham i, se ogs&#x00E5; <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com36">
+	<p><persName key="pe4">Grundtvig</persName> har i et udateret brev til Molbech fra maj 1808 tilkendegivet, at det var <persName key="pe14">Constance Leth</persName>, <persName key="pe4">Grundtvig</persName> refererede til (Brevvexling, s. 13&#x2013;14).</p>
+</note>
+
+<note xml:id="com37">
+	<p>leddenes m&#x00F8;dested, her vel i betydningen lemmer eller hele kroppen.</p>
+</note>
+
+<note xml:id="com38">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com39">
+	<p>imperativ pluralis.</p>
+</note>
+
+<note xml:id="com40">
+	<p>fortiden, dog is&#x00E6;r oldtiden.</p>
+</note>
+
+<note xml:id="com41">
+	<p>latin: &#x00BB;I store ting er det tilstr&#x00E6;kkeligt at have haft viljen&#x00AB; (Properz II, 10.6).</p>
+</note>
+
+<note xml:id="com42">
+	<p>i ordets &#x00E6;ldre betydning: rimelig.</p>
+</note>
+
+<note xml:id="com43">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com44">
+	<p>en as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi.</p>
+</note>
+
+<note xml:id="com45">
+   <p>Det er uklart, hvem der hentydes til. Man kan evt. pege p&#x00E5; <persName key="pe3">Oehlenschl&#x00E4;ger</persName>, <persName key="pe2">Nyerup</persName>, <persName key="pe1">Sandvig</persName>, <persName key="pe5">Pram</persName>).</p>
+</note>
+
+<note xml:id="com46">
+	<p>se <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com47">
+	<p>en as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi.</p>
+</note>
+
+<note xml:id="com48">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com49">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com50">
+	<p>se mytologisk base, se dog ogs&#x00E5; tidligere.</p>
+</note>
+
+<note xml:id="com51">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com52">
+	<p> <!--  -->SKAL IKKE KOMMENTERES.</p>
+</note>
+
+<note xml:id="com53">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com54">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com55">
+   <p>I eddadigtet <title><hi rend="italic">Vegtams Kv&#x00E6;de</hi></title> (eller <title><hi rend="italic">Balders Dr&#x00F8;mme,</hi></title> se mytologisk base) rejser Odin under d&#x00E6;knavnet Vegtam til Hel for at f&#x00E5; en forklaring p&#x00E5; &#x00BB;hvorfor Balder / blodigt dr&#x00F8;mte&#x00AB; (strofe 1, overs&#x00E6;ttelse Martin Larsen, 1943). Balders efterf&#x00F8;lgende d&#x00F8;d bliver optakt til Ragnarok .</p>
+</note>
+
+<note xml:id="com56">
+	<p>Her mener <persName key="pe4">Grundtvig</persName> formentlig Balder, se mytologisk base.</p>
+</note>
+
+<note xml:id="com57">
+	<p>en as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi.</p>
+</note>
+
+<note xml:id="com58">
+   <p>af det oldislandske 'banaþúfa', dvs. en h&#x00F8;j, hvor man har m&#x00F8;dt sin d&#x00F8;d, bane. <persName key="pe4">Grundtvig</persName> kan have taget udtrykket fra <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse af <title><hi rend="italic">Hyndluli&#x00F3;ð</hi></title> (<title><hi rend="italic">Hyndlas Sang,</hi></title>) se <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com59">
+	<p>henvisning til Baldermyten, se mytologisk base.</p>
+</note>
+
+<note xml:id="com60">
+	<p>se mytologisk base. Fremstillingen af, at Loke skal se tidens uundg&#x00E5;elige gang, er <persName key="pe4">Grundtvig</persName>s, ikke Eddaens.</p>
+</note>
+
+<note xml:id="com61">
+	<p>t&#x00E6;t omkring.</p>
+</note>
+
+<note xml:id="com62">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com63">
+	<p>en as er et medlem af gudesl&#x00E6;gten aserne i den nordiske mytologi.</p>
+</note>
+
+<note xml:id="com64">
+	<p>l&#x00E6;re om universets skabelse og udvikling, enten p&#x00E5; religi&#x00F8;st&#x2013;filosofisk el. p&#x00E5; videnskabeligt&#x2013;astronomisk grundlag.</p>
+</note>
+
+<note xml:id="com65">
+   <p>se mytologisk base.<!-- her er dog tale om noget fra basic-basen --></p>
+</note>
+
+<note xml:id="com66">
+	<p>ordet &#x0027;sans&#x0027; er her i betydning efter ty. &#x0027;Sinn&#x0027;, mening.</p>
+</note>
+
+<note xml:id="com67">
+	<p>se mytologisk base og introduktionen.</p>
+</note>
+
+<note xml:id="com68">
+	<p>Almindeligvis kan ordet overs&#x00E6;ttes til &#x0027;materien&#x0027;, men det r&#x00E6;kker ikke her. I den meget allegoriske l&#x00E6;sning, <persName key="pe4">Grundtvig</persName> l&#x00E6;gger ned over teksten, kommer j&#x00E6;tterne til at st&#x00E5; for den mere materielle side af jordelivet. Ofte vil l&#x00E6;seren i det f&#x00F8;lgende blot kunne erstatte &#x0027;Massen&#x0027; med &#x0027;j&#x00E6;tterne&#x0027;.</p>
+</note>
+
+<note xml:id="com69">
+	<p>gl. form af hv&#x00E6;lvede.</p>
+</note>
+
+<note xml:id="com70">
+	<p>j&#x00E6;ttesl&#x00E6;gten, se mytologisk base.</p>
+</note>
+
+<note xml:id="com71">
+   <p><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title> se mytologisk base.<!-- her er dog tale om noget fra basic-basen . her kunne også linkes til introduktionen --></p>
+</note>
+
+<note xml:id="com72">
+   <p>&#x00AB;Hammerhentningen&#x00AB; er fort&#x00E6;llingen om, hvordan Thor hentede sin hammer hos Udg&#x00E5;rdsloke, som havde franarret ham den. Den er beskrevet i <title><hi rend="italic">Trymskvadet,</hi></title> der er trykt i den arnamagn&#x00E6;anske kommissions udgave b. 1, 1787.<!-- evt. link til introduktionen (og basic-basen?) her --></p>
+</note>
+
+<note xml:id="com73">
+   <p><title><hi rend="italic">Vegtams Kv&#x00E6;de</hi></title> er en af sangene fra Edda. Den g&#x00E5;r ogs&#x00E5; under navnet <title><hi rend="italic">Baldrs Draumr</hi></title> (se mytologisk base) og er trykt i den arnamagn&#x00E6;anske kommissions udgave b. 1 <!-- evt. link til introduktionen (og basic-basen?) her -->.</p>
+</note>
+
+<note xml:id="com74">
+   <p>en af sangene i Edda, ogs&#x00E5; kaldet <title><hi rend="italic">Skírnis M&#x00E1;l</hi></title> <title><hi rend="italic">(Skirners F&#x00E6;rd)</hi></title>. Den fort&#x00E6;ller om, at Frej engang havde sat sig p&#x00E5; Odins s&#x00E6;de og derfra fik &#x00F8;je p&#x00E5; j&#x00E6;ttedatteren Gerd, som han forelskede sig i. Der er trykt i den arnamagn&#x00E6;anske kommissions udgave b. 1.<!-- evt. link til introduktionen (og basic-basen?) her --></p>
+</note>
+
+<note xml:id="com75">
+   <p><title><hi rend="italic">Odins Ravnegalder</hi></title> er et digt i eddastil, ogs&#x00E5; kaldet <title><hi rend="italic">Forspjallslj&#x00F3;ð</hi></title> ('forspjalld' betyder egl. indledning). Det st&#x00E5;r i f&#x00F8;rste bind af den arnamagn&#x00E6;anske kommissions udgave, 1787, hvor <persName key="pe4">Grundtvig</persName> har set det. I dag regnes det for eftermiddelalderligt. I <title><hi rend="italic">Mytologien</hi></title> fra 1808 (fortalen s. 8) er <persName key="pe4">Grundtvig</persName> en fortaler for digtets h&#x00F8;je alder.<!-- evt. link til introduktionen (og basic-basen?) her --></p>
+</note>
+
+<note xml:id="com76">
+	<p>Dette har ofte v&#x00E6;ret fortolket som en foregribelse af Kristus.</p>
+</note>
+
+<note xml:id="com77">
+	<p>Dette har ofte v&#x00E6;ret fortolket som et udtryk for den kristne Skabergud.</p>
+</note>
+
+<note xml:id="com78">
+	<p>I den arnamagn&#x00E6;anske kommissions udgave fra 1787, b. 1, st&#x00E5;r der &#x00BB;Alsviþr&#x00AB;. Sandvig overs&#x00E6;tter:  &#x00BB;Da kommer en anden / End m&#x00E6;gtigere, / Dog t&#x00F8;r jeg nu ikke / hans Navn n&#x00E6;vne, / Faa troer jeg skue / L&#x00E6;nger&#x0027; i Tiden, / end naar Odin skal / Ulven m&#x00F8;de&#x00AB;.  I Th&#x00F8;ger Larsens overs&#x00E6;ttelse fra 1914 af Odins Ravnegalder [brug bedre her&#x005D; bibeholdes ordet som &#x00BB;Alsvier&#x00AB; og forklares s&#x00E5;ledes: &#x00BB;Solens ene Hest. Dette skal vist forstaas saaledes, at bliver Odins Tanke borte, raver Verden i en halvbevidst, s&#x00F8;vnagtig Tilstand&#x00AB;.</p>
+</note>
+
+<note xml:id="com79">
+	<p>If&#x00F8;lge Snorres Edda er det fire dv&#x00E6;rge, &#x00D8;stre, Vestre, Nordre og S&#x00F8;ndre, der b&#x00E6;rer himmelhv&#x00E6;lvingen.</p>
+</note>
+
+<note xml:id="com80">
+	<p>En henvisning til <title><hi rend="italic">Hyndluli&#x00F3;ð</hi></title> (<title><hi rend="italic">Hyndlas Sang,</hi></title>) strofe XL i den arnamagn&#x00E6;anske kommissions udgave, strofe 44 i nyere, fx Martin Larsen 1943). Hyndlas replik lyder hos Sandvig (strofe 42): &#x00BB;Da kommer end anden / End m&#x00E6;gtigere, / Dog t&#x00F8;r jeg nu ikke / Hans Navn, n&#x00E6;vne, / Faa troer jeg skue / L&#x00E6;nger&#x0027; i Tiden, / End naar Odin skal / Ulven m&#x00F8;de&#x00AB;;  i 1943&#x2013;overs&#x00E6;ttelsen: &#x00BB;En da kommer, end st&#x00E6;rkere, / dog t&#x00F8;r jeg ikke / denne n&#x00E6;vne; / faa ser l&#x00E6;ngere / frem end Tiden / da Odin skal / Ulven m&#x00F8;de&#x00AB; eller Karl Gjellerup 1895: &#x00BB;En anden kommer / aller&#x2013;m&#x00E6;gtigst, / ham dog at  n&#x00E6;vne / har jeg ei Mod. / Faa kun skue / fremad l&#x00E6;nger, / end naar Odin / Ulven m&#x00F8;der&#x00AB;. <persName key="pe4">Grundtvig</persName> giver her klart udtryk for sin line&#x00E6;re historieopfattelse (se <ref>introduktionen</ref>).</p>
+</note>
+
+<note xml:id="com81">
+   <p><title><hi rend="italic">Hyndlulj&#x00F3;ð</hi></title> (<title><hi rend="italic">Hyndlas Sang</hi></title>) strofe 44, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com82">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com83">
+   <p>Almindeligvis er &#x0027;den h&#x00F8;je&#x0027; et andet navn for Odin, se mytologisk base. N&#x00E5;r Fenris sluger den h&#x00F8;je as, hentydes der dog til formentlig til Ragnarok, hvor Fenrisulven skal sluge solen (<title><hi rend="italic">Gylfaginning</hi></title> (da. <title><hi rend="italic">Gylfes Forblindelse,</hi></title>) strofe 50). Hos <ref><persName key="pe7">Suhm</persName></ref> (s. 271) er Sol en asynje, dvs. en kvindelig as.</p>
+</note>
+
+<note xml:id="com84">
+   <p><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title> (se mytologisk base), strofe 58 i den arnamagn&#x00E6;anske kommissions udgave (strofe 65 i <persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001).</p>
+</note>
+
+<note xml:id="com85">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com86">
+	<p>nemlig prosaisk omskrivning af strofe 4, se tidl. og se mytologisk base.</p>
+</note>
+
+<note xml:id="com87">
+   <p>nemlig den udgave af <title><hi rend="italic">Den &#x00E6;ldre Edda,</hi></title> som den arnamagn&#x00E6;anske kommission udgav i 1787, og som <persName key="pe4">Grundtvig</persName> har anvendt. Den indeholder &#x2013; p&#x00E5; b&#x00E5;de oldnordisk og latin f&#x00F8;lgende digte (med de almindeligste danske titler i parentes): <title><hi rend="italic">Vafthrudnismal</hi></title> (da. <title><hi rend="italic">Vaftrudners Sang,</hi></title>) <title><hi rend="italic">Grimnis M&#x00E1;l</hi></title> (da. <title><hi rend="italic">Grimners Sang,</hi></title>) <title><hi rend="italic"></hi></title>hF&#x00F6;r Scirnis (da. <title><hi rend="italic">Skirners F&#x00E6;rd,</hi></title>) <title><hi rend="italic"> Harbarz-lio&#x00FE;</hi></title> (da. <title><hi rend="italic">Sangen om Gr&#x00E5;sk&#x00E6;g,</hi></title>) <title><hi rend="italic">Hymis&#x2013;quida</hi></title> (da. <title><hi rend="italic">Hymers Kv&#x00E6;de,</hi></title>) <title><hi rend="italic">&#x00C6;gisdrecka</hi></title> (da. <title><hi rend="italic">&#x00C6;girs G&#x00E6;stebud,</hi></title>) <title><hi rend="italic">Þryms&#x2013;qvida</hi></title> (da. <title><hi rend="italic">Trymskv&#x00E6;det</hi></title> eller <title><hi rend="italic">Hammerhentningen,</hi></title>) <title><hi rend="italic">Hrafna&#x2013;galdr &#x00D3;&#x00FE;ins</hi></title> (<title><hi rend="italic">Odins Ravnegalder,</hi></title>) <title><hi rend="italic">Vegtams&#x2013;quiþa</hi></title> (<title><hi rend="italic">Vegtams Kv&#x00E6;de</hi></title> eller <title><hi rend="italic">Balders Dr&#x00F8;mme,</hi></title>) <title><hi rend="italic">Alvís&#x2013;m&#x00E1;l</hi></title> (da. <title><hi rend="italic">Sangen om Alvis</hi></title>), <title><hi rend="italic">Hyndlv&#x2013;li&#x00F3;þ</hi></title> (da. <title><hi rend="italic">Hyndlas Sang,</hi></title>) <title><hi rend="italic">S&#x00F3;lar&#x2013;li&#x00F3;þ</hi></title> (da. <title><hi rend="italic">Solsangen</hi></title>).</p>
+</note>
+
+<note xml:id="com88">
+	<p>se mytologisk base.</p>
+</note>
+   
+<note xml:id="com89">
+	<p>se mytologisk base.<!-- her basic-basen --></p>
+</note>
+
+<note xml:id="com90">
+   <p>se mytologisk base.<!-- her basic-basen --></p>
+</note>
+
+<note xml:id="com91">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com92">
+	<p>Lokes b&#x00F8;rn er: Hel, gudinde over d&#x00F8;dsriget; Midg&#x00E5;rdsormen, der slynger sig rundt om hele jorden, og Fenrisulven, der st&#x00E5;r bundet indtil Ragnarok.</p>
+</note>
+
+<note xml:id="com93">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com94">
+	<p>j&#x00E6;tten Ymer, af hvem guderne skabte Verden (se mytologisk base) eller j&#x00E6;tterne i al almindelighed, se dog ogs&#x00E5; <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com95">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com96">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com97">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com98">
+   <p>se tidl. <!-- her basic-basen --></p>
+</note>
+
+<note xml:id="com99">
+	<p>giftdr&#x00E5;ber.</p>
+</note>
+
+<note xml:id="com100">
+   <p>Hele citatet stammer fra <title><hi rend="italic">Vafþruðnism&#x00E1;l</hi></title> (da. <title><hi rend="italic">Vaftrudners Sang,</hi></title> strofe 30&#x2013;31 i den arnamagn&#x00E6;anske kommissions udgave). Her hentydes til myten om, hvordan j&#x00E6;tten Ymer opstod i m&#x00F8;det mellem rim fra Ginnungagap, som bestod af st&#x00F8;rknet vand (is) fra Elivargar og varme fra syd.</p>
+</note>
+
+<note xml:id="com101">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com102">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com103">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com104">
+	<p>prim&#x00E6;r dunkelhed? <persName key="pe4">Grundtvig</persName> opfatter hele verdensforl&#x00F8;bet som styret af en h&#x00F8;jere hensigt. I dette forl&#x00F8;b f&#x00E5;r den hedenske tid en del af  sin berettigelse som det, der g&#x00E5;r forud for den kristne.</p>
+</note>
+
+<note xml:id="com105">
+	<p>her: Ymer; se ogs&#x00E5; mytologisk base, se ogs&#x00E5; tidl.</p>
+</note>
+
+<note xml:id="com106">
+	<p>Ymer, der kunne avle med sig selv, idet hans ene ben avlede en s&#x00F8;n med det andet; se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com107">
+	<p>mytologisk base.</p>
+</note>
+
+<note xml:id="com108">
+	<p>mytologisk base.</p>
+</note>
+
+<note xml:id="com109">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com110">
+	<p>se mytologisk base. De, der slog Ymer ihjel, dvs. Odin, Vile og Ve, som danner Jorden ud af hans d&#x00F8;de krop.</p>
+</note>
+
+<note xml:id="com111">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com112">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com113">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com114">
+	<p>andet end at.</p>
+</note>
+
+<note xml:id="com115">
+	<p>Her fremg&#x00E5;r det tydeligt, at <persName key="pe4">Grundtvig</persName> g&#x00F8;r Ymer til det samme som &#x0027;Massen&#x0027;.</p>
+</note>
+
+<note xml:id="com116">
+	<p>asernes, dog is&#x00E6;r Odins; se ogs&#x00E5; introduktionen.</p>
+</note>
+
+<note xml:id="com117">
+   <p><persName key="pe4">Grundtvig</persName> har formentlig b&#x00E5;de siddet med <persName key="pe15">Peder Resen</persName>s tosprogede (latin og oldislandsk) udgave af digtet &#x00BB;H&#x00E1;vamaal&#x00AB;  (da. <title><hi rend="italic">Den h&#x00F8;jes Tale</hi></title>) (K&#x00F8;benhavn 1665) og med <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse fra 1783. I <persName key="pe15">Resen</persName>s udgave begynder der p&#x00E5; bl. C recto et afsnit, som han kalder &#x00BB;Runa Capitule&#x00AB;. Dette kapitel har selvst&#x00E6;ndigt nummerede strofer; den her n&#x00E6;vnte er strofe 8. Ogs&#x00E5; i <persName key="pe1">Sandvig</persName>s eddaovers&#x00E6;ttelse fra 1783 er sidste afsnit  af Havamaal ben&#x00E6;vnt &#x00BB;Rune&#x2013;Capitlet&#x00AB; (s. 103, bl. G 3 r). <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse lyder: &#x00BB;Saa Thundr selv skar / F&#x00F8;rend Folkets Nat, / da han gik derhen, / Hvor han selv kom fra&#x00AB; (strofe 8).  .</p>
+</note>
+
+<note xml:id="com118">
+	<p>Odin, se mytologisk base.</p>
+</note>
+
+<note xml:id="com119">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com120">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com121">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com122">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com123">
+	<p>se introduktionen.</p>
+</note>
+
+<note xml:id="com124">
+   <p>I det l&#x00E6;ngere digt <title><hi rend="italic">Hyndlulj&#x00F3;ð</hi></title> (<title><hi rend="italic">Hyndlas Sang</hi></title>) er der indskudt en form for  forkortet version af digtet <title><hi rend="italic">Volusp&#x00E1;</hi></title> eller <title><hi rend="italic"><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title></hi></title>. <persName key="pe4">Grundtvig</persName>s overs&#x00E6;ttelser her gengiver del af strofe 39 i den arnamagn&#x00E6;anske kommissions udgave, b. 1, 1787 (ogs&#x00E5; strofe 39 i nyere overs&#x00E6;ttelser, som fx Martin Larsens 1943).</p>
+</note>
+
+<note xml:id="com125">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com126">
+   <p>I noten er anf&#x00F8;rt den oldnordiske tekst, som <persName key="pe4">Grundtvig</persName> her overs&#x00E6;tter. Den er ikke hovedteksten i  kommissionens udgave af <title><hi rend="italic">Hyndlas Sang</hi></title>. B&#x00E5;de i <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse fra 1783 og i Th&#x00F8;ger Larsens overs&#x00E6;ttelse fra 1926 st&#x00E5;r der ogs&#x00E5; &#x00BB;Soneblodet&#x00AB; (strofe 38) eller &#x00BB;Sone&#x2013;Blodet&#x00AB; (Sandvig strofe 37) for &#x00BB;sonar dreyra&#x00AB;, mens nyere, som Martin Larsen 1943 i  strofe 38 har &#x00BB;Galtblodet&#x00AB;. Det originale udtryk betyder ganske rigtigt &#x0027;forsoningsblod&#x0027;, men oprindelig i forbindelse med sl&#x00E6;gts&#x2013; og blodh&#x00E6;vn, ikke som her Jesu sonoffer for menneskene.</p>
+</note>
+
+<note xml:id="com127">
+	<p>som det ogs&#x00E5; fremg&#x00E5;r af overs&#x00E6;ttelsen, er 'jarþar' genitiv af 'j&#x00F6;rð', jord; megni betyder bl.a. kraft.</p>
+</note>
+
+<note xml:id="com128">
+	<p>Urds kraft.</p>
+</note>
+
+<note xml:id="com129">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com130">
+	<p>Igen l&#x00E6;gger <persName key="pe4">Grundtvig</persName> sin allegoriske l&#x00E6;sning ned over den nordiske mytologi, se dog ogs&#x00E5;<ref> introduktionen</ref> og mytologisk base: <ref> Urds kilde</ref> <!-- hvad gør vi her? VAP 22.nov. 2010 -->.</p>
+</note>
+
+<note xml:id="com131">
+	<p>se tidl.</p>
+</note>
+
+<note xml:id="com132">
+   <p><title><hi rend="italic">Volusp&#x00E1;</hi></title> (<title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title>) findes i flere h&#x00E5;ndskrifter, nemlig <title><hi rend="italic">Codex Regius</hi></title> (ca. 1270) og <title><hi rend="italic">Hausb&#x00F3;k</hi></title> (ca. 1300), der begge rummer hele teksten til <title><hi rend="italic">Volusp&#x00E1;</hi></title>. .</p>
+</note>
+
+<note xml:id="com1333">
+	<p>I &#x00E6;ldre danske grammatikker kunne ordet anvendes b&#x00E5;de om substantiver og adjektiver, men her ser det ud, som om <persName key="pe4">Grundtvig</persName> mener 'egennavn' (proprium).</p>
+</note>
+
+<note xml:id="com134">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com135">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com136">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com137">
+	<p>se introduktionen.</p>
+</note>
+
+<note xml:id="com138">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com139">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com140">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com141">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com142">
+	<p><ref>se tidl.</ref>.</p>
+</note>
+
+<note xml:id="com143">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com144">
+	<p>d.s.s. &#x0027;soneblodet&#x0027;,<ref> se tidl.</ref>.</p>
+</note>
+
+<note xml:id="com145">
+	<p>m&#x00E5;ske den, at han er stamfader til j&#x00E6;ttesl&#x00E6;gten rimturserne.</p>
+</note>
+
+<note xml:id="com146">
+	<p>Odins b&#x00F8;rn er: Thor, Balder, H&#x00F8;der. Flere regner ogs&#x00E5; Herm&#x00F3;ður, Viðar, Brage og Vile med. Her t&#x00E6;nkes dog formentlig p&#x00E5; aserne (eller m&#x00E5;ske ligefrem menneskeheden) under &#x00E9;t.</p>
+</note>
+
+<note xml:id="com147">
+	<p>En hentydning til, at Odin, Vile og Ve byggede jorden af den dr&#x00E6;bte j&#x00E6;tte Ymer, se mytologisk base.</p>
+</note>
+
+<note xml:id="com148">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com149">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com150">
+	<p>dvs. Loke.</p>
+</note>
+
+<note xml:id="com151">
+   <p><persName key="pe4">Grundtvig</persName> hentyder til, at Loke og Odin blandede blod, da Loke blev optaget i Asg&#x00E5;rd (kan l&#x00E6;ses i eddadigtet <title><hi rend="italic">Lokasenna</hi></title> (<title><hi rend="italic">&#x00C6;girs G&#x00E6;stebud</hi></title>)).</p>
+</note>
+
+<note xml:id="com152">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com153">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com154">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com155">
+   <p><title><hi rend="italic">&#x00C6;girs G&#x00E6;stebud,</hi></title> se mytologisk base. Omdigtningen er strofe 28 i den arnamagn&#x00E6;anske kommissions udgave (ogs&#x00E5; strofe 28 i nyere, fx Martin Larsen 1943).</p>
+</note>
+
+<note xml:id="com156">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com157">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com158">
+	<p>dvs. Loke.</p>
+</note>
+
+<note xml:id="com159">
+	<p>her: j&#x00E6;tterne.</p>
+</note>
+
+<note xml:id="com160">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com161">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com162">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com163">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com164">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com165">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com166">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com167">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com168">
+	<p><persName key="pe4">Grundtvig</persName> mener formentlig Odin.</p>
+</note>
+
+<note xml:id="com169">
+	<p><persName key="pe4">Grundtvig</persName> opfatter her de gyldne tavler fra <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom</hi></title> som et symbol for den styrelse, der gennem hele historien, omfattende b&#x00E5;de den hedenske og den kristne tid, se ogs&#x00E5; <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com170">
+   <p>en forventningens gl&#x00E6;de, som ikke bliver opfyldt; <!-- VAP: illusion? -->.</p>
+</note>
+
+<note xml:id="com171">
+	<p>I fasc. 264.1d, der rummer udkast til et afsnit af  artiklen, st&#x00E5;r der p&#x00E5; dette sted: &#x00BB;&#x005B; &#x2026; &#x005D; Frihedsdr&#x00F8;mmen skabte. Snart svinder denne Dr&#x00F8;m, og efter Nornernes (den afpr&#x00E6;gede Visdoms) Bud begynder atter Kampen&#x00AB;. I udkastet er der alts&#x00E5; lagt en endnu st&#x00F8;rre v&#x00E6;gt p&#x00E5; historiens uafvendelighed.</p>
+</note>
+
+<note xml:id="com178">
+	<p>Overs&#x00E6;ttelsen her er af strofe 7 &#x0026; 8; senere af strofe 56 i den arnamagn&#x00E6;anske kommissions udgave (strofe 60 i moderne udgave, <persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001), se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com179">
+	<p>For <persName key="pe4">Grundtvig</persName> er asernes syndefald et n&#x00F8;dvendigt led i Verdensplanen (se <ref>introduktionen</ref>). <persName key="pe4">Grundtvig</persName> ser b&#x00E5;de det, at aserne mister de gyldne tavler, og at guden Frej forelsker sig i j&#x00E6;ttedatteren Gerd, som et tegn p&#x00E5; deres syndefald. Det uundg&#x00E5;elige fald er samtidig begyndelsen til Ragnarok, der efterfølges af den store, evige salighed.</p>
+</note>
+
+<note xml:id="com180">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com181">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com182">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com183">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com184">
+	<p>kvinder af j&#x00E6;ttesl&#x00E6;gt, se mytologisk base: <ref>j&#x00E6;tter</ref>.</p>
+</note>
+
+<note xml:id="com185">
+	<p>ogs&#x00E5; kaldet Udg&#x00E5;rd, se mytologisk base.</p>
+</note>
+
+<note xml:id="com186">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com187">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com188">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com189">
+	<p>asernes kamp mod j&#x00E6;tterne under Ragnarok. .</p>
+</note>
+
+<note xml:id="com190">
+	<p>gl. pluralisform af &#x0027;gik&#x0027;.</p>
+</note>
+
+<note xml:id="com191">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com192">
+	<p>Nyere overs&#x00E6;ttelse (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001) har &#x00BB;alle guder f&#x00E5; udlignet tabet&#x00AB;, hvad der nok giver st&#x00F8;rre mening. Det er dog let at se, hvordan <persName key="pe4">Grundtvig</persName> er kommet til sin fortolkning af : &#x00BB;skyldo godin ?ll / gildi eiga&#x00AB;.</p>
+</note>
+
+<note xml:id="com193">
+   <p>overs&#x00E6;ttelsen er af strofe 23 af <title><hi rend="italic">V&#x00F8;lvens Sp&#x00C5;dom</hi></title> se ogs&#x00E5; se mytologisk base.</p>
+</note>
+
+<note xml:id="com194">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com195">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com196">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com197">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com198">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com199">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com200">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com201">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com202">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com203">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com204">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com205">
+	<p>Overs&#x00E6;ttelsen er af strofe XXII &#x0026; XXIV i den arnamagn&#x00E6;anske kommissions udgave; strofe 24 &#x0026; 26 i nyere (Martin Larsen 1943). Se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com206">
+	<p>dvs. <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title>. Overs&#x00E6;ttelsen er af strofe XV &#x0026; XVI i den arnamagn&#x00E6;anske kommissions udgave;  strofe 17 &#x0026; 18 i nyere (Martin Larsen 1943), se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com207">
+	<p>gange (regneart).</p>
+</note>
+
+<note xml:id="com208">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com209">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com210">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com211">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com212">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com213">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com214">
+	<p>dvs. <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title>. Overs&#x00E6;ttelsen er af strofe XVI i den arnamagn&#x00E6;anske kommissions udgave, strofe 18 i moderne (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName>, 2001); se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com215">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com216">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com217">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com218">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com219">
+	<p>Nyere forskning har ikke kunnet give <persName key="pe4">Grundtvig</persName> ret i dette fors&#x00F8;g p&#x00E5; at rette i teksten.</p>
+</note>
+
+<note xml:id="com220">
+	<p>Almindeligvis regnes L&#x00F8;dur (Lodur) og Loke ikke for at v&#x00E6;re den samme; se dog mytologisk base.</p>
+</note>
+
+<note xml:id="com221">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com222">
+	<p>Som det fremg&#x00E5;r af sammenh&#x00E6;ngen, ser <persName key="pe4">Grundtvig</persName> Loke som den personificerede klogskab, der dog mangler (Odins) &#x00E5;nd.</p>
+</note>
+
+<note xml:id="com223">
+	<p><persName key="pe4">Grundtvig</persName> spiller p&#x00E5;, at &#x0027;&#x00E5;nd&#x0027; og &#x00E5;nde&#x0027; n&#x00E6;sten er det samme ord. Den oldislandske tekst har &#x00F6;nd, &#x00E5;nde.</p>
+</note>
+
+<note xml:id="com224">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com225">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com226">
+	<p>Efter sammenh&#x00E6;ngen er j&#x00E6;tten Ymer, af hvis d&#x00F8;de krop Verden blev skabt (se mytologisk base). Der er dog ogs&#x00E5; mulighed for, at <persName key="pe4">Grundtvig</persName> med den meget allegoriske eller personificerende tolkning af den nordiske mytologi, som han har valgt, blot mener negative egenskaber i al almindelighed.</p>
+</note>
+
+<note xml:id="com227">
+	<p>Som <persName key="pe4">Grundtvig</persName> selv angiver det, et skib, bygget af d&#x00F8;d m&#x00E6;nds negle. Det river sig l&#x00F8;s til Ragnarok. Se evt. mytologisk base.</p>
+</note>
+
+<note xml:id="com228">
+	<p>Sammen med Jorden, ogs&#x00E5; kaldet Fj&#x00F8;rgin, fik Odin s&#x00F8;nnen Thor, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com229">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com230">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com231">
+	<p>Sammen med Jorden, ogs&#x00E5; kaldet Fj&#x00F8;rgin, fik Odin s&#x00F8;nnen Thor, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com232">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com233">
+	<p>Den citerede tekst er strofe XXII i den arnamagn&#x00E6;anske kommissions udgave (strofe 23 i nyere, fx Martin Larsen 1943); se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com234">
+	<p>her blot: antallet af j&#x00E6;tter.</p>
+</note>
+
+<note xml:id="com235">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com236">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com237">
+	<p><ref>se introduktionen.</ref>.</p>
+</note>
+
+<note xml:id="com238">
+	<p>Balder (se mytologisk base) er n&#x00E6;rliggende, men ikke efter sammenh&#x00E6;ngen.</p>
+</note>
+
+<note xml:id="com239">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com240">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com241">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com242">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com243">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com244">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com245">
+	<p>r<ref>se tidl.</ref> .</p>
+</note>
+
+<note xml:id="com246">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com247">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com248">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com249">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com250">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com251">
+	<p>dvs. Loke.</p>
+</note>
+
+<note xml:id="com252">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com253">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com254">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com255">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com256">
+	<p>Overs&#x00E6;ttelsen af <title><hi rend="italic">&#x00C6;girs G&#x00E6;stebud</hi></title> er fra den arnamagn&#x00E6;anske kommissions udgave strofe XIX (nyere, fx Martin Larsen 1943 strofe 19), se ogs&#x00E5; mytologisk base; se tidl.<!-- hdet kan vi jo ikke. link her VAP 22. nov. 2010 --></p>
+</note>
+
+<note xml:id="com257">
+	<p>se mytologisk base; I et senere manuskript (fasc. 264.1, bl. 2 v) identificerer <persName key="pe4">Grundtvig</persName> dog Angrboda med v&#x00F8;lven Gullveig (se mytologisk base), fordi &#x00BB;Asal&#x00E6;ren […&#x005D; vinder mere Konsekvens&#x00AB;.</p>
+</note>
+
+<note xml:id="com258">
+	<p>se tidl. eller se mytologisk base.</p>
+</note>
+
+<note xml:id="com259">
+	<p>Her er tale om strofe XXXVII af <title><hi rend="italic">Hyndlas Sang</hi></title> i den <ref>arnamagn&#x00E6;anske kommissions udgave</ref>, strofe 41 i nyere overs&#x00E6;ttelser, fx Martin Larsen 1943.</p>
+</note>
+
+<note xml:id="com260">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com261">
+   <p><persName key="pe1">Bertel Sandvig</persName> har oversat hele det v&#x00E6;rk, som samtiden kaldte S&#x00E6;munds Edda, under titlen: <title><hi rend="italic">Fors&#x00F8;g til en Overs&#x00E6;ttelse af S&#x00E6;munds Edda&#x00AB;,</hi></title> f&#x00F8;rste h&#x00E6;fte 1773; se ogs&#x00E5; <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com262">
+   <p>fra strofe 19 i den arnamagn&#x00E6;anske kommissions udgave, 1787, hvor der dog st&#x00E5;r &#x00BB;fiorgvall&#x00AB;, ikke &#x00BB;fj&#x00F8;rgvali&#x00AB;. Nyere overs&#x00E6;ttelser er meget uenige: H.G. M&#x00F8;ller 1870: &#x00BB;Ej v&#x00E9;d Loft, /at legen blir ham h&#x00E5;rd; / ham hade alle Guder&#x00AB;. Karl Gjellerup 1895: &#x00BB;Loke jo veed hvor lystig han er, / og hvor ham Alle elske&#x00AB;. Olaf Hansen 1911: &#x00BB;Loke jo veed hvor lystig han er, /og hvor ham Alle elske&#x00AB;. <!-- HAR VI MULIGHED FOR ENDNU NYERE HER? -->.</p>
+</note>
+
+<note xml:id="com263">
+	<p>velbegrundet formodning om en bestemt l&#x00E6;sem&#x00E5;de af forvansket eller sv&#x00E6;r tekst.</p>
+</note>
+
+<note xml:id="com264">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com265">
+	<p>Loke er overalt i den nordiske mytologi en skikkelse, der b&#x00E5;de skaber og efterf&#x00F8;lgende l&#x00F8;ser problemer for guderne. Hans fald forberedes iflg. <persName key="pe4">Grundtvig</persName> ved, at nornerne planter misteltenen, som han senere kan anvende til at sl&#x00E5; Balder ihjel med (se s. 172) . Ved Ragnarok er han fulds&#x00E6;ndig g&#x00E5;et over p&#x00E5; j&#x00E6;tternes side, hvilket er en opfyldelse af den sk&#x00E6;bne, som nornene har bestemt for ham; se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com266">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com267">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com268">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com269">
+	<p>se tidligere.</p>
+</note>
+
+<note xml:id="com270">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com271">
+	<p>Nyere overs&#x00E6;ttelser af Hyndlulj&#x00F3;ð (Hyndlas sang) har: &#x00BB;med led Kvinde / blev Lopt svanger&#x00AB; (strofe 41, Martin Larsen 1943); se ogs&#x00E5; mytologisk base. I den arnamagn&#x00E6;anske kommissions udgave er Loke p&#x00E5; dette sted: &#x00BB;kyndvgr&#x00AB;, dvs. kyndig, kl&#x00F8;gtig.</p>
+</note>
+
+<note xml:id="com272">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com273">
+	<p>nemlig j&#x00E6;tterne.</p>
+</note>
+
+<note xml:id="com274">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com275">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com276">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com277">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com278">
+	<p>Balders d&#x00F8;d er et af varslerne om Ragnarok.</p>
+</note>
+
+<note xml:id="com279">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com280">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com281">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com282">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com283">
+	<p>se mytologisk base. Overs&#x00E6;ttelsen her af <title><hi rend="italic">Odins Ravnegalder</hi></title> er af strofe XIV og XV i den arnamagn&#x00E6;anske kommissions udgave (strofe 14 og 15 i nyere, fx Th&#x00F8;ger Larsen 1914), men <persName key="pe4">Grundtvig</persName> har ogs&#x00E5; skelet til s&#x00E5; meget til <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse, se <ref>introduktionen</ref>, at <persName key="pe4">Grundtvig</persName>&#x0027;s er n&#x00E6;sten ordret efter Sandvig.</p>
+</note>
+
+<note xml:id="com284">
+	<p>Balders d&#x00F8;d varsler ligefrem Ragnarok.</p>
+</note>
+
+<note xml:id="com285">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com286">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com287">
+   <p>Overs&#x00E6;ttelsen er af strofe 8 (b&#x00E5;de nyere og &#x00E6;ldre) i <title><hi rend="italic">Odins Ravnegalder,</hi></title> temmelig frit efter strofe 8 i <ref>Sandvig</ref>s overs&#x00E6;ttelse  <ref>(se introduktionen)</ref>. I prosaovers&#x00E6;ttelsen til stedet (s. 178) kalder Sandvig blot guderne for &#x00BB;stridbare&#x00AB;. Begrebet g&#x00E5;r p&#x00E5; de guder, der overv&#x00E6;rede Balders B&#x00E5;lf&#x00E6;rd;  og if&#x00F8;lge <ref>M&#x00F8;inichen</ref> er de: Odin med ravne, Frigg, valkyrierne, Freja og Thor. Dertil en m&#x00E6;ngde bjergriser og rimturser.  Den arnamagn&#x00E6;anske kommissions udgave har &#x00BB;Si&#x00E1; Sigtivar&#x00AB;, som den overs&#x00E6;tter til &#x00BB;Dii bellicosi&#x00AB;, dvs.  stridbare eller krigeriske guder.</p>
+</note>
+
+<note xml:id="com288">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com289">
+	<p>Hels bolig, dvs. d&#x00F8;dsriget i nordisk mytologi.</p>
+</note>
+
+<note xml:id="com290">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com291">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com292">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com293">
+	<p>Heimdal, se ogs&#x00E5; mytologisk base. <ref><persName key="pe7">Suhm</persName></ref> skriver: &#x00BB;Heimdallur kaldtes den hvide As&#x00AB; (Suhm 1771, s. 206).</p>
+</note>
+
+<note xml:id="com294">
+	<p>Odin, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com295">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com296">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com297">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com298">
+	<p>Tidligere (<title><hi>Asal&#x00E6;ren</hi></title> s. 171) har <persName key="pe4">Grundtvig</persName> ladet Loke (Klogskaben) blive til list, da han blev skilt fra &#x00BB;Kraften&#x00AB;, dvs. aserne, i s&#x00E6;rdeleshed Odin.</p>
+</note>
+
+<note xml:id="com299">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com300">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com301">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com302">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com303">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com304">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com305">
+	<p>dvs. Odin.</p>
+</note>
+
+<note xml:id="com306">
+	<p>dvs. Loke.</p>
+</note>
+
+<note xml:id="com307">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com308">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com309">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com310">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com311">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com312">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com313">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com314">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com315">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com316">
+	<p>se mytologisk base.  Her skal det dog forst&#x00E5;s helt bogstaveligt, idet Odin selv drak Suttungs mj&#x00F8;d for at tage den med sig til Asg&#x00E5;rd. Der hentydes til dette i eddadigtet <title><hi>H&#x00E1;vam&#x00E1;l</hi></title> .</p>
+</note>
+
+<note xml:id="com317">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com318">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com319">
+	<p>I denne sammenh&#x00E6;ng m&#x00E5; det n&#x00E6;rmest v&#x00E6;re de vise norner, <persName key="pe4">Grundtvig</persName> sigter til. Men ud fra <persName key="pe4">Grundtvig</persName>s fra Steffens overtagede historiesyn (se introduktionen) kan man ogs&#x00E5; forestille sig, at det er en id&#x00E9; om et bagvedliggende verdensordenssystem, <persName key="pe4">Grundtvig</persName> har i tankerne.</p>
+</note>
+
+<note xml:id="com320">
+	<p>her n&#x00E6;rmest: aserne.</p>
+</note>
+
+<note xml:id="com321">
+	<p>her n&#x00E6;rmest: j&#x00E6;tterne.</p>
+</note>
+
+<note xml:id="com322">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com323">
+	<p>Stroferne XXXIX, XL, XLII, XLIII, XXLIV, XLV, LXII i den arnamagn&#x00E6;anske kommissions udgave af <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title> (strofe 43, 44, 46, 47, 50, 51 og 46 i nyere, fx Martin Larsen 1943).</p>
+</note>
+
+<note xml:id="com324">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com325">
+	<p>Hanen Gyldenkam, der v&#x00E6;kker Valhals krigere til Ragnarok (se mytologisk base).</p>
+</note>
+
+<note xml:id="com326">
+	<p>Odin, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com327">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com328">
+	<p>Hels bolig, dvs. d&#x00F8;dsriget.</p>
+</note>
+
+<note xml:id="com329">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com330">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com331">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com332">
+	<p>P&#x00E5; et tidspunkt halshugger vanerne Mimer og sender hans hoved til aserne, se mytologisk base.</p>
+</note>
+
+<note xml:id="com333">
+	<p>dvs. Yggdrasil, se mytologisk base.</p>
+</note>
+
+<note xml:id="com334">
+	<p>Nemlig Fenrisulven, der bliver sluppet l&#x00F8;s ved Ragnarok, se mytologisk base.</p>
+</note>
+
+<note xml:id="com335">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com336">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com337">
+	<p>med kraft s&#x00E5; st&#x00E6;rk som j&#x00E6;tternes.</p>
+</note>
+
+<note xml:id="com338">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com339">
+	<p>I den arnamagn&#x00E6;anske kommissions udgave (strofe XLIV) st&#x00E5;r: Ki&#x00F6;ll, dvs. fart&#x00F8;j.</p>
+</note>
+
+<note xml:id="com340">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com341">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com342">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com343">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com344">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com345">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com346">
+	<p>se mytologisk base. <persName key="pe4">Grundtvig</persName> anvender her strofe 43, 44, 46, 47, 50, 51 og 46 (i nyere overs&#x00E6;ttelse). I den arnamagn&#x00E6;anske kommissions udgave er det: strofe XXXIX, XL, LXII (trykfejl for XLII).</p>
+</note>
+
+<note xml:id="com347">
+	<p>I den nordiske mytologi, først og fremmest i eddadigtet <title><hi rend="italic">V&#x0000F8;lvens Sp&#x00E5;dom</hi></title> er der forestillinger om, at verden, n&#x00E5;r den genopst&#x00E5;r efter Ragnarok, vil v&#x00E6;re s&#x00E5; paradisisk, at mennesket end ikke l&#x00E6;ngere beh&#x00F8;ver at s&#x00E5; for at f&#x00E5; afgr&#x00F8;der.</p>
+</note>
+
+<note xml:id="com348">
+	<p>Nemlig Nidhug, der dukker op ved Ragnarok (nordisk mytologi), se mytologisk base.</p>
+</note>
+
+<note xml:id="com349">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com350">
+	<p>Egentlig er der i <ref><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title></ref> kun &#x00E9;n drage, Nidhug, men <persName key="pe4">Grundtvig</persName> s&#x00E6;tter den i flertal; se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com351">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com352">
+	<p>Heller ikke i moderne forskning er der enighed om, hvem der sigtes til. Muligvis er her tale om kristen indflydelse, s&#x00E5; det simpelthen peger frem mod Kristi genkomst.</p>
+</note>
+
+<note xml:id="com353">
+	<p>se note til <ref>&#x0027;den Rige&#x0027;</ref>.</p>
+</note>
+
+<note xml:id="com354">
+	<p>se mytologisk base. Strofe 59, 62, 66, 65, 64 i nyere overs&#x00E6;ttelse (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001), strofe LII, LV, LIX, LVIII, LVII i den arnamagn&#x00E6;anske kommissions udgave.</p>
+</note>
+
+<note xml:id="com355">
+	<p>Henvisning til gudernes hal efter at verden er genopst&#x00E5;et efter Ragnarok (nordisk mytologi).</p>
+</note>
+
+<note xml:id="com356">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com357">
+	<p>I Asal&#x00E6;ren almindeligvis Odin, men her snarere guderne i al almindelighed?.</p>
+</note>
+
+<note xml:id="com358">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com359">
+	<p>P&#x00E5; grund af en p&#x00E5; <persName key="pe4">Grundtvig</persName>s tid stadig g&#x00E6;ldende fejlfortolkning af Snorres 'ragna r&#x00F6;kr' (da. gudernes dunkelhed, jf. det ty. G&#x00F6;tterd&#x00E4;mmerung) for Ragnarok i stedet for Ragnar&#x00F6;k, &#x0027;gudernes sk&#x00E6;bne&#x0027;, taler <persName key="pe4">Grundtvig</persName> her om &#x0027;asernes tusm&#x00F8;rke&#x0027;.</p>
+</note>
+
+<note xml:id="com360">
+	<p>fordi guderne ikke er guder p&#x00E5; samme m&#x00E5;de, som de var det f&#x00F8;r Ragnarok? Tydelig allusion til det steffenske historiesyn, se <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com361">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com362">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com363">
+	<p>se tidl. note. <!-- dvs. om Vorherre og Kristus --></p>
+</note>
+
+<note xml:id="com364">
+	<p>se mytologisk base. Strofe LVIII&#x2013;LVII i den arnamagn&#x00E6;anske kommissions udgave;  65&#x2013;64 i nyere overs&#x00E6;ttelse (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001).</p>
+</note>
+
+<note xml:id="com365">
+	<p>I nyere overs&#x00E6;ttelser (fx <persName key="pe44">Meulengracht S&#x00F8;rensen</persName>, 2001: &#x0027;moldpinur&#x0027; [trykfejl?&#x005D;) overs&#x00E6;ttes moldþinvr (da. muldtorn) fra den arnamagn&#x00E6;anske kommissions udgave blot med Midg&#x00E5;rdsormen, se ogs&#x00E5; mytologisk base. .</p>
+</note>
+
+<note xml:id="com366">
+   <p>Fimbultyr er et andet navn for Odin; og Odin og runekendskab er t&#x00E6;t knyttet sammen i den nordiske mytologi, se fx eddadigtet <title><hi rend="italic">H&#x00E1;vam&#x00E1;l</hi></title> (<title><hi rend="italic">Den h&#x00F8;jes Tale</hi></title>.</p>
+</note>
+
+<note xml:id="com367">
+	<p>De tavler, som guderne igen kan spille  br&#x00E6;tspil p&#x00E5; efter  Ragnarok. Deres spil kan tolkes som en opretholdelse af verdens gang, af kosmos.</p>
+</note>
+
+<note xml:id="com368">
+	<p>formentlig Odin, se mytologisk base.</p>
+</note>
+
+<note xml:id="com369">
+	<p>Fj&#x00F8;lner er et andet navn for Odin. Han er bl.a. far til Thor, Balder og H&#x00F8;der. Flere regner ogs&#x00E5; Herm&#x00F3;ður, Viðar, Brage og Vale med.</p>
+</note>
+
+<note xml:id="com370">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com371">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com372">
+	<p>norr&#x00F8;nisme, hentet i <persName key="pe1">Sandvig</persName>s fordanskning af <title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title> (se <ref>introduktionen</ref>). Der hentydes til, at Fenrisulven <!-- hevv. -->slippes l&#x00F8;s ved Ragnarok.</p>
+</note>
+
+<note xml:id="com373">
+	<p>Loke identificeres af <persName key="pe4">Grundtvig</persName> med klogskab, se ogs&#x00E5; <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com374">
+	<p>kenning for kamp.</p>
+</note>
+
+<note xml:id="com375">
+   <p>ogs&#x00E5; kenning eller hentydning til en eller anden historie. <!-- I VAP&#x0027;s &#x00F8;jne ser det Saxoagtigt ud. Eller blot prim&#x00E6;r dunkelhed eller fast udtryk, som kan lades ukommenteret?. --></p>
+</note>
+
+<note xml:id="com376">
+	<p>andet navn for Odin, se mytologisk base. Strofen er hentet fra digtet <title><hi rend="italic">Vafþruðnism&#x00E1;l,</hi></title> (<title><hi rend="italic">Vaftrudners Sang,</hi></title>) strofe XLIV i den arnamagn&#x00E6;anske kommissions udgave, b. 1, strofe 44 i nyere overs&#x00E6;ttelse (Martin Larsen 1943).</p>
+</note>
+
+<note xml:id="com377">
+   <p>se mytologisk base: <title><hi rend="italic">Vafþruðnism&#x00E1;l</hi></title> (Vaftrudners Sang), strofe XLV i den arnamagn&#x00E6;anske kommissions udgave, b. 1, strofe 45 i nyere overs&#x00E6;ttelse (Martin Larsen 1943). <!-- NB skal h&#x00E6;gtes op p&#x00E5; verscitatet, ikke p&#x00E5; V  --> .</p>
+</note>
+
+<note xml:id="com378">
+	<p>se mytologisk base<!-- find henv. til dette-->.</p>
+</note>
+
+<note xml:id="com379">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com380">
+	<p>se mytologisk base. Strofe LIII&#x2013;LIV i den arnamagn&#x00E6;anske kommissions udgave, strofe 60&#x2013;61 i nyere overs&#x00E6;ttelse (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001).</p>
+</note>
+
+<note xml:id="com381">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com382">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com383">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com384">
+   <p><!-- Begtrup g&#x00E5;r ud fra, at der er tale om en trykfejl og retter til &#x00BB;De til Mad&#x00AB;, hvilket har hjemmel ud fra det oldislandske &#x0027;þav&#x0027; (þau, plu. neutr). <persName key="pe4">Grundtvig</persName>s &#x0027;da&#x0027; giver dog god mening, hvis ordet opfattes tempor&#x00E6;rt. --></p>
+</note>
+
+<note xml:id="com385">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com386">
+	<p>se introduktionen.</p>
+</note>
+
+<note xml:id="com387">
+	<p>se bibelsk base eller lades ukommenteret?.</p>
+</note>
+
+<note xml:id="com388">
+	<p>se introduktionen og mytologisk base.</p>
+</note>
+
+<note xml:id="com389">
+	<p>se introduktionen. Men mener <persName key="pe4">Grundtvig</persName> her n&#x00E6;rv&#x00E6;rende skrift eller i al almindelighed?.</p>
+</note>
+
+<note xml:id="com390">
+	<p>her i bet. den gr&#x00E6;ske mytologi. .</p>
+</note>
+
+<note xml:id="com391">
+	<p>Hvis man regner med, at Hoddmímer er identisk med eller knyttet til den Mimer, der ejer visdommens kilde ved Yggdrasils fod, giver <persName key="pe4">Grundtvig</persName>s note god mening, idet Liv og Livtraser under Fimbulvinteren gemte sig hos Hoddmímer.</p>
+</note>
+
+<note xml:id="com392">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com393">
+	<p> <!-- nr.! -->se tidl.</p>
+</note>
+
+<note xml:id="com394">
+	<p><!-- nr! -->se tidl.</p>
+</note>
+
+<note xml:id="com395">
+	<p>Det oldislandske ord for sol, s&#x00F3;l, er grammatisk hunk&#x00F8;n, mens ordet for m&#x00E5;ne, m&#x00E1;ni, er hank&#x00F8;n. Som det fremg&#x00E5;r, l&#x00E6;gger <persName key="pe4">Grundtvig</persName>  dog en langt dybere betydning end den grammatiske i f&#x00E6;nomenet. .</p>
+</note>
+
+<note xml:id="com396">
+	<p>tidligere oldtidsforskere og &#x2013;overs&#x00E6;ttere.</p>
+</note>
+
+<note xml:id="com397">
+   <p>Andet navn for Odin, se mytologisk base. Stroferne er hentet fra digtet <title><hi rend="italic">Vafþruðnism&#x00E1;l</hi></title> (<title><hi rend="italic">Vaftrudners Sang,</hi></title>) strofe XXXVII i den arnamagn&#x00E6;anske kommissions udgave, b. 1, 1787, og strofe 38  nyere overs&#x00E6;ttelse (Martin Larsen 1943) .</p>
+</note>
+
+<note xml:id="com398">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com399">
+	<p>Der hentydes ikke til bestemte aser, men blot til, at vanerne flyttede ind hos aserne, da aser og vaner havde indg&#x00E5;et forbund (Herom kan man l&#x00E6;se i Ynglingesaga).</p>
+</note>
+
+<note xml:id="com400">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com401">
+   <p>Strofen er hentet fra digtet <title><hi rend="italic">Vafþruðnism&#x00E1;l</hi></title> (<title><hi rend="italic">Vaftrudners Sang,</hi></title>) strofe XXXIX i den arnamagn&#x00E6;anske kommissions udgave, b. 1, 1787, strofe 39 i nyere overs&#x00E6;ttelse (Martin Larsen 1943); se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com402">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com403">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com404">
+   <p>I <title><hi rend="italic">Grímnism&#x00E1;l</hi></title> (<title><hi rend="italic">Grimners Sang</hi></title>) optr&#x00E6;der Odin forkl&#x00E6;dt, mens han fremsiger et langt digt om den nordiske kosmologi og mytologi. Digtet rummer bl.a. 55 af Odins tilnavne. Strofen her er XVI i den arnamagn&#x00E6;anske kommissions udgave, 1787, b. 1,  nummer 16 i nyere overs&#x00E6;ttelse (Martin Larsen 1943).</p>
+</note>
+
+<note xml:id="com405">
+	<p>menl&#x00F8;s, dvs. uden men eller skade, her evt. en kristusallusion?.</p>
+</note>
+
+<note xml:id="com406">
+	<p>nemlig frugtbarhedguderne Frej og Freja. Sammen med deres far, Njord,  h&#x00F8;rer de til vanerne<!-- ref her -->.</p>
+</note>
+
+<note xml:id="com407">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com408">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com409">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com410">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com411">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com412">
+   <p>Der hentydes til, at aserne havde snydt vanerne, da de indgik forbund med dem (i <title><hi rend="italic">Ynglingesaga</hi></title>).</p>
+</note>
+
+<note xml:id="com413">
+	<p>Odins aftale med Freja, <ref>se n&#x00E6;ste note</ref>.</p>
+</note>
+
+<note xml:id="com414">
+	<p>Odin og Freja indg&#x00E5;r en aftale om at dele de krigere imellem sig, der er faldet p&#x00E5; slagmarken, valen; se ogs&#x00E5; mytologisk base: einherjer.</p>
+</note>
+
+<note xml:id="com415">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com416">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com417">
+   <p><title><hi rend="italic">Grímnism&#x00E1;l</hi></title> (<title><hi rend="italic">Grimners Sang,</hi></title>) strofe XVII i den arnamagn&#x00E6;anske kommissions udgave, b. 1, 1787, strofe  17 i nyere overs&#x00E6;ttelse (Martin Larsen 1943); se ogs&#x00E5; mytologisk base. I <title><hi rend="italic">Grímnism&#x00E1;l</hi></title> svarer den forkl&#x00E6;dte Odin p&#x00E5; en r&#x00E6;kke sp&#x00F8;rgsm&#x00E5;l og forudser, at Vidar vil h&#x00E6;vne modet p&#x00E5; faderen .</p>
+</note>
+
+<note xml:id="com418">
+   <p>Vidar, se mytologisk base. Strofen stammer fra <title><hi rend="italic">Grímnism&#x00E1;l</hi></title> (<title><hi rend="italic">Grimners Sang,</hi></title>) strofe XVII i den arnamagn&#x00E6;anske kommissions udgave, b. 1, 1787, strofe 17 i nyere overs&#x00E6;ttelse (Martin Larsen 1943). Strofen knytter an til passagen i <ref><title><hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom,</hi></title></ref> (strofe 56 i nyere udgaver; ligeledes strofe 56 hos Sandvig<!-- henv. her -->), hvor Vidar under Ragnarok h&#x00E6;vner drabet p&#x00E5; sin fader, Odin.</p>
+</note>
+
+<note xml:id="com419">
+	<p>For <persName key="pe4">Grundtvig</persName> er der dog ogs&#x00E5; tale om, at han till&#x00E6;gger Loke andre negative egenskaber, som fx egoisme, selvoptagethed o.lign. se <ref> introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com420">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com421">
+	<p>Nemlig j&#x00E6;tten Farbaute, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com422">
+   <p>Lokes mor hedder enten Laufey eller N&#x00E1;l og er formentlig af j&#x00E6;ttesl&#x00E6;gt. Der hentydes her til beskrivelsen af Loke fra <title><hi rend="italic">Snorres Edda,</hi></title> &#x00BB;Gylfaginning&#x00BB;, kapitel 32.</p>
+</note>
+
+<note xml:id="com423">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com424">
+	<p><persName key="pe4">Grundtvig</persName> blander her 'parcerne' sammen med 'moirerne', der som de nordiske norner spinder, udm&#x00E5;ler og klipper menneskenes sk&#x00E6;bnetr&#x00E5;de, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com425">
+	<p>Det er ikke almindeligt at skelne mellem Alfader og Herjan, der begge er tilnavne til eller andre navne for Odin. Men for <persName key="pe4">Grundtvig</persName>, der s&#x00F8;ger at t&#x00E6;nke asatro og kristendom sammen, er denne skelnen yderst meningsfuld, se ogs&#x00E5;  <ref>introduktionen</ref>.</p>
+</note>
+
+<note xml:id="com426">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com427">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com428">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com429">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com430">
+	<p>her formentlig Skuld, se mytologisk base.</p>
+</note>
+
+<note xml:id="com431">
+	<p>Digtudsnittet er optrykt i PS I 1&#x2013;5, begyndende &#x00BB;Jeg vilde l&#x00E6;se / Fimbultyrs gamle …&#x00AB;.</p>
+</note>
+
+<note xml:id="com432">
+   <p>Her k&#x00E6;der <persName key="pe4">Grundtvig</persName> to strofer sammen til &#x00E9;n mening, idet han lader runerne fra strofe 61 i nyere udgave (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001) st&#x00E5; p&#x00E5; tavlerne fra strofe 62.  Tavler er en udm&#x00E6;rket overs&#x00E6;ttelse af oldislandsk &#x0027;t&#x01EB;flor&#x0027;, men nyere overs&#x00E6;ttelser foretr&#x00E6;kker &#x0027;br&#x00E6;tspil&#x0027;, hvorved <persName key="pe4">Grundtvig</persName>&#x0027;s pointe helt g&#x00E5;r fl&#x00F8;jten. .</p>
+</note>
+
+<note xml:id="com433">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com434">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com435">
+	<p>se mytologisk base. Den citerede strofe er en meget fri gendigtning af  strofe XVIII i den arnamagn&#x00E6;anske kommissions udgave fra 1787, strofe 20 i nyere overs&#x00E6;ttelse (<persName key="pe44">Meulengracht S&#x00F8;rensen</persName> 2001).</p>
+</note>
+
+<note xml:id="com436">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com437">
+   <p>Nemlig i <title><hi rend="italic">Grimnism&#x00E1;l</hi></title> (<title><hi rend="italic">Grimners Sang,</hi></title>) <!-- I noten kan udfoldes om <persName key="pe4">Grundtvig</persName>s forhold til Saga, se bl.a. Ebbe Kl&#x00F8;vedal Reich, s. 118&#x2013;119; FLN H.O. s. 209 &#x2013; --> se introduktionen.</p>
+</note>
+
+<note xml:id="com438">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com439">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com440">
+	<p>Efter sammenh&#x00E6;ngen en (hjemmelavet?) kenning for dv&#x00E6;rgene.</p>
+</note>
+
+<note xml:id="com441">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com442">
+   <p>Mimamejd er i <title><hi rend="italic">Fj&#x00F8;lsvinns M&#x00E1;l</hi></title> (<title><hi rend="italic">Fj&#x00E5;lsvidkvadet</hi></title>) et tr&#x00E6;, der bevogtes af hundene Gífr og Gefi, se ogs&#x00E5; mytologisk base: Mimamejd.</p>
+</note>
+
+<note xml:id="com443">
+   <p>Gifr og Gere er i <title><hi rend="italic">Fj&#x00F8;lsvinns M&#x00E1;l</hi></title> (<title><hi rend="italic">Fj&#x00E5;lsvidkvadet</hi></title>) navnene p&#x00E5; de to hunde, der vogter det sted, hvor tr&#x00E6;et Mimameid gror.</p>
+</note>
+
+<note xml:id="com444">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com445">
+	<p>forvarsel, tegn eller under.</p>
+</note>
+
+<note xml:id="com446">
+	<p>prim&#x00E6;r dunkelhed? &#x0027;Jertegn&#x0027; betyder (overnaturlig) h&#x00E6;ndelse, der opfattes som tegn p&#x00E5;, at noget vil ske. Hvis meningen med hele denne sidste del af afhandlingen er at fremmane den vision, som <persName key="pe4">Grundtvig</persName> har, kan j&#x00E6;rtegnet simpelthen g&#x00E5; ud p&#x00E5;, at <persName key="pe4">Grundtvig</persName> faktisk f&#x00E5;r udtrykt sine syner og tanker.</p>
+</note>
+
+<note xml:id="com447">
+   <p>Med undtagelse af s. 186, lin. 7&#x2013;14, blev digtafsnittet  &#x2013; med prosaindskud &#x2013; optaget i <title><hi rend="italic">Nordens Mytologi</hi></title> 1808, s. 146&#x2013;149. .</p>
+</note>
+
+<note xml:id="com448">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com449">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com450">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com451">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com452">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com453">
+	<p>se mytologisk base. <persName key="pe4">Grundtvig</persName> havde allerede i december 1806 planer om at g&#x00F8;re noget ved sagnet om Sigurd og Brynhilde (B &#x0026; U, 399 ff.).</p>
+</note>
+
+<note xml:id="com454">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com455">
+	<p>Nemlig Sigurd Fafnersbanes sl&#x00E6;gt, dvs. v&#x00F8;lsungerne, en sagnkongesl&#x00E6;gt, se ogs&#x00E5; mytologisk base.</p>
+</note>
+
+<note xml:id="com456">
+	<p>vanerne anses normalt ikke som vise, men s&#x00E5;l&#x00E6;nge de havde den vise Mimer hos sig, havde de mulighed for at r&#x00E5;dsp&#x00F8;rge ham. I <persName key="pe7">Suhm</persName>s v&#x00E6;rk om Odin lyder det: &#x00BB;Naar betragtes, at de [vanerne&#x005D;udi Brynhilldes Qv&#x00E6;de (76) kaldes de Viise, &#x005B; &#x2026; &#x005D;&#x00AB; (s. 99). M&#x00E5;ske er det derfra, at <persName key="pe4">Grundtvig</persName> har sin formulering. Generelt er <persName key="pe4">Grundtvig</persName> ogs&#x00E5;  glad for bogstavrim.</p>
+</note>
+
+<note xml:id="com457">
+	<p>m&#x00E5;ske en henvisning til <title><hi rend="italic">Skírnirs M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd</hi></title>), hvori vanen Frej har forelsket sig i j&#x00E6;ttedatteren Gerd, se mytologisk base.</p>
+</note>
+
+<note xml:id="com458">
+	<p><title><hi rend="italic">Hyndlas Sang,</hi></title> se mytologisk base. <persName key="pe4">Grundtvig</persName> parafraserer her over strofe IX i den arnamagn&#x00E6;anske kommissions udgave, strofe 10 nyere (Martin Larsen 1943).</p>
+</note>
+
+<note xml:id="com459">
+	<p>Nemlig Sigurd Fafnersbane, se mytologisk base.</p>
+</note>
+
+<note xml:id="com460">
+	<p>se mytologisk base. Er citatet fra Volsungesagaen? <!-- undersøg evt. -->.</p>
+</note>
+
+<note xml:id="com461">
+	<p>En nabob er meget rig mand, gerne i et fjernt land.</p>
+</note>
+
+<note xml:id="com462">
+	<p>svundne &#x00E5;rhundreder.</p>
+</note>
+
+<note xml:id="com463">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com464">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com465">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com466">
+	<p>I <title><hi rend="italic">Skirners F&#x00E6;rd</hi></title> hj&#x00E6;lper Frejs tjener, Skirner, Frej med at f&#x00E5; fat i den undersk&#x00F8;nne j&#x00E6;ttedatter Gerd, som Frej har forelsket sig i.</p>
+</note>
+
+<note xml:id="com467">
+	<p>denne opfattelse kan <persName key="pe4">Grundtvig</persName> have fra <persName key="pe7">Suhm</persName>s bog om Odin (Suhm 1771): &#x00BB;Naar betragtes, at de udi Brynhilldes Qv&#x00E6;de (76) kaldes de Viise, saa bliver vel Schi&#x00F6;nnings Meening den rimeligste, at de have v&#x00E6;ret Gr&#x00E6;ker, som boede ved Tanias [dvs. floden Don i Rusland&#x005D;&#x00AB; (s. 99).</p>
+</note>
+
+<note xml:id="com468">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com469">
+	<p>se tidl., til s. 180.<!-- nummer her --></p>
+</note>
+
+<note xml:id="com470">
+	<p>se tidl., til s. 180.<!-- nummer her --></p>
+</note>
+
+<note xml:id="com471">
+	<p>Ordet 'ane' er et af romantikernes yndlingsord. Det kan ses som en mods&#x00E6;tning til oplysningstidens 'vide'.</p>
+</note>
+
+<note xml:id="com472">
+   <p>Den f&#x00F8;lgende tekst er den s&#x00E5;kaldte &#x0027;tale til hesten&#x0027; fra eddadigtet <title><hi rend="italic">Skírners  M&#x00E1;l</hi></title> (<title><hi rend="italic">Skirners F&#x00E6;rd,</hi></title> strofe 10), se ogs&#x00E5; mytologisk base. Overs&#x00E6;ttelsen her er n&#x00E6;sten identisk med den delovers&#x00E6;ttelse af <title><hi rend="italic">Skírners M&#x00E1;l,</hi></title> som <persName key="pe4">Grundtvig</persName> udarbejdede allerede 1806 og offentliggjorde i tidsskriftet <title><hi rend="italic">Ny Minerva</hi></title>s septembernummer (strofen her på s. 285).</p>
+</note>
+
+<note xml:id="com473">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com474">
+	<p>Nemlig Gymer, som er far til den sk&#x00F8;nhed af j&#x00E6;ttesl&#x00E6;gt, Gerd, som Frej har forelsket sig i, og som Frej derfor sender sin tjener Skirner ud for at fri til.</p>
+</note>
+
+<note xml:id="com475">
+	<p>se mytologisk base.</p>
+</note>
+
+<note xml:id="com476">
+   <p>Her spilles p&#x00E5; eddakvadet <title><hi rend="italic">H&#x00E1;rbardslj&#x00F3;ð</hi></title> (<title><hi rend="italic">Sangen om Gr&#x00E5;sk&#x00E6;g,</hi></title>) hvor Odin forkl&#x00E6;dt som f&#x00E6;rgemand spotter Thor og n&#x00E6;gter ham overfart.</p>
+</note>
+
+<note xml:id="com477">
+	<p>se stednavnebase.</p>
+</note>
+
+</div>
+</body>
+</text>
+</TEI>
+

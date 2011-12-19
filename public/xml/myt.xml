@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI>
+
+<!--
+<teiHeader>
+      <revisionDesc>
+         <change xml:id="KSR" who="KSR" when="2010.11.05">oprettet</change>
+         <change who="KSR" when="2010-11-10">myt. navne etc flytte fra pers.xml; type &#x00E6;ndret</change>
+         <change who="KSR" when="2010-11-15">tilbage til oprindelig ide; skema rcn</change>
+         <change xml:id="VAP" when="2010-11-15">rette xml:id</change>
+         <change who="KSR" when="2010-12-03">nye celler til enc. oplysninger</change>
+      </revisionDesc>
+   </teiHeader>
+-->
+
+<table>
+
+
+<row xml:id="myt2">
+   <cell type="norm">Alvider</cell>
+   <cell type="lek">I den arnamagn&#x00E6;anske kommissions udgave fra 1787, b. 1, st&#x00E5;r der &#x201C;Alsvi&#x00FE;, r". I Th&#x00F8;ger Larsens overs&#x00E6;ttelse fra 1914 bibeholdes ordet som &#x201C;Alsvier&#x201D; og forklares s&#x00E5;ledes: &#x201C;Solens ene Hest. Dette skal vist forstaas saaledes, at bliver Odins Tanke borte, raver Verden i en halvbevidst, s&#x00F8;vnagtig Tilstand&#x201D; (s. ???). i &#x201C;Runekapitlet (Sandvig bl. G 4 reto) er Alsvidr den runekyndige blandt j&#x00E6;tterne</cell>
+   <cell type="alt">Alsvier; Alsvir.</cell>
+</row>
+
+<row xml:id="myt3">
+   <cell type="norm">Alvis</cell>
+   <cell type="lek">Klog  dv&#x00E6;rg fra den nordiske mytologi, se Alv&#x00ED;sm&#x00E1;l.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt4">
+   <cell type="norm">Angrboda</cell>
+   <cell type="lek">J&#x00E6;ttekvinde fra den nordiske mytologi. Hun er mor til Fenrisulven, Hel og Midg&#x00E5;rdsormen (Loke er faderen).</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt5">
+   <cell type="norm">Ask</cell>
+   <cell type="lek">Den f&#x00F8;rste mand (menneske) i den nordiske mytologi.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt6">
+   <cell type="norm">Balder</cell>
+   <cell type="lek">med tilnavnet &#x0027;den gode&#x0027;. Lysende, venlig, us&#x00E5;rlig, klog, god, mild og ren- og retf&#x00E6;rdig gud i den nordiske mytologi. S&#x00F8;n af Odin og Frigg (iflg. Snorre). Hos Saxo derimod er han kun en halvgud. Trods us&#x00E5;rligheden bliver han alligevel dr&#x00E6;bt  af en pil, lavet af mistelten, det eneste v&#x00E6;sen, der ikke havde svoret ikke at skade Balder. Ulykkeligvis bliver pilen oven i k&#x00F8;bet - ved hj&#x00E6;lp fra Loken - afskudt af hans broder, den blinde H&#x00F8;der.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt7">
+   <cell type="norm">Bergelmer</cell>
+   <cell type="lek">Den eneste j&#x00E6;tte, der sammen med sin hustru overlevede verdensoversv&#x00F8;mmelsen af ablod, da Ymer blev dr&#x00E6;bt. B. er med sin hustru ophav til alle nuv&#x00E6;rende j&#x00E6;tter  (fra den nordiske mytologi) eller i det mindste til rimtursernes.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt8">
+   <cell type="norm">Brage</cell>
+   <cell type="lek">Digtningens gud i nordisk mytologi.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt9">
+   <cell type="norm">Brynhild</cell>
+   <cell type="lek">Valkyrie fra den nordiske sagnhistorie, gift med Gunnar Gjukess&#x00F8;n, men ogs&#x00E5; Sigurd Fafnersbanes ungdomselskede</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt10">
+   <cell type="norm">Bure</cell>
+   <cell type="lek">J&#x00E6;tte fra den nordiske mytologi, der medvirker ved verdens skabelse. Hans s&#x00F8;n Borr blev far til Odin, Vile og Ve.</cell>
+   <cell type="alt">Bur; Burr</cell>
+</row>
+
+<row xml:id="myt11">
+   <cell type="norm">Embla</cell>
+   <cell type="lek">Den f&#x00F8;rste kvinde (menneske) i den nordiske mytologi.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt12">
+   <cell type="norm">Fafner</cell>
+   <cell type="lek">Drage og guldvogter fra den nordiske sagnhistorie. Den dr&#x00E6;bes af Sigrud Fafnersbane.</cell>
+   <cell type="alt">Fofner</cell>
+</row>
+
+<row xml:id="myt13">
+   <cell type="norm">Farbaute</cell>
+   <cell type="lek">J&#x00E6;tte fra den nordiske mytologi, far til Loke.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt14">
+   <cell type="norm">Fenris</cell>
+   <cell type="lek">Ulv fra den nordiske mytologi. S&#x00F8;n af Loke og Angerbode. F. er s&#x00E5; st&#x00E6;rk, at alle aserne frygter den, hvorfor den st&#x00E5;r bundet til Ragnarok, hvor den river sig l&#x00F8;s.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt15">
+   <cell type="norm">Fimbultyr</cell>
+   <cell type="lek"></cell>
+   <cell type="alt">Odin</cell>
+</row>
+
+<row xml:id="myt16">
+   <cell type="norm">Fj&#x00F8;rgyn</cell>
+   <cell type="lek">Jordens gudinde i den nordiske mytologi. Sammen med Odin har hun s&#x00F8;nnen Thor.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt18">
+   <cell type="norm">Frej</cell>
+   <cell type="lek">Gud for k&#x00E6;rligheden i den nordiske mytologi . S&#x00F8;n af Njord; bror til Freja.</cell>
+   <cell type="alt">Fr&#x00F8;j; Frey</cell>
+</row>
+
+<row xml:id="myt19">
+   <cell type="norm">Freja</cell>
+   <cell type="lek">Gudinde for k&#x00E6;rligheden i den nordiske mytologi. Datter af Njord; s&#x00F8;ster til Frej.</cell>
+   <cell type="alt">Freya</cell>
+</row>
+
+<row xml:id="myt17">
+   <cell type="norm">Freke</cell>
+   <cell type="lek">Helvedshund, dvs. ulv, i den nordiske mytologi. Freke og Gere var Odins to ulve. Hos Suhm (Suhm 1771) kaldes de Geri og Freki; I <hi rend="italic">Fj&#x00F8;lsvinns M&#x00E1;l</hi> kaldes de to ulve Geri og G&#x00ED;fr</cell>
+   <cell type="alt">G&#x00ED;fr; Freki</cell>
+</row>
+
+<row xml:id="myt20">
+   <cell type="norm">F&#x00F8;niks</cell>
+   <cell type="lek">Fabelfuglen F&#x00F8;niks (gr&#x00E6;sk mytologi), som i d&#x00F8;den fort&#x00E6;res af flammer for at rejse sig som forynget af asken, har r&#x00F8;dder tilbage til egyptisk solkult; i middelalderen fik F&#x00F8;niks en plads i kristen dyresymbolik som et Kristus-symbol; Fugl F&#x00F8;niks er desuden et alm. bevinget ord for noget, der genopst&#x00E5;r efter en ulykke eller et nederlag.</cell>
+   <cell type="alt">F&#x00F8;nix</cell>
+</row>
+
+<row xml:id="myt21">
+   <cell type="norm">Garm</cell>
+   <cell type="lek">>Hund i den nordiske mytologi, der vogter vej til d&#x00F8;dsriget (sml. Cherberos fra den gr&#x00E6;ske mytologi). Af nogle forskere identificeres den med Fenrisulven.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt22">
+   <cell type="norm">Gefion</cell>
+   <cell type="lek">1) Sk&#x00E6;bnekyndig kvinde fra den nordiske mytologi. 2) Asynje med frugtbarhedsgudindetr&#x00E6;k, der med sine fire s&#x00F8;nner, omskabt til okser, p&#x00E5; kun &#x00E9;t d&#x00F8;gn pl&#x00F8;jer Sj&#x00E6;lland ud af Sverige.</cell>
+   <cell type="alt">Gefjun</cell>
+</row>
+
+<row xml:id="myt24">
+   <cell type="norm">Gerd</cell>
+   <cell type="lek">Den j&#x00E6;ttepige, som Frej forelsker sig i i eddadigtet Sk&#x00ED;rners M&#x00E1;l.</cell>
+   <cell type="alt">Gerda</cell>
+</row>
+
+<row xml:id="myt23">
+   <cell type="norm">Gere</cell>
+   <cell type="lek">Helvedshund, dvs. ulv, i den nordiske mytologi. Freke og Gere var Odins to ulve. Hos Suhm (Suhm 1771) kaldes de Geri og Freki; I <hi rend="italic">Fj&#x00F8;lsvinns M&#x00E1;l</hi> kaldes de to ulve Geri og G&#x00ED;fr</cell>
+   <cell type="alt">Geri</cell>
+</row>
+
+<row xml:id="myt25">
+   <cell type="norm">Gifr</cell>
+   <cell type="lek"></cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt106">
+   <cell type="norm">Gimle</cell>
+   <cell type="lek">En sk&#x00F8;n og skinnende bolig, hvor de retf&#x00E6;rdige mennesker if&#x00F8;lge den nordiske mytologi samles og lever lykkeligt efter Ragnarok; &#x0027;gim&#x0027; kan betyde b&#x00E5;de ild og &#x00E6;delsten; le er det samme som l&#x00E6;. Boligen giver da enten l&#x00E6; for ilden eller l&#x00E6; under &#x00E6;delsten, dvs. er en bolig, der er t&#x00E6;kket med noget kostbart. For Gr. -  og mange siden ham - har tolkningen mest h&#x00E6;ldet mod de sidste, ogs&#x00E5; fordi her herved opst&#x00E5;r en parallel til den himmelske Jerusalem fra Johannes &#x00C5;benbaring (Joh &#x00C5;b  21, 9-21).</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt26">
+   <cell type="norm">Gjallarhorn</cell>
+   <cell type="lek">Det horn, som guden Heimdal bl&#x00E6;ser p&#x00E5; op til Ragnarok i den nordiske mytologi. Herved v&#x00E5;gner ogs&#x00E5; de d&#x00F8;de krigere (einherjer), som skal k&#x00E6;mpe p&#x00E5; asernes side. Hornet er omtalt b&#x00E5;de i <hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom</hi> og hos Snorre</cell>
+   <cell type="alt">Giallarhorn</cell>
+</row>
+
+<row xml:id="myt27">
+   <cell type="norm">Gullveig</cell>
+   <cell type="lek">Kvindeskikkelse i <hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom</hi>. Navnet betyder &#x0027;guldrus&#x0027; eller &#x0027;guldkraft&#x0027;. Hun opfattes ofte som gudinden Freja. I <hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom</hi> kommer hun fra vanerne, br&#x00E6;ndes af aserne, men lever videre som en kvinde, der ud&#x00F8;ver seid.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt28">
+   <cell type="norm">Gyldenkam</cell>
+   <cell type="lek">Hanen Gyldenkam, der v&#x00E6;kker Valhals krigere til Ragnarok (nordisk mytologi).</cell>
+   <cell type="alt">den guldkammed; Gullinkambi</cell>
+</row>
+
+<row xml:id="myt30">
+   <cell type="norm">Halfdan</cell>
+   <cell type="lek">Dansk sagnkonge, fader til Roar og Helge</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt31">
+   <cell type="norm">Hefaistos</cell>
+   <cell type="lek">Smedenes gud i den gr&#x00E6;ske mytologi.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt32">
+   <cell type="norm">Hejmdal</cell>
+   <cell type="lek">Den gud (as), der i den nordiske mytologi vogter regnbuen, som forbinder mennesker i Midg&#x00E5;rd og guder i Asg&#x00E5;rd. Han kan omtales som &#x201C;den hvide as&#x201D;, fx i <hi rend="italic">Odins Ravnegalder</hi> eller hos Snorre.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt33">
+   <cell type="norm">Hel</cell>
+   <cell type="lek">D&#x00F8;dsrigets gudinde i nordisk mytologi. Datter af Loke. Betegnelsen bruges ogs&#x00E5; ofte om hendes rige.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt34">
+   <cell type="norm">Helge</cell>
+   <cell type="lek">Dansk sagnkonge af skjoldungesl&#x00E6;gten. Broder til Roar, med hvem han deler magten, s&#x00E5;ldes at Roar regerer landet (omkring Lejre) og Helge er s&#x00F8;konge.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt35">
+   <cell type="norm">Herakles</cell>
+   <cell type="lek">H. er s&#x00F8;n af Zeus og Alkmene (gr&#x00E6;sk mytologi) Som ung stilles H. overfor valget mellem dyd og last og v&#x00E6;lger rigtigt – et motiv, der er vidt udbredt i europ&#x00E6;isk litteratur, billedkunst og moralfilosofi som sindbillede p&#x00E5; det menneske, der opn&#x00E5;r ud&#x00F8;delighed gennem dyd og udholdenhed i strabadser. I den romerske udgave kaldes Herakles for Herkules.</cell>
+   <cell type="alt">Hercules; Herkules</cell>
+</row>
+
+<row xml:id="myt36">
+   <cell type="norm">Hoddmimer</cell>
+   <cell type="lek">Ejer af den skov, hvor Liv og Livtrase skjuler sig efter Fimbulvinteren; Navnet kan muligvis betyde noget i retning af &#x201C;skattekistemimer&#x201D;, hvilket knytter ham til Mimer, der ejer visdommens kilde ved Yggrasils fod; se ogs&#x00E5; Mimamejd.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt37">
+   <cell type="norm">Holger Danske</cell>
+   <cell type="lek">Europ&#x00E6;isk sagnfigur med s&#x00E6;rlig betydning som dansk nationalhelt. Han optr&#x00E6;der tidligst som en af Karl den Stores krigere i La Chanson de Roland (Rolandskvadet, ca. 1060), en bifigur, hvis eneste tilknytning til Danmark er navnet Oger le Danois. I nordiske kilder kendes han tidligst fra Karlamagn&#x00FA;, ssaga, en vestnordisk prosagengivelse fra sidste halvdel af 1200-tallet, hovedsagelig af franske digte om Karl den Store og hans m&#x00E6;nd; tredje del handler om Oddgeir danski; den vestnordiske tekst blev oversat til dansk i 1400-tallet, hvor den kendes som Karl Magnus’ kr&#x00F8;nike, trykt f&#x00F8;rste gang 1509. Da Christiern Pedersen (1480-1554) sprogligt gennemrettede det &#x00E6;ldre tryk og udgav teksten 1534, &#x00E6;ndrede han heltens navn fra Udger til Olger, og samme &#x00E5;r udgav han Kong Olger Danskis Kr&#x00F8;nicke, en overs&#x00E6;ttelse af en fransk roman om Ogier, tidligst kendt fra en trykt bog 1496; det er sidstn&#x00E6;vnte version af beretningerne om Holger Danske, der levede videre som en ofte optrykt, meget yndet dansk folkebog langt op i 1800-tallet, og som er hovedkilden til danskernes kendskab til heltens bedrifter og for sagnene om hans genkomst fra sine underjordiske opholdssteder (bl.a. Bulbjerg, Lovns, Nonnebakken og Kronborg) for at frelse nationen i yderste n&#x00F8;d. Holger Danske blev en central figur i dansk litter&#x00E6;r og musikalsk romantik, kulminerende med B.S. Ingemanns episke digtcyklus Holger Danske. Et Digt (1837); nogle af digtene heri – bl.a. ”Holger Danskes M&#x00E6;rke” (”I alle de Riger og Lande”) – sattes i musik og fik siden stor betydning i nationale krisetider.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt38">
+   <cell type="norm">Hyndle</cell>
+   <cell type="lek">Betyder egentlig &#x0027;Den lille hund&#x0027;. Troldkvinde af j&#x00E6;ttesl&#x00E6;gt. I <hi rend="italic">Hyndlulj&#x00F3;&#x00F0;,</hi> fort&#x00E6;lles, hvordan hun hjalp Frejas elsker Ottar.</cell>
+   <cell type="alt">Hyndla</cell>
+</row>
+
+<row xml:id="myt39">
+   <cell type="norm">Hyrrokin</cell>
+   <cell type="lek">Efter Balders d&#x00F8;d skulle hans lig br&#x00E6;ndes p&#x00E5; Ringhorne, det st&#x00F8;rste af asernes krigsskibe, men selv ikke Thor kunne skubbe skibet fra land; aserne tilkaldte da den st&#x00E6;rke j&#x00E6;ttekvinde Hyrrokin, som gjorde det med st&#x00F8;rste lethed; Thor blev rasende ved at se sig sl&#x00E5;et i styrke og ville dr&#x00E6;be hende, men p&#x00E5; asernes opfordring undlod han at g&#x00F8;re det; f&#x00F8;rst da dv&#x00E6;rgen Lit tilf&#x00E6;ldigvis gik ind foran Thor, kunne han ikke l&#x00E6;ngere styre sin vrede, men sparkede til dv&#x00E6;rgen, der uheldigvis styrtede ind i b&#x00E5;let og d&#x00F8;de.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt40">
+   <cell type="norm">H&#x00F8;ner</cell>
+   <cell type="lek">Noget tavs og m&#x00E5;ske lettere ubegavet, men meget smuk as i den nordiske mytologi. I V&#x00F8;lvens Sp&#x00E5;dom giver han menneskeparret Ask og Embla &#x00E5;nd. Gr. opfatter ham efter Suhm s. 221 som meget smuk. </cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt41">
+   <cell type="norm">Idun</cell>
+   <cell type="lek">Gudinde i den nordiske mytologi, som ejer og vogter de &#x00E6;bler, der giver guderne evig ungdom. </cell>
+   <cell type="alt">Ydun</cell>
+</row>
+
+<row xml:id="myt42">
+   <cell type="norm">Jupiter</cell>
+   <cell type="lek">Gudernes overhoved i den romerske mytologi. I den gr&#x00E6;ske kaldes han Zeus. Zeus opfattes af Homer som guders og menneskers fader.</cell>
+   <cell type="alt">Zeus</cell>
+</row>
+
+<row xml:id="myt43">
+   <cell type="norm">Kvaser</cell>
+   <cell type="lek">Mand fra den nordiske mytologi. Han er opst&#x00E5;et ved, at ase og vaner ved fredsslutningen spytter i et kar og danner Kvaser af spyttet. Senere dr&#x00E6;bes han; og af hans blod blandet med honning opst&#x00E5;r skjaldemj&#x00F8;den. &#x201C;Kvasers blod&#x201D; er derfor en kenning for digterevnen. Han blev ogs&#x00E5; Nordens f&#x00F8;rste deduktive detektiv, da han i asken fandt resterne af det net, hvomed guderne fangede Loke, da denne havde omskabt sig til en laks. Af Kvasers blod blandet med honning opst&#x00E5;r skjaldemj&#x00F8;den. &#x201C;Kvasers blod&#x201D; er derfor en kenning for digterevnen.</cell>
+   <cell type="alt">Kvasier</cell>
+</row>
+
+<row xml:id="myt44">
+   <cell type="norm">Laufey</cell>
+   <cell type="lek">Lokes mor hedder enten Laufey eller N&#x00E1;l og er formentlig af j&#x00E6;ttesl&#x00E6;gt. Der hentydes her til beskrivelsen af Loke fra <hi rend="italic">Snorres Edda,</hi> <hi rend="italic">Gylfaginning,</hi> kapitel 32.</cell>
+   <cell type="alt">N&#x00E1;l</cell>
+</row>
+
+<row xml:id="myt47">
+   <cell type="norm">Lit</cell>
+   <cell type="lek">Efter Balders d&#x00F8;d skulle hans lig br&#x00E6;ndes p&#x00E5; Ringhorne, det st&#x00F8;rste af asernes krigsskibe, men selv ikke Thor kunne skubbe skibet fra land; aserne tilkaldte da den st&#x00E6;rke j&#x00E6;ttekvinde Hyrrokin, som gjorde det med st&#x00F8;rste lethed; Thor blev rasende ved at se sig sl&#x00E5;et i styrke og ville dr&#x00E6;be hende, men p&#x00E5; asernes opfordring undlod han at g&#x00F8;re det; f&#x00F8;rst da dv&#x00E6;rgen Lit tilf&#x00E6;ldigvis gik ind foran Thor, kunne han ikke l&#x00E6;ngere styre sin vrede, men sparkede til dv&#x00E6;rgen, der uheldigvis styrtede ind i b&#x00E5;let og d&#x00F8;de</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt45">
+   <cell type="norm">Liv</cell>
+   <cell type="lek">Den ene halvdel af det menneskepar, der overlever Fimbulvinteren i den nordiske mytologi</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt46">
+   <cell type="norm">Livtraser</cell>
+   <cell type="lek">Den anden halvdel af det menneskepar, der overlever Fimbulvinterenden i den nordiske mytologi</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt49">
+   <cell type="norm">Lodur</cell>
+   <cell type="lek">Gud i den nordiske mytologi, der er med til at skabe det f&#x00F8;rste menneskepar, Ask og Embla. En tolkning Lodur som enten Loke eller Frej er meget usikker.</cell>
+   <cell type="alt">L&#x00F8;dur</cell>
+</row>
+
+<row xml:id="myt48">
+   <cell type="norm">Loke</cell>
+   <cell type="lek">Figur fra den nordiske mytologi.  Sk&#x00F8;nt af j&#x00E6;ttesl&#x00E6;gt, s&#x00F8;n af Farbaute og Laufey eller Nal, omg&#x00E5;s han aserne og redder dem ofte, nogle gange endda fra noget, han oprindelig selv har for&#x00E5;rsaget. Hans st&#x00F8;rste br&#x00F8;de er, at han er medskyldig i den popul&#x00E6;re Balders d&#x00F8;d. Han kan n&#x00E6;ppe betragtes som en gud; og der eksisterer heller ikke spor af kult i tilknytning til ham. Ved Ragnarok er han helt p&#x00E5; j&#x00E6;tternes side. >Med Angrbode har Loke b&#x00F8;rnene Fenrisulven, Midg&#x00E5;rdsormen og Hel; med Sigyn b&#x00F8;rnene Vale og Narfe.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt50">
+   <cell type="norm">Mimer</cell>
+   <cell type="lek">J&#x00E6;tte fra den nordiske mytologi, som vogter over visdommens kilde. Odin s&#x00E6;tter sit ene &#x00F8;je i pant for en drik heraf. P&#x00E5; et tidspunkt halshugger vanerne fra den nordiske mytologi Mimer og sender hans hoved til aserne. Det har dog bevaret Mimers klogskab; og Odin sp&#x00F8;rger det ofte til r&#x00E5;ds.</cell>
+   <cell type="alt">Mymer</cell>
+</row>
+
+<row xml:id="myt51">
+   <cell type="norm">Mistelten</cell>
+   <cell type="lek">Bl&#x00F8;d snylteplante. I nordisk mytologi var den det eneste v&#x00E6;sen, der ikke havde afgivet l&#x00F8;fte om ikke at skade Balder. Loke kunne derfor lave en pil af m.; og denne pil dr&#x00E6;bte Balder, idet Loke hjalp den blinde H&#x00F8;der med at affyre pilen.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt52">
+   <cell type="norm">Mj&#x00F8;lner</cell>
+   <cell type="lek">Thors magiske hammer, der kommer tilbage til den, der har kastet den (nordisk mytologi).</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt53">
+   <cell type="norm">Muspel</cell>
+   <cell type="lek">Anf&#x00F8;rer af j&#x00E6;tter ved Ragnarok ( nordisk mytologi). Navnet betyder m&#x00E5;ske &#x0027;verdensbrand&#x0027;.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt54">
+   <cell type="norm">Naglfar</cell>
+   <cell type="lek">Et skib fra den nordiske mytologi, bygget af d&#x00F8;de m&#x00E6;nds negle. Det slippes l&#x00F8;s ved Ragnarok</cell>
+   <cell type="alt">Naglfari</cell>
+</row>
+
+<row xml:id="myt56">
+   <cell type="norm">Nanna</cell>
+   <cell type="lek">>Den nordiske gud Balders elskede hustru. Hun f&#x00F8;lger Balder p&#x00E5; ligb&#x00E5;let, da han er d&#x00F8;d. Hos Snorre og dermed Suhm h&#x00F8;rer hun til asynjerne, mens hun hos Saxo er et menneske. Nanvnet N. optr&#x00E6;der dog ogs&#x00E5; andre stederi det oldislandske materiale, hvor der ikke er nogen sammenh&#x00E6;ng med Baldermyten </cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt57">
+   <cell type="norm">Nidhug</cell>
+   <cell type="lek">D&#x00F8;dsdrage fra den nordiske mytologi, der dukker op ved Ragnarok, hvor den ved indgangen til Hel suger de d&#x00F8;des blod. F&#x00F8;rste del af navnet betyder nid (h&#x00E5;n); anden del: den, som hugger. Gr. har den tilsyneladende i flertal.</cell>
+   <cell type="alt">Nidh&#x00F8;ge</cell>
+</row>
+
+<row xml:id="myt58">
+   <cell type="norm">Njord</cell>
+   <cell type="lek">Frugtbarhedsgud, en af vanerne fra den nordiske mytologi; far til Frej og Freja.</cell>
+   <cell type="alt">Niord</cell>
+</row>
+
+<row xml:id="myt55">
+   <cell type="norm">Nál</cell>
+   <cell type="lek">Mor til Loke i den nordiske mytologi</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt59">
+   <cell type="norm">Odin</cell>
+   <cell type="lek">Asernes overhoved i den nordiske mytologi. Gud for bl.a. visdom, krigslykke, skjaldekunst, runer og magi. S&#x00F8;n af Bur og Bestla. Hans s&#x00F8;nner er: f&#x00F8;rst og fremmest Thor, Balder, Vidar og Vale. Dertil kommer Heimdal, H&#x00F8;der og Brage, ligesom Tyr, Nef og Hermod. Endelig n&#x00E6;vnes ogs&#x00E5; kongerne Vegdeg, Sigi, Skjold, S&#x00E6;mingr og Yngve som hans s&#x00F8;nner. Fj&#x00E5;lsvid er den af personerne i Fj&#x00E5;lsvidskvadet (nordisk mytologi), der svarer p&#x00E5; de is&#x00E6;r mytologiske sp&#x00F8;rgsm&#x00E5;l, som de andre personer, bl.a. Odin i forkl&#x00E6;dning, stiller. Iflg. Suhm (1771, s. 15) og den arnamagn&#x00E6;anske kommisions udgave b. III, s. 637 er Fi&#x00F6;lsvidr dog et tilnavn til Odin. Fi&#x00F8;lner er et af Odins tolv tilnavne i den nordiske mytologi; if&#x00F8;lge Suhm betyder det: &#x0027;den, der ved mange ting&#x0027;. 2) Svensk sagnkonge, s&#x00F8;n af vanen Frej og j&#x00E6;ttekvinden Gerd. I eddadigtet Vaftrudnism&#x00E1;l er Gagnrad et andet navn for Odin. Også Jolmer eller Jolner er et andet navn for Odin.  Under dette navn forbindes han fx hos Suhm (Suhm 1771, s. 24) is&#x00E6;r med julen. Nyere forskning g&#x00E5;r dog ud fra, at &#x0027;Jolner&#x0027;  blot er et andet ord for &#x0027;gud&#x0027;. I eddadigtet H&#x00E1;vam&#x00E1;l er Thund et andet navn for Odin. I <hi rend="italic">Balders dr&#x00F8;mme</hi>  eller Vegtams Kvide fra <hi rend="italic">Den &#x00C6;ldre Edda</hi> kaldes Odin ogs Vegtam. </cell>
+   <cell type="alt">Alfader; Alvider; Fimbultyr; Fi&#x00F8;lner; Fj&#x00F8;lner; Fi&#x00F6;lsvidr; Fiaalsvid; Fj&#x00E5;vid; Gagnrad; Herjan, H&#x00E6;rfader, Jolmer; Jolner; Thundr; Thund; Vegtam</cell>
+</row>
+
+<row xml:id="myt60">
+   <cell type="norm">Olympen</cell>
+   <cell type="lek">Gudernes bolig i den gr&#x00E6;ske mytologi.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt61">
+   <cell type="norm">Ottar</cell>
+   <cell type="lek">En af Frejas elskere i den nordiske mytologi. I en dunkel strofe i <hi rend="italic">Hyndlulj&#x00F3;&#x00F0;,</hi> omskaber Ottar et stenbillede til glas</cell>
+   <cell type="alt">Otar; Ottarr</cell>
+</row>
+
+<row xml:id="myt62">
+   <cell type="norm">Roar</cell>
+   <cell type="lek">Dansk sagnkonge af skjoldungesl&#x00E6;gten. Broder til Helge, med hvem han deler magten, s&#x00E5;ldes at Roar regerer landet (omkring Lejre) og Helge er s&#x00F8;konge.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt63">
+   <cell type="norm">Rolf Krake</cell>
+   <cell type="lek">Dansk sagnkonge af skjoldungesl&#x00E6;gten. En idealkonge, der g&#x00E5;r foran alle i godhed, mod og naturlighed (Snorre).</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt64">
+   <cell type="norm">Saga</cell>
+   <cell type="lek"></cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt65">
+   <cell type="norm">Sigurd</cell>
+   <cell type="lek">Helt fra den nordiske sagnhistorie, af v&#x00F8;lsungernes sl&#x00E6;gt. Som det fremg&#x00E5;r af navnet, dr&#x00E6;ber han bl.a. dragen Fafner. Hans elskede hedder Brynhild.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt66">
+   <cell type="norm">Skirner</cell>
+   <cell type="lek">Navnet betyder &#x0027;den skinnende&#x0027;, en af Frejs tjenere (skosvend) fra den nordiske mytologi. Optr&#x00E6;der i <hi rend="italic">Sk&#x00ED;rnism&#x00E1;l,</hi> &#x0027;Skirners kv&#x00E6;de&#x0027;.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt67">
+   <cell type="norm">Skjold</cell>
+   <cell type="lek">Dansk sagnkonge, der blev stamfader til skjoldungerne, If&#x00F8;lge sagnet er han s&#x00F8;n af Odin og Rind. Hans konges&#x00E6;de l&#x00E5; i Lejre. Mange af Danmarks senere konger f&#x00F8;rer deres s&#x00E6;gt tilbage ti ham. </cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt68">
+   <cell type="norm">Skuld</cell>
+   <cell type="lek">En af de tre sk&#x00E6;bnegudinder fra nordisk mytologi. De to andre er Vardandi og Urd. Med inspiration fra <hi rend="italic">V&#x00F8;lvens Sp&#x00E5;dom</hi> er Skuld ogs&#x00E5; valkyrie. Navnet er afledt af skulu, skulle, og i familie med ordet skyld.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt69">
+   <cell type="norm">Sodr&#x00F8;d</cell>
+   <cell type="lek">Den sodm&#x00F8;rke hane fra den nordiske mytologi, der galer ved Ragnarok</cell>
+   <cell type="alt">Sor&#x00F8;d</cell>
+</row>
+
+<row xml:id="myt70">
+   <cell type="norm">Styrkeb&#x00E6;lte</cell>
+   <cell type="lek">Thors b&#x00E6;lte, der gav ham stor styrke (asakr&#x00E6;fter), n&#x00E5;r han sp&#x00E6;ndte det om livet.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt71">
+   <cell type="norm">Surt</cell>
+   <cell type="lek">Betyder egl. &#x0027;den sorte&#x0027;. Ildj&#x00E6;tte fra den nordiske mytologi. Han regerer i ildlandet Muspel, der ligger mod syd. Under Ragnarok rider han ud fra Muspelheim og afbr&#x00E6;nder jorden.</cell>
+   <cell type="alt">Surtur, Surtr</cell>
+</row>
+
+<row xml:id="myt72">
+   <cell type="norm">Suttung</cell>
+   <cell type="lek">J&#x00E6;tte fra den nordiske mytologi, som ejer skjaldemj&#x00F8;den, brygget af Kvasers blod. Der hentydes til dette i eddadigtet H&#x00E1;vam&#x00E1;l (Den h&#x00F8;jes Tale). Suttungs Mj&#x00F8;d er en kenning for skjalde- eller digterkunsten.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt74">
+   <cell type="norm">Thor</cell>
+   <cell type="lek">Himmelgud og den st&#x00E6;rkeste gud i den nordiske mytologi. S&#x00F8;n af Odin og Fj&#x00F8;rgyn (Jorden) og gift med den h&#x00E5;rfagre Sif. Han ejer den magiske hammer, Mj&#x00F8;lner, og bek&#x00E6;mper j&#x00E6;tterne med h&#x00E5;rd h&#x00E5;nd.</cell>
+   <cell type="alt"></cell>
+</row>
+
+
+<row xml:id="myt75">
+   <cell type="norm">Trym</cell>
+   <cell type="lek">Konge over turserne (en slags j&#x00E6;tter) i den nordiske mytologi. Optr&#x00E6;der i Trymskvadet.</cell>
+   <cell type="alt">Thrymer; Thrym</cell>
+</row>
+
+<row xml:id="myt73">
+   <cell type="norm">Tyr</cell>
+   <cell type="lek">Krigsgud i den nordiske mytologi. Navnet betyder &#x0027;larm&#x0027;.</cell>
+   <cell type="alt">Thir; Thyr</cell>
+</row>
+
+<row xml:id="myt77">
+   <cell type="norm">Urd</cell>
+   <cell type="lek">Det, der var&#x0027;. En af de tre sk&#x00E6;bnegudinder i den nordiske mytologi. De to andre er Verdandi og Skuld. Navnet er datid af <hi rend="italic">verda</hi> og betyder egl. blev.</cell>
+   <cell type="alt">Urda</cell>
+</row>
+
+<row xml:id="myt78">
+   <cell type="norm">Vaftrudner</cell>
+   <cell type="lek">Vis j&#x00E6;tte. Optr&#x00E6;der i digtet  <hi rend="italic">Vaf&#x00FE;, r&#x00FA;, &#x00F0;, nis M&#x00E1;l,</hi> hvori han strides i viden med Odin.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt79">
+   <cell type="norm">Vale</cell>
+   <cell type="lek">S&#x00F8;n af Odin og Rind fra den nordiske mytoplogi. Kun &#x00E9;n dag gammel dr&#x00E6;ber han Balders banemand, H&#x00F8;der.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt80">
+   <cell type="norm">Verdande</cell>
+   <cell type="lek">Det v&#x00E6;rende&#x0027; eller &#x0027;det, der sker&#x0027;. En af de tre sk&#x00E6;bnegudinder fra nordisk mytologi. De andre to er Skuld og Urd. Navnet betyder &#x0027;den vordende&#x0027;.</cell>
+   <cell type="alt">Vardandi</cell>
+</row>
+
+<row xml:id="myt81">
+   <cell type="norm">Vidar</cell>
+   <cell type="lek">Den tavse as  i den nordiske mytologi, der en dag gammel h&#x00E6;vner mordet p&#x00E5; sin fader, Odin, da denne er blevet dr&#x00E6;bt af Fenrisulven ved Ragnarok. F&#x00E5;r f&#x00F8;rst m&#x00E6;le, da Odin er d&#x00F8;d. S&#x00F8;n af Odin og j&#x00E6;ttekvinden Grid.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt82">
+   <cell type="norm">Vola</cell>
+   <cell type="lek">For Gr. navnet p&#x00E5; den v&#x00F8;lve, der fremsiger V&#x00F8;lvens Sp&#x00E5;dom.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt83">
+   <cell type="norm">Ydun</cell>
+   <cell type="lek"></cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt84">
+   <cell type="norm">Ymer</cell>
+   <cell type="lek">Urj&#x00E6;tte fra den nordiske mytologi, stamfader til rimturserne. Da han dr&#x00E6;bes af Odin, Vile og Ve, danner de verden af hans krop: blodet bliver vandene, selve kroppen til jorden, knoglerne til bjerge, hjerneskallen til himmelhv&#x00E6;lvingen. &#x00D8;jenbrynene bliver til Asg&#x00E5;rd, gudernes hjem. Et andet navn for Ymer er Augelmer. Under dette navn er han stamfader til rimturserne</cell>
+   <cell type="alt">Augelmer</cell>
+</row>
+
+<row xml:id="myt85">
+   <cell type="norm">&#x00C6;gir</cell>
+   <cell type="lek">Havj&#x00E6;tte, der bor hos aserne og er konge over havet og derudover en stor &#x00F8;lbrygger. Optr&#x00E6;der i <hi rend="italic">&#x00C6;girs G&#x00E6;stebud</hi> (&#x00C6;girs Drekka).</cell>
+   <cell type="alt">&#x00C6;gi; Hler; Gymer</cell>
+</row>
+   
+<row xml:id="myt86">
+   <cell type="norm">&#x00D8;dhumla</cell>
+   <cell type="lek">M&#x00E6;lkerig ko, der i den nordiske mytologi medvirker til verdens skabelse, dels ved at give m&#x00E6;lk til j&#x00E6;tten Ymer (s.d.), af hvis d&#x00F8;de krop guderne senere bygger verden, dels  ved at slikke Bure frem af en saltsten. I <hi rend="italic">Gylfaginning</hi> fort&#x00E6;ller Snorre denne historie.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt87">
+   <cell type="norm">Asg&#x00E5;rd</cell>
+   <cell type="lek">Gudernes (asernes) hjem i den nordiske mytologi. Det ligger enten i himlen eller i verdens centrum</cell>
+   <cell type="alt">Asgaard</cell>
+</row>
+
+<row xml:id="myt88">
+   <cell type="norm">Elivaga</cell>
+   <cell type="lek">Floder, der eksisterede i Ginnungagap fra Verdens begyndelse (nordisk mytologi). Iflg. GLMN kan navnet overs&#x00E6;ttes til &#x0027;havstormsb&#x00F8;lger&#x0027; ; andre overs&#x00E6;ttelser er &#x0027;isb&#x00F8;lger&#x0027;. J&#x00E6;tten Ymer opstod, da rim fra Éliv&#x00E1;rgar m&#x00F8;dte varmen fra syd</cell>
+   <cell type="alt">Elivagar; &#x00C9;liv&#x00E1;ga</cell>
+</row>
+
+<row xml:id="myt89">
+   <cell type="norm">Gastrognies</cell>
+   <cell type="lek">Navn p&#x00E5; et g&#x00E6;rde i den nordiske mytologi, som optr&#x00E6;der i eddadigtet Fj&#x00F8;lsvinns M&#x00E1;l. Gastr betyder g&#x00E6;st; (h)ropa betyder r&#x00E5;be. Gr. har kunnet l&#x00E6;se digtet i den arnamagn&#x00E6;anske kommissions udgave b. 1, 1787, s. 279 ff. (se indl.).</cell>
+   <cell type="alt">Gastropnir; Gast&#x2013;r&#x00F3;pnir</cell>
+</row>
+
+<row xml:id="myt90">
+   <cell type="norm">Gnyppa Hule</cell>
+   <cell type="lek">I den nordiske mytologi den hule, uden for hvilken helvedhunden Garm st&#x00E5;r l&#x00E6;nket. Den ligger formentligt ved indgangen til Hel.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt91">
+   <cell type="norm">Hels sale</cell>
+   <cell type="lek">Hels bolig, dvs. d&#x00F8;dsriget</cell>
+   <cell type="alt">Helas v&#x00E5;ning</cell>
+</row>
+
+<row xml:id="myt92">
+   <cell type="norm">Hoddmimers H&#x00F8;je</cell>
+   <cell type="lek">Det sted, hvor Liv og Livtrase skjuler sig efter Fimbulvinteren. M&#x00E5;ske identisk med Yggdrasil</cell>
+   <cell type="alt">Hoddmimers skov</cell>
+</row>
+
+<row xml:id="myt93">
+   <cell type="norm">Idas Marke</cell>
+   <cell type="lek">Det idealsted, hvor  guderne if&#x00F8;lge den nordiske mytologi b&#x00E5;de f&#x00F8;r og efter Ragnarok samles for at g&#x00E5; p&#x00E5; tinge eller spille br&#x00E6;tspil.</cell>
+   <cell type="alt">Idasletten; Idavolden; Idavangen</cell>
+</row>
+
+<row xml:id="myt94">
+   <cell type="norm">Midg&#x00E5;rd</cell>
+   <cell type="lek">Menneskenes hjem i den nordiske mytologi. Det ligger midt i verden, mellem aser og j&#x00E6;tter.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt95">
+   <cell type="norm">Mimamejd</cell>
+   <cell type="lek">I den nordiske mytologi det store asketr&#x00E6;, der b&#x00E6;rer verden og g&#x00E5;r gennem himmel, jord og underverden.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt96">
+   <cell type="norm">Mimers Vande</cell>
+   <cell type="lek">Vandet i kilden ved Ygdrasils r&#x00F8;dder er fyldt med visdom og ejes af j&#x00E6;tten Mimer. Odin har givet sit ene &#x00F8;je i pant for en t&#x00E5;r af kilden</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt97">
+   <cell type="norm">Nidavolden</cell>
+   <cell type="lek">Et fjeld i den nordiske mytologi, evt. en h&#x00F8;jslette ved Idabjerget. Den islandske tekst har &#x201C;Nidav&#x01EB;llum"; i Kommisionens udgave: &#x201C;NIDA fiollom".</cell>
+   <cell type="alt"> Nidefjelde; N&#x00E6;sletten; M&#x00F8;kesletten</cell>
+</row>
+
+<row xml:id="myt98">
+   <cell type="norm">Tursernes Land</cell>
+   <cell type="lek">J&#x00E6;tternes land i den nordiske mytologi. Det ligger uden for menneskenes land, Midg&#x00E5;rd</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt99">
+   <cell type="norm">Udg&#x00E5;rd</cell>
+   <cell type="lek">J&#x00E6;tternes land i den nordiske mytologi. Det ligger uden for menneskenes land, Midg&#x00E5;rd.</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt100">
+   <cell type="norm">Urds Kilde</cell>
+   <cell type="lek"></cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt101">
+   <cell type="norm">Valhal</cell>
+   <cell type="lek">Gudernes bolig i den nordiske mytologi. Suhm kalder ogs&#x00E5; Valhalla for&#x0027; de Lyksaliges Boliger&#x201D; (Suhm 1771, s. 29).</cell>
+   <cell type="alt"></cell>
+</row>
+
+
+<row xml:id="myt103">
+   <cell type="norm">Yggdragsil</cell>
+   <cell type="lek">I den nordiske mytologi det store asketr&#x00E6;, der b&#x00E6;rer verden og g&#x00E5;r gennem himmel, jord og underverden.</cell>
+   <cell type="alt">Mimamejds Quiste; Mimamejd; Mimers tr&#x00E6;</cell>
+</row>
+
+<row xml:id="myt104">
+   <cell type="norm">Ragnarok</cell>
+   <cell type="lek">Jordens undergang i den nordiske mytologi. P&#x00E5; grund af en p&#x00E5; Gr&#x0027;s tid stadig g&#x00E6;ldende fejlfortolkning af Snorres ragna rökr (gudernes dunkelhed, jf. det tyske Götterdämmerung) for Ragnarok i stedet for Ragnarök, &#x0027;gudernes sk&#x00E6;bne&#x0027;, taler Gr. her om &#x0027;asernes tusm&#x00F8;rke&#x0027;</cell>
+   <cell type="alt"></cell>
+</row>
+
+<row xml:id="myt105">
+   <cell type="norm">Midg&#x00E5;rdsormen</cell>
+   <cell type="lek">Jormungardr betyder egl. &#x0027;Jordstaven&#x0027; eller &#x0027;den v&#x00E6;ldige stav&#x0027; og er et andet navn for Midg&#x00E5;rdsormen i den nordiske mytologi.Hvad angår Muldtorn eller Jordtorn, så overs&#x00E6;ttes <hi rend="italic">mold&#x00FE;invr</hi> fra den arnamagn&#x00E6;anske kommissions udgave blot med Midg&#x00E5;rdsormen, men ser man i nyere udgaver mede overs&#x00E6;ttelser (fx  Meulengracht S&#x00F8;rensen, Steinsland (2001), så ser man &#x0027;moldpinur&#x0027; SOM OVERSÆTTES ???). Fritzners Ordbog (Fritzner 1867) giver dog ogs&#x00E5; mulighed for, at det kan v&#x00E6;re Yggdrasil.</cell>
+   <cell type="alt">Jordtorn; Jormungardr; Jormungandr; Muldtorn </cell>
+</row>
+   
+</table>
+    
+</TEI>

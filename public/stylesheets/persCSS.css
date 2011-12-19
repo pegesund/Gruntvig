@@ -1,0 +1,92 @@
+/* Kim Steen Ravn, 2011.04.06 */
+
+body    {
+		 background-color: #CCCCCC;
+		 margin-top: 100px;
+	 	 margin-bottom: 100px;
+  		 margin-right: 150px;
+		 margin-left: 25px;
+		}
+
+a:link
+        {
+        text-decoration: none;
+        color: gray;
+        }
+        
+a:visited 
+        {
+        text-decoration: none;
+        }
+        
+a:hover 
+        {
+        text-decoration: none;
+        color: green;
+        }
+        
+a:active
+        {
+        text-decoration: none;
+        }
+        
+.bold
+        {
+         font-weight: bold;
+        }
+
+.cell
+        {
+         font-size: 100%;
+        }
+
+.head
+        {
+         font-size: 200%;
+        }
+
+.row
+        {
+         margin: 2em;
+        }
+
+.year
+        {
+         font-style: normal;
+        }
+
+.birthName
+        {
+        color: black
+        }
+
+.epithet
+        {
+        color: black
+        }
+
+.ladyName
+        {
+        color: black
+        }
+
+.maidenName
+        {
+        color: black
+        }
+
+.orthography
+        {
+        color: black
+        }
+        
+.altName
+        {
+        color: black
+        }
+        
+.xmlID
+        {
+        font-weight: bold
+        }
+        

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?oxygen RNGSchema="vej.rnc" type="compact"?>
+<TEI
+   xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML"
+   xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Om udgaven</title>
+            <author>Johnny Kondrup</author>
+            <editor role="centerManager">Michael Schelde</editor>
+            <editor role="editor">Johnny Kondrup</editor>
+            <editor role="itManager">Kim Steen Ravn</editor>
+         </titleStmt>
+         <editionStmt>
+            <edition>Pr&#x00F8;veversion</edition>
+         </editionStmt>
+         <extent>3 KB</extent>
+         <publicationStmt>
+            <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+            <distributor>Grundtvig Centeret, Vartov</distributor>
+            <date type="2011-03-03">Pr&#x00F8;versionen</date>
+         </publicationStmt>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+            <p>Grundtvig Centeret arbejder med:</p>
+            <p>1. En digital og kommenteret udgave af Grundtvigs skrifter</p>
+            <p>2. En forskningsindsats p&#x00E5; de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+            <p>2. a.Teologi og kirke</p>
+            <p>2. b.Demokrati og folkelighed</p>
+            <p>3. c.P&#x00E6;dagogik og folkeoplysning</p>
+            <p>3. Videnudveksling, undervisning og formidling</p>
+         </projectDesc>
+         <editorialDecl xml:id="xmlGuideLines.xml" n="0.1">Kodebog</editorialDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change xml:id="KSR" who="KSR" when="2011-03-02">WPD til XML</change>
+     </revisionDesc>
+   </teiHeader>
+ 
+  
+
+  <text>
+     <body decls="guideLines">
+        <head n="2">Om udgaven</head>
+        
+        <p>Pr&#x00F8;veudgaven best&#x00E5;r af f&#x00F8;lgende dele:</p>
+        
+        <div>
+           <head n="1">A. Tre <hi rend="italic">v&#x00E6;rker</hi> af Grundtvig</head>
+           
+           <p>
+              <list type="ordered">
+                 <item>»Om Asal&#x00E6;ren«, 1807</item>
+                 <item><hi rend="italic">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen, 1826</hi></item>
+                 <item><hi rend="italic">B&#x00F8;n og Begreb om en dansk H&#x00F8;iskole i Soer, 1840</hi></item>
+              </list>
+           </p>
+           
+           <p>Disse v&#x00E6;rker foreligger dels i </p>
+           
+           <p>
+              <list type="ordered">
+                 <item>elektronisk, s&#x00F8;gbar tekst, filologisk emenderet (rettet) (JK: se s. 3)</item>
+                 <item>digitale faksimiler af grundteksten</item>
+              </list>              
+           </p>
+           
+           <p>Til de lyriske v&#x00E6;rker vises <hi rend="italic">varianter</hi> efter f&#x00F8;lgende regel:</p>
+           
+           <p>
+              <list type="ordered">
+                 <item>Til salmerne vises b&#x00E5;de <hi rend="italic">tilblivelses- og overleveringsvarianter</hi> (dvs. b&#x00E5;de manuskripter og senere tryk inden for Grundtvigs levetid).</item>
+                 <item>Til &#x00F8;vrig lyrik vises <hi rend="italic">overleveringsvarianter</hi> (tryk senere end grundteksten, men inden for Grundtvigs levetid).</item>
+              </list>
+           </p>       
+        </div>
+        
+        <div>
+           <head n="">B. Hvert af de tre v&#x00E6;rker er udstyret med tre slags <hi rend="italic">kommentarer:</hi></head>
+           
+           <p>
+              <list type="ordered">
+                 <item><hi rend="italic">Indledning,</hi> der belyser v&#x00E6;rkets anledning og historiske situation, ved lyrik ogs&#x00E5; dets metrik og ved salmer desuden melodihistorien.</item>
+                 <item><hi rend="italic">Tekstredeg&#x00F8;relse,</hi> der g&#x00F8;r rede for relevante tryk og manuskripter.</item>
+                 <item><hi rend="italic">Punktkommentarer,</hi> der giver hj&#x00E6;lp til forst&#x00E5;else af vanskelige ord, historiske forhold, litter&#x00E6;re hentydninger osv. i v&#x00E6;rkets tekst.
+                 </item>
+              </list>
+           </p>
+        </div>
+        
+        <div>
+           <head n="">C. Desuden findes en gruppe <hi rend="italic">ressourcer,</hi> som kan lette arbejdet med v&#x00E6;rkerne:</head>
+           
+           <p>
+              <list type="ordered">
+                 <item><hi rend="italic">Tidstavle </hi> over Grundtvigs liv, forfatterskab og samtid.</item>
+                 <item>Register over <hi rend="italic">personnavne </hi> i v&#x00E6;rker s&#x00E5;vel som kommentarer.</item>
+                 <item>Register over <hi rend="italic">bibelsteder </hi> i v&#x00E6;rker s&#x00E5;vel som kommentarer.</item>
+                 <item>Register over <hi rend="italic">sekund&#x00E6;rlitteratur </hi> n&#x00E6;vnt i s&#x00E5;vel v&#x00E6;rker som kommentarer.</item>
+                 <item>Register over <hi rend="italic">mytologiske figurer og ting </hi> n&#x00E6;vnt i Grundtvigs v&#x00E6;rker.</item>
+                 <item>Register over <hi rend="italic">stednavne </hi> i Grundtvigs v&#x00E6;rker.</item>
+                 <item><hi rend="italic">Registrant over N.F.S. Grundtvigs papirer </hi> i digitaliseret form.</item>
+                 <item>Fortegnelse over Grundtvigs bogsamling 1805.</item>
+              </list>
+           </p>
+        </div>
+        
+        <div>
+           <head n="">D. S&#x00F8;gemaskine til fuldteksts&#x00F8;gning i s&#x00E5;vel v&#x00E6;rker som kommentarer.</head>
+        </div>
+        
+        <div>
+           <head n="">E. <hi rend="italic">Vejledninger</hi> til enkeltfunktioner som</head>
+           
+           <p>
+              <list type="ordered">
+                 <item>tekstkritiske noter (JK)</item>
+                 <item>variantvisning (KSG)</item>
+                 <item>transskriptioner af salmemanuskripter (tilblivelsesvarianter) (KSG)</item>
+                 <item>tidstavle (HY)</item>
+                 <item>register over personnavne (ELR)</item>
+                 <item>register over bibelsteder (KR)</item>
+                 <item>register over sekund&#x00E6;rlitteratur (KR)</item>
+                 <item>register over mytologiske figurer og ting (VAP)</item>
+                 <item>register over stednavne (KR)</item>
+                 <item>registrant over Grundtvigs papirer (KSG)</item>
+                 <item>fortegnelse over Grundtvigs bogsamling (VAP + HY)</item>
+                 <item>s&#x00F8;gemaskine (KR)</item>
+              </list>
+           </p>
+        </div>
+        
+        <div>
+           
+           <p>I den elektroniske tekst til Grundtvigs v&#x00E6;rker finder man altid:</p>
+           
+           <p>- sideskift i originalerne, markeret med en lodret streg og tallet for den f&#x00F8;lgende side: &#x01C0;2</p>
+           
+           <p>Desuden kan man sl&#x00E5; f&#x00F8;lgende visninger til og fra:</p>
+           
+           <p>
+              <list type="simple">
+                 <item>tegn for tekstkritiske noter: &#x005D;. N&#x00E5;r man klikker p&#x00E5; lemma-tegnet, vises noten i teksten.</item>
+                 <item>lemmata (stikord) til punktkommentarer: r&#x00F8;d farve. N&#x00E5;r man klikker p&#x00E5; det farvede ord, vises kommentaren p&#x00E5; en s&#x00E6;rlig fane.</item>
+                 <item>sidetal (sideskift) i relevante videnskabelige udgaver f&#x00F8;r Grundtvigs v&#x00E6;rker. Der findes f&#x00F8;lgende muligheder:</item>                 
+              </list>
+              
+              <list type="simple">
+                 <item><hi rend="italic">Poetiske Skrifter</hi> 1-9, udg. Svend Grundtvig m.fl., 1880-1930</item>
+                 <item><hi rend="italic">Udvalgte Skrifter</hi> 1-10, udg. Holger Begtrup, 1904-09</item>
+                 <item><hi rend="italic">V&#x00E6;rker i Udvalg</hi>  1-10, udg. Georg Christensen &#x0026; Hal Koch, 1940-49</item>
+                 <item><hi rend="italic">Sang-V&#x00E6;rk</hi>  1-6, udg. Uffe Hansen m.fl., 1944-64</item>
+                 <item><hi rend="italic">Grundtvigs skoleverden</hi> 1-2, udg. K.E. Bugge, 1968</item>
+              </list>
+              
+           </p>
+           
+        </div>
+        
+     </body> 
+    
+  </text>
+</TEI>

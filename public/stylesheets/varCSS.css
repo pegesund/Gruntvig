@@ -1,0 +1,147 @@
+/* varCSS.css til styling af varianter */
+/* Kim Steen Ravn
+   2011.10.11: testversion
+*/
+
+/*
+a.app 
+        {
+        color: black;
+        text-decoration: none;
+        }
+
+span.appInvisible
+         {
+         display: none;
+         }
+
+.app:hover 
+         {
+         color: green;
+         }
+
+.app:hover .appInvisible
+        {
+        display: inline;
+        }
+
+.lem
+        {
+        color: gray;
+        }
+
+*/
+
+body   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        line-height: 110%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        }
+
+.anchor
+        {
+        color: #4196E1; /*royal blue*/
+        }
+        
+.lg
+        {
+        margin: 1em;
+        }
+
+/* var start */
+
+.ide
+        {
+        color: #800080; /*purple*/
+        }
+        
+.int
+        {
+        color: #90EE90; /*light green*/
+        }
+        
+.ort
+        {
+        color: #DDA0DD; /*plum*/
+        }
+        
+.sub
+        {
+        color: #FF00FF; /*fuchsia*/
+        }
+        
+/* var end */
+
+.center
+        {
+        text-align: center;
+        }
+
+.head0, .head1, .head2, .head3, .head4, .head5, .head6   
+        {
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
+.head0
+        {
+        font-size: 100%;
+        }
+
+.head1
+        {
+        font-size: 120%;
+        }
+
+.head2
+        {
+        font-size: 144%;
+        }
+
+.head3
+        {
+        font-size: 172%;
+        }
+
+.head4
+        {
+        font-size: 207%;
+        }
+
+.head5
+        {
+        font-size: 248%;
+        }
+
+.head6
+        {
+        font-size: 298%;
+        }
+        
+.head 
+        {
+        font-weight: bold;
+        text-align: center;
+        }
+
+.italic 
+        {
+        font-style: italic;
+        }
+
+/* noter start */
+
+.footLine
+        {
+        color: blue;
+        text-align: left;
+        margin: 1em auto 0 0;
+        width: 4em;
+        }
+
+/* noter end */

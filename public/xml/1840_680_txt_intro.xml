@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Introduktion til &#x201C;Asal&#x00E6;ren&#x201D; 1807</title>
+        <author>Nicolai Frederik Severin Grundtvig</author>
+        <editor>Krista Stinne Greve Rasmussen</editor>
+        <editor>Else Riisager</editor>
+      </titleStmt>
+      <editionStmt>
+        <p>Edition Statement</p>
+      </editionStmt>
+      <extent>19 KB</extent>
+      <publicationStmt>
+        <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+        <distributor>Grundtvig Centeret, Vartov</distributor>
+        <authority/>
+        <idno>433A</idno>
+        <date/>
+      </publicationStmt>
+      <seriesStmt>
+        <title/>
+        <idno/>
+        <respStmt>
+          <resp/>
+          <name/>
+        </respStmt>
+        <idno/>
+      </seriesStmt>
+      <notesStmt>
+        <note>Note1</note>
+        <note>Note2</note>
+        <note>Note3</note>
+        <note>Note4</note>
+        <note>Note5</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Danske<lb/> H&#x00F8;itids-Psalmer<lb/> til<lb/> Tusindaars-Festen.</title>
+          <author>Nik. Fred. Sev. Grundtvig<lb/>
+            <note>residerende Capellan ved <placeName key="fak9">Vor Frelsers
+              Kirke</placeName>.</note>
+          </author>
+          <pubPlace><placeName key="fak8">Ki&#x00F6;benhavn</placeName>.</pubPlace>
+          <publisher>
+            <note>Trykt paa den Wahlske Boghandlings Forlag,</note>
+            <note>hos C. Gr&#x00E6;be.</note>
+          </publisher>
+          <date>1826.</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+        <p>Grundtvig Centeret arbejder med:</p>
+        <p>1.En digital og kommenteret udgave af Grundtvigs skrifter</p>
+        <p>2.En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+        <p>2.a.Teologi og kirke</p>
+        <p>2.b.Demokrati og folkelighed</p>
+        <p>3.c.P&#x00E6;dagogik og folkeoplysning</p>
+        <p>3.Videnudveksling, undervisning og formidling</p>
+      </projectDesc>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>Date</date>
+        <note>Note</note>
+      </creation>
+    </profileDesc>
+    <revisionDesc>
+      <change xml:id="KSR" who="KSR" when="2010-12-02">første udkast til struktur til indled. og textredegørelser</change>
+      <change who="#KSR" when="2010-12-03">tilretning</change>
+<change xml:id="RSB" who="RSB" when="2010-12-07">navnemrk indsat</change>
+
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+        <head>Introduktion til &#x201C;Asal&#x00E6;ren&#x201D; 1807</head>
+        <div>
+          <head>exempler</head>
+          <p>HVOR SKAL MAN PLACERE AFSNITTET OM DE FASC., DER RUMMER NOGLE AF FORARBEJDERNE? I TEKSTREDEG&#x00D8;RELSEN? (MENER JK, MEN ER DET IKKE OGS&#x00C5; INTERESSANT HER)?</p>
+          <p>NB: DET ER VEL EN GOD ID&#x00C9; AT GEMME NOGLE AF POINTERNE TIL ANDRE SKRIFTER? </p>
+          <p>ELLER ER REDUNDANS &#x00D8;NSKELIG?</p>
+        </div>
+        <div>
+          <head>Et tidsbillede i fugleperspektiv</head>
+          <p>1800&#x2013;tallets f&#x00F8;rste &#x00E5;rti er ofte - og med rette - blevet kaldt den
+            tidlige romantiks &#x00E5;rti. DET ER VEL FOR MEGET AT MEDTAGE OM UDVIKLINGEN AF
+            ROMANTIKBEGREBET FRA 1700&#x2013;TALLET HER, VAP 12. november 2010) Det er i disse
+            &#x00E5;rhundredets f&#x00F8;rste &#x00E5;r, at b&#x00E5;de <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName>
+	    og <persName key="pe16">Adolph Wilhelm Schack von Staffeldt</persName> udsender deres f&#x00F8;rste store digtsamlinger
+            (i henholdsvis 1802 og 1803, men med 1803 og 1804 p&#x00E5; titelbladene). Det er
+            ogs&#x00E5; &#x00E5;rtiet, hvor naturvidenskabsmanden <persName key="pe18">Henrich Steffens</persName> introducerer
+            tysk romantisk tankegang for danskerne, f&#x00F8;rste gang ved en r&#x00E6;kke
+            forel&#x00E6;sninger, "Indledning til philosofiske Forel&#x00E6;sninger&#x201C; i
+            november&#x2013;december 1802. B&#x00E5;de <persName key="pe4">Grundtvig</persName> og <persName key="pe3">Oehlenschl&#x00E4;ger</persName>
+            overv&#x00E6;rede disse forel&#x00E6;sninger, men mens <persName key="pe3">Oehlenschl&#x00E4;ger</persName> - efter en
+            litteraturhistorisk ber&#x00F8;mt g&#x00E5;tur med samme <persName key="pe18">Steffens</persName> - kunne g&#x00E5;
+            direkte hjem og skrive digtet "Guldhornene&#x201C;, varede det noget, inden <persName key="pe4">Grundtvig</persName>
+            havde indoptaget de nye tanker i en s&#x00E5;dan grad, at han gav dem fra sig igen med
+            sin egen forst&#x00E5;else. </p>
+          <p> <persName key="pe4">Grundtvig</persName>s dag&#x2013; og udtogsb&#x00F8;ger viser, hvordan han langsomt tilegner en
+            del af de tyske filosoffers tankegang, is&#x00E6;r hvad ang&#x00E5;r deres historiesyn,
+            samtidig med at hans interesse for det oldnordiske stiger. </p>
+          <p> Sk&#x00F8;nt mange litteraturhistorier navnlig betoner <persName key="pe3">Oehlenschl&#x00E4;ger</persName>s
+            betydning for dyrkelsen af det oldnordiske i Danmark, is&#x00E6;r &#x00E5;rhundredets
+            f&#x00F8;rste &#x00E5;rti, m&#x00E5; man ikke glemme tidligere generationer med <persName key="pe7">Peter
+            Frederik (Friederich) Suhm</persName>, <persName key="pe5">Christen Pram</persName> og <persName key="19">Johannes Ewald</persName>. Hertil kommer de samtidige,
+            stadig med <persName key="pe20">Bagggesen</persName> - og - selvf&#x00F8;lgelig <persName key="pe3">Oehlenschl&#x00E4;ger</persName>. Af personer, der
+            er mindre kendte i dag, bliver <persName key="pe6">Jens M&#x00F8;ller</persName> ogs&#x00E5; interesssant (se senere +
+            se Lidet om...)<link/>. </p>
+          <div>
+            <head>Romantikkens anelse</head>
+            <p>Et ord, der er af betydning for forst&#x00E5;elsen af romantikernes tankegang, er
+              ordet &#x0027;anelse&#x0027; (ty. Ahnung). Med dette ord vil de tilkendegive, at den
+              indsigt om verdens sammenh&#x00E6;ng, som de pl&#x00E6;derer for, ikke
+              n&#x00F8;dvendigvis er en indsigt, der kan tilegnes udelukkende ved hj&#x00E6;lp af
+              forstanden, men derimod kun kan anes stykkevis og i glimt med <hi rend="italic">f&#x00F8;lelsen.</hi> Og den
+              bedste hj&#x00E6;lper i denne anelsesproces vil ofte v&#x00E6;re kunsten &#x2013;
+              b&#x00E5;de den, man nyder, og den, man selv frembringer. Grundtvig er ganske enig i
+              denne tankegang, ligesom han heller ikke viger tilbage for at bruge selve ordet. Om
+              &#x201C;Asal&#x00E6;ren&#x201C; kan han simpelthen udtrykke, at arbejdet med den har givet
+              ham &#x201D;en glad og livfuld Ahnelse af gamle Nords H&#x00F8;jhed, parret med
+              tilbagestr&#x00E6;ngt Smerte.&#x201C; (Breve I 1924, s. 4).</p>
+          </div>
+        </div>
+        <div>
+          <head>Den forelskede husl&#x00E6;rer</head>
+          <p>Marts 1805 var <persName key="pe4">Grundtvig</persName> tiltr&#x00E5;dt en stilling som husl&#x00E6;rer p&#x00E5;
+            herreg&#x00E5;rden Egel&#x00F8;kke p&#x00E5; Langeland. Han havde kun en eneste elev,
+            <persName key="pe21">Karl</persName>, s&#x00F8;n af <persName key="pe14">Constance, f. Fabritius de Tengnagel</persName>, og <persName key="pe22">Carl Frederik
+            Steensen&#x2013;Leth</persName>. <persName key="pe21">Karl</persName> var dengang 7 &#x00E5;r. <persName key="pe4">Grundtvig</persName> forelskede sig hovedkulds
+            i fruen, der p&#x00E5; &#x00E9;n gang afviste og opmuntrede ham. Der var aldrig tale om
+            egentlig utroskab mod &#x00E6;gtemanden, tv&#x00E6;rtimod, dagb&#x00F8;gerne vidner i
+            detaljer om, hvordan <persName key="pe14">Constance</persName> i <persName key="pe4">Grundtvig</persName>s &#x00F8;jne opf&#x00F8;rer sig smerteligt
+            korrekt som hustru. Men det er, mens <persName key="pe4">Grundtvig</persName> erkender, at han m&#x00E5; rette en del
+            af sin energi et andet sted hen end mod hende, at han graver dybere og dybere ned i det
+            oldnordiske, hvor han gendigter og navnlig genfortolker de gamle eddadigte ind i en
+            sammenh&#x00E6;ng, der rummer perspektiver ikke bare p&#x00E5; og for oldtiden, men
+            ogs&#x00E5; p&#x00E5; og for <persName key="pe4">Grundtvig</persName> og hans samtid. </p>
+          <p> Et eddadigt er oldislandsk digt, der stammer fra den tidligtste nordiske middelalder
+            eller m&#x00E5;ske endda helt tilbage fra vikingetiden. Betegnelsen bruges b&#x00E5;de
+            om <hi rend="italic"><title>Den &#x00E6;ldre Edda (Den poetiske Edda)</title></hi> og om <hi rend="italic"><title>Den yngre Edda (<persName key="49">Snorre</persName>s Edda</title>)</hi>. Den
+            &#x00E6;ldre Edda best&#x00E5;r af 10 gudedigte og 19 heltedigte. Den yngre Edda
+            (<persName key="49">Snorre</persName>s Edda) rummer en h&#x00E5;ndbog i skjaldedigtning og en genfort&#x00E6;lling af
+            mange af de nordiske myter. Den &#x00E6;ldst kendte nedskrift af <hi rend="italic"><title>Den &#x00E6;ldre Edda </title></hi>
+            st&#x00E5;r i det s&#x00E5;kaldte Codex Regius fra 1200&#x2013;tallet.</p>
+          <p><!-- DETTE AFSNIT EVT SOM FAKTABOX --> I &#x201D;Asal&#x00E6;ren&#x201C; findes hentydninger til den fortvivlelse, forholdet til
+            <persName key="pe14">Constance</persName> s&#x00E6;tter <persName key="pe4">Grundtvig</persName> i: &#x201D;Nutiden fratog mit Liv sin Betydning&#x201C;,
+            skriver han s. 158 i &#x201D;Asal&#x00E6;ren&#x201C;. I et senere brev til <persName key="pe23">Christian Molbech</persName>
+            (fra maj 1808) citerer han stedet og skriver direkte, at dette udsagn gik p&#x00E5;
+            <persName key="pe14">Constance</persName> (<persName key="pe23">Molbech</persName>&#x2013;<persName key="pe4">Grundtvig</persName> 1888, s. 14). Allerede i en dagbogsoptegnelse fra
+            10. september 1806 havde han skrevet: &#x201D;Jeg vil kalde det en Lykke, at min
+            K&#x00E6;rlighed var ulykkelig, siden den gjorde Mig virksom, og bidrog til mine
+            Kundskabers For&#x00F6;gelse&#x201C; (Dag- og Udtogsb&#x00F8;ger I, 1979 s. 383).
+            Tydeligere kan <persName key="pe4">Grundtvig</persName>s sublimeringspraksis n&#x00E6;ppe udtrykkes.</p>
+          <p> I et ret langt dagsbogsfragment fra 30. december 1806 (<title><hi rend="italic">Dag- og Udtogsb&#x00F8;ger,</hi></title> s.
+            399&#x2013;400) finder vi forskellige overvejelser over, hvilke dele af det nordiske
+            materiale, <persName key="pe4">Grundtvig</persName> kan tage fat p&#x00E5; at gendigte; og han skitserer bl.a.
+            overvejelser om en bearbejdelse af <hi rend="italic"><title>Gunlaug Ormstunges Saga</title></hi> og et v&#x00E6;rk om Sigurd
+            og Brynhild. Men uanset hvilket emne han vil beslutte sig for at arbejde videre med,
+            s&#x00E5; lyder det mod slutningen: &#x201C;Fra nu af lever Jeg i Oldtiden, og
+            Virkeligheden vil ej mere kunne g&#x00F8;re Mig til sin Slave, med mindre Jeg med
+            Erkendelse af Uformuenhed til at blive i et Land hvorhen Jeg har vovet Mig uden Vished
+            om at naa Borgerret, maa vende tilbage &#x2013; Og da Ve Mig!!!&#x201C; (Dag- og
+            Udtogsb&#x00F8;ger I 1979, s. 402). Med andre ord: <persName key="pe4">Grundtvig</persName> er mere end villig til at
+            lade sig opsluge af besk&#x00E6;ftigelsen med den nordiske oldtid - ikke mindst
+            p&#x00E5; bekostning af virkeligheden. Virkeligheden - og her mener han vel f&#x00F8;rst
+            og fremmest <persName key="pe14">Constancel</persName> - skal ikke l&#x00E6;ngere kunne g&#x00F8;re ham &#x201D;til sin
+            Slave&#x201C;.</p>
+        </div>
+        <div>
+          <head><persName key="pe4">Grundtvig</persName>s Asal&#x00E6;re [skal dette afsnit evt. flyttes til den mere
+            editionsfilologiske del, VAP 30. november 2010&#x005D;</head>
+          <p><persName key="pe4">Grundtvig</persName>s tanke om digterisk at fremstille emner fra den nordiske myte&#x2013; og
+            sagnverden som moderne digtning kan i alt fald f&#x00F8;res tilbage til 1806: &#x201D;thi besad
+            Jeg da Kraft til at udf&#x00F8;re Digtet [der skulle handle om Sigurd og Brynhilde&#x005D; saaledes, som det hele dunkelt sv&#x00E6;ver for min Fantasi, da skulde Nutids
+            Norden sk&#x00E6;lve ved Synet af Oldtidens&#x201C; (optegnelse fra 30. december 1806,
+            <hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I 1979, s. 399). I citatet ligger tydeligt, at det for
+            <persName key="pe4">Grundtvig</persName> drejer sig om noget h&#x00F8;jre og mere end blot at fremstille den nordiske,
+            hedenske gudel&#x00E6;re som var det religionshistorisk grundbog, han ville skrive. For
+            den nordiske asal&#x00E6;re &#x201D;repr&#x00E6;senterede for <persName key="pe4">Grundtvig</persName> - fra 1807 og livet ud
+            - mere end litteratur og noget andet end hedensk overtro, nemlig en oprindelig,
+            guddommeligt inspireret l&#x00E6;re, som f&#x00F8;rst i kristendommens lys
+            afsl&#x00F8;rer sin h&#x00F8;jeste betydning&#x201C; (Vind 1999, s. 161).</p>
+          <p> Selve afhandlingen &#x201C;Om Asal&#x00E6;ren&#x201D; - hvis man kan kalde den en s&#x00E5;dan - er
+            blevet til p&#x00E5; omkring tre uger, fra begyndelsen af maj 1807 til 22. maj 1807,
+            hvor <persName key="pe4">Grundtvig</persName> kan sende den samlede tekst til den beundrede Rasmus <persName key="pe2">Nyerup</persName>, som skal
+            aflevere &#x201D;Asal&#x00E6;ren&#x201C; til Knud Lyhne Rahbek, der er redakt&#x00F8;r
+            p&#x00E5; tidsskriftet <hi rend="italic"><title>Ny Minerva</title>.</hi> Afhandlingen om asal&#x00E6;ren er fra Grundtvis side
+            dateret 22. maj 1807, men at den alligevel kunne n&#x00E5; at komme med i majnummeret,
+            skyldes &#x201D;at n&#x00E6;vnte hefte antagelig var 2 maaneder forsinket&#x201C; (<hi rend="italic"><title>Registranten</title></hi>
+            1954: &#x201D;Rettelser og tilf&#x00F8;jelser&#x201C;, s. 5).</p>
+          <p> <persName key="pe2">Nyerup</persName> var den mand, som <persName key="pe4">Grundtvig</persName> f&#x00F8;rst henvendte sig om projektet om
+            asal&#x00E6;ren; og de havde en brevveksling om emnet, hvoraf dog kun <persName key="pe4">Grundtvig</persName>s breve er
+            bevarede. Heri skriver en h&#x00F8;jstemt <persName key="pe4">Grundtvig</persName> 15. maj 1807 bl. a.: &#x201C;Jeg
+            veed ikke bedre at udtrykke Dem min H&#x00F8;iagtelse end ved det uskr&#x00F8;mtede
+            Vidnesbyrd, at De, <persName key="pe7">Suhm</persName>s og <persName key="pe1">Sandvig</persName>s Fostbroder, er for mig gamle Nords
+            Repr&#x00E6;sentant til hvis pr&#x00F8;vende Alvors Bifald jeg stedse skal bejle med al
+            den Evne, Guderne sk&#x00E6;nkede mig.&#x201C; (<hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I
+            1979, s. 4).</p>
+          <div>
+            <head>Genre</head>
+            <p>Selv om f&#x00F8;lgende udsagn er m&#x00F8;ntet p&#x00E5; <persName key="pe4">Grundtvig</persName>s <hi rend="italic"><title>Nordens Mytologi</title></hi>
+              fra 1808, opsummerer det p&#x00E5; sin vis ogs&#x00E5;, hvad der g&#x00E6;lder for
+              &#x201D;Asal&#x00E6;ren&#x201C; fra 1807: &#x201D;<persName key="pe4">Grundtvig</persName> v&#x00E6;lger at fortolke de nordiske
+              myter som en stor sammenh&#x00E6;ng. Han ser i myterne en samlet anskuelse af tid og
+              evighed, en historie&#x2013; og verdensfortolkning, som omfatter b&#x00E5;de guder og
+              mennesker&#x201C; (<persName key="pe51">Auken</persName> 2005, s. 123). </p>
+            <p> I denne rammende beskrivelse fra litteraturforskeren Sune <persName key="pe51">Auken</persName>s h&#x00E5;nd ligger
+              indirekte ogs&#x00E5;, at det kan v&#x00E6;re sv&#x00E6;rt at genrebestemme et
+              v&#x00E6;rk som &#x201C;Asal&#x00E6;ren&#x201D;. At det er et v&#x00E6;rk, der handler om den nordiske
+              mytologi, er indiskutabelt. Men derefter h&#x00F8;rer de g&#x00E6;ngse genretermer op
+              med at passe. HER EVT. NOGET OM ROMANTIKKENS FORK&#x00C6;RLIGHED FOR GENREBLANDINGER
+              V&#x00E6;rket rummer <persName key="pe4">Grundtvig</persName>s egne overs&#x00E6;ttelser af uddrag af otte
+              forskellige eddadigte, sammenf&#x00F8;jet af tolkende prosa og mange forklaringer,
+              ogs&#x00E5; af mere realoplysende karakter. Ved langt de fleste digtuddrag har
+              <persName key="pe4">Grundtvig</persName> anf&#x00F8;rt, hvorfra de stammer (med titler, men fx ikke strofenumre).
+              Flere af disse ting peger mod en videnskabelig afhandling, men hen mod slutningen
+              skifter teksten karakter og bliver til en vision, en slags eskatalogi. SKAL DETTE
+              FORKLARES? Det understreges dels af skillestregen p&#x00E5; s. 184 i
+              &#x201D;Asal&#x00E6;ren&#x201C;, dels af, at <persName key="pe4">Grundtvig</persName> nu indf&#x00F8;rer et lyrisk
+              &#x0027;jeg&#x0027;, der ikke kan v&#x00E6;re nogen af guderne: &#x201C;Kan jeg vel
+              finde / hvad dristig jeg s&#x00F8;ger&#x201C; (&#x201D;Asal&#x00E6;ren&#x201C; s. 184). </p>
+            <p> Sagt med meget store ord var det, han s&#x00F8;gte, selve meningen med livet. En
+              mening, der i sig rummede noget, der var st&#x00F8;rre end b&#x00E5;de forelskelsen i
+              <persName key="pe14">Constancel</persName> og det, en overfladisk l&#x00E6;sning af edddadigtene kunne give. I stedet
+              for at betragte de enkelte digte i <hi rend="italic"><title>Eddaen</title></hi> som enkeltv&#x00E6;rker, s&#x00F8;gte
+              <persName key="pe4">Grundtvig</persName> (derfor?) at l&#x00E6;gge et udvalg af digte sammen, s&#x00E5; de indbyrdes
+              afspejlede et forl&#x00F8;b, der p&#x00E5; &#x00E9;n gang var b&#x00E5;de mytisk og
+              historisk. Herom skriver han selv senere: &#x201D;Ikke enkelte Steder af Edda dannede hos mig
+              enkelte Led af Ideen; men den f&#x00F8;dtes hos mig hel ved Totalindtrykket af
+              &#x201C;Asal&#x00E6;ren&#x201C; (dagbogsblade fra 24. juni 1807, Dag- og
+              Udtogsb&#x00F8;ger I 1979, s. 406).</p>
+            <p> N&#x00E5;r man l&#x00E6;ser &#x201D;Asal&#x00E6;ren&#x201C;, er det en god id&#x00E9; at
+              slippe fordomme om sn&#x00E6;vre genrebegreber og i stedet lade sig rive med at den
+              historiske vision, <persName key="pe4">Grundtvig</persName> opruller for &#x00F8;jnene af &#x00E9;n. Han skildrer et
+              verdensdrama, hvis begyndelse har fundet stedet f&#x00F8;r skabelsen, og hvis ende
+              ingen kender, men som hele menneskeheden - og m&#x00E5;ske is&#x00E6;r nordboerne
+              [skandinaverne?&#x005D; - lever med i - i 1807.</p>
+          </div>
+          <div>
+            <head>Form og komposition</head>
+            <p><persName key="pe4">Grundtvig</persName> er selv klar over, at formen - hverken videnskabelig afhandling eller ren
+              digtning - kunne v&#x00E6;re et problem. Ikke desto mindre vi jeg i det
+              f&#x00F8;lgende ofte ben&#x00E6;vne v&#x00E6;rket &#x0027;afhandlingen&#x0027;. I et brev, der formodentlig er ledsagebrevet, til
+              Rasmus <persName key="pe2">Nyerup</persName>, der er dateret 22. maj 1807, alts&#x00E5; pr&#x00E6;cis samme dag som
+              &#x201D;Asal&#x00E6;ren&#x201C;, skriver han: &#x201D;Dersom De kun maatte fine Noget indesluttet i
+              Formen, vil De vist ikke st&#x00F8;des af den Underlighed. Jeg har 4 Gange
+              str&#x00E6;bt at forandre den men det har ikke villet lykkes, da den i al sin
+              Underlighed er det troeste Aftryk af min n&#x00E6;rv&#x00E6;rende Sindsstemning, en
+              glad og livfuld Ahnelse af gamle Nords H&#x00F8;jhed, parret med tilbagestr&#x00E6;ngt
+              Smerte.&#x201C; (Breve I 1924, s. 4).</p>
+            <p> Afhandlingen begynder med en h&#x00F8;jstemt tilegnelse til &#x201D;Nordens Nyrup&#x201C;,
+              dvs. til forfatteren, tidsskriftredakt&#x00F8;ren, universitetsbibliotekschef og
+              ekstraordin&#x00E6;r professor i litteraturhistorie, Rasmus <persName key="pe2">Nyerup</persName>. <persName key="pe2">Nyerup</persName> betragter
+              sig ikke uden grund som &#x0027;elev&#x0027; af historikeren P.F. <persName key="pe7">Suhm</persName>.
+              Derp&#x00E5; f&#x00F8;lger som en slags motto et n&#x00F8;je udvalgt uddrag af
+              f&#x00F8;rste strofe af eddadigtet &#x201D;Odins Ravnegalder&#x201C; (nemlig linie 1, 4, 6,
+              7, 8). Dette uddrag overs&#x00E6;tter <persName key="pe4">Grundtvig</persName> i fodnoten til dansk og betegner det
+              derefter ligefrem som &#x201D;vore F&#x00E6;dres korte Symbolum&#x201C;
+              <!--<HER EVT. LINK TIL PUNKTKOMMENTAREN, HVORI ORDET ER FORKLARET?>-->
+              (&#x201D;Asal&#x00E6;ren&#x201C;, s. 156). P&#x00E5; disse f&#x00E5; linier, der kan opfattes
+              som en slags disposition for forl&#x00F8;bet i verdens gang, bygger <persName key="pe4">Grundtvig</persName> derefter
+              det meste af afhandlingen op. </p>
+            <p> Herp&#x00E5; f&#x00F8;lger en redeg&#x00F8;relse for <persName key="pe4">Grundtvig</persName>s personlige forhold
+              til gendigtninger af de gamle eddadigte, til Adam <persName key="pe3">Oehlenschl&#x00E4;ger</persName> og en
+              kommentar til den arnamagn&#x00E6;anske kommissions udgave af <hi rend="italic"><title>Eddaen</title></hi>. Indimellem lyder
+              opfordringer til l&#x00E6;serne om - ligesom <persName key="pe4">Grundtvig</persName> har gjort det - at fordybe sig
+              i l&#x00E6;sningen af de gamle digte. Endelig (s. 162 i &#x201D;Asal&#x00E6;ren&#x201C;)
+              begynder selve den kommenterede overs&#x00E6;ttelse og sammenskrivning af de i alt
+              otte eddadigte, <persName key="pe4">Grundtvig</persName> behandler i afhandlingen.</p>
+            <p> I et noget senere brev til <persName key="pe23">Molbech</persName> (5. juli 1808), som <persName key="pe4">Grundtvig</persName> har affattet, mens
+              han arbejder p&#x00E5; <hi rend="italic"><title>Nordens Mytologi</title></hi> (udkommer december 1808), skriver <persName key="pe4">Grundtvig</persName>
+              selv om &#x201C;Asal&#x00E6;ren&#x201D;s form: &#x201D;Grunden til min Utilfredshed er, at jeg paa engang
+              erkender den Form, jeg har givet min Udsigt over Asal&#x00E6;ren, for den absolut
+              rigtige, og den mindst passende til mit &#x00D8;jemed&#x201C;
+              (<persName key="pe23">Molbech</persName>&#x2013;Grundtvig 1888, s. 17).</p>
+            <p> Litteraturforskeren Flemming <persName key="pe52">Lundgreen&#x2013;Nielsen</persName> har karakteriseret
+              v&#x00E6;rket som en kombination Adam <persName key="pe3">Oehlenschl&#x00E4;ger</persName>s digt &#x201D;Guldhornene&#x201C;
+              (fra <hi><title>Digte 1803</title></hi>) og <persName key="pe3">Oehlenschl&#x00E4;ger</persName>s prisopgave fra 1800 i &#x00E9;t
+              (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 210). Universitets prisopgave for &#x00E5;r 1800,
+              hvis opgaveformulering l&#x00F8;d: &#x201D;Var det gavnligt, for Nordens ski&#x00F8;nne
+              Litteratur, om den gamle nordiske Mythologie blev indf&#x00F8;rt og almindelig
+              antaget, istedet for den Gr&#x00E6;dske&#x201C; blev af <persName key="pe3">Oehlenschl&#x00E4;ger</persName> besvaret
+              med et rungende ja i &#x201D;Fors&#x00F8;g til Besvarelse af det ved Ki&#x00F8;benhavns
+              Universitet fremsatte Priissp&#x00F8;rgsmaal&#x201C;. Og <persName key="pe4">Grundtvig</persName> har haft mulighed
+              for at l&#x00E6;se prisopgaven, da den - sammen med de to andre indkomne besvarelser -
+              blev tryk i tidsskriftet Minerva 1801 HVILKEN M&#x00C5;NED? SE EVT BIBL. P&#x00C5;
+              INSS, VAP 30. november 2010. Blandt sine mere teoretiske foruds&#x00E6;tninger hos
+              n&#x00E6;vner <persName key="pe3">Oehlenschl&#x00E4;ger</persName> b&#x00E5;de <persName key="25">Herder</persName> og Moritz.
+              <!--<VIDEREF&#x00D8;RSELSLINK HER?>--> For s&#x00E5; vidt man kan tale om en rangorden
+              i bed&#x00F8;mmelserne af besvarelserne, fik Ludvig Stoud Platou guldmedalje,
+              <persName key="pe3">Oehlenschl&#x00E4;ger</persName> f&#x00F8;rste accessit (dvs. rosende omtale), men med en
+              bem&#x00E6;rkning om, at hans besvarelse var v&#x00E6;rdig til medaljen, mens Jens
+              M&#x00F8;ller kun fik andet accessit (F.J. Billeskov Jansen 1980, s. XXX).</p>
+            <p><persName key="pe52">Lundgreen&#x2013;Nielsen</persName> betragter den sidste, vision&#x00E6;re, del af
+              &#x201D;Asal&#x00E6;ren&#x201C; som &#x201C;en officiel parallel til det private
+              &#x201C;Synet&#x201C; &#x201C; (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 209).Visionen er dog
+              tydeligt pr&#x00E6;get af det ene af <persName key="pe4">Grundtvig</persName>s mange forl&#x00E6;g, &#x201D;Fi&#x00F8;lsvins
+              M&#x00E1;l&#x201C; eller Fj&#x00E5;lsvidkvadet, der netop handler om en helts
+              besv&#x00E6;rlige og farefulde rejse for at n&#x00E5; sin elskede.</p>
+          </div>
+          <div>
+            <head>Alfaderbegrebet</head>
+            <p>Det sted, hvor <persName key="pe4">Grundtvig</persName> i &#x201D;Asal&#x00E6;ren&#x201C; (og med ham b&#x00E5;de <persName key="pe7">Suhm</persName> og
+              <persName key="pe3">Oehlenschl&#x00E4;ger</persName>) afviger kraftigst fra oldtidens opfattelser, er ved begrebet
+              Alfader (se ogs&#x00E5; <persName key="pe51">Auken</persName> 2005 s. 125f). Hvor Alfader i <hi rend="italic"><title>Eddaen</title></hi> blot er et tilnavn
+              til Odin, bliver Alfader hos <persName key="pe4">Grundtvig</persName> et begreb, der st&#x00E5;r over b&#x00E5;de
+              hedenskab og kristendom, en slags overguddommelig instans, der styrer hele verdens
+              gang. I <hi rend="italic"><title>Eddaen</title></hi> derimod er der under &#x201D;&#x00D3;ðins heiti ok
+              &#x00D3;ðinskenninger&#x201C; (Odinsnavne og kenninger for Odin) anf&#x00F8;rt:
+              &#x201C;Odin heiti Alf&#x00F6;ðr&#x201C; (Odin hed Alfader). Hos <persName key="pe7">Suhm</persName> st&#x00E5;r der: </p>
+            <p>&#x201C;F&#x00F8;rst siges, at den &#x00E6;ldste af alle Guderne hedte Alfadur, og
+              havde i Asgaard, eller som det i <persName key="pe15">Resen</persName>ii Udgave kaldes det gamel Asgaard, tolv Navne,
+              at han lever altid, og styrer for alt sit Rige, baade det store og det smaae; at han
+              haver bygget Himmel, Jord og Luften, giordt Mennesket, og givet ham en Aande, som
+              aldrig skal d&#x00F8;e&#x201C; (<persName key="pe7">Suhm</persName> 1771, s. 8). </p>
+            <p>Hos <persName key="pe7">Suhm</persName> ses tydelig referencer til den kristne skabergud. Ogs&#x00E5; en digter som
+              <persName key="pe3">Oehlenschl&#x00E4;ger</persName> har overtaget <persName key="pe7">Suhm</persName>s Alfaderbegreb (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName>
+              1965, s. 33). </p>
+          </div>
+          <div>
+          <head>Det ubevidst kristne</head>
+            <p>P&#x00E5; s. 170 st&#x00E5;r der i &#x201C;Asal&#x00E6;ren&#x201D;: men da Legemet var dannet af <seg type="com">Jetter</seg>, kunde Mennesket ei heller ganske
+              rives l&#x00F8;s fra disses Herred&#x00F8;mme, og naar <seg type="com"><rs xml:id="myt59"
+                >Odin</rs>s</seg> Aande i D&#x00F8;den bortveg fra Legemet, maatte dette v&#x00E6;re i <seg
+                  type="com"><seg type="com">Jettens</seg> Magt</seg></p>
+            <p>Det ses tydeligt, at <persName key="pe4">Grundtvig</persName> her anvender et ordvalg, som ligger t&#x00E6;t op ad det traditionelt kristne: legemet og &#x00E5;nd. </p>
+            </div>
+          <div>
+            <head>Metrik</head>
+            <p><persName key="pe4">Grundtvig</persName>s anvendelse af tilstr&#x00E6;bt oldnordisk metrik i
+              &#x201D;Asal&#x00E6;ren&#x201C; er ikke s&#x00E5; veludviklet som i hans senere
+              v&#x00E6;rker. Langt de fleste af hans kilder arbejder med strofeformen fornyr&#x00F0;islag,
+              dvs. en strofe, der best&#x00E5;r af otte kortlinier, som holdes sammen parvis ved
+              hj&#x00E6;lp af bogstavrim, alliteration, s&#x00E5;ledes at de ulige verslinier
+              b&#x00E6;rer de to f&#x00F8;rste rimende ord, de lige nummer tre af de bogstavrimende
+              ord. (fx &#x201D;Vred var Vingthor, / da han v&#x00E5;gned&#x201C;, hvor bogstavet v
+              b&#x00E6;rer rimet). I &#x201C;Asal&#x00E6;ren&#x201D; overholder <persName key="pe4">Grundtvig</persName> n&#x00E6;sten altid
+              kortlinierne og rytmen, mens han langtfra altid f&#x00E5;r bogstavrimene med. Det er,
+              som om det for ham er vigtigst at f&#x00E5; ordenes mening frem &#x2013; s&#x00E5;
+              m&#x00E5; bogstavrimene v&#x00E6;re der i den udstr&#x00E6;kning, det kan lade sig
+              g&#x00F8;re. Hvad der s&#x00E5;ledes mangler i alliteration, kompenseres der lidt for
+              i den tilstr&#x00E6;bt norr&#x00F8;ne stil, som fx rummer omvendt ordstilling og
+              manglende brug af bestemt eller ubestemt artikel, andre arkaismer
+              (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 210).</p>
+          </div>
+        </div>
+        <div>
+          <head><persName key="pe4">Grundtvig</persName>s (historie)filosofiske baggrund</head>
+          <p>Af <persName key="pe4">Grundtvig</persName>s dag&#x2013; og udtogsb&#x00F8;ger fremg&#x00E5;r det ofte, hvilke
+            forfattere han ikke bare har l&#x00E6;st, men ogs&#x00E5; fundet s&#x00E5; interessante,
+            at han har skrevet kortere eller l&#x00E6;ngere uddrag eller overs&#x00E6;ttelser fra
+            dem. N&#x00E5;r man skal indkredse <persName key="pe4">Grundtvig</persName>s (historie)filosofiske baggrund, m&#x00E5;
+            man vende blikket mod Tyskland, hvor det vil v&#x00E6;re navne som <persName key="25">Herder</persName>, <persName key="33">Novalis</persName>,
+            Schlegel, <persName key="54">Schelling</persName>, <persName key="35">Schiller</persName> og <persName key="29">Goethe</persName>, der springer i &#x00F8;jnene. Hertil kommer
+            naturligvis dansk&#x2013;tyskeren Henrich <persName key="pe18">Steffens</persName>, der i vinteren 1802&#x2013;1803 mere eller mindre direkte
+            introducerede <persName key="pe4">Grundtvig</persName> (og mange andre, der fulgte hans forel&#x00E6;sninger) for de
+            tyske filosoffer og digtere. I 1805 ejede <persName key="pe4">Grundtvig</persName> ogs&#x00E5; den udgivelse, hvormed
+            <persName key="pe18">Steffens</persName> fulgte op p&#x00E5; forel&#x00E6;sningerne, <hi rend="italic"><title>Indledning til philosophiske
+              Forel&#x00E6;sninger, af Henrich <persName key="pe18">Steffens</persName></title>,</hi> K&#x00F8;benhavn 1803. Bogen har nr. LXXII i
+            den unge <persName key="pe4">Grundtvig</persName>s bogfortegnelse (fasc. 501).</p>
+          <p> Den historieopfattelse, der kommer til syne i &#x201D;Asal&#x00E6;ren&#x201C;, har <persName key="pe4">Grundtvig</persName>
+            alts&#x00E5; delvist overtaget fra Henrich <persName key="pe18">Steffens</persName>, der igen er inspireret af
+            <persName key="54">Schelling</persName>, is&#x00E6;r hans <hi rend="italic"><title>System des transscendentalen Idealismus</title></hi> (1800). Hertil
+            kommer, at <persName key="pe4">Grundtvig</persName> har selv l&#x00E6;st <persName key="54">Schelling</persName>s <hi rend="italic"><title>Religion und Philosophie</title></hi> (1804) med
+            dens neoplatoniske metafysisk, se ogs&#x00E5; nedenfor. Id&#x00E9;historikeren Ole Vind
+            skriver: &#x201D;Det er <persName key="54">Schelling</persName>s syn p&#x00E5; verdensdramaet, der ligger til grund for
+            <persName key="pe4">Grundtvig</persName>s f&#x00F8;rste historiefilosofiske afhandlinger&#x201C; (Vind 1999, s.
+            157).</p>
+          <p> &#x201D;Asal&#x00E6;ren&#x201C; l&#x00E6;gger sig s&#x00E5;ledes op ad den romantiske
+            naturfilosofi, som fandt en dynamisk enhed bag naturens mangfoldighed (&#x201C;natur som
+            synlig &#x00E5;nd og &#x00E5;nd som usynlig natur&#x201C;). Denne identitetsl&#x00E6;re
+            rummer en teori om, &#x201D;at subjekt og objekt, jeg og ikke&#x2013;jeg, &#x00E5;nd (eller
+            bevidsthed) og natur var identiske&#x201C; (<persName key="53">Kondrup</persName> 1996, s. 170). Det er dog
+            f&#x00F8;rst i historiens gang, man kan se denne &#x0027;&#x00E5;nd&#x0027; fuldt
+            udfoldet. <persName key="pe18">Steffens</persName> anskuer det historiske forl&#x00F8;b fra mytologisk tid helt frem mod
+            hans egen samtid, og d&#x00E9;r ser han et forl&#x00F8;b, der er styret af
+            &#x0027;Verdens&#x00E5;nden&#x0027;. Billedligt bev&#x00E6;ger forl&#x00F8;bet sig langs
+            en kurve fra oldtidens bevidsthedm&#x00E6;ssige h&#x00F8;jere stade, som udg&#x00F8;res
+            af den mytologiske tid, nedad mod et nulpunkt, hvorefter det ikke kan blive
+            v&#x00E6;rre. Som en frelser f&#x00F8;des i nulpunktet Kristus, hvorefter det g&#x00E5;r
+            fremad eller opad igen, indtil man n&#x00E5;r samtiden, som i bedste fald kendetegnes
+            ved den romantiske idealisme, der i Tyskland er indvarslet af <persName key="55">Winckelmann</persName> og <persName key="29">Goethe</persName>
+            (<persName key="53">Kondrup</persName> 1996, s. 205). N&#x00E5;r <persName key="pe4">Grundtvig</persName> i &#x201C;Asal&#x00E6;ren&#x201D; s. 163 skriver
+            &#x201C;Eviges Kraft&#x201C; eller s. 166 fx bruger udtrykket &#x201C;evige Visdoms
+            Villie&#x201C;, er det helt klart, at han har en historieopfattelse, der grunder sig
+            p&#x00E5; <persName key="pe18">Steffens</persName>&#x0027; eller p&#x00E5; en af <persName key="pe18">Steffens</persName>&#x0027; inspirationskilder, fx
+            <persName key="35">Schiller</persName>, hvis forel&#x00E6;sning om universalhistorien <persName key="pe4">Grundtvig</persName> l&#x00E6;ste i
+            sommeren 1806 og skrev udtog fra (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 200). I en mere
+            omfattende ordlyd lyder citatet s. 166: &#x201D;Urdas (den evige Visdoms) Vilje&#x201C;. Heraf
+            fremg&#x00E5;r det tydeligt, hvordan <persName key="pe4">Grundtvig</persName> lader nornerne (Urd er en af nornerne)
+            v&#x00E6;re dem, der har kendskab til det st&#x00F8;rre, historiske forl&#x00F8;b.
+            Samtidig knyttes tr&#x00E5;den til det lille uddrag fra &#x201D;Odins Ravnegalder&#x201C;, som
+            <persName key="pe4">Grundtvig</persName> har anbragt som motto for &#x201C;Asal&#x00E6;ren&#x201D;. Man kan betragte <persName key="pe4">Grundtvig</persName>s
+            historiesyn som en udvidet udgave af det kristne, line&#x00E6;re historiesyn. </p>
+          <p> I et tilbageblik i <persName key="pe4">Grundtvig</persName>s dagbogsblade fra 24. juni 1807 skriver han om det, han
+            ser ligge bag de h&#x00E6;ndelser og visioner, som han finder i eddadigtene: &#x201D;Jeg ahnede
+            en filosofisk Betydning bag den historiske Kamp men Enheden fattedes&#x201C;
+            (<hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I, s. 405).</p>
+        </div>
+        <div>
+          <head><persName key="pe4">Grundtvig</persName>s verdenssyn, [historieopfattelse?&#x005D; og antropologi</head>
+          <p>Litteraturforskeren Sune <persName key="pe51">Auken</persName> har i sin store doktordisputats om <persName key="pe4">Grundtvig</persName>, <hi rend="italic"><title>Sagas
+            Spejl</title></hi> (<persName key="pe51">Auken</persName> 2005), i afsnittet om &#x201D;Om Religion og Liturgie&#x201C;, der blev
+            offentliggjort i tidsskriftet <hi><title>Theologisk Maanedsskrivt</title></hi> februar 1807, givet den kortest
+            mulige beskrivelse af <persName key="pe4">Grundtvig</persName>s mytologiske helhedssyn. I <persName key="pe51">Auken</persName>s optik handler
+            mytologien om: &#x201D;et fald fra identiteten med Alfader og og en kamp gennem historien frem
+            til den endelige kamp ved ragnarok&#x201C; (<persName key="pe51">Auken</persName> 2005, s. 114). En v&#x00E6;sentlig
+            tanke er s&#x00E5;ledes for <persName key="pe4">Grundtvig</persName>, at den kamp mellem aser og j&#x00E6;tter, som
+            udl&#x00F8;ses af drabet p&#x00E5; Balder (som Loke er mere eller mindre direkte skyld
+            i), der finder sted ved optakten til Ragnarok, er helt bevidst fremkaldt af nornernes -
+            og bag dem Alfaders- styren af historiens gang. Denne indsigt er <persName key="pe4">Grundtvig</persName> if&#x00F8;lge
+            en dagsbogsoptegnelser fra 24. juni 1807 ledt p&#x00E5; sporet af allerede i 1806: &#x201D;Jeg
+            betragtede |disse| Kampyttringerne n&#x00F8;jere, og fandt at Lokes Forhold til Aserne
+            bestemte Kamplykken, og m&#x00F8;jsommelig ledte jeg efter Punkten da Loke blev Asers
+            Fjende&#x201C; (<hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I 1979, s. 405). </p>
+          <p> I forl&#x00E6;ngelse af historiesynet, som er typisk romantisk, tegner der sig dog
+            ogs&#x00E5; konturerne af et verdensbillede, der er v&#x00E6;sensforskelligt fra det,
+            som fx <persName key="pe18">Steffens</persName> havde i tankerne. For <persName key="pe4">Grundtvig</persName> bliver de gamle nordiske guders og
+            j&#x00E6;tters indbyrdes kamp og sk&#x00E6;rmydsler p&#x00E5; &#x00E9;n gang lige
+            s&#x00E5; virkelige som fx &#x0027;Slaget p&#x00E5; Rheden&#x0027; i 1801 og samtidig et
+            udtryk for en kamp p&#x00E5; det mere symbolske plan. P&#x00E5; dette symbolske &#x2013; eller
+            m&#x00E5;ske snarere allegoriske &#x2013; plan kommer kampen mellem guder og j&#x00E6;tter til
+            at repr&#x00E6;sentere noget mere end oldtidens kampe.</p>
+          <p> N&#x00E5;r <persName key="pe4">Grundtvig</persName> taler om fx Loke og Odin, g&#x00F8;r han det p&#x00E5; en
+            m&#x00E5;de, der ligger mellem (litter&#x00E6;r) personificering af abstrakter og
+            opfattelse af dem som helt reelle st&#x00F8;rrelser. I &#x201C;Asal&#x00E6;ren&#x201D; s. 169 nederst
+            udl&#x00E6;gger <persName key="pe4">Grundtvig</persName> selv dette, hvorved bl.a. Loke bliver klogskabens og
+            forstandens repr&#x00E6;sentant. Andre steder till&#x00E6;gges Loke andre negative
+            egenskaber, fx egoisme og selvoptagethed,. S&#x00E5; n&#x00E5;r <persName key="pe4">Grundtvig</persName> skriver
+            &#x0027;Kraften&#x0027; eller &#x0027;Massen&#x0027;, kan det n&#x00E6;sten overalt
+            overs&#x00E6;ttelse til &#x0027;Odin&#x0027; eller &#x0027;j&#x00E6;tterne&#x0027;.
+            Eftersom j&#x00E6;tterne stammer fra urj&#x00E6;tten Ymer, kan ogs&#x00E5; Ymer
+            identificeres med &#x0027;massen&#x0027;.</p>
+          <p> For <persName key="pe4">Grundtvig</persName> bliver denne &#x2013; kan man kalde det &#x0027;udvidede allegorisering&#x0027;
+            &#x2013; en kilde til indsigt om verdenshistoriens uundg&#x00E5;elige gang, hvor forskellige
+            kr&#x00E6;fter k&#x00E6;mper mod hinanden efter Alfaders &#x2013; og hans redskab: nornernes &#x2013;
+            vilje. Anderledes udtrykt har <persName key="pe4">Grundtvig</persName> set verdensgangen som &#x201C;en kamp mellem
+            massen (j&#x00E6;tterne, det selvtagne liv) og den oprindelig guddommelige, men
+            frafaldne kraft (aserne)&#x201C; (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 209). Dette citat
+            rummer to vigtige ord og en udl&#x00E6;gning af dem, nemlig ordet &#x0027;masse&#x0027;
+            og ordet &#x0027;kraft&#x0027;. Den mere allegoriske udl&#x00E6;gning af de gamle guder
+            er der i &#x00F8;vrigt ogs&#x00E5; bel&#x00E6;g for hos <persName key="pe7">Suhm</persName>.</p>
+        </div>
+        <div>
+          <head><persName key="pe4">Grundtvig</persName>s mytologiske v&#x00E6;rkhorisont</head>
+          <p>Da <persName key="pe4">Grundtvig</persName> for alvor selv g&#x00E5;r i gang med at gendigte de gamle eddakvad,
+            st&#x00E5;r han ikke p&#x00E5; bar bund. Dels eksisterer der to meget forskellige
+            udgaver af de gamle tekster og/eller deres overs&#x00E6;ttelse, dels findes der flere
+            h&#x00E5;ndb&#x00F8;ger til nordisk mytologi. Og eftersom <persName key="pe4">Grundtvig</persName> ofte bringer notater
+            i sine dag&#x2013; og udtogsb&#x00F8;ger over, hvad han l&#x00E6;ser, kan vi et stykke
+            af vejen rekonstruere hans mytologiske horisont. Ud over de udgivne dag&#x2013; og
+            udtogsb&#x00F8;ger (<persName key="pe23">Molbech</persName>&#x2013;Grundtvig 1888; <hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I,
+            1979) findes der ogs&#x00E5; en r&#x00E6;kke fascikler, dvs. bundter af manuskripter o.
+            lign., fra <persName key="pe4">Grundtvig</persName>s h&#x00E5;nd, hvori der ligger udkast til overs&#x00E6;ttelser af
+            eddadigtene og uddrag af eller overs&#x00E6;ttelser af l&#x00E6;st (fag)litteratur.
+            Sommeren 1804 l&#x00E6;ste <persName key="pe4">Grundtvig</persName> oldislandsk som en besat. Dagbogen b&#x00E6;rer
+            vidnesbyrd om de mange tusinde sider, han k&#x00E6;mper sig igennem &#x2013; mange af dem kun
+            p&#x00E5; oldislandsk, men en del dog med latinske paralleltekster &#x2013; sagaer, eddadigte,
+            optegnelser om nedskrivere. Indimellem s&#x00F8;ger han ogs&#x00E5; selv at
+            oversatte.</p>
+          <div>
+            <head>S&#x00E6;munds Edda &#x2013; den arnamagn&#x00E6;anske kommissions udgave</head>
+            <p>Af <persName key="pe4">Grundtvig</persName>s mange l&#x00E6;ste v&#x00E6;rker er det vigtigste den
+              arnamagn&#x00E6;anske kommissions store latinsprogede udgave af en r&#x00E6;kke af
+              eddakvadene med den lange titel: <title><hi>Edda S&#x00E6;mundar Hinns Fr&#x00F3;da. Edda
+                Rhythmica seu antiqvior, vulgo S&#x00E6;mundina dicta</hi> (dvs. S&#x00E6;mund den Frodes
+              (eller L&#x00E6;rdes) Edda</title>. Den poetiske eller &#x00E6;ldre edda, almindeligvis kaldet
+              S&#x00E6;munds). Dengang mente man nemlig, at det var isl&#x00E6;ndingen S&#x00E6;mund
+              den Frode (d&#x00F8;d 1130), der havde forfattet de digte, som i dag g&#x00E5;r under
+              navnet <hi rend="italic"><title>Den &#x00E6;ldre Edda </title></hi> engang i begyndelsen af 1100&#x2013;tallet. Udgavens
+              f&#x00F8;rste bind kom i 1787 (andet i 1817 og tredie f&#x00F8;rst i 1828). Bag
+              udgavens f&#x00F8;rste bind stod s&#x00E5; prominente personer som Bolle Willum
+              Luxdorph, G.C. Suhm, B&#x00F8;rge Thorlacius, Abraham Kall og Jacob Baden. I deres
+              over fyrre sider lange forord forsvarer de sig en del mod dem, der afviser nytten af
+              at studere den nordiske oldtid i almindelighed og eddaen i s&#x00E6;rdeleshed:</p>
+            <p><quote>Det er nemlig deres opfattelse, at hele Eddaforskningen, som naturligvis
+              kr&#x00E6;ver meget arbejde og er forbundet med stor usikkerhed, men ellers er lidet
+              nyttig, hvis ikke ganske unyttig, ikke p&#x00E5; nogen m&#x00E5;de forekommer
+              s&#x00E5; betydningsfuld, at den l&#x00E6;rde verden kan bruge energi og
+              kr&#x00E6;fter p&#x00E5; den, kr&#x00E6;fter, som mere klogt burde anvendes p&#x00E5;
+              gode og nyttige sager. Disse personer r&#x00E5;ber op om, at dette
+              v&#x00E6;rdil&#x00F8;se og mere end halvbarbariske sludder b&#x00F8;r overlades til
+              dem, der har skrevet det, og deres hjernespind bortvejres som spindelv&#x00E6;v. Vi
+              for vort vedkommende vil ikke bruge mange kr&#x00E6;fter p&#x00E5; at g&#x00E5; i
+              rette med disse menneskers afvisende holdning, for det er vor opfattelse, at studiet
+              af nordisk mytologi ikke b&#x00F8;r p&#x00E5;n&#x00F8;des alle eller dem, der ikke
+              &#x00F8;nsker det. Hvis der imidlertid findes nogen, som har en lidt anden mening om
+              denne del af de nordiske oldtidsminder, s&#x00E5; skal de vel have lov til at
+              f&#x00F8;lge deres overbevisning uden at andre, der finder det foragteligt, begynder
+              at protestere? (s.VIII, oversat af Niels W. Bruun, 2010).</quote></p>
+            <p>Udgaven er tosproget hvad ang&#x00E5;r digtene, dvs. b&#x00E5;de p&#x00E5; latin og
+              oldislandsk. For sin tid er den endog meget grundig og videnskabelig med hensyn til
+              overleveringen i flere forskellige h&#x00E5;ndskrifter og forsynet med mange og
+              l&#x00E6;rde noter, en udf&#x00F8;rlig ordliste, stikordsregister m.v. (alt sammen
+              p&#x00E5; latin, naturligvis). F&#x00F8;rste bind rummer f&#x00F8;lgende digte (med de
+              g&#x00E6;ngse titler i parentes): Vafþrudnism&#x00E1;l (Vaftrudners Sang),
+              Grímnism&#x00E1;l (Grimners Sang), F&#x00F6;r Skirnis (Skirners F&#x00E6;rd), Harbardz
+              Liod (Harbards Sang), Hymis Kvida (Hymers Kv&#x00E6;de), &#x00C6;gis Drekka
+              (&#x00C6;girs G&#x00E6;stebud), Þryms Kvida (Trymskvadet eller Hammerhentningen),
+              Hrafnagaldr Oþins (Odins Ravnegalder), Vegtams Kvida (Vegtams Kv&#x00E6;de), Alvís
+              M&#x00E1;l (Sangen om Alvis), Fi&#x00F6;lsvinns M&#x00E1;l (Fj&#x00E5;lsvidkvadet),
+              Hyndlu&#x2013;Lioþ (Hyndlas Sang). </p>
+            <p> Til geng&#x00E6;ld mangler netop det digt, der for <persName key="pe4">Grundtvig</persName> er vigtigst af dem
+              alle, nemlig <hi rend="italic"><title>V&#x00F8;lvens Sp&#x00E5;dom</title></hi> eller <hi rend="italic"><title>Volusp&#x00E1;</title></hi>, som <persName key="pe4">Grundtvig</persName> h&#x00E6;nger
+              hele sin fremstilling og til dels ogs&#x00E5; kronologi op p&#x00E5;. Det blev
+              f&#x00F8;rst trykt i tredie bind, 1828. Han har dog kunnet l&#x00E6;se d&#x00E9;t i
+              overs&#x00E6;ttelse hos <persName key="pe1">Sandvig</persName> og &#x2013; m&#x00E5;ske &#x2013; i original hos <persName key="pe15">Resen</persName>.</p>
+          </div>
+          <div>
+            <head><persName key="pe15">Resen</persName></head>
+            <p>For <persName key="pe4">Grundtvig</persName> har m&#x00E5;ske n&#x00E5;et at stifte bekendtskab med V&#x00F8;lvens
+              Sp&#x00E5;dom i Peder Hansen <persName key="pe15">Resen</persName>s ligeledes tosprogede udgave fra 1665, <title><hi rend="italic">Philosophia
+              antiqvissima Norvego&#x2013;Danica dicta Woluspa qv&#x00E6; est Pars Edd&#x00E6;
+              S&#x00E6;mundi Islandice &#x0026; Latine publici juris primum facta, a Petro Joh.
+                <persName key="pe15">Resen</persName>io</hi> (Gammel norsk&#x2013;dansk visdom kaldet Voluspa, som er en del af
+                S&#x00E6;munds Edda</title>, trykt p&#x00E5; islandsk og latin for f&#x00F8;rste gang gjort
+              tilg&#x00E6;ngelig for offentligheden [den latinske overs&#x00E6;ttelse er af
+              Stephanius &#x00D3;lafsson&#x005D;). I et (bevaret) brev dateret 1. maj 1807
+              sp&#x00F8;rger <persName key="pe4">Grundtvig</persName> nemlig Rasmus <persName key="pe2">Nyerup</persName>, der p&#x00E5; det tidspunkt bl. a. er
+              universitetsbibliotekar, om han evt. kan l&#x00E5;ne den til Langeland mod kaution
+              (Breve I 1924, s. 1). Senere har <persName key="pe4">Grundtvig</persName> i alt fald opn&#x00E5;et kendskab til
+              <persName key="pe15">Resen</persName>&#x2013;udgaven, for i fasc. 264.1 (juni 1807) taler han blad 4 verso om &#x201D;<persName key="pe15">Resen</persName>s
+              ford&#x00E6;rvede Tekst&#x201C;, ligesom han i et brev til Rasmus <persName key="pe2">Nyerup</persName> fra 6. januar
+              1808 taler om &#x201D;<persName key="pe15">Resen</persName>s Sk&#x00F8;desl&#x00F8;se tekst&#x201C; (Breve I 1924, s. 7).
+              <persName key="pe15">Resen</persName> har v&#x00E6;ret ekstremt hurtig med sin udgivelse, der udkommer kun tre
+              &#x00E5;r efter at det mest ber&#x00F8;mte eddah&#x00E5;ndskrift, <hi rend="italic"><title>Codex Regius</title></hi> fra o.
+              1279, var kommet til Danmark.</p>
+          </div>
+          <div>
+            <head><persName key="pe1">Sandvig</persName></head>
+            <p>Som inspiration har Bertel Christian <persName key="pe1">Sandvig</persName>s anonyme overs&#x00E6;ttelse,
+              <hi rend="italic"><title>Fors&#x00F8;g til en Overs&#x00E6;ttelse af S&#x00E6;munds Edda</title>,</hi> fra 1783&#x2013;85,
+              med varianttitlen: S&#x00E6;munds Edda, ogs&#x00E5; gjort sin sin gavn. Af <persName key="pe4">Grundtvig</persName>s
+              bogliste fra 1805 (fasc. 501) fremg&#x00E5;r det, at han selv har ejet bogen. Den
+              rummer f&#x00F8;lgende digte (titlerne i parentes er de mere almindelige): Solarliod
+              (Solsangen), Odins Ravne&#x2013;Besv&#x00E6;rgelse (Odins Ravnegalder), Vola&#x0027;s
+              Spaadom (V&#x00F8;lvens Sp&#x00E5;dom), Odins h&#x00F8;je Sang
+              (H&#x00E1;vam&#x00E1;l), Vaftrudnismal (Vaftrudners Sang), Grimnismal (Grimners Sang),
+              Alvismal (Sangen om Alvis), &#x00C6;girs G&#x00E6;stebud, Hammerens Hentelse
+              (Hammerhentningen, Trymskvadet), Skirners Reise (Skirners F&#x00E6;rd), Vegtams
+              Kv&#x00E6;de, Valundurs Kv&#x00E6;de (Kvadet om V&#x00F8;lund), Harbards Sang, Hymirs
+              Kv&#x00E6;de, Fiolviders Sang (Fj&#x00E5;lsvidkvadet), Kong Heidreks Viisdom,
+              Fort&#x00E6;lling om Rigr (Rigs Remsedigt). Mens <persName key="pe1">Sandvig</persName> i 1780&#x0027;erne sidder og overs&#x00E6;tter,
+              ved han ikke, at den arnamagn&#x00E6;anske kommission er p&#x00E5; vej med en
+              videnskabelig, tekstkritisk udgivelse med tilh&#x00F8;rende overs&#x00E6;ttelse til
+              latin.</p>
+            <p> Selv om <persName key="pe4">Grundtvig</persName> selv overs&#x00E6;tter eddadigtene i &#x201D;Asal&#x00E6;ren&#x201C;, er
+              det sikkert, at han ogs&#x00E5; har sk&#x00E6;vet til <persName key="pe1">Sandvig</persName>s overs&#x00E6;ttelse,
+              for han kommenterer den ligefrem i &#x201D;Asal&#x00E6;ren&#x201C;. Derudover henter han fx
+              et par gange norr&#x00F8;nismer fra <persName key="pe1">Sandvig</persName>, nemlig fx ordet &#x201D;Ulfstriden&#x201C;
+              (&#x201C;Asal&#x00E6;ren&#x201D;, s. 178), der hentyder til, at Fenrisulven slippes l&#x00F8;s ved
+              Ragnarok eller &#x201D;Banetuen&#x201C;, s. 160. Kun sj&#x00E6;ldent benytter han direkte
+              <persName key="pe1">Sandvig</persName>s formuleringer; dog er der s. 172 i &#x201D;Asal&#x00E6;ren&#x201C; er strofe fra
+              <hi><title>Odins Ravnegalder</title>,</hi> der er overtaget n&#x00E6;sten ordret.</p>
+          </div>
+          <div>
+            <head>Bi&#x00F6;rner</head>
+            <p>I 1737 udgav svenskeren Erik Julius Bi&#x00F6;rner i Stockholm storv&#x00E6;rket
+              <hi rend="italic"><title>Nordiska K&#x00E4;mpa Dater, i en Sagoflock samlade om forna Kongar och
+              Hj&#x00E4;ltar. F&#x00F6;r hwilken, f&#x00F6;rutan et st&#x00E4;ndigt &#x00C4;ttartahl
+              p&#x00E5; alla befintliga Swenska Kongar och Drotningar, &#x00E4;fwen et
+              F&#x00F6;retal finnes</title></hi>. Dette ommfattende v&#x00E6;rk i foiloformat er tresproget:
+              (old)islandsk, latinsk og svensk og rummer 13 fornaldersagaer, deriblandt &#x2013; som nummer
+              ni &#x2013; <hi><title>V&#x00F8;lsungesagaen</title>,</hi> hvis hovedpersoner er Brynhild og Sigurd, et elskerpar,
+              som <persName key="pe4">Grundtvig</persName> gennem hele sin ungdom var optaget af, og som den tyske, senromantiske
+              komponist Richard Wagner senere skulle ud&#x00F8;deligg&#x00F8;re i sit
+              storv&#x00E6;rk <hi rend="italic">Nibelungenring</hi> (1876). Netop fordi v&#x00E6;rket er tresproget, har
+              <persName key="pe4">Grundtvig</persName> ogs&#x00E5; kunnet benytte det til at l&#x00E6;re mere oldislandsk.</p>
+          </div>
+          <div>
+            <head>Ingen h&#x00E5;ndskrifter</head>
+            <p>Det er dog kun <persName key="pe1">Sandvig</persName> og den arnamagn&#x00E6;anske kommissions udgave, som Grundvig
+              n&#x00E6;vner eksplicit i &#x201D;Asal&#x00E6;ren&#x201C;. At <persName key="pe4">Grundtvig</persName> ikke har haft
+              mulighed for at sidde med originaler af de oldislandske tekster, fremg&#x00E5;r af
+              dagbogsblade fra 24. juni 1807: &#x201D;Jeg har ans&#x00F8;gt om at faa islandske
+              Manuskripter; men rimeligt er det, at jeg snart forlader Langeland, og da kan jeg i
+              K&#x00F8;benhavn ret begynde&#x201C; (D &#x0026; U, 406). P&#x00E5; grund af Danmarks
+              ansp&#x00E6;ndte forhold til engl&#x00E6;nderne er h&#x00E5;ndskriftudl&#x00E5;n fra
+              K&#x00F8;benhavn i sommeren 1807 ogs&#x00E5; fuldst&#x00E6;ndigt umuligt.
+              Bombardementet af K&#x00F8;benhavn finder ganske vist f&#x00F8;rst sted natten mellem
+              4. og 5. september 1807, men i krigen mellem England og Frankrig, hvor Danmark bliver
+              betragtet som allieret med Frankrig, har England allerede i januar 1807 reageret
+              p&#x00E5; Frankrigs fastlandssp&#x00E6;rring ved at indf&#x00F8;re en Order in
+              Council, som forbyder neutral skibsfart til Frankrig. Danmark står klemt</p>
+          </div>
+        </div>
+        <div>
+          <head>Eddadigtene bag Asalaren</head>
+          <p>N&#x00E5;r man s&#x00E5;ledes ser p&#x00E5;, hvor mange eddadigte, <persName key="pe4">Grundtvig</persName> har haft
+            mulighed for at kende, kan det m&#x00E5;ske undre, at han i &#x201D;Asal&#x00E6;ren&#x201C; kun
+            udnytter en mindre del. Flemming <persName key="pe52">Lundgreen&#x2013;Nielsen</persName> angiver
+            (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1965, s. 31), at det drejer sig om fem. I noten til
+            &#x201C;Asal&#x00E6;ren&#x201D; s. 161 angiver <persName key="pe4">Grundtvig</persName> selv: &#x201D;Voluspa, Hamarrheimt, Vegtams Kvida,
+            F&#x00F8;r Skirner, og Rafnagaldr Odins&#x201C;. Han medtager dog ogs&#x00E5;
+            &#x201D;&#x00C6;gir Drekke&#x201C; (note til s. 165) og &#x201D;Fi&#x00F8;lsvins Mal&#x201C;
+            (note til s.184) og Hyndlas Sang (s. 162). Af disse tekster regnes Odins
+            Ravnegalder i dag for en senere tekst, hvorfor den heller ikke er med i de nyere
+            overs&#x00E6;ttelser af eddasangene. Her f&#x00F8;lger en kort gennemganga af de
+            eddadigte, <persName key="pe4">Grundtvig</persName> har benyttet: </p>
+          <div>
+            <head>V&#x00F8;lvens Sp&#x00E5;dom</head>
+            <p>V&#x00F8;lvens Sp&#x00E5;dom er det n&#x00E6;stl&#x00E6;ngste digt i <hi rend="italic"><title>Eddaen</title></hi> og
+              fort&#x00E6;ller Verdens historie fra f&#x00F8;r skabelsen til efter undergangen,
+              Ragnarok, hvor alt genopst&#x00E5;r i harmoni. En v&#x00F8;lve, dvs.
+              sp&#x00E5;dmskyndig kvinde, tvinges af Odin til at r&#x00F8;be denne verdensplan.
+              Centralt i digtet st&#x00E5;r fort&#x00E6;llingen om Balders d&#x00F8;d og forsoningen
+              mellem ham og H&#x00F8;der i den nye verden.</p>
+          </div>
+          <div>
+            <head>Hammerhentningen</head>
+            <p>I Hammerhentningen eller Trymskvadet fort&#x00E6;lles om, hvordan j&#x00E6;tten Trym
+              stj&#x00E6;ler Thors hammer, Mj&#x00F8;lner. For at Thor kan f&#x00E5; den igen,
+              m&#x00E5; Freja gifte sig med Trym. Det bliver dog Thor selv, der kl&#x00E6;des ud som
+              brud, hvilket afstedkommer mange muntre replikskifter under bryllupsfesten. Da Trym
+              l&#x00E6;ggen hammeren i Thors sk&#x00F8;d, afsl&#x00F8;rer Thor sig og banker
+              j&#x00E6;tterne.</p>
+          </div>
+          <div>
+            <head>Vegtams Kv&#x00E6;de</head>
+            <p>Vegtams Kv&#x00E6;de eller Balders Dr&#x00F8;mme handler om den forkl&#x00E6;dte
+              Odins ridt til d&#x00F8;dsriget og Hel, hvor han v&#x00E6;kker en d&#x00F8;d
+              v&#x00F8;lve, dvs. sp&#x00E5;kvinde, for at f&#x00E5; hende til at afsl&#x00F8;re,
+              hvad Balders onde dr&#x00F8;mme betyder. Odin rider tilbage til Asg&#x00E5;rd med
+              varsler om Balders d&#x00F8;d og det forest&#x00E5;ende Ragnarok. </p>
+          </div>
+          <div>
+            <head>Skirners F&#x00E6;rd</head>
+            <p><hi rend="italic"><title>Skirners F&#x00E6;rd</title></hi> handler om Frejs forelskelse i den undersk&#x00F8;nne
+              j&#x00E6;ttedatter, Gerd. Frej sender sin tjener Skirner afsted for at fri til hende,
+              men hun lader sig ikke lokke af de guddommelige gaver, han har med. F&#x00F8;rst ved
+              trusler f&#x00E5;r Skirner aftalt et elskovsm&#x00F8;de mellem hende og Frej.</p>
+          </div>
+          <div>
+            <head>Odins Ravnegalder</head>
+            <p>Odins Ravnegalder er en meget dunkel eftermiddelalderlig tekst (men det vidste
+              <persName key="pe4">Grundtvig</persName> ikke), der dybest set ikke har nogen slutning. Odin sender en delegation,
+              best&#x00E5;ende af Heimdal, Loke og m&#x00E5;ske Brage, ud for at forh&#x00F8;re sig
+              om fremtiden. Loke og Heimdal vender tilbage uden svar, hvorefter guderne vil sove
+              p&#x00E5; det. S&#x00E5; bryder dagen frem.</p>
+          </div>
+          <div>
+            <head>&#x00C6;girs G&#x00E6;stebud</head>
+            <p>&#x00C6;girs G&#x00E6;stebud eller Lokes Sk&#x00E6;nderi er en munter historie om,
+              hvordan den ikke inviterede Loke under et &#x00F8;lgilde, hvortil &#x00C6;gir har
+              brygget mj&#x00F8;den, alligevel dukker op og f&#x00E5;r forn&#x00E6;rmet stort set
+              samtlige guder: Kvinderne er l&#x00F8;sagtige, m&#x00E6;ndene feje, og en del
+              beg&#x00E5;r blodskam.</p>
+          </div>
+          <div>
+            <head>Fj&#x00E5;lsvidkvadet</head>
+            <p>Fj&#x00E5;lsvidkvadet er en del af Svipdagskvadet og fort&#x00E6;ller om Svipdags
+              brudef&#x00E6;rd p&#x00E5; vej mod sin elskede, Mengl&#x00F8;d, efter at han i
+              f&#x00F8;rste halvdel af kvadet har ops&#x00F8;gt sin d&#x00F8;de mor for at f&#x00E5;
+              udleveret et tryllesprog, der kan hj&#x00E6;lpe ham p&#x00E5; f&#x00E6;rden. Det er
+              senere blevet anset for at v&#x00E6;re en maskeret myte om Freja og Frejs
+              forening.</p>
+          </div>
+          <div>
+            <head>Hyndlas Sang</head>
+            <p>I Hyndlas Sang s&#x00F8;ger Freja oplysninger hos v&#x00F8;lven Hyndla om elskeren
+              Ottars sl&#x00E6;gtskabsforhold. Mere en 80 navne n&#x00E6;vnes sammen med en oversigt
+              over verdens gang. Et indskud i digtet kaldes derfor indimellem for &#x201D;Den korte
+              V&#x00F8;lvens Sp&#x00E5;dom&#x201C;.</p>
+          </div>
+        </div>
+        <div>
+          <head>Opslagsv&#x00E6;rker</head>
+          <div>
+            <head><persName key="pe7">Suhm</persName></head>
+            <p>Af opslagsv&#x00E6;rker om nordisk mytologi har <persName key="pe4">Grundtvig</persName> is&#x00E6;r st&#x00F8;ttet
+              sig til Peter Friederich <persName key="pe7">Suhm</persName>: <hi><title>Om Oden og den Hedniske Gudel&#x00E6;re og Gudstieneste
+                udi Norden</title>,</hi> K&#x00F8;benhavn 1771. I bogen gennemg&#x00E5;r <persName key="pe7">Suhm</persName> hele det nordiske
+              gudegalleri med skyldig hensyntagen til kilderne, som is&#x00E6;r er <hi rend="italic"><title>Den &#x00E6;ldre
+                Edda</title></hi> og <hi rend="italic"><title>Snorres Edda</title></hi>. <persName key="pe7">Suhm</persName> fors&#x00F8;ger at harmonisere kilderne, s&#x00E5;ledes at
+              indbyrdes mods&#x00E6;tninger i de gamle kilder i videst muligt omfang sl&#x00F8;res.
+              <persName key="pe4">Grundtvig</persName> har formodentlig fundet den p&#x00E5; skolebiblioteket i Aarhus i 1799 eller
+              1800 (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1965, s. 33). Helge Toldberg (Toldberg 1946, s. 29) kan
+              dog med st&#x00F8;tte i Frederik R&#x00F8;nning: <hi rend="italic"><title><persName key="pe4">Grundtvig</persName></title></hi> (R&#x00F8;nning
+              1907&#x2013;1925, s. 85;106) oplyse, at <persName key="pe4">Grundtvig</persName> allerede i Thyregod&#x2013; og
+              &#x00C5;rhustiden, dvs. enten 1792&#x2013;98 eller 1798&#x2013;1800, havde l&#x00E6;st
+              denne bog. <persName key="pe4">Grundtvig</persName> er dog ogs&#x00E5; kritisk over for <persName key="pe7">Suhm</persName>. Fx er der i fasc. 263,
+              blad 9, bl. a. adskillige kritiske bem&#x00E6;rkninger til <persName key="pe7">Suhm</persName>s allegoriske
+              forst&#x00E5;else af asal&#x00E6;ren. (<persName key="pe7">Suhm</persName> er dog ogs&#x00E5; euhemeristisk, idet han
+              fx har et helt afsnit om &#x201D;Odin som et menneske&#x201C; (<persName key="pe7">Suhm</persName> 1771, fra s. 68)). I
+              1807, hvor &#x201C;Asal&#x00E6;ren&#x201D; udkommer, er <persName key="pe7">Suhm</persName>s bog alts&#x00E5; et v&#x00E6;rk, som
+              <persName key="pe4">Grundtvig</persName> har haft adskillige &#x00E5;r til at forholde sig til. <persName key="pe4">Grundtvig</persName> beder sig
+              dog i et brev af 15. maj 1807 til Rasmus <persName key="pe2">Nyerup</persName> over, om at l&#x00E5;ne v&#x00E6;rket,
+              da han ikke selv ejer det: &#x201D;<persName key="pe7">Suhm</persName>s Skrift om Odin, der er mig dobbelt kj&#x00E6;rt, da
+              det i min skolegang f&#x00F8;rst stillede min L&#x00E6;ngsel efter Nordens Guder,
+              beder jeg Dem sende mig, da jeg uagtet al anvendt Umage ej kan blive Ejer
+              deraf&#x201C; (Breve I 1924, s. 4).</p>
+            <p>Til geng&#x00E6;ld har <persName key="pe4">Grundtvig</persName> selv har ejet <persName key="pe7">Suhm</persName>s <hi><title>Udtog af Danmarks, Norges og
+              Holstens Historie, til Brug for den studerende Ungdom</title></hi>, i den af J&#x00F8;rgen Kierulf
+              omarbejdede udgave fra 1802. Den har nr. XXIV i den bogliste, <persName key="pe4">Grundtvig</persName>
+              anl&#x00E6;gger i &#x00E5;ret 1805: &#x201D;Optegnelse / paa / de B&#x00F8;ger / Jeg ejer /
+              og / ejende vorder / begyndt / d. XXd Decbr / MDCCCV / Nikolaj Frederik Severin
+              <persName key="pe4">Grundtvig</persName> / Ludomagister Egel&#x00F8;kkis&#x201C; (fasc. 501).</p>
+          </div>
+          <div>
+            <head>Saxo</head>
+            <p>Sk&#x00F8;nt der ikke st&#x00E5;r meget om asal&#x00E6;ren hos Saxo, har <persName key="pe4">Grundtvig</persName>
+              v&#x00E6;ret optaget af Saxos <hi rend="italic"><title>Danernes Bedrifter (Gesta Danorum)</title>,</hi> som han da
+              ogs&#x00E5; selv overs&#x00E6;tter senere. I de f&#x00F8;rste b&#x00F8;ger i <hi rend="italic"><title>Gesta
+                Danorum</title></hi> g&#x00F8;r Saxo Odin til konge over gudeforsamlingen i Byzans. I det hel taget
+              pr&#x00F8;ver Saxo at beskrive aseguderne som historiske personer (Reich 2001),
+              alts&#x00E5; tage det hedenske ud af guderne og g&#x00F8;re dem til almindelige
+              mennesker (et euhemeristisk synspunkt). Det har formentlig gjort det lettere for Saxo
+              samtid at goutere det hedenske aspekt, at indfaldsvinklen var s&#x00E5; eksplicit
+              kristen.</p>
+          </div>
+          <div>
+            <head>M&#x00F8;inichen og Bastholm</head>
+            <p>Dagbogen viser 1. juni 1804, at <persName key="pe4">Grundtvig</persName> ogs&#x00E5; har l&#x00E6;st det p&#x00E5;
+              det tidspunkt forholdsvis nye v&#x00E6;rk af Bastholm: <hi rend="italic"><title>Historisk&#x2013;philosophiske
+              Unders&#x00F8;gelser over de &#x00E6;ldste Folkesl&#x00E6;gters religi&#x00F8;se og
+              philosofiske Meninger</title></hi> (1802). <persName key="pe4">Grundtvig</persName> er uenig i Bastholms meget rationalistiske
+              opfattelse af fx Hel og Niflheim, der opfattes som &#x201C;Sindbilleder&#x201C;
+              (<persName key="pe4">Grundtvig</persName>s ord for mytologi) (<persName key="52">Lundgreen-Nielsen</persName> 1980, s. 117).</p>
+            <p> Hertil kommer et v&#x00E6;rk, som <persName key="pe4">Grundtvig</persName> ikke udtrykker speciel begejstring for
+              (han omtaler forfatteren som uinteressant), men hvis oplysninger han alligevel ikke
+              alene g&#x00F8;r brug af, men ogs&#x00E5; gladeligt tolker videre p&#x00E5;, <link/>se note
+              til &#x201D;d&#x00F8;dv&#x00E6;kkende runer&#x201C; Det drejer sig om Jacob B&#x00E6;rent
+              M&#x00F8;inichen <hi><title>Nordiske Folks Overtroe, Guder, Fabler og Helte indtil Frode 7 Tider
+                i Bogstav&#x2013;Orden</title>,</hi> K&#x00F8;benhavn 1800. Bogen har den mere ligefremme rygtitel
+              <hi rend="italic"><title>Nordisk Gudel&#x00E6;re</title></hi>
+              . </p>
+          </div>
+          <div>
+            <head>Moritz</head>
+            <p>Det er dog ikke bare danske opfattelser af fortidens guder <persName key="pe4">Grundtvig</persName> har studeret.
+              Samtidens store tyske guru, Karl Philipp Moritz, hvis <hi rend="italic"><title>G&#x00F6;tterlehre, oder,
+              mythologische Dichtungen der Alten, zusammengestellt von Karl Philipp Moritz, mit
+              f&#x00FC;nf und sechzig Kupfer gestochenen Abbildungen nach antiken geschnittenen
+              Steinen und andern Denkm&#x00E4;lern des Alterthums</title></hi> (Gudel&#x00E6;re eller de gamles
+              mytologiske digtning, sammenstillet af Karl Phillip Moritz med 65 kobberstik efter
+              udhuggede antikke sten og andre mindesm&#x00E6;rker fra antikken) var udkommet i
+              Berlin 1791, h&#x00F8;rer ogs&#x00E5; med til <persName key="pe4">Grundtvig</persName>s mytologiske horisont og
+              bliver l&#x00E6;st i for&#x00E5;ret 1806. I sin udtogsbog skriver <persName key="pe4">Grundtvig</persName> om dette
+              v&#x00E6;rk: &#x201D;Saare stor Forskel finder Ieg mellem denne Gudel&#x00E6;re og alle de
+              andre t&#x00F8;rre alfabetiske Registre, Ieg hidtil saa prangende med dette Navn.
+              &#x005B; &#x2026; &#x005D; Poetisk er Fremstillelsen og de gamle betydningsfulde
+              Mythers Aand udtaler sig saavel gennem det Hele, som is&#x00E6;r gennem de Digtere
+              Forfatteren saa passende lader fremtr&#x00E6;de&#x201C; (<hi rend="italic"><title>Dag- og
+                Udtogsb&#x00F8;ger</title></hi> I, s. 261). Hvad der er vigtigt, er alts&#x00E5;, at
+              gudel&#x00E6;ren ikke blot er opremsninger af t&#x00F8;rre fakta, men netop
+              ogs&#x00E5; &#x2013; digtning. Udtrykt i <persName key="pe4">Grundtvig</persName>s billedsprog er Moritz&#x0027;
+              fabell&#x00E6;re &#x201D;ej [fremstillet&#x005D; som en afpillet Benrad s&#x00F8;nderslaaet
+              efter en vilkaarlig Fysiks eller Filosofis Regler&#x201C; (<hi rend="italic"><title>Dag- og
+                Udtogsb&#x00F8;ger</title></hi> I, s. 261).</p>
+            <p> Dette v&#x00E6;rk beholdt i Danmark sin aktualitet langt op i 1800&#x2013;tallet,
+              hvor digteren Christian Winther udgav og udvidede det 40 &#x00E5;r senere end
+              &#x201C;Asal&#x00E6;ren&#x201D; under titlen: <hi rend="italic"><title>Karl Philipp Moritz&#x0027;s Gudel&#x00E6;re, overs. og
+                tilligemed et Omrids af den nordiske Mythologie udg. af Christian Winther</title>,</hi>
+              K&#x00F8;benhavn 1847 (og flere senere genoptryk). </p>
+            <p> <persName key="pe4">Grundtvig</persName> l&#x00E6;ser Moritz i for&#x00E5;ret 1806, alts&#x00E5; i samme periode,
+              hvor han lader sig provokere af <persName key="pe6">Jens M&#x00F8;ller</persName>s gendigtning af <hi rend="italic">Skirners
+                F&#x00E6;rd</hi>.</p>
+            <p> Videnskabshistorisk set er Moritz interessant p&#x00E5; grund af sin opfattelse af
+              de antikke myter, hvor han stiller sig mellem den euhemeristiske opfattelse, dvs.
+              l&#x00E6;ren om, at guderne blot var afd&#x00F8;de mennesker (efter den gr&#x00E6;ske
+              filosof Euhemeros, d&#x00F8;d 298 f.v.t.) og den allegoriske opfattelse, der fx
+              dyrkedes af stoikere og epikur&#x00E6;ere, som gik ud p&#x00E5;, at guderne derimod
+              var personifikationer af naturmagterne, som fx tordenen (i Danmark/Norden
+              personificeret ved Thor). Oplysningstidens (historie)filosoffer og mytologer, herunder Karl
+              Phillip Moritz, overtager faktisk begge gudetolkninger, b&#x00E5;de den euhemeristiske
+              og den allegoriske (<persName key="56">Kurt H&#x00FC;bner</persName> 1985, s. 50). Det er helt klart, at <persName key="pe7">Suhm</persName> h&#x00E6;lder mest til den
+              euhemeristiske side. Flere steder kan man i &#x00F8;vrigt se den allegoriske mytologiopfattelse ben&#x00E6;vnt naturmytologisk
+              (<persName key="57">Finn Stef&#x00E1;nsson</persName> 2009, s. 298). Som Moritz selv udtrykker det:</p>
+            
+            <p><quote>&#x201D;Die G&#x00F6;ttergeschichte der Alten durch allerlei Ausdeutungen zu bloßen
+              Allegorien umbilden zu wollen, ist ein eben so th&#x00F6;richtes Unternehmen, als wenn
+              man diese Dichtungen durch allerlei gezwungene Erkl&#x00E4;rungen in lauter wahre
+              Geschichte zu verwandeln sucht.&#x201C; (Moritz 1791, s. 3).</quote></p>
+
+
+            <p><quote>&#x201D;Ved alleslags Fortolkninger at ville omdanne de Gamles Gudehistorie til blotte
+              Allegorier, er et ligesaa daarligt Foretagende, som naar man ved allehaande tvungne
+              Forklaringer s&#x00F8;ger at forvandler disse Digtninger til lutter sand
+              Historie&#x201C; (Christian Winthers 1847&#x2013;overs&#x00E6;ttelse, s. 2).</quote></p>
+
+          </div>
+        </div>
+        <div>
+          <head><persName key="pe4">Grundtvig</persName>s digteriske forarbejder og foruds&#x00E6;tninger</head>
+          <p>&#x201D;Asal&#x00E6;ren&#x201C; er nu heller ikke opst&#x00E5;et ud af den bl&#x00E5; luft
+            eller udelukkende p&#x00E5; grund af ulykkelig k&#x00E6;rlighed. Interessen for det
+            (old)nordiske stof havde <persName key="pe4">Grundtvig</persName> haft siden sin barndom og pure ungdom. Interessen var
+            b&#x00E5;de tilegnende og ud&#x00F8;vende. Dels pr&#x00F8;vede han at l&#x00E6;re sig
+            selv oldnordisk, idet han v.hj.a. faderens udgave af <persName key="58">Finnur J&#x00F3;nsson</persName>s <hi rend="italic"><title>Historia
+              ecclesiastica Islandi&#x00E6;</title> (Islands Kirkehistorie)</hi> I&#x2013;IV 1772&#x2013;78, hvori
+            J&#x00F3;nsson har latinsk overs&#x00E6;ttelse, udarbejdede en islandsk ordliste
+            (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1980, s. 117&#x2013;18), dels begyndte han at digte over emner
+            fra den nordiske fortid. S&#x00E5; tidligt som 1801 skriver han s&#x00E5;ledes
+            versfort&#x00E6;llingen <hi rend="italic">Sigurd og Brynhild</hi> med stof fra den nordiske sagnhistorie. Den
+            blev dog ikke offentliggjort. &#x201D;Allerede i sommeren 1803 fors&#x00F8;gte <persName key="pe4">Grundtvig</persName> sig
+            med &#x201D;folkevisepasticher over skjaldekvad, i l&#x00F8;bet af 1804 (hvor han er begyndt et
+            intensivt studium af oldislandsk) l&#x00E6;gger [han&#x005D; sin stil definitivt om &#x2013;
+            efter eddakvadene og sagaerne&#x201C; (Bent Christensen 1998, s. 35). Det intensive
+            studium best&#x00E5;r bl.a. i, at <persName key="pe4">Grundtvig</persName> i l&#x00F8;bet af kun 9 uger i sommeren 1804
+            &#x2013; uden l&#x00E6;reb&#x00F8;ger, ordb&#x00F8;ger eller andre opslagsv&#x00E6;rker &#x2013;
+            l&#x00E6;ser flere tusinde sider oldislandsk. Selv om der er paralleltekster p&#x00E5;
+            latin til nogle af teksterne, er det en imponerende indsats.</p>
+          <p>S&#x00E5; n&#x00E5;r <persName key="pe4">Grundtvig</persName> i majnummeret af <hi rend="italic"><title>Ny Minerva</title>.</hi> 1807 f&#x00E5;r
+            offentliggjort sin afhandling &#x201C;Om Asal&#x00E6;ren&#x201D;, er det alts&#x00E5; ikke f&#x00F8;rste
+            gang, han har den nordiske mytologi p&#x00E5; programmet. Allerede i 1806 havde han &#x2013;
+            provokeret af en komisk gendigtning af eddadigtet &#x201C;Skirnirs M&#x00E1;l&#x201D; (Skirners
+            F&#x00E6;rd, af <persName key="pe4">Grundtvig</persName> kaldet Skirners Reise), beg&#x00E5;et af dav&#x00E6;rende adjunkt i
+            Sor&#x00F8;, cand. teol. <persName key="pe6">Jens M&#x00F8;ller</persName> (1779&#x2013;1833) og trykt i
+            maj&#x2013;nummeret af <hi rend="italic"><title>Ny Minerva</title>.</hi> 1806 &#x2013; dels kritiseret gendigtningen, dels givet sit
+            bud p&#x00E5;, hvordan eddadigtningen kunne og burde indg&#x00E5; som inspiration for
+            den ny tids digtning. <persName key="pe6">Jens M&#x00F8;ller</persName> havde i &#x00F8;vrigt ogs&#x00E5; i 1800
+            besvaret den samme prisopgave fra K&#x00F8;benhavns Universitet som
+            <persName key="pe3">Oehlenschl&#x00E4;ger</persName> (<link/>se andetsteds). I <persName key="pe4">Grundtvig</persName>s indl&#x00E6;g, der har overskriften
+            &#x201C;Lidet om Sangene i Edda&#x201D;, og som trykkes i juli&#x2013;august&#x2013;septembernummeret af
+            <hi rend="italic"><title>Ny Minerva</title>.</hi> 1806, behandler han s&#x00E5;vel form som indhold. <persName key="pe4">Grundtvig</persName> kommer
+            s&#x00E5;vel ind p&#x00E5; M&#x00F8;llers sprog og form som p&#x00E5; hans
+            tilf&#x00F8;jelser og hans udeladelser &#x2013; og intet af det behager <persName key="pe4">Grundtvig</persName>. Fx
+            mener <persName key="pe4">Grundtvig</persName>, at M&#x00F8;llers indf&#x00F8;rsel af en tryllestav formindsker <hi rend="italic">ordets</hi>
+            virkning p&#x00E5; j&#x00E6;ttekvinden Gerd (eller Gerda). Desuden finder en tryllestav
+            &#x201D;neppe nogen Hiemmel i Levningerne fra Nordens Oldtid&#x201C; (<hi rend="italic"><title>Ny Minerva</title>.</hi>, august 1806,
+            s. 280). M&#x00F8;llers udeladelse af det kortere afsnit, der ofte kaldes &#x201D;Skirners tale
+            til hesten&#x201C;, der selvf&#x00F8;lgelig ikke forekommer realistisk i 1806, behager
+            heller ikke <persName key="pe4">Grundtvig</persName>. Mest interessant er det dog, at <persName key="pe4">Grundtvig</persName> argumenterer for, at
+            Frejs bestigelse af Odins s&#x00E6;de, Hlidskjalv, hvorfra man kan overskue hele verden,
+            og hvorfra Frej derfor f&#x00E5;r &#x00F8;je p&#x00E5; den undersk&#x00F8;nne
+            j&#x00E6;ttedatter, Gerd, er en senere tids tils&#x00E6;tning (<hi rend="italic"><title>Ny Minerva</title>.</hi>, august 1806,
+            s. 292&#x2013;94). <persName key="pe4">Grundtvig</persName> har desuden problemer med, at Odin skulle straffe Frej med
+            den st&#x00E6;rke k&#x00E6;rlighed, han kommer til at f&#x00F8;le for Gerd. Alligevel er
+            <persName key="pe4">Grundtvig</persName> selv pr&#x00E6;get af en tankegang, der indeholder (kristne) begreber om skyld
+            og straf.</p>
+          <p> <persName key="pe4">Grundtvig</persName> vil hellere se eddadigtet <hi rend="italic"><title>Skirners F&#x00E6;rd</title></hi> &#x201D;som et Glimt af de
+            ub&#x00F8;ielige Norners Virken, i det de med sikker Haand forberede Catastrophen i det
+            store Drama, da Tidens D&#x00F8;r skulde lukkes ved dens Guddoms Undergang&#x201C; (Ny
+            Minerva, august 1806, s. 296). Denne s&#x00E6;tning kan tages til udtryk for, at
+            <persName key="pe4">Grundtvig</persName> allerede i 1806 er begyndt at have en forestillling om, at eddadigtningen skal
+            ses under &#x00E9;t som et forl&#x00F8;b, der leder frem mod Ragnarok, en tanke, som
+            udfoldes yderligere i &#x201D;Asal&#x00E6;ren&#x201C; 1807, og som ligger helt klar i Nordens
+            Mytologi 1808. Ikke desto mindre var det nok <persName key="pe6">Jens M&#x00F8;ller</persName>s versanekdote, der for
+            alvor fik <persName key="pe4">Grundtvig</persName> i gang med den nordiske digtning. Som han selv skriver 30. december
+            1806: &#x201D;St&#x00F8;det var en Bearbejdelse af de eddiske Dig[t&#x005D; Skirners Rejse der
+            stod indrykket i Majheftet af Rahbeks Minerva 1806 &#x2013; Ved min uvilkaarlige Harm over
+            dette produkt, l&#x00E6;rte Jeg f&#x00F8;rst ret at sk&#x00F8;nne, hvor forskellige mine
+            n&#x00E6;rv&#x00E6;rende Standpunkter vare fra dem paa hvilke Jeg forhen gennem
+            M&#x00F8;rket havde seet | | henimod gamle Norden&#x201C; (<hi rend="italic"><title>Dag- og
+              Udtogsb&#x00F8;ger</title></hi> I, s. 402). Hvad der tilsyneladende kun anes af <persName key="pe4">Grundtvig</persName> i 1806, er
+            m&#x00E5;ske alligevel det, der generer ham allermest, nemlig at M&#x00F8;ller
+            g&#x00F8;r et komisk heltedigt ud af det, der for <persName key="pe4">Grundtvig</persName> er den tragiske, men
+            n&#x00F8;dvendige, begyndelse p&#x00E5; gudernes syndefald, nemlig at vanen Frejs
+            forelskelse i j&#x00E6;ttedatteren Gerd medf&#x00F8;rer, at han m&#x00E5; give det
+            sv&#x00E6;rd, som skulle have forsvaret guderne ved Ragnarok, som betaling til
+            sendebudet Skirner, der overbringer Frejs &#x00F8;nske om at f&#x00E5; hende. DETTE
+            afsnit ER M&#x00C5;SKE MERE RELEVANT FOR &#x201D;LIDET OM ....&#x201C;, I forbindelse med
+            responsen p&#x00E5; M&#x00F8;llers arbejde har <persName key="pe4">Grundtvig</persName> tilsyneladende besluttet sig
+            til, at han fremover ville n&#x00F8;jes med at v&#x00E6;re tilskuer til tiltag som Jens
+            M&#x00F8;llers, men i &#x201D;Asal&#x00E6;ren&#x201C; s. 157 tilkendegiver <persName key="pe4">Grundtvig</persName>, at han
+            ikke har kunnet overholde sin beslutning, men tv&#x00E6;rtimod alligevel vil blande sig
+            i, hvad den nordiske fortid og mytolog kan anvendes til og selv give sit bud
+            herp&#x00E5;.</p>
+          <p> P&#x00E5; det formm&#x00E6;ssige plan er det bem&#x00E6;rkelsesv&#x00E6;rdigt, at
+            <persName key="pe4">Grundtvig</persName> i sin gendigtning bevidst kun vil beholde &#x201D;saare faa af de gamle
+            vendinger&#x201C; (<hi rend="italic"><title>Ny Minerva</title>.</hi>, august 1806, s. 287). Arkaisering (dvs. bevidst
+            efterligning af et &#x00E6;ldre sprogtrin), som mange i hans samtid, fx
+            <persName key="pe3">Oehlenschl&#x00E4;ger</persName>, ellers sv&#x00E6;lgede i, er med andre ord slet ikke <persName key="pe4">Grundtvig</persName>s
+            &#x00E6;rinde. Den forbindelse, han s&#x00F8;ger at skabe mellem fortiden og nutiden,
+            g&#x00E5;r ganske vist via sproget, men et sprog, hvis <hi rend="italic">poetiske</hi> kvaliteter, ikke
+            forlorne gammeldags vendinger, st&#x00E5;r i h&#x00F8;js&#x00E6;det. <persName key="pe4">Grundtvig</persName> skelner i
+            &#x00F8;vrigt med <persName key="pe18">Steffens</persName> ogs&#x00E5; mellem kunst og poesi, hvor poesien er orienteret
+            mod det evige, mens kunsten rummer det mere h&#x00E5;ndv&#x00E6;rksm&#x00E6;ssige, se fx
+            hans dagbogsoptegnelser fra marts 1805, hvor han refererer <persName key="pe18">Steffens</persName> for om den
+            italienske renaissancedigter Torquato Tasso at have udtalt: &#x201D;Poesien var alt forsvunden
+            da han traadte frem, men havde, som den stedse gj&#x00F8;r, efterladt sin Skygge i
+            Konsten, et i betydningsfuldere Liv. Tasso vilde slutte sig til den svundne Old, men
+            hans Aand manglede den forn&#x00F8;dne Kraft, og hans Betr&#x00E6;belser for at
+            v&#x00E6;kke Poesien, bragte ham i Strid med Poesiens end tilbagev&#x00E6;rende
+            Skygge&#x201C; (<hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title></hi> I, s. 215). En mere omfattende
+            id&#x00E9; om begrebet <hi rend="italic">poesi</hi> havde <persName key="pe4">Grundtvig</persName> f&#x00E5;et allerede i 1803, hvor han
+            fulgte <persName key="pe18">Steffens</persName>&#x0027; forel&#x00E6;sninger over <persName key="29">Goethe</persName> (Scharling 1947, s. 104). Trods
+            modtstanden mod arkaisering i 1806 s&#x00F8;ger <persName key="pe4">Grundtvig</persName> faktisk at gengive eddadigtene
+            i det oldnordiske versem&#x00E5;l fornyr&#x00F0;islag i 1807.</p>
+          <p>P&#x00E5; sin vis h&#x00F8;rer ogs&#x00E5; afhandlingen &#x201D;Om Religion og
+            Liturgie&#x201C; fra 1806 (trykt i <hi><title>Theologisk Maanedsskrivt</title></hi> februar 1807) ogs&#x00E5;
+            med blandt foruds&#x00E6;tningerne, fordi den rummer antydninger af overvejelser over
+            &#x201D;den nordiske mytologis stilling i forhold til religionen som s&#x00E5;dan&#x201C;
+            (<persName key="pe51">Auken</persName> 2005, s. 113).</p>
+        </div>
+        <div>
+          <head>Modtagelsen</head>
+          <p>Nu kunne man tro, at et s&#x00E5; specielt og vision&#x00E6;rt v&#x00E6;rk
+            aff&#x00F8;dte en hed debat om inddragelsen af det nordiske i digtningen. Men, som
+            R&#x00F8;nning skriver: &#x201D;Hvad sagde man til denne afhandling, i hvilken der for
+            f&#x00F6;rste gang i dansk litteratur frems&#x00E6;ttes en sammenh&#x00E6;ngende
+            opfattelse og en storsl&#x00E5;et opfattelse af grundtankerne i Nordboernes
+            gudel&#x00E6;re? Intet. Ingen anmelder tager ordet i den anledning. Afhandlingen fandt
+            lige s&#x00E5; ringe forst&#x00E5;else som dens &#x00E5;ndsf&#x00E6;lle: &#x201D;Digte&#x201C;
+            (1803) af <persName key="pe3">Oehlenschl&#x00E4;ger</persName>. Disse betegner romantikkens gennembrud i poesien, hin dens gennembrud i <hi rend="italic">den
+              historisk&#x2013;mytologiske forskning.</hi>&#x201C; (R&#x00F8;nning 1908, s. 17). </p>
+          <p> Man kan uden overdrivelse sige, at anmeldelsen kommer sent. &#x201D;Asal&#x00E6;ren&#x201C;
+            blev f&#x00F8;rst anmeldt af ingen andre end den efterh&#x00E5;nden meget omtalte Jens
+            M&#x00F8;ller &#x2013; der dog optr&#x00E5;dte anonymt &#x2013; i det af den teologiske professor
+            Peter Erasmus M&#x00FC;ller redigerede Dansk Litteratur&#x2013;Tidende 1&#x2013;2, 1811. Her
+            anmeldes <persName key="pe4">Grundtvig</persName>s p&#x00E5; det tidspunkt udkomne mytologiske skrifter under
+            &#x00E9;t (<persName key="pe52">Lundgreen&#x2013;Nielsen</persName> 1965, s. 31), dvs. &#x201D;Lidet om Sangene i Edda&#x201C;,
+            &#x201D;&#x201C;Om Asal&#x00E6;ren&#x201D;&#x201C;, &#x201D;Et Par Ord i Anledning af det forkyndte S&#x00F8;rgespil
+            Signe&#x201C;, &#x201D;Bem&#x00E6;rkninger over <persName key="pe3">Oehlenschl&#x00E4;ger</persName>s Baldur&#x201C; og
+            endelig <hi rend="italic"><title>Nordens Mytologi</title></hi> (1808). Det er i h&#x00F8;jeste grad det sidstn&#x00E6;vnte
+            v&#x00E6;rk, der dominerer anmeldelsen, og hvorfra M&#x00F8;ller is&#x00E6;r citerer
+            alenlange uddrag. <persName key="6">M&#x00F8;ller</persName> udtrykker i nr. 1 sin gl&#x00E6;de over den generelle
+            besk&#x00E6;ftigelse med det (old)nordiske stof, men mener samtidig, at &#x201D;Hedenoldens
+            L&#x00E6;re om Guderne hidtil ikke tilstr&#x00E6;kkeligen er bleven
+            dr&#x00F8;ftet&#x201C; ([s. 1&#x005D;). Samtidig p&#x00E5;peger han savnet af
+            grammatikker og ordb&#x00F8;ger (s. 2), som f&#x00F8;rst Rasmus Rasks nyligt udkomne
+            grammatik kan r&#x00E5;de nogen bod p&#x00E5; (s. 2), ligesom der er et leksikon og en
+            sagaudgivelse undervejs (s. 2). Hvad ang&#x00E5;r <persName key="pe4">Grundtvig</persName>, s&#x00E5; anerkender
+            <persName key="6">M&#x00F8;ller</persName> hans entusiasme, men mener, at man kan misbillige &#x201D;den Haardhed, hvormed
+            han aff&#x00E6;rdiger Andre, der ikke ville [dvs. vil&#x005D; see som han&#x201C; (s.
+            3). Samtidig &#x201D;maa man dog agte denne Attraa efter at skue dybt&#x201C; (s. 3).
+            Derp&#x00E5; refereres &#x201C;Asal&#x00E6;ren&#x201D;, idet hovedsynspunktet opsummeres s&#x00E5;ledes:
+            &#x201D;hele &#x201C;Asal&#x00E6;ren&#x201D; vidner om det fulde Herred&#x00F8;mme som Nornerne, Alfaders vise
+            D&#x00F8;ttre, ud&#x00F8;vede over Aserne, uden hvilket heller ikke Ragnarok kunde have
+            kommet&#x201C; (s. 4&#x2013;5). Der er s&#x00E5;ledes ingen tvivl om, at <persName key="6">M&#x00F8;ller</persName>
+            har fattet <persName key="pe4">Grundtvig</persName>s pointe.</p>
+          <p> Det er dog f&#x00F8;rst i anden del af anmeldelsen, som bringes i Dansk
+            Litteratur&#x2013;Tidende nr. 2, at <persName key="6">M&#x00F8;ller</persName> kommer tydeligere frem med sine egne
+            synspunkter. <persName key="6">M&#x00F8;ller</persName> kan her sl&#x00E5; ned p&#x00E5; en svaghed ved
+            <persName key="pe4">Grundtvig</persName>s fremstilling, nemlig at den f&#x00F8;rst og fremmest bygger p&#x00E5;, at
+            V&#x00F8;lvens Sp&#x00E5;dom virkelig er meget gammel, eftersom det er dette digt,
+            <persName key="pe4">Grundtvig</persName> h&#x00E6;nger hele sit system op p&#x00E5;. <persName key="6">M&#x00F8;ller</persName> s&#x00E6;tter
+            ogs&#x00E5; sp&#x00F8;rgsm&#x00E5;lstegn ved <persName key="pe4">Grundtvig</persName>s alfaderbegreb: &#x201D;At de gamle
+            Nordboer skulle [dvs. skal&#x005D; have troet paa en Alfader m&#x00E6;gtigere end Aserne,
+            hvilket F. [forfatteren&#x005D; og flere f&#x00F8;r ham have antaget, er en blot
+            Gisning, som neppe er sandsynlig&#x201C; (nr. 2, s. 28&#x2013;29). Alt i alt kan man
+            sige, at <persName key="6">M&#x00F8;ller</persName> angriber <persName key="pe4">Grundtvig</persName> netop p&#x00E5; hans egne pr&#x00E6;misser, et
+            angreb, der ogs&#x00E5; i dag vil v&#x00E6;kke sympati og virke mere sandsynligt end
+            <persName key="pe4">Grundtvig</persName>s synspunkter.</p>
+        </div>
+        <div>
+          <head>&#x201C;Asal&#x00E6;ren&#x201D;s videreliv</head>
+          <p>Allerede sommeren 1807 arbejder <persName key="pe4">Grundtvig</persName> p&#x00E5; en afhandling om <hi rend="italic"><title>Den &#x00E6;ldre
+            Edda</title>.</hi> I processen kan han betegne det gamle Nord som hans &#x201D;Aands Hjem&#x201C;, hvorfra
+            han &#x201D;laaner alle de Billeder hvori jeg beskuer det Usynlige&#x201D; (fasc. 257, blad 1 verso og
+            2 recto). </p>
+          <p> &#x201C;Asal&#x00E6;ren&#x201D; lever dog f&#x00F8;rst og fremmest videre i <hi rend="italic"><title>Nordens Mytologi</title></hi> 1808 og
+            til dels ogs&#x00E5; <hi rend="italic"><title>Nordens Mythologi</title></hi> 1832. &#x201D;Asal&#x00E6;ren&#x201C; er faktisk titlen
+            p&#x00E5; andet afsnit af <hi rend="italic"><title>Nordens Mytologi</title></hi> fra 1808. Men heri behandler <persName key="pe4">Grundtvig</persName>
+            b&#x00E5;de kilder og gudernes indbyrdes forhold mere systematisk (<persName key="pe51">Auken</persName> 2005, s. 124). </p>
+          <p> Men ogs&#x00E5; det lille l&#x00E6;sedrama <hi rend="italic"><title>Maskeradeballet</title></hi> fra 1808 rummer
+            reflektioner over forholdet mellem gammelnordisk og moderne tankegang, ligesom man kan
+            sige, at den nordiske mytologi ogs&#x00E5; er behandlet i <hi rend="italic"><title>Optrin af Nordens
+              K&#x00E6;mpeliv</title>,</hi> anden del 1809 og f&#x00F8;rste del 1811 (ulogisk, men s&#x00E5;dan er
+            det). I enkelte andre v&#x00E6;rker af <persName key="pe4">Grundtvig</persName> indg&#x00E5;r tankerne ogs&#x00E5; SKAL
+            DER N&#x00C6;VENS FRA FLN&#x0027;S LISTE? VAP 28. oktober 2010.</p>
+          <p>Skuer man meget l&#x00E6;ngere frem i forfatterskabet, kommer man til det meget lange
+            <hi rend="italic"><title>Dansk Ravnegalder</title>,</hi> skrevet 1860, men f&#x00F8;rst trykt efter <persName key="pe4">Grundtvig</persName>s d&#x00F8;d,
+            nemlig i <hi rend="italic"><title>Udvalgte Skrifter</title> X</hi> 1909. Allerede titlen rummer associationer til &#x201D;Odins
+            Ravnegalder&#x201C;; og ligesom &#x201C;Asal&#x00E6;ren&#x201D; er det en vision eller m&#x00E5;ske
+            snarere en utopi, idet den forg&#x00E5;r ca. 1910, alts&#x00E5; langt frem i tiden i
+            forhold til affattelsestidspunktet. </p>
+          <p> I slutningen af 1800&#x2013;tallet var asal&#x00E6;ren i st&#x00F8;rre eller mindre
+            grad en del af pensum p&#x00E5; de grundtvigske h&#x00F8;jskoler, se fx Jens Peter
+            &#x00C6;gidius 1992. Men i vore dage er det dog i h&#x00F8;jere grad <persName key="pe4">Grundtvig</persName>s salmer
+            og h&#x00F8;jskoletanker, der er popul&#x00E6;re. LIDT FAD AFSLUTNING, MEN INTRODUKTIONEN KAN AFSLUTTES DETTE AFSNIT TIDLIGERE</p>
+        </div>
+      </div>
+      <div>
+        <head>Litteraturliste</head>
+        <list type="ordered">
+          <item>Albeck, Gustav (1979) <hi rend ="italic"><title>Dag- og Udtogsb&#x00F8;ger</title>,</hi>bind I&#x2013;II K&#x00F8;benhavn  </item>
+          <item><persName key="pe51">Auken</persName>, Sune (2005) <hi rend="italic">Sagas Spejl. Mytologi, historie og kristendom hos N.F.S. Grundtvig</hi> Gylling</item>
+          <item>M&#x00F8;inichen, Jacob B&#x00E6;rent (1800) <hi rend="italic">Nordiske Folks Overtroe, Guder, Fabler og Helte indtil Frode 7 Tider i Bogstav&#x2013;Orden</hi>, K&#x00F8;benhavn </item>
+          <item>Christensen, Bent (1998) <hi rend="italic">Omkring Grundtvigs Vidskab. En unders&#x00F8;gelse af N.F.S. Grundtvigs forhold til den erkendelsesm&#x00E6;ssige side af det kristeligt n&#x00F8;dvendige ivsengagement</hi> K&#x00F8;benhavn</item>
+          <item> Christensen, Georg &#x0026; Stener Grundtvig (1924)<hi rend="italic">Breve fra og til N.F.S. Grundtvig. I. (1807&#x2013;1820)</hi> K&#x00F8;benhavn </item>
+          <item> Christensen, Georg &#x0026; Stener Grundtvig (1924)<hi rend="italic">Breve fra og til N.F.S. Grundtvig. II. (1821&#x2013;1872)</hi> K&#x00F8;benhavn  </item>
+          <item>H&#x00FC;bner, Kurt (1985) <hi rend="italic">Die Wahrheit des Mythos</hi> M&#x00FC;nchen</item>
+          <item>Billeskov Jansen, Frederik Julius (udg.)<!-- 1907 200? --> (1980) <hi rend="italic">Adam Oehlenschläger. &#x00C6;stetiske Skrifter 1800-1812, heri: </hi> &#x201C;Udgiverens Forord&#x201D;. Herning </item>
+          <item>Finnur J&#x00F3;nssons Historia ecclesiastica Islandi&#x00E6; (Islands
+            Kirkehistorie) I&#x2013;IV 1772&#x2013;78 </item>
+          <item>(JK 1996, s. 170)</item>
+          <item><persName key="53">Kondrup</persName> 2011</item>
+          <item><persName key="pe52">Lundgreen&#x2013;Nielsen</persName>, Flemming (1965) <hi rend="italic">Grundtvig. Skæbne og forsyn. Studier i Grundtvigs nordisk&#x2013;romantiske dramatik</hi>Skrifter udgivet af Grundtvig&#x2013;selskabet. K&#x00F8;benhavn </item>
+          <item><persName key="pe52">Lundgreen&#x2013;Nielsen</persName>, Flemming (1980) <hi rend="italic">N.F.S. Grunddtvigs digtning, litteraturkritik og poetik 1798&#x2013;1819,</hi> bind I&#x2013;II. K&#x00F8;benhavn</item>
+          <item>Bolle Willum Luxdorph, G.C. Suhm, B&#x00F8;rge Thorlacius, Abraham Kall og Jacob
+            Baden 1787 Edda S&#x00E6;mundar </item>
+          <item>Molbech, Christian Knud Frederik (1888) <hi rend="italic">Christian Molbech og Nikolai Frederik Severin Grundtvig. En Brevvexling, samlet af Chr. K. F. Molbech og udgivet af J. Schr&#x00F8;der. </hi>K&#x00F8;benhavn </item>
+          <item>Moritz,  1791</item>
+          <item><persName key="6">M&#x00F8;ller</persName> 1806</item>
+          <item>Reich 2001 (genoptryk af Gjellerup 18??), indl. ved Reich</item>
+          <item>Peder Hansen <persName key="pe15">Resen</persName> 1665, Philosophia antiqvissima Norvego&#x2013;Danica dicta
+            Woluspa qv&#x00E6; est Pars Edd&#x00E6; S&#x00E6;mundi Islandice &#x0026; Latine publici
+            juris primum facta, a Petro Joh. <persName key="pe15">Resen</persName>io (Gammel norsk&#x2013;dansk visdom kaldet
+            Voluspa, som er en del af S&#x00E6;munds Edda, trykt p&#x00E5; islandsk og latin for
+            f&#x00F8;rste gang gjort tilg&#x00E6;ngelig for offentligheden (den latinske
+            overs&#x00E6;ttelse er af Steph. &#x00D3;lafsson)</item>
+          <item>R&#x00F8;nning</item>
+          <item>Scharling, Carl Immanuel (1947) <hi rend="italic">Grundtvig og Romantikken belyst ved Grundtvigs forhold til <persName key="54">Schelling</persName></hi>K&#x00F8;benhavn </item>
+          <item> Stef&#x00E1;nsson, Finn (2009): Gyldendals Leksikon om Nordisk Mytologi, </item>
+          <item>Suhm, Peter Friederich (1771) <hi rend="italic">Om Oden og den Hedniske Gudel&#x00E6;re og Gudstieneste udi
+            Norden</hi> K&#x00F8;benhavn</item>
+          <item>Toldberg, Helge (1946) <hi rend="italic">Grundtvig som Filolog,</hi>Dansk teologisk Tidsskrift nr. 8 </item>
+          <item>Vind, Ole (1999) <hi rend="italic">Grundtvigs historieilosofi</hi> Haslev</item>
+          <item>Christian Winther, overs. (1847) <hi rend="italic">Karl Philipp Moritz&#x0027; Gudel&#x00E6;re, oversat og tilligmed et Omrids af den nordiske Mythologie udgivet af Christian Winther</hi> K&#x00F8;benhavn</item>
+          <item>&#x00C6;gidius, Jens Peter (1992) <hi rend="italic">Bragesnak 2. Den mytologiske tradition i dansk folkeoplysning i det tyvende
+            &#x00E5;rhundrede (1910&#x2013;1985)</hi> Odense</item>
+        </list>
+      </div>
+      <div>
+        <!--
+        <head>Indledning - overskrift øverste niveau</head>
+        <div>
+          <head>overskrift næstøverste niveau</head>
+          <p>to fremhævelsesmidler: fed <hi rend="bold">bold</hi>, kursiv <hi rend="it">italic</hi>
+          </p>
+          <p>links</p>
+          <p>her er to simple interne referencer:</p>
+          <p>den ene som milestone: <ptr target="#P1"/></p>
+          <p>den anden hvor tekst gøres klikbar: <ref target="#P1">reference to it</ref>.</p>
+          <p>her er så en ekstern reference:</p>
+          <p>med tekst som klikbar<ref target="http://www.tei-c.org/index.xml">TEI</ref></p>
+          <p>og her TEI som milestone: <ptr target="http://www.tei-c.org/index.xml"/>.</p>
+        </div>
+      </div>
+      <div>
+        <head>tabeller</head>
+        <p>tabeller kan repræsentere snart sagt en hvilken som helst tekstlig struktur</p>
+        <p>den er velegnet til manuskriptbeskrivelser - som alternativ til TEI meget udviklede
+          struktur til netop dette</p>
+        <p>tabeller kan have celler som spænder over flere spalter og rækker</p>
+
+        <table rows="3" cols="3">
+          <head>tabeloverskrift</head>
+          <row role="label">
+            <cell>celle 1</cell>
+            <cell>celle 2</cell>
+            <cell>celle 3</cell>
+          </row>
+          <row>
+            <cell rows="2">text i celle 1</cell>
+          </row>
+          <row>
+            <cell cols="2" role="label">
+              <emph>her er celle 2 og 3 slået sammen</emph>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <graphic url="nature1.jpg"/>
+            </cell>
+            <cell>text </cell>
+            <cell>nord</cell>
+          </row>
+          <row>
+            <cell>
+              <graphic url="nature2.jpg"/>
+            </cell>
+            <cell>text</cell>
+            <cell>nord-øst</cell>
+          </row>
+        </table>
+      </div>
+
+      <div xml:id="P1">
+        <head>lister</head>
+        <p>lister er også en mulighed struktur til manuskriptbeskrivelser; de er nemmere at overskue
+          end tabeller; også i lsiter er det muligt at lave lige så mange underindelinger som man
+          måtte ønske - altså lister inde i lister inde i ...</p>
+        <p>forskellige lister: her en ordered <list type="ordered">
+            <item>hunde</item>
+            <item>katte</item>
+            <item>fugle</item>
+            <item>fisk</item>
+          </list>
+        </p>
+        <list type="gloss">
+          <label>100</label>
+          <item>first item </item>
+          <label>200</label>
+          <item>second item </item>
+          <label>300</label>
+          <item>third item </item>
+        </list>
+        <p>The preceding lists was between paragraphs.</p>
+        <p>
+          <list type="unordered">
+            <head>denne liste har en head-element med en indlejret (nested) gloseliste...</head>
+            <item>first item </item>
+            <item>
+              <list type="gloss">
+                <label>25</label>
+                <item>first item </item>
+                <label>35</label>
+                <item>second item </item>
+                <label>45</label>
+                <item>third item </item>
+              </list>
+            </item>
+            <item>third item </item>
+          </list>
+        </p>
+      </div>
+      <div>
+        <head>litterære exempler</head>
+        <p>og nu over til noget aldeles andet ... drama</p>
+        <p>i denne struktur er det muligt at opstille en dialog fra et drama:</p>
+
+        <sp>
+          <speaker rend="it">Kongen</speaker>
+          <p>Af dine Lænder</p>
+          <p>Vi all sprang</p>
+          <p>Vi, baarne Frænder,</p>
+          <p>Gik Kæmpegang.</p>
+        </sp>
+        <sp>
+          <speaker rend="it">Dronningen</speaker>
+          <p>Vi hørte runge</p>
+          <p>I valhals Borg,</p>
+          <p>Dit Fald, det tunge.</p>
+        </sp>
+
+-->
+      </div>
+    </body>
+  </text>
+</TEI>
