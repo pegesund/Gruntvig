@@ -8,13 +8,7 @@
     <xsl:include href="popups.xsl"/>
     <xsl:template match="TEI:TEI">
         
-        <html>
-            <head>
-                <link rel="stylesheet" href="introCSS.css" type="text/css"/>
-                <link rel="stylesheet" href="EditCSS.css" type="text/css"/>
-                <title><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></title>
-            </head>
-            <body>
+        <div class="mainIntro">
                 <p class="author">Forfatter:</p>
                 <i>
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
@@ -37,8 +31,7 @@
                 </div>
                 <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
                 <xsl:apply-templates select="TEI:text"/>
-            </body>
-        </html>
+        </div>
         
     </xsl:template>
     

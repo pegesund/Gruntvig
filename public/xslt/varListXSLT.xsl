@@ -8,12 +8,8 @@
 
     <xsl:template match="TEI:TEI">
         
-        <html>
-            <head>
-                <link rel="stylesheet" href="varListCSS.css" type="text/css"/>
-                <title>Variantoversgt</title>
-            </head>
-            <body>
+
+            <div>
                 
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                     Variantoversigt for <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></i>
@@ -59,8 +55,7 @@
                 <hr/>
                 <xsl:apply-templates select="TEI:text"/>
                 
-            </body>
-        </html>
+        </div>
         
     </xsl:template>
     

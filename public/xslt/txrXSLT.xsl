@@ -13,13 +13,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <html>
-            <head>
-                <link rel="stylesheet" href="txrCSS.css" type="text/css"/>
-                <!--<link rel="stylesheet" href="txrEditCSS.css" type="text/css"/>-->
-                <title><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></title>
-            </head>
-            <body>
+        <div>
                 <p class="author">Forfatter:</p>
                 <i>
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
@@ -34,23 +28,18 @@
                 </div>
                 <h2>Indhold</h2>
                 <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
-                <xsl:apply-templates select="TEI:text"/>
-            </body>
-        </html>
+                <xsl:apply-templates select="TEI:text"/>            
+        </div>
         
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc">
-            <a class="toc">
-                <xsl:attribute name="href">
-                    <xsl:text>#A</xsl:text>
-                    <xsl:number level="multiple" count="TEI:div"/>
-                </xsl:attribute>
+            <span class="toc">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="TEI:head"/>
-            </a>
+            </span>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
