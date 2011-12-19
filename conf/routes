@@ -25,6 +25,7 @@ GET     /personer                               ShowAsset.personvisning
 GET     /myter                                  ShowAsset.mythvisning
 GET     /ajax/getKommentar/{assetId}            Ajax.getKommentar
 GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
+GET     /ajax/getTxr/{id}                                     Ajax.getTxr
 GET     /ajax/getVariantByName/{fileName}                     Ajax.getVariantByName
 GET     /ajax/getManusByName/{fileName}                       Ajax.getManusByName
 GET     /ajax/getVariant/{assetId}/{variantNum}               Ajax.getVariant
