@@ -56,6 +56,13 @@ public class Ajax extends Application {
         Controller.renderHtml(asset.getCorrespondingComment());
     }
 
+    public static void getTxr(long id) {
+        System.out.println("Looking for asset: " + id);
+        Asset asset = Asset.findById(id);
+        System.out.println("Asset found is: " + asset);
+        Controller.renderHtml(asset.getCorrespondingTxr());
+    }    
+    
     public static void getVeiledning(String fileName) {
         Asset asset = Asset.find("fileName = ?", fileName + ".xml").first();
         Controller.renderHtml(asset.html);

@@ -85,7 +85,7 @@ public class Asset extends GenericModel {
     public static String placeType = "place";
     public static String veiledningType = "veiledning";
     public static String txrType = "txr";
-    public static String varList = "varList";
+    public static String varListType = "varList";
 
     // used by images
     // images on form rootname_number.jpg
@@ -136,6 +136,13 @@ public class Asset extends GenericModel {
         return (intro != null ? intro.html : "");
     }
 
+    public String getCorrespondingTxr() {
+        Asset txr = Asset.find("rootName = ? and type = ?", rootName, Asset.txrType).first();
+        System.out.println("Txr is: " + txr);
+        return (txr != null ? txr.html : "");
+    }
+
+    
     public String getCorrespondingComment() {
         Asset comment = Asset.find("fileName = ? and type = ?", rootName + "_com.xml", Asset.commentType).first();
         // System.out.println("Corresponding comment: " + intro.html);
@@ -154,19 +161,17 @@ public class Asset extends GenericModel {
         return xml + refs;
     }
 
-    public static String getRootName(String fileName) {
-        fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "");
-
-        if (fileName.endsWith("_ms")) {
-            return fileName.replace("_ms", "");
-        }
-        Pattern pattern = Pattern.compile("(.*?)_v\\d+");
+    public static String getRootName(String fileNameIn) {
+        String fileName = fileNameIn;
+        fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "");
+        
+        Pattern pattern = Pattern.compile("(.*)_.*\\d+^");
         Matcher matcher = pattern.matcher(fileName);
         if (!matcher.find()) {
             System.out.println("Setting root name to: " + fileName);
-
             return fileName;
         } else {
+            System.out.println("Setting root name to: " + matcher.group(1));
             return matcher.group(1);
         }
     }
@@ -209,15 +214,23 @@ public class Asset extends GenericModel {
         } else if (epub.getName().replace(".xml", "").endsWith("_com")) {
             type = Asset.commentType;
         } else if (epub.getName().contains("intro")) {
-            System.out.println("Type is introtype");
             type = Asset.introType;
-        } else if (epub.getAbsolutePath().endsWith("_ms.xml")) {
+        } else if (epub.getAbsolutePath().matches(".*_ms[1-9]*.xml")) {
+            System.out.println("Type is manustype!");
+            Pattern pattern = Pattern.compile("ms(\\d+)");
+            Matcher matcher = pattern.matcher(epub.getAbsolutePath());
+            String found = "no match";
+            if (matcher.find()) {
+                System.out.println("Manus number is: " + matcher.group(1));
+                found = matcher.group(1);
+                variant = Integer.parseInt(found);
+            }
             type = Asset.manusType;
         } else if (epub.getName().contains("txr")) {
             type = Asset.txrType;
         } else if (epub.getName().contains("varList")) {
             System.out.println("Type is varList");
-            type = Asset.varList;
+            type = Asset.varListType;
         } else {
             Pattern pattern = Pattern.compile("v(\\d+)");
             Matcher matcher = pattern.matcher(epub.getAbsolutePath());
@@ -253,16 +266,17 @@ public class Asset extends GenericModel {
         } else if (type.equals(Asset.rootType)) {
             html = fixHtml(Asset.xmlToHtml(copiedFile));
         } else if (type.equals(Asset.manusType)) {
-            html = fixHtml(Asset.xmlToHtmlManus(epub.getAbsolutePath()));
+            html = Asset.xmlToHtmlManus(copiedFile);
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
         } else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
-        } else if (type.equals(Asset.varList)) {
-            html = fixHtml(Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl"));
+        } else if (type.equals(Asset.varListType)) {
+            html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");
         }
         else {
             html = "Not found: filetype unknown";
+            throw new Error("No recognized filetype found");
         }
         if (html.startsWith("Error")) {
             throw new Error("Probably an error in xslt-stylesheet or xml: " + html);
@@ -329,7 +343,7 @@ public class Asset extends GenericModel {
 
         Asset rootAsset = Asset.findById(assetId);
         System.out.println("rootName: " + rootAsset.id);  
-        List<Asset> variants = Asset.find("rootName = ? and (type = ?  or type =  ?) order by variant", rootAsset.rootName, Asset.variantType, Asset.manusType).fetch();
+        List<Asset> variants = Asset.find("rootName = ? and (type = ?  or type =  ? or type = ?) order by type, variant", rootAsset.rootName, Asset.variantType, Asset.manusType, Asset.varListType).fetch();
         return variants;
     }
 
@@ -353,12 +367,7 @@ public class Asset extends GenericModel {
     }
 
     public static String xmlToHtmlManus(String fileName) {
-        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "xhtml2" + File.separator + "tei_manus.xsl";
-        return xmlToHtml(fileName, filePath);
-    }
-
-    public static String xmlToHtmlComment(String fileName) {
-        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "xhtml2" + File.separator + "tei_comment.xsl";
+        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "msXSLT.xsl";
         return xmlToHtml(fileName, filePath);
     }
 
