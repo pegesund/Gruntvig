@@ -13,7 +13,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <div>
+        <div class="mainTxr">
                 <p class="author">Forfatter:</p>
                 <i>
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>

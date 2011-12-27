@@ -27,7 +27,7 @@
     
        
     <xsl:template match="TEI:row">
-        <div class="row" id="{@xml:id}">
+        <div class="row myth" id="{@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">

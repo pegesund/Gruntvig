@@ -15,128 +15,119 @@ span.appInvisible
          display: none;
          }
 
-.app:hover 
+.variantMain .app:hover 
          {
          color: green;
          }
 
-.app:hover .appInvisible
+.variantMain .app:hover .appInvisible
         {
         display: inline;
         }
 
-.lem
+.variantMain .lem
         {
         color: gray;
         }
 
 */
 
-body   
-        {
-        font-family:"Times New Roman";
-        font-size: 16px;
-        line-height: 110%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 10px;
-        margin-left: 10px;
-        }
 
-.anchor
+
+.variantMain .anchor
         {
         color: #4196E1; /*royal blue*/
         }
         
-.lg
+.variantMain .lg
         {
         margin: 1em;
         }
 
 /* var start */
 
-.ide
+.variantMain .ide
         {
         color: #800080; /*purple*/
         }
         
-.int
+.variantMain .int
         {
         color: #90EE90; /*light green*/
         }
         
-.ort
+.variantMain .ort
         {
         color: #DDA0DD; /*plum*/
         }
         
-.sub
+.variantMain .sub
         {
         color: #FF00FF; /*fuchsia*/
         }
         
 /* var end */
 
-.center
+.variantMain .center
         {
         text-align: center;
         }
 
-.head0, .head1, .head2, .head3, .head4, .head5, .head6   
+.variantMain .head0,variantMain .head1,variantMain .head2,variantMain .head3,variantMain .head4,variantMain .head5,variantMain .head6   
         {
         text-align: center;
         margin: 2em 0em 2em 0em;
         }
 
-.head0
+.variantMain .head0
         {
         font-size: 100%;
         }
 
-.head1
+.variantMain .head1
         {
         font-size: 120%;
         }
 
-.head2
+.variantMain .head2
         {
         font-size: 144%;
         }
 
-.head3
+.variantMain .head3
         {
         font-size: 172%;
         }
 
-.head4
+.variantMain .head4
         {
         font-size: 207%;
         }
 
-.head5
+.variantMain .head5
         {
         font-size: 248%;
         }
 
-.head6
+.variantMain .head6
         {
         font-size: 298%;
         }
         
-.head 
+.variantMain .head 
         {
         font-weight: bold;
         text-align: center;
         }
 
-.italic 
+.variantMain .italic 
         {
         font-style: italic;
         }
 
 /* noter start */
 
-.footLine
+.variantMain .footLine
         {
         color: blue;
         text-align: left;

@@ -42,7 +42,7 @@
 
 
     <xsl:template match="tei:row">
-        <div class="myth refdiv">
+        <div class="person refdiv">
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>

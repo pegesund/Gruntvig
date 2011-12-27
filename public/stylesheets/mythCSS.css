@@ -1,90 +1,81 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
 
-body    
-        {
-		background-color: #D8D8D8;
-		margin-top: 100px;
-		margin-bottom: 100px;
-		margin-right: 50px;
-		margin-left: 50px;
-		text-align:justify;
-		}
 
-a:link {
+.myth a:link {
         text-decoration: none;
         color: gray;
         }
         
-a:visited {
+.myth a:visited {
         text-decoration: none;
         }
         
-a:hover {
+.myth a:hover {
         text-decoration: none;
         color: green;
         }
         
-a:active {
+.myth a:active {
         text-decoration: none;
         }
         
-.sameAs
+.myth .sameAs
         {
         font-weight: normal;
         }
         
-.row
+.myth
         {
-        margin: 2em
+        margin: 2em;
         }
 
-.normForm
-        {
-		font-weight: bold;
-        margin: 0.5em 0em 0.5em 0em;
-        }
-
-.epithet
+.myth .normForm
         {
 		font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.latin
+.myth .epithet
         {
 		font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.pseudoEpithet
+.myth .latin
         {
 		font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.popUp
+.myth .pseudoEpithet
+        {
+		font-weight: bold;
+        margin: 0.5em 0em 0.5em 0em;
+        }
+
+.myth .popUp
         {
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.orthography
+.myth .orthography
         {
         font-size: 90%;
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.encyc
+.myth .encyc
         {
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.bold
+.myth .bold
         {
 		font-weight: bold;
 		}
 
-.italic
+.myth .italic
         {
 		font-style: italic;
 		}

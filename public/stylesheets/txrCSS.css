@@ -3,72 +3,66 @@ KSR: 2011.10.04: list-style: alpha, roman and simple
 KSR: 2011.09.26: hi-element
 */
 
-a.toc
+.mainTxr a.toc
         {
         text-decoration: none;
         color: #000000;
         }
+       
 
-a.toc:hover
+.mainTxr a.toc:hover
         {
         color: #006633;
         }
-.author
+.mainTxr .author
         {
         text-align: left;
         }
 
-body   
-        {
-        font-family:"Times New Roman";
-        font-size: 16px;
-        margin: 2em 2em 2em 2em;
-        text-align: justify;
-        }
         
-.bold
+.mainTxr .bold
         {
         font-weight: bold;
         }
         
-.cell
+.mainTxr .cell
         {
         margin: 0em 3em 0em 3em;
         }
 
-.center
+.mainTxr .center
         {
         text-align: center;
         }
 
-.div
+.mainTxr .div
         {
         text-align: justify;
         }
 
-.editor
+.mainTxr .editor
         {
         text-align: left;
         }
 
-.firstIndent
+.mainTxr .firstIndent
         {
         margin: 1em 0em 1em 0em;
         }
 
-.fwLongLine
+.mainTxr .fwLongLine
         {
         width: 5em;
         }
 
-.fwShortLine
+.mainTxr .fwShortLine
         {
         width: 3em;
         }
 
 /* indhold hyperlink start */
 
-.toc
+.mainTxr .toc
         {
         text-align: left;
         font-size: 100%;
@@ -76,21 +70,21 @@ body
         margin-left: 1em;
         }
 
-.head
+.mainTxr .head
         {
         font-size: 200%;
         text-align: center;
         margin: 2em 0em 2em 0em;
         }
 
-.div .head
+.mainTxr .div .head
         {
         font-size: 144%;
         text-align: center;
         margin: 1em 0em 1em 0em;
         }
 
-.div .div .head
+.mainTxr .div .div .head
         {
         font-size: 120%;
         text-align: center;
@@ -101,52 +95,52 @@ body
 
 /* element hi start */
 
-.lowered
+.mainTxr .lowered
         {
         font-size: 80%;
         vertical-align: sub;
         }
 
-.raised
+.mainTxr .raised
         {
         font-size: 80%;
         vertical-align: super;
         }
 
-.initial
+.mainTxr .initial
         {
         font-style: normal;
         font-size: 120%;
         }
 
-.italic
+.mainTxr .italic
         {
         font-style: italic;
         }
 
-.litList
+.mainTxr .litList
         {
         list-style: circle;
         }
 
-.item
+.mainTxr .item
         {
         margin: 1em 1em 1em 1em;
         }
 
-.justify
+.mainTxr .justify
         {
         text-align: justify;
         }
 
-.left
+.mainTxr .left
         {
         text-align: left;
         }
 
 /* element h start */
 
-h2
+.mainTxr h2
         {
         font-size: 120%;
         margin: 0em 0em 0em 2em;
@@ -156,13 +150,13 @@ h2
 
 /* element hi end */
 
-.lgNumber
+.mainTxr .lgNumber
         {
         font-size: 100%;
         margin-left: 10px;
         }
 
-.lg
+.mainTxr .lg
         {
         text-align: left;
         margin: 2em 2em 2em 2em;
@@ -170,31 +164,31 @@ h2
 
 /* list begynd */
 
-.upperAlpha
+.mainTxr .upperAlpha
         {
         list-style-type: upper-alpha;
         margin: 1em;
         }
 
-.lowerAlpha
+.mainTxr .lowerAlpha
         {
         list-style-type: lower-alpha;
         margin: 1em;
         }
 
-.upperRoman
+.mainTxr .upperRoman
         {
         list-style-type: upper-Roman;
         margin: 1em;
         }
 
-.lowerRoman
+.mainTxr .lowerRoman
         {
         list-style-type: lower-roman;
         margin: 1em;
         }
 
-.simple
+.mainTxr .simple
         {
         list-style-type: circle;
         margin: 1em;
@@ -202,13 +196,13 @@ h2
 
 /* list slut */
 
-.noIndent
+.mainTxr .noIndent
         {
         text-indent: 0em;
         text-align: justify;
         }
 
-.pageNumber
+.mainTxr .pageNumber
         {
         text-align: justify;
         margin-right: 50px;
@@ -218,67 +212,67 @@ h2
 
 /* element p start */
 
-.p
+.mainTxr .p
         {
         margin: 2em 2em 2em 2em;
         }
 
-.right
+.mainTxr .right
         {
         text-align: right;
         }
 
 /* element p end */
 
-.romanType
+.mainTxr .romanType
         {
         font-family: arial;
         }
 
-.secondIndent
+.mainTxr .secondIndent
         {
         text-indent: 4em;
         text-align: justify;
         }
 
-.spaceOne
+.mainTxr .spaceOne
         {
         line-height: 200%;
         }
         
-.spaceTwo
+.mainTxr .spaceTwo
         {
         line-height: 300%;
         }
 
-.quote, .unQuote
+.mainTxr .quote, .unQuote
         {
         margin: 1em 0em 1em 0em
         }
 
 /* element table start */
 
-.table
+.mainTxr .table
         {
         margin: 0em 2em 0em 2em
         }
 
 /* element table end */
 
-.titlePage
+.mainTxr .titlePage
         {
         margin-right: 50px;
         margin-left: 50px;
         }
 
-.witness
+.mainTxr .witness
         {
         margin-left: 50px; 
         }
 
 /*<span style="width:50px;display:block;float:left;">Tel.</span>*/
 
-.witnessXmlId
+.mainTxr .witnessXmlId
         {
         font-style: italic;
         width: 50px;

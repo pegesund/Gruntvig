@@ -1,91 +1,84 @@
 /* Kim Steen Ravn, 2011.04.06 */
 
-body    {
-		 background-color: #CCCCCC;
-		 margin-top: 100px;
-	 	 margin-bottom: 100px;
-  		 margin-right: 150px;
-		 margin-left: 25px;
-		}
 
-a:link
+.person a:link
         {
         text-decoration: none;
         color: gray;
         }
         
-a:visited 
+.person a:visited 
         {
         text-decoration: none;
         }
         
-a:hover 
+.person a:hover 
         {
         text-decoration: none;
         color: green;
         }
         
-a:active
+.person a:active
         {
         text-decoration: none;
         }
         
-.bold
+.person .bold
         {
          font-weight: bold;
         }
 
-.cell
+.person .cell
         {
          font-size: 100%;
         }
 
-.head
+.person .head
         {
          font-size: 200%;
         }
 
-.row
+.person .row
         {
          margin: 2em;
         }
 
-.year
+.person .year
         {
          font-style: normal;
         }
 
-.birthName
+.person .birthName
         {
         color: black
         }
 
-.epithet
+.person .epithet
         {
         color: black
         }
 
-.ladyName
+.person .ladyName
         {
         color: black
         }
 
-.maidenName
+.person .maidenName
         {
         color: black
         }
 
-.orthography
+.person .orthography
         {
         color: black
         }
         
-.altName
+.person .altName
         {
         color: black
         }
         
-.xmlID
+.person .xmlID
         {
         font-weight: bold
         }

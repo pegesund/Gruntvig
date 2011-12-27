@@ -1,67 +1,56 @@
 /* txtCSS.css til styling af tekster */
 /* KSR: 2011.09.05 */
 
-a.app 
+#tekst_innhold a.app 
         {
         color: black;
         text-decoration: none;
         }
 
-span.appInvisible
+#tekst_innhold span.appInvisible
          {
          display: none;
          }
 
-.app:hover 
+#tekst_innhold .app:hover 
          {
          color: green;
          }
 
-.app:hover .appInvisible
+#tekst_innhold .app:hover .appInvisible
         {
         display: inline;
         }
 
-.lem
+#tekst_innhold .lem
         {
         color: gray;
         }
 
-body   
-        {
-        font-family:"Times New Roman";
-        font-size: 16px;
-        line-height: 110%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 10px;
-        margin-left: 10px;
-        }
-
 /* kolofonblad start */
 
-.kolofonBlad
+#tekst_innhold .kolofonBlad
         {
         margin: 2.5em
         }
 
-.kolofon
+#tekst_innhold .kolofon
         {
         margin: 0.5em;
         }
 
-.kolofonTitle
+#tekst_innhold .kolofonTitle
         {
         margin: 0.5em;
         }
         
-table, td    
+#tekst_innhold table, #tekst_innhold td    
         {
         padding-right: 0.5em;
         padding-left: 0em;
         }
 
-td.sigel
+#tekst_innhold td.sigel
         {
         font-style: italic;
         text-align: left;
@@ -69,7 +58,7 @@ td.sigel
         width: 2em;
         }
         
-td.source
+#tekst_innhold td.source
         {
         text-align: left;
         width: 30em;
@@ -77,22 +66,22 @@ td.source
 
 /* kolofonblad end */
 
-.bold
+#tekst_innhold .bold
         {
         font-weight: bold;
         }
 
-.center
+#tekst_innhold .center
         {
         text-align: center;
         }
 
-.editionPhilologist
+#tekst_innhold .editionPhilologist
         {
         margin-left: 50px;
         }
 
-.emendation
+#tekst_innhold .emendation
         {
         text-align: justify;
         margin-right: 50px;
@@ -100,20 +89,20 @@ td.source
         margin: 2em 2em 2em 2em;
         }
 
-.firstIndent
+#tekst_innhold .firstIndent
         {
         text-indent: 2em;
         text-align: justify;
         }
 
-.footnote
+#tekst_innhold .footnote
         {
         color: blue;
         font-size: 80%;
         margin: 1em 0em 1em 2em;
         }
 
-.footLine
+#tekst_innhold .footLine
         {
         color: blue;
         text-align: left;
@@ -121,19 +110,19 @@ td.source
         width: 4em;
         }
 
-.fwLongLine
+#tekst_innhold .fwLongLine
         {
         margin: 2em;
         width: 5em;
         }
 
-.fwShortLine
+#tekst_innhold .fwShortLine
         {
         margin: 2em;
         width: 3em;
         }
 
-.hangingIndent
+#tekst_innhold .hangingIndent
         {
         text-indent: -1em;
         padding-left: 1em;
@@ -141,116 +130,116 @@ td.source
 
 /* head start */
 
-.head0, .head1, .head2, .head3, .head4, .head5, .head6   
+#tekst_innhold .head0, .head1, .head2, .head3, .head4, .head5, .head6   
         {
         text-align: center;
         margin: 2em 0em 2em 0em;
         }
 
-.head0
+#tekst_innhold .head0
         {
         font-size: 100%;
         }
 
-.head1
+#tekst_innhold .head1
         {
         font-size: 120%;
         }
 
-.head2
+#tekst_innhold .head2
         {
         font-size: 144%;
         }
 
-.head3
+#tekst_innhold .head3
         {
         font-size: 172%;
         }
 
-.head4
+#tekst_innhold .head4
         {
         font-size: 207%;
         }
 
-.head5
+#tekst_innhold .head5
         {
         font-size: 248%;
         }
 
-.head6
+#tekst_innhold .head6
         {
         font-size: 298%;
         }
 
 /* head end */
 
-.initial
+#tekst_innhold .initial
         {
         font-style: normal;
         font-size: 120%;
         }
 
-.italic
+#tekst_innhold .italic
         {
         font-style: italic;
         }
 
-.justify
+#tekst_innhold .justify
         {
         text-align: justify;
         }
 
-.l_center
+#tekst_innhold .l_center
         {
         text-align: center;
         }
 
-.lgNumber
+#tekst_innhold .lgNumber
         {
         font-size: 100%;
         margin-left: 10px;
         }
 
-.left
+#tekst_innhold .left
         {
         text-align: left;
         }
 
-.lfirstIndent
+#tekst_innhold .lfirstIndent
         {
         text-indent: 1em;
         }
 
-.lsecondIndent
+#tekst_innhold .lsecondIndent
         {
         text-indent: 2em;
         }
 
-.lthirdIndent
+#tekst_innhold .lthirdIndent
         {
         text-indent: 4em;
         }
 
-.lg
+#tekst_innhold .lg
         {
         text-align: left;
         margin: 2em 2em 2em 2em;
         }
 
-.motto
+#tekst_innhold .motto
         {
         font-size: 80%;
         line-height: 110%;
         margin: 1em 0em 1em 0em;
         }
 
-.noIndent
+#tekst_innhold .noIndent
         {
         text-indent: 0em;
         text-align: justify;
         }
 
-.pageNumber
+#tekst_innhold .pageNumber
         {
         text-align: justify;
         margin-right: 50px;
@@ -258,18 +247,18 @@ td.source
         margin: 4em 4em 4em 4em;
         }
 
-.pbA
+#tekst_innhold .pbA
         {
         font-weight: bold;
         }
 
-.pbA, .pb
+#tekst_innhold .pbA, .pb
         {
         font-size: 80%;
         color: #008000;
         }
 
-.preFace
+#tekst_innhold .preFace
         {
         text-align: justify;
         margin-right: 150px;
@@ -277,146 +266,146 @@ td.source
         margin: 4em 4em 4em 4em;
         }
 
-.raised
+#tekst_innhold .raised
         {
         font-size: 80%;
         vertical-align: top;
         }
 
-.right
+#tekst_innhold .right
         {
         text-align: right;
         }
 
-.romanType
+#tekst_innhold .romanType
         {
         font-family: arial;
         font-size: 80%;
         }
 
-.secondIndent
+#tekst_innhold .secondIndent
         {
         text-indent: 4em;
         text-align: justify;
         }
 
-.size-1
+#tekst_innhold .size-1
         {
          font-size: 80%;
         }
 
-.spaceOne
+#tekst_innhold .spaceOne
         {
         line-height: 200%;
         }
         
-.spaceTwo
+#tekst_innhold .spaceTwo
         {
         line-height: 300%;
         }
 
 /* titlePage start */
 
-.titlePage
+#tekst_innhold .titlePage
         {
         text-align: center;
         margin: 2em 0em 2em 0em;
         }
 
-.main1, .main2, .main3, .main4, .main5, .main6
+#tekst_innhold .main1,#tekst_innhold .main2,#tekst_innhold .main3,#tekst_innhold .main4,#tekst_innhold .main5,#tekst_innhold .main6
         {
         margin: 2em;
         }
         
-.main1
+#tekst_innhold .main1
         {
         font-size: 120%;
         }
 
-.main2
+#tekst_innhold .main2
         {
         font-size: 144%;
         }
 
-.main3
+#tekst_innhold .main3
         {
         font-size: 172%;
         }
 
-.main4
+#tekst_innhold .main4
         {
         font-size: 207%;
         line-height: 200%;
         }
 
-.main5
+#tekst_innhold .main5
         {
         font-size: 248%;
         line-height: 200%;
         }
 
-.main6
+#tekst_innhold .main6
         {
         font-size: 298%;
         line-height: 200%;
         }
 
-.part1, .part2, .part3, .part4, .part5, .part6
+#tekst_innhold .part1,#tekst_innhold .part2,#tekst_innhold .part3,#tekst_innhold .part4,#tekst_innhold .part5,#tekst_innhold .part6
         {
         margin: 2em;
         }
 
-.part1
+#tekst_innhold .part1
         {
         font-size: 120%;
         }
 
-.part2
+#tekst_innhold .part2
         {
         font-size: 144%;
         }
 
-.part3
+#tekst_innhold .part3
         {
         font-size: 172%;
         }
 
-.part4
+#tekst_innhold .part4
         {
         font-size: 207%;
         line-height: 200%;
         }
 
-.part5
+#tekst_innhold .part5
         {
         font-size: 248%;
         line-height: 200%;
         }
 
-.part6
+#tekst_innhold .part6
         {
         font-size: 298%;
         line-height: 200%;
         }
 
-.docTitle
+#tekst_innhold .docTitle
         {
         margin: 2em;
         }
 
-.byline
+#tekst_innhold .byline
         {
         margin: 2em;
         }
 
 /* titlePage end */
 
-.witness
+#tekst_innhold .witness
         {
         margin-left: 50px; 
         }
         
-.witnessXmlId
+#tekst_innhold .witnessXmlId
         {
         font-style: italic;
         width: 50px;

@@ -165,13 +165,13 @@ public class Asset extends GenericModel {
         String fileName = fileNameIn;
         fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "");
         
-        Pattern pattern = Pattern.compile("(.*)_.*\\d+^");
+        Pattern pattern = Pattern.compile("(.*)_.*\\d+$");
         Matcher matcher = pattern.matcher(fileName);
-        if (!matcher.find()) {
+        if (!matcher.matches()) {
             System.out.println("Setting root name to: " + fileName);
             return fileName;
         } else {
-            System.out.println("Setting root name to: " + matcher.group(1));
+            System.out.println("Setting root name to (regexp match): " + matcher.group(1));
             return matcher.group(1);
         }
     }
@@ -402,7 +402,8 @@ public class Asset extends GenericModel {
             Serializer out = new Serializer();
             ByteArrayOutputStream buf = new ByteArrayOutputStream();
             out.setOutputProperty(Serializer.Property.METHOD, "xhtml");
-            out.setOutputProperty(Serializer.Property.INDENT, "yes");
+            out.setOutputProperty(Serializer.Property.OMIT_XML_DECLARATION, "yes");
+            out.setOutputProperty(Serializer.Property.INDENT, "yes");;            
             out.setOutputStream(buf);
             // out.setOutputFile(new File("tour.html"));
             XsltTransformer trans = exp.load();

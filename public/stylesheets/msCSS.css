@@ -33,45 +33,45 @@ span.appInvisible
 
 /* app start */
 
-.ms
+.manusMain .ms
         {
         color: black;
         }
 
-.firstDel
+.manusMain .firstDel
         {
         text-decoration: line-through;
         }
 
-.shading
+.manusMain .shading
         {
         background: url(shading.jpg) repeat;
         }
 
-.immediate
+.manusMain .immediate
         {
         color: darkgreen;
         }
 
-.secondDel
+.manusMain .secondDel
         {
         text-decoration: line-through;
         }
 
-.secondDel
+.manusMain .secondDel
         {
         color: red;
         }
 
 /* app end */
 
-div.head
+.manusMain div.head
         {
         font-size: 150%;
         margin: 2em 0em 2em 0em;
         }
 
-body   
+.manusMain body   
         {
         font-family:"Times New Roman";
         font-size: 16px;
@@ -82,27 +82,27 @@ body
         margin-left: 5em;
         }
 
-.underLine
+.manusMain .underLine
         {
         text-decoration: underline;
         }
 
-.bold
+.manusMain .bold
         {
         font-weight: bold;
         }
 
-.center
+.manusMain .center
         {
         text-align: center;
         }
 
-.editionPhilologist
+.manusMain .editionPhilologist
         {
         margin-left: 50px;
         }
 
-.emendation
+.manusMain .emendation
         {
         text-align: justify;
         margin-right: 50px;
@@ -110,97 +110,97 @@ body
         margin: 2em 2em 2em 2em;
         }
 
-.firstIndent
+.manusMain .firstIndent
         {
         text-indent: 2em;
         text-align: justify;
         }
 
-.fwLongLine
+.manusMain .fwLongLine
         {
         margin: 2em;
         width: 5em;
         }
 
-.fwShortLine
+.manusMain .fwShortLine
         {
         margin: 2em;
         width: 3em;
         }
 
-.hangingIndent
+.manusMain .hangingIndent
         {
         text-indent: -1em;
         padding-left: 1em;
         }
 
-.initial
+.manusMain .initial
         {
         font-style: normal;
         font-size: 120%;
         }
 
-.italic
+.manusMain .italic
         {
         font-style: italic;
         }
 
-.justify
+.manusMain .justify
         {
         text-align: justify;
         }
 
-.l_center
+.manusMain .l_center
         {
         text-align: center;
         }
 
-.lgNumber
+.manusMain .lgNumber
         {
         font-size: 100%;
         margin-left: 10px;
         }
 
-.left
+.manusMain .left
         {
         text-align: left;
         }
 
-.lfirstIndent
+.manusMain .lfirstIndent
         {
         text-indent: 1em;
         }
 
-.lsecondIndent
+.manusMain .lsecondIndent
         {
         text-indent: 2em;
         }
 
-.lthirdIndent
+.manusMain .lthirdIndent
         {
         text-indent: 4em;
         }
 
-.lg
+.manusMain .lg
         {
         text-align: left;
         margin: 0em 1em 1em 0em;
         }
 
-.motto
+.manusMain .motto
         {
         font-size: 80%;
         line-height: 110%;
         margin: 1em 0em 1em 0em;
         }
 
-.noIndent
+.manusMain .noIndent
         {
         text-indent: 0em;
         text-align: justify;
         }
 
-.pageNumber
+.manusMain .pageNumber
         {
         text-align: justify;
         margin-right: 50px;
@@ -208,14 +208,14 @@ body
         margin: 4em 4em 4em 4em;
         }
 
-.pbA, .pbMs
+.manusMain .pbA, .manusMain .pbMs
         {
         color: #008000;
         font-size: 80%;
         font-weight: bold;
         }
 
-.preFace
+.manusMain .preFace
         {
         text-align: justify;
         margin-right: 150px;
@@ -223,146 +223,146 @@ body
         margin: 4em 4em 4em 4em;
         }
 
-.raised
+.manusMain .raised
         {
         font-size: 80%;
         vertical-align: top;
         }
 
-.right
+.manusMain .right
         {
         text-align: right;
         }
 
-.romanType
+.manusMain .romanType
         {
         font-family: arial;
         font-size: 80%;
         }
 
-.secondIndent
+.manusMain .secondIndent
         {
         text-indent: 4em;
         text-align: justify;
         }
 
-.size-1
+.manusMain .size-1
         {
          font-size: 80%;
         }
 
-.spaceOne
+.manusMain .spaceOne
         {
         line-height: 200%;
         }
         
-.spaceTwo
+.manusMain .spaceTwo
         {
         line-height: 300%;
         }
 
 /* titlePage start */
 
-.titlePage
+.manusMain .titlePage
         {
         text-align: center;
         margin: 2em 0em 2em 0em;
         }
 
-.main1, .main2, .main3, .main4, .main5, .main6
+.manusMain .main1, .manusMain .main2, .manusMain .main3,.manusMain .main4,.manusMain .main5,.manusMain .main6
         {
         margin: 2em;
         }
         
-.main1
+.manusMain .main1
         {
         font-size: 120%;
         }
 
-.main2
+.manusMain .main2
         {
         font-size: 144%;
         }
 
-.main3
+.manusMain .main3
         {
         font-size: 172%;
         }
 
-.main4
+.manusMain .main4
         {
         font-size: 207%;
         line-height: 200%;
         }
 
-.main5
+.manusMain .main5
         {
         font-size: 248%;
         line-height: 200%;
         }
 
-.main6
+.manusMain .main6
         {
         font-size: 298%;
         line-height: 200%;
         }
 
-.part1, .part2, .part3, .part4, .part5, .part6
+.manusMain .part1,.manusMain .part2,.manusMain .part3,.manusMain .part4,.manusMain .part5,.manusMain .part6
         {
         margin: 2em;
         }
 
-.part1
+.manusMain .part1
         {
         font-size: 120%;
         }
 
-.part2
+.manusMain .part2
         {
         font-size: 144%;
         }
 
-.part3
+.manusMain .part3
         {
         font-size: 172%;
         }
 
-.part4
+.manusMain .part4
         {
         font-size: 207%;
         line-height: 200%;
         }
 
-.part5
+.manusMain .part5
         {
         font-size: 248%;
         line-height: 200%;
         }
 
-.part6
+.manusMain .part6
         {
         font-size: 298%;
         line-height: 200%;
         }
 
-.docTitle
+.manusMain .docTitle
         {
         margin: 2em;
         }
 
-.byline
+.manusMain .byline
         {
         margin: 2em;
         }
 
 /* titlePage end */
 
-.witness
+.manusMain .witness
         {
         margin-left: 50px; 
         }
         
-.witnessXmlId
+.manusMain .witnessXmlId
         {
         font-style: italic;
         width: 50px;

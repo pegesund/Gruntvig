@@ -20,6 +20,15 @@
      KSR:
      2011.08.24: addName, delimiter etc
      2011.04.06
+     
+     
+     
+     WARNING!!!!!!!!!!!!!!!!!!!
+     
+     WARNING: Denne er ikke i bruk, oppdater person.xsl i stedet
+     
+     
+     
 -->
 
     <xsl:template match="tei:TEI">
