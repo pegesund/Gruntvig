@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="msXSLT.xsl"?>
 <?xml-model href="msRNC.rnc" type="application/relax-ng-compact-syntax"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:TEI="http://www.tei-c.org/ns/1.0">
+<tei xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     
     <teiHeader>
         <fileDesc>
@@ -295,4 +295,4 @@
             </div>
         </body>
     </text>
-</TEI>
+</tei>

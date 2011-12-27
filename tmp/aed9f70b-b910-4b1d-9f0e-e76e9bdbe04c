@@ -1,0 +1,487 @@
+------WebKitFormBoundaryBTqM3n58w5CPzw2j
+Content-Disposition: form-data; name="filesname"
+
+test-varList
+------WebKitFormBoundaryBTqM3n58w5CPzw2j
+Content-Disposition: form-data; name="comment"
+
+test-varList
+------WebKitFormBoundaryBTqM3n58w5CPzw2j
+Content-Disposition: form-data; name="epub"; filename="1826_433A_varList.xml"
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="varListXSLT.xsl"?>
+<?xml-model href="varListRNC.rnc" type="application/relax-ng-compact-syntax"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</title>
+        <title rend="shortForm">H&#x00F8;itids-Psalmer 1826</title>
+        <author>Krista Stinne Greve Rasmussen</author>
+        <author>Else Riisager</author>
+        <editor role="editor">Johnny Kondrup</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition>Version 0.9</edition>
+      </editionStmt>
+      <extent>32 KB</extent>
+      <publicationStmt>
+        <publisher>Aarhus Universitet, Det Teologiske Fakultet</publisher>
+        <distributor>Grundtvig Centeret, Vartov</distributor>
+        <authority/>
+        <idno type="1826_433A_txt.xml">1826_433A_varList.xml</idno>
+        <date type="2011-12-15">www.grundtvigsvaerker.dk, 15. december 2011</date>
+      </publicationStmt>
+      <seriesStmt/>
+      <!-- til metadata
+      <notesStmt>
+        <note>Note1</note>
+        <note>Note2</note>
+        <note>Note3</note>
+        <note>Note4</note>
+        <note>Note5</note>
+      </notesStmt>
+      -->
+      <sourceDesc>
+        <bibl>
+          <title>Danske<lb/> H&#x00F8;itids-Psalmer<lb/> til<lb/> Tusindaars-Festen.</title>
+          <author>Nik. Fred. Sev. Grundtvig<lb/>
+            <note>residerende Capellan ved Vor Frelsers Kirke.</note>
+          </author>
+          <pubPlace>Ki&#x00F6;benhavn.</pubPlace>
+          <publisher>
+            <note>Trykt paa den Wahlske Boghandlings Forlag,</note>
+            <note>hos C. Gr&#x00E6;be.</note>
+          </publisher>
+          <date>1826.</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Grundtvig Centeret er oprettet den 1. januar 2009.</p>
+        <p>Grundtvig Centeret arbejder med:</p>
+        <p>1.En digital og kommenteret udgave af Grundtvigs v&#x00E6;rker</p>
+        <p>2.En forskningsindsats på de felter, hvor Grundtvig s&#x00E6;rligt markerede sig</p>
+        <p>2.a.Teologi og kirke</p>
+        <p>2.b.Demokrati og folkelighed</p>
+        <p>2.c.P&#x00E6;dagogik og folkeoplysning</p>
+        <p>3.Videnudveksling, undervisning og formidling</p>
+      </projectDesc>
+      
+    </encodingDesc>
+    <revisionDesc>
+      <change xml:id="KSG" who="KSG" when="2011-02-11">variantoversigt</change>
+      <change who="KSG" when="2011-02-27">oversigten lavet</change>
+      <change xml:id="ELR" who="ELR" when="2011-10-10">enkelte rettelser i br&#x00F8;dteksten efter tekstredeg&#x00F8;relsen</change>
+     <change who="ELR" when="2011-10-13">kantet parentes om forfatter i var. 3</change>
+      <change who="ELR" when="2011-10-18">&#x00E6;ndring i var. 7, 14, 20 og 26; ombytning af r&#x00E6;kkef&#x00F8;lgen af v. 11 og 12; var. 25 indsat</change>
+      <change who="ELR" when="2011-10-20">rettelse ang. 2. udg; indf&#x00F8;jelse af semantiske variantnavne</change>
+      <change xml:id="KSR" who="KSR" when="2011-10-21">ændring af struktur</change>
+      <change who="KSR" when="2011-10-24">ændring af struktur og navn</change>
+      <change who="ELR" when="2011-11-08">rettelse i 433B, v.16,20,5,8,10,19</change>
+      <change who="ELR" when="2011-11-09">rettelse i v.21,29</change>
+      <change who="ELR" when="2011-11-10">rettelse i v.30</change>
+      <change who="ELR" when="2011-11-14">rettelse i v.2,6</change>
+      <change who="ELR" when="2011-11-15">rettelse i v.13,15,17</change>
+      <change who="ELR" when="2011-11-16">rettelse i sidste post</change>
+      <change who="ELR" when="2011-11-18">rettelse i v.8,25; tilf&#x00F8;jelse efter v. 30</change>
+      <change who="ELR" when="2011-11-25">tilrettelser i teiheader; nr. fra Bibliografien indsat ved bragte varianter af G.</change>
+      <change who="ELR" when="2011-11-28">enkelte tilretninger af teiheader</change>
+      <change who="ELR" when="2011-11-30">indførelse af v.31</change>
+      <change who="ELR" when="2011-12-03">shortForm i teiheader</change>
+    </revisionDesc> <!-- rettelse i v.30 -->
+  </teiHeader>
+  
+  <text>
+    <body>
+        <div type="preFace">
+          
+          <head>Variantoversigt</head>
+          
+          <p>Kun udgaver, der indeholder substantielle varianter i forhold til den forudgående udgave medtages i variantapparatet.</p>
+          
+          <head>Tryk</head>
+          <p>Nummer i <hi rend="italic">Bibliografien</hi>: 433A (2. udgave (oplag): 433B)</p>
+          
+          <p><hi rend="italic"><rs type="title" key="title32">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</rs></hi> udkom p&#x00E5; den Wahlske Boghandlings Forlag og blev annonceret i <hi rend="italic"><rs type="title" key="title33">Adresseavisen</rs></hi> den 28. april 1826. Anden udgave (p&#x00E5; titelbladet kaldt: &#x201C;Andet oplag&#x201D;), der ogs&#x00E5; havde et nodeblad med musik af <persName key="pe75">C.E.F. Weyse</persName> til &#x201C;<rs type="title" key="title34">Den signede Dag</rs>&#x201D;, udkom ligeledes p&#x00E5; den Wahlske Boghandlings Forlag og blev annonceret i <hi rend="italic"><rs type="title" key="title33">Adresseavisen</rs></hi> den 25. maj 1826. Af denne annonce fremgik det yderligere, at &#x201C;De, som have kj&#x00F8;bt Exemplarer af 1ste Oplag, og &#x00F8;nske at eie den af Prof. <persName key="pe75">Weyse</persName> componerede Musik til den 1ste Psalme, kunne afhente denne uden Betaling, naar Exemplarer af Psalmene forevises.&#x201D;</p>
+          
+          <p><hi rend="italic"><rs type="title" key="title32">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</rs></hi> indeholder de tre salmer: &#x201C;<rs type="title" key="title34">Den   signede Dag med Fryd vi seer</rs>&#x201D;, &#x201C;<rs type="title" key="title30">Tusind Aar stod Christi Kirke</rs>&#x201D; og &#x201C;<rs type="title" key="title31">Klar op, du Sky paa &#x00D8;ien-Bryn</rs>&#x201D;, nummereret 1-3 med romertal. Efter udgivelsen af f&#x00F8;rste og anden udgave (andet oplag) af <hi rend="italic"><rs type="title" key="title32">H&#x00F8;itids-Psalmer</rs> i 1826,</hi> blev salmerne i <persName key="pe4">Grundtvig</persName>s levetid aldrig siden genoptrykt som et selvstændigt værk. I den videre udgivelseshistorie lever de alts&#x00E5; deres eget liv, og de behandles derfor selvst&#x00E6;ndigt i f&#x00F8;lgende oversigt i lighed med <persName key="pe76">Steen Johansen</persName>s inddeling i <hi rend="italic"><rs type="title" key="title35">Bibliografi over N.F.S. Grundtvigs skrifter</rs>,</hi> som fremstillingen bygger p&#x00E5;.</p>
+        
+        </div>
+
+	<!-- hvordan fungerer omtalen af 2. udgaven i skemaet? -->          
+            
+            <div type="varList">
+              <head>&#x201C;<rs type="title" key="title34">Den signede Dag med Fryd vi seer</rs>&#x201D;</head>
+              <table>
+                <row>
+                  <cell rend="year">1826</cell>
+                  <cell rend="source"><persName key="pe4">Nic. Fred. Sev. Grundtvig</persName> <hi rend="italic">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</hi>, I </cell>
+                  <cell rend="shortForm"><hi rend="italic">H&#x00F8;itids-Psalmer</hi> 1826, 2. udg.</cell>
+                  <cell rend="comVariant">Ud over tilf&#x00F8;jelsen af Weyses melodi har 2. udg. &#x201C;nedfuser&#x201D; i strofe 6, mens der i 1. udg. st&#x00E5;r &#x201C;nedsuser&#x201D;; i GV er tekststedet emenderet efter 2. udg.</cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 433B</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1832</cell>
+                  <cell rend="source"><persName key="pe77">L.C. Hagen</persName> <hi rend="italic"><rs type="title" key="title36">Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom</rs>,</hi> nr. 45</cell>
+                  <cell rend="shortForm">v.1: Hagen 1832 <note type="fileName">1826_433A_v1.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition">2. til 5. oplag er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 1. oplag.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1835 &#x0026; 1836</cell>
+                  <cell rend="source"><persName key="pe78">&#x005B;Frederik Barfod&#x005D;</persName> <hi rend="italic"><rs type="title" key="title37">Poetisk L&#x00E6;sebog for B&#x00F8;rn og Barnlige Sj&#x00E6;le</rs>,</hi> nr. 174</cell>
+                  <cell rend="shortForm">v.3: &#x005B;Barfod&#x005D; 1835 &#x0026; 1836 <note type="fileName">1826_433A_v3.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition">2. til 3. oplag er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 1. oplag.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1836-37</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title175"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1:1 1836</rs>, nr. 16</cell>
+                  <cell rend="shortForm">v.4: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1:1 1836 <note type="fileName">1826_433A_v4.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582A</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1840</cell>
+                  <cell rend="source"><persName key="pe23">Christian Molbech</persName> <hi rend="italic"><rs type="title" key="title39">Dansk poetisk Anthologie</rs>,</hi> 4:1, s. 90-93</cell> <!-- fjerde del, f&#x00F8;rste afdeling, -->
+                  <cell rend="shortForm">v.7: Molbech 1840 <note type="fileName">1826_433A_v7.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1841</cell>
+                  <cell rend="source"><persName key="pe79">L.N. Boisen</persName> <hi rend="italic"><rs type="title" key="title40">Tro, Haab og Kj&#x00E6;rlighed</rs>,</hi> nr. 165</cell>
+                  <cell rend="shortForm">v.9: L.N. Boisen 1841 <note type="fileName">1826_433A_v9.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">&#x005B;1843&#x005D;</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <hi rend="italic"><rs type="title" key="title42">Psalme-Blade til Kirke-Bod</rs>,</hi> nr. 30</cell>
+                  <cell rend="shortForm">v.11: <hi rend="italic">Psalme-Blade til Kirke-Bod</hi> &#x005B;1843&#x005D; <note type="fileName">1826_433A_v11.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 745</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1843</cell>
+                  <cell rend="source"><persName key="pe80">Jac. Chr. Lindberg</persName> <hi rend="italic"><rs type="title" key="title41">Rosen-Kj&#x00E6;den</rs>,</hi> nr. 274</cell>
+                  <cell rend="shortForm">v.12: Lindberg 1843 <note type="fileName">1826_433A_v12.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                
+                <row>
+                  <cell rend="year">&#x005B;1844&#x005D;</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> &#x005B;<rs type="title" key="title43">Trykte Salmeblade</rs>&#x005D;, nr. 36</cell>
+                  <cell rend="shortForm">v.14: &#x005B;Trykte Salmeblade&#x005D; &#x005B;1844&#x005D; <note type="fileName">1826_433A_v14.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 796</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1846</cell>
+                  <cell rend="source"><persName key="pe81">J.F.</persName> &#x0026; <persName key="pe82">R.Th. Fenger</persName> <hi rend="italic"><rs type="title" key="title44">Psalmer til Himmelfartsfesten og Pindsen</rs>,</hi> nr. 31</cell>
+                  <cell rend="shortForm">v.16: J.F. &#x0026; R.Th. Fenger 1846 <note type="fileName">1826_433A_v16.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1846-47</cell>
+                  <cell rend="source"><persName key="pe83">Carl J. Brandt</persName> &#x0026; <persName key="pe84">Ludvig Helweg</persName> <hi rend="italic"><rs type="title" key="title45">Den danske Psalmedigtning</rs>,</hi> bind 2, nr. 992</cell>
+                  <cell rend="shortForm">v.18: Brandt &#x0026; Helweg 1846-47 <note type="fileName">1826_433A_v18.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1847</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <hi rend="italic"><rs type="title" key="title46">Christi Himmelfartsdag. Pindsefesten</rs></hi></cell>
+                  <cell rend="shortForm">v.20: <hi rend="italic">Christi Himmelfartsdag</hi> 1847 <note type="fileName">1826_433A_v20.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 888</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1848</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <hi rend="italic"><rs type="title" key="title47">Christi Himmelfartsdag, Pindsefesten</rs>,</hi> nr. 625</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 20.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1849</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <hi rend="italic"><rs type="title" key="title48">Christi Himmelfartsdag, Pindsefesten</rs>,</hi> nr. 642</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 20.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1850</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <hi rend="italic"><rs type="title" key="title49">Fest-Psalmer</rs>,</hi> nr. 646</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 20.</cell>
+                  <cell rend="comEdition">2. til 7. udgave er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 1. udg.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1851</cell>
+                  <cell rend="source">&#x005B;<persName key="pe85">Peter R&#x00F8;rdam</persName>&#x005D; <hi rend="italic"><rs type="title" key="title50">Festpsalmer</rs>,</hi> nr. 655</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 20.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1853</cell>
+                  <cell rend="source"><persName key="pe86">P.O. Boisen</persName> <hi rend="italic"><rs type="title" key="title51">Bibelske og Kirkehistoriske Psalmer og Sange for Skolen</rs>,</hi> nr. 106</cell>
+                  <cell rend="shortForm">v.22: P.O. Boisen 1853 <note type="fileName">1826_433A_v22.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1854</cell>
+                  <cell rend="source"><persName key="pe87">D.G. Monrad</persName> <hi rend="italic"><rs type="title" key="title52">Evangelisk-christelig Psalmebog. Et Forslag</rs>,</hi> nr. 507</cell>
+                  <cell rend="shortForm">v.23: Monrad 1854 <note type="fileName">1826_433A_v23.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1856</cell>
+                  <cell rend="source"><hi rend="italic"><rs type="title" key="title54">Psalmebog til Kirke- og Huus-Andagt</rs></hi> (Roskilde Konvents Salmebog), nr. 74</cell>
+                  <cell rend="shortForm">v.24: Psalmebog 1856 <note type="fileName">1826_433A_v24.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row> 
+                  <cell rend="year">1856</cell>
+                  <cell rend="source">&#x005B;<persName key="pe85">Peter R&#x00F8;rdam</persName>&#x005D;<hi rend="italic"><rs type="title" key="title509">Psalmer</rs>,</hi> nr. 717</cell>
+                  <cell rend="shortForm">v.25: &#x005B;R&#x00F8;rdam&#x005D; 1856 <note type="fileName">1826_433A_v25.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>                  
+                  <cell rend="year">1857</cell>
+                  <cell rend="source"><persName key="pe88">&#x005B;P.A. Fenger&#x005D;</persName> <hi rend="italic"><rs type="title" key="title55">Till&#x00E6;g til evangelisk-christelig Psalmebog</rs>,</hi> nr. 920</cell>
+                  <cell rend="shortForm">v.26: &#x005B;P.A. Fenger&#x005D; 1857 <note type="fileName">1826_433A_v26.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1864</cell>
+                  <cell rend="source"><persName key="pe4">&#x005B;N.F.S. Grundtvig&#x005D;</persName> <hi rend="italic"><rs type="title" key="title56">Fest-Psalmer</rs>,</hi> 8. udgave, nr. 646</cell>
+                  <cell rend="shortForm">v.27: <hi rend="italic">Fest-Psalmer</hi> 1864 <note type="fileName">1826_433A_v27.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 1357; 9. til 10. udgave er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 8. udg.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1868</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title57"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868</rs>, nr. 16</cell>
+                  <cell rend="shortForm">v.28: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868 <note type="fileName">1826_433A_v28.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582B</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1873</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title67"><hi rend="italic">Sang-V&#x00E6;rk</hi> 3 1873</rs>, nr. 262</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt i forhold til variant 28.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+              </table>
+            </div>
+            
+            
+            <div type="varList">
+              <head>&#x201C;Tusind Aar stod Christi Kirke&#x201D;</head>
+              <table>                
+                <row>
+                  <cell rend="year">1826</cell>
+                  <cell rend="source"><persName key="pe4">Nic. Fred. Sev. Grundtvig</persName> <hi rend="italic">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</hi>, II</cell>
+                  <cell rend="shortForm"><hi rend="italic">H&#x00F8;itids-Psalmer</hi> 1826, 2. udg.</cell>
+                  <cell rend="comVariant">Varierer ikke substantielt i forhold til <hi rend="italic">H&#x00F8;itids-Psalmer</hi><!--skal denne have et rs-maerke?--> 1826, 1. udg.</cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 433B</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1831</cell>
+                  <cell rend="source"><persName key="pe80">Jac. Chr. Lindberg</persName> <hi rend="italic"><rs type="title" key="title58">Zions Harpe</rs>,</hi> nr. 27</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Varierer ikke substantielt i forhold til <hi rend="italic">H&#x00F8;itids-Psalmer</hi><!--skal denne have et rs-maerke?--> 1826, 1. udg.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1836-37</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title175"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1:1 1836</rs>, nr. 15</cell>
+                  <cell rend="shortForm">v.5: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1:1 1836 <note type="fileName">1826_433A_v5.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582A</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1840</cell>
+                  <cell rend="source"><persName key="pe89">Peder Hjort</persName> <hi rend="italic"><rs type="title" key="title59">Gamle og Nye Psalmer</rs>,</hi> 2. udg., nr. 239</cell>
+                  <cell rend="shortForm">v.8: Hjort 1840 <note type="fileName">1826_433A_v8.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition">3. oplag er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 1. oplag.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1841</cell>
+                  <cell rend="source"><persName key="pe90">L.D. Hass</persName> <hi rend="italic"><rs type="title" key="title60">Samling af Aandelige Sange til Brug i Opbyggelsestimer</rs>,</hi> nr. 25</cell>
+                  <cell rend="shortForm">v.10: Hass 1841 <note type="fileName">1826_433A_v10.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1843</cell>
+                  <cell rend="source"><persName key="pe80">Jac. Chr. Lindberg</persName> <hi rend="italic"><rs type="title" key="title41">Rosen-Kj&#x00E6;den</rs>,</hi> nr. 139</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 10.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1846-47</cell>
+                  <cell rend="source"><persName key="pe83">C.J. Brandt</persName> &#x0026; <persName key="pe84">Ludvig Helweg</persName> <hi rend="italic"><rs type="title" key="title45">Den danske Psalmedigtning</rs>,</hi> bd. 2, nr. 999</cell>
+                  <cell rend="shortForm">v.19: Brandt &#x0026; Helweg 1846-47 <note type="fileName">1826_433A_v19.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1848-49</cell>
+                  <cell rend="source"><persName key="pe83">C.J. Brandt</persName> <hi rend="italic"><rs type="title" key="title61">Rim og Sange til F&#x00E6;drelandets Historie</rs>,</hi> bind 2, s. 141-143</cell>
+                  <cell rend="shortForm">v.21: Brandt 1848-49 <note type="fileName">1826_433A_v21.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1868</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title57"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868</rs>, nr. 15</cell>
+                  <cell rend="shortForm">v.29: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868 <note type="fileName">1826_433A_v29.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582B</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1872</cell>
+                  <cell rend="source"><hi rend="italic"><rs type="title" key="title62">Till&#x00E6;g til Psalmebog for Kirke- og Hus-Andagt. Et Forslag af Roskilde-Pr&#x00E6;stekonvent</rs></hi>, nr. 713</cell>
+                  <cell rend="shortForm">v.30: Till&#x00E6;g til Psalmebog. Forslag 1872  <note type="fileName">1826_433A_v30.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1873</cell>
+                  <cell rend="source"><rs type="title" key="title62"><hi rend="italic">Till&#x00E6;g til Psalmebog for Kirke- og Huus-Andagt</hi> 1873</rs>, nr. 696</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 30.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                                
+              </table>
+            </div>
+           
+           
+            <div type="varList">
+              <head>&#x201C;<rs type="title" key="title31">Klar op, du Sky paa &#x00D8;ien-Bryn</rs>&#x201D;</head>
+              <table>
+                
+                <row>
+                  <cell rend="year">1826</cell>
+                  <cell rend="source"><persName key="pe4">Nic. Fred. Sev. Grundtvig</persName> <hi rend="italic">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</hi>, III</cell>
+                  <cell rend="shortForm"><hi rend="italic">H&#x00F8;itids-Psalmer</hi> 1826, 2. udg.</cell>
+                  <cell rend="comVariant">Varierer ikke substantielt i forhold til <hi rend="italic">H&#x00F8;itids-Psalmer</hi><!--skal denne have et rs-maerke?--> 1826, 1. udg.</cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 433B</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1832</cell>
+                  <cell rend="source"><persName key="pe77">L.C. Hagen</persName> <hi rend="italic"><rs type="title" key="title36">Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom</rs>,</hi> nr. 46</cell>
+                  <cell rend="shortForm">v.2: Hagen 1832  <note type="fileName">1826_433A_v2.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition">2. til 5. oplag er unders&#x00F8;gt, men indeholder ikke afvigelser i forhold til 1. oplag.</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1836-37</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title38"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1:8 1837</rs>, nr. 390</cell>
+                  <cell rend="shortForm">v.6: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1:8 1837 <note type="fileName">1826_433A_v6.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582A</cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1843</cell>
+                  <cell rend="source"><persName key="pe80">Jac. Chr. Lindberg</persName> <hi rend="italic"><rs type="title" key="title41">Rosen-Kj&#x00E6;den</rs>,</hi> nr. 138</cell>
+                  <cell rend="shortForm">v.12: Lindberg 1843 <note type="fileName">1826_433A_v13.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1845</cell>
+                  <cell rend="source">Kj&#x00F8;benhavns geistlige Convents Psalme-Comitee <hi rend="italic"><rs type="title" key="title64">Kirke-Psalmer udgivne til Pr&#x00F8;ve</rs>,</hi> nr. 106</cell>
+                  <cell rend="shortForm">v.15: <hi rend="italic">Kirke-Psalmer til Prøve</hi> 1845 <note type="fileName">1826_433A_v15.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1846</cell>
+                  <cell rend="source"><persName key="pe81">J.F.</persName> &#x0026; <persName key="pe82">R.Th. Fenger</persName> <hi rend="italic"><rs type="title" key="title44">Psalmer til Himmelfartsfesten og Pindsen</rs>,</hi> nr. 26</cell>
+                  <cell rend="shortForm">v.17: J.F. &#x0026; R.Th. Fenger 1846 <note type="fileName">1826_433A_v17.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1857</cell>
+                  <cell rend="source"><persName key="pe88">&#x005B;P.A. Fenger&#x005D;</persName> <hi rend="italic"><rs type="title" key="title55">Till&#x00E6;g til evangelisk-christelig Psalmebog</rs>,</hi> nr. 916</cell>
+                  <cell rend="shortForm"></cell>
+                  <cell rend="comVariant">Afviger ikke substantielt fra variant 17.</cell>
+                  <cell rend="comEdition"></cell>
+                </row>
+                
+                <row>
+                  <cell rend="year">1868</cell>
+                  <cell rend="source"><persName key="pe4">N.F.S. Grundtvig</persName> <rs type="title" key="title57"><hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868</rs>, nr. 390</cell>
+                  <cell rend="shortForm">v.28: <hi rend="italic">Sang-V&#x00E6;rk</hi> 1 1868 <note type="fileName">1826_433A_v31.xml</note></cell>
+                  <cell rend="comVariant"></cell>
+                  <cell rend="comEdition"><rs type="title" key="title35"><hi rend="italic">Bibliografien</hi></rs> 582B</cell>
+                </row>
+               
+              </table>
+            </div>
+      </body>
+  </text>
+</TEI>
+
+------WebKitFormBoundaryBTqM3n58w5CPzw2j--
