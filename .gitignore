@@ -1,3 +1,7 @@
 /tmp/
 /db/
 *.xml
+/logs/
+/public/xml/
+!/public/xml/tidslinje/
+!/public/xml/veiledninger/

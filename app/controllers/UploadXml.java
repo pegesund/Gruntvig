@@ -38,7 +38,6 @@ public class UploadXml extends Application {
             asset = Asset.uploadXmlFile(filesname, comment, epub);
         }
         if (fileName.equals("myth.xml")
-                || fileName.equals("bible.xml")
                 || fileName.equals("pers.xml")
                 || fileName.equals("place.xml")) {
             TextReference.uploadReferenceFile(asset);

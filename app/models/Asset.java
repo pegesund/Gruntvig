@@ -86,6 +86,7 @@ public class Asset extends GenericModel {
     public static String veiledningType = "veiledning";
     public static String txrType = "txr";
     public static String varListType = "varList";
+    public static String bibleType = "bible";
 
     // used by images
     // images on form rootname_number.jpg
@@ -207,6 +208,8 @@ public class Asset extends GenericModel {
             type = Asset.veiledningType;
         } else if (epub.getName().equals("place.xml")) {
             type = Asset.placeType;
+        } else if (epub.getName().equals("bible.xml")) {
+            type = Asset.bibleType;
         } else if (epub.getName().equals("pers.xml")) {
             type = Asset.personType;
         } else if (epub.getName().equals("myth.xml")) {
@@ -269,7 +272,9 @@ public class Asset extends GenericModel {
             html = Asset.xmlToHtmlManus(copiedFile);
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
-        } else if (type.equals(Asset.txrType)) {
+        } else if (type.equals(Asset.bibleType)) {
+            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "bibleXSLT.xsl");
+        }  else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
         } else if (type.equals(Asset.varListType)) {
             html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");

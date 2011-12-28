@@ -23,6 +23,8 @@ GET     /tekstvisning/{assetId}/{chapterNum}    ShowAsset.tekstvisning
 GET     /steder                                 ShowAsset.placevisning
 GET     /personer                               ShowAsset.personvisning
 GET     /myter                                  ShowAsset.mythvisning
+GET     /bibel                                  ShowAsset.biblevisning
+
 GET     /ajax/getKommentar/{assetId}            Ajax.getKommentar
 GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
 GET     /ajax/getTxr/{id}                                     Ajax.getTxr

@@ -46,4 +46,11 @@ public class ShowAsset extends Application {
         Asset asset = Asset.find("fileName = ?", "myth.xml").first();
         render(asset);
     }
+    
+    public static void biblevisning() {
+        Asset asset = Asset.find("fileName = ?", "bible.xml").first();
+        render(asset);
+    }
+
+    
 }

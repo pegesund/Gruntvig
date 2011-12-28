@@ -1,0 +1,113 @@
+/* bible.css
+
+.bible_content KSR: 2011.12.06
+
+*/
+
+
+/* html-delen start */
+
+.bible_content .head
+        {
+         margin: 0em 0em 2em 3em;
+         font-size: 150%;
+        }
+
+/* html-delen start */
+
+.bible_content div
+        {
+        }
+
+.bible_content div.book
+        {
+        font-size:120%;
+        margin: 1.5em 0 1.5em 3em;
+        }
+
+.bible_content span.plus
+        {
+        margin: 0.5em
+        }
+
+.bible_content span.verse
+        {
+        margin: 1em
+        }
+
+.bible_content table
+        {
+        }
+
+.bible_content tr
+        {
+        
+        }
+
+.bible_content td.shortForm
+        {
+        margin: 1em 0em 1em 1em;
+        }
+
+.bible_content table.occur
+        {
+        display: none;
+        margin: 0em 0em 0em 3.5em;
+        }
+
+.bible_content .verse
+        {
+        display: none;
+        margin: 0em 0em 0em  2em;
+        }
+
+.bible_content .plusBook
+        {
+        background-color: white;
+        color: green;
+        cursor: pointer;
+        font-family: monospace;
+        font-weight: bold;
+        margin: 1em;
+        text-align: center;
+        }
+
+.bible_content .plusVerse
+        {
+        background-color: white;
+        color: green;
+        cursor: pointer;
+        font-family: monospace;
+        font-weight: bold;
+        margin: 1em;
+        text-align: center;
+        }
+        
+.bible_content a:link
+        {
+        color: grey;
+        text-decoration: none;
+        }
+    
+.bible_content a:visited
+        {
+        text-decoration: none;
+        }
+        
+.bible_content a:hover
+        {
+        color: green;
+        text-decoration: underline;
+         }
+         
+.bible_content a:active 
+        {
+        text-decoration: underline;
+        }
+
+.bible_content .textType
+        {        
+        font-family: "Times New Roman";
+        font-size: 90%;
+        
+        }
