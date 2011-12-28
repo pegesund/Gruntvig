@@ -21,6 +21,8 @@
 			<change who="KSR" when="2011-03-01"><persName> og <rs> fjernet aht prøveversion; skema timelinePV.rnc; <hi rend=ital> udskiftet med 00BB og 00AB</change>
 		</revisionDesc>
 	</dataHeader>
+        
+        XXX
 -->	
 	<event
 		start="Apr 14 1784 00:00:00 GMT"
