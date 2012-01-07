@@ -7,7 +7,9 @@
 <xsl:stylesheet
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:TEI="http://www.tei-c.org/ns/1.0"
-  version="1.0">
+  version="1.0"
+  exclude-result-prefixes="#all"
+  >
 
   <xsl:template match="/">
     <div class="bible_content">

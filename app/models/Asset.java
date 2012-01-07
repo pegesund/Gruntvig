@@ -107,7 +107,7 @@ public class Asset extends GenericModel {
         this.importDate = new java.util.Date();
         this.comment = comment;
         this.fileName = fileName;
-        this.rootName = getRootName(fileName);
+        this.rootName = getRootName(fileName, this.type);
         this.type = type;
         this.refs = ref;
         System.out.println("Root-name: " + rootName);
@@ -162,9 +162,14 @@ public class Asset extends GenericModel {
         return xml + refs;
     }
 
-    public static String getRootName(String fileNameIn) {
+    public static String getRootName(String fileNameIn, String assetType) {
         String fileName = fileNameIn;
         fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "");
+        if (assetType.equals(Asset.rootType) ||
+                assetType.equals(Asset.commentType) ||
+                assetType.equals(Asset.introType) ||
+                assetType.equals(Asset.txrType) ||
+                assetType.equals(Asset.veiledningType)) return fileName;
         
         Pattern pattern = Pattern.compile("(.*)_.*\\d+$");
         Matcher matcher = pattern.matcher(fileName);
@@ -311,11 +316,12 @@ public class Asset extends GenericModel {
             asset.type = type;
             asset.refs = references;
             asset.fileName = epub.getName();
-            asset.rootName = getRootName(epub.getName());
+            asset.rootName = getRootName(epub.getName(), asset.type);
         } else {
             asset = new Asset(name, epub.getName(), html, xml, comment, variant, type, references);
         }
         asset.save();
+        System.out.println("Root-name: " + asset.rootName);
         System.out.println("Asset is saved, total assets: " + Asset.findAll().size());
         if (asset.type.equals(Asset.rootType)) {
             Chapter.createChaptersFromAsset(asset);

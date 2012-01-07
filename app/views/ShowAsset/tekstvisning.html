@@ -4,17 +4,24 @@
 
 
 <script>
-
+currentChapter = ${chapter.num};
+currentTextId = ${asset.id};   
+    
   $(document).ready(function() {
+      fixMissingFirstTab();
   
-      var readerNum = 0;
+      readerNum = 0;
       var columnWidth = 471; // how wide new columns should be, in pixels
       rootFile = "${asset.fileNameWithoutXml}";
       numOfPictures = ${asset.numberOfPictures};
-
-        $("#ny_kolonne_bar").click(function() {
+      var startupHash = window.location.hash;
+  
+      // takes an optional argument containing a hashtable
+      addReaderColumn = function() {
+            var options = arguments[0] || {};
+                     
             readerNum += 1;
-            addNewReader(readerNum);
+            addNewReader(readerNum, options);
             number_of_present_tabreaders = $(".tabReader").length;
 
             // make room for more columns
@@ -32,12 +39,16 @@
 
             // scroll to rightmost side of page
             $(window).scrollTo('100%', 0 , {duration:700});
+          
+      }
 
-
+        $("#ny_kolonne_bar").click(function() {
+            addReaderColumn();
         });
 
         $(".lukk_kolonne_knapp").live('click', function() {        
-            
+            var currentTabId = parseInt($(this).parent().parent().parent().attr("id").substring(3));
+            uriRemoveTab(currentTabId);
             number_of_present_tabreaders = $(".tabReader").length;
             
             $(this).parent().parent().parent().parent().remove(); // hide entire tabreader
@@ -53,8 +64,9 @@
             return false; // hindrer at vi bytter side
         });
 
-   var addNewReader = function(num) {
-    
+  addNewReader = function(num) {
+    var options = arguments[1] || {};
+    uriChangeTab(num,0);   
     var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Innledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a href="#faksimile' + num + '"><span>Faksimile</span></a></li> <li><a href="#txr' + num + '"><span>Red</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
     newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader +=  '<div id="variant' + num + '"><div class="variant_select">Vis variant: #{variantsAsDropDown variants:variants /} <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
@@ -70,19 +82,36 @@
          //alert($("#høyre_toppmeny_nytt_navn").html());
       $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
       //alert($("#høyre_toppmeny_nytt_navn").html());
-       
+     // update uri-hash if changing tab-panel  
      var i_tab=0;
      for (i_tab = 0; i_tab <= num; i_tab++) {
-          $("#tab" + i_tab).tabs();
+          if ($("#tab" + i_tab).size() == 0) continue;
+          var theTab = $("#tab" + i_tab).tabs();  
+          if (i_tab == num) {
+            if (options["open_tab"]) {
+                theTab.tabs('select', options["open_tab"]);
+                uriChangeTab(num, options["open_tab"])
+            }
+          }
+          theTab.bind('tabsselect', function(event, ui) {
+              var currentTab = parseInt($(ui.panel).parent().attr("id").substring(3));
+              uriChangeTab(currentTab, ui.index);
+          });          
      }
- 
-      // dropdown - varianter
-      $("#tab" + num +' .variantsAsDropDown').change(function() {
+
+      
+      $('.variantsAsDropDown').change(function() {
+         var parentId = $(this).closest("div.ui-tabs").attr("id");
+         var tabNumber = parseInt(parentId.substring(3));
+         var index = $(this)[0].selectedIndex;
+         if (index > 0) {
+             uriChangeVariant(tabNumber, index);
+         }
          var theUrl = "ajax/getVariantByName/" + $(this).val();
          $.ajax({
              url: theUrl,
              success: function(data) {
-                 var variantContent = $("#tab" + num + " .variantContent");
+                 var variantContent = $("#" + parentId + " .variantContent");
                  variantContent.html(data);
              }
          })
@@ -95,9 +124,7 @@
              success: function(data) {
                  var txrContent = $("#txr" + num);
                  txrContent.html(data);
-                 addTooltip($('.persName'));
-                 addTooltip($('.placeName'));
-                 addTooltip($('.myth'));
+                 addTooltip($('.persName, .placeName, .myth'));             
              }
          });
 
@@ -111,9 +138,7 @@
              success: function(data) {
                  var introContent = $("#kommentar" + num);
                  introContent.html(data);
-                 addTooltip($('.persName'));
-                 addTooltip($('.placeName'));
-                 addTooltip($('.myth'));
+                 addTooltip($('.persName, .placeName, .myth'));
              }
          });
 
@@ -134,15 +159,9 @@
                     });
                     a.removeAttr("href");
                  });
-                 addTooltip($('.persName'));
-                 addTooltip($('.placeName'));
-                 addTooltip($('.myth'));
-
+                 addTooltip($('.persName, .placeName, .myth'));
              }
          });
-
-
-
 
 
 
@@ -160,14 +179,19 @@
 
 
       // autolast den første varianten & manuset
+      if (options["variant"]) {
+        $("#tab" + num +' .variantsAsDropDown')[0].selectedIndex = options["variant"];
+      }
+      
       $("#tab" + num +' .variantsAsDropDown').trigger('change');
       $("#tab" + num +' .manusAsDropDown').trigger('change');
 
       // vis hovedtekst select når variant-fanen åpnes
       $('.variant_tab').click(function() {
-         $("#hovedtekst_select").show('medium');
+         // Jørgen: for å enable variantview i hovedvinduet, må disse linjene tilbake. Men det er en del mer som må fixes :-)
+         // $("#hovedtekst_select").show('medium');
          // resize hovedfeltet
-         resize_window();
+         // resize_window();
          //$("#tekst_innhold").height($(".variant_content").height() - 0);
       });
 
@@ -206,86 +230,27 @@
                     iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
                     return false;
                   });
+                  
+                  if (options["current_chapter"]) {
+                      currentChapter = options["current_chapter"];
+                      gotoChapter(currentTextId, currentChapter);
+                  }
 
 
   } // end new reader
 
-    addNewReader(0);
 
-    // tooltip
-
-    var addTooltip = function (tags) {
-        tags.cluetip({cluetipClass: 'jtip', closeText : 'Lukk', mouseOutClose: true, width: 375, dropShadow: false, sticky: true, ajaxCache: false, arrows: false});
-    }
-
-    var removeTooltip = function(tags) {
-        tags.cluetip('destroy');
-    }
-
-
-    // add popup references
-    /*
-
-    $('.seg').each(function(index) {
-        var elem = $(this);
-        var url = "/ajax/getReference/" + rootFile + "/" + elem.attr("id");
-        var new_tag = $("<a></a>");
-        new_tag.attr("href", url);
-        new_tag.attr("rel", url);
-        new_tag.attr("class", "reference");
-        new_tag.html(elem.html());
-        elem.replaceWith(new_tag);
-
-    });
-
-    $('.reference').cluetip({cluetipClass: 'jtip', closeText : 'Lukk', mouseOutClose: true, width: 375, dropShadow: false, sticky: true, ajaxCache: false, arrows: false});
-
-*/
-
-    // add scroll to comment
-
-    $('.seg').each(function(index) {
-        var elem = $(this);
-        elem.click(function() {
-           var target = $("#scrollTarget_" + elem.attr("id"));
-           // alert("Looking for id: " + "#scrollTarget_" + elem.attr("id"));
-           // switch to "Kommentar" tab
-
-           // if there are no visible tabReaders, we must first add one to show the comments
-           if($('.tabReader').length == 0){addNewReader(0);}
-
-           // switch to right tab
-           $(".kommentar_tab:first").trigger('click');
-
-           // scroll to target comment
-           $(".kommentar").scrollTo(target);
-           $(".kommentar").scrollTo("-=30px", 700);
-           target.effect("highlight", {}, 5000);
-        });
-
-    });
+    
+    var options = {};
+    options["variant"] = getCurrentHash(window.location.hash)["v0"];
+    options["open_tab"] =  getCurrentHash(window.location.hash)[0];
+    options["current_chapter"] = getCurrentHash(window.location.hash)["k"];
+    addNewReader(0, options);
+    addCommentListener();
 
     // resize layout når siden laster
     resize_window();
 
-    // Font-size selector
-
-
-        /* COOKIE plugin reference
-        // Get the value of a cookie:
-        $.cookie('sampleCookie');
-
-        // Create (or update) the value of a cookie:
-        $.cookie('sampleCookie', 'cookieValue');
-
-        //Create (or update) the value of a cookie to expire in 2 days:
-        $.cookie('sampleCookie', 'cookieValue', { expires: 2 });
-
-        // Delete a cookie:
-        $.cookie('sampleCookie', null);
-        */
-
-        //$.cookie('text_font', 'Klassisk');
 
         $( "#slider" ).slider({
                 value:160,
@@ -367,14 +332,10 @@
                        
                        $( "#slider" ).slider( "value", $.cookie('text_size') );   			// flytt slider knapp
                 }
-
-
-
+;
+                initChapterHandling();
+                startupUri(startupHash);  
                 
-
-
-
-
   });
 
 
@@ -382,6 +343,10 @@
 
 
 </script>
+
+
+<div id="testClick">Add to url</div>
+
 <div id="main">
 
 	<div class="container">
@@ -425,8 +390,7 @@
 
 			<div id="hovedtekst">
 				<div id="toppmeny" class="nav_meny">
-                                        %{ prevChapter = [0, chapter.num - 1].max(); }%
-					<a href="tekstvisning/${asset.id}/${prevChapter}" class="previous" title="Forrige kapittel"></a>
+					<span class="previous" title="Forrige kapittel"></span>
 					<span class="chapter">
 						<select class="chapterSelector">
                                                     #{list chapters, as:'c'}
@@ -436,7 +400,13 @@
 						</span>
 					
                                         %{ nextChapter = [chapter.num + 1, chapters.size - 1].min(); }%
+                                        
+                                        <!--
 					<a href="tekstvisning/${asset.id}/${nextChapter}" class="next" title="Neste kapittel"></a>
+                                        -->
+                                        
+                                        <span class="next"next></span>
+                                        
 				</div>
 				
                                 <div id="hovedtekst_select">select box her</div>
@@ -450,7 +420,7 @@
 				</div>
 
 				<div id="bunnmeny" class="nav_meny">
-					<a href="tekstvisning/${asset.id}/${prevChapter}" class="previous" title="Forrige kapittel"></a>
+					<span class="previous" title="Forrige kapittel"></span>
 					<span class="chapter">
 						<select class="chapterSelector">
                                                     #{list chapters, as:'c'}
@@ -458,7 +428,7 @@
                                                     #{/list}
 						</select>
 						</span>
-					<a href="tekstvisning/${asset.id}/${nextChapter}" class="next" title="Neste kapittel"></a>
+					<span class="next"next></span>
 				</div>
 
 			</div>

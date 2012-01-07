@@ -2,7 +2,9 @@
 <xsl:stylesheet 
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    version="1.0">
+    version="1.0"
+    exclude-result-prefixes="#all"
+    >
 
 <!-- KSR: 2011.09.26 -->
 
@@ -429,6 +431,12 @@
     </xsl:template>
     
     -->
+
+    <xsl:template match="TEI:body/TEI:div">        
+        <div class="chapter">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
     
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
@@ -449,6 +457,10 @@
     
     <xsl:template match="TEI:seg[@type='comStart' and @n]">        
         <span class="segStart">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+
             &#x25BA;
             <xsl:apply-templates/>
         </span>
@@ -456,6 +468,10 @@
     
     <xsl:template match="TEI:seg[@type='comEnd' and @n]">        
         <span class="segEnd">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+
             &#x25C4;
             <xsl:apply-templates/>
         </span>

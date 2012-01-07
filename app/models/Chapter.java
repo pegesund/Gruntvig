@@ -110,18 +110,18 @@ public class Chapter extends GenericModel {
             Document doc = builder.parse(in);
 
             XPath xpath = XPathFactory.newInstance().newXPath();
-            XPathExpression expr = xpath.compile("//div[@class='partXXX']|//div[@class='mainXXX']");
+            XPathExpression expr = xpath.compile("//div[@class='chapter']");
 
             Object result = expr.evaluate(doc, XPathConstants.NODESET);
             NodeList nodes = (NodeList) result;
-            System.out.println("Nubmer of chapters: " + nodes.getLength());
+            System.out.println("Number of chapters: " + nodes.getLength());
             // System.out.println("Txt-content: " + asset.html);
             if (nodes.getLength() > 0) {
                 // System.out.println("xhtml: " + asset.html);
                 for (int i = 0; i < nodes.getLength(); i++) {
                     Node node = nodes.item(i);
                     String name = "- Kapittel - " + (i + 1);
-                    if (node.getAttributes().getNamedItem("name").getNodeValue().length() > 0) {
+                    if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
                     }

@@ -11,7 +11,9 @@
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:teix="http://www.tei-c.org/ns/Examples"
   xmlns:xd="http://www.pnp-software.com/XSLTdoc"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="#all"
+  >
 
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>

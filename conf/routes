@@ -35,6 +35,7 @@ GET     /ajax/getReference/{textId}                           Ajax.getRef
 # GET     /ajax/getReference/{fileName}/{textId}              Ajax.getReference
 GET     /ajax/getIntro/{id}                                   Ajax.getIntro
 GET     /ajax/getComment/{id}                                 Ajax.getComment
+GET     /ajax/getChapter/{assetId}/{chapterNum}               Ajax.getChapter
 GET     /search                                               DoSearch.doSearch
 
 # Catch all

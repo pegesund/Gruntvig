@@ -4,8 +4,11 @@
  */
 package controllers;
 
+import java.util.List;
 import models.Asset;
+import models.Chapter;
 import models.TextReference;
+import play.db.jpa.GenericModel;
 import play.mvc.Controller;
 
 /**
@@ -67,6 +70,11 @@ public class Ajax extends Application {
         Asset asset = Asset.find("fileName = ?", fileName + ".xml").first();
         Controller.renderHtml(asset.html);
     }
-
+    
+    public static void getChapter(long assetId, int chapterNum) {
+        Asset asset = Asset.findById(assetId);
+        Chapter chapter = Chapter.find("byAssetAndNum", asset, chapterNum).first();
+        Controller.renderHtml(chapter.html);
+    }
 
 }

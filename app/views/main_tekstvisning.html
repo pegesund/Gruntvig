@@ -29,6 +29,9 @@
 <script type="text/javascript" src="public/javascripts/jquery.hoverIntent.js" ></script>
 <script type="text/javascript" src="public/javascripts/jquery.cookie.js" ></script>
 <script type="text/javascript" src="public/javascripts/jquery.scrollTo-min.js" ></script>
+<script type="text/javascript" src="public/javascripts/url_location.js" ></script>
+<script type="text/javascript" src="public/javascripts/chapterHandling.js" ></script>
+<script type="text/javascript" src="public/javascripts/mouseOvers.js" ></script>
 
 <link rel="stylesheet" href="public/stylesheets/jquery.iviewer.css" />
  
@@ -80,23 +83,12 @@
                   };
 
 
-                var selectChapter = function() {
-
-                }
-
 		$(document).ready(function() {
 
 			// resize layout når siden laster
 			resize_window();
-                        $('.chapterSelector').change(function() {
-                            window.location = "/tekstvisning/${asset?.id}/" + $(this).val();
-                        });
 
-                        $('.chapterSelector').val("${chapter?.num}");
-
-                        // searchbox focus
-
-
+                        
                         $('.clearSearch').bind('focus', function(){
                             if( this.value == this.defaultValue ) {
                                 this.value = "";

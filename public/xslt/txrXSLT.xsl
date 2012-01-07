@@ -2,7 +2,9 @@
 <xsl:stylesheet 
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    version="1.0">
+    version="1.0"
+    exclude-result-prefixes="#all"
+    >
 
 <!-- Kim Steen Ravn:
     2011.10.04: list-style: alpha, roman and simple
