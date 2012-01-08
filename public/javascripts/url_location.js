@@ -22,9 +22,28 @@ var sort_keys = function(o)
 
 var theUrl = {};
 
+
+// this is a kind of hack
+// it is written since the first reader-column is treated specially in the html and css
+// consider redisign html
 var fixMissingFirstTab = function() {
     var oldUrl = getCurrentHash(window.location.hash);
-    alert(sort_keys(oldUrl)[0]);
+    var skeys = sort_keys(oldUrl);
+    var smallest_str = skeys[0];
+    if (!smallest_str) return;
+    var smallest = parseInt(smallest_str);
+    if (smallest == 0) return;
+    var newUrl = {};
+    var i = 0;
+    for (i = smallest; i < skeys.length + smallest; i++) {
+        if (oldUrl[i] + "") {
+            newUrl[i - smallest] = oldUrl[i];
+        }
+        if (oldUrl["v" + i]) {
+            newUrl["v" + (i - smallest)] = oldUrl["v" + i];
+        }
+    }
+    window.location.hash = JSON.stringify(newUrl);
 } 
 
 

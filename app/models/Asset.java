@@ -100,6 +100,7 @@ public class Asset extends GenericModel {
     }
 
     public Asset(String name, String fileName, String html, String xml, String comment, int variant, String type, String ref) {
+        System.out.println("***** Constructing new asset, type is: " + type);
         this.variant = variant;
         this.name = name;
         this.html = html;
@@ -107,7 +108,7 @@ public class Asset extends GenericModel {
         this.importDate = new java.util.Date();
         this.comment = comment;
         this.fileName = fileName;
-        this.rootName = getRootName(fileName, this.type);
+        this.rootName = getRootName(fileName, type);
         this.type = type;
         this.refs = ref;
         System.out.println("Root-name: " + rootName);
@@ -155,7 +156,7 @@ public class Asset extends GenericModel {
     }
 
     public String getFileNameWithoutXml() {
-        return fileName.replace(".xml", "");
+        return this.rootName;
     }
 
     public String getHtmlAndReferences() {

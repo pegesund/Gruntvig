@@ -198,11 +198,12 @@ currentTextId = ${asset.id};
       // resize layout når kolonner endres
       resize_window();
 
-
+/*
       // vis faksimile (https://github.com/can3p/iviewer)
       var iviewer = {};
       var iviewer_src = "public/images/" + rootFile;
       var iviewer_num = 1;
+        
                   $("#faksimile" + num + " .faksimileContent").iviewer(
                   {
                       src: iviewer_src + "_" + iviewer_num + ".jpg",
@@ -230,7 +231,9 @@ currentTextId = ${asset.id};
                     iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
                     return false;
                   });
-                  
+  */                
+ 
+                  addFaksimile(num);
                   if (options["current_chapter"]) {
                       currentChapter = options["current_chapter"];
                       gotoChapter(currentTextId, currentChapter);
