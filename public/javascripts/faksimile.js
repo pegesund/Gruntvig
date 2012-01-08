@@ -1,7 +1,18 @@
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+ * 
+ * Handles faksimiler
+ * Treated as objects to keep scope
+ * Fix bug in iviewer by removing double images
+ *  
+ *    */
+
+
+// fix bug i iviewer to allow more images in same dom
+var removeShadowImages = function (num) {
+    for (var i=0; i <= num; i++) {
+       $("#faksimile" + i + " img:not(:first-child)").remove();
+    }
+}
 
 var addFaksimile = function(num) {
 
@@ -22,7 +33,7 @@ var addFaksimile = function(num) {
         }
     });
 
-    $(".neste_side").click(function()
+    $("#tab" + num + " .neste_side").click(function()
     {
         if (iviewer_num + 1 > numOfPictures) return false;
         iviewer_num += 1;
@@ -30,10 +41,11 @@ var addFaksimile = function(num) {
         return false;
     });
 
-    $(".forrige_side").click(function()
+    $("#tab" + num + " .forrige_side").click(function()
     {
         if (iviewer_num == 1) return false;
         iviewer_num -= 1;
+         alert("Going to page: " + iviewer_num);
         iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
         return false;
     });
