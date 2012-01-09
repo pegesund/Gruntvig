@@ -6,7 +6,7 @@
  * Side-effects:
  * 
  * currentHash is global
- * readerNum is globas
+ * readerNum is global
  * 
  */
 
@@ -78,6 +78,11 @@ var uriChangeVariant = function(tabNr, varNr) {
     window.location.hash = JSON.stringify(theUrl);
 }
 
+var uriChangeFaksimile = function(tabNr, faxNr) {
+    theUrl["f" + tabNr] = faxNr;
+    window.location.hash = JSON.stringify(theUrl);
+}
+
 var uriRemoveTab = function(tabNr) {
     delete theUrl[tabNr];
     delete theUrl["v" + tabNr];
@@ -97,6 +102,9 @@ var startupUri = function(hash) {
             options["open_tab"] = oldHash[i];
             if (oldHash["v"+i] != undefined) {
                 options["variant"] = oldHash["v" + i];
+            }
+            if (oldHash["f"+i] != undefined) {
+                theUrl["f" + i] = oldHash["f" + i];
             }
             if (i != 0) addReaderColumn(options);
             num++;

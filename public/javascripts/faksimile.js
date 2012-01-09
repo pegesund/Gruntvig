@@ -6,6 +6,7 @@
  *  
  *    */
 
+var faksimiler = [];
 
 // fix bug i iviewer to allow more images in same dom
 var removeShadowImages = function (num) {
@@ -20,7 +21,15 @@ var addFaksimile = function(num) {
     var iviewer = {};
     var iviewer_src = "public/images/" + rootFile;
     var iviewer_num = 1;
-        
+    
+    this.gotoPage = function(page) {
+        if (!faksimiler[num]) return;
+        iviewer_num = page; 
+        iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
+    }
+    
+    // alert("Creating faksimile: " + num);
+
     $("#faksimile" + num + " .faksimileContent").iviewer(
     {
         src: iviewer_src + "_" + iviewer_num + ".jpg",
@@ -37,6 +46,7 @@ var addFaksimile = function(num) {
     {
         if (iviewer_num + 1 > numOfPictures) return false;
         iviewer_num += 1;
+        uriChangeFaksimile(num, iviewer_num);
         iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
         return false;
     });
@@ -45,7 +55,7 @@ var addFaksimile = function(num) {
     {
         if (iviewer_num == 1) return false;
         iviewer_num -= 1;
-         alert("Going to page: " + iviewer_num);
+        uriChangeFaksimile(num, iviewer_num);        
         iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
         return false;
     });

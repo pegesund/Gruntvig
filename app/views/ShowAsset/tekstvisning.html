@@ -232,14 +232,19 @@ currentTextId = ${asset.id};
                     return false;
                   });
   */                
-                 for (var i=0; i <= num; i++)
-                    var newO = new addFaksimile(i);
+                 for (var i=0; i <= num; i++) {
+                    faksimiler[i] = new addFaksimile(i);
+                    if (theUrl["f" + i]) 
+                        faksimiler[i].gotoPage(theUrl["f" + i]);
+                 }
                  removeShadowImages(num);
                 
                   if (options["current_chapter"]) {
                       currentChapter = options["current_chapter"];
                       gotoChapter(currentTextId, currentChapter);
                   }
+                  
+
 
 
   } // end new reader
@@ -250,6 +255,7 @@ currentTextId = ${asset.id};
     options["variant"] = getCurrentHash(window.location.hash)["v0"];
     options["open_tab"] =  getCurrentHash(window.location.hash)[0];
     options["current_chapter"] = getCurrentHash(window.location.hash)["k"];
+    options["faks"] = getCurrentHash(window.location.hash)["f0"];
     addNewReader(0, options);
     addCommentListener();
 
