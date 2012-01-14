@@ -25,7 +25,7 @@
                     </div>
                     
                     <div class="kolofon">                        
-                        <xsl:text>Tekstkilder</xsl:text>
+                        <xsl:text>Her kommer: Tekstkilder</xsl:text>
                         
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
