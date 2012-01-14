@@ -34,12 +34,14 @@ var gotoChapter = function(text, chapter) {
             addTooltip($('.persName, .placeName, .myth'));
             addCommentListener();
             $(".faksimile_viewer").click(function() {
+                $(".faksimile_tab:first").trigger('click');
                 var fax = $(this).attr("hrel");
                 var patt1=new RegExp("([1-9][0-9]+).jpg");
                 var faxNumber = parseInt(patt1.exec(fax)[1]);
-                alert("Fax: " + fax);
-                alert("Goto fax: " + faxNumber);
-                return false;
+                var tab_nr = parseInt($(".faksimile_tab:first").attr("href").replace("#faksimile", ""));
+                faksimiler[tab_nr].gotoPage(faxNumber);
+                uriChangeTab(tab_nr, 2);
+                uriChangeFaksimile(tab_nr, faxNumber);
             });
             
         }

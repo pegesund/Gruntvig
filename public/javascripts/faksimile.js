@@ -25,6 +25,7 @@ var addFaksimile = function(num) {
     this.gotoPage = function(page) {
         if (!faksimiler[num]) return;
         iviewer_num = page; 
+        if (!iviewer.loadImage) return;
         iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");
     }
     
