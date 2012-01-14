@@ -33,10 +33,20 @@ var gotoChapter = function(text, chapter) {
                 });
             addTooltip($('.persName, .placeName, .myth'));
             addCommentListener();
+            $(".faksimile_viewer").click(function() {
+                var fax = $(this).attr("hrel");
+                var patt1=new RegExp("([1-9][0-9]+).jpg");
+                var faxNumber = parseInt(patt1.exec(fax)[1]);
+                alert("Fax: " + fax);
+                alert("Goto fax: " + faxNumber);
+                return false;
+            });
+            
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");
     uriChangeChapter(currentChapter);
+        
 }
 
 var initChapterHandling = function() {

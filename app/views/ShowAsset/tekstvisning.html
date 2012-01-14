@@ -239,13 +239,15 @@ currentTextId = ${asset.id};
                  }
                  removeShadowImages(num);
                 
+                if (num == 0) {
                   if (options["current_chapter"]) {
-                      currentChapter = options["current_chapter"];
-                      gotoChapter(currentTextId, currentChapter);
+                      currentChapter = parseInt(options["current_chapter"]);
+                  } else {
+                     currentChapter = 0; 
                   }
                   
-
-
+                  gotoChapter(currentTextId, currentChapter);
+                }
 
   } // end new reader
 
@@ -255,7 +257,7 @@ currentTextId = ${asset.id};
     options["variant"] = getCurrentHash(window.location.hash)["v0"];
     options["open_tab"] =  getCurrentHash(window.location.hash)[0];
     options["current_chapter"] = getCurrentHash(window.location.hash)["k"];
-    options["faks"] = getCurrentHash(window.location.hash)["f0"];
+    if (getCurrentHash(window.location.hash)["f0"]) theUrl["f0"] = getCurrentHash(window.location.hash)["f0"];
     addNewReader(0, options);
     addCommentListener();
 
@@ -343,9 +345,11 @@ currentTextId = ${asset.id};
                        
                        $( "#slider" ).slider( "value", $.cookie('text_size') );   			// flytt slider knapp
                 }
-;
+
                 initChapterHandling();
                 startupUri(startupHash);  
+                
+
                 
   });
 
@@ -427,7 +431,7 @@ currentTextId = ${asset.id};
 
 
 				<div id="tekst_innhold" class="text-resizeable">
-                                    ${chapter.html.raw()}
+                                    
 				</div>
 
 				<div id="bunnmeny" class="nav_meny">
