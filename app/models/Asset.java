@@ -87,6 +87,7 @@ public class Asset extends GenericModel {
     public static String txrType = "txr";
     public static String varListType = "varList";
     public static String bibleType = "bible";
+    public static String registranten = "registranten";
 
     // used by images
     // images on form rootname_number.jpg
@@ -216,6 +217,8 @@ public class Asset extends GenericModel {
             type = Asset.placeType;
         } else if (epub.getName().equals("bible.xml")) {
             type = Asset.bibleType;
+        } else if (epub.getName().equals("regList.xml")) {
+            type = Asset.registranten;
         } else if (epub.getName().equals("pers.xml")) {
             type = Asset.personType;
         } else if (epub.getName().equals("myth.xml")) {
@@ -260,6 +263,8 @@ public class Asset extends GenericModel {
         System.out.println("Copied file: " + copiedFile);
         
         String html;
+        
+        // consider a hash :-)
         if (type.equals(Asset.veiledningType)) {
           html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "veiledning.xsl"));
         } else if (type.equals(Asset.placeType)) {
@@ -280,12 +285,13 @@ public class Asset extends GenericModel {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
         } else if (type.equals(Asset.bibleType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "bibleXSLT.xsl");
-        }  else if (type.equals(Asset.txrType)) {
+        } else if (type.equals(Asset.registranten)) {
+            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "varListXSLT.xsl");
+        } else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
         } else if (type.equals(Asset.varListType)) {
             html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");
-        }
-        else {
+        } else {
             html = "Not found: filetype unknown";
             throw new Error("No recognized filetype found");
         }

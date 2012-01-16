@@ -52,5 +52,10 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
+    public static void registrantenvisning() {
+        Asset asset = Asset.find("fileName = ?", "regList.xml").first();
+        render(asset);
+    }
+
     
 }
