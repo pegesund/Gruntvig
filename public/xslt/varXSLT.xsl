@@ -59,23 +59,7 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <xsl:template match="TEI:app[@type]">
-        <span class="{@type}">
-            <xsl:if test="@type='ide'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@type='int'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@type='ort'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@type='sub'">
-                <xsl:apply-templates/>
-            </xsl:if>
-        </span>
-    </xsl:template>
+
     
     <xsl:template match="TEI:anchor">
         <div class="anchor">
@@ -121,5 +105,72 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    
+    
+    <!-- added by pe 16/1 -->
+    
+    <xsl:template match="TEI:app">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="substring(@type,1,3) ='sub'">
+                        <xsl:text>substantial </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3) ='int'">
+                        <xsl:text>interpunction </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3) ='ide'">
+                        <xsl:text>identical </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>orthographic </xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>variantScrollTarget </xsl:text>
+                <xsl:value-of select="@id" />
+            </xsl:attribute>
+            <xsl:call-template name="variantMouseOver" />
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+
+    <xsl:template match="TEI:rdg">
+        <xsl:choose>
+            <xsl:when test="@type='empty'">
+                <span class="seg">
+                    <img src="images/squared_times.png"/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+
+    <xsl:template name="variantMouseOver">
+        <xsl:if test="@type">
+            <xsl:attribute name="onmouseover">
+                <xsl:text>Tip("</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="substring(@type,1,3)='sub'">
+                        <xsl:text>substantiell skille</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3)='int'">
+                        <xsl:text>skille i interpunktion</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3)='ide'">
+                        <xsl:text>identiskt</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>ortografisk skille</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>", WIDTH, 0)</xsl:text>
+            </xsl:attribute>
+        </xsl:if>
+    </xsl:template>
+
     
 </xsl:stylesheet>
