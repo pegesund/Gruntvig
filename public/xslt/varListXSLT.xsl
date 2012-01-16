@@ -91,10 +91,27 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="TEI:div[@type='regList']">
+        <table class="table">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
     <xsl:template match="TEI:row">
         <tr>
             <xsl:apply-templates/>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@rend='regList']">
+        <td>
+            <a> 
+                <xsl:attribute name="href">
+                    <xsl:value-of select="text()" />
+                </xsl:attribute>
+                <xsl:apply-templates/>
+            </a>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:cell">

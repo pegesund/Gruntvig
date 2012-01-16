@@ -5,23 +5,23 @@
 
 
 
-#theVarList .preFace
+#theVarList .preFace, #registranten .preFace 
         {
         margin: 1em;
         }
         
-#theVarList  .head
+#theVarList .head, #registranten .head
         {
         font-weight: bold;
         margin: 1em 0em 0.5em 2em;
         }
         
-#theVarList .p
+#theVarList .p, #registranten .p
         {
         margin: 1em;
         }
         
-#theVarList .table, #theVarList td
+#theVarList .table, #theVarList td, #registranten .table, #registranten td
         {
         border: 1px solid black;
         empty-cells: show;
