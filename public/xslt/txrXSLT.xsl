@@ -4,7 +4,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0"
     exclude-result-prefixes="#all"
-    >
+>
 
 <!-- Kim Steen Ravn:
     2011.10.04: list-style: alpha, roman and simple
@@ -16,43 +16,63 @@
     <xsl:template match="TEI:TEI">
         
         <div class="mainTxr">
-                <p class="author">Forfatter:</p>
-                <i>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
-                </i>
-                <p class="author">Redaktør:</p>
-                <i>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']"/>
-                </i>
-                <hr/>
-                <div class="head">
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/>
-                </div>
-                <h2>Indhold</h2>
-                <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
-                <xsl:apply-templates select="TEI:text"/>            
+            <div class="head">
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                    <div>
+                        <xsl:text>Tekstredegørelse til</xsl:text>
+                    </div>
+                    <i>
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                    </i>
+                    <div class="author">
+                        <xsl:text>ved </xsl:text>
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                    </div>
+                </xsl:if>                    
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
+                    <div>
+                        <xsl:text>Tekstredegørelse til</xsl:text>
+                    </div>
+                        &#x201C;
+                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    <div class="author">
+                        <xsl:text>ved </xsl:text>
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                    </div>
+                </xsl:if>
+            </div>
+            <h2>Indhold</h2>
+                
+            <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
+            <xsl:apply-templates select="TEI:text"/>
         </div>
         
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc">
-            <span class="toc">
+            <a class="toc">
+                <xsl:attribute name="hrel">
+                    <xsl:text>#A</xsl:text>
+                    <xsl:number level="multiple" count="TEI:div"/>
+                </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="TEI:head"/>
-            </span>
+            </a>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
         </div>
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:author">        
         <div class="author">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    -->
     
     <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
         <div class="editor">
@@ -99,6 +119,14 @@
             <xsl:apply-templates/>
         </br>        
     </xsl:template>
+    
+    <xsl:template match="TEI:ref[@target and not(@select)]">
+        <span class="ref">
+            <a href="{@target}" target="_blank">
+                <xsl:apply-templates/>
+            </a>
+        </span>
+    </xsl:template>
 
 <!--
     henter nummer på stofe; konflikt med næste template?
@@ -127,6 +155,16 @@
     -->
     
     <xsl:template match="TEI:list">
+        <xsl:if test="@type='decimal'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="decimal">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
         <xsl:if test="@type='upperAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
@@ -177,6 +215,16 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
+        <xsl:if test="@type='ordered'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="ordered">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
         <xsl:if test="@type='addendon'  or @type='litList' or @type='webList'">
             <ul>
                 <xsl:for-each select="TEI:item">
@@ -206,43 +254,33 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:p[@rend and @rend!='quote' and @rend!='unQuote']">        
+    <xsl:template match="TEI:p[@rend]">        
         <div class="{@rend}">
             <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[@rend='quote']">        
-        <div class="{@rend}">
-            <br/>
-            <xsl:text>&#x201C;</xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text>&#x201D;</xsl:text>
-            <br/>
-            <br/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[@rend='unQuote']">        
-        <div class="{@rend}">
-            <br/>
-            <xsl:apply-templates/>
-            <br/>
-            <br/>
         </div>
     </xsl:template>
     
     <!--
-    <xsl:template match="TEI:quote">
-        <div class="quote">
-            <br/>
-            <xsl:text>&#x201C;</xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text>&#x201D;</xsl:text>
-            <br/>
-            <br/>
+        udgår, udg.møde 2011.12.08
+        <xsl:template match="TEI:p[@rend='quote']">        
+        <div class="{@rend}">
+        <br/>
+        <xsl:text>&#x201C;</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&#x201D;</xsl:text>
+        <br/>
+        <br/>
         </div>
-    </xsl:template>
+        </xsl:template>
+        
+        <xsl:template match="TEI:p[@rend='unQuote']">        
+        <div class="{@rend}">
+        <br/>
+        <xsl:apply-templates/>
+        <br/>
+        <br/>
+        </div>
+        </xsl:template>
     -->
     
     <xsl:template match="TEI:table">        
@@ -294,7 +332,5 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <!-- til brugs for txtEditCSS-css end -->
     
 </xsl:stylesheet>
