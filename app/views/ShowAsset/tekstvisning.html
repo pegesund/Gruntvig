@@ -160,6 +160,9 @@ currentTextId = ${asset.id};
                     a.removeAttr("href");
                  });
                  addTooltip($('.persName, .placeName, .myth'));
+                 $(".plus").click(function() {
+                    $(this).next().slideToggle("slow"); 
+                 });
              }
          });
 
