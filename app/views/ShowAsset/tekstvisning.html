@@ -139,6 +139,9 @@ currentTextId = ${asset.id};
                  var introContent = $("#kommentar" + num);
                  introContent.html(data);
                  addTooltip($('.persName, .placeName, .myth'));
+                 $(".plusComment").click(function() {    
+                    $(this).next().slideToggle("slow"); 
+                 });
              }
          });
 
@@ -160,6 +163,9 @@ currentTextId = ${asset.id};
                     a.removeAttr("href");
                  });
                  addTooltip($('.persName, .placeName, .myth'));
+                 $(".plus").click(function() {    
+                    $(this).next().slideToggle("slow"); 
+                 });
              }
          });
 
