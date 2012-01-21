@@ -109,24 +109,21 @@
 
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
-                <div class="note">
-            <xsl:attribute name="id">
-                <xsl:value-of select="@xml:id"/>
-            </xsl:attribute>
-        <div class="p">
-            <xsl:apply-templates/>
-            <xsl:choose>
-                <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
-                    <span class="app">
-                        <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
-                        <div id="more{../@xml:id}" class="appInvisible">
-                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
-                        </div>
-                    </span>
-                </xsl:when>
-            </xsl:choose>
-        </div>
-      </div>  
+        <div class="note commentNote" id="{../@xml:id}">
+            <div class="p">
+                <xsl:apply-templates/>
+                <xsl:choose>
+                    <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
+                        <span class="app">
+                            <span id="plus{../@xml:id}" class="plusComment"> Læs mere +</span>
+                            <div id="more{../@xml:id}" class="appInvisible">
+                                <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
+                            </div>
+                        </span>
+                    </xsl:when>
+                </xsl:choose>
+            </div>
+        </div>  
     </xsl:template>
 
     
