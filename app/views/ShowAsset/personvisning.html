@@ -2,6 +2,69 @@
 #{ header /}
 
 
+
+<script type="text/javascript">
+
+	
+
+		$(document).ready(function() {
+                           
+                $('div.person').hide();
+                $('div.root').hide();
+                
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+                
+                $.each(alphabet, function(index, value) { 
+                      
+                      // alert(index + ': ' + value);  
+                       
+                        nodes = [];
+                        $('div.person').each(function(index2) {
+                    
+                            name = $(this).find('span.name').text();
+                            firstLetter = name.charAt(0).toLowerCase();; 
+                           // alert(firstLetter);
+                            
+                            if(firstLetter == value){ 
+                            
+                                $(this).hide();
+                                
+                                year = $(this).find('.row span.year').text() + ', '; 
+                                    if( year == ', ') { year = '';};
+                                
+                                nation = $(this).find('.row span.nation').text();
+                                about = $(this).find('.row span.encyk').text();
+                                
+                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + nation + ' ' + about + '</td></tr>';
+                                
+                                nodes.push(node);
+                                
+   
+                            }
+
+
+                        });
+                        
+                        nodes = nodes.sort();
+                        //alert(nodes);
+                        
+                        $(nodes).each( function(index, value2) {
+                            //alert(value);
+                            $('#' + value.toUpperCase()).append(value2);
+                            
+                        
+                        });
+                }); 
+                
+               
+
+
+		});
+
+
+	</script>
+        
+
 <div id="main">
 
 	<div class="container" id="underside_innhold">
@@ -33,161 +96,160 @@
 
 		<div id="innholdsfortegnelse">
 			<a class="selected" href="#">Vis alle</a>
-			<a href="#">a</a>
-			<a href="#">b</a>
-			<a href="#">c</a>
-			<a href="#">d</a>
-			<a href="#">e</a>
-			<a href="#">f</a>
-			<a href="#">g</a>
-			<a href="#">h</a>
-			<a href="#">i</a>
-			<a href="#">j</a>
-			<a href="#">k</a>
-			<a href="#">l</a>
-			<a href="#">m</a>
-			<a href="#">n</a>
-			<a href="#">o</a>
-			<a href="#">p</a>
-			<a href="#">q</a>
-			<a href="#">r</a>
-			<a href="#">s</a>
-			<a href="#">t</a>
-			<a href="#">u</a>
-			<a href="#">v</a>
-			<a href="#">w</a>
-			<a href="#">x</a>
-			<a href="#">y</a>
-			<a href="#">z</a>
-			<a href="#">æ</a>
-			<a href="#">ø</a>
-			<a href="#">å</a>
+			<a href="../personer#A">a</a>
+			<a href="../personer#B">b</a>
+			<a href="../personer#C">c</a>
+			<a href="../personer#D">d</a>
+			<a href="../personer#E">e</a>
+			<a href="../personer#F">f</a>
+			<a href="../personer#G">g</a>
+			<a href="../personer#H">h</a>
+			<a href="../personer#I">i</a>
+			<a href="../personer#J">j</a>
+			<a href="../personer#K">k</a>
+			<a href="../personer#L">l</a>
+			<a href="../personer#M">m</a>
+			<a href="../personer#N">n</a>
+			<a href="../personer#O">o</a>
+			<a href="../personer#P">p</a>
+			<a href="../personer#Q">q</a>
+			<a href="../personer#R">r</a>
+			<a href="../personer#S">s</a>
+			<a href="../personer#T">t</a>
+			<a href="../personer#U">u</a>
+			<a href="../personer#V">v</a>
+			<a href="../personer#W">w</a>
+			<a href="../personer#X">x</a>
+			<a href="../personer#Y">y</a>
+			<a href="../personer#Z">z</a>
+			<a href="../personer#Æ">æ</a>
+			<a href="../personer#Ø">ø</a>
+			<a href="../personer#Å">å</a>
 		</div>
 
 		<div id="liste">
 
                 ${asset.html.raw()}
 
-                <br>
-                <br>
-                <h4>Slik skal listen se ut etter hvert:</h4>
-			<table>
-
-
-				<tr class="no_top_border">
+                <table>
+				<tr class="no_top_border" id="A">
 					<td class="navn"><h4>A</h4></td>
 					<td></td>
 				</tr>
 
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Akersen, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Aashus, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
-				</tr>
-
-				<tr class="no_top_border">
+				<tr class="no_top_border" id="B">
 					<td class="navn"><h4>B</h4></td>
 					<td></td>
 				</tr>
 
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-				</tr>
-
-				<tr class="no_top_border">
+				<tr class="no_top_border" id="C">
 					<td class="navn"><h4>C</h4></td>
 					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				
+                                <tr class="no_top_border" id="D">
+					<td class="navn"><h4>D</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                                <tr class="no_top_border" id="E">
+					<td class="navn"><h4>E</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="no_top_border" id="F">
+					<td class="navn"><h4>F</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
+				<tr class="no_top_border" id="G">
+					<td class="navn"><h4>G</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+				<tr class="no_top_border" id="H">
+					<td class="navn"><h4>H</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				<tr class="no_top_border" id="I">
+					<td class="navn"><h4>I</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="no_top_border" id="J">
+					<td class="navn"><h4>J</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="no_top_border" id="K">
+					<td class="navn"><h4>K</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
+				<tr class="no_top_border" id="L">
+					<td class="navn"><h4>L</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+				<tr class="no_top_border" id="M">
+					<td class="navn"><h4>M</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				<tr class="no_top_border" id="N">
+					<td class="navn"><h4>N</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="no_top_border" id="O">
+					<td class="navn"><h4>O</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="no_top_border" id="P">
+					<td class="navn"><h4>P</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Q">
+					<td class="navn"><h4>Q</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="R">
+					<td class="navn"><h4>R</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="S">
+					<td class="navn"><h4>S</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="T">
+					<td class="navn"><h4>T</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="U">
+					<td class="navn"><h4>U</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="V">
+					<td class="navn"><h4>V</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="W">
+					<td class="navn"><h4>W</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="X">
+					<td class="navn"><h4>X</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Y">
+					<td class="navn"><h4>Y</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Z">
+					<td class="navn"><h4>Z</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Æ">
+					<td class="navn"><h4>Æ</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Ø">
+					<td class="navn"><h4>Ø</h4></td>
+					<td></td>
+				</tr>
+				<tr class="no_top_border" id="Å">
+					<td class="navn"><h4>Å</h4></td>
+					<td></td>
 				</tr>
 
 			</table>

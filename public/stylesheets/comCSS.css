@@ -48,3 +48,12 @@
         margin:0;
             
         }
+.kommentar .plusComment {
+        color: #4DBC4D; cursor:arrow;
+        }
+.kommentar .appInvisible {
+        display:none;
+        }
+   .kommentar .readMore i {
+        display:none;
+        }             
