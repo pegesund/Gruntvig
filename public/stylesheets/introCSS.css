@@ -1,5 +1,9 @@
 /* KSR: 2011.03.30 */
 
+.innledningContent {
+    line-height: 1.5em;
+}
+
 .innledningContent a.app 
         {
         color: green;
@@ -62,8 +66,9 @@
 .innledningContent .author
         {
         font-size: 65%;
-        margin: 1em 0em 1em 0em;
+        margin: 0em 0em 0em 0em;
         text-align: center;
+        line-height:1.6em;
         }
 
 
@@ -124,9 +129,10 @@
 
 .innledningContent .head
         {
-        font-size: 200%;
         text-align: center;
-        margin: 2em 0em 2em 0em;
+        margin: 1em 0em 1em 0em;
+        font-size: 150%;
+        line-height: 125%;
         }
 
 .innledningContent .div .head
