@@ -23,9 +23,40 @@
         
 #theVarList .table, #theVarList td, #registranten .table, #registranten td
         {
-        border: 1px solid black;
+        border: 1px solid #ccc;
+        empty-cells: show;
+        margin: 0em;
+        vertical-align: super;
+        background: none;
+        }
+        
+    /* Registranten */
+
+#theVarList 
+        {
+            font-size: 16px;
+            padding-top:20px;
+        }
+        
+#registranten .preFace, #registranten i, #registranten hr, #registranten p {display:none;}     
+                
+#registranten td
+        {
+        border: 1px solid #ccc;
         empty-cells: show;
         margin: 2em;
+        padding: 10px; font-size: 1.1em;
         vertical-align: super;
-        background: yellow;
+        background: none;
+        }
+                 
+#registranten table
+        {
+        margin: 2em 0;
+        border:0;
+        }
+        
+#registranten div.head 
+        {
+            margin-left:0; margin: 20px 0 10px 0;font-size: 1.2em; font-family: Times new roman;
         }

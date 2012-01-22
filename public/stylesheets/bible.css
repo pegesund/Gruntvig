@@ -17,12 +17,13 @@
 
 .bible_content div
         {
+            margin: 9px 0; font-size:18px;
         }
 
 .bible_content div.book
         {
-        font-size:120%;
-        margin: 1.5em 0 1.5em 3em;
+        font-size:130%; font-family: "Times New Roman", serif; 
+        margin: 1.5em 0 1.5em 0em; font-weight:bold;
         }
 
 .bible_content span.plus
@@ -53,6 +54,7 @@
         {
         display: none;
         margin: 0em 0em 0em 3.5em;
+        width:100%;
         }
 
 .bible_content .verse
@@ -64,13 +66,24 @@
 .bible_content .plusBook
         {
         background-color: white;
+        border-bottom: 1px solid #aaa;
+        border-radius: 3px;
         color: green;
         cursor: pointer;
         font-family: monospace;
         font-weight: bold;
-        margin: 1em;
+        margin: 1em 5px 1em 0.5em ;
         text-align: center;
+        padding: 5px 11px;
         }
+        
+        .bible_content .plusBook:hover
+            {
+            background-color: green;
+            color: white;
+            border-bottom: 1px solid #555;
+
+            }
 
 .bible_content .plusVerse
         {
@@ -79,9 +92,22 @@
         cursor: pointer;
         font-family: monospace;
         font-weight: bold;
-        margin: 1em;
+        margin: 1em 4px 1em 1em;
         text-align: center;
+        padding: 1px 6px;
+        background-color: white;
+        border-bottom: 1px solid #aaa;
+        border-radius: 2px;
         }
+            
+    .bible_content .plusVerse:hover
+            {
+            background-color: green;
+            color: white;
+            border-bottom: 1px solid #555;
+         
+            }
+        
         
 .bible_content a:link
         {
@@ -111,3 +137,4 @@
         font-size: 90%;
         
         }
+.bible_content h1.head { display:none; }        

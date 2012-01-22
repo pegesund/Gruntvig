@@ -2,12 +2,71 @@
 #{ header /}
 
 
+
+<script type="text/javascript">
+
+	
+
+		$(document).ready(function() {
+                           
+                //$('div.person').hide();
+                $('div.root').hide();
+                
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+                
+                $.each(alphabet, function(index, value) { 
+                      
+                      // alert(index + ': ' + value);  
+                       
+                        nodes = [];
+                        $('div.place_title').each(function(index2) {
+                    
+                            name = $(this).find('b').text();
+                            firstLetter = name.charAt(0).toLowerCase();; 
+                           // alert(firstLetter);
+                            
+                            if(firstLetter == value){ 
+                            
+                                $(this).hide();
+
+                                desc = $(this).find('i').text();
+                                
+                                node = '<tr><td class="navn"><a href="../steder#">' + name + '</a></td><td class="definisjon">' + desc + '</td></tr>';
+                                
+                                nodes.push(node);
+                                
+   
+                            }
+
+
+                        });
+                        
+                        nodes = nodes.sort().reverse();
+                        //alert(nodes);
+                        
+                        $(nodes).each( function(index, value2) {
+                            //alert(value);
+                            $('#' + value.toUpperCase()).after(value2);
+                            
+                        
+                        });
+                }); 
+                
+               
+
+
+		});
+
+
+	</script>
+        
+
 <div id="main">
 
 	<div class="container" id="underside_innhold">
 
 		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Register</a> &raquo;  Stedsregister</div>
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Register</a> &raquo;  Personregister</div>
 
 		</div>
 
@@ -17,12 +76,13 @@
 		<ul id="kolonne1_meny">
 
 			<li class="header">Register</li>
-
-				<li ><a href="../myter">Mytologisk register</a></li>
+                                
+                                <li><a href="../reg">Registranten</a></li>				
+				<li><a href="../myter">Mytologisk register</a></li>
 				<li><a href="../personer">Personregister</a></li>
-				<li class="last"><a class="selected" href="../steder">Stedsregister</a></li>
-
-		<ul>
+				<li><a class="selected" href="../steder">Stedsregister</a></li>
+                                <li class="last"><a href="../bibel">Bibelregister</a></li>
+		</ul>
 
 	</div>
 
@@ -32,162 +92,161 @@
 		<p>En oversikt over sentrale steder i Grundtvigs værker.</p>
 
 		<div id="innholdsfortegnelse">
-			<a class="selected" href="#">Vis alle</a>
-			<a href="#">a</a>
-			<a href="#">b</a>
-			<a href="#">c</a>
-			<a href="#">d</a>
-			<a href="#">e</a>
-			<a href="#">f</a>
-			<a href="#">g</a>
-			<a href="#">h</a>
-			<a href="#">i</a>
-			<a href="#">j</a>
-			<a href="#">k</a>
-			<a href="#">l</a>
-			<a href="#">m</a>
-			<a href="#">n</a>
-			<a href="#">o</a>
-			<a href="#">p</a>
-			<a href="#">q</a>
-			<a href="#">r</a>
-			<a href="#">s</a>
-			<a href="#">t</a>
-			<a href="#">u</a>
-			<a href="#">v</a>
-			<a href="#">w</a>
-			<a href="#">x</a>
-			<a href="#">y</a>
-			<a href="#">z</a>
-			<a href="#">æ</a>
-			<a href="#">ø</a>
-			<a href="#">å</a>
+			
+			<a href="../steder#A">a</a>
+			<a href="../steder#B">b</a>
+			<a href="../steder#C">c</a>
+			<a href="../steder#D">d</a>
+			<a href="../steder#E">e</a>
+			<a href="../steder#F">f</a>
+			<a href="../steder#G">g</a>
+			<a href="../steder#H">h</a>
+			<a href="../steder#I">i</a>
+			<a href="../steder#J">j</a>
+			<a href="../steder#K">k</a>
+			<a href="../steder#L">l</a>
+			<a href="../steder#M">m</a>
+			<a href="../steder#N">n</a>
+			<a href="../steder#O">o</a>
+			<a href="../steder#P">p</a>
+			<a href="../steder#Q">q</a>
+			<a href="../steder#R">r</a>
+			<a href="../steder#S">s</a>
+			<a href="../steder#T">t</a>
+			<a href="../steder#U">u</a>
+			<a href="../steder#V">v</a>
+			<a href="../steder#W">w</a>
+			<a href="../steder#X">x</a>
+			<a href="../steder#Y">y</a>
+			<a href="../steder#Z">z</a>
+			<a href="../steder#Æ">æ</a>
+			<a href="../steder#Ø">ø</a>
+			<a href="../steder#Å">å</a>
 		</div>
 
 		<div id="liste">
 
                 ${asset.html.raw()}
 
-                <br>
-                <br>
-                <h4>Slik skal listen se ut etter hvert:</h4>
-			<table>
-
-
-				<tr class="no_top_border">
+                <table>
+				<tr class="bottom_border" id="A">
 					<td class="navn"><h4>A</h4></td>
 					<td></td>
 				</tr>
 
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Akersen, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Aashus, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
-				</tr>
-
-				<tr class="no_top_border">
+				<tr class="bottom_border" id="B">
 					<td class="navn"><h4>B</h4></td>
 					<td></td>
 				</tr>
 
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
-				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-				</tr>
-
-				<tr class="no_top_border">
+				<tr class="bottom_border" id="C">
 					<td class="navn"><h4>C</h4></td>
 					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				
+				<tr class="bottom_border" id="D">
+					<td class="navn"><h4>D</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                                <tr class="bottom_border" id="E">
+					<td class="navn"><h4>E</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="bottom_border" id="F">
+					<td class="navn"><h4>F</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
+				<tr class="bottom_border" id="G">
+					<td class="navn"><h4>G</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+				<tr class="bottom_border" id="H">
+					<td class="navn"><h4>H</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				<tr class="bottom_border" id="I">
+					<td class="navn"><h4>I</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="bottom_border" id="J">
+					<td class="navn"><h4>J</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="bottom_border" id="K">
+					<td class="navn"><h4>K</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
+				<tr class="bottom_border" id="L">
+					<td class="navn"><h4>L</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+				<tr class="bottom_border" id="M">
+					<td class="navn"><h4>M</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Dersem, Sindre</a></td>
-					<td class="definisjon">Dette er en kort beskrivelse</td>
+				<tr class="bottom_border" id="N">
+					<td class="navn"><h4>N</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="bottom_border" id="O">
+					<td class="navn"><h4>O</h4></td>
+					<td></td>
 				</tr>
-
-				<tr>
-					<td class="navn"><a href="#">Brakman, Petter</a></td>
-					<td class="definisjon">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+				<tr class="bottom_border" id="P">
+					<td class="navn"><h4>P</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Q">
+					<td class="navn"><h4>Q</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="R">
+					<td class="navn"><h4>R</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="S">
+					<td class="navn"><h4>S</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="T">
+					<td class="navn"><h4>T</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="U">
+					<td class="navn"><h4>U</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="V">
+					<td class="navn"><h4>V</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="W">
+					<td class="navn"><h4>W</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="X">
+					<td class="navn"><h4>X</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Y">
+					<td class="navn"><h4>Y</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Z">
+					<td class="navn"><h4>Z</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Æ">
+					<td class="navn"><h4>Æ</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Ø">
+					<td class="navn"><h4>Ø</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Å">
+					<td class="navn"><h4>Å</h4></td>
+					<td></td>
 				</tr>
 
 			</table>

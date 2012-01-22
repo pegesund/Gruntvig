@@ -1,6 +1,114 @@
 #{extends 'main.html' /}
 #{ header /}
 
+<script type="text/javascript">
+
+	
+
+		$(document).ready(function() {
+                           
+                $('div.myth').hide();
+                $('div.root').hide();
+                
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+                
+                $.each(alphabet, function(index, value) { 
+                      
+                      // alert(index + ': ' + value);  
+                       
+                        nodes = [];
+                        $('div.myth').each(function(index2) {
+                    
+                            name = $(this).find('div.normForm').text();
+                            
+                            //epithet = $(this).find('div.epithet');
+                           // alert(epithet.html());
+                            
+                            
+                            // if of type epithet ("name < name")
+                            //if(epithet != null && epithet != '') { 
+                               
+                               //alert( epithet );
+                               
+                               //content = $(this).html();
+                               //name = $(this).html();
+                               
+                               //node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+
+                               //nodes.push(node);
+                                
+                        
+                            //} else {
+                                
+                                // regular name
+                                firstLetter = name.charAt(0).toLowerCase();
+
+                            
+
+                                if(firstLetter == value){ 
+
+                                $(this).hide();
+
+                                    content = $(this).html();
+
+
+                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+
+                                    nodes.push(node);
+
+                                }
+                            
+                            //}
+
+                       // epithet == '';
+                       
+                            //alert($(this).html());
+                            
+                            $(this).children('.epithet').each( function(index3) {
+                            
+                                content = $(this).text();
+                                name = $(this).text();
+                                //name = name.split(' > '); // funker ikke i chrome
+                                //name = name[0];
+                                content = '';
+                                
+                                firstLetter2 = name.charAt(0).toLowerCase();
+                                
+                                if(firstLetter2 == value){ 
+                                 
+                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+
+                                    nodes.push(node);
+                                } 
+                            
+                            });
+                        
+                        });
+                        
+                        
+                        
+                        nodes = nodes.sort().reverse();
+                        //alert(nodes);
+                        
+                        $(nodes).each( function(index, value2) {
+                            //alert(value);
+                            $('#' + value.toUpperCase()).after(value2);
+                            
+                        
+                        });
+                        
+                        
+                }); 
+                
+               
+               // hide names in desc 
+               $('.definisjon .normForm').hide();
+
+		});
+
+
+	</script>
+        
 
 <div id="main">
 
@@ -17,25 +125,185 @@
 		<ul id="kolonne1_meny">
 
 			<li class="header">Register</li>
-
+                               
+                                <li><a href="../reg">Registranten</a></li>				
 				<li ><a class="selected" href="../myter">Mytologisk register</a></li>
 				<li><a href="../personer">Personregister</a></li>
-				<li class="last"><a href="../steder">Stedsregister</a></li>
+				<li class=""><a href="../steder">Stedsregister</a></li>
+                                <li class="last"><a href="../bibel">Bibelregister</a></li>
 
 
-		<ul>
+		</ul>
 
 	</div>
 
 	<div id="kolonne1_bred">
 
-		<h1>Bibelsk register</h1>
-		<p>En oversikt over bibelske referanser i Grundtvigs værker.</p>
+		<h1>Mytologisk Register</h1>
+		<p>En oversikt over mytologiske referanser i Grundtvigs værker.</p>
 
+		<div id="innholdsfortegnelse">
+			
+			<a href="../myter#A">a</a>
+			<a href="../myter#B">b</a>
+			<a href="../myter#C">c</a>
+			<a href="../myter#D">d</a>
+			<a href="../myter#E">e</a>
+			<a href="../myter#F">f</a>
+			<a href="../myter#G">g</a>
+			<a href="../myter#H">h</a>
+			<a href="../myter#I">i</a>
+			<a href="../myter#J">j</a>
+			<a href="../myter#K">k</a>
+			<a href="../myter#L">l</a>
+			<a href="../myter#M">m</a>
+			<a href="../myter#N">n</a>
+			<a href="../myter#O">o</a>
+			<a href="../myter#P">p</a>
+			<a href="../myter#Q">q</a>
+			<a href="../myter#R">r</a>
+			<a href="../myter#S">s</a>
+			<a href="../myter#T">t</a>
+			<a href="../myter#U">u</a>
+			<a href="../myter#V">v</a>
+			<a href="../myter#W">w</a>
+			<a href="../myter#X">x</a>
+			<a href="../myter#Y">y</a>
+			<a href="../myter#Z">z</a>
+			<a href="../myter#Æ">æ</a>
+			<a href="../myter#Ø">ø</a>
+			<a href="../myter#Å">å</a>
+		</div>
+
+		<div id="liste">
 
                 ${asset.html.raw()}
 
-                <br>
-                <br>
+                <table>
+				<tr class="bottom_border" id="A">
+					<td class="navn"><h4>A</h4></td>
+					<td></td>
+				</tr>
+
+				<tr class="bottom_border" id="B">
+					<td class="navn"><h4>B</h4></td>
+					<td></td>
+				</tr>
+
+				<tr class="bottom_border" id="C">
+					<td class="navn"><h4>C</h4></td>
+					<td></td>
+				</tr>
+				
+                                <tr class="bottom_border" id="D">
+					<td class="navn"><h4>D</h4></td>
+					<td></td>
+				</tr>
+                                <tr class="bottom_border" id="E">
+					<td class="navn"><h4>E</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="F">
+					<td class="navn"><h4>F</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="G">
+					<td class="navn"><h4>G</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="H">
+					<td class="navn"><h4>H</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="I">
+					<td class="navn"><h4>I</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="J">
+					<td class="navn"><h4>J</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="K">
+					<td class="navn"><h4>K</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="L">
+					<td class="navn"><h4>L</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="M">
+					<td class="navn"><h4>M</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="N">
+					<td class="navn"><h4>N</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="O">
+					<td class="navn"><h4>O</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="P">
+					<td class="navn"><h4>P</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Q">
+					<td class="navn"><h4>Q</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="R">
+					<td class="navn"><h4>R</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="S">
+					<td class="navn"><h4>S</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="T">
+					<td class="navn"><h4>T</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="U">
+					<td class="navn"><h4>U</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="V">
+					<td class="navn"><h4>V</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="W">
+					<td class="navn"><h4>W</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="X">
+					<td class="navn"><h4>X</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Y">
+					<td class="navn"><h4>Y</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Z">
+					<td class="navn"><h4>Z</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Æ">
+					<td class="navn"><h4>Æ</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Ø">
+					<td class="navn"><h4>Ø</h4></td>
+					<td></td>
+				</tr>
+				<tr class="bottom_border" id="Å">
+					<td class="navn"><h4>Å</h4></td>
+					<td></td>
+				</tr>
+
+			</table>
+
+		</div>
+
 	</div>
 
+</div>

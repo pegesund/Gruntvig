@@ -45,12 +45,12 @@
 
                         });
                         
-                        nodes = nodes.sort();
+                        nodes = nodes.sort().reverse();
                         //alert(nodes);
                         
                         $(nodes).each( function(index, value2) {
                             //alert(value);
-                            $('#' + value.toUpperCase()).append(value2);
+                            $('#' + value.toUpperCase()).after(value2);
                             
                         
                         });
@@ -83,7 +83,8 @@
 
 				<li><a href="../myter">Mytologisk register</a></li>
 				<li><a class="selected" href="../personer">Personregister</a></li>
-				<li class="last"><a href="../steder">Stedsregister</a></li>
+				<li class=""><a href="../steder">Stedsregister</a></li>
+                                <li class="last"><a href="../bibel">Bibelregister</a></li>
 
 		<ul>
 
@@ -95,7 +96,7 @@
 		<p>En oversikt over sentrale personer fra Grundtvigs værker.</p>
 
 		<div id="innholdsfortegnelse">
-			<a class="selected" href="#">Vis alle</a>
+			
 			<a href="../personer#A">a</a>
 			<a href="../personer#B">b</a>
 			<a href="../personer#C">c</a>
@@ -132,122 +133,122 @@
                 ${asset.html.raw()}
 
                 <table>
-				<tr class="no_top_border" id="A">
+				<tr class="bottom_border" id="A">
 					<td class="navn"><h4>A</h4></td>
 					<td></td>
 				</tr>
 
-				<tr class="no_top_border" id="B">
+				<tr class="bottom_border" id="B">
 					<td class="navn"><h4>B</h4></td>
 					<td></td>
 				</tr>
 
-				<tr class="no_top_border" id="C">
+				<tr class="bottom_border" id="C">
 					<td class="navn"><h4>C</h4></td>
 					<td></td>
 				</tr>
 				
-                                <tr class="no_top_border" id="D">
+				<tr class="bottom_border" id="D">
 					<td class="navn"><h4>D</h4></td>
 					<td></td>
 				</tr>
-                                <tr class="no_top_border" id="E">
+                                <tr class="bottom_border" id="E">
 					<td class="navn"><h4>E</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="F">
+				<tr class="bottom_border" id="F">
 					<td class="navn"><h4>F</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="G">
+				<tr class="bottom_border" id="G">
 					<td class="navn"><h4>G</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="H">
+				<tr class="bottom_border" id="H">
 					<td class="navn"><h4>H</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="I">
+				<tr class="bottom_border" id="I">
 					<td class="navn"><h4>I</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="J">
+				<tr class="bottom_border" id="J">
 					<td class="navn"><h4>J</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="K">
+				<tr class="bottom_border" id="K">
 					<td class="navn"><h4>K</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="L">
+				<tr class="bottom_border" id="L">
 					<td class="navn"><h4>L</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="M">
+				<tr class="bottom_border" id="M">
 					<td class="navn"><h4>M</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="N">
+				<tr class="bottom_border" id="N">
 					<td class="navn"><h4>N</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="O">
+				<tr class="bottom_border" id="O">
 					<td class="navn"><h4>O</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="P">
+				<tr class="bottom_border" id="P">
 					<td class="navn"><h4>P</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Q">
+				<tr class="bottom_border" id="Q">
 					<td class="navn"><h4>Q</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="R">
+				<tr class="bottom_border" id="R">
 					<td class="navn"><h4>R</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="S">
+				<tr class="bottom_border" id="S">
 					<td class="navn"><h4>S</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="T">
+				<tr class="bottom_border" id="T">
 					<td class="navn"><h4>T</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="U">
+				<tr class="bottom_border" id="U">
 					<td class="navn"><h4>U</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="V">
+				<tr class="bottom_border" id="V">
 					<td class="navn"><h4>V</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="W">
+				<tr class="bottom_border" id="W">
 					<td class="navn"><h4>W</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="X">
+				<tr class="bottom_border" id="X">
 					<td class="navn"><h4>X</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Y">
+				<tr class="bottom_border" id="Y">
 					<td class="navn"><h4>Y</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Z">
+				<tr class="bottom_border" id="Z">
 					<td class="navn"><h4>Z</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Æ">
+				<tr class="bottom_border" id="Æ">
 					<td class="navn"><h4>Æ</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Ø">
+				<tr class="bottom_border" id="Ø">
 					<td class="navn"><h4>Ø</h4></td>
 					<td></td>
 				</tr>
-				<tr class="no_top_border" id="Å">
+				<tr class="bottom_border" id="Å">
 					<td class="navn"><h4>Å</h4></td>
 					<td></td>
 				</tr>
