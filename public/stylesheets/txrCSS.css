@@ -2,7 +2,12 @@
 KSR: 2011.10.04: list-style: alpha, roman and simple
 KSR: 2011.09.26: hi-element
 */
-
+.mainTxr
+        {
+            line-height: 1.4em;
+            font-size: 0.8em;
+        }
+        
 .mainTxr a.toc
         {
         text-decoration: none;
@@ -16,7 +21,9 @@ KSR: 2011.09.26: hi-element
         }
 .mainTxr .author
         {
-        text-align: left;
+        text-align: center;
+        font-size: 0.6em;
+        margin: 1em 0; 
         }
 
         
@@ -72,9 +79,10 @@ KSR: 2011.09.26: hi-element
 
 .mainTxr .head
         {
-        font-size: 200%;
+        font-size: 150%;
         text-align: center;
-        margin: 2em 0em 2em 0em;
+        margin: 1em 0em 1em 0em;
+        line-height: 1.2em;
         }
 
 .mainTxr .div .head
@@ -88,7 +96,7 @@ KSR: 2011.09.26: hi-element
         {
         font-size: 120%;
         text-align: center;
-        margin: 1em 0em 1em 0em;
+        margin: 2em 0em 1em 0em;
         }
 
 /* indhold hyperlink end */
@@ -144,6 +152,11 @@ KSR: 2011.09.26: hi-element
         {
         font-size: 120%;
         margin: 0em 0em 0em 2em;
+        font-family: Verdana, Arial, sans-serif;
+        margin-bottom:1em;
+        margin-left:0.5em;
+        margin-right:0;
+        margin-top:0;
         }
 
 /* element h start */
