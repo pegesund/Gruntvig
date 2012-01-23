@@ -19,7 +19,7 @@ var addFaksimile = function(num) {
 
     // vis faksimile (https://github.com/can3p/iviewer)
     var iviewer = {};
-    var iviewer_src = "public/images/" + rootFile;
+    var iviewer_src = "/public/images/" + rootFile;
     var iviewer_num = 1;
     
     this.gotoPage = function(page) {
@@ -45,7 +45,7 @@ var addFaksimile = function(num) {
 
     $("#tab" + num + " .neste_side").click(function()
     {
-        if (iviewer_num + 1 > numOfPictures) return false;
+        if (iviewer_num+1  > numOfPictures) return false;
         iviewer_num += 1;
         uriChangeFaksimile(num, iviewer_num);
         iviewer.loadImage(iviewer_src + "_" + iviewer_num + ".jpg");

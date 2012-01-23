@@ -153,6 +153,12 @@ public class Asset extends GenericModel {
     }
 
     public int getNumberOfPictures() {
+        System.out.println("**** Looking for rootName: " + rootName);
+        List<Asset> assets = Asset.find("type = ?", Asset.imageType).fetch();
+        for (Asset a: assets) {
+            System.out.println("Asset-name: " + a.rootName + " : " + (a.rootName.equals(rootName)));
+        }
+        System.out.println("-- Assets size: " + assets.size());
         return Asset.find("rootName = ? and type = ?", rootName, Asset.imageType).fetch().size();
     }
 
@@ -166,7 +172,7 @@ public class Asset extends GenericModel {
 
     public static String getRootName(String fileNameIn, String assetType) {
         String fileName = fileNameIn;
-        fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "");
+        fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "").replaceFirst("_fax", "");
         if (assetType.equals(Asset.rootType) ||
                 assetType.equals(Asset.commentType) ||
                 assetType.equals(Asset.introType) ||
@@ -185,13 +191,23 @@ public class Asset extends GenericModel {
     }
 
     public static Asset uploadImage(String name, String comment, File epub) {
-        Asset asset = new Asset(name, epub.getName(), comment, Asset.imageType);
-        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + epub.getName();
+        String fileName = epub.getName();
+        fileName = fileName.replaceFirst("_fax", "_").replaceFirst("_0+", "_");
+        Asset asset;
+        if (Asset.find("fileName = ?", fileName).first() != null) {
+            asset = Asset.find("fileName = ?", fileName).first();
+            asset.comment = comment;
+            asset.name = name;
+            asset.type = Asset.imageType;
+        } else {
+            asset = new Asset(name, fileName, comment, Asset.imageType);
+        }
+        asset.importDate = new Date();
+        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
         Helpers.copyfile(epub.getAbsolutePath(), filePath);
-        String[] pictureNums = epub.getName().replace(".jpg", "").split("_");
+        String[] pictureNums = fileName.replace(".jpg", "").split("_");
         int pictureNum = Integer.parseInt(pictureNums[pictureNums.length - 1]);
         asset.pictureNumber = pictureNum;
-        System.out.println("Picturenumber: " + pictureNum);
         asset.save();
         return asset;
     }
