@@ -120,7 +120,7 @@ public class Chapter extends GenericModel {
                 // System.out.println("xhtml: " + asset.html);
                 for (int i = 0; i < nodes.getLength(); i++) {
                     Node node = nodes.item(i);
-                    String name = "- Kapittel - " + (i + 1);
+                    String name = "- Kapitel - " + (i + 1);
                     if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
@@ -133,7 +133,7 @@ public class Chapter extends GenericModel {
                 }
             } else {
                 System.out.println("No chapters found, using hole file as chapter 1");
-                Chapter chapter = new Chapter("Kapittel 1", 0, asset, nodeToString(doc.getDocumentElement()));
+                Chapter chapter = new Chapter("Kapitel 1", 0, asset, nodeToString(doc.getDocumentElement()));
                 chapter.save();
             }
             System.out.println("Total chapters: " + Chapter.count());
