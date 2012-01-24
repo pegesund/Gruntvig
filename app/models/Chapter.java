@@ -126,10 +126,7 @@ public class Chapter extends GenericModel {
                         System.out.println("Chapter id found: " + name);
                     }
                     Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
-                    System.out.println("Chapter with asset id saved, asset id: " + chapter.asset.id);
-                    System.out.println("Chapter: " + chapter.html.substring(0, 50));
                     chapter.save();
-
                 }
             } else {
                 System.out.println("No chapters found, using hole file as chapter 1");

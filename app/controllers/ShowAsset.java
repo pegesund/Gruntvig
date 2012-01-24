@@ -27,6 +27,11 @@ public class ShowAsset extends Application {
         render(asset, chapter, chapters, variants, manus);
     }
 
+    /* 
+     * TODO: rewrite to one path
+     * 
+     */
+    
     public static void vejledning(String fileName) {
         String vejledningSomSkalVises = fileName;
         render(vejledningSomSkalVises);
@@ -57,5 +62,19 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
+    public static void tidslinjevisning() {
+        Asset asset = Asset.find("fileName = ?", "timelime_vej.xml").first();
+        render(asset);
+    }
+
+    public static void tknotervisning() {
+        Asset asset = Asset.find("fileName = ?", "tknoter_vej.xml").first();
+        render(asset);
+    }
+    
+    public static void bookinventoryvisning() {
+        Asset asset = Asset.find("fileName = ?", "bookInventory1805.xml").first();
+        render(asset);
+    }
     
 }

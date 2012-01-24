@@ -1,0 +1,129 @@
+/* KSR: 2011.05.06 */
+
+#bookinventory div   
+        {
+        font-family:"Times New Roman";
+        font-size: 16px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        }
+
+.bookInventory
+        {
+        font-size: 172%;
+        text-align: center;
+        font-weight: bold;
+        margin: 1.5em
+        }
+
+#bookinventory div.main
+        {
+        font-size: 144%;
+        text-indent: 1em;
+        }
+
+#bookinventory div.part
+        {
+        font-size: 120%;
+        text-indent: 1em;
+        }
+
+#bookinventory span.rasied
+        {
+        vertical-align: super;
+        }
+
+#bookinventory .kbSignatur
+        {
+        font-size: 120%;
+        text-align: center;
+        font-weight: normal;
+        margin: 0.5em
+        }
+
+#bookinventory .frontPage
+        {
+        font-size: 144%;
+        text-align: center;
+        line-height: 100%;
+        margin: 1em;
+        }
+
+#bookinventory .translator
+        {
+        font-size: 100%;
+        text-align: left;
+        }
+
+#bookinventory table
+        {
+        margin: 1em;
+        border: 1px solid black;
+        border-collapse: collapse;
+        vertical-align: middle;
+        table-layout: fixed;
+        }
+
+#bookinventory td, #bookinventory tr
+        {
+        margin: 1em;
+        border: 1px solid black;
+        vertical-align: middle;
+        table-layout: fixed;
+        }
+
+#bookinventory td.nr
+        {
+        width: 10em
+        }
+
+#bookinventory td.authorNorm
+        {
+        width: 10em;
+        color: green;
+        }
+
+#bookinventory td.titleNorm
+        {
+        width: 30em;
+        color: green;
+        }
+
+#bookinventory td.translatorNorm
+        {
+        width: 10em;
+        color: green;
+        }
+
+#bookinventory td.yearNorm
+        {
+        width: 10em;
+        color: green;
+        }
+
+#bookinventory td.placeNorm
+        {
+        width: 10em;
+        color: green;
+        }
+
+#bookinventory tr.main
+        {
+        font-size: 144%;
+        text-align: center
+        }
+
+#bookinventory th.rowNorm
+        {
+        color: red;
+        margin: 0.5em;
+        font-size: 80%
+        }
+
+#bookinventory tr.part
+        {
+        font-size: 120%;
+        text-align: center
+        }

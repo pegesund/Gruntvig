@@ -88,6 +88,7 @@ public class Asset extends GenericModel {
     public static String varListType = "varList";
     public static String bibleType = "bible";
     public static String registranten = "registranten";
+    public static String bookinventory = "bookinventory";
 
     // used by images
     // images on form rootname_number.jpg
@@ -113,7 +114,6 @@ public class Asset extends GenericModel {
         this.type = type;
         this.refs = ref;
         System.out.println("Root-name: " + rootName);
-
     }
 
     @Override
@@ -154,11 +154,6 @@ public class Asset extends GenericModel {
 
     public int getNumberOfPictures() {
         System.out.println("**** Looking for rootName: " + rootName);
-        List<Asset> assets = Asset.find("type = ?", Asset.imageType).fetch();
-        for (Asset a: assets) {
-            System.out.println("Asset-name: " + a.rootName + " : " + (a.rootName.equals(rootName)));
-        }
-        System.out.println("-- Assets size: " + assets.size());
         return Asset.find("rootName = ? and type = ?", rootName, Asset.imageType).fetch().size();
     }
 
@@ -243,6 +238,8 @@ public class Asset extends GenericModel {
             type = Asset.commentType;
         } else if (epub.getName().contains("intro")) {
             type = Asset.introType;
+        } else if (epub.getName().contains("bookInventory")) {
+            type = Asset.bookinventory;
         } else if (epub.getAbsolutePath().matches(".*_ms[1-9]*.xml")) {
             System.out.println("Type is manustype!");
             Pattern pattern = Pattern.compile("ms(\\d+)");
@@ -307,6 +304,8 @@ public class Asset extends GenericModel {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
         } else if (type.equals(Asset.varListType)) {
             html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");
+        } else if (type.equals(Asset.bookinventory)) {
+            html = Asset.xmlRefToHtml(copiedFile, "bookInventoryXSLT.xsl");
         } else {
             html = "Not found: filetype unknown";
             throw new Error("No recognized filetype found");

@@ -25,6 +25,11 @@ GET     /personer                               ShowAsset.personvisning
 GET     /myter                                  ShowAsset.mythvisning
 GET     /bibel                                  ShowAsset.biblevisning
 GET     /reg                                    ShowAsset.registrantenvisning
+GET     /tidsvej                                ShowAsset.tidslinjevisning
+GET     /tknotervej                             ShowAsset.tknotervisning
+GET     /bookinvent                             ShowAsset.bookinventoryvisning
+
+
 GET     /ajax/getKommentar/{assetId}            Ajax.getKommentar
 GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
 GET     /ajax/getTxr/{id}                                     Ajax.getTxr

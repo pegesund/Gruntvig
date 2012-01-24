@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet
   xmlns="http://www.w3.org/1999/xhtml"
-  exclude-result-prefixes="#default a fo local dbk xlink xhtml rng tei teix xd"
+  exclude-result-prefixes="#all"
   version="2.0"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:dbk="http://docbook.org/ns/docbook"
