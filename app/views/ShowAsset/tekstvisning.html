@@ -25,12 +25,12 @@ currentTextId = ${asset.id};
             number_of_present_tabreaders = $(".tabReader").length;
 
             // make room for more columns
-            // increase width of .container and #høyre
+            // increase width of .container and #hÃ¸yre
             if(number_of_present_tabreaders > 1){ // only do this if there are 1 or more tabReaders opened
                 $(".container").width($(".container").width() + columnWidth);
             }
 
-            $("#høyre").width($("#høyre").width() + columnWidth);
+            $("#hÃ¸yre").width($("#hÃ¸yre").width() + columnWidth);
 
             resize_window();
 
@@ -52,11 +52,11 @@ currentTextId = ${asset.id};
             number_of_present_tabreaders = $(".tabReader").length;
             
             $(this).parent().parent().parent().parent().remove(); // hide entire tabreader
-            $("#høyre").width($("#høyre").width() - columnWidth);
+            $("#hÃ¸yre").width($("#hÃ¸yre").width() - columnWidth);
 
             if(number_of_present_tabreaders > 1){ // only do this if there are 1 or more tabReaders opened
 
-                // decrease width of .container and #høyre
+                // decrease width of .container and #hÃ¸yre
                 $(".container").width($(".container").width() - columnWidth);
                 
             }
@@ -67,21 +67,21 @@ currentTextId = ${asset.id};
   addNewReader = function(num) {
     var options = arguments[1] || {};
     uriChangeTab(num,0);   
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Faksimile</span></a></li> <li><a href="#txr' + num + '"><span>Red</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Faksimiler</span></a></li> <li><a href="#txr' + num + '"><span>Om</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
     newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader +=  '<div id="variant' + num + '"><div class="variant_select">Vis variant: #{variantsAsDropDown variants:variants /} <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
-    newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">Næste side</a></div> <div class="faksimileContent"></div></div>';
+    newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">NÃ¦ste side</a></div> <div class="faksimileContent"></div></div>';
     newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
     newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
     newReader += '</div></span>';
-    // vis variant-select box over hovedtekst også
+    // vis variant-select box over hovedtekst ogsÃ¥
       
       var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
       $("#hovedtekst_select").html(hovedtekstSelect);
       //alert(newReader);
-         //alert($("#høyre_toppmeny_nytt_navn").html());
-      $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
-      //alert($("#høyre_toppmeny_nytt_navn").html());
+         //alert($("#hÃ¸yre_toppmeny_nytt_navn").html());
+      $("#hÃ¸yre_toppmeny_nytt_navn").html($("#hÃ¸yre_toppmeny_nytt_navn").html() + newReader);
+      //alert($("#hÃ¸yre_toppmeny_nytt_navn").html());
      // update uri-hash if changing tab-panel  
      var i_tab=0;
      for (i_tab = 0; i_tab <= num; i_tab++) {
@@ -184,7 +184,7 @@ currentTextId = ${asset.id};
       });
 
 
-      // autolast den første varianten & manuset
+      // autolast den fÃ¸rste varianten & manuset
       if (options["variant"]) {
         $("#tab" + num +' .variantsAsDropDown')[0].selectedIndex = options["variant"];
       }
@@ -192,16 +192,16 @@ currentTextId = ${asset.id};
       $("#tab" + num +' .variantsAsDropDown').trigger('change');
       $("#tab" + num +' .manusAsDropDown').trigger('change');
 
-      // vis hovedtekst select når variant-fanen åpnes
+      // vis hovedtekst select nÃ¥r variant-fanen Ã¥pnes
       $('.variant_tab').click(function() {
-         // Jørgen: for å enable variantview i hovedvinduet, må disse linjene tilbake. Men det er en del mer som må fixes :-)
+         // JÃ¸rgen: for Ã¥ enable variantview i hovedvinduet, mÃ¥ disse linjene tilbake. Men det er en del mer som mÃ¥ fixes :-)
          // $("#hovedtekst_select").show('medium');
          // resize hovedfeltet
          // resize_window();
          //$("#tekst_innhold").height($(".variant_content").height() - 0);
       });
 
-      // resize layout når kolonner endres
+      // resize layout nÃ¥r kolonner endres
       resize_window();
 
 /*
@@ -267,7 +267,7 @@ currentTextId = ${asset.id};
     addNewReader(0, options);
     addCommentListener();
 
-    // resize layout når siden laster
+    // resize layout nÃ¥r siden laster
     resize_window();
 
 
@@ -280,7 +280,7 @@ currentTextId = ${asset.id};
                 range: 'min',
                 slide: function( event, ui ) {
                        // alert("sliding");
-                        $.cookie('text_size', ui.value); 	// lagre størrelse satt i slider i cookien
+                        $.cookie('text_size', ui.value); 	// lagre stÃ¸rrelse satt i slider i cookien
                         $( "#amount" ).text( (ui.value/10) + "px" ); 	// oppdater status div
                         $( ".text-resizeable" ).css('font-size', (ui.value/10) + "px"); 	// resize tekst
                 }
@@ -337,17 +337,17 @@ currentTextId = ${asset.id};
                         $('#font_verdana').attr('checked', false);
                 }
 
-                // hva skjer når brukeren velger en annen font?
+                // hva skjer nÃ¥r brukeren velger en annen font?
 
                 $("#font_georgia").click(function()  {	$( ".text-resizeable" ).css('font-family', 'Georgia, Garamond, serif');        $.cookie('text_font', 'Klassisk');  });
                 $("#font_verdana").click(function()  {	$( ".text-resizeable" ).css('font-family', 'Myriad Pro, Verdana, sans-serif'); $.cookie('text_font', 'Moderne');   });
 
-                // sett riktig tekst-størrelse
+                // sett riktig tekst-stÃ¸rrelse
 
                 if($.cookie('text_size') > 0) { // hvis brukeren har brukt slideren tidligere
 
                       //  alert($.cookie('text_size') );
-                        $( ".text-resizeable" ).css('font-size', ($.cookie('text_size')/10) + 'px');  // sett tekst-størrelse
+                        $( ".text-resizeable" ).css('font-size', ($.cookie('text_size')/10) + 'px');  // sett tekst-stÃ¸rrelse
                        
                        $( "#slider" ).slider( "value", $.cookie('text_size') );   			// flytt slider knapp
                 }
@@ -373,7 +373,7 @@ currentTextId = ${asset.id};
 	<div class="container">
 
 		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Værker</a> &raquo; ${asset.name}</div>
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">VÃ¦rker</a> &raquo; ${asset.name}</div>
 		<!-- <div id="select_view">
 			<form action="">
 				<input type="radio" name="visning" id="lesevisning" value="1" disabled/><label for="lesevisning">Lesevisning</label>
@@ -383,13 +383,13 @@ currentTextId = ${asset.id};
                
                 
                
-                <a id="settings" href="">Tekststørrelse & font</a>
+                <a id="settings" href="">TekststÃ¸rrelse & font</a>
 
                     <div id="settings_dropdown">
 
-                    <a id="settings_inner" href="">Tekststørrelse & font</a>
+                    <a id="settings_inner" href="">TekststÃ¸rrelse & font</a>
                     <br/><br/>
-                    <h4>Størrelse</h4>
+                    <h4>StÃ¸rrelse</h4>
                     <span id="small_A">A</span>
                             <div id="slider"></div>
                     <span id="big_A">A</span>
@@ -454,16 +454,16 @@ currentTextId = ${asset.id};
 
 			</div>
 
-		<div id="høyre">
-                    <div id="høyre_toppmeny_nytt_navn">
+		<div id="hÃ¸yre">
+                    <div id="hÃ¸yre_toppmeny_nytt_navn">
                         
                     </div>
 		
-		<div id="høyre_toppfade"></div>
-		<div id="høyre_bunnfade"></div>
+		<div id="hÃ¸yre_toppfade"></div>
+		<div id="hÃ¸yre_bunnfade"></div>
 		
 		</div>
 		
-		<div id="ny_kolonne_bar"><span alt="Åpne ny kolonne" id="ny_kolonne_knapp"></span></div>
+		<div id="ny_kolonne_bar"><span alt="Ã…pne ny kolonne" id="ny_kolonne_knapp"></span></div>
 	</div>
 </div>
