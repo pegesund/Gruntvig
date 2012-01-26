@@ -4,10 +4,7 @@
         {
         font-family:"Times New Roman";
         font-size: 16px;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin: 15px 10px;
         }
 
 .bookInventory
@@ -48,9 +45,15 @@
         font-size: 144%;
         text-align: center;
         line-height: 100%;
-        margin: 1em;
+        margin: 0.4em; 
         }
-
+        
+        
+    #bookinventory div:nth-child(4)
+        {
+            margin-top: 3em; 
+        }
+        
 #bookinventory .translator
         {
         font-size: 100%;
@@ -59,8 +62,8 @@
 
 #bookinventory table
         {
-        margin: 1em;
-        border: 1px solid black;
+        margin: 0 1em 1em;
+        border: 0px solid black;
         border-collapse: collapse;
         vertical-align: middle;
         table-layout: fixed;
@@ -68,8 +71,8 @@
 
 #bookinventory td, #bookinventory tr
         {
-        margin: 1em;
-        border: 1px solid black;
+        margin: 1em; padding: 0.5em;
+        border: 1px solid #555;
         vertical-align: middle;
         table-layout: fixed;
         }

@@ -6,7 +6,7 @@
 
 	<div id="menu">
 	<ul id="nav">
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værker</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">VÃ¦rker</a>
 			<ul>
                                                 #{list play.mvc.Scope.RenderArgs.current().assets, as:'asset'}
                                                     <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
@@ -14,29 +14,30 @@
 
 			</ul>
 		</li>
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Register</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Registre</a>
 					<ul>
 						<li><a href="../reg">Registranten</a></li>
-                                                <li><a href="#">Bogfortegnelse 1805</a></li>
+                                                
                                                 <li><a href="../myter">Mytologisk register</a></li>
                                                 <li><a href="../personer">Personregister</a></li>
                                                 <li><a href="../steder">Stedregister</a></li>
                                                 <li><a href="../bibel">Bibelregister</a></li>
+                                                <li><a href="../bookinvent">Bogfortegnelse 1805</a></li>
 					</ul>
 		</li>
 
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værktøj</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">VÃ¦rktÃ¸j</a>
 					<ul>
 						<li><a href="../tidslinje">Tidslinje</a></li>
-						<li><a href="#">Avanceret søgning</a></li>
-                                                <li><a href="#">Flere værktøjer</a></li>
+						<li><a href="#">Avanceret sÃ¸gning</a></li>
+                                                <li><a href="#">Flere vÃ¦rktÃ¸jer</a></li>
 					</ul>
 		</li>
 
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Om</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Om GV</a>
 					<ul>
 						<li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>
-                                                <li><a href="#">Kontakt</a></li>
+                                                <li><a href="mailto:mail@grundtvigsvaerker.dk">Kontakt</a></li>
 					</ul>
 		</li>
 
@@ -46,7 +47,7 @@
 
 		<div id="sok">
 		<form action="search"><span id="avansert_sok"><br/></span>
-                    <input name="lookfor" type="text" class="clearSearch" value="Søg i alt indhold"/><input type="submit" value="Søg" />
+                    <input name="lookfor" type="text" class="clearSearch" value="SÃ¸g i alt indhold"/><input type="submit" value="SÃ¸g" />
                 </form>
                 </div>
 

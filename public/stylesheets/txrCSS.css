@@ -2,6 +2,9 @@
 KSR: 2011.10.04: list-style: alpha, roman and simple
 KSR: 2011.09.26: hi-element
 */
+
+.mainTxr, .mainTxr .toc, .mainTxr .head { line-height: 1.5em; font-family: georgia, garamond, serif; }
+
 .mainTxr
         {
             line-height: 1.4em;
@@ -68,6 +71,7 @@ KSR: 2011.09.26: hi-element
         }
 
 /* indhold hyperlink start */
+
 
 .mainTxr .toc
         {
@@ -152,7 +156,6 @@ KSR: 2011.09.26: hi-element
         {
         font-size: 120%;
         margin: 0em 0em 0em 2em;
-        font-family: Verdana, Arial, sans-serif;
         margin-bottom:1em;
         margin-left:0.5em;
         margin-right:0;
