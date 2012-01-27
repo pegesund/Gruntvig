@@ -33,8 +33,7 @@
                     <div>
                         <xsl:text>Tekstredegørelse til</xsl:text>
                     </div>
-                        &#x201C;
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     <div class="author">
                             <xsl:text>ved </xsl:text>
                             <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
