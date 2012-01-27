@@ -140,17 +140,6 @@
         </span>
     </xsl:template>
 
-<!--
-    henter nummer på stofe; konflikt med næste template?
-    <xsl:template match="TEI:lg[@n]">        
-        <div class="lgNumber">
-                <xsl:value-of select="@n"/>
-            <xsl:apply-templates/>
-            <br/>
-        </div>        
-    </xsl:template>
--->
-
     <xsl:template match="TEI:lg|TEI:l">
         <div class="{name()}">
             <!--xsl:attribute name="class"><xsl:value-of select="name()"/></xsl:attribute-->
