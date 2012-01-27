@@ -36,9 +36,21 @@
                         &#x201C;
                     <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     <div class="author">
-                        <xsl:text>ved </xsl:text>
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
-                    </div>
+                            <xsl:text>ved </xsl:text>
+                            <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="following-sibling::TEI:author">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </div>
                 </xsl:if>
             </div>
             <h2>Indhold</h2>
