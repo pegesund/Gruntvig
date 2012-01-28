@@ -125,11 +125,11 @@ currentTextId = ${asset.id};
                  var txrContent = $("#txr" + num);
                  txrContent.html(data);
                  addTooltip($('.persName, .placeName, .myth'));
-                 txrContent.find(".txrmenu").click(function() {
+                 $(".txrmenu").click(function() {
                     var scrollElement = $(this).closest(".mainTxr").parent();
                     var id = $(this).attr("hrel").replace(/\./g, "\\.");
                     scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
-                    scrollElement.scrollTo("-=30px", 700);
+                    scrollElement.scrollTo("-=30px");
                 });
 
              }
@@ -173,11 +173,11 @@ currentTextId = ${asset.id};
                  $(".plus").click(function() {    
                     $(this).next().slideToggle("slow"); 
                  });
-                 introContent.find(".intro_menu").click(function() {
+                 $(".intro_menu").click(function() {
                     var scrollElement = $(this).closest(".innledningContent").parent();
                     var id = $(this).attr("hrel").replace(/\./g, "\\.");
                     scrollElement.scrollTo($(scrollElement.find("#" + id)));
-                    scrollElement.scrollTo("-=30px", 700);
+                    scrollElement.scrollTo("-=30px");
                  });
 
              }
