@@ -110,7 +110,7 @@ public class Chapter extends GenericModel {
             Document doc = builder.parse(in);
 
             XPath xpath = XPathFactory.newInstance().newXPath();
-            XPathExpression expr = xpath.compile("//div[@class='chapter']");
+            XPathExpression expr = xpath.compile("//div[@class='chapter']|//div[@class='kolofonBlad']|//div[@class='titlePage']");
 
             Object result = expr.evaluate(doc, XPathConstants.NODESET);
             NodeList nodes = (NodeList) result;
