@@ -62,44 +62,11 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
-    public static void tidslinjevisning() {
-        Asset asset = Asset.find("fileName = ?", "timelime_vej.xml").first();
-        render(asset);
-    }
-
-    public static void tknotervisning() {
-        Asset asset = Asset.find("fileName = ?", "tknoter_vej.xml").first();
-        render(asset);
-    }
     
     public static void bookinventoryvisning() {
         Asset asset = Asset.find("fileName = ?", "bookInventory1805.xml").first();
         render(asset);
     }
 
-    public static void metrikvisning() {
-        Asset asset = Asset.find("fileName = ?", "metrik_vej.xml").first();
-        render(asset);
-    }
-
-    public static void varappvisning() {
-        Asset asset = Asset.find("fileName = ?", "varapp_vej.xml").first();
-        render(asset);
-    }   
- 
-    public static void visning1805() {
-        Asset asset = Asset.find("fileName = ?", "1805_vej.xml").first();
-        render(asset);
-    } 
-    
-     public static void mapvisning() {
-        Asset asset = Asset.find("fileName = ?", "map_vej.xml").first();
-        render(asset);
-    }  
-     
-     public static void kolofonvisning() {
-        Asset asset = Asset.find("fileName = ?", "kolofon_vej.xml").first();
-        render(asset);
-    }  
      
 }
