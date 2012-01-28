@@ -8,7 +8,7 @@
 	<ul id="nav">
 		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værker</a>
 			<ul>
-                                                #{list play.mvc.Scope.RenderArgs.current().assets, as:'asset'}
+                                                #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
                                                     <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
                                                 #{/list}
 
