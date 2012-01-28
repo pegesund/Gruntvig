@@ -43,7 +43,7 @@ var gotoChapter = function(text, chapter) {
                 uriChangeTab(tab_nr, 2);
                 uriChangeFaksimile(tab_nr, faxNumber);
             });
-            
+                        
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");
