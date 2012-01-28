@@ -9,7 +9,7 @@
 
 
 var gotoNextChapter = function() {
-    if (currentChapter > $(".chapterSelector").size()) return;
+    if (currentChapter >= ($(".chapterSelector option").size()/2) - 1) return;
     currentChapter += 1;
     gotoChapter(currentTextId, currentChapter); 
 }
