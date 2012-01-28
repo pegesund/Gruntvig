@@ -95,5 +95,11 @@ public class ShowAsset extends Application {
      public static void mapvisning() {
         Asset asset = Asset.find("fileName = ?", "map_vej.xml").first();
         render(asset);
-    }      
+    }  
+     
+     public static void kolofonvisning() {
+        Asset asset = Asset.find("fileName = ?", "kolofon_vej.xml").first();
+        render(asset);
+    }  
+     
 }
