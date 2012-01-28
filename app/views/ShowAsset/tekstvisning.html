@@ -124,7 +124,13 @@ currentTextId = ${asset.id};
              success: function(data) {
                  var txrContent = $("#txr" + num);
                  txrContent.html(data);
-                 addTooltip($('.persName, .placeName, .myth'));             
+                 addTooltip($('.persName, .placeName, .myth'));
+                 $(".txrmenu").click(function() {
+                    var id = $(this).attr("hrel").replace(/\./g, "\\.");
+                    $(".txr").scrollTo($("#" + id));
+                    $(".txr").scrollTo("-=30px", 700);
+                });
+
              }
          });
 
@@ -166,6 +172,12 @@ currentTextId = ${asset.id};
                  $(".plus").click(function() {    
                     $(this).next().slideToggle("slow"); 
                  });
+                 $(".intro_menu").click(function() {
+                    var id = $(this).attr("hrel").replace(/\./g, "\\.");
+                    $(".innledningContent").parent().scrollTo($("#" + id));
+                    $(".innledningContent").parent().scrollTo("-=30px", 700);
+                 });
+
              }
          });
 
