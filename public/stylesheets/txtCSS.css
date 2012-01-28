@@ -14,7 +14,7 @@
 
 #tekst_innhold .app:hover 
          {
-         color: green;
+         color: blue;
          }
 
 #tekst_innhold .app:hover .appInvisible
