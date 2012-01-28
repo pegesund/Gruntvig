@@ -6,7 +6,7 @@
 
 	<div id="menu">
 	<ul id="nav">
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">VÃ¦rker</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værker</a>
 			<ul>
                                                 #{list play.mvc.Scope.RenderArgs.current().assets, as:'asset'}
                                                     <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
@@ -26,11 +26,11 @@
 					</ul>
 		</li>
 
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">VÃ¦rktÃ¸j</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værktøj</a>
 					<ul>
 						<li><a href="../tidslinje">Tidslinje</a></li>
-						<li><a href="#">Avanceret sÃ¸gning</a></li>
-                                                <li><a href="#">Flere vÃ¦rktÃ¸jer</a></li>
+						<li><a href="#">Avanceret søgning</a></li>
+                                                <li><a href="#">Flere værktøj</a></li>
 					</ul>
 		</li>
 
@@ -47,7 +47,7 @@
 
 		<div id="sok">
 		<form action="search"><span id="avansert_sok"><br/></span>
-                    <input name="lookfor" type="text" class="clearSearch" value="SÃ¸g i alt indhold"/><input type="submit" value="SÃ¸g" />
+                    <input name="lookfor" type="text" class="clearSearch" value="Søg i alt indhold"/><input type="submit" value="Søg" />
                 </form>
                 </div>
 
