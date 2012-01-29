@@ -36,7 +36,7 @@
         margin: 2.5em
         }
 
-#tekst_innhold .kolofon
+#tekst_innhold .kolofon, .copyright
         {
         margin: 0.5em;
         }
@@ -62,13 +62,6 @@
         
 #tekst_innhold td.source
         {
-        text-align: left;
-        width: 30em;
-        }
-        
-#tekst_innhold copyrightTitle
-        {
-        margin: 0.5em;
         text-align: left;
         width: 30em;
         }
