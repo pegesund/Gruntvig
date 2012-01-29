@@ -30,19 +30,6 @@
           text-align: center;
           }
 
-/*.app:hover 
-         {
-         color: green;
-         font-size: 80%;
-         }
-
-.innledningContent .app:hover .appInvisible
-        {
-        display: block;
-        margin: 1em;
-        color: black;
-        }*/
-
 .innledningContent .lem
         {
         color: gray;
@@ -105,7 +92,8 @@
 
 .innledningContent .firstIndent
         {
-        text-indent: 1em;
+        margin: 1em;
+        text-align: justify;
         }
 
 .innledningContent .fwLongLine
