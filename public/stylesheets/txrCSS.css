@@ -80,7 +80,17 @@ KSR: 2011.09.26: hi-element
         margin: 0em;
         margin-left: 1em;
         }
-
+ .toc a
+        {
+        color: #4DBC4D;
+        }
+   .toc a:hover
+        {
+            color: #4DBC4D;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
 .mainTxr .head
         {
         font-size: 150%;
