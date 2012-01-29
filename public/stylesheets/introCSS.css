@@ -90,7 +90,7 @@
         text-align: left;
         }
 
-.innledningContent .firstIndent
+.innledningContent .firstIndent, .noIndent
         {
         margin: 1em;
         text-align: justify;
@@ -221,12 +221,6 @@
         {
         text-align: left;
         margin: 2em 2em 2em 2em;
-        }
-
-.innledningContent .noIndent
-        {
-        margin: 1em;
-        text-align: justify;
         }
 
 .innledningContent .pageNumber
