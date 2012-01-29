@@ -65,7 +65,7 @@
     
     <xsl:template name="delimiter">
         <xsl:choose>
-            <xsl:when test="position()=1">hat</xsl:when>
+            <xsl:when test="position()=1">.</xsl:when>
             <xsl:when test="position()=1 and position()=last">.</xsl:when>
             <xsl:when test="position()=last()">.</xsl:when>
             <xsl:when test="position()=last()-1"> eller </xsl:when>
