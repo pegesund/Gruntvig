@@ -126,9 +126,10 @@ currentTextId = ${asset.id};
                  txrContent.html(data);
                  addTooltip($('.persName, .placeName, .myth'));
                  $(".txrmenu").click(function() {
+                    var scrollElement = $(this).closest(".mainTxr").parent();
                     var id = $(this).attr("hrel").replace(/\./g, "\\.");
-                    $(".txr").scrollTo($("#" + id));
-                    $(".txr").scrollTo("-=30px", 700);
+                    scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
+                    scrollElement.scrollTo("-=30px");
                 });
 
              }
@@ -173,9 +174,10 @@ currentTextId = ${asset.id};
                     $(this).next().slideToggle("slow"); 
                  });
                  $(".intro_menu").click(function() {
+                    var scrollElement = $(this).closest(".innledningContent").parent();
                     var id = $(this).attr("hrel").replace(/\./g, "\\.");
-                    $(".innledningContent").parent().scrollTo($("#" + id));
-                    $(".innledningContent").parent().scrollTo("-=30px", 700);
+                    scrollElement.scrollTo($(scrollElement.find("#" + id)));
+                    scrollElement.scrollTo("-=30px");
                  });
 
              }
