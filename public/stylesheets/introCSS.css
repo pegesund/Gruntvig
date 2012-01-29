@@ -90,7 +90,7 @@
         text-align: left;
         }
 
-.innledningContent .firstIndent, .noIndent
+.innledningContent .firstIndent, .innledningContent .noIndent
         {
         margin: 1em;
         text-align: justify;
