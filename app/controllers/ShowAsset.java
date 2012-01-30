@@ -27,6 +27,15 @@ public class ShowAsset extends Application {
         render(asset, chapter, chapters, variants, manus);
     }
 
+    public static void findAsset(String fileName) {
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        if (asset != null) {
+            Asset rootAsset = Asset.findById(asset.getCorrespondingRootId());
+            System.out.println("Showing asset: " + rootAsset.id);
+            tekstvisning(rootAsset.id,0);
+        } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");
+    }   
+    
     /* 
      * TODO: rewrite to one path
      * 

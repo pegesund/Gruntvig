@@ -1,7 +1,17 @@
 #{extends 'main.html' /}
 #{ header /}
 
-
+<script>
+    
+    $(function() {
+        $(".plusBook").each(function(index) {
+            if ($(this).next().text() == "") {
+                $(this).hide();
+            }
+        });
+    });
+    
+</script>    
 <div id="main">
 
 	<div class="container" id="underside_innhold">
