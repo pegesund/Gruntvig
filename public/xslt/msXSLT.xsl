@@ -16,7 +16,21 @@
 
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
-    <xsl:template match="tei:teiHeader"></xsl:template>
+    <xsl:template match="tei:teiHeader">
+        <xsl:apply-templates select="//tei:title"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:title">
+        <p><h3>
+            <xsl:apply-templates/>
+           </h3>
+        </p>
+    </xsl:template>
+ 
+    <xsl:template match="tei:title[@type='katalogsignatur']">
+    </xsl:template>
+ 
+    
     <xsl:template match="tei:tei">
             
             <div class="manusMain">
