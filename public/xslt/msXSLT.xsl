@@ -16,6 +16,7 @@
 
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
+    <xsl:template match="tei:teiHeader"></xsl:template>
     <xsl:template match="tei:tei">
             
             <div class="manusMain">
