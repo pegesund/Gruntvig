@@ -68,6 +68,11 @@ span.appInvisible
         
 /* var end */
 
+.variantMain .witness
+        {
+        font-size: 100%;
+        }
+
 .variantMain .center
         {
         text-align: center;
@@ -86,32 +91,32 @@ span.appInvisible
 
 .variantMain .head1
         {
-        font-size: 100%;
+        font-size: 120%;
         }
 
 .variantMain .head2
         {
-        font-size: 100%;
+        font-size: 144;
         }
 
 .variantMain .head3
         {
-        font-size: 100%;
+        font-size: 172%;
         }
 
 .variantMain .head4
         {
-        font-size: 100%;
+        font-size: 207%;
         }
 
 .variantMain .head5
         {
-        font-size: 100%;
+        font-size: 248%;
         }
 
 .variantMain .head6
         {
-        font-size: 100%;
+        font-size: 298%;
         }
         
 .variantMain .head 
