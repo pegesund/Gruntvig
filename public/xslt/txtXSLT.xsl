@@ -17,19 +17,15 @@
                     
                 <div class="kolofonTitle">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        N.S.F. Grundtvig: 
-                        <i>
-                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
-                        </i>
+                        N.S.F. Grundtvig:<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                     </xsl:if>                    
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                        N.S.F. Grundtvig: &#x201C;
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                        N.S.F. Grundtvig: &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:if>                         
                 </div>        
                     
                     <div class="kolofon">                        
-                        <xsl:text>Her kommer: Tekstkilder</xsl:text>
+                        <xsl:text>Tekstkilder</xsl:text>
                         
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
