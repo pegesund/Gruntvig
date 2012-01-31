@@ -1,6 +1,5 @@
 /* Kim Steen Ravn, 2011.04.06 */
 
-div.person { display:none; }
 .hideroot div.root { display:none; }
 
 .person a:link
