@@ -30,19 +30,6 @@
           text-align: center;
           }
 
-/*.app:hover 
-         {
-         color: green;
-         font-size: 80%;
-         }
-
-.innledningContent .app:hover .appInvisible
-        {
-        display: block;
-        margin: 1em;
-        color: black;
-        }*/
-
 .innledningContent .lem
         {
         color: gray;
@@ -74,7 +61,6 @@
 
 .innledningContent .readMore
         {
-        color: red;
         line-height:1.5em;
         }
 
@@ -103,9 +89,10 @@
         text-align: left;
         }
 
-.innledningContent .firstIndent
+.innledningContent .firstIndent, .innledningContent .noIndent
         {
-        text-indent: 1em;
+        margin: 1em;
+        text-align: justify;
         }
 
 .innledningContent .fwLongLine
@@ -233,13 +220,6 @@
         {
         text-align: left;
         margin: 2em 2em 2em 2em;
-        }
-
-.innledningContent .noIndent
-        {
-        margin: 1em;
-        text-indent: 0em;
-        text-align: justify;
         }
 
 .innledningContent .pageNumber

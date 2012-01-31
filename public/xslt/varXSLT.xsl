@@ -61,10 +61,16 @@
     </xsl:template>
 
     
-    <xsl:template match="TEI:anchor">
+    <xsl:template match="TEI:anchor[@id]">
         <div class="anchor">
-            <xsl:text>anchor: </xsl:text>
-            <xsl:value-of select="@id"/>
+            <xsl:choose>
+                <xsl:when test="contains(@id, 'a')">
+                    <xsl:text>&#x25BA; </xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text> &#x25C4;</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -114,16 +120,16 @@
             <xsl:attribute name="class">
                 <xsl:choose>
                     <xsl:when test="substring(@type,1,3) ='sub'">
-                        <xsl:text>substantial </xsl:text>
+                        <xsl:text>substantiel </xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
-                        <xsl:text>interpunction </xsl:text>
+                        <xsl:text>interpunktion </xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='ide'">
-                        <xsl:text>identical </xsl:text>
+                        <xsl:text>identisk </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text>orthographic </xsl:text>
+                        <xsl:text>ortografisk </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:text>variantScrollTarget </xsl:text>
@@ -155,16 +161,16 @@
                 <xsl:text>Tip("</xsl:text>
                 <xsl:choose>
                     <xsl:when test="substring(@type,1,3)='sub'">
-                        <xsl:text>substantiell skille</xsl:text>
+                        <xsl:text>substantiel</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
-                        <xsl:text>skille i interpunktion</xsl:text>
+                        <xsl:text>interpunktion</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='ide'">
                         <xsl:text>identiskt</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text>ortografisk skille</xsl:text>
+                        <xsl:text>ortografi</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:text>", WIDTH, 0)</xsl:text>
