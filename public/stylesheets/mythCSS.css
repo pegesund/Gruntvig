@@ -1,6 +1,6 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
-div.myth { display:none; }
+
 .hideroot div.root { display:none; }
 
 .myth a:link {
