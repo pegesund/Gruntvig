@@ -90,9 +90,11 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <xsl:number level="multiple" count="TEI:div"/>
-            <xsl:text> </xsl:text>
-            <xsl:apply-templates/>
+            <a href="{@name}" class="toc">
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates/>
+            </a>
         </div>
     </xsl:template>
     
