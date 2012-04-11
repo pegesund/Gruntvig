@@ -1,4 +1,7 @@
-/* KSR: 2011.03.30 */
+/* KSR: 
+2012.04.11: minus kursiv readMore plus
+2011.03.30: 
+*/
 
 .innledningContent {
     line-height: 1.5em;
@@ -26,7 +29,6 @@
           color: green;
           cursor: pointer;
           font-family: "New Times Roman";
-          font-style: italic;
           text-align: center;
           }
 
