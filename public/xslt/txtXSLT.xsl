@@ -346,7 +346,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:app">
-        <a class="app" href="#">
+        <span class="app" href="#">
             <span class="lem">
                 <xsl:apply-templates select="TEI:lem"/>
             </span>
@@ -423,18 +423,6 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <!--
-    
-    <xsl:template match="TEI:note[@type='footnote']">
-        *
-        <hr class="footLine"/>
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
 
     <xsl:template match="TEI:body/TEI:div">        
         <div class="chapter">
@@ -464,7 +452,6 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@n"/>
             </xsl:attribute>
-
             &#x25BA;
             <xsl:apply-templates/>
         </span>
@@ -475,7 +462,6 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@n"/>
             </xsl:attribute>
-
             &#x25C4;
             <xsl:apply-templates/>
         </span>
@@ -494,9 +480,8 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        |
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-  
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">
+        |  
         <a hrel="{@facs}" class="faksimile_viewer">            
             <span class="pbA">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
