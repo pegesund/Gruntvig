@@ -309,14 +309,14 @@
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
+
+<!--
     
     <xsl:template match="TEI:div[@type='preFace']">        
         <div class="preFace">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-
-<!--
     henter nummer på stofe; konflikt med næste template?
     <xsl:template match="TEI:lg[@n]">        
         <div class="lgNumber">
