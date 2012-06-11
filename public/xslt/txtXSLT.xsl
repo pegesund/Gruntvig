@@ -26,8 +26,8 @@
                         N.S.F. Grundtvig: &#x201C;
                         <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:if>                         
-                </div>        
-                    <!--
+                </div>
+                
                     <div class="kolofon">                        
                         <xsl:text>Her kommer: Tekstkilder</xsl:text>
                         
@@ -227,7 +227,7 @@
                 </div>
                 
                 <hr/>
-                -->
+                
                 <xsl:apply-templates select="TEI:text"/>
                 
                 <br/>
@@ -365,7 +365,7 @@
                     <xsl:apply-templates select="*[@type='add']"/>                                     
                 </xsl:if>
             </span>
-        </a>
+       </span>
     </xsl:template>
     
     <xsl:template match="TEI:rdg">
