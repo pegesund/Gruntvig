@@ -407,7 +407,7 @@
         
 #tekst_innhold .witnessXmlId
         {
-        font-style: italic;
+        font-style: normal;
         width: 50px;
         display: block;
         float: left; 
