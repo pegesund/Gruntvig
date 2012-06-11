@@ -142,6 +142,9 @@
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography'][position()=last()]">
             <xsl:text>.</xsl:text>
         </xsl:if>
+        <xsl:if test="TEI:cell[@rend='latin' or @rend='saxo'][position()=last()]">
+            <xsl:text>.</xsl:text>
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>
