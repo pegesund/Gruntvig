@@ -17,13 +17,13 @@
                     
                 <div class="kolofonTitle">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        N.S.F. Grundtvig: 
+                        N.F.S. Grundtvig: 
                         <i>
                             <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
                         </i>
                     </xsl:if>                    
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                        N.S.F. Grundtvig: &#x201C;
+                        N.F.S. Grundtvig: &#x201C;
                         <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:if>                         
                 </div>
