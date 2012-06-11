@@ -65,24 +65,6 @@
         </xsl:choose>
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:row">
-        <div class="row" id="{@xml:id}">
-            <xsl:apply-templates/>
-            <xsl:if test="//TEI:row[@sameAs=current()/@xml:id]">
-                <div class="epithet">
-                    <i><xsl:text>Også kaldet: </xsl:text></i>
-                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
-                        <div>
-                            <xsl:apply-templates select="TEI:cell[@rend='epithet' or @rend='pseudoEpithet' or @rend='latin']/text()"/>
-                        </div>
-                    </xsl:for-each>
-                </div>
-            </xsl:if>                        
-        </div>
-    </xsl:template>
-    -->   
-    
     <xsl:template match="TEI:cell[@rend='normForm' or @rend='popUp' or @rend='encyc']">
         <div class="{@rend}">
             <xsl:apply-templates/>
