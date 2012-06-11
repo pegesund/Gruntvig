@@ -65,22 +65,27 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@rend='normForm' or @rend='popUp' or @rend='encyc']">
+    <xsl:template match="TEI:cell">
         <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
-        <div class="{@rend}">
-            <xsl:variable name="sameAs" select="../@sameAs"/>
-            <xsl:apply-templates/>
-            <span class="sameAs">
-                <a href="#{$sameAs}">
-                    <xsl:text> > </xsl:text>                    
-                    <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
-                </a>
-            </span>
+            <xsl:if test="@rend='normForm'">
+                <xsl:apply-templates/>
+            </xsl:if>
+            <xsl:if test="@rend='popUp'">
+                <xsl:apply-templates/>
+            </xsl:if>
+            <xsl:if test="@rend='encyc'">
+                <xsl:apply-templates/>
+            </xsl:if>
+            <xsl:if test="@rend='epithet' or @rend='latin' or @rend='pseudoEpithet'">
+                <xsl:variable name="sameAs" select="../@sameAs"/>
+                <xsl:apply-templates/>
+                <span class="sameAs">
+                    <a href="#{$sameAs}">
+                        <xsl:text> > </xsl:text>                    
+                        <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
+                    </a>
+                </span>
+            </xsl:if>
         </div>
     </xsl:template>
     
