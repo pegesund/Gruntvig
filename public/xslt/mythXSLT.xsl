@@ -18,15 +18,7 @@
                 </xsl:apply-templates>
         </div>
         
-    </xsl:template>
-    
-    <!--
-        93A Nordens Mytologi
-        436A Ansgar
-    -->
-    
-    <xsl:template match="TEI:row[@n='93A' and @n='436A']"/>
-    
+    </xsl:template>    
        
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
