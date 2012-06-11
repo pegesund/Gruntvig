@@ -83,46 +83,23 @@
     </xsl:template>
     -->   
     
-    <xsl:template match="TEI:cell">
+    <xsl:template match="TEI:cell[@rend='normForm' or @rend='popUp' or @rend='encyc']">
         <div class="{@rend}">
-            <xsl:if test="@rend='normForm'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@rend='popUp'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@rend='encyc'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@rend='epithet' or @rend='latin' or @rend='pseudoEpithet'">
-                <xsl:variable name="sameAs" select="../@sameAs"/>
-                <xsl:apply-templates/>
-                <span class="sameAs">
-                    <a href="#{$sameAs}">
-                        <xsl:text> > </xsl:text>                    
-                        <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
-                    </a>
-                </span>
-            </xsl:if>
+            <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@rend='orthography']">
-        <span class="orthography">
+    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
+        <div class="{@rend}">
+            <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
-            <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
-                <xsl:choose>
-                    <xsl:when test="following-sibling::TEI:cell[@rend='orthography'][position()!=last()]">
-                        <xsl:call-template name="delimiterKomma"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <i>
-                            <xsl:text> eller </xsl:text>
-                        </i>                
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:if>
-        </span>
+            <span class="sameAs">
+                <a href="#{$sameAs}">
+                    <xsl:text> > </xsl:text>                    
+                    <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
+                </a>
+            </span>
+        </div>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
