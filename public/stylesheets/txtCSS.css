@@ -53,14 +53,14 @@
 #tekst_innhold td.sigel
         {
         font-style: italic;
-        text-align: justify;
+        text-align: left;
         vertical-align: super;
         width: 2em;
         }
         
 #tekst_innhold td.source
         {
-        text-align: justify;
+        text-align: left;
         width: 30em;
         }
 
@@ -105,7 +105,7 @@
 #tekst_innhold .footLine
         {
         color: blue;
-        text-align: justify;
+        text-align: left;
         margin: 1em auto 0 0;
         width: 4em;
         }
@@ -202,7 +202,7 @@
 
 #tekst_innhold .left
         {
-        text-align: justify;
+        text-align: left;
         }
 
 #tekst_innhold .lfirstIndent
@@ -222,7 +222,7 @@
 
 #tekst_innhold .lg
         {
-        text-align: justify;
+        text-align: left;
         margin: 2em 2em 2em 2em;
         }
 
@@ -407,7 +407,7 @@
         
 #tekst_innhold .witnessXmlId
         {
-        font-style: normal;
+        font-style: italic;
         width: 50px;
         display: block;
         float: left; 
