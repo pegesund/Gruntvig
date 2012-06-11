@@ -53,14 +53,14 @@
 #tekst_innhold td.sigel
         {
         font-style: italic;
-        text-align: left;
+        text-align: justify;
         vertical-align: super;
         width: 2em;
         }
         
 #tekst_innhold td.source
         {
-        text-align: left;
+        text-align: justify;
         width: 30em;
         }
 
@@ -105,7 +105,7 @@
 #tekst_innhold .footLine
         {
         color: blue;
-        text-align: left;
+        text-align: justify;
         margin: 1em auto 0 0;
         width: 4em;
         }
@@ -200,7 +200,7 @@
         margin-left: 10px;
         }
 
-#tekst_innhold .justify
+#tekst_innhold .left
         {
         text-align: justify;
         }
@@ -222,7 +222,7 @@
 
 #tekst_innhold .lg
         {
-        text-align: left;
+        text-align: justify;
         margin: 2em 2em 2em 2em;
         }
 
