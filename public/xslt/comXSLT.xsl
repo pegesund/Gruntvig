@@ -13,6 +13,7 @@
     Kim Steen Ravn:
     2011.10.12: rend att på title i teiHeader
     2011.06.27: sic and supp in note element 
+    2012.06.20: templates til <l> og <lg>
 -->
     <xsl:include href="popups.xsl"/>
 
@@ -60,6 +61,18 @@
     </xsl:template>
     
     <xsl:template match="TEI:editor">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:l">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:lg">
         <div>
             <xsl:apply-templates/>
         </div>
