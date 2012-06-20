@@ -288,12 +288,27 @@
         </div>        
     </xsl:template>
     
-    <xsl:template match="TEI:fw[@type='longLine']">
-        <hr align="center" class="fwLongLine"/>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:fw[@type='shortLine']">
-        <hr align="center" class="fwShortLine"/>
+    <xsl:template match="TEI:fw">
+        <xsl:choose>
+            <xsl:when test="@type='asterisk'">
+                <div class="asterisk">
+                    <xsl:text>&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='asterisk3'">
+                <div class="asterisk3">
+                    <xsl:text>&#x002A;</xsl:text>
+                    <br/>
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='longLine'">
+                <hr align="center" class="longLine" width="8%"/>
+            </xsl:when>
+            <xsl:when test="@type='shortLine'">
+                <hr align="center" class="shortLine" width="4%"/>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:titlePart[@type='part']">
