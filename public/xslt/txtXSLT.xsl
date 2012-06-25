@@ -226,6 +226,8 @@
                     
                 </div>
                 
+                <xsl:apply-templates select="TEI:text"/>
+                
             </div>
     </xsl:template>
     
