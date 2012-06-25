@@ -226,16 +226,6 @@
                     
                 </div>
                 
-                <hr/>
-                
-                <xsl:apply-templates select="TEI:text"/>
-                
-                <br/>
-                
-                <hr class="footLine"/>
-                
-                <xsl:apply-templates select="//TEI:note[@type='footnote']" mode="foot"/>
-                
             </div>
     </xsl:template>
     
