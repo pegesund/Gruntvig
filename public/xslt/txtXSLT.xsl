@@ -513,39 +513,32 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">
-        |  
-        <a hrel="{@facs}" class="faksimile_viewer">            
-            <span class="pbA">
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        
+        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
+        <a href="{@facs}" class="app">
+            <xsl:text>|</xsl:text>
+            <span class="appInvisible">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-            
-        </a>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
-        |
-        <a hrel="#">
-            <span class="pbA">
-                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
             </span>            
         </a>        
     </xsl:template>
     
-    <xsl:template match="TEI:pb[@type='paraText']">
-        |
-        <a href="#">
-            <span class="pb">
-                [<xsl:value-of select="@facs"/>]
-            </span> 
-        </a>       
+    <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
+        <a href="{@facs}" class="app">
+            <xsl:text>|</xsl:text>
+            <span class="appInvisible">
+                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+            </span>            
+        </a>  
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        |
-        <span class="pb">
-            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-        </span>        
+        <a href="{@facs}" class="app">
+            <xsl:text>|</xsl:text>
+            <span class="appInvisible">
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>
     </xsl:template>
     
     <xsl:template name="delimiterComma">
