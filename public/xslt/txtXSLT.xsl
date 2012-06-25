@@ -2,51 +2,45 @@
 <xsl:stylesheet 
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    version="1.0">
-    
-    <!--
-        KSR:
-        2012.04.10: tekstkilder kursiv
-        2012.01.27: fri udgivertekst fixet
-        2012.04.23: periText flyttet til editXSLT
-    -->
+    version="1.0"
+    exclude-result-prefixes="#all"
+    >
 
+<!-- KSR: 2011.09.26 -->
+
+
+    <xsl:include href="popups.xsl"/>
     <xsl:template match="TEI:TEI">
-        
-        <html>
-            <head>
-                <link rel="stylesheet" href="txtCSS.css" type="text/css"/>
-                <!--<link rel="stylesheet" href="EditCSS.css" type="text/css"/>-->
-                <title><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></title>
-            </head>
-            <body>
-                
+
+        <div class="rootText">
                 <div class="kolofonBlad">
                     
-                    <div class="kolofonTitle">
-                        <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                            N.F.S. Grundtvig:
-                            <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
-                        </xsl:if>
-                        <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                            N.F.S. Grundtvig:
-                            &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                        </xsl:if>                         
-                    </div>
-                    
+                <div class="kolofonTitle">
+                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                        N.F.S. Grundtvig: 
+                        <i>
+                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                        </i>
+                    </xsl:if>                    
+                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
+                        N.F.S. Grundtvig: &#x201C;
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:if>                         
+                </div>
+                
                     <div class="kolofon">                        
-                        <xsl:text>Tekstkilder</xsl:text>
+                        <xsl:text>Her kommer: Tekstkilder</xsl:text>
                         
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table>
                                         <td class="sigel">
-                                            <xsl:value-of select="@rend"/>
-                                        </td>
-                                        <td class="source">
-                                            <xsl:apply-templates select="."/>
-                                        </td>
+                                        <xsl:value-of select="@rend"/>
+                                    </td>
+                                    <td class="source">
+                                        <xsl:apply-templates select="."/>
+                                    </td>
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -57,11 +51,11 @@
                                     <div class="table">
                                         <table>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
-                                            </td>
-                                            <td class="source">
-                                                <xsl:apply-templates select="."/>
-                                            </td>
+                                            <xsl:value-of select="@rend"/>
+                                        </td>
+                                        <td class="source">
+                                            <xsl:apply-templates select="."/>
+                                        </td>
                                         </table>
                                     </div>
                                 </xsl:for-each>
@@ -84,47 +78,47 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>                        
+                            </xsl:for-each>
+                        <xsl:call-template name="delimiterFullStop"/>                        
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:if test="//TEI:note[@type='com']">
-                            <xsl:text>Punktkommentarer ved </xsl:text>
-                            <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                                <xsl:apply-templates/>
-                                <xsl:if test="following-sibling::TEI:author">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:author[position()!=last()]">
-                                            <xsl:call-template name="delimiterComma"/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                            <xsl:text>, redigeret af </xsl:text>
-                            <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                                <xsl:apply-templates select="."/>
-                                <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                            <xsl:call-template name="delimiterComma"/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </xsl:if>
+                        <xsl:text>Punktkommentarer ved </xsl:text>
+                        <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                            <xsl:apply-templates select="."/>
+                            <xsl:if test="following-sibling::TEI:author">
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::TEI:author[position()!=last()]">
+                                        <xsl:call-template name="delimiterComma"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text> og </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>, redigeret af </xsl:text>
+                        <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
+                            <xsl:apply-templates select="."/>
+                            <xsl:if test="following-sibling::TEI:editor[@role='editor']">
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
+                                        <xsl:call-template name="delimiterComma"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text> og </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:if>
+                        </xsl:for-each>
+                        <xsl:call-template name="delimiterFullStop"/>
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:if test="//TEI:note[@type='intro']">
-                            <xsl:text>Indledning ved </xsl:text>
+                        <xsl:if test="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:text>Indledning ved </xsl:text> 
                             <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                                <xsl:apply-templates/>
+                                <xsl:apply-templates select="."/>
                                 <xsl:if test="following-sibling::TEI:author">
                                     <xsl:choose>
                                         <xsl:when test="following-sibling::TEI:author[position()!=last()]">
@@ -135,42 +129,9 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>                            
+                            </xsl:for-each>
                             <xsl:text>, redigeret af </xsl:text>
                             <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                                <xsl:apply-templates/>
-                                <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                            <xsl:call-template name="delimiterComma"/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </xsl:if>
-                    </div>
-                    
-                    <div class="kolofon">
-                        <xsl:if test="//TEI:note[@type='txr']">
-                            <xsl:text>Tekstredegørelse ved </xsl:text> 
-                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                                <xsl:apply-templates/>
-                                <xsl:if test="following-sibling::TEI:author">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:author[position()!=last()]">
-                                            <xsl:call-template name="delimiterComma"/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                            <xsl:text>, redigeret af </xsl:text>
-                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
                                 <xsl:apply-templates select="."/>
                                 <xsl:if test="following-sibling::TEI:editor[@role='editor']">
                                     <xsl:choose>
@@ -183,7 +144,40 @@
                                     </xsl:choose>
                                 </xsl:if>
                             </xsl:for-each>
-                        </xsl:if>
+                            <xsl:call-template name="delimiterFullStop"/>
+                        </xsl:if>                         
+                    </div>
+                    
+                    <div class="kolofon">
+                        <xsl:text>Tekstredegørelse ved </xsl:text> 
+                        <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                            <xsl:apply-templates select="."/>
+                            <xsl:if test="following-sibling::TEI:author">
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::TEI:author[position()!=last()]">
+                                        <xsl:call-template name="delimiterComma"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text> og </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>, redigeret af </xsl:text>
+                        <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
+                            <xsl:apply-templates select="."/>
+                            <xsl:if test="following-sibling::TEI:editor[@role='editor']">
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
+                                        <xsl:call-template name="delimiterComma"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text> og </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:if>                            
+                        </xsl:for-each>
+                        <xsl:call-template name="delimiterFullStop"/>                        
                     </div>
                     
                     <div class="kolofon">
@@ -201,7 +195,8 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>                            
+                            </xsl:for-each>
+                            <xsl:call-template name="delimiterFullStop"/>
                         </xsl:if>                        
                     </div>
                     
@@ -220,31 +215,61 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>                            
-                        </xsl:if>
+                            </xsl:for-each>
+                            <xsl:call-template name="delimiterFullStop"/>
+                        </xsl:if>                        
+                    </div>
+                    
+                    <div class="copyright">
+                        <xsl:text>Copyright: </xsl:text><i><xsl:text>Grundtvigs Værker</xsl:text></i>
                     </div>
                     
                 </div>
                 
-                <hr/>
-                
                 <xsl:apply-templates select="TEI:text"/>
                 
-            </body>
-        </html>
-        
+            </div>
     </xsl:template>
     
-    <xsl:template name="delimiterComma">
-        <xsl:text>, </xsl:text>
+    
+    <!--
+    
+    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editionPhilologist']">        
+        <div class="editionPhilologist">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
-    <xsl:template match="TEI:witness">        
-        <div class="witness">
-            <span class="witnessXmlId">
-            <xsl:value-of select="@xml:id"/>
-            </span>
-            <xsl:text> </xsl:text>
+    -->
+    
+    <xsl:template match="TEI:lb">        
+        <br>
+            <xsl:apply-templates/>
+        </br>        
+    </xsl:template>
+    
+    <!-- titelblad start -->
+    
+    <xsl:template match="TEI:titlePage">
+        <div class="titlePage">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:titlePart">
+        <div class="{@type}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:docTitle">
+        <div class="docTitle">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:byline">
+        <div class="byline">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -278,78 +303,27 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:lb">        
-        <br>
-            <xsl:apply-templates/>
-        </br>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:titlePage">
-        <div class="{@type}">
+    <xsl:template match="TEI:titlePart[@type='part']">
+        <div class="titlePart">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:titlePart">
-        <div class="{@type}">
+    <!-- titelblad end -->
+    
+    <xsl:template match="TEI:div[@type='motto']">
+        <div class="motto">
             <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:docTitle">
-        <div class="docTitle">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
-            <br/>
-            <hr class="footLine"/>            
-            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
-        </xsl:if>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note[@type='footnote']">
-        <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
-        </xsl:variable>
-        <a id="retur{$id}" href="#note{$id}">
-            <span class="footMarker">
-                <xsl:value-of select="$id"/>
-            </span>
-        </a>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
-        <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
-        </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}">
-            <span class="footMarker">
-                <xsl:value-of select="$id"/>
-            </span>
-        </a>               
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div">
-        <div>
-            <xsl:apply-templates/>
-        </div>
-        <xsl:call-template name="footnote"/>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='bibleVerse' or @type='motto' or @type='preFace']">
-        <div class="{@type}">
-            <xsl:apply-templates/>
-        </div>
-        <xsl:call-template name="footnote"/>
+        </div>        
     </xsl:template>
 
 <!--
+    
+    <xsl:template match="TEI:div[@type='preFace']">        
+        <div class="preFace">
+            <xsl:apply-templates/>
+        </div>        
+    </xsl:template>
     henter nummer på stofe; konflikt med næste template?
     <xsl:template match="TEI:lg[@n]">        
         <div class="lgNumber">
@@ -398,7 +372,7 @@
                     <xsl:apply-templates select="*[@type='add']"/>                                     
                 </xsl:if>
             </span>
-        </span>
+       </span>
     </xsl:template>
     
     <xsl:template match="TEI:rdg">
@@ -415,12 +389,74 @@
                         <xsl:text>; </xsl:text>
                     </xsl:when>
                 </xsl:choose>
-                <!-- kan koges ned til: 
+                <!-- kan korges ned til: 
                     <xsl:when test="following-sibling::TEI:rdg">
                     <xsl:text>; </xsl:text>
-                    </xsl:when> -->                
+                    </xsl:when>
+                -->
             </i>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='add']">        
+        <span class="editor">
+            <i>
+                <xsl:value-of select="TEI:note[@type='add']"/>
+            </i>                        
+        </span>
+    </xsl:template>
+    
+    <xsl:template name="footnote">
+        <xsl:if test=".//TEI:note[@type='footnote']">
+            <br/>
+            <hr class="footLine"/>            
+            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>            
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="retur{$id}" href="#note{$id}">
+            <span class="footMarker">
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="note{$id}" href="#retur{$id}">
+            <span class="footMarker">
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>               
+        <div class="footnote">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div[@type='bibleVerse' or @type='motto' or @type='preFace']">
+        <div class="{@type}">
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
+    </xsl:template>
+
+    <xsl:template match="TEI:body/TEI:div">        
+        <div class="chapter">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
     <xsl:template match="TEI:hi">        
@@ -429,86 +465,37 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
-        <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
-                <span class="seg">
-                    <xsl:apply-templates/>
-                </span>                
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="TEI:seg[@type='comStart' and @n]">
-        <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
-                <span class="segStart">
-                    &#x25BA;
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="TEI:seg[@type='comEnd' and @n]">
-        <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
-                <span class="segEnd">
-                    &#x25C4;
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <!-- til brugs for txtEditCSS-css start -->
-    
-    <xsl:template match="TEI:persName">
-        <span class="persName">
+        
+    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">        
+        <span class="seg">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:placeName">
-        <span class="placeName">
+    <xsl:template match="TEI:seg[@type='comStart' and @n]">        
+        <span class="segStart">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+            &#x25BA;
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:rs[@type='bible']">
-        <span class="rs_bible">
+    <xsl:template match="TEI:seg[@type='comEnd' and @n]">        
+        <span class="segEnd">
+            <xsl:attribute name="id">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+            &#x25C4;
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:rs[@type='myth']">
-        <span class="rs_myth">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:rs[@type='title']">
-        <span class="rs_title">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <!-- til brugs for txtEditCSS-css end -->
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">        
         <div class="{@rend}">
@@ -522,23 +509,32 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        |
-        <a href="{@facs}">            
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">
+        |  
+        <a hrel="{@facs}" class="faksimile_viewer">            
             <span class="pbA">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>            
+            </span>
+            
         </a>        
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         |
-        <a href="{@facs}">            
+        <a hrel="#">
             <span class="pbA">
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
             </span>            
-        </a>  
+        </a>        
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[@type='paraText']">
+        |
+        <a href="#">
+            <span class="pb">
+                [<xsl:value-of select="@facs"/>]
+            </span> 
+        </a>       
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
@@ -547,6 +543,24 @@
             <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </span>        
     </xsl:template>
+    
+    <xsl:template name="delimiterComma">
+        <xsl:text>, </xsl:text>
+    </xsl:template>
+    
+    <xsl:template name="delimiterFullStop">
+        <xsl:text>.</xsl:text>
+    </xsl:template>
+    
+
+   
+<!-- tittelblad -->
+   
+   
+   
+   
+
+   
 
 <!-- pb{@ed} til forsk stil til hver ed -->
 
