@@ -125,9 +125,9 @@
                     <xsl:when test="substring(@type,1,3) ='ide'">
                         <xsl:text>identical </xsl:text>
                     </xsl:when>
-                    <xsl:otherwise>
+                    <xsl:when test="substring(@type,1,3) ='ort'">
                         <xsl:text>orthographic </xsl:text>
-                    </xsl:otherwise>
+                    </xsl:when>
                 </xsl:choose>
                 <xsl:text>variantScrollTarget </xsl:text>
                 <xsl:value-of select="@id" />
