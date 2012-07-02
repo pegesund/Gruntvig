@@ -61,11 +61,16 @@
     </xsl:template>
     
     <xsl:template match="TEI:anchor">
-        <div class="anchor">
-            <xsl:text>anchor: </xsl:text>
-            <xsl:value-of select="@id"/>
-            <xsl:apply-templates/>
-        </div>
+        <span class="anchor">
+            <xsl:choose>
+                <xsl:when test="contains(@id, 'a')">
+                    &#x25B8;
+                </xsl:when>
+                <xsl:otherwise>
+                    &#x25C2;
+                </xsl:otherwise>
+            </xsl:choose>
+        </span>
     </xsl:template>
     
     <xsl:template match="TEI:p">
@@ -115,7 +120,7 @@
                     <xsl:when test="substring(@type,1,3) ='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,6) ='subint'">
+                    <xsl:when test="substring(@type,5,3) ='sub int'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
@@ -159,7 +164,7 @@
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,6)='subint'">
+                    <xsl:when test="substring(@type,5,3)='sub int'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
