@@ -120,7 +120,7 @@
                     <xsl:when test="substring(@type,1,3) ='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,5,3) ='sub ort'">
+                    <xsl:when test="@type='sub ort'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
@@ -162,7 +162,7 @@
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,5,3)='sub ort'">
+                    <xsl:when test="@type='sub ort'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
