@@ -117,7 +117,7 @@
         <span>
             <xsl:attribute name="class">
                 <xsl:choose>
-                    <xsl:when test="substring(@type,1,3) ='sub'">
+                    <xsl:when test="@type='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
                     <xsl:when test="@type='sub ort'">
@@ -159,7 +159,7 @@
             <xsl:attribute name="onmouseover">
                 <xsl:text>Tip("</xsl:text>
                 <xsl:choose>
-                    <xsl:when test="substring(@type,1,3)='sub'">
+                    <xsl:when test="@type='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
                     <xsl:when test="@type='sub ort'">
