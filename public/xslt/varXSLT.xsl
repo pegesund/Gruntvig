@@ -116,7 +116,7 @@
                     <xsl:when test="substring(@type,1,3) ='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,5,3) ='sub int'">
+                    <xsl:when test="substring(@type,5,3) ='int'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
