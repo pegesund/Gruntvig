@@ -120,6 +120,9 @@
                     <xsl:when test="substring(@type,1,3) ='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
+                    <xsl:when test="substring(@type,1,3)='hat'">
+                        <xsl:text>substantial </xsl:text>
+                    </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
                         <xsl:text>interpunction </xsl:text>
                     </xsl:when>
