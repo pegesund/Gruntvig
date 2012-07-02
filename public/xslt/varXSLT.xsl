@@ -120,16 +120,25 @@
                     <xsl:when test="@type='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
+                    <xsl:when test="@type='sub int'">
+                        <xsl:text>substantial </xsl:text>
+                    </xsl:when>
                     <xsl:when test="@type='sub ort'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3) ='int'">
+                    <xsl:when test="@type='sub int ort'">
+                        <xsl:text>substantial </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@type='int'">
                         <xsl:text>interpunction </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3) ='ide'">
+                    <xsl:when test="@type='int ort'">
+                        <xsl:text>interpunction </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@type='ide'">
                         <xsl:text>identical </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3) ='ort'">
+                    <xsl:when test="@type='ort'">
                         <xsl:text>orthographic </xsl:text>
                     </xsl:when>
                 </xsl:choose>
@@ -162,16 +171,25 @@
                     <xsl:when test="@type='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="@type='sub ort'">
+                    <xsl:when test="@type='sub int'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3)='int'">
+                    <xsl:when test="@type='sub ort'">
+                        <xsl:text>ord og stavning</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@type='sub int ort'">
+                        <xsl:text>ord, tegn og stavning</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@type='int'">
                         <xsl:text>tegn</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3)='ide'">
+                    <xsl:when test="@type='int ort'">
+                        <xsl:text>tegn og stavning</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="@type='ide'">
                         <xsl:text>invarians</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3)='ort'">
+                    <xsl:when test="@type='ort'">
                         <xsl:text>stavning</xsl:text>
                     </xsl:when>
                 </xsl:choose>
