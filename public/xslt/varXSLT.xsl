@@ -116,9 +116,6 @@
                     <xsl:when test="substring(@type,1,3) ='sub'">
                         <xsl:text>substantial </xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3) ='sub int'">
-                        <xsl:text>substantial interpunction </xsl:text>
-                    </xsl:when>
                     <xsl:when test="substring(@type,1,3) ='int'">
                         <xsl:text>interpunction </xsl:text>
                     </xsl:when>
@@ -160,7 +157,7 @@
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3)='sub int'">
+                    <xsl:when test="substring(@type,1,4)='sub int'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
