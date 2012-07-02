@@ -140,8 +140,6 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <!--
 
     <xsl:template match="TEI:rdg">
         <xsl:choose>
@@ -155,15 +153,13 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-    -->
 
     <xsl:template name="variantMouseOver">
         <xsl:if test="@type">
             <xsl:attribute name="onmouseover">
                 <xsl:text>Tip("</xsl:text>
                 <xsl:choose>
-                    <xsl:when test="substring(@type,1,3)='sub'">
+                    <xsl:when test="@type='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,5,3)='sub ort'">
