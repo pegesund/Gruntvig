@@ -155,16 +155,16 @@
                 <xsl:text>Tip("</xsl:text>
                 <xsl:choose>
                     <xsl:when test="substring(@type,1,3)='sub'">
-                        <xsl:text>substantiell skille</xsl:text>
+                        <xsl:text>ord</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
-                        <xsl:text>skille i interpunktion</xsl:text>
+                        <xsl:text>tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='ide'">
-                        <xsl:text>identiskt</xsl:text>
+                        <xsl:text>invarians</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text>ortografisk skille</xsl:text>
+                        <xsl:text>stavning</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:text>", WIDTH, 0)</xsl:text>
