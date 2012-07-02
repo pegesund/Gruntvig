@@ -169,9 +169,9 @@
                     <xsl:when test="substring(@type,1,3)='ide'">
                         <xsl:text>invarians</xsl:text>
                     </xsl:when>
-                    <xsl:otherwise>
+                    <xsl:when test="substring(@type,1,3)='ort'">
                         <xsl:text>stavning</xsl:text>
-                    </xsl:otherwise>
+                    </xsl:when>
                 </xsl:choose>
                 <xsl:text>", WIDTH, 0)</xsl:text>
             </xsl:attribute>
