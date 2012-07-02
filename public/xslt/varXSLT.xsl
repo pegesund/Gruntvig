@@ -173,7 +173,7 @@
                         <xsl:text>stavning</xsl:text>
                     </xsl:when>
                 </xsl:choose>
-                <xsl:text>", WIDTH, 0)</xsl:text>
+                <xsl:text>", WIDTH, HAT 0)</xsl:text>
             </xsl:attribute>
         </xsl:if>
     </xsl:template>
