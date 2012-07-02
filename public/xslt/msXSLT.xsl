@@ -24,7 +24,7 @@
                 <div class="head">
                     <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
                 </div>
-                
+                <!--
                 <div class="source">
                     <div class="source">
                         <xsl:text>Tekstkilde:</xsl:text>
@@ -42,7 +42,7 @@
                         <xsl:apply-templates select="."/>
                     </xsl:for-each>
                 </div>
-                
+                -->
                 <xsl:apply-templates select="tei:text"/>
                 
                 <xsl:if test="//tei:note[@type='footnote']">
