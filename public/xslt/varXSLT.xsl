@@ -108,6 +108,34 @@
     
     
     <!-- added by pe 16/1 -->
+    
+    <xsl:template match="TEI:app">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="substring(@type,1,3) ='sub'">
+                        <xsl:text>substantial </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,7) ='sub int'">
+                        <xsl:text>substantial interpunction </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3) ='int'">
+                        <xsl:text>interpunction </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,3) ='ide'">
+                        <xsl:text>identical </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>orthographic </xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>variantScrollTarget </xsl:text>
+                <xsl:value-of select="@id" />
+            </xsl:attribute>
+            <xsl:call-template name="variantMouseOver" />
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 
 
     <xsl:template match="TEI:rdg">
@@ -131,6 +159,9 @@
                 <xsl:choose>
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="substring(@type,1,7)='sub int'">
+                        <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
                         <xsl:text>tegn</xsl:text>
