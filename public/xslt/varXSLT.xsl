@@ -160,8 +160,8 @@
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,1,3)='tot'">
-                        <xsl:text>ord tegn</xsl:text>
+                    <xsl:when test="substring(@type,1,4)='toto'">
+                        <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
                         <xsl:text>tegn</xsl:text>
