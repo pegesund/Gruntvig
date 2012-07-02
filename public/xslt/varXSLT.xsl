@@ -160,7 +160,7 @@
                     <xsl:when test="substring(@type,1,3)='sub'">
                         <xsl:text>ord</xsl:text>
                     </xsl:when>
-                    <xsl:when test="substring(@type,5,3)='sub int'">
+                    <xsl:when test="substring(@type,5,3)='int'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
@@ -173,7 +173,7 @@
                         <xsl:text>stavning</xsl:text>
                     </xsl:when>
                 </xsl:choose>
-                <xsl:text>", WIDTH, HAT 0)</xsl:text>
+                <xsl:text>", WIDTH, 0)</xsl:text>
             </xsl:attribute>
         </xsl:if>
     </xsl:template>
