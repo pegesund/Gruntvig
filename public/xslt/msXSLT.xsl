@@ -25,6 +25,24 @@
                     <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
                 </div>
                 
+                <div class="source">
+                    <div class="source">
+                        <xsl:text>Tekstkilde:</xsl:text>
+                    </div>
+                    <xsl:for-each select="//TEI:bibl/TEI:author">
+                        <xsl:apply-templates select="."/>
+                        <xsl:text> </xsl:text>
+                        <xsl:text>(</xsl:text>
+                        <xsl:for-each select="//TEI:bibl/TEI:date">
+                            <xsl:apply-templates select="."/>
+                        </xsl:for-each>
+                        <xsl:text>) </xsl:text>
+                    </xsl:for-each>
+                    <xsl:for-each select="//TEI:title[@type='katalogsignatur']">
+                        <xsl:apply-templates select="."/>
+                    </xsl:for-each>
+                </div>
+                
                 <xsl:apply-templates select="tei:text"/>
                 
                 <xsl:if test="//tei:note[@type='footnote']">
