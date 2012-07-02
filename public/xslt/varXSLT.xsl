@@ -154,7 +154,7 @@
             <xsl:attribute name="onmouseover">
                 <xsl:text>Tip("</xsl:text>
                 <xsl:choose>
-                    <xsl:when test="substring(@type,1,3)='sub'">
+                    <xsl:when test="substring(@type,1,4)='sub'">
                         <xsl:text>ord og tegn</xsl:text>
                     </xsl:when>
                     <xsl:when test="substring(@type,1,3)='int'">
