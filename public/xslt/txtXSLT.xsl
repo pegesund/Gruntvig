@@ -282,10 +282,9 @@
     
     <xsl:template match="TEI:fw">
         <xsl:choose>
-            <xsl:when test="@type='asterisk'">
-                <div class="asterisk">
-                    <xsl:text>&#x002A;</xsl:text>
-                </div>
+            <xsl:when test="@type='blank'">
+                <br/>
+                <br/>
             </xsl:when>
             <xsl:when test="@type='asterisk3'">
                 <div class="asterisk3">
