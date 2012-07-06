@@ -167,6 +167,35 @@
     -->
     
     <xsl:template match="TEI:list">
+        <xsl:if test="@type='textualCriticism'">
+            <table class="textualCriticism">
+                <tr bgcolor="lightgray">
+                    <td>Side</td>
+                    <td>Note</td>
+                </tr>
+                <xsl:for-each select="document(//TEI:note[@type='txt']/@target)//TEI:app">
+                    <tr>
+                        <td align="right">
+                            <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
+                            &#x2003;
+                        </td>
+                        <td align="left">
+                            <xsl:apply-templates select="TEI:lem"/>
+                            <xsl:text>] </xsl:text>
+                            <i>
+                                <xsl:apply-templates select="TEI:lem/@wit"/>
+                                <xsl:text>, </xsl:text>
+                            </i>
+                            <xsl:apply-templates select="TEI:rdg"/>
+                            <xsl:text> </xsl:text>
+                            <i>
+                                <xsl:apply-templates select="TEI:rdg/@wit"/>
+                            </i>
+                        </td>
+                    </tr>
+                </xsl:for-each>
+            </table>
+        </xsl:if>
         <xsl:if test="@type='decimal'">
             <ul>
                 <xsl:for-each select="TEI:item">
