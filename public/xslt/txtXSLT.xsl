@@ -434,6 +434,11 @@
 
     <xsl:template match="TEI:body/TEI:div">        
         <div class="chapter">
+            <xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:value-of select="@type"/>
+               </xsl:attribute> 
+            </xsl:if>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -450,7 +455,6 @@
             <xsl:attribute name="id">
                 <xsl:value-of select="@n"/>
             </xsl:attribute>
-
             <xsl:apply-templates/>
         </span>
     </xsl:template>
@@ -478,7 +482,7 @@
     </xsl:template>
     
     
-    <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">        
+    <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
         <div class="{@rend}">
             <xsl:apply-templates/>
         </div>
