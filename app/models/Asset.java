@@ -436,7 +436,7 @@ public class Asset extends GenericModel {
             ByteArrayOutputStream buf = new ByteArrayOutputStream();
             out.setOutputProperty(Serializer.Property.METHOD, "xhtml");
             out.setOutputProperty(Serializer.Property.OMIT_XML_DECLARATION, "yes");
-            out.setOutputProperty(Serializer.Property.INDENT, "yes");
+            out.setOutputProperty(Serializer.Property.INDENT, "no");
             out.setOutputProperty(Serializer.Property.ENCODING, "utf-8");
             out.setOutputStream(buf);
             // out.setOutputFile(new File("tour.html"));

@@ -110,6 +110,8 @@ public class Chapter extends GenericModel {
             Document doc = builder.parse(in);
 
             XPath xpath = XPathFactory.newInstance().newXPath();
+            
+            // xpath does not seem to work, picking up every top-level divs?! Check later if probs.
             XPathExpression expr = xpath.compile("//div[@class='chapter']|//div[@class='kolofonBlad']|//div[@class='titlePage']");
 
             Object result = expr.evaluate(doc, XPathConstants.NODESET);
@@ -120,13 +122,15 @@ public class Chapter extends GenericModel {
                 // System.out.println("xhtml: " + asset.html);
                 for (int i = 0; i < nodes.getLength(); i++) {
                     Node node = nodes.item(i);
-                    String name = "- Afsnit - " + (i + 1);
+                    String name = "- Afsnit - " + (i + 0);
+                    if (i == 0) name = "Kolofon";
                     if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
                     }
                     Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
                     chapter.save();
+                    // System.out.println("Chapter: " + i + nodeToString(node));
                 }
             } else {
                 System.out.println("No chapters found, using hole file as chapter 1");

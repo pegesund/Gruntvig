@@ -50,9 +50,11 @@
                                 $(this).hide();
 
                                     content = $(this).html();
+                                    
+                                    internal_anchor = $(this).attr("id");
 
-
-                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    node = '<!-- ' + name.toLowerCase() + "-->"; // hack to keep nodes sorted :-)
+                                    node += '<tr><td class="navn"><a href="../myter#" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 
                                     nodes.push(node);
 
@@ -72,11 +74,14 @@
                                 //name = name[0];
                                 content = '';
                                 
+                                
+                                internal_link = $(this).find("a").attr("href").substr(1);
+                                
                                 firstLetter2 = name.charAt(0).toLowerCase();
                                 
                                 if(firstLetter2 == value){ 
-                                 
-                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    node = '<!-- ' + name.toLowerCase() + "-->";
+                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 
                                     nodes.push(node);
                                 } 
@@ -92,20 +97,28 @@
                         
                         $(nodes).each( function(index, value2) {
                             //alert(value);
-                            $('#' + value.toUpperCase()).after(value2);
-                            
-                        
+                            $('#' + value.toUpperCase()).after(value2);                        
                         });
                         
-                        
-                }); 
+                }); // end alphabet loop 
                 
                
                // hide names in desc 
                $('.definisjon .normForm').hide();
+               
+               $("a[name]").click(function(e) {
+                    e.preventDefault();
+                    var scrolltarget = $("#X" + $(this).attr("name"));
+                    // alert("Scrolling to: " + scrolltarget.position().top);
+                    $.scrollTo(scrolltarget, 500);
+               }); 
+               
+        }); // onloaded
+               
+                // make sameas-links scroll
 
-		});
 
+               
 
 	</script>
         
