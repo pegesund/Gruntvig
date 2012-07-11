@@ -39,12 +39,13 @@ public class Ajax extends Application {
     }
 
     public static void getReference(String fileName, String textId) {
+        System.out.println("Serving popup: " + TextReference.getReference(fileName + "_" + textId));
         Controller.renderHtml(TextReference.getReference(fileName + "_" + textId));
     }
 
     public static void getRef(String textId) {
         TextReference ref = TextReference.find("textId = ?", textId).first();
-        // System.out.println("Showing ref: " + ref.showName);
+        System.out.println("Showing ref: " + ref.showName);
         Controller.renderHtml(ref.showName);
     }
 
@@ -55,7 +56,7 @@ public class Ajax extends Application {
     }
 
     public static void getComment(long id) {
-        Asset asset = Asset.find("id = ?", id).first();
+        Asset asset = Asset.find("id = ?", id).first();        
         Controller.renderHtml(asset.getCorrespondingComment());
     }
 

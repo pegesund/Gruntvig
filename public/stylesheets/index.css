@@ -716,13 +716,13 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 /* farger for variantvisning */
 
-.variantContent .substantial { background-color: #cacaca;}
+.variantContent .substantiel { background-color: #cacaca;}
 
-.variantContent .interpunction { background-color: #dbc9bb;}
+.variantContent .interpunktion { background-color: #dbc9bb;}
 
-.variantContent .identical { background-color: #adcfaf;}
+.variantContent .identisk { background-color: #adcfaf;}
 
-.variantContent .orthographic { background-color: #bbcedb;}
+.variantContent .ortografisk { background-color: #bbcedb;}
 
 /* farger/stiler for manusvisning */
 
