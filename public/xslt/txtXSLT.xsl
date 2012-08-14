@@ -130,10 +130,10 @@
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:if test="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
-                            <xsl:text>Indledning ved </xsl:text> 
+                        <xsl:if test="//TEI:note[@type='intro']">
+                            <xsl:text>Indledning ved </xsl:text>
                             <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                                <xsl:apply-templates select="."/>
+                                <xsl:apply-templates/>
                                 <xsl:if test="following-sibling::TEI:author">
                                     <xsl:choose>
                                         <xsl:when test="following-sibling::TEI:author[position()!=last()]">
@@ -144,10 +144,10 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>
+                            </xsl:for-each>                            
                             <xsl:text>, redigeret af </xsl:text>
                             <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                                <xsl:apply-templates select="."/>
+                                <xsl:apply-templates/>
                                 <xsl:if test="following-sibling::TEI:editor[@role='editor']">
                                     <xsl:choose>
                                         <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
@@ -159,8 +159,10 @@
                                     </xsl:choose>
                                 </xsl:if>
                             </xsl:for-each>
-                            <xsl:call-template name="delimiterFullStop"/>
-                        </xsl:if>                         
+                        </xsl:if>
+                        <xsl:if test="//TEI:note[@type='noIntro']">
+                            <xsl:text>Indledningen er under udarbejdelse</xsl:text>
+                        </xsl:if>
                     </div>
                     
                     <div class="kolofon">
