@@ -158,13 +158,21 @@
         </div>
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:list">        
-        <div class="list">
-            <xsl:apply-templates/>
-        </div>
+    <xsl:template match="TEI:rdg">
+        <xsl:apply-templates/>
+        <xsl:text> </xsl:text>
+        <i>
+            <xsl:value-of select="@wit"/>
+            <xsl:choose>
+                <xsl:when test="following-sibling::TEI:rdg[current()/@type or not(@type)]">
+                    <xsl:text>, </xsl:text>
+                </xsl:when>
+                <xsl:when test="following-sibling::TEI:rdg[not(current()/@type) and @type]">
+                    <xsl:text>; </xsl:text>
+                </xsl:when>
+            </xsl:choose>
+        </i>
     </xsl:template>
-    -->
     
     <xsl:template match="TEI:list">
         <xsl:if test="@type='textualCriticism'">
@@ -182,15 +190,21 @@
                         <td align="left">
                             <xsl:apply-templates select="TEI:lem"/>
                             <xsl:text>] </xsl:text>
-                            <i>
-                                <xsl:apply-templates select="TEI:lem/@wit"/>
-                                <xsl:text>, </xsl:text>
-                            </i>
-                            <xsl:apply-templates select="TEI:rdg"/>
-                            <xsl:text> </xsl:text>
-                            <i>
-                                <xsl:apply-templates select="TEI:rdg/@wit"/>
-                            </i>
+                            <xsl:if test="TEI:lem/@wit!='A'">
+                                <i>
+                                    <xsl:value-of select="TEI:lem/@wit"/>
+                                    <xsl:text>, </xsl:text>
+                                </i>                                    
+                            </xsl:if>
+                            <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                            <xsl:if test="TEI:rdg[@type='add']">
+                                <xsl:apply-templates select="TEI:rdg[@type='add']"/>
+                            </xsl:if>
+                            <xsl:if test="TEI:note[@type='add']">
+                                <i>
+                                    <xsl:apply-templates select="TEI:note[@type='add']"/>
+                                </i>
+                            </xsl:if>
                         </td>
                     </tr>
                 </xsl:for-each>
