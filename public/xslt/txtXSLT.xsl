@@ -166,35 +166,39 @@
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:text>Tekstredegørelse ved </xsl:text> 
-                        <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                            <xsl:apply-templates select="."/>
-                            <xsl:if test="following-sibling::TEI:author">
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:author[position()!=last()]">
-                                        <xsl:call-template name="delimiterComma"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text> og </xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>
-                        </xsl:for-each>
-                        <xsl:text>, redigeret af </xsl:text>
-                        <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                            <xsl:apply-templates select="."/>
-                            <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                        <xsl:call-template name="delimiterComma"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text> og </xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>                            
-                        </xsl:for-each>
-                        <xsl:call-template name="delimiterFullStop"/>                        
+                        <xsl:if test="//TEI:note[@type='txr']">
+                            <xsl:text>Tekstredegørelse ved </xsl:text> 
+                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                                <xsl:apply-templates/>
+                                <xsl:if test="following-sibling::TEI:author">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:author[position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                            <xsl:text>, redigeret af </xsl:text>
+                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
+                                <xsl:apply-templates select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='editor']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:if>
+                        <xsl:if test="//TEI:note[@type='noTxr']">
+                            <xsl:text>Tekstredegørelsen er under udarbejdelse</xsl:text>
+                        </xsl:if>
                     </div>
                     
                     <div class="kolofon">
