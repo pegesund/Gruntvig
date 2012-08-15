@@ -29,48 +29,27 @@
                 -->
                 
             <div class="head">
-               <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        <div><xsl:text>Punktkommentarer til</xsl:text></div>
-                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
-                        <div class="author">
-                            <xsl:text>ved </xsl:text>
-                            <xsl:for-each select="//TEI:author">
-                                <xsl:value-of select="."/>
-                                <xsl:if test="following-sibling::TEI:author">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                            <xsl:text>, </xsl:text>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </div>
-                    </xsl:if>                    
-                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">                        
-                        <div>
-                            <xsl:text>Punktkommentarer til</xsl:text>
-                        </div>
-                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                        <div class="author">
-                            <xsl:text>ved </xsl:text>
-                            <xsl:for-each select="//TEI:author">
-                                <xsl:value-of select="."/>
-                                <xsl:if test="following-sibling::TEI:author">
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                            <xsl:text>, </xsl:text>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <xsl:text> og </xsl:text>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </div>
-                    </xsl:if>
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                    Punktkommentarer til 
+                    <i>
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main'][@rend='main']"/>
+                    </i>
+                </xsl:if>                    
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main'][@rend='part']">
+                    Punktkommentarer til &#x201C;
+                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main'][@rend='part']"/>&#x201D;
+                </xsl:if>
+            </div>
+                
+            <div>
+                Forfatter:
+                <br/>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                <br/>
+                Redaktion:
+                <br/>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor"/>
+            </div>
                 <!--
                 <div class="filename">
                     filnavn: <xsl:value-of select="TEI:teiHeader/TEI:title[@key]/@key"/>
