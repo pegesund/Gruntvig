@@ -23,7 +23,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 html {
-    background: transparent url(../img/fine_grain_bg.jpg); /*#1A4617*/
+    background: transparent url(../img/fine_grain_bg.JPG); /*#1A4617*/
 
 }
 
@@ -81,8 +81,8 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 /* Header small */
 
-#header_small #logo {width:160px; height: 47px; float:left; margin: 17px 80px 0 0;}
-#header_small #menu {float:left; margin: 18px 0px 0 0; width:465px;}
+#header_small #logo {width:140px; height: 47px; float:left; margin: 17px 80px 0 0;}
+#header_small #menu {float:left; margin: 16px 0px 0 0; width:480px; }
 
 #header_small #sok {float:right; margin: 4px 0px 0 0; text-align:right;}
 #header_small #sok #avansert_sok{ margin: 0px 0px 6px 0; display:block; opacity:0;}
@@ -140,6 +140,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 .boks h4 { float:left; display:block; width: 209px; padding: 17px 0 15px 15px; margin:0; background-color: #e1e1e1; }
 	.dobbel h4 { width: 459px; }
 
+ 
 /* Footer */
 
 #footer #logo_footer {width:160px; height: 47px;  float:left; margin: 30px 0px 0 0; opacity: 0.6;}
@@ -381,7 +382,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 #nav {
 	margin: 0;
-	padding: 7px 6px 0;
+	padding: 7px 0px 0;
 	line-height: 100%;
 	font-size:1.6em;
 }
@@ -715,13 +716,13 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 /* farger for variantvisning */
 
-.variantContent .substantial { background-color: #cacaca;}
+.variantContent .substantiel { background-color: #cacaca;}
 
-.variantContent .interpunction { background-color: #dbc9bb;}
+.variantContent .interpunktion { background-color: #dbc9bb;}
 
-.variantContent .identical { background-color: #adcfaf;}
+.variantContent .identisk { background-color: #adcfaf;}
 
-.variantContent .orthographic { background-color: #bbcedb;}
+.variantContent .ortografisk { background-color: #bbcedb;}
 
 /* farger/stiler for manusvisning */
 
@@ -1062,3 +1063,11 @@ h1.subtitle { margin-left: 0px !important; }
     #veiledning_tekst span.shading { background: url('../img/stripe_test2_h.png') repeat 0 0;  }
     #veiledning_tekst span.immediate { color: #4DBC4D; }
 
+/* Kolofon */ 
+
+#kolonne1_meny li#kolofon { line-height: 19px; padding: 20px; width: 184px; background: #fff; }        
+    #kolonne1_meny li #kolofon_link:link { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:underline; }        
+    #kolonne1_meny li #kolofon_link:hover { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:none; }        
+       
+    #kolofon_page { width:100%; }
+    #kolofon_page h2 { font-size: 1.5em; }

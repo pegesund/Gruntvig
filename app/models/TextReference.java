@@ -114,6 +114,7 @@ public class TextReference extends GenericModel {
                 String id = ref.getAttributes().getNamedItem("id").getNodeValue();
                 // System.out.println("Creating ref-id: " + id);
                 TextReference textRef = new TextReference(id, -1, Helpers.nodeToString(ref), asset.type, asset.fileName);
+                // System.out.println("Ref: " + textRef.showName);
                 textRef.save();
             }
         } catch (Exception e) {

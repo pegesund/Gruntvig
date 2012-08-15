@@ -61,9 +61,9 @@
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc">
-            <a class="toc">
-                <xsl:attribute name="href">
-                    <xsl:text>#A</xsl:text>
+            <a class="toc intro_menu">
+                <xsl:attribute name="hrel">
+                    <xsl:text>AA</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
@@ -85,7 +85,7 @@
     <xsl:template match="TEI:head">
         <a>
             <xsl:attribute name="id">
-                <xsl:text>A</xsl:text>
+                <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>

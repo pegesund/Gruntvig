@@ -152,7 +152,10 @@ public class Helpers {
             Serializer out = new Serializer();
             ByteArrayOutputStream buf = new ByteArrayOutputStream();
             out.setOutputProperty(Serializer.Property.METHOD, "html");
-            out.setOutputProperty(Serializer.Property.INDENT, "yes");
+            // out.setOutputProperty(Serializer.Property.INDENT, "yes");
+            out.setOutputProperty(Serializer.Property.INDENT, "no");
+            out.setOutputProperty(Serializer.Property.SAXON_INDENT_SPACES, "no");
+ 
             out.setOutputStream(buf);
             // out.setOutputFile(new File("tour.html"));
             XsltTransformer trans = exp.load();

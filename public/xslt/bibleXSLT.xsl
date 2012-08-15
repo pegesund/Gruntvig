@@ -49,9 +49,9 @@
   <xsl:template name="occ">
       <tr class="occur">
         <td class="shortForm">
-          <a href="{@copyOf}">
+          <a href="/findAsset/{@copyOf}">
             <td class="shortForm">
-            <a href="{@copyOf}">
+            <a href="/findAsset/{@copyOf}">
               <xsl:value-of select="@rend"/>
             </a>
           </td>

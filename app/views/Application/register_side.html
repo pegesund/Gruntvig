@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Grundtvigs VÃ¦rker</title>
+<title>Grundtvigs Værker</title>
 <base href="http://localhost:9000/">
 <link href="css/index.css" rel="stylesheet" type="text/css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
@@ -10,21 +10,21 @@
 
 		resize_window = function() {
 
-			// finn hÃ¸yde pÃ¥ nettleservinduet
+			// finn høyde pÃ¥ nettleservinduet
 			var window_height = $(window).height();
 
-			hovedtekst_outer_offset = 140; // hvor mye mindre enn window_height de ytre boksene skal vÃ¦re
-			hÃ¸yre_outer_offset = 137; // hvor mye mindre enn window_height de ytre boksene skal vÃ¦re
+			hovedtekst_outer_offset = 140; // hvor mye mindre enn window_height de ytre boksene skal være
+			høyre_outer_offset = 137; // hvor mye mindre enn window_height de ytre boksene skal være
 
 			$("#hovedtekst").height(window_height - hovedtekst_outer_offset);
-			$("#hÃ¸yre").height(window_height - hÃ¸yre_outer_offset);
-			$("#ny_kolonne_bar").height(window_height - hÃ¸yre_outer_offset - 3);
+			$("#høyre").height(window_height - høyre_outer_offset);
+			$("#ny_kolonne_bar").height(window_height - høyre_outer_offset - 3);
 
-			hovedtekst_inner_offset = 258; // hvor mye mindre enn window_height de indre boksene skal vÃ¦re
-			hÃ¸yre_inner_offset = 198; // hvor mye mindre enn window_height de indre boksene skal vÃ¦re
+			hovedtekst_inner_offset = 258; // hvor mye mindre enn window_height de indre boksene skal være
+			høyre_inner_offset = 198; // hvor mye mindre enn window_height de indre boksene skal være
 
 			$("#tekst_innhold").height(window_height - hovedtekst_inner_offset);
-			$("#hÃ¸yre_innhold").height(window_height - hÃ¸yre_inner_offset);
+			$("#høyre_innhold").height(window_height - høyre_inner_offset);
 
 		};
 
@@ -37,7 +37,7 @@
 
 		$(window).resize(function() {
 
-			// resize layout nÃ¥r nettleserens vindu endrer stÃ¸rrelse
+			// resize layout nÃ¥r nettleserens vindu endrer størrelse
 			resize_window();
 
 		});
@@ -56,12 +56,12 @@
 
 	<div id="menu">
 	<ul id="nav">
-		<li class="with_dropdown"><a class="a_with_dropdown" href="#">VÃ¦rker</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værker</a>
 			<ul>
 
-						<li><a href="tekstvisning.html">VÃ¦rk 1</a></li>
-						<li><a href="#">VÃ¦rk 2</a></li>
-						<li><a href="#">VÃ¦rk 3</a></li>
+						<li><a href="tekstvisning.html">Værk 1</a></li>
+						<li><a href="#">Værk 2</a></li>
+						<li><a href="#">Værk 3</a></li>
 
 			</ul>
 		</li>
@@ -94,7 +94,7 @@
 	</div>
 
 		<div id="sok">
-		<form action="#"><span id="avansert_sok"><a href="#">Avansert sÃ¸k</a><br/></span><input type="text" value="SÃ¸k i alt innhold"/><input type="submit" value="SÃ¸k" /></form></div>
+		<form action="#"><span id="avansert_sok"><a href="#">Avansert søk</a><br/></span><input type="text" value="Søk i alt innhold"/><input type="submit" value="Søk" /></form></div>
 
 	</div>
 </div>
@@ -128,7 +128,7 @@
 	<div id="kolonne1_bred">
 
 		<h1>Personindeks</h1>
-		<p>En oversikt over sentrale personer fra Grundtvigs vÃ¦rker.</p>
+		<p>En oversigt over centrale personer fra Grundtvigs værker.</p>
 
 		<div id="innholdsfortegnelse">
 			<a class="selected" href="#">Vis alle</a>
@@ -158,8 +158,8 @@
 			<a href="#">x</a>
 			<a href="#">y</a>
 			<a href="#">z</a>
-			<a href="#">Ã¦</a>
-			<a href="#">Ã¸</a>
+			<a href="#">æ</a>
+			<a href="#">ø</a>
 			<a href="#">Ã¥</a>
 		</div>
 
@@ -175,7 +175,7 @@
 
 				<tr>
 					<td class="navn"><a href="#">Arnesen, Jonas</a></td>
-					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs vÃ¦rker.</td>
+					<td class="definisjon">Dette er en beskrivelse av Jonas og hans tilknytning til Grundtvigs værker.</td>
 				</tr>
 
 				<tr class="no_top_border" id="B">
@@ -311,10 +311,10 @@
 			<div id="columns">
 
 					<ul id="column1">
-						<li><h2><a href="#">VÃ¦rker</a></h2></li>
-						<li><a href="#">VÃ¦rk1</a></li>
-						<li><a href="#">VÃ¦rk2</a></li>
-						<li><a href="#">VÃ¦rk3</a></li>
+						<li><h2><a href="#">Værker</a></h2></li>
+						<li><a href="#">Værk1</a></li>
+						<li><a href="#">Værk2</a></li>
+						<li><a href="#">Værk3</a></li>
 					</ul>
 
 					<ul id="column2">
@@ -325,10 +325,10 @@
 					</ul>
 
 					<ul id="column3">
-						<li><h2><a href="#">VerktÃ¸y</a></h2></li>
+						<li><h2><a href="#">Verktøy</a></h2></li>
 						<li><a href="#">Tidslinje</a></li>
-						<li><a href="#">Avansert sÃ¸k</a></li>
-						<li><a href="#">Enda et verktÃ¸y</a></li>
+						<li><a href="#">Avansert søk</a></li>
+						<li><a href="#">Enda et verktøy</a></li>
 					</ul>
 
 					<ul id="column3">

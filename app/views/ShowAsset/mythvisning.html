@@ -10,7 +10,7 @@
                 $('div.myth').hide();
                 $('div.root').hide();
                 
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','Ã¦','Ã¸','Ã¥']
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
                 
                 $.each(alphabet, function(index, value) { 
                       
@@ -50,9 +50,11 @@
                                 $(this).hide();
 
                                     content = $(this).html();
+                                    
+                                    internal_anchor = $(this).attr("id");
 
-
-                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    node = '<!-- ' + name.toLowerCase() + "-->"; // hack to keep nodes sorted :-)
+                                    node += '<tr><td class="navn"><a href="../myter#" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 
                                     nodes.push(node);
 
@@ -72,11 +74,14 @@
                                 //name = name[0];
                                 content = '';
                                 
+                                
+                                internal_link = $(this).find("a").attr("href").substr(1);
+                                
                                 firstLetter2 = name.charAt(0).toLowerCase();
                                 
                                 if(firstLetter2 == value){ 
-                                 
-                                    node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    node = '<!-- ' + name.toLowerCase() + "-->";
+                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 
                                     nodes.push(node);
                                 } 
@@ -92,20 +97,28 @@
                         
                         $(nodes).each( function(index, value2) {
                             //alert(value);
-                            $('#' + value.toUpperCase()).after(value2);
-                            
-                        
+                            $('#' + value.toUpperCase()).after(value2);                        
                         });
                         
-                        
-                }); 
+                }); // end alphabet loop 
                 
                
                // hide names in desc 
                $('.definisjon .normForm').hide();
+               
+               $("a[name]").click(function(e) {
+                    e.preventDefault();
+                    var scrolltarget = $("#X" + $(this).attr("name"));
+                    // alert("Scrolling to: " + scrolltarget.position().top);
+                    $.scrollTo(scrolltarget, 500);
+               }); 
+               
+        }); // onloaded
+               
+                // make sameas-links scroll
 
-		});
 
+               
 
 	</script>
         
@@ -115,7 +128,7 @@
 	<div class="container" id="underside_innhold">
 
 		<div id="submenu">
-		<div id="breadcrumbs"><a href="#" >Forside</a> &raquo; <a href="#">Registre</a> &raquo;  Bibelsk register</div>
+		<div id="breadcrumbs"><a href="#" >Forside</a> &raquo; <a href="#">Registre</a> &raquo;  Mytologisk register</div>
 
 		</div>
 
@@ -129,7 +142,7 @@
                                 <li><a href="../reg">Registranten</a></li>				
 				<li ><a class="selected" href="../myter">Mytologisk register</a></li>
 				<li><a href="../personer">Personregister</a></li>
-				<li class=""><a href="../steder">Stedsregister</a></li>
+				<li class=""><a href="../steder">Stedregister</a></li>
                                 <li class=""><a href="../bibel">Bibelregister</a></li>
                                 <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
 
@@ -176,7 +189,7 @@
 			<a href="../myter#Å">Å</a>
 		</div>
 
-		<div id="liste">
+		<div id="liste" class="hideroot">
 
                 ${asset.html.raw()}
 

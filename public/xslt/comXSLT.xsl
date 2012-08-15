@@ -60,6 +60,17 @@
         
     </xsl:template>
     
+    <xsl:template match="TEI:ref[@type='web']">
+        <span class="web">
+            <xsl:text>&lt;</xsl:text><a href="http://{.}" target="_blank"><xsl:apply-templates/></a><xsl:text>&gt;</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:ref[@select or @target]">
+        <span class="web"><a href="{@target}" target="_blank"><xsl:apply-templates/></a>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:editor">
         <div>
             <xsl:apply-templates/>
@@ -128,7 +139,7 @@
                 <xsl:choose>
                     <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
                         <span class="app">
-                            <span id="plus{../@xml:id}" class="plusComment"> Læs mere +</span>
+                            <span id="plus{../@xml:id}" class="plusComment"> Læs mere -</span>
                             <div id="more{../@xml:id}" class="appInvisible">
                                 <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
                             </div>
@@ -192,19 +203,6 @@
             <xsl:apply-templates/>
         </li>
     </xsl:template>
-    
-    
-    <xsl:template match="TEI:ref">
-        <span class="web">
-            <xsl:text>&lt;</xsl:text>
-            <a href="http://{.}" target="_blank">
-                <xsl:apply-templates/>
-            </a>
-            <xsl:text>&gt;</xsl:text>
-        </span>
-    </xsl:template>
-
-
 
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
@@ -221,8 +219,7 @@
             <xsl:value-of select="substring(@n, 1,4)"/>
             <xsl:text>)</xsl:text>
         </li>
-    </xsl:template>
-    
+    </xsl:template>   
     
     
 </xsl:stylesheet>

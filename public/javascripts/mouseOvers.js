@@ -10,9 +10,9 @@
 // tooltip
 
 var addTooltip = function (tags) {
-    tags.cluetip({
-        cluetipClass: 'jtip', 
-        closeText : 'Lukk', 
+    tags.cluetip({ 
+       cluetipClass: 'jtip', 
+        closeText : 'Luk', 
         mouseOutClose: true, 
         width: 375, 
         dropShadow: false, 

@@ -12,7 +12,7 @@
                 $('div.person').hide();
                 $('div.root').hide();
                 
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','Ã¦','Ã¸','Ã¥']
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
                 
                 $.each(alphabet, function(index, value) { 
                       
@@ -84,18 +84,18 @@
                                 <li><a href="../reg">Registranten</a></li>	
 				<li><a href="../myter">Mytologisk register</a></li>
 				<li><a class="selected" href="../personer">Personregister</a></li>
-				<li class=""><a href="../steder">Stedsregister</a></li>
+				<li class=""><a href="../steder">Stedregister</a></li>
                                 <li class=""><a href="../bibel">Bibelregister</a></li>
                                 <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
 
-		<ul>
+		</ul>
 
 	</div>
 
 	<div id="kolonne1_bred">
 
 		<h1>Personregister</h1>
-		<p>En oversigt over centrale personer fra Grundtvigs værker.</p>
+		
 
 		<div id="innholdsfortegnelse">
 			
@@ -130,7 +130,7 @@
 			<a href="../personer#Å">Å</a>
 		</div>
 
-		<div id="liste">
+		<div id="liste" class="hideroot">
 
                 ${asset.html.raw()}
 

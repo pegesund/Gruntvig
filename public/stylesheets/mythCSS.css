@@ -1,6 +1,7 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
 
+.hideroot div.root { display:none; }
 
 .myth a:link {
         text-decoration: none;

@@ -27,6 +27,15 @@ public class ShowAsset extends Application {
         render(asset, chapter, chapters, variants, manus);
     }
 
+    public static void findAsset(String fileName) {
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        if (asset != null) {
+            Asset rootAsset = Asset.findById(asset.getCorrespondingRootId());
+            System.out.println("Showing asset: " + rootAsset.id);
+            tekstvisning(rootAsset.id,0);
+        } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");
+    }   
+    
     /* 
      * TODO: rewrite to one path
      * 
@@ -62,38 +71,11 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
-    public static void tidslinjevisning() {
-        Asset asset = Asset.find("fileName = ?", "timelime_vej.xml").first();
-        render(asset);
-    }
-
-    public static void tknotervisning() {
-        Asset asset = Asset.find("fileName = ?", "tknoter_vej.xml").first();
-        render(asset);
-    }
     
     public static void bookinventoryvisning() {
         Asset asset = Asset.find("fileName = ?", "bookInventory1805.xml").first();
         render(asset);
     }
 
-    public static void metrikvisning() {
-        Asset asset = Asset.find("fileName = ?", "metrik_vej.xml").first();
-        render(asset);
-    }
-
-    public static void varappvisning() {
-        Asset asset = Asset.find("fileName = ?", "varapp_vej.xml").first();
-        render(asset);
-    }   
- 
-    public static void visning1805() {
-        Asset asset = Asset.find("fileName = ?", "1805_vej.xml").first();
-        render(asset);
-    } 
-    
-     public static void mapvisning() {
-        Asset asset = Asset.find("fileName = ?", "map_vej.xml").first();
-        render(asset);
-    }      
+     
 }

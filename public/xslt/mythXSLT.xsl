@@ -88,8 +88,17 @@
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
+    </xsl:template>    
     
+    <xsl:template name="delimiter">
+        <xsl:choose>
+            <xsl:when test="position()=1"> </xsl:when>
+            <xsl:when test="position()=1 and position()=last">.</xsl:when>
+            <xsl:when test="position()=last()">.</xsl:when>
+            <xsl:when test="position()=last()-1"> eller </xsl:when>
+            <xsl:otherwise>, </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
     <xsl:template name="delimiterKomma">
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">

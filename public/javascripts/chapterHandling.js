@@ -9,7 +9,7 @@
 
 
 var gotoNextChapter = function() {
-    if (currentChapter > $(".chapterSelector").size()) return;
+    if (currentChapter >= ($(".chapterSelector option").size()/2) - 1) return;
     currentChapter += 1;
     gotoChapter(currentTextId, currentChapter); 
 }
@@ -43,7 +43,7 @@ var gotoChapter = function(text, chapter) {
                 uriChangeTab(tab_nr, 2);
                 uriChangeFaksimile(tab_nr, faxNumber);
             });
-            
+                        
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");

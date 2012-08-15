@@ -35,7 +35,7 @@ var addFaksimile = function(num) {
     {
         src: iviewer_src + "_" + iviewer_num + ".jpg",
         zoom: 'fit',
-        zoom_min: 25,
+        zoom_min: 1,
                       
         initCallback: function()
         {
