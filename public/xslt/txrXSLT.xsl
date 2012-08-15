@@ -280,7 +280,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='addendon'  or @type='litList' or @type='webList'">
+       <xsl:if test="@type='addendon' or @type='litList' or @type='webList'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="simple">
