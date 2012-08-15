@@ -186,7 +186,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:div[@type='webLite']">
+    <xsl:template match="TEI:div[@type='webList']">
         <div class="litList">
             <xsl:apply-templates/>
         </div>
