@@ -193,7 +193,9 @@
                         <xsl:if test="//TEI:note[@type='noTxr']">
                             <xsl:text>Tekstredegørelsen er under udarbejdelse</xsl:text>
                         </xsl:if>
-                    </div><div class="kolofon">
+                    </div>
+                    
+                    <div class="kolofon">
                         <xsl:if test="//TEI:note[@type='var']">
                             <xsl:text>Varianter er etableret af </xsl:text> 
                             <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
