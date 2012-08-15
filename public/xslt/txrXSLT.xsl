@@ -220,7 +220,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='upperAlpha'">
+        <xsl:if test="@type='lpperAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="upperAlpha">
