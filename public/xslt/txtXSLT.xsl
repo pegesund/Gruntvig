@@ -28,7 +28,6 @@
                 
                 <div class="kolofon">
                     <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
-                    <xsl:text>version </xsl:text>
                     <xsl:apply-templates select="//TEI:edition"/>
                     <xsl:text>)</xsl:text>
                 </div>
