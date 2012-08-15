@@ -3,13 +3,12 @@
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0"
-    exclude-result-prefixes="#all"
     >
 
 <!-- KSR: 2011.09.26 -->
 
 
-    <xsl:include href="popups.xsl"/>
+
     <xsl:template match="TEI:TEI">
 
         <div class="rootText">
@@ -17,22 +16,20 @@
                     
                 <div class="kolofonTitle">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-<<<<<<< HEAD
                         N.F.S. Grundtvig: 
                         <i>
                             <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
                         </i>
-=======
+
                         N.S.F. Grundtvig:<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
->>>>>>> branch 'master' of ssh://github.com/pegesund/Gruntvig.git
+
                     </xsl:if>                    
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-<<<<<<< HEAD
                         N.F.S. Grundtvig: &#x201C;
                         <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-=======
+
                         N.S.F. Grundtvig: &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
->>>>>>> branch 'master' of ssh://github.com/pegesund/Gruntvig.git
+
                     </xsl:if>                         
                 </div>
                 
@@ -276,12 +273,11 @@
                 </div>
                 
                 <xsl:apply-templates select="TEI:text"/>
-<<<<<<< HEAD
-=======
+
                 
                 
                 
->>>>>>> branch 'master' of ssh://github.com/pegesund/Gruntvig.git
+
                 
             </div>
     </xsl:template>
@@ -431,16 +427,6 @@
         </span>
     </xsl:template>
     
-    
-    <!--
-    <xsl:template match="TEI:note[@type='add']">        
-        <span class="editor">
-            <i>
-                <xsl:value-of select="TEI:note[@type='add']"/>
-            </i>                        
-        </span>
-    </xsl:template>
-    
     <!-- footnote STRAT -->
     
     <xsl:template name="footnote">
@@ -474,15 +460,7 @@
         <div class="footnote">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
-    
-<<<<<<< HEAD
-    <xsl:template match="TEI:div">
-        <div>
-=======
-    -->
-    
-    <!-- footnote END -->        
+    </xsl:template>       
 
     <xsl:template match="TEI:body/TEI:div">        
         <div class="chapter">
@@ -579,43 +557,6 @@
     
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
-    </xsl:template>
-    
-
-   
-<!-- tittelblad -->
-   
-   
-   
-   
-
-   
-
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-<!--
-    
-    <xsl:template match="TEI:lg">        
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:l">        
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
--->
-
-<!-- fotnoter -->
-
-    <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
-            <br/>
-            <hr class="footLine"/>            
-            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
-        </xsl:if>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='footnote']">
