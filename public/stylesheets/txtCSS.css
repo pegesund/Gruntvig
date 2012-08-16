@@ -196,6 +196,51 @@
         text-align: center;
         }
 
+#tekst_innhold .l_firstIndent
+        {
+        text-indent: 1em;
+        }
+
+#tekst_innhold .l_firstIndentRight
+        {
+        text-indent: 5em;
+        }
+
+#tekst_innhold .l_hangingIndent
+        {
+        text-indent: hanging;
+        }
+
+#tekst_innhold .l_secondIndent
+        {
+        text-indent: 2em;;
+        }
+
+#tekst_innhold .l_thirdIndent
+        {
+        text-indent: 3em;
+        }
+
+#tekst_innhold .l_fourthIndent
+        {
+        text-indent: 4em;
+        }
+
+#tekst_innhold .l_right
+        {
+        text-align: right;
+        }
+
+#tekst_innhold .l_secondIndentRight
+        {
+        text-indent: 6em;
+        }
+
+#tekst_innhold .l_thirdIndentRight
+        {
+        text-indent: 7em;
+        }
+
 #tekst_innhold .lgNumber
         {
         font-size: 100%;
