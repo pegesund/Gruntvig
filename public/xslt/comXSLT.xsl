@@ -29,7 +29,6 @@
                 -->
                 
             <div class="head">
-                <xsl:text>HAT</xsl:text>
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                     Punktkommentarer til 
                     <i>
@@ -174,6 +173,8 @@
         </div>
     </xsl:template>
     
+    
+    
     <xsl:template match="TEI:head">
         <div class="head">
             <xsl:apply-templates/>
@@ -196,9 +197,10 @@
     <xsl:template match="TEI:item[not(@n)]">
         <li class="liOrdered">
             <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
         </li>
     </xsl:template>
-
+    
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
             <xsl:text>&lt;</xsl:text>
@@ -212,9 +214,8 @@
             <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
             <xsl:text> </xsl:text>
             <xsl:value-of select="substring(@n, 1,4)"/>
-            <xsl:text>)</xsl:text>
+            <xsl:text>).</xsl:text>
         </li>
-    </xsl:template>
-    
+    </xsl:template>    
     
 </xsl:stylesheet>
