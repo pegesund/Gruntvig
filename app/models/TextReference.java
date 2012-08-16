@@ -75,6 +75,8 @@ public class TextReference extends GenericModel {
         System.out.println("Deleted " + deleted + " old references");
     }
 
+    
+    
     public static void uploadComments(Asset asset) {
         System.out.println("Processing asset: " + asset.html);
         int del = TextReference.delete("fileName =  ? and type = ?", asset.fileName, Asset.commentType);
@@ -85,6 +87,9 @@ public class TextReference extends GenericModel {
         int i = 0;
         for (Node row : refs) {
             // String id = asset.fileName.replace("_com.xml", "") + "_" + row.getAttributes().getNamedItem("id").getNodeValue();
+            // System.out.println("Processing row: " + Helpers.nodeToString(row));
+            if ((row.getAttributes().getNamedItem("class") != null) &&  (row.getAttributes().getNamedItem("class").getNodeValue().contains("about"))) 
+                strB.append(Helpers.nodeToString(row));
             if (row.getAttributes().getNamedItem("id") == null) continue;
             i++;
             String id = "scrollTarget" + "_" + row.getAttributes().getNamedItem("id").getNodeValue();
