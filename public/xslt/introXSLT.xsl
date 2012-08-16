@@ -61,26 +61,31 @@
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc">
-            <a class="toc">
-                <xsl:attribute name="href">
-                    <xsl:text>#A</xsl:text>
+            <a class="toc intro_menu">
+                <xsl:attribute name="hrel">
+                    <xsl:text>AA</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
-                <xsl:value-of select="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]"/>
+                <xsl:value-of select="TEI:head"/>
             </a>
-            <a id="{@xml:id}"/>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
+    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
+        <div class="editor">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:head">
         <a>
             <xsl:attribute name="id">
-                <xsl:text>A</xsl:text>
+                <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
@@ -92,18 +97,6 @@
             </a>
         </div>
     </xsl:template>
-    
-    <xsl:template match="TEI:head[@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter']">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
-        <div class="editor">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>    
     
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
@@ -144,7 +137,19 @@
 
     <xsl:template match="TEI:lg|TEI:l">
         <div class="{name()}">
-            <!-- xsl:attribute name="class"><xsl:value-of select="name()"/></xsl:attribute -->
+            <!--xsl:attribute name="class"><xsl:value-of select="name()"/></xsl:attribute-->
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div[@type='litList']">
+        <div class="litList">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div[@type='webList']">
+        <div class="webList">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -266,20 +271,11 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='supp' or @type='verticalLineOne']">
-        <span>
-            <xsl:choose>
-                <xsl:when test="@type='supp'">
-                    <xsl:text>[</xsl:text>
-                    <xsl:apply-templates/>
-                    <xsl:text>]</xsl:text>
-                </xsl:when>
-                <xsl:when test="@type='verticalLineOne'">
-                    <xsl:text>&#x007C;</xsl:text>
-                    <xsl:apply-templates/>
-                    <xsl:text>&#x007C;</xsl:text>
-                </xsl:when>
-            </xsl:choose>
+    <xsl:template match="TEI:note[@type='supp']">
+        <span class="supp">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
     
@@ -301,24 +297,6 @@
             </xsl:if>
         </div>
     </xsl:template>
-    
-    <!-- henter alle readMore
-        <xsl:template match="TEI:p[@rend]">        
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-            <xsl:if test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
-                <span class="app">
-                    <span id="plus{generate-id()}" class="plus" onclick="showhide(this,'more{generate-id()}')"> Læs mere +</span>
-                    <div id="more{generate-id()}" class="appInvisible">
-                        <div class="readMore">
-                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']/node()"/>
-                        </div>
-                    </div>
-                </span>
-            </xsl:if>            
-        </div>
-    </xsl:template>
-    -->
     
     <!--
         udgår, udg.møde 2011.12.08
@@ -343,12 +321,6 @@
         </xsl:template>
     -->
     
-    <xsl:template match="TEI:p">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:table">        
         <div class="table">
             <xsl:apply-templates/>
@@ -367,12 +339,24 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:ref">
+    <xsl:template match="TEI:ref[@type='web' or @select or @target]">
         <span class="web">
-            <a href="{@target}">
-                <xsl:apply-templates/>
-            </a>
+            <xsl:choose>
+                <xsl:when test="@type='web'">
+                    <xsl:text>&lt;</xsl:text>
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                    <xsl:text>&gt;</xsl:text>
+                </xsl:when>
+                <xsl:when test="@select">                    
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+            </xsl:choose>            
         </span>
     </xsl:template>
+
     
 </xsl:stylesheet>
