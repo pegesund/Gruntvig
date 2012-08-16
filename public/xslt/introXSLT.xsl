@@ -250,18 +250,22 @@
     </xsl:template>
     
     <xsl:template match="TEI:item[@n]">
-        <li class="webList">
-            <a href="{.}">                
-                <xsl:apply-templates/>                
-            </a>
-            <xsl:text> (</xsl:text>
-            <xsl:number value="substring(@n, 9,2)" format="1"/>
-            <xsl:text>. </xsl:text>
-            <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="substring(@n, 1,4)"/>
-            <xsl:text>)</xsl:text>
-        </li>
+        <ul>
+            <li class="ordered">
+                <xsl:text>&lt;</xsl:text>
+                <a href="{.}">
+                    <xsl:apply-templates/>
+                </a>
+                <xsl:text>&gt;</xsl:text>
+                <xsl:text> (</xsl:text>
+                <xsl:number value="substring(@n, 9,2)" format="1"/>
+                <xsl:text>. </xsl:text>
+                <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="substring(@n, 1,4)"/>
+                <xsl:text>)</xsl:text>
+            </li>
+        </ul>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
