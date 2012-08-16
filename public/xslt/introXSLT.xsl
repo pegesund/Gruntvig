@@ -355,7 +355,7 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="docOut">
-                    <a href="{@target}">
+                    <a href="{.}">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
