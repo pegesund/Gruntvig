@@ -348,6 +348,7 @@
     </xsl:template>
     
     <!-- titelblad end -->
+
     
     <xsl:template match="TEI:lg">
         <div class="lg">
@@ -529,6 +530,7 @@
         <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
+            <span class="appInvisible">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>            
         </a>        
@@ -537,6 +539,7 @@
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
+            <span class="appInvisible">
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
             </span>            
         </a>  
@@ -545,6 +548,7 @@
     <xsl:template match="TEI:pb[@type='edition']">
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
+            <span class="appInvisible">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
         </a>
