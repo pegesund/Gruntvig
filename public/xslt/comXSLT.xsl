@@ -29,16 +29,27 @@
                 -->
                 
             <div class="head">
+                <xsl:text>HAT</xsl:text>
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-    <div><xsl:text>Punktkommentarer til</xsl:text></div>
-    <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
-</xsl:if>                    
-<xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">                        
-    <div>
-        <xsl:text>Punktkommentarer til</xsl:text>
-    </div>
-    &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-</xsl:if>
+                    Punktkommentarer til 
+                    <i>
+                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                    </i>
+                </xsl:if>                    
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
+                    Punktkommentarer til &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>&#x201D;
+                </xsl:if>
+            </div>
+                
+            <div>
+                Forfatter:
+                <br/>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                <br/>
+                Redaktion:
+                <br/>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor"/>
+            </div>
                 <!--
                 <div class="filename">
                     filnavn: <xsl:value-of select="TEI:teiHeader/TEI:title[@key]/@key"/>
