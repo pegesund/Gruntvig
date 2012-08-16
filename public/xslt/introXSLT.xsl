@@ -339,7 +339,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:ref[@type='web' or @type='title' or @select or @target]">
+    <xsl:template match="TEI:ref[@type='web' or @type='title' or @type='doc*' or @select or @target]">
         <span class="web">
             <xsl:choose>
                 <xsl:when test="@type='web'">
@@ -354,7 +354,7 @@
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
-                <xsl:when test="title">
+                <xsl:when test="doc*">
                     <a href="{@target}">
                         <xsl:apply-templates/>
                     </a>
