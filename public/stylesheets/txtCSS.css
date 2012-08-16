@@ -213,17 +213,17 @@
 
 #tekst_innhold .l_secondIndent
         {
-        text-indent: 2em;;
+        text-indent: 1.5em;;
         }
 
 #tekst_innhold .l_thirdIndent
         {
-        text-indent: 3em;
+        text-indent: 2em;
         }
 
 #tekst_innhold .l_fourthIndent
         {
-        text-indent: 4em;
+        text-indent: 2.5em;
         }
 
 #tekst_innhold .l_right
