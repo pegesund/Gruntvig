@@ -339,7 +339,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:ref[@type='web' or @type='title' or @type='docOut' or @select or @target]">
+    <xsl:template match="TEI:ref[@type='web' or @select or @target]">
         <span class="web">
             <xsl:choose>
                 <xsl:when test="@type='web'">
@@ -354,12 +354,15 @@
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
-                <xsl:when test="docOut">
-                    <a href="{.}">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
             </xsl:choose>            
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:ref[@type='docIn' or @type='docOut']">
+        <span class="web">
+             <a href="{@target}">
+                 <xsl:apply-templates/>
+             </a>
         </span>
     </xsl:template>
 
