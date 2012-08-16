@@ -472,36 +472,52 @@
         </span>
     </xsl:template>
     
-        
-    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">        
-        <span class="seg">
-            <xsl:attribute name="id">
-                <xsl:value-of select="@n"/>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </span>
+    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
+        <xsl:choose>
+            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+                <span class="seg">
+                    <xsl:apply-templates/>
+                </span>                
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="noSeg">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:seg[@type='comStart' and @n]">        
-        <span class="segStart">
-            <xsl:attribute name="id">
-                <xsl:value-of select="@n"/>
-            </xsl:attribute>
-            &#x25BA;
-            <xsl:apply-templates/>
-        </span>
+    <xsl:template match="TEI:seg[@type='comStart' and @n]">
+        <xsl:choose>
+            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+                <span class="segStart">
+                    &#x25BA;
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="noSeg">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:seg[@type='comEnd' and @n]">        
-        <span class="segEnd">
-            <xsl:attribute name="id">
-                <xsl:value-of select="@n"/>
-            </xsl:attribute>
-            &#x25C4;
-            <xsl:apply-templates/>
-        </span>
+    <xsl:template match="TEI:seg[@type='comEnd' and @n]">
+        <xsl:choose>
+            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+                <span class="segEnd">
+                    &#x25C4;
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="noSeg">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-    
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
         <div class="{@rend}">
