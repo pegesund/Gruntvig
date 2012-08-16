@@ -193,7 +193,9 @@
                         <xsl:if test="//TEI:note[@type='noTxr']">
                             <xsl:text>Tekstredegørelsen er under udarbejdelse</xsl:text>
                         </xsl:if>
-                    </div><div class="kolofon">
+                    </div>
+                    
+                    <div class="kolofon">
                         <xsl:if test="//TEI:note[@type='var']">
                             <xsl:text>Varianter er etableret af </xsl:text> 
                             <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
@@ -265,9 +267,13 @@
                 </div>
                 
                 <xsl:apply-templates select="TEI:text"/>
+
+                
+                
+                
+
                 
             </div>
-            
     </xsl:template>
     
     
@@ -348,6 +354,7 @@
     </xsl:template>
     
     <!-- titelblad end -->
+    
 
     
     <xsl:template match="TEI:lg">
@@ -467,6 +474,9 @@
         </span>
     </xsl:template>
     
+        
+    
+    
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
@@ -514,6 +524,7 @@
         </xsl:choose>
     </xsl:template>
     
+    
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
         <div class="{@rend}">
             <xsl:apply-templates/>
@@ -530,21 +541,21 @@
         <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
-            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>        
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
-            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
         </a>  
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
         <a href="{@facs}" class="app">
             <xsl:text>|</xsl:text>
-            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>
     </xsl:template>
     
@@ -583,7 +594,6 @@
     
     
     <!-- <xsl:call-template name="footnote"/> -->
-
     
     <xsl:template match="TEI:div[@type='bibleVerse' or @type='motto' or @type='preFace']">
         <div class="{@type}">
@@ -592,7 +602,4 @@
         <xsl:call-template name="footnote"/>
     </xsl:template>
 
-
-    
-    
 </xsl:stylesheet>
