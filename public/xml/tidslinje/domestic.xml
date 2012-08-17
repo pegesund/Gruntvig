@@ -28,7 +28,7 @@
 		start="Apr 14 1784 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kronprins Frederik regent">
-		Den 16-&#x00E5;rige kronprins Frederik (den senere Frederik 6.) overtager regeringen efter sin far, Christian 7.
+		Den 16-&#x00E5;rige kronprins <persName key="pe96">Frederik</persName> (den senere Frederik 6.) overtager ved et statskup regeringen efter sin far, den sindssyge <persName key="pe105">Christian 7.</persName>
 	</event>
 
 	<event
@@ -41,7 +41,7 @@
 	<event		
 		start="Mar 16 1792 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="Slaverehandelen afskaffes formelt">
+		title="Slavehandelen afskaffes formelt">
 		Kongelig dansk forordning om slavehandelens afskaffelse; forbuddet bliver dog f&#x00F8;rst effektivt langt senere, og selve slaveriet forts&#x00E6;tter p&#x00E5; De Dansk-vestindiske &#x00D8;er til 1848.
 	</event>
 
@@ -65,14 +65,21 @@
 		start="Sep 07 1798 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="P.F. Suhm d&#x00F8;r">
-		Historikeren P.F. Suhm d&#x00F8;r, 69 &#x00E5;r gammel.
+		Historikeren <persName key="pe7">P.F. Suhm</persName> d&#x00F8;r, 69 &#x00E5;r gammel.
+	</event>
+	
+	<event		
+		start="Sep 27 1799 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Trykkefrihedsforordningen">
+		Trykkefrihedsforordningen af 27. september 1799 sk&#x00E6;rper censuren og standser den tiltagende kritik af enev&#x00E6;lden.
 	</event>
 
 	<event		
 		start="Feb 07 1800 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="P.A. Heiberg forvist">
-		P.A. Heiberg forlader Danmark efter sin landsforvisningsdom.
+		<persName key="pe97">P.A. Heiberg</persName> forlader Danmark efter sin landsforvisningsdom.
 	</event>
 
 	<event		
@@ -86,7 +93,7 @@
 		start="Apr 02 1801 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Slaget p&#x00E5; Reden. Willemoes">
-		Dansk nederlag til England i slaget p&#x00E5; K&#x00F8;benhavns red; den 17-&#x00E5;rige Peter Willemoes udm&#x00E6;rker sig ved fra sit flydebatteri at beskyde admiral Horatio Nelsons flagskib.
+		Dansk nederlag til England i slaget p&#x00E5; K&#x00F8;benhavns red; den 17-&#x00E5;rige <persName key="pe99">Peter Willemoes</persName> udm&#x00E6;rker sig ved fra sit flydebatteri at beskyde admiral <persName key="pe100">Horatio Nelson</persName>s flagskib.
 	</event>
 
 	<event		
@@ -100,14 +107,14 @@
 		start="May 04 1802 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Guldhornene stj&#x00E6;les">
-		Den k&#x00F8;benhavnske guldsmed Niels Heidenreich stj&#x00E6;ler guldhornene fra Kunstkammerets udstilling og omsmelter dem kort efter.
+		Den k&#x00F8;benhavnske guldsmed <persName key="pe101">Niels Heidenreich</persName> stj&#x00E6;ler guldhornene fra Kunstkammerets udstilling og omsmelter dem kort efter.
 	</event>
 
 	<event		
 		start="Nov 11 1802 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Henrich Steffens' forel&#x00E6;sninger">
-		Grundtvigs f&#x00E6;tter, den 29-&#x00E5;rige filosof Henrich Steffens p&#x00E5;begynder sine filosofiske forel&#x00E6;sninger p&#x00E5; Elers&#x0027; Kollegium i K&#x00F8;benhavn.
+		<persName key="pe4">Grundtvig</persName>s f&#x00E6;tter, den 29-&#x00E5;rige filosof <persName key="pe18">Henrich Steffens</persName>, p&#x00E5;begynder sine filosofiske forel&#x00E6;sninger p&#x00E5; Elers&#x0027; Kollegium i K&#x00F8;benhavn.
 	</event>
 
 	<event		
@@ -118,14 +125,14 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Oehlenschl&#x00E4;ger: Digte 1803">
-		December. Adam Oehlenschl&#x00E4;ger: &#x00BB;Digte&#x00AB; (heri bl.a. &#x201C;Guldhornene&#x201C;) udkommer med &#x00E5;rstallet 1803 p&#x00E5; titelbladet.
+		December. <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName>: <hi rend="italic">Digte</hi> (heri bl.a. Guldhornene) udkommer med &#x00E5;rstallet 1803 p&#x00E5; titelbladet.
 	</event>
 
 	<event
 		start="Mar 26 1803 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Steffens om Goethe">
-		Steffens p&#x00E5;begynder forel&#x00E6;sninger om &#x00E6;stetik med s&#x00E6;rligt henblik p&#x00E5; Goethe.
+		<persName key="pe18">Steffens</persName> p&#x00E5;begynder forel&#x00E6;sninger om &#x00E6;stetik med s&#x00E6;rligt henblik p&#x00E5; <persName key="pe29">Goethe</persName>.
 	</event>
 
 	<event		
@@ -150,7 +157,7 @@
 		start="Apr 02 1805 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="H.C. Andersen f&#x00F8;des">
-		H.C. Andersen f&#x00F8;des i Odense.
+		<persName key="pe102">H.C. Andersen</persName> f&#x00F8;des i Odense.
 	</event>
 
 	<event		
@@ -168,7 +175,7 @@
 		start="Jun 12 1807 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Blichers Ossian-overs&#x00E6;ttelse">
-		F&#x00F8;rste bind af Steen Steensen Blichers overs&#x00E6;ttelse af &#x00BB;Ossians Digte&#x00AB; udkommer.
+		F&#x00F8;rste bind af <persName key="pe103">Steen Steensen Blicher</persName>s overs&#x00E6;ttelse af <hi rend="italic">Ossians Digte</hi> udkommer.
 	</event>
 
 	<event		
@@ -212,7 +219,7 @@
 		start="Oct 31 1807 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Forbund med Napoleon">
-		Danmark indg&#x00E5;r forbund med Napoleon.
+		Danmark indg&#x00E5;r forbund med <persName key="pe104">Napoleon</persName>.
 	</event>
 
 	<event		
@@ -222,20 +229,38 @@
 		England erkl&#x00E6;rer Danmark krig.
 	</event>
 
+	<event
+		start="Feb 29 1808 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Krig med Sverige">
+		Danmark erkl&#x00E6;rer krig mod Sverige.
+	</event>
+	
 	<event		
 		start="Mar 13 1808 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Christian 7. d&#x00F8;r">
-		Christian 7. d&#x00F8;r i Rendsborg.
+		<persName key="pe105">Christian 7.</persName> d&#x00F8;r i Rendsborg.
 	</event>
 
 	<event		
 		start="Mar 22 1808 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Slaget ved Sj&#x00E6;llands Odde. Willemoes falder">
-		S&#x00F8;slaget ved Sj&#x00E6;llands Odde; Peter Willemoes falder, 25 &#x00E5;r gammel.
+		S&#x00F8;slaget ved Sj&#x00E6;llands Odde; <persName key="pe99">Peter Willemoes</persName> falder, 25 &#x00E5;r gammel.
 	</event>
-
+	
+	<event                                 
+		start="Apr 18 1808 00:00:00 GMT"
+		earliestStart="Apr 18 1808 00:00:00 GMT"
+		latestEnd="Apr 25 1808 00:00:00 GMT"
+		end="Apr 25 1808 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Norske sejre">
+		Norske styrker besejrer den svenske invasionsh&#x00E6;r i tr&#x00E6;fninger ved Lier, Toverud og Trangen.
+	</event>
+	
 	<event		
 		start="May 15 1809 00:00:00 GMT"
 		earliestStart="May 01 1809 00:00:00 GMT"
@@ -251,7 +276,7 @@
 		start="Jun 04 1809 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="N.A. Abildgaard d&#x00F8;r">
-		Maleren N.A. Abildgaard d&#x00F8;r, 55 &#x00E5;r gammel.
+		Maleren <persName key="pe106">N.A. Abildgaard</persName> d&#x00F8;r, 55 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -264,8 +289,8 @@
 	<event		
 		start="Sep 02 1811 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="Universitetet i Kristiania">
-		Frederik 6. grundl&#x00E6;gger universitetet i Kristiania (Oslo).
+		title="Universitetet i Christiania">
+		<persName key="pe96">Frederik 6.</persName> grundl&#x00E6;gger universitetet i Christiania (Oslo).
 	</event>
 
 
@@ -291,14 +316,14 @@
 		start="May 05 1813 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="S&#x00F8;ren Kierkegaard f&#x00F8;des">
-		S&#x00F8;ren Kierkegaard f&#x00F8;des i K&#x00F8;benhavn.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> f&#x00F8;des i K&#x00F8;benhavn.
 	</event>
 
 	<event		
 		start="Jul 10 1813 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Nyt forbund med Napoleon">
-		Danmark slutter nyt forbund med Napoleon.
+		Danmark slutter nyt forbund med <persName key="pe104">Napoleon</persName>.
 	</event>
 
 	<event		
@@ -358,35 +383,35 @@
 		start="Sep 06 1814 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 6. til Wienerkongressen">
-		Frederik 6. afrejser til Wienerkongressen.
+		<persName key="pe96">Frederik 6.</persName> afrejser til Wienerkongressen.
 	</event>
 
 	<event		
 		start="May 22 1815 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Prins Christian Frederik gift med Caroline Amalie">
-		Prins Christian Frederik (den senere Christian 8.) gifter sig med prinsesse Caroline Amalie af Augustenborg.
+		Prins <persName key="pe98">Christian Frederik</persName> (den senere <persName key="pe98">Christian 8.</persName>) gifter sig med prinsesse <persName key="pe108">Caroline Amalie</persName> af Augustenborg.
 	</event>
 
 	<event		
 		start="Jun 01 1815 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 6. hjem fra Wienerkongressen.">
-		Frederik 6. vender hjem fra Wienerkongressen.
+		<persName key="pe96">Frederik 6.</persName> vender hjem fra Wienerkongressen.
 	</event>
 
 	<event		
 		start="Jul 31 1815 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 6. salves">
-		Biskop M&#x00FC;nter salver Frederik 6. i Frederiksborg slotskirke.
+		Biskop <persName key="pe109">M&#x00FC;nter</persName> salver <persName key="pe96">Frederik 6.</persName> i Frederiksborg slotskirke.
 	</event>
 
 	<event		
 		start="Oct 19 1816 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="&#x0027;Hustugt&#x0027; overfor skoleelever">
-		Skolernes pligt til at &#x00F8;ve &#x0027;hustugt&#x0027; (navnlig v.h.a. straf med ris) overfor elever af begge k&#x00F8;n indsk&#x00E6;rpes.
+		title="&#x0027;Hustugt&#x0027; over for skoleelever">
+		Skolernes pligt til at &#x00F8;ve &#x0027;hustugt&#x0027; (navnlig v.h.a. straf med ris) over for elever af begge k&#x00F8;n indsk&#x00E6;rpes.
 	</event>
 
 	<event		
@@ -433,7 +458,7 @@
 		start="Feb 14 1821 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Dr. Dampe i f&#x00E6;ngsel">
-		Dr.phil. Jacob Jacobsen Dampe, som i 1820 havde kr&#x00E6;vet folkeafstemning om en fri forfatning, id&#x00F8;mmes livsvarigt f&#x00E6;ngsel for h&#x00F8;jforr&#x00E6;deri.
+		Dr.phil. <persName key="pe110">Jacob Jacobsen Dampe</persName>, som i 1820 havde kr&#x00E6;vet folkeafstemning om en fri forfatning, id&#x00F8;mmes livsvarigt f&#x00E6;ngsel for h&#x00F8;jforr&#x00E6;deri.
 	</event>
 
 	<event		
@@ -447,7 +472,7 @@
 		start="May 05 1823 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Rasmus Rask vender hjem">
-		Efter seks &#x00E5;rs sprogstudier i bl.a. Rusland, Persien og Indien ankommer sprogforskeren Rasmus Rask til K&#x00F8;benhavn.
+		Efter seks &#x00E5;rs sprogstudier i bl.a. Rusland, Persien og Indien ankommer sprogforskeren <persName key="pe50">Rasmus Rask</persName> til K&#x00F8;benhavn.
 	</event>
 
 	<event		
@@ -458,7 +483,7 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Blicher: Brudstykker af en Landsbydegns Dagbog">
-		St. St. Blichers &#x00BB;Brudstykker af en Landsbydegns Dagbog&#x00AB; udkommer i marts-nummeret af &#x00BB;L&#x00E6;sefrugter.&#x00AB;
+		<persName key="pe103">St. St. Blichers</persName> <hi rend="italic">Brudstykker af en Landsbydegns Dagbog</hi> udkommer i marts-nummeret af <hi rend="italic">L&#x00E6;sefrugter.</hi>
 	</event>
 
 	<event		
@@ -480,7 +505,7 @@
 		start="Aug 20 1825 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Claussen: Catolicismens og Protestantismens Kirkeforfatning">
-		Professor H.N. Clausen (1793-1877) udsender sin bog &#x00BB;Catolicismens og Protestantismens Kirkeforfatning, L&#x00E6;re og Ritus&#x00AB; til subskribenterne.
+		Professor <persName key="pe111">H.N. Clausen</persName> udsender sin bog <hi rend="italic">Catolicismens og Protestantismens Kirkeforfatning, L&#x00E6;re og Ritus</hi> til subskribenterne.
 	</event>
 
 	<event		
@@ -491,21 +516,21 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Johanne Luise P&#x00E4;tges debuterer">
-		Februar. Johanne Luise P&#x00E4;tges (gift fru Heiberg 1831) debuterer som 13-&#x00E5;rig i Poul Martin M&#x00F8;llers dialog &#x00BB;Hans og Trine.&#x00AB;
+		Februar. <persName key="pe112">Johanne Luise P&#x00E4;tges</persName> (gift fru Heiberg 1831) debuterer som 13-&#x00E5;rig i <persName key="pe113">Poul Martin M&#x00F8;ller</persName>s dialog <hi rend="italic">Hans og Trine.</hi>
 	</event>
 
 	<event		
 		start="May 14 1826 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="1000-&#x00E5;ret for Ansgar">
-		1000-&#x00E5;ret for kristendommens forkyndelse i Danmark (Ansgars ankomst) fejres.
+		1000-&#x00E5;ret for kristendommens forkyndelse i Danmark (<persName key="pe17">Ansgar</persName>s ankomst) fejres.
 	</event>
 
 	<event		
 		start="Oct 03 1826 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Jens Baggesen d&#x00F8;r">
-		Digteren Jens Baggesen d&#x00F8;r, 62 &#x00E5;r gammel.
+		Digteren <persName key="pe20">Jens Baggesen</persName> d&#x00F8;r, 62 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -516,42 +541,42 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Sibonis musikkonservatorium">
-		Maj. Syngemester Giuseppe Siboni &#x00E5;bner K&#x00F8;benhavns f&#x00F8;rste musikkonservatorium, n&#x00E6;rmest som en elevskole for operaen.
+		Maj. Syngemester <persName key="pe114">Giuseppe Siboni</persName> &#x00E5;bner K&#x00F8;benhavns f&#x00F8;rste musikkonservatorium, n&#x00E6;rmest som en elevskole for operaen.
 	</event>
 
 	<event		
 		start="Nov 01 1828 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Heibergs Elverh&#x00F8;i. Prins Frederik (7.)&#x0027;s bryllup">
-		J.L. Heibergs &#x00BB;Elverh&#x00F8;i&#x00AB; opf&#x00F8;res p&#x00E5; Det Kongelige Theater ved prins Frederik (7.)&#x0027;s bryllup med Frederik 6.s datter Vilhelmine Marie.
+		<persName key="pe115">J.L. Heiberg</persName>s <hi rend="italic">Elverh&#x00F8;i</hi> opf&#x00F8;res p&#x00E5; Det Kongelige Theater ved prins <persName key="pe116">Frederik</persName> (7.)&#x0027;s bryllup med <persName key="pe96">Frederik 6.</persName>s datter <persName key="pe118">Vilhelmine Marie</persName>.
 	</event>
 
 	<event		
 		start="Jan 27 1829 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Polyteknisk L&#x00E6;reanstalt">
-		Polyteknisk L&#x00E6;reanstalt oprettes med H.C. &#x00D8;rsted som direkt&#x00F8;r.
+		Polyteknisk L&#x00E6;reanstalt oprettes med <persName key="pe119">H.C. &#x00D8;rsted</persName> som direkt&#x00F8;r.
 	</event>
 
 	<event		
 		start="Jun 07 1829 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frue Kirke indvies">
-		Vor Frue Kirke indvies, genopf&#x00F8;rt af C.F. Hansen efter bombardementet i 1807.
+		Vor Frue Kirke (K&#x00F8;benhavns domkirke) indvies, genopf&#x00F8;rt af <persName key="pe120">C.F. Hansen</persName> efter bombardementet i 1807.
 	</event>
 
 	<event		
 		start="Apr 09 1830 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Biskop M&#x00FC;nter d&#x00F8;r">
-		Biskop Fr. M&#x00FC;nter d&#x00F8;r, 68 &#x00E5;r gammel.
+		Biskop <persName key="pe109">Fr. M&#x00FC;nter</persName> d&#x00F8;r, 68 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Nov 05 1830 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="U.J. Lornsen: &#x00DC;ber das Verfassungswerk in Schleswigholstein">
-		Uwe Jens Lornsens pjece &#x00BB;&#x00DC;ber das Verfassungswerk in Schleswigholstein&#x00AB; udkommer.
+		<persName key="pe121">Uwe Jens Lornsen</persName>s pjece <hi rend="italic">&#x00DC;ber das Verfassungswerk in Schleswigholstein</hi> udkommer.
 	</event>
 
 	<event		
@@ -569,63 +594,63 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Clausen: Om Injuriantens og den Injurieredes Stilling i Danmark">
-		Oktober. H.N. Clausens bog &#x00BB;Om Injuriantens og den Injurieredes Stilling i Danmark&#x00AB; udkommer.
+		Oktober. <persName key="pe111">H.N. Clausen</persName>s bog <hi rend="italic">Om Injuriantens og den Injurieredes Stilling i Danmark</hi> udkommer.
 	</event>
 
 	<event		
 		start="Nov 14 1832 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Rasmus Rask d&#x00F8;r">
-		Sprogforskeren Rasmus Rask d&#x00F8;r, 45 &#x00E5;r gammel.
+		Sprogforskeren <persName key="pe50">Rasmus Rask</persName> d&#x00F8;r, 45 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Sep 04 1834 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Biskop M&#x00FC;ller d&#x00F8;r">
-		Biskop P.E. M&#x00FC;ller d&#x00F8;r, 58 &#x00E5;r gammel.
+		Biskop <persName key="pe117">P.E. M&#x00FC;ller</persName> d&#x00F8;r, 58 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Sep 14 1834 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Avisen F&#x00E6;drelandet">
-		F&#x00F8;rste nummer af den liberale avis &#x00BB;F&#x00E6;drelandet&#x00AB; udkommer; der g&#x00E5;r rygter om sk&#x00E6;rpelse af den almindelige censur.
+		F&#x00F8;rste nummer af den liberale avis <hi rend="italic">F&#x00E6;drelandet</hi> udkommer; der g&#x00E5;r rygter om sk&#x00E6;rpelse af den almindelige censur.
 	</event>
 
 	<event		
 		start="Feb 21 1835 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="B&#x00F8;nskrift for trykkefriheden">
-		H.N. Clausen, F.C. Sibbern m.fl. afleverer et b&#x00F8;nskrift til kongen om at undlade at besk&#x00E6;re trykkefriheden yderligere.
+		<persName key="pe111">H.N. Clausen</persName>, <persName key="pe122">F.C. Sibbern</persName> m.fl. afleverer et b&#x00F8;nskrift til kongen om at undlade at besk&#x00E6;re trykkefriheden yderligere.
 	</event>
 
 	<event		
 		start="Feb 26 1835 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="&#x201C;Vi alene vide&#x201C;">
-		Frederik 6. besvarer b&#x00F8;nskriftet for trykkefriheden af 21. februar med en erkl&#x00E6;ring, der endnu huskes i sin forenklede form: &#x201C;Vi alene vide&#x201C;.
+		title="&#x201C;Vi alene vide&#x201D;">
+		<persName key="pe96">Frederik 6.</persName> besvarer b&#x00F8;nskriftet for trykkefriheden af 21. februar med en erkl&#x00E6;ring, der endnu huskes i sin forenklede form: &#x201C;Vi alene vide&#x201D;.
 	</event>
 
 	<event		
 		start="Mar 06 1835 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Selskabet for Trykkefrihedens rette Brug">
-		ProfessorH.N. Clausen m.fl. stifter Selskabet for Trykkefrihedens rette Brug.
+		Professor <persName key="pe111">H.N. Clausen</persName> m.fl. stifter Selskabet for Trykkefrihedens rette Brug.
 	</event>
 
 	<event		
 		start="May 08 1835 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="H.C. Andersens eventyr">
-		F&#x00F8;rste hefte af H.C. Andersens &#x00BB;Eventyr fortalte for B&#x00F8;rn&#x00AB; udkommer.
+		F&#x00F8;rste hefte af <persName key="pe102">H.C. Andersen</persName>s <hi rend="italic">Eventyr fortalte for B&#x00F8;rn</hi> udkommer.
 	</event>
 
 	<event		
 		start="Oct 13 1836 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="Universitetes hovedbygning">
-		K&#x00F8;benhavns Universitets hovedbygning, genopf&#x00F8;rt af P. Malling efter bombardementet i 1807, indvies.
+		title="Universitetets hovedbygning">
+		K&#x00F8;benhavns Universitets hovedbygning, genopf&#x00F8;rt af <persName key="pe123">P. Malling</persName> efter bombardementet i 1807, indvies.
 	</event>
 
 	<event		
@@ -634,28 +659,28 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Reformationsjubli&#x00E6;um">
-		30.oktober-1. november, 300-&#x00E5;ret for Reformationens indf&#x00F8;relse i Danmark fejres.
+		30. oktober-1. november, 300-&#x00E5;ret for Reformationens indf&#x00F8;relse i Danmark fejres.
 	</event>
 
 	<event		
 		start="Sep 17 1838 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Thorvaldsens hjemkomst">
-		Efter 41 &#x00E5;rs ophold i Italien vender billedhuggeren Bertel Thorvaldsen hjem til K&#x00F8;benhavn.
+		Efter 41 &#x00E5;rs ophold i Italien vender billedhuggeren <persName key="pe124">Bertel Thorvaldsen</persName> hjem til K&#x00F8;benhavn.
 	</event>
 
 	<event		
 		start="Feb 14 1839 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Den Danske Historiske Forening">
-		Den Danske Historiske Forening stiftes med Chr. Molbech som drivende kraft.
+		Den Danske Historiske Forening stiftes med <persName key="pe23">Chr. Molbech</persName> som drivende kraft.
 	</event>
 
 	<event		
 		start="Dec 03 1839 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 6. d&#x00F8;r">
-		Frederik 6. d&#x00F8;r, 71 &#x00E5;r gammel.
+		<persName key="pe96">Frederik 6.</persName> d&#x00F8;r, 71 &#x00E5;r gammel.
 	</event>
 
 
@@ -663,7 +688,7 @@
 		start="Jan 16 1840 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 6. bis&#x00E6;ttes">
-		Frederik 6. bis&#x00E6;ttes i Roskilde Domkirke.
+		<persName key="pe96">Frederik 6.</persName> bis&#x00E6;ttes i Roskilde Domkirke.
 	</event>
 
 	<event		
@@ -677,21 +702,21 @@
 		start="Jun 28 1840 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Christian 8. krones">
-		Christian 8. og dronning Caroline Amalie krones og salves i Frederiksborg Slotskirke.
+		<persName key="pe98">Christian 8.</persName> og dronning <persName key="pe108">Caroline Amalie</persName> krones og salves i Frederiksborg Slotskirke.
 	</event>
 
 	<event		
 		start="Oct 08 1840 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Corsaren">
-		Den 21-&#x00E5;rige M.A. Goldschmidt p&#x00E5;begynder udgivelsen af det satiriske og oppositionelt politiske ugeblad &#x00BB;Corsaren&#x00AB;.
+		Den 21-&#x00E5;rige <persName key="pe125">M.A. Goldschmidt</persName> p&#x00E5;begynder udgivelsen af det satiriske og oppositionelt politiske ugeblad <hi rend="italic">Corsaren</hi>.
 	</event>
 
 	<event		
 		start="May 28 1842 00:00:00 GMT"
 		textColor="#9B9B9B"
-		title="&#x201C;Danmark til Ejderen&#x201C;">
-		Orla Lehmanns tale &#x201C;Danmark til Ejderen&#x201C;, hvori han kr&#x00E6;ver hertugd&#x00F8;mmet Slesvig (med Ejderen som gr&#x00E6;nse til Holsten) indlemmet i kongeriget Danmark.
+		title="&#x201C;Danmark til Ejderen&#x201D;">
+		<persName key="pe126">Orla Lehmann</persName>s tale &#x201C;Danmark til Ejderen&#x201D;, hvori han kr&#x00E6;ver hertugd&#x00F8;mmet Slesvig (med Ejderen som gr&#x00E6;nse til Holsten) indlemmet i kongeriget Danmark.
 	</event>
 
 	<event		
@@ -702,15 +727,27 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Corsarens redakt&#x00F8;r f&#x00E6;ngsles">
-		Juni. H&#x00F8;jesteret id&#x00F8;mmer Goldschmidt f&#x00E6;ngsel, b&#x00F8;de og livsvarig censur som redakt&#x00F8;r af &#x00BB;Corsaren&#x00AB;.
+		Juni. H&#x00F8;jesteret id&#x00F8;mmer <persName key="pe125">Goldschmidt</persName> f&#x00E6;ngsel, b&#x00F8;de og livsvarig censur som redakt&#x00F8;r af <hi rend="italic">Corsaren</hi>.
 	</event>
 
 	<event		
 		start="Oct 06 1842 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Tysksproget folkeh&#x00F8;jskole i Holsten">
-		En tysksproget, men dog &#x201C;vaterl&#x00E4;ndisch&#x201C; &#x0027;h&#x00F8;jere folkeskole&#x0027; &#x00E5;bner  i Rendsborg i Holsten med 29 elever. Det er verdens f&#x00F8;rste folkeh&#x00F8;jskole.
+		En tysksproget, men dog &#x201C;vaterl&#x00E4;ndisch&#x201D; &#x0027;h&#x00F8;jere folkeskole&#x0027; &#x00E5;bner  i Rendsborg i Holsten med 29 elever. Det er verdens f&#x00F8;rste folkeh&#x00F8;jskole.
 	</event>
+	
+	<event		
+		start="Jun 15 1843 00:00:00 GMT"
+		earliestStart="Jan 01 1843 00:00:00 GMT"
+		latestEnd="Dec 31 1843 00:00:00 GMT"
+		end="Jun 17 1843 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="P.M. M&#x00F8;ller: En dansk Students Eventyr">
+		1843. <persName key="pe113">Poul Martin M&#x00F8;llers</persName> ufuldendte roman <hi rend="italic">En dansk Students Eventyr</hi> udgives posthumt.
+	</event>
+	
 
 	<event		
 		start="May 18 1843 00:00:00 GMT"
@@ -723,7 +760,7 @@
 		start="Aug 15 1843 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Tivoli">
-		Georg Carstensens forlystelseshave Tivoli &#x00E5;bner i K&#x00F8;benhavn.
+		<persName key="pe127">Georg Carstensen</persName>s forlystelseshave Tivoli &#x00E5;bner i K&#x00F8;benhavn.
 	</event>
 
 
@@ -731,7 +768,7 @@
 		start="Mar 24 1844 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Thorvaldsen d&#x00F8;r">
-		Billedhuggeren Bertel Thorvaldsen d&#x00F8;r under en forestilling p&#x00E5; Det Kongelige Teater, 73 &#x00E5;r gammel.
+		Billedhuggeren <persName key="pe124">Bertel Thorvaldsen</persName> d&#x00F8;r under en forestilling p&#x00E5; Det Kongelige Teater, 73 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -745,7 +782,7 @@
 		start="Nov 07 1844 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="H&#x00F8;jskolen i R&#x00F8;dding">
-		Den f&#x00F8;rste grundtvigske folkeh&#x00F8;jskole &#x00E5;bner i R&#x00F8;dding, Nordslesvig; dens f&#x00F8;rste leder er cand.theol. Johan Wegener, som snart efterf&#x00F8;lges af dr.phil. Chr. Flor.
+		Den f&#x00F8;rste grundtvigske folkeh&#x00F8;jskole &#x00E5;bner i R&#x00F8;dding, Slesvig; dens f&#x00F8;rste leder er cand.theol. <persName key="pe128">Johan Wegener</persName>, som snart efterf&#x00F8;lges af dr.phil. <persName key="pe129">Chr. Flor</persName>.
 	</event>
 
 
@@ -753,7 +790,7 @@
 		start="Feb 13 1845 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Steffens d&#x00F8;r">
-		Filosoffen Henrich Steffens d&#x00F8;r i Berlin, 71 &#x00E5;r gammel.
+		Filosoffen <persName key="pe18">Henrich Steffens</persName> d&#x00F8;r i Berlin, 71 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -767,21 +804,21 @@
 		start="Jun 24 1845 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Skandinavismen">
-		Skandinavismen n&#x00E5;r sit h&#x00F8;jdepunkt med Orla Lehmanns tale til de nordiske studenter i Christiansborgs ridehus.
+		Skandinavismen n&#x00E5;r sit h&#x00F8;jdepunkt med <persName key="pe126">Orla Lehmann</persName>s tale til de nordiske studenter i Christiansborgs ridehus.
 	</event>
 
 	<event		
 		start="Jan 09 1846 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Corsaren karikerer Kierkegaard">
-		&#x00BB;Corsaren&#x00AB; bringer sin f&#x00F8;rste karikatur af S&#x00F8;ren Kierkegaard.
+		<hi rend="italic">Corsaren</hi> bringer sin f&#x00F8;rste karikatur af <persName key="pe107">S&#x00F8;ren Kierkegaard</persName>.
 	</event>
 
 	<event		
 		start="Feb 27 1846 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaard: Afsluttende uvidenskabelig Efterskrift">
-		S&#x00F8;ren Kierkegaard udgiver &#x00BB;Afsluttende uvidenskabelig Efterskrift&#x00AB;, der rummer en kritisk stillingtagen til Grundtvig.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> udgiver <hi rend="italic">Afsluttende uvidenskabelig Efterskrift</hi>, der rummer en kritisk stillingtagen til <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event		
@@ -795,7 +832,7 @@
 		start="Jul 08 1846 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Arveforholdene i hertugd&#x00F8;mmerne">
-		Christian 8. udsender et &#x00E5;bent brev om arveforholdene i hertugd&#x00F8;mmerne, hvori han kundg&#x00F8;r,
+		<persName key="pe98">Christian 8.</persName> udsender et &#x00E5;bent brev om arveforholdene i hertugd&#x00F8;mmerne, hvori han kundg&#x00F8;r,
 		at Kongelovens arvef&#x00F8;lge g&#x00E6;lder for kongeriget Danmark og for Slesvig. Det beroliger opinionen i kongeriget og i den danske befolkningsdel i Slesvig, men v&#x00E6;kker vrede blandt slesvig-holstenerne.
 	</event>
 
@@ -810,21 +847,21 @@
 		start="Jan 20 1848 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Christian 8. d&#x00F8;r">
-		Christian 8. d&#x00F8;r, 61 &#x00E5;r gammel.
+		<persName key="pe98">Christian 8.</persName> d&#x00F8;r, 61 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Mar 20 1848 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Casino-m&#x00F8;det">
-		Efter udbredelsen af et fejlagtigt rygte i K&#x00F8;benhavn om, at slesvig-holstenerne havde gjort opr&#x00F8;r i Rendsborg 18. marts, holder den nationalliberale &#x0027;Komitéen til Danmarks og Slesvigs konstitutionelle Forening&#x0027; m&#x00F8;de i Casinoteateret, hvilket dagen efter udl&#x00F8;ser et folketog til Frederik 7.
+		Efter udbredelsen af et fejlagtigt rygte i K&#x00F8;benhavn om, at slesvig-holstenerne havde gjort opr&#x00F8;r i Rendsborg 18. marts, holder den nationalliberale &#x0027;Komitéen til Danmarks og Slesvigs konstitutionelle Forening&#x0027; m&#x00F8;de i Casinoteateret, hvilket dagen efter udl&#x00F8;ser et folketog til <persName key="pe116">Frederik 7.</persName>
 	</event>
 
 	<event		
 		start="Mar 21 1848 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="L&#x00F8;fte om fri forfatning; Martsministeriet">
-		En deputation af borgere fulgt af ca. 15.000 mennesker f&#x00E5;r af Frederik 7. l&#x00F8;fte om en fri forfatning. Martsministeriet, hvori de nationalliberale indg&#x00E5;r, dannes den f&#x00F8;lgende dag.
+		En deputation af borgere fulgt af ca. 15.000 mennesker f&#x00E5;r af <persName key="pe116">Frederik 7.</persName> l&#x00F8;fte om en fri forfatning. Martsministeriet, hvori de nationalliberale indg&#x00E5;r, dannes den f&#x00F8;lgende dag.
 	</event>
 
 	<event		
@@ -873,7 +910,7 @@
 		start="Jul 03 1848 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Slaveriet oph&#x00E6;ves p&#x00E5; De Dansk-vestindiske &#x00D8;er">
-		Opr&#x00F8;r blandt negerslaverne De Dansk-vestindiske &#x00D8;er; samme middag proklamerer guvern&#x00F8;r Peter von Scholten slaveriets oph&#x00F8;r.
+		Opr&#x00F8;r blandt negerslaverne p&#x00E5; De Dansk-vestindiske &#x00D8;er; samme middag proklamerer guvern&#x00F8;r <persName key="pe130">Peter von Scholten</persName> slaveriets oph&#x00F8;r.
 	</event>
 
 	<event		
@@ -891,7 +928,7 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Fr. Dreier: Folkenes Fremtid">
-		August. Frederik Dreier udgiver &#x00BB;Folkenes Fremtid&#x00AB;; heri angribes nationalismen under 1. Slesvigske Krig, herunder Grundtvigs begreb om danskhed.
+		August. <persName key="pe131">Frederik Dreier</persName> udgiver <hi rend="italic">Folkenes Fremtid</hi>; heri angribes nationalismen under 1. Slesvigske Krig, herunder <persName key="pe4">Grundtvig</persName>s begreb om danskhed.
 	</event>
 
 	<event		
@@ -905,7 +942,7 @@
 		start="Nov 15 1848 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Martsministeriet opl&#x00F8;ses">
-		Martsministeriet opl&#x00F8;ses; den f&#x00F8;lgende dag tiltr&#x00E6;der et nyt ministerium under grev A.W. Moltke.
+		Martsministeriet opl&#x00F8;ses; den f&#x00F8;lgende dag tiltr&#x00E6;der et nyt ministerium under grev <persName key="pe132">A.W. Moltke</persName>.
 	</event>
 
 	<event		
@@ -919,14 +956,14 @@
 		start="Jun 05 1849 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Danmarks Riges Grundlov">
-		Frederik 7. underskriver Danmarks Riges Grundlov, vedtaget af rigsforsamlingen 25. maj.
+		<persName key="pe116">Frederik 7.</persName> underskriver Danmarks Riges Grundlov, vedtaget af rigsforsamlingen 25. maj.
 	</event>
 
 	<event		
 		start="Jul 06 1849 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Slaget ved Fredericia">
-		Dansk sejr i slaget ved Fredericia; general Olaf Rye falder.
+		Dansk sejr i slaget ved Fredericia; general <persName key="pe133">Olaf Rye</persName> falder.
 	</event>
 
 	<event		
@@ -940,14 +977,14 @@
 		start="Nov 14 1849 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Oehlenschl&#x00E4;ger 70 &#x00E5;r">
-		Digteren Adam Oehlenschl&#x00E4;ger fylder 70.
+		Digteren <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName> fylder 70.
 	</event>
 
 	<event		
 		start="Jan 20 1850 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Oehlenschl&#x00E4;ger d&#x00F8;r">
-		Digteren Adam Oehlenschl&#x00E4;ger d&#x00F8;r, 70 &#x00E5;r gammel.
+		Digteren <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName> d&#x00F8;r, 70 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -975,7 +1012,7 @@
 		start="Sep 25 1850 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaard: Ind&#x00F8;velse i Christendom">
-		S&#x00F8;ren Kierkegaard udgiver &#x00BB;Ind&#x00F8;velse i Christendom&#x00AB;.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> udgiver <hi rend="italic">Ind&#x00F8;velse i Christendom</hi>.
 	</event>
 
 	<event		
@@ -986,7 +1023,7 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Mathilde Fibigers Clara Raphael: Tolv Breve">
-		December. Den 20-&#x00E5;rige Mathilde Fibiger udsender med J.L. Heiberg som udgiver &#x00BB;Clara Raphael: Tolv Breve&#x00AB; (med &#x00E5;rstal 1851).
+		December. Den 20-&#x00E5;rige <persName key="pe134">Mathilde Fibiger</persName> udsender med <persName key="pe115">J.L. Heiberg</persName> som udgiver <hi rend="italic">Clara Raphael: Tolv Breve</hi> (med &#x00E5;rstal 1851).
 	</event>
 
 	<event		
@@ -1004,7 +1041,7 @@
 		start="Mar 09 1851 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="H.C. &#x00D8;rsted d&#x00F8;r">
-		Fysikeren H.C. &#x00D8;rsted d&#x00F8;r, 78 &#x00E5;r gammel; hans  bedste kendte v&#x00E6;rk &#x00BB;Aanden i Naturen&#x00AB; udgives posthumt 1851-52.
+		Fysikeren <persName key="pe119">H.C. &#x00D8;rsted</persName> d&#x00F8;r, 78 &#x00E5;r gammel; hans  bedste kendte v&#x00E6;rk, <hi rend="italic">Aanden i Naturen</hi>, udgives posthumt 1851-1852.
 	</event>
 
 	<event		
@@ -1018,7 +1055,7 @@
 		start="Sep 12 1851 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaard: Til Selvpr&#x00F8;velse, Samtiden anbefalet">
-		S&#x00F8;ren Kierkegaard udgiver &#x00BB;Til Selvpr&#x00F8;velse, Samtiden anbefalet&#x00AB;.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> udgiver <hi rend="italic">Til Selvpr&#x00F8;velse, Samtiden anbefalet</hi>.
 	</event>
 
 	<event		
@@ -1036,21 +1073,21 @@
 		start="Jan 09 1853 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Fr. Dreier stifter brugsforening">
-		Frederik Dreier stifter Foreningen for billige Livsforn&#x00F8;denheder, &#x0027;Danmarks f&#x00F8;rste brugsforening&#x0027;, men den best&#x00E5;r kun kort.
+		<persName key="pe131">Frederik Dreier</persName> stifter Foreningen for billige Livsforn&#x00F8;denheder, &#x0027;Danmarks f&#x00F8;rste brugsforening&#x0027;, men den best&#x00E5;r kun kort.
 	</event>
 
 	<event		
 		start="May 09 1853 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Fr. Dreier d&#x00F8;r">
-		Frederik Dreier d&#x00F8;r, 25 &#x00E5;r gammel.
+		<persName key="pe131">Frederik Dreier</persName> d&#x00F8;r, 25 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Jun 15 1853 00:00:00 GMT"
 		earliestStart="Jun 01 1853 00:00:00 GMT"
-		latestEnd="Oct 31 1853 00:00:00 GMT"
-		end="Oct 15 1853 00:00:00 GMT"
+		latestEnd="Oct 15 1853 00:00:00 GMT"
+		end="Oct 30 1853 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Koleraepidemi i K&#x00F8;benhavn">
@@ -1065,14 +1102,14 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Sv. Grundtvig: Danmarks gamle Folkeviser">
-		1853. S&#x00F8;nnen Svend Grundtvig udgiver f&#x00F8;rste bind af &#x00BB;Danmarks gamle Folkeviser&#x00AB;.
+		1853. S&#x00F8;nnen <persName key="pe135">Svend Grundtvig</persName> udgiver f&#x00F8;rste bind af <hi rend="italic">Danmarks gamle Folkeviser</hi>.
 	</event>
 
 	<event		
 		start="Jan 30 1854 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Biskop Mynster d&#x00F8;r">
-		Biskop J.P. Mynster d&#x00F8;r, 78 &#x00E5;r gammel.
+		Biskop <persName key="pe136">J.P. Mynster</persName> d&#x00F8;r, 78 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -1093,7 +1130,7 @@
 		start="Dec 18 1854 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaards &#x0027;kirkekamp&#x0027;">
-		S&#x00F8;ren Kierkegaard indleder i &#x00BB;F&#x00E6;drelandet&#x00AB; sin &#x0027;kirkekamp&#x0027; med artiklen &#x201C;Var Biskop Mynster et &#x0027;Sandhedsvidne&#x0027;?&#x201D;
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> indleder i <hi rend="italic">F&#x00E6;drelandet</hi> sin &#x0027;kirkekamp&#x0027; med artiklen &#x201C;Var Biskop Mynster et &#x0027;Sandhedsvidne&#x0027;?&#x201D;
 	</event>
 
 	<event		
@@ -1110,36 +1147,36 @@
 		end="Apr 17 1855 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#9B9B9B"
-		title="Kierkegaard: &#x201C;Er Grundtvig et Slags Apostel? Er dette Sandhed?&#x201D;">
-		April, datering af S&#x00F8;ren Kierkegaards upublicerede artikel &#x201C;Er Grundtvig et Slags Apostel? er dette Sandhed?&#x201D;
+		title="Kierkegaard: Er Grundtvig et Slags Apostel? Er dette Sandhed?&#x201D;">
+		April, datering af <persName key="pe107">S&#x00F8;ren Kierkegaard</persName>s upublicerede artikel Er Grundtvig et Slags Apostel? er dette Sandhed?&#x201D;
 	</event>
 
 	<event		
 		start="Mar 24 1855 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaards &#x00D8;ieblikket">
-		S&#x00F8;ren Kierkegaard udsender f&#x00F8;rste nummer af sit tidsskrift &#x00BB;&#x00D8;ieblikket.&#x00AB;
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> udsender f&#x00F8;rste nummer af sit tidsskrift <hi rend="italic">&#x00D8;ieblikket.</hi>
 	</event>
 
 	<event		
 		start="Jun 16 1855 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaard: Hvad Christus d&#x00F8;mmer om officiel Christendom.">
-		S&#x00F8;ren Kierkegaards pjece &#x00BB;Hvad&#x00AB; Christus &#x00BB;d&#x00F8;mmer om officiel Christendom&#x00AB; udkommer.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName>s pjece <hi rend="italic">Hvad</hi> <persName key="pe45">Christus</persName> <hi rend="italic">d&#x00F8;mmer om officiel Christendom</hi> udkommer.
 	</event>
 
 	<event		
 		start="Sep 24 1855 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="&#x00D8;ieblikket nr. 9">
-		S&#x00F8;ren Kierkegaards tidsskrift &#x00BB;&#x00D8;ieblikket&#x00AB; udkommer med nr. 9.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName>s tidsskrift <hi rend="italic">&#x00D8;ieblikket</hi> udkommer med nr. 9.
 	</event>
 
 	<event		
 		start="Nov 11 1855 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Kierkegaard d&#x00F8;r">
-		S&#x00F8;ren Kierkegaard d&#x00F8;r, 42 &#x00E5;r gammel.
+		<persName key="pe107">S&#x00F8;ren Kierkegaard</persName> d&#x00F8;r, 42 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -1178,14 +1215,14 @@
 		start="Nov 23 1857 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Chr. Molbech d&#x00F8;r">
-		Filologen m.v. Chr. Molbech d&#x00F8;r, 74 &#x00E5;r gammel.
+		Filologen m.v. <persName key="pe23">Chr. Molbech</persName> d&#x00F8;r, 74 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Dec 10 1857 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Jac. Chr. Lindberg d&#x00F8;r">
-		Grundtvigs kirkelige kampf&#x00E6;lle, pr&#x00E6;sten Jac. Chr. Lindberg d&#x00F8;r, 60 &#x00E5;r gammel.
+		<persName key="pe4">Grundtvigs</persName> kirkelige kampf&#x00E6;lle, pr&#x00E6;sten <persName key="pe80">Jac. Chr. Lindberg</persName> d&#x00F8;r, 60 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -1199,7 +1236,7 @@
 		start="Aug 24 1858 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Landboh&#x00F8;jskolen">
-		Den kongelige Veterin&#x00E6;r- og Landboh&#x00F8;jskole &#x00E5;bner; docent N.J. Fjord p&#x00E5;begynder et banebrydende forsknings- og formidlingsarbejde for dansk landbrugs oml&#x00E6;gning til animalsk produktion.
+		Den kongelige Veterin&#x00E6;r- og Landboh&#x00F8;jskole &#x00E5;bner; docent <persName key="pe137">N.J. Fjord</persName> p&#x00E5;begynder et banebrydende forsknings- og formidlingsarbejde for dansk landbrugs oml&#x00E6;gning til animalsk produktion.
 	</event>
 
 	<event		
@@ -1208,19 +1245,30 @@
 		title="Frederiksborg br&#x00E6;nder">
 		Frederiksborg Slot br&#x00E6;nder.
 	</event>
+	
+	<event		
+		start="Dec 18 1858 00:00:00 GMT"
+		earliestStart="Dec 15 1858 00:00:00 GMT"
+		latestEnd="Dec 31 1857 00:00:00 GMT"
+		end="Dec 20 1857 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Egede Schack: Phantasterne">
+		December. <persName key="pe277">Hans Egede Schack</persName>: <rs key="bib290"><hi rend="italic">Phantasterne</hi></rs> udkommer.
+	</event>
 
 	<event		
 		start="Aug 25 1860 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="J.L. Heiberg d&#x00F8;r">
-		Digteren og kritikeren Johan Ludvig Heiberg d&#x00F8;r, 68 &#x00E5;r gammel.
+		Digteren og kritikeren <persName key="pe115">Johan Ludvig Heiberg</persName> d&#x00F8;r, 68 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Feb 24 1862 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Ingemann d&#x00F8;r">
-		Digteren B.S. Ingemann d&#x00F8;r i Sor&#x00F8;, 72 &#x00E5;r gammel.
+		Digteren <persName key="pe138">B.S. Ingemann</persName> d&#x00F8;r i Sor&#x00F8;, 72 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -1248,21 +1296,21 @@
 		start="Nov 13 1863 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Rigsdagen vedtager f&#x00E6;llesforfatning for Danmark og Slesvig">
-		Rigsdagen vedtager en f&#x00E6;llesforfatning for Danmark og Slesvig, Novemberforfatningen, sk&#x00F8;nt en indlemmelse af Slesvig i kongeriget Danmark strider mod London-aftalerne 1851-52.
+		Rigsdagen vedtager en f&#x00E6;llesforfatning for Danmark og Slesvig, Novemberforfatningen, sk&#x00F8;nt en indlemmelse af Slesvig i kongeriget Danmark strider mod London-aftalerne 1851-1852.
 	</event>
 
 	<event		
 		start="Nov 15 1863 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Frederik 7. d&#x00F8;r. Bismarcks krav om tilbagetr&#x00E6;kning af Novemberforfatningen">
-		Frederik 7. d&#x00F8;r i sin sommerresidens, Gl&#x00FC;cksborg Slot, 55 &#x00E5;r gammel; Bismarck sender samtidig p&#x00E5; vegne af Det Tyske Forbund krav om tilbagetr&#x00E6;kning af Novemberforfatningen.
+		<persName key="pe116">Frederik 7.</persName> d&#x00F8;r i sin sommerresidens, Gl&#x00FC;cksborg Slot, 55 &#x00E5;r gammel; <persName key="pe139">Bismarck</persName> sender samtidig p&#x00E5; vegne af Det Tyske Forbund krav om tilbagetr&#x00E6;kning af Novemberforfatningen.
 	</event>
 
 	<event		
 		start="Nov 18 1863 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Novemberforfatningen underskrives">
-		Christian 9. underskriver modstr&#x00E6;bende Novemberforfatningen.
+		<persName key="pe140">Christian 9.</persName> underskriver modstr&#x00E6;bende Novemberforfatningen.
 	</event>
 
 	<event		
@@ -1332,7 +1380,7 @@
 		start="Oct 30 1864 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Fredsslutning">
-		Ved freden i Wien reduceres det danske rige med ca. 19.000 km2; befolkningstallet g&#x00E5;r ned fra 2,5 million til 1,7 million, mens statsg&#x00E6;lden er vokset kraftigt.
+		Ved freden i Wien reduceres det danske rige med ca. 19.000 km<hi rend="raised">2</hi>; befolkningstallet g&#x00E5;r ned fra 2,5 million til 1,7 million, mens statsg&#x00E6;lden er vokset kraftigt.
 	</event>
 
 	<event		
@@ -1353,7 +1401,7 @@
 		start="Jul 28 1866 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Den reviderede grundlov">
-		Den reviderede grundlov med indskr&#x00E6;nket valgret til Landstinget vedtages og underskrives samme dag af Christian 9.
+		Den reviderede grundlov med indskr&#x00E6;nket valgret til Landstinget vedtages og underskrives samme dag af <persName key="pe140">Christian 9.</persName>
 	</event>
 
 	<event		
@@ -1362,7 +1410,7 @@
 		durationEvent="true"
 		textColor="#9B9B9B"
 		title="Chr. Kold i K&#x00F8;benhavn">
-		Ved det grundtvigske vennem&#x00F8;de i K&#x00F8;benhavn taler Christen Kold om sit livsforl&#x00F8;b og om sit syn p&#x00E5; folkelig oplysning.
+		Ved det grundtvigske vennem&#x00F8;de i K&#x00F8;benhavn taler <persName key="pe141">Christen Kold</persName> om sit livsforl&#x00F8;b og om sit syn p&#x00E5; folkelig oplysning.
 	</event>
 
 
@@ -1384,14 +1432,14 @@
 		start="Mar 28 1869 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="G. Busck d&#x00F8;r">
-		Pr&#x00E6;sten Gunni Busck d&#x00F8;r, 70 &#x00E5;r gammel.
+		Pr&#x00E6;sten <persName key="pe142">Gunni Busck</persName> d&#x00F8;r, 70 &#x00E5;r gammel.
 	</event>
 
 	<event		
 		start="Apr 06 1870 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Chr. Kold d&#x00F8;r">
-		Christen Kold d&#x00F8;r, 54 &#x00E5;r gammel.
+		<persName key="pe141">Christen Kold</persName> d&#x00F8;r, 54 &#x00E5;r gammel.
 	</event>
 
 	<event		
@@ -1420,14 +1468,14 @@
 		start="Oct 15 1871 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Den Internationale Arbejderforening for Danmark">
-		Den Internationale Arbejderforening for Danmark stiftes p&#x00E5; initiativ af Louis Pio, Harald Brix og Paul Geleff som en dansk afdeling af 1. Internationale.
+		Den Internationale Arbejderforening for Danmark stiftes p&#x00E5; initiativ af <persName key="pe143">Louis Pio</persName>, <persName key="pe144">Harald Brix</persName> og <persName key="pe145">Paul Geleff</persName> som en dansk afdeling af 1. Internationale.
 	</event>
 
 	<event		
 		start="Nov 03 1871 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="G. Brandes om hovedstr&#x00F8;mningerne i det 19. &#x00E5;rhundredes litteratur">
-		Georg Brandes indleder sine forel&#x00E6;sninger p&#x00E5; K&#x00F8;benhavns Universitet om hovedstr&#x00F8;mningerne i det 19. &#x00E5;rhundredes litteratur.
+		<persName key="pe146">Georg Brandes</persName> indleder sine forel&#x00E6;sninger p&#x00E5; K&#x00F8;benhavns Universitet om hovedstr&#x00F8;mningerne i det 19. &#x00E5;rhundredes litteratur.
 	</event>
 
 
@@ -1435,14 +1483,14 @@
 		start="May 05 1872 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="&#x0027;Slaget p&#x00E5; F&#x00E6;lleden&#x0027;">
-		Avisen &#x00BB;Socialisten&#x00AB; indkalder til m&#x00F8;de p&#x00E5; N&#x00F8;rre F&#x00E6;lled 5. maj til st&#x00F8;tte af strejkende k&#x00F8;benhavnske murere. Politiet forbyder m&#x00F8;dets afholdelse og f&#x00E6;ngsler lederne Pio, Brix og Geleff. Trods forbuddet og f&#x00E6;ngslingerne afholdes m&#x00F8;det, der resulterer i &#x0027;Slaget p&#x00E5; F&#x00E6;lleden&#x0027; mellem arbejdere p&#x00E5; den ene side, politi og husarer p&#x00E5; den anden.
+		Avisen <hi rend="italic">Socialisten</hi> indkalder til m&#x00F8;de p&#x00E5; N&#x00F8;rre F&#x00E6;lled 5. maj til st&#x00F8;tte af strejkende k&#x00F8;benhavnske murere. Politiet forbyder m&#x00F8;dets afholdelse og f&#x00E6;ngsler lederne <persName key="pe143">Pio</persName>,<persName key="pe144"> Brix</persName> og <persName key="pe145">Geleff</persName>. Trods forbuddet og f&#x00E6;ngslingerne afholdes m&#x00F8;det, der resulterer i &#x0027;Slaget p&#x00E5; F&#x00E6;lleden&#x0027; mellem arbejdere p&#x00E5; den ene side, politi og husarer p&#x00E5; den anden.
 	</event>
 
 	<event		
 		start="Jun 17 1872 00:00:00 GMT"
 		textColor="#9B9B9B"
 		title="Mathilde Fibiger d&#x00F8;r">
-		Mathilde Fibiger, forfatteren til &#x00BB;Clara Raphael: Tolv Breve&#x00AB;, d&#x00F8;r i &#x00C5;rhus, 41 &#x00E5;r gammel.
+		<persName key="pe134">Mathilde Fibiger</persName>, forfatteren til <hi rend="italic">Clara Raphael: Tolv Breve</hi>, d&#x00F8;r i &#x00C5;rhus, 41 &#x00E5;r gammel.
 	</event>
     
 </data>

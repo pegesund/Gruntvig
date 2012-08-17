@@ -31,14 +31,14 @@
 		start="Jan 14 1804 00:00:00 GMT"
 		textColor="#669900"
 		title="Debuterer med &#x201C;Et S&#x00E6;rsyn i det nittende Aarhundrede&#x201D;">
-   		Grundtvig debuterer med &#x201C;Et S&#x00E6;rsyn i det nittende Aarhundrede&#x201D;, dateret Udby pr&#x00E6;steg&#x00E5;rd 5. januar, trykt i &#x00BB;Politivennen&#x00AB; nr. 299.
+   		<persName key="pe4">Grundtvig</persName> debuterer med &#x201C;Et S&#x00E6;rsyn i det nittende Aarhundrede&#x201D;, dateret Udby pr&#x00E6;steg&#x00E5;rd 5. januar, trykt i <hi rend="italic">Politivennen</hi> nr. 299.
    	</event>
 
 	<event
 		start="Jan 19 1804 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Mere om det skoleholderl&#x00F8;se Sogn paa Falster&#x201D;">
-		Debuten med &#x201C;Et S&#x00E6;rsyn i det nittende Aarhundrede,&#x201D; f&#x00F8;lges op i &#x00BB;Politivennen&#x00AB; nr. 301 med &#x201C;Mere om det skoleholderl&#x00F8;se Sogn paa Falster&#x201D;.
+		Debuten med &#x201C;Et S&#x00E6;rsyn i det nittende Aarhundrede,&#x201D; f&#x00F8;lges op i <hi rend="italic">Politivennen</hi> nr. 301 med &#x201C;Mere om det skoleholderl&#x00F8;se Sogn paa Falster&#x201D;.
 	</event>
 
 	<event
@@ -49,18 +49,18 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Bekiendtgj&#x00F8;relse,&#x201D;">
-		&#x201C;Bekiendtgj&#x00F8;relse&#x201D;, dateret 22. juni, trykt i &#x00BB;Politivennen&#x00AB; nr. 322.
+		&#x201C;Bekjendtgj&#x00F8;relse&#x201D;, dateret 22. juni, trykt i <hi rend="italic">Politivennen</hi> nr. 322, endnu en opf&#x00F8;lgning af debuten.
 	</event>
 
 	<event
 		start="Sep 15 1806 00:00:00 GMT"
 		earliestStart="Sep 01 1806 00:00:00 GMT"
-		latestEnd="Sep 30 1816 00:00:00 GMT"
-		end="Sep 17 1816 00:00:00 GMT"
+		latestEnd="Sep 30 1806 00:00:00 GMT"
+		end="Sep 17 1806 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Lidet om Sangene i Edda&#x201D;">
-		September. &#x201C;Lidet om Sangene i Edda&#x201D; trykt i &#x00BB;Ny Minerva.&#x00AB;
+		September. &#x201C;Lidet om Sangene i Edda&#x201D; trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
@@ -71,7 +71,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Religion og Lithurgie&#x201D;">
-		Februar. &#x201C;Om Religion og Lithurgie&#x201D;, afhandling dateret &#x201C;1. Oct. 1806&#x201D;, trykt i &#x00BB;Theologisk Maanedsskrift.&#x00AB;
+		Februar. &#x201C;Om Religion og Lithurgie&#x201D;, afhandling dateret &#x201C;1. Oktbr. 1806&#x201D;, trykt i <hi rend="italic">Theologisk Maanedsskrivt.</hi>
 	</event>
 
 	<event
@@ -82,7 +82,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Videnskabelighed og dens Fremme&#x201D;">
-		Marts. &#x201C;Om Videnskabelighed og dens Fremme, is&#x00E6;r med Hensyn paa F&#x00E6;drelandet&#x201D; trykt i &#x00BB;Ny Minerva.&#x00AB;
+		Marts. &#x201C;Om Videnskabelighed og dens Fremme, is&#x00E6;r med Hensyn paa F&#x00E6;drelandet&#x201D; trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
@@ -93,7 +93,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Asal&#x00E6;ren&#x201D;">
-		Maj. &#x201C;Om Asal&#x00E6;ren&#x201D;, dateret 22. maj, trykt i &#x00BB;Ny Minerva.&#x00AB;
+		Maj. &#x201C;Om Asal&#x00E6;ren&#x201D;, dateret 22. maj, trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
@@ -104,7 +104,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Schiller og Bruden fra Messina&#x201D;">
-		Juni. &#x201C;Om Schiller og Bruden fra Messina&#x201D; trykt i &#x00BB;Ny Minerva.&#x00AB;
+		Juni. &#x201C;Om <persName key="pe35">Schiller</persName> og Bruden fra Messina&#x201D; trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
@@ -115,7 +115,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Et Par Ord i Anledning af det forkyndte S&#x00F8;rgespil: Signe&#x201D;">
-		Juni. &#x201C;Et Par Ord i Anledning af det forkyndte S&#x00F8;rgespil: Signe&#x201D; trykt i &#x00BB;Ny Minerva.&#x00AB;
+		Juni. &#x201C;Et Par Ord i Anledning af det forkyndte S&#x00F8;rgespil: Signe&#x201D; trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
@@ -126,77 +126,77 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Oehlenschl&#x00E4;gers Baldur hiin Gode&#x201D;">
-		December. &#x201C;Om Oehlenschl&#x00E4;gers Baldur hiin Gode&#x201D; trykt i &#x00BB;Ny Minerva.&#x00AB;
+		December. &#x201C;<persName key="pe3">Om Oehlenschl&#x00E4;ger</persName>s Baldur hiin Gode&#x201D; trykt i <hi rend="italic">Ny Minerva.</hi>
 	</event>
 
 	<event
 		start="Mar 15 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Maskeradeballet i Dannemark 1808">
-		Grundtvigs f&#x00F8;rste bog, &#x00BB;Maskeradeballet i Dannemark 1808. Et Syn,&#x00AB; udkommer.
+		<persName key="pe4">Grundtvigs</persName> f&#x00F8;rste bog, <hi rend="italic">Maskeradeballet i Dannemark 1808. Et Syn,</hi> udkommer.
 	</event>
 
 	<event
 		start="May 26 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Om Villemoes&#x201D;">
-		Digtet &#x201C;Om Villemoes&#x201D; trykt i &#x00BB;Ny Dansk Tilskuer.&#x00AB;
+		Digtet &#x201C;Om <persName key="pe99">Villemoes</persName>&#x201D; trykt i <hi rend="italic">Ny Dansk Tilskuer.</hi>
 	</event>
 
 	<event
 		start="Jun 04 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Polemik med Rasmus Rask">
-		Opsats i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; nr. 68, &#x201C;I Anledning af Hr Rasks Fremf&#x00E6;rd i Urstriden, og hans tvetydige Anm&#x00E6;rkning om splinterny Opdagelser i Mytologien&#x201D;.
+		Opsats i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn</hi> nr. 68, &#x201C;I Anledning af Hr Rasks Fremf&#x00E6;rd i Urstriden, og hans tvetydige Anm&#x00E6;rkning om splinterny Opdagelser i Mytologien&#x201D;.
 	</event>
 	
 	<event
 		start="Jun 07 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Polemik med Povel Dons">
-		Opsats i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; nr. 69, &#x201C;I Anledning af mit Syns Mistydning&#x201D;, fremkaldt af Povel Dons' digt &#x201C;Til Hr. N. F. S. Grundtvig i Anledning af hans Digt: &#x201C;Maskeradeballet i Danmark 1808&#x201D;&#x201D; i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; nr. 66.
+		Opsats i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn</hi> nr. 69, &#x201C;I Anledning af mit Syns Mistydning&#x201D;, fremkaldt af <persName key="pe176">Povel Dons'</persName> digt &#x201C;Til Hr. N. F. S. Grundtvig i Anledning af hans Digt: &#x201C;Maskeradeballet i Danmark 1808&#x201D;&#x201D; i samme tidsskrifts nr. 66.
 	</event>
 
 	<event
 		start="Jul 18 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Krigssang for Nordm&#x00E6;nd&#x201D;">
-		&#x201C;Krigssang for Nordm&#x00E6;nd&#x201D; trykt i &#x00BB;Ny Dansk Tilskuer.&#x00AB;
+		&#x201C;Krigssang for Nordm&#x00E6;nd&#x201D; trykt i <hi rend="italic">Ny Dansk Tilskuer.</hi>
 	</event>
 
 	<event
 		start="Jul 19 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Digt til Molbech">
-		&#x201C;Til min Ven&#x201D;, dvs. Chr. Molbech, trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn;&#x00AB; manuskriptet er dateret 16. juli.
+		&#x201C;Til min Ven&#x201D;, dvs. <persName key="pe23">Chr. Molbech</persName>, trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn;</hi> manuskriptet er dateret 16. juli.
 	</event>
 
 	<event
 		start="Sep 27 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Gunderslev Skov&#x201D;">
-		Digtet &#x201C;Gunderslev Skov&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Digtet &#x201C;Gunderslev Skov&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Dec 05 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Nordens Mytologi 1808">
-		Grundtvigs anden bog, &#x00BB;Nordens Mytologi eller Udsigt over Eddal&#x00E6;ren for dannede M&#x00E6;nd der ei selv ere Mytologer&#x00AB; udkommer; fortalen er dateret 28. oktober.
+		<persName key="pe4">Grundtvig</persName>s anden bog, <hi rend="italic">Nordens Mytologi eller Udsigt over Eddal&#x00E6;ren for dannede M&#x00E6;nd der ei selv ere Mytologer</hi> udkommer; fortalen er dateret 28. oktober.
 	</event>
 
 	<event
 		start="Dec 13 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="Besvarer P.E. M&#x00FC;llers kritik af &#x201C;Om Religion og Lithurgie&#x201D;">
-		Svarer i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; p&#x00E5; P.E. M&#x00FC;llers recension i samme tidsskrift af Grundtvigs &#x201C;Religion og Lithurgie&#x201D; (1807).
+		Svarer i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn</hi> p&#x00E5; <persName key="pe117">P.E. M&#x00FC;ller</persName>s recension af <persName key="pe4">Grundtvig</persName>s &#x201C;Om Religion og Lithurgie&#x201D; (1807).
 	</event>
 
 	<event
 		start="Dec 20 1808 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Tilbagesyn paa Kj&#x00F8;benhavn&#x201D;">
-		Digtet &#x201C;Tilbagesyn paa Kj&#x00F8;benhavn&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Digtet &#x201C;Tilbagesyn paa Kj&#x00F8;benhavn&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
@@ -207,35 +207,35 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Indbydelse til Gamle Nordens Venner">
-		Ultimo december. &#x00BB;Indbydelse til Gamle Nordens Venner.&#x00AB;
+		Ultimo december. <hi rend="italic">Indbydelse til Gamle Nordens Venner.</hi>
 	</event>
 
 	<event
 		start="Apr 29 1809 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over professor Riisbrigh">
-		Mindedigt over filosofiprofessor B&#x00F8;rge Riisbrigh, der d&#x00F8;de 18. april, trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Mindedigt over filosofiprofessor <persName key="pe270">B&#x00F8;rge Riisbrigh</persName>, der d&#x00F8;de 18. april, trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Aug 22 1809 00:00:00 GMT"
 		textColor="#669900"
 		title="Besvarer Badens kritik af Nordens Mytologi">
-		Grundtvig besvarer i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; historikeren G.L. Baden dennes kritik af &#x00BB;Nordens Mytologi.&#x00AB;
+		<persName key="pe4">Grundtvig</persName> besvarer i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn</hi> historikeren <persName key="pe262">G.L. Badens</persName> kritik af <hi rend="italic">Nordens Mytologi.</hi>
 	</event>
 
 	<event
 		start="Oct 07 1809 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Et Par Ord om vore Oldtids Minder&#x201D;">
-		&#x201C;Et Par Ord om vore Oldtids Minder&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		&#x201C;Et Par Ord om vore Oldtids Minder&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Nov 18 1809 00:00:00 GMT"
 		textColor="#669900"
 		title="Digt til Adam Oehlenschl&#x00E4;ger">
-		Digt til Adam Oehlenschl&#x00E4;gers 30-&#x00E5;rs f&#x00F8;dselsdag 14. november trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Digt til <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName>s 30-&#x00E5;rs f&#x00F8;dselsdag 14. november trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
@@ -246,14 +246,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Anden del af Optrin af Nordens K&#x00E6;mpeliv">
-		December. Anden del af &#x00BB;Optrin af Nordens K&#x00E6;mpeliv,&#x00AB; tilegnet Oehlenschl&#x00E4;ger (f&#x00F8;rste del udkommer 1811).
+		December. Anden del af <hi rend="italic">Optrin af Nordens K&#x00E6;mpeliv,</hi> tilegnet <persName key="pe3">Oehlenschl&#x00E4;ger</persName> (f&#x00F8;rste del udkommer 1811).
 	</event>
 
 	<event		
 		start="Jan 15 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="Subskriptionsplan for S&#x00E6;munds Edda">
-		Subskriptionsplan for en overs&#x00E6;ttelse af &#x00BB;S&#x00E6;munds Edda&#x00AB; (pga. manglende tilslutning udkom den aldrig).
+		Subskriptionsplan for en overs&#x00E6;ttelse af <hi rend="italic">S&#x00E6;munds Edda</hi> (pga. manglende tilslutning udkom den aldrig).
 	</event>
 	
 	<event
@@ -262,14 +262,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Noget om Hr. Rasks Bet&#x00E6;nkeligheder ang. Eddas Overs&#x00E6;ttelse&#x201D;">
-		&#x201C;Noget om Hr. Rasks Bet&#x00E6;nkeligheder ang. Eddas Overs&#x00E6;ttelse&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		&#x201C;Noget om <persName key="pe50">Hr. Rask</persName>s Bet&#x00E6;nkeligheder ang. Eddas Overs&#x00E6;ttelse&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Mar 06 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;De Snekker m&#x00F8;dtes i Kveld paa Hav&#x201D;">
-		&#x201C;De Snekker m&#x00F8;dtes i Kveld paa Hav,&#x0085;,&#x201D; skrevet efter&#x00E5;ret 1809, trykkes i &#x00BB;Dagen;&#x00AB; i &#x00BB;Kv&#x00E6;dlinger eller Smaakvad&#x00AB; (1815) f&#x00E5;r digtet sammen med indskriftens prosadel titlen &#x201C;Indskrivten paa Oddens Mindest&#x00F8;tte.&#x201D;
+		&#x201C;De Snekker m&#x00F8;dtes i Kveld paa Hav&#x201D;, skrevet efter&#x00E5;ret 1809, trykkes i <hi rend="italic">Dagen;</hi> i <hi rend="italic">Kv&#x00E6;dlinger eller Smaakvad</hi> (1815) f&#x00E5;r digtet sammen med indskriftens prosadel titlen &#x201C;Indskrivten paa Oddens Mindest&#x00F8;tte.&#x201D;
 	</event>
 
 	<event
@@ -280,7 +280,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Hvi er Herrens Ord forsvundet af hans Hus?&#x201D;">
-		Primo maj. Grundtvig dimispr&#x00E6;diken &#x201C;Hvi er Herrens Ord forsvundet af hans Hus?&#x201D; trykt uden K&#x00F8;benhavns Universitets tilladelse.
+		Primo maj. <persName key="pe4">Grundtvig</persName>s dimispr&#x00E6;diken &#x201C;Hvi er Herrens Ord forsvundet af hans Hus?&#x201D; trykt uden K&#x00F8;benhavns Universitets tilladelse.
 	</event>
 
 
@@ -288,28 +288,28 @@
 		start="May 22 1811 00:00:00 GMT"
 		textColor="#669900"
 		title="Digt om slaget ved Anholt">
-		&#x201C;Anholtstoget&#x201D;, (&#x201C;Hvorledes? Er det ikke Danmarks Baade,&#x0085;&#x201D;), digt om den danske fl&#x00E5;des fors&#x00F8;g i marts 1811 p&#x00E5; at fordrive den engelske bes&#x00E6;ttelsesstyrke fra Anholt.
+		&#x201C;Anholtstoget&#x201D;, (&#x201C;Hvorledes? Er det ikke Danmarks Baade&#x201D;), digt om den danske fl&#x00E5;des fors&#x00F8;g i marts 1811 p&#x00E5; at fordrive den engelske bes&#x00E6;ttelsesstyrke fra Anholt.
 	</event>
 	
 	<event
 		start="Jun 09 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="S&#x00F8;rgekvad ved Prinds Kristians D&#x00F8;d">
-		&#x00BB;S&#x00F8;rgekvad ved Prinds Kristians D&#x00F8;d&#x00AB;, i anledning af prins Christian Augusts d&#x00F8;d.
+		<hi rend="italic">S&#x00F8;rgekvad ved Prinds Kristians D&#x00F8;d</hi>, i anledning af prins <persName key="pe149">Christian Augusts</persName> d&#x00F8;d.
 	</event>
 
 	<event
 		start="Jun 19 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Et Par Ord om min Dimispr&#x00E6;diken&#x201D;">
-		&#x201C;Et Par Ord om min Dimispr&#x00E6;diken&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		&#x201C;Et Par Ord om min Dimispr&#x00E6;diken&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Jul 17 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="Er Nordens Forening &#x00F8;nskelig?">
-		&#x00BB;Er Nordens Forening &#x00F8;nskelig?&#x00AB;
+		<hi rend="italic">Er Nordens Forening &#x00F8;nskelig?</hi>
 	</event>
 
 	<event
@@ -320,91 +320,91 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Kommer hid I Piger smaa!&#x201D;">
-		29. oktober (?). &#x201C;Kommer hid I Piger smaa!&#x201D;, skrevet for&#x00E5;ret 1808, udkommer i K.L. Rahbek (red.): &#x00BB;Danske og Norske historiske Mindesange&#x00AB; med udgiverens titel &#x201C;Ki&#x00E6;kheds Erindring. Willemoes.&#x201D;
+		29. oktober (?). &#x201C;Kommer hid I Piger smaa!&#x201D;, skrevet for&#x00E5;ret 1808, udkommer i <persName key="pe24">K.L. Rahbek</persName> (red.): <hi rend="italic">Danske og Norske historiske Mindesange</hi> med udgiverens titel &#x201C;Ki&#x00E6;kheds Erindring&#x201D;. <persName key="pe99">Willemoes</persName>.&#x201D;
 	</event>
 
 	<event
 		start="Dec 24 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="Nytaarsnat eller Blik paa Christendom og Historie">
-		&#x00BB;Nytaarsnat eller Blik paa Christendom og Historie&#x00AB; udkommer; fortalen er af hensyn til titlen efterdateret til 31. december.
+		<hi rend="italic">Nytaarsnat eller Blik paa Christendom og Historie</hi> udkommer; fortalen er af hensyn til titlen efterdateret til 31. december.
 	</event>
 
 	<event
 		start="Dec 29 1810 00:00:00 GMT"
 		textColor="#669900"
 		title="Idunna. En Nytaarsgave for 1811">
-		&#x00BB;Idunna. En Nytaarsgave for 1811.&#x00AB;
+		<hi rend="italic">Idunna. En Nytaarsgave for 1811.</hi>
 	</event>
 
 	<event
 		start="Apr 10 1811 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Deilig er den Himmel blaa&#x201D;">
-		&#x201C;De hellige tre Konger. (En Barnesang)&#x201D; dvs. &#x201C;Deilig er den Himmel blaa&#x201D; udkommer i Rahbeks &#x00BB;Sandsigeren eller den danske Huusven, et Ugeskrift.&#x00AB;
+		&#x201C;De hellige tre Konger. (En Barnesang)&#x201D;, dvs. &#x201C;Deilig er den Himmel blaa&#x201D; udkommer i <persName key="pe24">Rahbek</persName>s <hi rend="italic">Sandsigeren eller den danske Huusven, et Ugeskrift.</hi>
 	</event>
 
 	<event
 		start="Dec 23 1811 00:00:00 GMT"
 		textColor="#669900"
-		title="Saga. Nytaarsgave for 1802">
-		Digtsamlingen &#x00BB;Saga. Nytaarsgave for 1802.&#x00AB;
+		title="Saga. Nytaarsgave for 1812">
+		Digtsamlingen <hi rend="italic">Saga. Nytaarsgave for 1812.</hi>
 	</event>
 
 	<event
 		start="Dec 28 1811 00:00:00 GMT"
 		textColor="#669900"
 		title="F&#x00F8;rste del af Optrin af Nordens K&#x00E6;mpeliv">
-		F&#x00F8;rste del af &#x00BB;Optrin af Nordens K&#x00E6;mpeliv&#x00AB; (anden del udkom 1809).
+		F&#x00F8;rste del af <hi rend="italic">Optrin af Nordens K&#x00E6;mpeliv</hi> (anden del udkom 1809).
 	</event>
 
 	<event
 		start="Jan 28 1812 00:00:00 GMT"
 		textColor="#669900"
 		title="Til Dannerkongen Frederik hin Sjette paa hans F&#x00F8;dselsdag">
-		&#x00BB;Til Dannerkongen Frederik hin Sjette paa hans F&#x00F8;dselsdag.&#x00AB;
+		<hi rend="italic">Til Dannerkongen Frederik hin Sjette paa hans F&#x00F8;dselsdag.</hi>
 	</event>
 
 	<event		
 		start="Nov 03 1812 00:00:00 GMT"
 		textColor="#669900"
 		title="Subskriptionsplan til en samling pr&#x00E6;dikener">
-		Subskriptionsplan til en samling &#x00BB;Bibelske Pr&#x00E6;dikener&#x00AB; over evangelierne (ikke realiseret).
+		Subskriptionsplan til en samling <hi rend="italic">Bibelske Pr&#x00E6;dikener</hi> over evangelierne (ikke realiseret).
 	</event>
 	
 	<event
 		start="Dec 30 1812 00:00:00 GMT"
 		textColor="#669900"
 		title="Kort Begreb af Verdens Kr&#x00F8;nike i Sammenh&#x00E6;ng">
-		&#x00BB;Kort Begreb af Verdens Kr&#x00F8;nike i Sammenh&#x00E6;ng.&#x00AB;
+		<hi rend="italic">Kort Begreb af Verdens Kr&#x00F8;nike i Sammenh&#x00E6;ng.</hi>
 	</event>
 
 	<event
 		start="Dec 30 1812 00:00:00 GMT"
 		textColor="#669900"
 		title="Hvorfor kaldes vi Lutheraner?">
-		&#x00BB;Hvorfor kaldes vi Lutheraner? Pr&#x00E6;diken p&#x00E5; Alle Helgens Dag&#x00AB; udkommer; pr&#x00E6;dikenen af samme navn holdtes i Udby Kirke 1. november (allehelgensdag). Indledningsdigtet &#x201C;I Wittenberg i Sachsenland&#x201D; er dateret 11. november; fortalen er dateret 22. november.
+		<hi rend="italic">Hvorfor kaldes vi Lutheraner? Pr&#x00E6;diken p&#x00E5; Alle Helgens Dag</hi> udkommer; pr&#x00E6;dikenen af samme navn holdtes i Udby Kirke 1. november (allehelgensdag). Indledningsdigtet &#x201C;I Wittenberg i Sachsenland&#x201D; er dateret 11. november; fortalen er dateret 22. november.
 	</event>
 
 	<event
 		start="Jun 08 1813 00:00:00 GMT"
 		textColor="#669900"
 		title="Kr&#x00F8;nikens Gienm&#x00E6;le">
-		&#x00BB;Kr&#x00F8;nikens Gienm&#x00E6;le.&#x00AB;
+		<hi rend="italic">Kr&#x00F8;nikens Gienm&#x00E6;le.</hi>
 	</event>
 
 	<event
 		start="Jul 12 1813 00:00:00 GMT"
 		textColor="#669900"
 		title="Hvad skal vi gj&#x00F8;re, at vi kan arve det evige Liv? ">
-		&#x00BB;Hvad skal vi gj&#x00F8;re, at vi kan arve det evige Liv? Aftensangspr&#x00E6;diken paa Femte S&#x00F8;ndag efter Paaske.&#x00AB;
+		<hi rend="italic">Hvad skal vi gj&#x00F8;re, at vi kan arve det evige Liv? Aftensangspr&#x00E6;diken paa Femte S&#x00F8;ndag efter Paaske.</hi>
 	</event>
 
 	<event
 		start="Jul 23 1813 00:00:00 GMT"
 		textColor="#669900"
 		title="Til F&#x00E6;drenelandet om dets Tarv og Fare">
-		&#x00BB;Til F&#x00E6;drenelandet om dets Tarv og Fare.&#x00AB;
+		<hi rend="italic">Til F&#x00E6;drenelandet om dets Tarv og Fare.</hi>
 	</event>
 	
 
@@ -412,89 +412,89 @@
 		start="Feb 01 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="Roskilde-Riim og Helligtrekongerlyset">
-		&#x00BB;Roskilde-Riim&#x00AB; og &#x00BB;Helligtrekongerlyset eller Tre Dages H&#x00E6;ndelser paa Dannemarks H&#x00F8;iskole&#x00AB; udkommer p&#x00E5; samme dag. F&#x00F8;rstn&#x00E6;vntes indledningsdigt er dateret 24. december 1813, sidstn&#x00E6;vntes fortale er dateret 10. januar 1814.
+		<hi rend="italic">Roskilde-Riim</hi> og <hi rend="italic">Helligtrekongerlyset eller Tre Dages H&#x00E6;ndelser paa Dannemarks H&#x00F8;iskole</hi> udkommer p&#x00E5; samme dag. F&#x00F8;rstn&#x00E6;vntes indledningsdigt er dateret 24. december 1813, sidstn&#x00E6;vntes fortale er dateret 10. januar 1814.
 	</event>
 
 	<event
 		start="Feb 25 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="En m&#x00E6;rkelig Spaadom">
-		&#x00BB;En m&#x00E6;rkelig Spaadom ogsaa om Dannemark efter en gammel Haandskrift.&#x00AB;
+		<hi rend="italic">En m&#x00E6;rkelig Spaadom ogsaa om Dannemark efter en gammel Haandskrift.</hi>
 	</event>
 
 	<event
 		start="Mar 17 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="En liden Bibelkr&#x00F8;nike">
-		&#x00BB;En liden Bibelkr&#x00F8;nike for B&#x00F8;rn og Menigmand.&#x00AB;
+		<hi rend="italic">En liden Bibelkr&#x00F8;nike for B&#x00F8;rn og Menigmand.</hi>
 	</event>
 
 	<event
 		start="May 01 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="Hvem er den falske Prophet? Hvem forvirrer Folket?">
-		Primo maj. &#x00BB;Hvem er den falske Prophet? Hvem forvirrer Folket?&#x00AB;
+		Primo maj. <hi rend="italic">Hvem er den falske Prophet? Hvem forvirrer Folket?</hi>
 	</event>
 
 	<event
 		start="Jun 07 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="Kort Begreb af Verdens Kr&#x00F8;nike">
-		&#x00BB;Kort Begreb af Verdens Kr&#x00F8;nike, betragtet i Sammenh&#x00E6;ng. F&#x00F8;rste Bind&#x00AB; udkommer (alt som udkom), fortalen er dateret 6. maj.
+		<hi rend="italic">Kort Begreb af Verdens Kr&#x00F8;nike, betragtet i Sammenh&#x00E6;ng. F&#x00F8;rste Bind</hi> udkommer (kun dette ene bind udkom), fortalen er dateret 6. maj.
 	</event>
 
 	<event
 		start="Aug 17 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="Skal vi tro paa Gud eller paa Athene?">
-		&#x00BB;Skal vi tro paa Gud eller paa Athene? Eller om Tro og Fornuft.&#x00AB;
+		<hi rend="italic">Skal vi tro paa Gud eller paa Athene? Eller om Tro og Fornuft.</hi>
 	</event>
 
 	<event
 		start="Oct 07 1814 00:00:00 GMT"
 		textColor="#669900"
 		title="Roskilde-Saga til Oplysning af Roskilde-Riim">
-		&#x00BB;Roskilde-Saga til Oplysning af Roskilde-Riim,&#x00AB; fortalen er dateret 15. maj.
+		<hi rend="italic">Roskilde-Saga til Oplysning af Roskilde-Riim,</hi> fortalen er dateret 15. maj.
 	</event>
 	
 
 	<event
 		start="Jan 05 1815 00:00:00 GMT"
 		earliestStart="Jan 01 1815 00:00:00 GMT"
-		latestEnd="Jan 10 1815 00:00:00 GMT"
-		end="Jan 17 1815 00:00:00 GMT"
+		latestEnd="Jan 07 1815 00:00:00 GMT"
+		end="Jan 08 1815 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
 		title="Herren kommer! Pr&#x00E6;diken">
-		Primo januar. &#x00BB;Herren kommer! Pr&#x00E6;diken over F&#x00F8;rste Advendt Evangelium til H&#x00F8;imesse paa Frederiksberg.&#x00AB;
+		Primo januar. <hi rend="italic">Herren kommer! Pr&#x00E6;diken over F&#x00F8;rste Advents Evangelium til H&#x00F8;imesse paa Frederiksberg.</hi>
 	</event>
 
 	<event
 		start="May 30 1815 00:00:00 GMT"
 		textColor="#669900"
 		title="Imod den lille Anklager">
-		&#x00BB;Imod den lille Anklager&#x00AB; (imod H.C. &#x00D8;rsted og Schelling).
+		<hi rend="italic">Imod den lille Anklager</hi> (imod <persName key="pe119">H.C. &#x00D8;rsted</persName> og <persName key="pe54">Schelling</persName>).
 	</event>
 
 	<event
 		start="May 31 1815 00:00:00 GMT"
 		textColor="#669900"
 		title="F&#x00E6;drene-Aaret til Frederik 6.">
-		&#x00BB;F&#x00E6;drene-Aaret. Dannekvad til Hans Majest&#x00E6;t Kong Frederik den Siette.&#x00AB;
+		<hi rend="italic">F&#x00E6;drene-Aaret. Dannekvad til Hans Majest&#x00E6;t Kong Frederik den Siette.</hi>
 	</event>
 
 	<event
 		start="Jul 01 1815 00:00:00 GMT"
 		textColor="#669900"
 		title="Kv&#x00E6;dlinger">
-		&#x00BB;Kv&#x00E6;dlinger eller Smaakvad,&#x00AB; en 412 sider stor digtsamling, overvejende med genoptryk.
+		<hi rend="italic">Kv&#x00E6;dlinger eller Smaakvad,</hi> en 412 sider stor digtsamling, overvejende med genoptryk.
 	</event>
 
 	<event
 		start="Jul 05 1815 00:00:00 GMT"
 		textColor="#669900"
 		title="Europa, Frankrig og Napoleon">
-		&#x00BB;Europa, Frankrig og Napoleon, en dansk historisk Betragtning.&#x00AB;
+		<hi rend="italic">Europa, Frankrig og Napoleon, en dansk historisk Betragtning.</hi>
 	</event>
 
 	<event
@@ -505,7 +505,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Pr&#x00F8;ver af Snorros og Saxos Kr&#x00F8;niker">
-		September. &#x00BB;Pr&#x00F8;ver af Snorros og Saxos Kr&#x00F8;niker.&#x00AB;
+		September. <hi rend="italic">Pr&#x00F8;ver af Snorros og Saxos Kr&#x00F8;niker.</hi>
 	</event>
 
 	<event
@@ -516,14 +516,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Fejde med Jens Baggesen">
-		Oktober 1815-marts 1816. Fejde med Jens Baggesen med udgangspunkt i dennes &#x00BB;Dr&#x00F8;mmen i Kronprinsessegade No. 390.&#x00AB;
+		Oktober 1815-marts 1816. Fejde med <persName key="pe20">Jens Baggesen</persName> med udgangspunkt i dennes <hi rend="italic">Dr&#x00F8;mmen i Kronprinsessegade No. 390.</hi>
 	</event>
 
 	<event
 		start="Dec 28 1815 00:00:00 GMT"
 		textColor="#669900"
 		title="Heimdall">
-		&#x00BB;Heimdall. Dansk Nyaars-Gave for 1816.&#x00AB;
+		<hi rend="italic">Heimdall. Dansk Nyaars-Gave for 1816.</hi>
 	</event>
 
 	<event
@@ -534,7 +534,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Besvarer P.E. M&#x00FC;llers anmeldelse af Pr&#x00F8;ver af Snorros og Saxos Kr&#x00F8;niker">
-		April. &#x00BB;Literatur-Tidendens Skudsmaal i Henseende til Pr&#x00F8;verne af Saxo og Snorro,&#x00AB; svar p&#x00E5; P.E. M&#x00FC;llers anmeldelse i &#x00BB;Dansk Literatur-Tidende.&#x00AB;
+		April. <hi rend="italic">Literatur-Tidendens Skudsmaal i Henseende til Pr&#x00F8;verne af Saxo og Snorro,</hi> svar p&#x00E5; P.E. M&#x00FC;llers anmeldelse i <hi rend="italic">Dansk Literatur-Tidende.</hi>
 	</event>
 
 	<event
@@ -545,28 +545,28 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Bibelske Pr&#x00E6;dikener efter Tidens Tarv">
-		Juni. &#x00BB;Bibelske Pr&#x00E6;dikener efter Tidens Tarv,&#x00AB; heri et fuldst&#x00E6;ndigt optryk af dimispr&#x00E6;dikenen fra 1810; fortalen er dateret 23. april. 
+		Juni. <hi rend="italic">Bibelske Pr&#x00E6;dikener efter Tidens Tarv,</hi> heri et fuldst&#x00E6;ndigt optryk af dimispr&#x00E6;dikenen fra 1810; fortalen er dateret 23. april. 
 	</event>
 
 	<event
 		start="Jul 18 1816 00:00:00 GMT"
 		textColor="#669900"
 		title="Danne-Virke, 1. hefte">
-		Grundtvig begynder udgivelsen af sit tidsskrift &#x00BB;Danne-Virke;&#x00AB; frem til 1819 udkommer i alt 16 hefter.
+		<persName key="pe4">Grundtvig</persName> begynder udgivelsen af sit tidsskrift <hi rend="italic">Danne-Virke;</hi> frem til 1819 udkommer i alt 16 hefter.
 	</event>
 
 	<event
 		start="Nov 28 1816 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Om Videnskabeligheds Forhold til Erfaring og sund Menneskeforstand&#x201D;">
-		&#x201C;Om Videnskabeligheds Forhold til Erfaring og sund Menneskeforstand&#x201D; trykt i &#x00BB;Danne-Virke.&#x00AB;
+		&#x201C;Om Videnskabeligheds Forhold til Erfaring og sund Menneskeforstand&#x201D; trykt i <hi rend="italic">Danne-Virke.</hi>
 	</event>
 
 	<event
 		start="Sep 30 1817 00:00:00 GMT"
 		textColor="#669900"
 		title="Udsigt over Verdens-Kr&#x00F8;niken">
-		&#x00BB;Udsigt over Verdens-Kr&#x00F8;niken fornemmelig i det Lutherske Tidsrum;&#x00AB; fortalen er dateret 19. juni.
+		<hi rend="italic">Udsigt over Verdens-Kr&#x00F8;niken fornemmelig i det Lutherske Tidsrum;</hi> fortalen er dateret 19. juni.
 	</event>
 
 	<event
@@ -577,35 +577,35 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Psalmer ved Jubel-Festen 1817">
-		Ultimo oktober. &#x00BB;Psalmer ved Jubel-Festen 1817&#x00AB; i anledning af 300-&#x00E5;ret for reformationens begyndelse, dvs. Luthers offentliggørelse af de 95 teser 31.10.1517.  
+		Ultimo oktober. <hi rend="italic">Psalmer ved Jubel-Festen 1817</hi> i anledning af 300-&#x00E5;ret for reformationens begyndelse, dvs. <persName key="pe42">Luther</persName>s offentligg&#x00F8;relse af de 95 teser 31.10.1517.  
 	</event>
 
 	<event
 		start="Dec 23 1817 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Det kimer nu til Jule-Fest&#x201D;">
-		Salmen &#x201C;Det kimer nu til Jule-Fest&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Salmen &#x201C;Det kimer nu til Jule-Fest&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Dec 18 1818 00:00:00 GMT"
 		textColor="#669900"
 		title="1. bind af Danmarks Kr&#x00F8;nike af Saxo Grammaticus">
-		1. bind af Grundtvigs overs&#x00E6;ttelse af &#x00BB;Danmarks Kr&#x00F8;nike af Saxo Grammaticus.&#x00AB;
+		1. bind af <persName key="pe4">Grundtvigs</persName> overs&#x00E6;ttelse af <hi rend="italic">Danmarks Kr&#x00F8;nike af Saxo Grammaticus.</hi>
 	</event>
 
 	<event
 		start="Dec 26 1818 00:00:00 GMT"
 		textColor="#669900"
 		title="Erkl&#x00E6;ring i fejden mellem Baggesen og Oehlenschl&#x00E4;ger">
-		Erkl&#x00E6;ring i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn&#x00AB; imod nogle af Oehlenschl&#x00E4;gers tilh&#x00E6;ngere i den s&#x00E5;kaldte &#x0027;tylvtestrid&#x0027;, sidste del af den litter&#x00E6;re fejde mellem Baggesen og Oehlenschl&#x00E4;ger.
+		Erkl&#x00E6;ring i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn</hi> imod nogle af <persName key="pe3">Oehlenschl&#x00E4;ger</persName>s tilh&#x00E6;ngere i den s&#x00E5;kaldte &#x0027;tylvtestrid&#x0027;, sidste del af den litter&#x00E6;re fejde mellem <persName key="pe20">Baggesen</persName> og <persName key="pe3">Oehlenschl&#x00E4;ger</persName>.
 	</event>
 
 	<event
 		start="Jan 11 1819 00:00:00 GMT"
 		textColor="#669900"
-		title="1. bind af Snorres Konge-Kr&#x00F8;nike">
-		1. del af Grundtvigs fordanskning af &#x00BB;Snorro Sturles&#x00F8;ns Norges Konge-Kr&#x00F8;nike.&#x00AB;
+		title="1. bind af Norges Konge-Kr&#x00F8;nike">
+		1. del af <persName key="pe4">Grundtvigs</persName> fordanskning af <hi rend="italic">Norges Konge-Kr&#x00F8;nike af Snorro Sturles&#x00F8;n.</hi>
 	</event>
 
 	<event
@@ -616,14 +616,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Sidste nummer af Danne-Virke">
-		Januar. &#x00BB;Danne-Virke,&#x00AB; bind 4, hefte 4 udkommer som det sidste nummer af tidsskriftet.
+		Januar. <hi rend="italic">Danne-Virke,</hi> bind 4, hefte 4 udkommer som det sidste nummer af tidsskriftet.
 	</event>
 
 	<event
 		start="Nov 27 1819 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Om den Lancasterske Methode&#x201D;">
-		&#x201C;Om den Lancasterske Methode&#x201D; trykkes i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn;&#x00AB; heri udtrykker Grundtvig skepsis overfor &#x0027;indbyrdes undervisning&#x0027; og advarer mod at indf&#x00F8;re metoden i (borger- og) almueskolen.
+		&#x201C;Om den Lancasterske Methode&#x201D; trykkes i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn;</hi> heri udtrykker <persName key="pe4">Grundtvig</persName> skepsis overfor &#x0027;indbyrdes undervisning&#x0027; og advarer mod at indf&#x00F8;re metoden i (borger- og) almueskolen.
 	</event>
 
 	<event
@@ -634,7 +634,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="2. bind af Danmarks Kr&#x00F8;nike af Saxo Grammaticus">
-		December. 2. bind af Grundtvigs overs&#x00E6;ttelse af &#x00BB;Danmarks Kr&#x00F8;nike af Saxo Grammaticus.&#x00AB;
+		December. 2. bind af <persName key="pe4">Grundtvigs</persName> overs&#x00E6;ttelse af <hi rend="italic">Danmarks Kr&#x00F8;nike af Saxo Grammaticus.</hi>
 	</event>
 
 	<event
@@ -644,43 +644,43 @@
 		end="Dec 16 1819 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
-		title="2. bind af Snorres Konge-Kr&#x00F8;nike">
-		December, 2. bind af Grundtvigs fordanskning af &#x00BB;Snorro Sturles&#x00F8;ns Norges Konge-Kr&#x00F8;nike.&#x00AB;
+		title="2. bind af Norges Konge-Kr&#x00F8;nike">
+		December, 2. bind af <persName key="pe4">Grundtvigs</persName> fordanskning af <hi rend="italic">Snorro Sturles&#x00F8;ns Norges Konge-Kr&#x00F8;nike.</hi>
 	</event>
 
 	<event
 		start="Aug 07 1820 00:00:00 GMT"
 		textColor="#669900"
 		title="Bjowulfs Drape">
-		Grundtvigs overs&#x00E6;ttelse af &#x00BB;Bjowulfs Drape. Et Gothisk Helte-Digt fra forrige Aartusinde.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> overs&#x00E6;ttelse af <hi rend="italic">Bjowulfs Drape. Et Gothisk Helte-Digt fra forrige Aartusinde.</hi>
 	</event>
 
 	<event
 		start="Dec 23 1820 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Et Barn er f&#x00F8;dt i Bethlehem&#x201D;">
-		&#x201C;Et Barn er f&#x00F8;dt i Bethlehem&#x201D; trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		&#x201C;Et Barn er f&#x00F8;dt i Bethlehem&#x201D; trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="Sep 24 1822 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over moderen">
-		Mindedigt over Grundtvigs mor trykt i &#x00BB;Nyeste Skilderie af Kj&#x00F8;benhavn.&#x00AB;
+		Mindedigt over <persName key="pe4">Grundtvigs</persName> mor trykt i <hi rend="italic">Nyeste Skilderie af Kj&#x00F8;benhavn.</hi>
 	</event>
 
 	<event
 		start="May 14 1823 00:00:00 GMT"
 		textColor="#669900"
 		title="Hjemkomstsang for Rasmus Rask">
-		Grundtvigs hjemkomstsang for sprogforskeren Rasmus Rask udkommer; blev afsunget ved en fest for Rask p&#x00E5; Skydebanen 3. maj.
+		<persName key="pe4">Grundtvigs</persName> hjemkomstsang for sprogforskeren <persName key="pe50">Rasmus Rask</persName> udkommer; blev afsunget ved en fest for <persName key="pe50">Rask</persName> p&#x00E5; Skydebanen 3. maj.
 	</event>
 
 	<event
 		start="Jun 25 1823 00:00:00 GMT"
 		textColor="#669900"
 		title="3. bind af Danmarks Kr&#x00F8;nike af Saxo Grammaticus.">
-		3. bind af Grundtvigs overs&#x00E6;ttelse af &#x00BB;Danmarks Kr&#x00F8;nike af Saxo Grammaticus.&#x00AB;
+		3. bind af <persName key="pe4">Grundtvigs</persName> overs&#x00E6;ttelse af <hi rend="italic">Danmarks Kr&#x00F8;nike af Saxo Grammaticus.</hi>
 	</event>
 
 	<event
@@ -691,91 +691,91 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Sange ved fester p&#x00E5; Skydebanen">
-		August. Grundtvig skriver sange til fester i Det kongelige kj&#x00F8;benhavnske Skydeselskab og danske Broderskab.
+		August. <persName key="pe4">Grundtvig</persName> skriver sange til fester i Det kongelige kj&#x00F8;benhavnske Skydeselskab og danske Broderskab.
 	</event>
 
 	<event
 		start="Sep 04 1824 00:00:00 GMT"
 		textColor="#669900"
 		title="Nyaars-Morgen">
-		&#x00BB;Nyaars-Morgen&#x00AB; udkommer; fortalen er dateret 12. august, Grundtvigs og Lises seks-&#x00E5;rs bryllupsdag.
+		<hi rend="italic">Nyaars-Morgen</hi> udkommer; fortalen er dateret 12. august, <persName key="pe4">Grundtvig</persName>s og <persName key="pe171">Lise</persName>s seks-&#x00E5;rs bryllupsdag.
 	</event>
 
 	<event
 		start="Mar 22 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="1. hefte af Theologisk Maanedsskrift">
-		Det f&#x00F8;rste hefte af &#x00BB;Theologisk Maanedsskrift,&#x00AB; redigeret af Grundtvig sammen med A.G. Rudelbach; i alt udkom 13 bind &#x00E0; 3 hefter i tiden mellem marts 1825 og september 1828.
+		Det f&#x00F8;rste hefte af <hi rend="italic">Theologisk Maanedsskrift,</hi> redigeret af <persName key="pe4">Grundtvig</persName> sammen med <persName key="pe275">A.G. Rudelbach</persName>; i alt udkom 13 bind &#x00E0; 3 hefter i tiden mellem marts 1825 og september 1828.
 	</event>
 
 	<event
 		start="Sep 05 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="Kirkens Gienm&#x00E6;le">
-		&#x00BB;Kirkens Gienm&#x00E6;le mod Professor Theologi&#x00E6; Dr. H. N. Clausen&#x00AB;, Grundtvigs svar p&#x00E5; H. N. Clausens bog &#x00BB;Catolicismens og Protestantismens Kirkeforfatning, L&#x00E6;re og Ritus&#x00AB;. Grundtvigs fortale er dateret &#x201C;Irin&#x00E6;i Dag&#x201C;, dvs. 26. august, f&#x00E5; dage efter udgivelsen af Clausens bog.
+		<hi rend="italic">Kirkens Gienm&#x00E6;le mod Professor Theologi&#x00E6; Dr. H. N. Clausen</hi>, <persName key="pe4">Grundtvigs</persName> svar p&#x00E5; <persName key="pe111">H. N. Clausens</persName> bog <hi rend="italic">Catolicismens og Protestantismens Kirkeforfatning, L&#x00E6;re og Ritus</hi>. <persName key="pe4">Grundtvigs</persName> fortale er dateret &#x201C;Irin&#x00E6;i Dag&#x201D;, dvs. 26. august, f&#x00E5; dage efter udgivelsen af Clausens bog.
 	</event>
 
 	<event
 		start="Sep 13 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="2. oplag af Kirkens Gienm&#x00E6;le">
-		2. uforandrede oplag af &#x00BB;Kirkens Gienm&#x00E6;le.&#x00AB;
+		2. uforandrede oplag af <hi rend="italic">Kirkens Gienm&#x00E6;le.</hi>
 	</event>
 
 	<event
 		start="Oct 19 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="3. oplag af Kirkens Gienm&#x00E6;le">
-		3. uforandrede oplag af &#x00BB;Kirkens Gienm&#x00E6;le.&#x00AB;
+		3. uforandrede oplag af <hi rend="italic">Kirkens Gienm&#x00E6;le.</hi>
 	</event>
 
 	<event
 		start="Oct 28 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="Den christelige Kamp">
-		&#x00BB;Den christelige Kamp. Pr&#x00E6;diken paa eenogtyvende Trinitatis-S&#x00F8;ndag 1825.&#x00AB;
+		<hi rend="italic">Den christelige Kamp. Pr&#x00E6;diken paa eenogtyvende Trinitatis-S&#x00F8;ndag 1825.</hi>
 	</event>
 
 	<event
 		start="Nov 18 1825 00:00:00 GMT"
 		textColor="#669900"
 		title="2. oplag af Den christelige Kamp">
-		2. oplag af &#x00BB;Den christelige Kamp.&#x00AB;
+		2. oplag af <hi rend="italic">Den christelige Kamp.</hi>
 	</event>
 
 	<event
 		start="Apr 28 1826 00:00:00 GMT"
 		textColor="#669900"
 		title="H&#x00F8;itids-Psalmer til Tusindaars-Festen">
-		&#x00BB;Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen&#x00AB; for Ansgars ankomst til Danmark, heri &#x201C;Den signede Dag med Fryd vi seer.&#x201D;
+		<hi rend="italic">Danske H&#x00F8;itids-Psalmer til Tusindaars-Festen</hi> for Ansgars ankomst til Danmark, heri &#x201C;Den signede Dag med Fryd vi seer.&#x201D;
 	</event>
 
 	<event
 		start="May 09 1826 00:00:00 GMT"
 		textColor="#669900"
 		title="Kong Harald og Ansgar">
-		&#x00BB;Kong Harald og Ansgar. Rim-Blade af Danmarks Kirke-Bog til Jubel-Aaret,&#x00AB; dvs. 1000-&#x00E5;ret for Ansgars ankomst til Danmark.
+		<hi rend="italic">Kong Harald og Ansgar. Rim-Blade af Danmarks Kirke-Bog til Jubel-Aaret,</hi> dvs. 1000-&#x00E5;ret for <persName key="pe17">Ansgar</persName>s ankomst til Danmark.
 	</event>
 
 	<event
 		start="Sep 02 1826 00:00:00 GMT"
 		textColor="#669900"
 		title="Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige">
-		&#x00BB;Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige.&#x00AB;
+		<hi rend="italic">Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige.</hi>
 	</event>
 
 	<event
 		start="Oct 03 1826 00:00:00 GMT"
 		textColor="#669900"
 		title="2. oplag af Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige">
-		&#x00BB;Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige&#x00AB; udkommer i 2., uforandrede oplag.
+		<hi rend="italic">Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige</hi> udkommer i 2., uforandrede oplag.
 	</event>
 
 	<event
 		start="Oct 14 1826 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over Jens Baggesen">
-		Mindedigt over Jens Baggesen i &#x00BB;Nyt Aftenblad.&#x00AB;
+		Mindedigt over <persName key="pe20">Jens Baggesen</persName> i <hi rend="italic">Nyt Aftenblad.</hi>
 	</event>
 
 	<event
@@ -786,14 +786,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Forlader redaktionen af Theologisk Maanedsskrift">
-		December. &#x00BB;Theologisk Maanedsskrift&#x00AB; udkommer med en meddelelse fra Grundtvig, dateret 30. november, om at redaktionen af bladet fremover l&#x00E6;gges i h&#x00E6;nderne p&#x00E5; A.G. Rudelbach alene.
+		December. <hi rend="italic">Theologisk Maanedsskrift</hi> udkommer med en meddelelse fra <persName key="pe4">Grundtvig</persName>, dateret 30. november, om at redaktionen af bladet fremover l&#x00E6;gges i h&#x00E6;nderne p&#x00E5; <persName key="pe275">A.G. Rudelbach</persName> alene.
 	</event>
 	
 	<event
 		start="Feb 23 1827 00:00:00 GMT"
 		textColor="#669900"
 		title="Skribenten Nik. Fred. Sev. Grundtvigs Literaire Testamente">
-		&#x00BB;Skribenten Nik. Fred. Sev. Grundtvigs Literaire Testamente.&#x00AB;
+		<hi rend="italic">Skribenten Nik. Fred. Sev. Grundtvigs Literaire Testamente.</hi>
 	</event>
 
 	<event
@@ -803,64 +803,64 @@
 		end="Mar 10 1827 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
-		title="&#x201C;Om Religions-Frihed&#x201D; cencureret">
-		&#x201C;Om Religions-Frihed&#x201D;s to f&#x00F8;rste dele udkommer i &#x00BB;Theologisk Maanedsskrift&#x00AB; 23. januar og 21. februar, tredje del blev trykt med imprimatur dateret 6. marts, men blev alligevel beslaglagt af politiet. Det beslaglagte oplag henl&#x00E5; indtil 1866, hvor det omsider blev udgivet.
+		title="&#x201C;Om Religions-Frihed&#x201D; censureret">
+		&#x201C;Om Religions-Frihed&#x201D;s to f&#x00F8;rste dele udkommer i <hi rend="italic">Theologisk Maanedsskrift</hi> 23. januar og 21. februar, tredje del blev trykt med imprimatur dateret 6. marts, men blev alligevel beslaglagt af politiet. Det beslaglagte oplag henl&#x00E5; indtil 1866, hvor det omsider blev udgivet.
 	</event>
 
 	<event
 		start="Oct 17 1827 00:00:00 GMT"
 		textColor="#669900"
 		title="1. del af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;">
-		Imprimatur til f&#x00F8;rste stykke af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;, trykt i &#x00BB;Theologisk Maanedsskrift.&#x00AB;
+		Imprimatur til f&#x00F8;rste stykke af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;, trykt i <hi rend="italic">Theologisk Maanedsskrift.</hi>
 	</event>
 
 	<event
 		start="Nov 23 1827 00:00:00 GMT"
 		textColor="#669900"
 		title="Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog 1. bind">
-		&#x00BB;Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,&#x00AB; 1. bind; fortalen er dateret 30. september.
+		<hi rend="italic">Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,</hi> 1. bind; fortalen er dateret 30. september.
 	</event>
 
 	<event
 		start="Dec 14 1827 00:00:00 GMT"
 		textColor="#669900"
 		title="2. del af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;">
-		Imprimatur til andet stykke af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;, trykt i &#x00BB;Theologisk Maanedsskrift.&#x00AB;
+		Imprimatur til andet stykke af &#x201C;Om Legemets Opstandelse og Deel i Guds Rige&#x201D;, trykt i <hi rend="italic">Theologisk Maanedsskrift.</hi>
 	</event>
 
 	<event
 		start="Jul 14 1828 00:00:00 GMT"
 		textColor="#669900"
 		title="2. udgave af En liden Bibel-Kr&#x00F8;nike">
-		2. udgave af &#x00BB;En liden Bibel-Kr&#x00F8;nike&#x00AB; (1814).
+		2. udgave af <hi rend="italic">En liden Bibel-Kr&#x00F8;nike for B&#x00F8;rn og Menigmand</hi> (1. udg. 1814).
 	</event>
 
 	<event
 		start="Sep 26 1828 00:00:00 GMT"
 		textColor="#669900"
 		title="Sidste hefte af Theologisk Maanedsskrift">
-		Sidste hefte af &#x00BB;Theologisk Maanedsskrift&#x00AB; udkommer; heri bl.a. Grundtvigs &#x201C;Studier til en bibelsk Rimkr&#x00F8;nike.&#x201D;
+		Sidste hefte af <hi rend="italic">Theologisk Maanedsskrift</hi> udkommer; heri bl.a. <persName key="pe4">Grundtvig</persName>s &#x201C;Studier til en bibelsk Rimkr&#x00F8;nike&#x201D;.
 	</event>
 
 	<event
 		start="Oct 31 1828 00:00:00 GMT"
 		textColor="#669900"
 		title="Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog, 2. bind">
-		&#x00BB;Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,&#x00AB; 2. bind. 
+		<hi rend="italic">Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,</hi> 2. bind. 
 	</event>
 
 	<event
 		start="Mar 06 1829 00:00:00 GMT"
 		textColor="#669900"
 		title="Kr&#x00F8;nike-Riim til B&#x00F8;rne-L&#x00E6;rdom">
-		&#x00BB;Kr&#x00F8;nike-Riim til B&#x00F8;rne-L&#x00E6;rdom;&#x00AB; fortalen dateret 16. december 1828.
+		<hi rend="italic">Kr&#x00F8;nike-Riim til B&#x00F8;rne-L&#x00E6;rdom;</hi> fortalen dateret 16. december 1828.
 	</event>
 
 	<event
 		start="Dec 16 1829 00:00:00 GMT"
 		textColor="#669900"
 		title="Historisk B&#x00F8;rne-L&#x00E6;rdom">
-		&#x00BB;Historisk B&#x00F8;rne-L&#x00E6;rdom.&#x00AB;
+		<hi rend="italic">Historisk B&#x00F8;rne-L&#x00E6;rdom.</hi>
 	</event>
 
 	<event
@@ -871,70 +871,70 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Bibliotheca Anglo-Saxonica">
-		Efter&#x00E5;r. Subskribtionsindbydelsen &#x00BB;Bibliotheca Anglo-Saxonica&#x00AB; udkommer i London.
+		Efter&#x00E5;r. Subskribtionsindbydelsen <hi rend="italic">Bibliotheca Anglo-Saxonica</hi> udkommer i London.
 	</event>
 
 	<event
 		start="Jan 07 1831 00:00:00 GMT"
 		textColor="#669900"
 		title="Politiske Betragtninger med Blik paa Danmark og Holsteen">
-		&#x00BB;Politiske Betragtninger med Blik paa Danmark og Holsteen;&#x00AB; udkommer p&#x00E5; tysk den 25. januar.
+		<hi rend="italic">Politiske Betragtninger med Blik paa Danmark og Holsteen;</hi> udkommer p&#x00E5; tysk den 25. januar.
 	</event>
 
 	<event
 		start="Mar 02 1831 00:00:00 GMT"
 		textColor="#669900"
 		title="2. oplag af Bibliotheca Anglo-Saxonica">
-		2. oplag af subskribtionsindbydelsen &#x00BB;Bibliotheca Anglo-Saxonica&#x00AB; udkommer i London.
+		2. oplag af subskribtionsindbydelsen <hi rend="italic">Bibliotheca Anglo-Saxonica</hi> udkommer i London.
 	</event>
 
 	<event
 		start="Jul 21 1831 00:00:00 GMT"
 		textColor="#669900"
 		title="Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog, 3. bind">
-		&#x00BB;Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,&#x00AB; 3. bind.
+		<hi rend="italic">Christelige Pr&#x00E6;dikener eller S&#x00F8;ndags-Bog,</hi> 3. bind.
 	</event>
 
 	<event
 		start="Oct 20 1831 00:00:00 GMT"
 		textColor="#669900"
 		title="Subskribtionsplan for Nordens Mythologi">
-		Subskribtionsplan for &#x00BB;Nordens Mythologi&#x00AB; udsendt.
+		Subskribtionsplan for <hi rend="italic">Nordens Mythologi</hi> udsendt.
 	</event>
 
 	<event
 		start="Nov 02 1831 00:00:00 GMT"
 		textColor="#669900"
 		title="Om den Clausenske Injurie-Sag">
-		&#x00BB;Om den Clausenske Injurie-Sag.&#x00AB;
+		<hi rend="italic">Om den Clausenske Injurie-Sag.</hi>
 	</event>
 
 	<event
 		start="Sep 04 1832 00:00:00 GMT"
 		textColor="#669900"
 		title="Subskriptionsplan for Haandbog i Verdens-Historien">
-		Subskriptionsplan for &#x00BB;Haandbog i Verdens-Historien.&#x00AB;
+		Subskriptionsplan for <hi rend="italic">Haandbog i Verdens-Historien.</hi>
 	</event>
 
 	<event
 		start="Oct 05 1832 00:00:00 GMT"
 		textColor="#669900"
 		title="2. oplag af Historisk B&#x00F8;rne-L&#x00E6;rdom">
-		2. oplag af &#x00BB;Historisk B&#x00F8;rne-L&#x00E6;rdom&#x00AB; (1829).
+		2. oplag af <hi rend="italic">Historisk B&#x00F8;rne-L&#x00E6;rdom</hi> (1829).
 	</event>
 
 	<event
 		start="Nov 24 1832 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over Rasmus Rask">
-		Mindedigt over Rasmus Rask i &#x00BB;Kj&#x00F8;benhavns-Posten.&#x00AB;
+		Mindedigt over <persName key="pe50">Rasmus Rask</persName> i <hi rend="italic">Kj&#x00F8;benhavns-Posten.</hi>
 	</event>
 
 	<event
 		start="Dec 07 1832 00:00:00 GMT"
 		textColor="#669900"
 		title="Om Daabs-Pagten">
-		&#x00BB;Om Daabs-Pagten;&#x00AB; 2., uforandrede oplag 14. december.
+		<hi rend="italic">Om Daabs-Pagten;</hi> 2., uforandrede oplag 14. december.
 	</event>
 
 	<event
@@ -945,112 +945,112 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Tag det sorte Kors fra Graven&#x201D; og &#x201C;De Levendes Land.&#x201D;">
-		Medio december. L.C. Hagen (red.): &#x00BB;Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom&#x00AB;, heri bl.a. &#x201C;Tag det sorte Kors fra Graven&#x201D; og digtet &#x201C;O deilige Land eller De Levendes Land.&#x201D;
+		Medio december. <persName key="pe268">L.C. Hagen</persName> (red.): <hi rend="italic">Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom</hi>, heri bl.a. &#x201C;Tag det sorte Kors fra Graven&#x201D; og digtet &#x201C;De Levendes Land&#x201D; med begyndelsen &#x201C;O deilige Land&#x201D;. 
 	</event>
 
 	<event
 		start="Dec 22 1832 00:00:00 GMT"
 		textColor="#669900"
 		title="Nordens Mythologi 1832">
-		&#x00BB;Nordens Mythologi eller Sindbilled-Sprog;&#x00AB; fortalen er dateret 12. august, Grundtvigs 14-&#x00E5;rs bryllupsdag, otte &#x00E5;r efter &#x00BB;Nyaars-Morgen.&#x00AB;
+		<hi rend="italic">Nordens Mythologi eller Sindbilled-Sprog;</hi> fortalen er dateret 12. august, <persName key="pe4">Grundtvigs</persName> 14-&#x00E5;rs bryllupsdag, otte &#x00E5;r efter <hi rend="italic">Nyaars-Morgen.</hi>
 	</event>
 
 	<event
 		start="Sep 15 1833 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Ved Mid-Aften Dagen h&#x00E6;lder&#x201D;">
-		Digtet &#x201C;Ved Mid-Aften Dagen h&#x00E6;lder&#x201D; i anledning af 50-&#x00E5;rsf&#x00F8;dselsdagen trykt i J.C. Lindberg (red.): &#x00BB;Nordisk Kirketidende.&#x00AB; Titlen er egentlig &#x201C;Til Christne Venner&#x201D;.
+		Digtet &#x201C;Ved Mid-Aften Dagen h&#x00E6;lder&#x201D; i anledning af 50-&#x00E5;rsf&#x00F8;dselsdagen trykt i <persName key="pe80">J.C. Lindberg</persName> (red.): <hi rend="italic">Nordisk Kirketidende.</hi> Titlen er egentlig &#x201C;Til Christne Venner&#x201D;.
 	</event>
 
 	<event
 		start="Nov 09 1833 00:00:00 GMT"
 		textColor="#669900"
 		title="1. del af Haandbog i Verdenshistorien">
-		1. del af &#x00BB;Haandbog i Verdenshistorien.&#x00AB;
+		1. del af <hi rend="italic">Haandbog i Verdenshistorien.</hi>
 	</event>
 
 	<event
 		start="Apr 12 1834 00:00:00 GMT"
 		textColor="#669900"
 		title="Om Sognebaandets L&#x00F8;sning og Hr. Professor Clausen">
-		&#x00BB;Om Sognebaandets L&#x00F8;sning og Hr. Professor Clausen.&#x00AB;
+		<hi rend="italic">Om Sognebaandets L&#x00F8;sning og Hr. Professor Clausen.</hi>
 	</event>
 
 	<event
 		start="Apr 14 1834 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Gylden-Aaret&#x201D; til Frederik 6.">
-		Udgiver det store digt &#x201C;Gylden-Aaret&#x201D; i anledning af Frederiks 6.s 50-&#x00E5;rs regeringsjubil&#x00E6;um; digtet blev afsluttet i januar.
+		Udgiver det store digt &#x201C;Gylden-Aaret&#x201D; i anledning af <persName key="pe96">Frederiks 6.</persName>s 50-&#x00E5;rs regeringsjubil&#x00E6;um; digtet blev afsluttet i januar.
 	</event>
 
 	<event
 		start="Jul 02 1834 00:00:00 GMT"
 		textColor="#669900"
 		title="Den Danske Stats-Kirke upartisk betragtet">
-		&#x00BB;Den Danske Stats-Kirke upartisk betragtet.&#x00AB;
+		<hi rend="italic">Den Danske Stats-Kirke upartisk betragtet.</hi>
 	</event>
 
 	<event
 		start="May 07 1836 00:00:00 GMT"
 		textColor="#669900"
 		title="Det Danske Fiir-Kl&#x00F8;ver eller Danskheden partisk betragtet">
-		&#x00BB;Det Danske Fiir-Kl&#x00F8;ver eller Danskheden partisk betragtet.&#x00AB;
+		<hi rend="italic">Det Danske Fiir-Kl&#x00F8;ver eller Danskheden partisk betragtet.</hi>
 	</event>
 
 	<event
 		start="Oct 24 1836 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, 1. hefte">
-		&#x00BB;Sang-V&#x00E6;rk til den Danske Kirke,&#x00AB; 1. hefte.
+		<hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke,</hi> 1. hefte.
 	</event>
 
 	<event
 		start="Nov 24 1836 00:00:00 GMT"
 		textColor="#669900"
 		title="2. del af Haandbog i Verdenshistorien">
-		2. del af &#x00BB;Haandbog i Verdenshistorien.&#x00AB;
+		2. del af <hi rend="italic">Haandbog i Verdenshistorien.</hi>
 	</event>
 
 	<event
 		start="Jul 01 1837 00:00:00 GMT"
 		textColor="#669900"
 		title="Til Nordm&#x00E6;nd om en Norsk H&#x00F8;i-Skole">
-		Juli. &#x00BB;Til Nordm&#x00E6;nd om en Norsk H&#x00F8;i-Skole&#x00AB; udkommer i Kristiania (Oslo), hvilket i K&#x00F8;benhavn betragtes som et fors&#x00F8;g p&#x00E5; omg&#x00E5;else af den danske censur.
+		Juli. <hi rend="italic">Til Nordm&#x00E6;nd om en Norsk H&#x00F8;i-Skole</hi> udkommer i Christiania (Oslo), hvilket i K&#x00F8;benhavn betragtes som et fors&#x00F8;g p&#x00E5; omg&#x00E5;else af den danske censur.
 	</event>
 
 	<event
 		start="Sep 13 1837 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, 1. bind">
-		&#x00BB;Sang-V&#x00E6;rk til den Danske Kirke,&#x00AB; 1. bind, foreligger som f&#x00E6;rdig bog (er udkommet i hefter siden oktober 1836); det bliver den sidste af Grundtvigs b&#x00F8;ger forsynet med censors imprimatur.
+		<hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke,</hi> 1. bind, foreligger som f&#x00E6;rdig bog (er udkommet i hefter siden oktober 1836); det bliver den sidste af <persName key="pe4">Grundtvig</persName>s b&#x00F8;ger forsynet med censors imprimatur.
 	</event>
 	
 	<event		
 		start="Jan 25 1838 00:00:00 GMT"
 		textColor="#669900"
 		title="Til Frederik 6.s 70-&#x00E5;rsdag">
-		F&#x00F8;dselsdagsdigt til Frederik 6.s 70-&#x00E5;rsdag, &#x201C;28. Januar 1838&#x201D; (&#x201C;Sytti Aar en hellig Skjald&#x0085;&#x201D;) trykt i &#x00BB;Dagen&#x00AB;, nr. 22.
+		F&#x00F8;dselsdagsdigt til <persName key="pe96">Frederik 6.</persName>s 70-&#x00E5;rsdag, &#x201C;28. Januar 1838&#x201D; (&#x201C;Sytti Aar en hellig Skjald&#x201D;) trykt i <hi rend="italic">Dagen</hi>, nr. 22.
 	</event>
 	
 	<event
 		start="Feb 05 1838 00:00:00 GMT"
 		textColor="#669900"
 		title="Versificeret opfordring til afhj&#x00E6;lpning af br&#x00E6;ndselsn&#x00F8;den">
-		Versificeret opfordring i &#x00BB;Adresse-Avisen&#x00AB; og til afhj&#x00E6;lpning af br&#x00E6;ndselsn&#x00F8;den blandt sm&#x00E5;folk i den strenge vinter; Grundtvig bidrager desuden &#x00F8;konomisk. Opfordringen gentages i &#x00BB;Kj&#x00F8;benhavnsposten&#x00AB; 20. februar 
+		Versificeret opfordring i <hi rend="italic">Adresse-Avisen</hi> til afhj&#x00E6;lpning af br&#x00E6;ndselsn&#x00F8;den blandt sm&#x00E5;folk i den strenge vinter; <persName key="pe4">Grundtvig</persName> bidrager desuden &#x00F8;konomisk. Opfordringen gentages i <hi rend="italic">Kj&#x00F8;benhavnsposten</hi> 20. februar 
 	</event>
 
 	<event
 		start="Feb 16 1838 00:00:00 GMT"
 		textColor="#669900"
 		title="Skolen for Livet og Academiet i Soer">
-		&#x00BB;Skolen for Livet og Academiet i Soer,&#x00AB; heri som indledning &#x201C;Moders Navn er en himmelsk Lyd.&#x201D;
+		<hi rend="italic">Skolen for Livet og Academiet i Soer,</hi> heri som indledning &#x201C;Moders Navn er en himmelsk Lyd&#x201D;.
 	</event>
 
 	<event
 		start="Apr 01 1838 00:00:00 GMT"
 		textColor="#669900"
 		title="P. Hjort (red.): Psalmer og B&#x00F8;nner">
-		April (?). Peder Hjort (red.): &#x00BB;Psalmer og B&#x00F8;nner&#x00AB; med 63 salmer, heraf seks af Grundtvig.
+		April (?). <persName key="pe89">Peder Hjort</persName> (red.): <hi rend="italic">Psalmer og B&#x00F8;nner</hi> med 63 salmer, heraf seks af <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event
@@ -1061,7 +1061,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Den frie danske Bondes Vel">
-		Ultimo maj. &#x00BB;Den frie danske Bondes Vel&#x00AB; udkommer som enkelttryk i anledning af 50-&#x00E5;ret for forordningen om stavnsb&#x00E5;ndets oph&#x00E6;velse 20. juni 1788; det optrykkes efter Grundtvigs &#x00F8;nske i &#x00BB;Kj&#x00F8;benhavnsposten&#x00AB; 4. juni.
+		Ultimo maj. <hi rend="italic">Den frie danske Bondes Vel</hi> udkommer som enkelttryk i anledning af 50-&#x00E5;ret for forordningen om stavnsb&#x00E5;ndets oph&#x00E6;velse 20. juni 1788; det optrykkes efter <persName key="pe4">Grundtvigs</persName> &#x00F8;nske i <hi rend="italic">Kj&#x00F8;benhavnsposten</hi> 4. juni.
 	</event>
 
 	<event
@@ -1072,14 +1072,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Nordiske Smaadigte">
-		Primo juli. &#x00BB;Nordiske Smaadigte&#x00AB; udkommer i Kristiania (Oslo); fortalen er dateret 4.maj.
+		Primo juli. <hi rend="italic">Nordiske Smaadigte</hi> udkommer i Christiania (Oslo); fortalen er dateret 4. maj.
 	</event>
 
 	<event
 		start="Oct 07 1838 00:00:00 GMT"
 		textColor="#669900"
 		title="Hyldestdigt til Thorvaldsen">
-		Bidrager til festen for den hjemvendte billedhugger Albert Thorvaldsen med et hyldestdigt og opl&#x00E6;sning af &#x201C;Ving-Thors Hammer.&#x201D;
+		Bidrager til festen for den hjemvendte billedhugger <persName key="pe124">Albert Thorvaldsen</persName> med et hyldestdigt og opl&#x00E6;sning af &#x201C;Ving-Thors Hammer&#x201D;.
 	</event>
 
 
@@ -1091,98 +1091,98 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Om Nordens videnskabelige Forening&#x201D;">
-		Februar. &#x201C;Om Nordens videnskabelige Forening&#x201D; trykt i &#x00BB;Brage og Idun, et nordisk Fj&#x00E6;rding&#x00E5;rsskrift,&#x00AB; bind 1, 1. hefte.
+		Februar. &#x201C;Om Nordens videnskabelige Forening&#x201D; trykt i <hi rend="italic">Brage og Idun, et nordisk Fj&#x00E6;rding&#x00E5;rsskrift,</hi> bind 1, 1. hefte.
 	</event>
 
 	<event
 		start="Feb 28 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale til Folkeraadet om Dansk Kirkefrihed">
-		&#x00BB;Tale til Folkeraadet om Dansk Kirkefrihed.&#x00AB;
+		<hi rend="italic">Tale til Folkeraadet om Dansk Kirkefrihed.</hi>
 	</event>
 
 	<event
 		start="Apr 01 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, bind 2, 1. hefte">
-		April. &#x00BB;Sang-V&#x00E6;rk til den Danske Kirke,&#x00AB; bind 2, 1. hefte. 
+		April. <hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke,</hi> bind 2, 1. hefte. 
 	</event>
 
 	<event
 		start="May 28 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Danmarks deiligst Vang og V&#x00E6;nge&#x201D;">
-		&#x201C;F&#x00E6;drelandets Skaal&#x201D; (&#x201C;Danmarks deiligst Vang og V&#x00E6;nge&#x201D;) trykkes i &#x00BB;Kj&#x00F8;benhavnsposten;&#x00AB; afsunget i L&#x00E6;seforeningen 27. maj og i Danske Samfund 28. maj; sangen var skrevet til sidstn&#x00E6;vnte lejlighed.
+		&#x201C;F&#x00E6;drelandets Skaal&#x201D; (&#x201C;Danmarks deiligst Vang og V&#x00E6;nge&#x201D;) trykkes i <hi rend="italic">Kj&#x00F8;benhavnsposten;</hi> afsunget i L&#x00E6;seforeningen 27. maj og i Danske Samfund 28. maj; denne bearbejdelse af <persName key="pe221">Laurids O. Koks</persName> sang fra 1684 var skrevet til sidstn&#x00E6;vnte lejlighed.
 	</event>
 
 	<event
 		start="Jun 21 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Aabent Vennebrev til en Engelsk Pr&#x00E6;st">
-		&#x00BB;Aabent Vennebrev til en Engelsk Pr&#x00E6;st.&#x00AB;
+		<hi rend="italic">Aabent Vennebrev til en Engelsk Pr&#x00E6;st.</hi>
 	</event>
 
 	<event
 		start="Dec 01 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Kong Christian-Frederiks Hyldning i Danske Samfund">
-		December. &#x00BB;Kong Christian-Frederiks Hyldning i Danske Samfund.&#x00AB;
+		December. <hi rend="italic">Kong Christian-Frederiks Hyldning i Danske Samfund.</hi>
 	</event>
 
 	<event
 		start="Dec 17 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Kong Frederik den Sjettes Efterm&#x00E6;le i Danske Samfund">
-		&#x00BB;Kong Frederik den Sjettes Efterm&#x00E6;le i Danske Samfund.&#x00AB;
+		<hi rend="italic">Kong Frederik den Sjettes Efterm&#x00E6;le i Danske Samfund.</hi>
 	</event>
 
 	<event
 		start="Dec 18 1839 00:00:00 GMT"
 		textColor="#669900"
 		title="Frisprog mod H. H. Hr. Biskop Mynsters Forslag til en ny Forordnet Alterbog">
-		&#x00BB;Frisprog mod H. H. Hr. Biskop Mynsters Forslag til en ny Forordnet Alterbog&#x00AB;.
+		<hi rend="italic">Frisprog mod H. H. Hr. Biskop Mynsters Forslag til en ny Forordnet Alterbog</hi>.
 	</event>
 
 	<event
 		start="Feb 14 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="Kj&#x00E6;rminder til Kong Frederik den Sjettes Krands">
-		&#x00BB;Kj&#x00E6;rminder til Kong Frederik den Sjettes Krands.&#x00AB;
+		<hi rend="italic">Kj&#x00E6;rminder til Kong Frederik den Sjettes Krands.</hi>
 	</event>
 
 	<event
 		start="May 22 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang i Anledning af Majest&#x00E6;ternes S&#x00F8;lvbryllup">
-		&#x00BB;Sang i Anledning af Majest&#x00E6;ternes S&#x00F8;lvbryllup.&#x00AB;
+		<hi rend="italic">Sang i Anledning af Majest&#x00E6;ternes S&#x00F8;lvbryllup.</hi>
 	</event>
 
 	<event
 		start="Jun 28 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="Sange i anledning af Christian 8.s kroning">
-		Grundtvig digter flere sange i anledning af Christian 8.s og dronning Caroline Amalies kroning og salving.
+		<persName key="pe4">Grundtvig</persName> digter flere sange i anledning af <persName key="pe98">Christian 8.s</persName> og dronning <persName key="pe108">Caroline Amalies</persName> kroning og salving.
 	</event>
 	
 	<event
 		start="Oct 08 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="Skjalde-Blik paa Danmarks Stjerne">
-		&#x00BB;Skjalde-Blik paa Danmarks Stjerne.&#x00AB;
+		<hi rend="italic">Skjalde-Blik paa Danmarks Stjerne.</hi>
 	</event>
 	
 	<event
 		start="Oct 10 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="Phenix-Fuglen">
-		Ca. 10. oktober. &#x00BB;Phenix-Fuglen, et Angelsachsisk Kvad,&#x00AB; fordansket af Grundtvig.
+		Ca. 10. oktober. <hi rend="italic">Phenix-Fuglen, et Angelsachsisk Kvad,</hi> fordansket af <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event
 		start="Nov 03 1840 00:00:00 GMT"
 		textColor="#669900"
 		title="B&#x00F8;n og Begreb om en Dansk H&#x00F8;iskole i Soer">
-		&#x00BB;B&#x00F8;n og Begreb om en Dansk H&#x00F8;iskole i Soer.&#x00AB;
+		<hi rend="italic">B&#x00F8;n og Begreb om en Dansk H&#x00F8;iskole i Soer.</hi>
 	</event>
 
 	<event
@@ -1193,7 +1193,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="P. Hjort (red.): Psalmer og B&#x00F8;nner, 2. udg.">
-		Ultimo november. Peder Hjort (red.): &#x00BB;Psalmer og B&#x00F8;nner,&#x00AB; 2. udg. Ud af 300 salmer er de 48 af Grundtvig, alle trykt tidligere.
+		Ultimo november. <persName key="pe89">Peder Hjort</persName> (red.): <hi rend="italic">Psalmer og B&#x00F8;nner,</hi> 2. udg. Ud af 300 salmer er de 48 af <persName key="pe4">Grundtvig</persName>, alle trykt tidligere.
 	</event>
 	
 	
@@ -1201,7 +1201,7 @@
 		start="Feb 06 1841 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, bind 2, 2. hefte">
-		&#x00BB;Sang-V&#x00E6;rk til den Danske Kirke,&#x00AB; bind 2, 2. hefte; mere udkom ikke f&#x00F8;r 1870.
+		<hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke,</hi> bind 2, 2. hefte; mere udkom ikke f&#x00F8;r 1870.
 	</event>
 	
 	<event
@@ -1212,7 +1212,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Aabent Brev til mine B&#x00F8;rn&#x201D;">
-		Juni. &#x201C;Aabent Brev til mine B&#x00F8;rn&#x201D; (heri bl.a. &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D;) trykt i &#x00BB;Brage og Idun, et nordisk Fj&#x00E6;rding&#x00E5;rsskrift,&#x00AB; bind 4, 1. hefte. 
+		Juni. &#x201C;Aabent Brev til mine B&#x00F8;rn&#x201D; (heri bl.a. &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D;) trykt i <hi rend="italic">Brage og Idun, et nordisk Fj&#x00E6;rding&#x00E5;rsskrift,</hi> bind 4, 1. hefte. 
     </event>
     
 	<event
@@ -1223,28 +1223,28 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Fortale til Ph. Doddridges Veiledning til Sand Gudsfrygt">
-		December (?). H.C. Glahns danske overs&#x00E6;ttelse af &#x00BB;Ph. Doddridges Veiledning til Sand Gudsfrygt,&#x00AB; (opbyggeligt engelsk skrift fra 1745); Grundtvigs fortale er dateret 20. november.
+		December (?). <persName key="pe278">H.C. Glahn</persName>s danske overs&#x00E6;ttelse af <hi rend="italic">Ph. Doddridges Veiledning til Sand Gudsfrygt,</hi> (opbyggeligt engelsk skrift fra 1745); <persName key="pe4">Grundtvig</persName>s fortale er dateret 20. november.
 	</event>
 		
 	<event
 		start="Mar 21 1842 00:00:00 GMT"
 		textColor="#669900"
 		title="Om Religions-Forf&#x00F8;lgelse">
-		&#x00BB;Om Religions-Forf&#x00F8;lgelse.&#x00AB;
+		<hi rend="italic">Om Religions-Forf&#x00F8;lgelse.</hi>
 	</event>
 
 	<event
 		start="Jun 07 1842 00:00:00 GMT"
 		textColor="#669900"
 		title="Danske Folke-Fester, en R&#x00F8;st fra Danske Samfund">
-		&#x00BB;Danske Folke-Fester, en R&#x00F8;st fra Danske Samfund.&#x00AB;
+		<hi rend="italic">Danske Folke-Fester, en R&#x00F8;st fra Danske Samfund.</hi>
 	</event>
 
 	<event
 		start="Sep 12 1842 00:00:00 GMT"
 		textColor="#669900"
 		title="Sidste del af &#x201C;Kirkelige Oplysninger is&#x00E6;r for Lutherske Christne&#x201D;">
-		3. og sidste del af &#x201C;Kirkelige Oplysninger is&#x00E6;r for Lutherske Christne&#x201D; trykkes i &#x00BB;Nordisk Tidsskrift for christelig Theologi,&#x00AB; bind 4 (de to f&#x00F8;rste dele i bind 1 og 2, 1840).
+		3. og sidste del af &#x201C;Kirkelige Oplysninger is&#x00E6;r for Lutherske Christne&#x201D; trykkes i <hi rend="italic">Nordisk Tidsskrift for christelig Theologi,</hi> bind 4 (de to f&#x00F8;rste dele i bind 1 og 2, 1840).
 	</event>
 
 	<event
@@ -1255,29 +1255,22 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Mundsmag af Danmarks Kr&#x00F8;nike til Levende Skolebrug">
-		September. &#x00BB;Mundsmag af Danmarks Kr&#x00F8;nike til Levende Skolebrug.&#x00AB;
+		September. <hi rend="italic">Mundsmag af Danmarks Kr&#x00F8;nike til Levende Skolebrug.</hi>
 	</event>
-
-	<event
-		start="Nov 02 1842 00:00:00 GMT"
-		textColor="#669900"
-		title="2. udg. af Mundsmag af Danmarks Kr&#x00F8;nike-Rim til Levende Skolebrug">
-		2., for&#x00F8;gede udgave af &#x00BB;Mundsmag af Danmarks Kr&#x00F8;nike-Rim til Levende Skolebrug.&#x00AB;
-	</event>
-		
+	
 
 	<event
 		start="Jan 27 1843 00:00:00 GMT"
 		textColor="#669900"
 		title="Nyaars-&#x00D8;nske i Danske Samfund">
-		&#x00BB;Nyaars-&#x00D8;nske i Danske Samfund.&#x00AB;
+		<hi rend="italic">Nyaars-&#x00D8;nske i Danske Samfund.</hi>
 	</event>
 
 	<event
 		start="Oct 28 1843 00:00:00 GMT"
 		textColor="#669900"
 		title="Om Nordens Historiske Forhold">
-		Talen &#x00BB;Om Nordens Historiske Forhold,&#x00AB; holdt i det Skandinaviske Selskab 20. oktober.
+		Talen <hi rend="italic">Om Nordens Historiske Forhold,</hi> holdt i det Skandinaviske Selskab 20. oktober.
 	</event>
 
 	<event
@@ -1288,7 +1281,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Til Danskhedens Skaal">
-		November. &#x00BB;Til Danskhedens Skaal paa Skydebanen den 5te November 1843,&#x00AB; tale ved en fest afholdt af Comiteen for Dansk Undervisnings Fremme i Slesvig.
+		November. <hi rend="italic">Til Danskhedens Skaal paa Skydebanen den 5te November 1843,</hi> tale ved en fest afholdt af Comiteen for Dansk Undervisnings Fremme i Slesvig.
 	</event>
 		
 
@@ -1296,14 +1289,14 @@
 		start="Jul 13 1844 00:00:00 GMT"
 		textColor="#669900"
 		title="Skov-Hornets Klang mellem Skamlings-Bankerne">
-		&#x00BB;Skov-Hornets Klang mellem Skamlings-Bankerne,&#x00AB; Grundtvigs tale p&#x00E5; Skamlingsbanken 4. juli til st&#x00F8;tte for danskheden og det danske sprog i Slesvig.
+		<hi rend="italic">Skov-Hornets Klang mellem Skamlings-Bankerne,</hi> <persName key="pe4">Grundtvigs</persName> tale p&#x00E5; Skamlingsbanken 4. juli til st&#x00F8;tte for danskheden og det danske sprog i Slesvig.
 	</event>
 
 	<event
 		start="Sep 16 1844 00:00:00 GMT"
 		textColor="#669900"
 		title="Brage-Snak om Gr&#x00E6;ske og Nordiske Myther og Oldsagn">
-		&#x00BB;Brage-Snak om Gr&#x00E6;ske og Nordiske Myther og Oldsagn,&#x00AB; baseret p&#x00E5; de i alt 25 foredrag Grundtvig holdt p&#x00E5; Borchs kollegium 20. november 1843-ultimo januar 1844.
+		<hi rend="italic">Brage-Snak om Gr&#x00E6;ske og Nordiske Myther og Oldsagn,</hi> baseret p&#x00E5; de i alt 25 foredrag <persName key="pe4">Grundtvig</persName> holdt p&#x00E5; Borchs kollegium 20. november 1843-ultimo januar 1844.
 	</event>
 	
 
@@ -1311,7 +1304,7 @@
 		start="Jan 08 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="Kirke-Psalmer">
-		&#x00BB;Kirke-Psalmer udgivne til Pr&#x00F8;ve.&#x00AB;
+		<hi rend="italic">Kirke-Psalmer udgivne til Pr&#x00F8;ve.</hi>
 	</event>
 
 	<event
@@ -1333,42 +1326,42 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="De historiske Minders Betydning">
-		Februar. Tale i det Skandinaviske Selskab om &#x00BB;De historiske Minders Betydning n&#x00E6;rmest for Nordens Folkeliv,&#x00AB; holdt 17. februar.
+		Februar. Tale i det Skandinaviske Selskab om <hi rend="italic">De historiske Minders Betydning n&#x00E6;rmest for Nordens Folkeliv,</hi> holdt 17. februar.
 	</event>
 
 	<event
 		start="Mar 08 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="Danske Ordsprog og Mundheld">
-		&#x00BB;Danske Ordsprog og Mundheld.&#x00AB;
+		<hi rend="italic">Danske Ordsprog og Mundheld.</hi>
 	</event>
 
 	<event
 		start="Mar 14 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over Steffens">
-		Mindedigt over Henrich Steffens trykkes i &#x00BB;Berlingske Politiske og Avertissementstidende.&#x00AB;
+		Mindedigt over <persName key="pe18">Henrich Steffens</persName> trykkes i <hi rend="italic">Berlingske Politiske og Avertissementstidende.</hi>
 	</event>
 
 	<event
 		start="May 08 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="Udkastet til en ny Trykkelov fra Literaturens Side betragtet og fraraadt">
-		&#x00BB;Udkastet til en ny Trykkelov fra Literaturens Side betragtet og fraraadt.&#x00AB;
+		<hi rend="italic">Udkastet til en ny Trykkelov fra Literaturens Side betragtet og fraraadt.</hi>
 	</event>
 
 	<event
 		start="Dec 08 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="J.F. og R.Th. Fenger (red.): Psalmer og Sange til Julen">
-		&#x00BB;Psalmer og Sange til Julen,&#x00AB; samlede af J.F. og R.Th. Fenger, heri 28 salmer af Grundtvig.
+		<hi rend="italic">Psalmer og Sange til Julen,</hi> samlede af <persName key="pe81">J.F.</persName> og <persName key="pe82">R.Th. Fenger</persName>, heri 28 salmer af <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event
 		start="Dec 25 1845 00:00:00 GMT"
 		textColor="#669900"
 		title="Fire salmer af Grundtvig uddeles under gudstjenesten i Vartov">
-		Et trykt salmeblad med fire salmer af Grundtvig uddeles i hemmelighed under gudstjenesten i Vartov og betegner den egentlige indf&#x00F8;relse af grundtvigsk salmesang i folkekirken; brugen af salmebladet m&#x00F8;der ingen officiel indsigelse, og Grundtvig fors&#x00E6;tter da 1846-49 med udgivelsen af lignende salmeblade ved &#x00E5;rets kirkefester; de udgives samlet 1850 som &#x00BB;Fest-Psalmer.&#x00AB;
+		Et trykt salmeblad med fire salmer af <persName key="pe4">Grundtvig</persName> uddeles i hemmelighed under gudstjenesten i Vartov og betegner den egentlige indf&#x00F8;relse af grundtvigsk salmesang i folkekirken; brugen af salmebladet m&#x00F8;der ingen officiel indsigelse, og <persName key="pe4">Grundtvig</persName> fors&#x00E6;tter da 1846-1849 med udgivelsen af lignende salmeblade ved &#x00E5;rets kirkefester; de udgives samlet 1850 som <hi rend="italic">Fest-Psalmer.</hi>
 	</event>
 
 	<event
@@ -1379,21 +1372,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler ved Danske Studenters Nordiske H&#x00F8;itid">
-		Januar. Grundtvig holder flere sk&#x00E5;ltaler ved Danske Studenters Nordiske H&#x00F8;itid 13. januar udkommer.
+		Januar. <persName key="pe4">Grundtvig</persName>s sk&#x00E5;ltaler ved Danske Studenters Nordiske H&#x00F8;itid 13. januar udkommer.
 	</event>
 
 	<event
 		start="Mar 21 1846 00:00:00 GMT"
 		textColor="#669900"
 		title="J.F. og R.Th. Fenger (red.): Psalmer til den stille Uge og Paasken">
-		Ca. 21. marts. &#x00BB;Psalmer til den stille Uge og Paasken samlede af J.F. og R.Th. Fenger,&#x00AB; heri 45 af Grundtvigs salmer.
+		Ca. 21. marts. <hi rend="italic">Psalmer til den stille Uge og Paasken samlede af J.F. og R.Th. Fenger,</hi> heri 45 af <persName key="pe4">Grundtvig</persName>s salmer.
 	</event>
 		
 	<event
 		start="May 16 1846 00:00:00 GMT"
 		textColor="#669900"
 		title="J.F. og R.Th. Fenger (red.): Psalmer til Himmelfartsfesten og Pindsen">
-		&#x00BB;Psalmer til Himmelfartsfesten og Pindsen samlede af J.F. og R.Th. Fenger,&#x00AB; heri 35 af Grundtvigs salmer.
+		<hi rend="italic">Psalmer til Himmelfartsfesten og Pindsen samlede af J.F. og R.Th. Fenger,</hi> heri 35 af <persName key="pe4">Grundtvigs</persName> salmer.
 	</event>
 
 	<event
@@ -1404,7 +1397,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Ligtale over svogeren P.E. Glahn">
-		Ultimo juli. Grundtvigs ligtale over svogeren, pastor Poul Egede Glahn, begravet 21. juli, udkommer.
+		Ultimo juli. <persName key="pe4">Grundtvigs</persName> ligtale over svogeren, pastor <persName key="pe265">Poul Egede Glahn</persName>, begravet 21. juli, udkommer.
 	</event>
 
 	<event
@@ -1415,71 +1408,71 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Idun med Guld-&#x00C6;blerne">
-		September. Grundtvig skriver en sang om &#x00BB;Idun med Guld-&#x00C6;blerne&#x00AB; til en fest 18. september i Danske Samfund i N&#x00E6;stved.
+		September. <persName key="pe4">Grundtvig</persName> skriver en sang om <hi rend="italic">Idun med Guld-&#x00C6;blerne</hi> til en fest 18. september i Danske Samfund i N&#x00E6;stved.
 	</event>
 
 	<event
 		start="Dec 19 1846 00:00:00 GMT"
 		textColor="#669900"
 		title="Gr&#x00E6;sk og Nordisk Mythologi for Ungdommen">
-		Bestillingsarbejdet &#x00BB;Gr&#x00E6;sk og Nordisk Mythologi for Ungdommen&#x00AB; udkommer (med &#x00E5;rstal 1847).
+		Bestillingsarbejdet <hi rend="italic">Gr&#x00E6;sk og Nordisk Mythologi for Ungdommen</hi> udkommer (med &#x00E5;rstal 1847).
 	</event>
 
 
 	<event
 		start="Jan 13 1847 00:00:00 GMT"
 		textColor="#669900"
-		title="Synger saa h&#x00F8;it, saa det kan h&#x00F8;res&#x0085;">
-		Salmen &#x201C;Synger saa h&#x00F8;it, saa det kan h&#x00F8;res&#x0085;&#x201D;, digtet til Det Danske Missionsselskabs m&#x00F8;de i Vartov helligtrekongersdag 6. januar udkommer i &#x00BB;Sange ved det Danske Missionsselskabs H&#x00F8;itidsm&#x00F8;der&#x00AB;.
+		title="Synger saa h&#x00F8;it, saa det kan h&#x00F8;res">
+		Salmen &#x201C;Synger saa h&#x00F8;it, saa det kan h&#x00F8;res&#x201D;, digtet til Det Danske Missionsselskabs m&#x00F8;de i Vartov helligtrekongersdag 6. januar udkommer i <hi rend="italic">Sange ved det Danske Missionsselskabs H&#x00F8;itidsm&#x00F8;der</hi>.
 	</event>
 
 	<event
 		start="Jan 31 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Den Christelige B&#x00F8;rnel&#x00E6;rdom&#x201D;">
-		Afhandlingen &#x201C;Den Christelige B&#x00F8;rnel&#x00E6;rdom&#x201D; udkommer i &#x00BB;Dansk Kirketidende.&#x00AB;
+		Afhandlingen &#x201C;Den Christelige B&#x00F8;rnel&#x00E6;rdom&#x201D; udkommer i <hi rend="italic">Dansk Kirketidende.</hi>
 	</event>
 
 	<event
 		start="Feb 08 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="Nordens Historiske Minder">
-		&#x00BB;Nordens Historiske Minder.&#x00AB;
+		<hi rend="italic">Nordens Historiske Minder.</hi>
 	</event>
 
 	<event
 		start="Feb 19 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="Viser og Sange for Danske Samfund">
-		&#x00BB;Viser og Sange for Danske Samfund.&#x00AB;
+		<hi rend="italic">Viser og Sange for Danske Samfund.</hi>
 	</event>
 
 	<event
 		start="Jun 12 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="Lyk&#x00F8;nskning til Danmark med Det Danske Dummerhoved og Den Danske H&#x00F8;iskole">
-		&#x00BB;Lyk&#x00F8;nskning til Danmark med Det Danske Dummerhoved og Den Danske H&#x00F8;iskole.&#x00AB;
+		<hi rend="italic">Lyk&#x00F8;nskning til Danmark med Det Danske Dummerhoved og Den Danske H&#x00F8;iskole.</hi>
 	</event>
 
 	<event
 		start="Oct 16 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="Danske K&#x00E6;mpeviser til Skole-Brug">
-		&#x00BB;Danske K&#x00E6;mpeviser til Skole-Brug.&#x00AB;
+		<hi rend="italic">Danske K&#x00E6;mpeviser til Skole-Brug.</hi>
 	</event>
 
 	<event
 		start="Oct 23 1847 00:00:00 GMT"
 		textColor="#669900"
 		title="Indl&#x00E6;g i &#x0027;k&#x00E6;mpevisestriden&#x0027;">
-		&#x00BB;Om K&#x00E6;mpevise-Bogen, en Stemme mod Hr. Levins, Hr. Liebenbergs osv.,&#x00AB; et indl&#x00E6;g i &#x0027;k&#x00E6;mpevisestriden&#x0027;, som var foranlediget af Svend Grundtvigs plan for en udgave af Danmarks gamle folkeviser.
+		<hi rend="italic">Om K&#x00E6;mpevise-Bogen, en Stemme mod Hr. Levins, Hr. Liebenbergs osv.,</hi> et indl&#x00E6;g i &#x0027;k&#x00E6;mpevisestriden&#x0027;, som var foranlediget af <persName key="pe350">Svend Grundtvigs</persName> plan for en udgave af Danmarks gamle folkeviser.
 	</event>
 
 	<event
 		start="Mar 22 1848 00:00:00 GMT"
 		textColor="#669900"
-		title="Nr. 1 af ugebladet Danskeren,">
-		P&#x00E5;begynder udgivelsen af ugebladet &#x00BB;Danskeren,&#x00AB; som l&#x00F8;ber frem til december 1851.
+		title="Nr. 1 af ugebladet Danskeren">
+		P&#x00E5;begynder udgivelsen af ugebladet <hi rend="italic">Danskeren,</hi> som l&#x00F8;ber frem til december 1851.
 	</event>
 		
 	<event
@@ -1489,29 +1482,29 @@
 		end="Apr 17 1848 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
-		title="Danmarks L&#x00F8;ve! Ryst din Manke!&#x0085;">
-		April. Krigssangen &#x00BB;Danmarks L&#x00F8;ve! Ryst din Manke!&#x0085;&#x00AB;
+		title="Danmarks L&#x00F8;ve! Ryst din Manke!">
+		April. Krigssangen <hi rend="italic">Danmarks L&#x00F8;ve! Ryst din Manke!</hi>
 	</event>
 
 	<event
 		start="May 12 1848 00:00:00 GMT"
 		textColor="#669900"
 		title="Hvor er Lammet? Langfredags-Pr&#x00E6;diken">
-		&#x00BB;Hvor er Lammet? Langfredags-Pr&#x00E6;diken.&#x00AB;
+		<hi rend="italic">Hvor er Lammet? Langfredags-Pr&#x00E6;diken.</hi>
 	</event>
 
 	<event
 		start="May 16 1848 00:00:00 GMT"
 		textColor="#669900"
 		title="Norden mod Tydskland">
-		&#x00BB;Norden mod Tydskland.&#x00AB;
+		<hi rend="italic">Norden mod Tydskland.</hi>
 	</event>
 
 	<event
 		start="Jun 13 1848 00:00:00 GMT"
 		textColor="#669900"
 		title="Den Tydske Flaade. Et episk L&#x00E6;redigt">
-		&#x00BB;Den Tydske Flaade. Et episk L&#x00E6;redigt.&#x00AB;
+		<hi rend="italic">Den Tydske Flaade. Et episk L&#x00E6;redigt.</hi>
 	</event>
 
 	<event
@@ -1522,7 +1515,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Bededags-Tale for Rigsdagen i Danmark.">
-		November. &#x00BB;Bededags-Tale for Rigsdagen i Danmark.&#x00AB;
+		November. <hi rend="italic">Bededags-Tale for Rigsdagen i Danmark.</hi>
 	</event>
 
 	<event
@@ -1531,7 +1524,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Den Grundlovgivende Rigsforsamling">
-		Grundtvigs taler 8. november-29. december i Den Grundlovgivende Rigsforsamling trykkes i &#x00BB;Beretning om Forhandlingerne paa Rigsdagen&#x00AB; efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 8. november-29. december i Den Grundlovgivende Rigsforsamling trykkes i <hi rend="italic">Beretning om Forhandlingerne paa Rigsdagen</hi> efter de stenografiske referater.
 	</event>
 
 	<event
@@ -1540,28 +1533,28 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Den Grundlovgivende Rigsforsamling">
-		Grundtvigs taler 3. januar-4. juni i Den Grundlovgivende Rigsforsamling trykkes i &#x00BB;Beretning om Forhandlingerne paa Rigsdagen&#x00AB; efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 3. januar-4. juni i Den Grundlovgivende Rigsforsamling trykkes i <hi rend="italic">Beretning om Forhandlingerne paa Rigsdagen</hi> efter de stenografiske referater.
 	</event>
 
 	<event
 		start="Jul 14 1849 00:00:00 GMT"
 		textColor="#669900"
-		title="En ny lystig Vise om Holstenerne&#x0085;">
-		&#x00BB;En ny lystig Vise om Holstenerne&#x0085;&#x00AB;
+		title="En lystig ny Vise om Holstenerne">
+		<hi rend="italic">En lystig ny Vise om Holstenerne og General Bonin, som fik L&#x00F8;bepas ved Frederits den f&#x00F8;rste Fredag i Juli Maaned 1849.</hi>
 	</event>
 
 	<event
 		start="Jul 25 1849 00:00:00 GMT"
 		textColor="#669900"
 		title="C.J. Brandt (red.): Rim og Sange til F&#x00E6;drelandets Historie, bind 2">
-		C.J. Brandt (red.): &#x00BB;Rim og Sange til F&#x00E6;drelandets Historie,&#x00AB; bind 2 udkommer med bidrag af Grundtvig.
+		<persName key="pe83">C.J. Brandt</persName> (red.): <hi rend="italic">Rim og Sange til F&#x00E6;drelandets Historie,</hi> bind 2 udkommer med bidrag af <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event
 		start="Nov 24 1849 00:00:00 GMT"
 		textColor="#669900"
 		title="Ligtale over Olaf Rye">
-		Tale 15. september i Garnisons Kirke ved general Olaf Ryes jordef&#x00E6;rd trykt i &#x00BB;Danskeren.&#x00AB;
+		Tale 15. september i Garnisons Kirke ved general <persName key="pe133">Olaf Rye</persName>s jordef&#x00E6;rd trykt i <hi rend="italic">Danskeren.</hi>
 	</event>
 
 	<event
@@ -1569,8 +1562,8 @@
 		end="Jan 09 1850 00:00:00 GMT"
 		durationEvent="false"
 		textColor="#669900"
-		title="Taler til Oehlenschl&#x00E6;ger">
-		Ca. 8. januar. &#x00BB;Adam Oehlenschl&#x00E6;ger. Et Mindeskrift om Festen den 14. November 1849,&#x00AB; heri tre taler af Grundtvig i anledning af Adam Oehlenschl&#x00E6;gers 70-&#x00E5;rsdag.
+		title="Taler til Oehlenschl&#x00E4;ger">
+		Ca. 8. januar. <hi rend="italic">Adam Oehlenschl&#x00E6;ger. Et Mindeskrift om Festen den 14. November 1849,</hi> heri tre taler af <persName key="pe4">Grundtvig</persName> i anledning af <persName key="pe3">Adam Oehlenschl&#x00E4;gers</persName> 70-&#x00E5;rsdag.
 	</event>
 
 	<event
@@ -1579,21 +1572,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 30. januar-29. juni i Folketinget trykt i &#x00BB;Rigsdagstidende. Forhandlingerne paa Folkethinget,&#x00AB; 1. rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 30. januar-29. juni i Folketinget trykt i <hi rend="italic">Rigsdagstidende. Forhandlingerne paa Folkethinget,</hi> 1. rigsdagssamling, efter de stenografiske referater.
 	</event>
 
 	<event
 		start="Mar 27 1850 00:00:00 GMT"
 		textColor="#669900"
 		title="Fest-Psalmer">
-		&#x00BB;Fest-Psalmer,&#x00AB; samlet udgivelse af de salmeblade, der 1845-49 var blevet trykt til brug i Vartov.
+		<hi rend="italic">Fest-Psalmer,</hi> samlet udgivelse af de salmeblade, der 1845-1849 var blevet trykt til brug i Vartov.
 	</event>
 
 	<event
 		start="Aug 03 1850 00:00:00 GMT"
 		textColor="#669900"
-		title="Digte om slaget ved Isted. &#x201C;Jeg gik mig ud en Sommerdag at høre&#x0085;&#x201D;">
-		Digtene &#x00BB;Holger-Danske Slaget den 25. Juli 1850,&#x00AB; og &#x00BB;Seiers-Torsdagen i Juli 1850&#x00AB; (&#x201C;Jeg gik mig ud en Sommerdag at høre&#x0085;&#x201D;), begge skrevet i anledning af sejren i slaget ved Isted 25. juli.
+		title="Digte om slaget ved Isted. &#x201C;Jeg gik mig ud en Sommerdag at h&#x00F8;re&#x201D;">
+		Digtene <hi rend="italic">Holger-Danske Slaget den 25. Juli 1850,</hi> og <hi rend="italic">Seiers-Torsdagen i Juli 1850</hi> (&#x201C;Jeg gik mig ud en Sommerdag at h&#x00F8;re&#x201D;), begge skrevet i anledning af sejren i slaget ved Isted 25. juli.
 	</event>
 
 	<event
@@ -1602,7 +1595,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 5. oktober 1850-24. marts 1851 i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 2. rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 5. oktober 1850-24. marts 1851 i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 2. rigsdagssamling, efter de stenografiske referater.
 	</event>
 	
 
@@ -1614,21 +1607,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Velkomst i Hjemmet til de Danske Krigskarle">
-		Februar. &#x00BB;Velkomst i Hjemmet til de Danske Krigskarle.&#x00AB;
+		Februar. <hi rend="italic">Velkomst i Hjemmet til de Danske Krigskarle.</hi>
 	</event>
 
 	<event
 		start="May 17 1851 00:00:00 GMT"
 		textColor="#669900"
 		title="Artikel om k&#x00E6;rlighed og sanselighed">
-		Artikel om k&#x00E6;rlighed og sanselighed i &#x00BB;Danskeren.&#x00AB;
+		Artikel om k&#x00E6;rlighed og sanselighed i <hi rend="italic">Danskeren.</hi>
 	</event>
 
 	<event
 		start="May 24 1851 00:00:00 GMT"
 		textColor="#669900"
 		title="Anmeldelse af Clara Raphael">
-		Mathilde Fibigers bog &#x00BB;Clara Raphael. Tolv Breve&#x00AB; anmeldt af Grundtvig i &#x00BB;Danskeren&#x00AB;, bind 4.
+		<persName key="pe134">Mathilde Fibigers</persName> bog <hi rend="italic">Clara Raphael. Tolv Breve</hi> anmeldt af <persName key="pe4">Grundtvig</persName> i <hi rend="italic">Danskeren</hi>, bind 4.
 	</event>
 
 	<event
@@ -1637,21 +1630,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvig taler 10. oktober 1851-18. marts 1852 i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 3. rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvig</persName> taler 10. oktober 1851-18. marts 1852 i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 3. rigsdagssamling, efter de stenografiske referater.
 	</event>
 
 	<event
 		start="Dec 27 1851 00:00:00 GMT"
 		textColor="#669900"
 		title="Sidste nummer af Danskeren">
-		Sidste nummer af Grundtvigs ugeblad &#x00BB;Danskeren&#x00AB; udkommer.
+		Sidste nummer af <persName key="pe4">Grundtvigs</persName> ugeblad <hi rend="italic">Danskeren</hi> udkommer.
 	</event>
 	
 	<event
 		start="May 03 1852 00:00:00 GMT"
 		textColor="#669900"
 		title="Ligtale over J.F. Schouw">
-		Grundtvigs ligtale ved botanikeren og politikerenJ.F. Schouws begravelse fra Vor Frue Kirke trykkes i &#x00BB;F&#x00E6;drelandet.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> ligtale ved botanikeren og politikeren <persName key="pe281">J.F. Schouw</persName>s begravelse fra Vor Frue Kirke trykkes i <hi rend="italic">F&#x00E6;drelandet.</hi>
 	</event>
 	
 
@@ -1659,7 +1652,7 @@
 		start="Feb 08 1853 00:00:00 GMT"
 		textColor="#669900"
 		title="Et venligt Ord til det Danske Folk om Valgene til Folkethinget">
-		&#x00BB;Et venligt Ord til det Danske Folk om Valgene til Folkethinget&#x00AB; udkommer i bogform. Oprindelig trykt i avisen &#x00BB;F&#x00E6;drelandet&#x00AB; 29. januar.
+		<hi rend="italic">Et venligt Ord til det Danske Folk om Valgene til Folkethinget</hi> udkommer i bogform. Oprindelig trykt i avisen <hi rend="italic">F&#x00E6;drelandet</hi> 29. januar.
 	</event>
 
 	<event
@@ -1668,28 +1661,28 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget. Taler om tronf&#x00F8;lgeloven">
-		Grundtvigs taler 7. marts-18. april i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 4. rigsdagssamlings 2. afdeling, efter de stenografiske referater; Grundtvig taler desuden om tronf&#x00F8;lgeloven til den forenede rigsdags 2. samling.
+		<persName key="pe4">Grundtvigs</persName> taler 7. marts-18. april i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 4. rigsdagssamlings 2. afdeling, efter de stenografiske referater; <persName key="pe4">Grundtvig</persName> taler desuden om tronf&#x00F8;lgeloven til den forenede rigsdags 2. samling.
 	</event>
 
 	<event
 		start="Mar 19 1853 00:00:00 GMT"
 		textColor="#669900"
 		title="P.O. Boisen (red.): Bibelske og Kirkehistoriske Psalmer og Sange for Skolen">
-		P.O. Boisen (red.): &#x00BB;Bibelske og Kirkehistoriske Psalmer og Sange for Skolen&#x00AB;; ud af 112 sange og salmer er de 101 af Grundtvig.
+		<persName key="pe86">P.O. Boisen</persName> (red.): <hi rend="italic">Bibelske og Kirkehistoriske Psalmer og Sange for Skolen</hi>; ud af 112 sange og salmer er de 101 af <persName key="pe4">Grundtvig</persName>.
 	</event>
 
 	<event
 		start="May 11 1853 00:00:00 GMT"
 		textColor="#669900"
 		title="Oplysning til det Danske Folk om Rigsdagens Opl&#x00F8;sning">
-		&#x00BB;Oplysning til det Danske Folk om Rigsdagens Opl&#x00F8;sning&#x00AB; udkommer i bogform. Oprindelig trykt i avisen &#x00BB;F&#x00E6;drelandet&#x00AB; 26. april.
+		<hi rend="italic">Oplysning til det Danske Folk om Rigsdagens Opl&#x00F8;sning</hi> udkommer i bogform. Oprindelig trykt i avisen <hi rend="italic">F&#x00E6;drelandet</hi> 26. april.
 	</event>
 
 	<event
 		start="Aug 03 1853 00:00:00 GMT"
 		textColor="#669900"
 		title="De ti Spedalskes B&#x00F8;n til Herren">
-		&#x00BB;De ti Spedalskes B&#x00F8;n til Herren. Et godt Raad i Plagens Tid,&#x00AB; udkommer; oprindeligt en pr&#x00E6;diken holdt 23. september 1832.
+		<hi rend="italic">De ti Spedalskes B&#x00F8;n til Herren. Et godt Raad i Plagens Tid,</hi> udkommer; oprindeligt en pr&#x00E6;diken, holdt 23. september 1832.
 	</event>
 
 
@@ -1697,7 +1690,7 @@
 		start="Apr 30 1854 00:00:00 GMT"
 		textColor="#669900"
 		title="H&#x00F8;inordens Forhold til Verdenshistorien">
-		Ultimo april (?)udkommer &#x00BB;H&#x00F8;inordens Forhold til Verdens-Historien,&#x00AB; det sidste af 12 foredrag i Den Danske Forening, holdt 26. april.
+		Ultimo april (?) udkommer <hi rend="italic">H&#x00F8;inordens Forhold til Verdens-Historien,</hi> det sidste af 12 foredrag i Den Danske Forening, holdt 26. april.
 	</event>
 
 	<event
@@ -1708,7 +1701,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="2. udgave af Saxo-overs&#x00E6;ttelsen">
-		Juli 1854-august 1855. 2. udgave af &#x00BB;Danmarks Kr&#x00F8;nike af Saxo Grammaticus.&#x00AB;
+		Juli 1854-august 1855. 2. udgave af <hi rend="italic">Danmarks Kr&#x00F8;nike af Saxo Grammaticus.</hi>
 	</event>
 
 	<event
@@ -1717,7 +1710,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 4. oktober 1854-28. marts 1855 i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 6. rigsdagssamlings 1. og 2. afdeling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 4. oktober 1854-28. marts 1855 i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 6. rigsdagssamlings 1. og 2. afdeling, efter de stenografiske referater.
 	</event>
 
 	<event
@@ -1726,7 +1719,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="&#x201C;Christenhedens Syvstjerne&#x201D;">
-		5. november 1854-15. juli 1855 udkommer &#x201C;Christenhedens Syvstjerne&#x201D; i &#x00BB;Dansk Kirketidende&#x00AB; (i samlet bogform 1860).
+		5. november 1854-15. juli 1855 udkommer &#x201C;Christenhedens Syvstjerne&#x201D; i <hi rend="italic">Dansk Kirketidende</hi> (i samlet bogform 1860).
 	</event>
 	
 
@@ -1734,7 +1727,7 @@
 		start="Jun 03 1855 00:00:00 GMT"
 		textColor="#669900"
 		title="Det er saa yndigt at f&#x00F8;lges ad">
-		&#x00BB;Det er saa yndigt at f&#x00F8;lges ad,&#x00AB; til pastor P.A. Fengers s&#x00F8;lvbryllup i Slotsbjergby.
+		<hi rend="italic">Det er saa yndigt at f&#x00F8;lges ad,</hi> til pastor <persName key="pe88">P.A. Fengers</persName> s&#x00F8;lvbryllup i Slotsbjergby.
 	</event>
 
 	<event
@@ -1745,7 +1738,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i den overordentlige rigdagssamling">
-		August-september. Grundtvigs taler i den overordentlige rigdagssamling, afholdt i anledning af junigrundlovens indskr&#x00E6;nkning til kun at g&#x00E6;lde kongerigets s&#x00E6;ranliggender, trykt i &#x00BB;Rigsdagstidende&#x00AB; efter de stenografiske referater. 
+		August-september. <persName key="pe4">Grundtvigs</persName> taler i den overordentlige rigdagssamling, afholdt i anledning af junigrundlovens indskr&#x00E6;nkning til kun at g&#x00E6;lde kongerigets s&#x00E6;ranliggender, trykt i <hi rend="italic">Rigsdagstidende</hi> efter de stenografiske referater. 
 	</event>
 
 	<event
@@ -1754,7 +1747,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 1. oktober-20. december i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 7. ordin&#x00E6;re rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 1. oktober-20. december i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 7. ordin&#x00E6;re rigsdagssamling, efter de stenografiske referater.
 	</event>
 	
 
@@ -1764,7 +1757,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 4. januar-20. februar i Folketinget trykt i  &#x00BB;Rigsdagstidende,&#x00AB; 7. rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 4. januar-20. februar i Folketinget trykt i  <hi rend="italic">Rigsdagstidende,</hi> 7. rigsdagssamling, efter de stenografiske referater.
 	</event>
 
 	<event
@@ -1774,8 +1767,8 @@
 		end="Jul 17 1856 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
-		title="Hvad Soelskin er for det sorte Muld,&#x0085;">
-		Juli. Sangen &#x00BB;Ved Indvielsen af Skolen i Sjolte, i Snesere Sogn ved Pr&#x00E6;st&#x00F8;. 25de Juli 1856&#x00AB; (&#x00BB;Hvad Soelskin er for det sorte Muld,&#x0085;&#x00AB;).
+		title="Hvad Soelskin er for det sorte Muld">
+		Juli. Sangen <hi rend="italic">Ved Indvielsen af Skolen i Sjolte, i Snesere Sogn ved Pr&#x00E6;st&#x00F8;. 25de Juli 1856</hi> (<hi rend="italic">Hvad Soelskin er for det sorte Muld</hi>).
 	</event>
 
 	<event
@@ -1784,7 +1777,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Folketinget">
-		Grundtvigs taler 4. oktober 1856-23. februar 1857 i Folketinget trykt i &#x00BB;Rigsdagstidende,&#x00AB; 8. rigsdagssamling, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 4. oktober 1856-23. februar 1857 i Folketinget trykt i <hi rend="italic">Rigsdagstidende,</hi> 8. rigsdagssamling, efter de stenografiske referater.
 	</event>
 
 	<event
@@ -1795,14 +1788,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Lidt mere om Alterbogs-Daaben og saavidere">
-		Ca. 14. november. &#x00BB;Lidt mere om Alterbogs-Daaben og saavidere.&#x00AB;
+		Ca. 14. november. <hi rend="italic">Lidt mere om Alterbogs-Daaben og saavidere.</hi>
 	</event>
 
 	<event
 		start="Dec 06 1856 00:00:00 GMT"
 		textColor="#669900"
 		title="Sidste del af Haandbog i Verdens-Historien">
-		3. og sidste del af &#x00BB;Haandbog i Verdens-Historien&#x00AB; udkommer omsider (med &#x00E5;rstal 1843).
+		3. og sidste del af <hi rend="italic">Haandbog i Verdens-Historien</hi> udkommer omsider (med &#x00E5;rstal 1843).
 	</event>
 
 
@@ -1814,7 +1807,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Fenger (red.): Till&#x00E6;g til evangelisk-christelig Psalmebog">
-		Medio april. P.A. Fenger (red.): &#x00BB;Till&#x00E6;g til evangelisk-christelig Psalmebog;&#x00AB; heri over 300 af Grundtvigs salmer og salmebearbejdelser.
+		Medio april. <persName key="pe88">P.A. Fenger</persName> (red.): <hi rend="italic">Till&#x00E6;g til evangelisk-christelig Psalmebog;</hi> heri over 300 af <persName key="pe4">Grundtvigs</persName> salmer og salmebearbejdelser.
 	</event>
 
 	<event
@@ -1823,7 +1816,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Sidste taler i Folketinget">
-		Grundtvigs taler 30. september-21. december i Folketinget, trykt i &#x00BB;Rigsdagstidende,&#x00AB; 9. rigsdagssamling (Grundtvigs sidste i Folketinget), efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 30. september-21. december i Folketinget, trykt i <hi rend="italic">Rigsdagstidende,</hi> 9. rigsdagssamling (<persName key="pe4">Grundtvig</persName>s sidste i Folketinget), efter de stenografiske referater.
 	</event>
 	
 
@@ -1835,14 +1828,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Dansk Pr&#x00E6;diken paa Bebudelsesdagen 1858">
-		Ca. 23. april. &#x00BB;Dansk Pr&#x00E6;diken paa Bebudelses-Dagen 1858.&#x00AB;
+		Ca. 23. april. <hi rend="italic">Dansk Pr&#x00E6;diken paa Bebudelses-Dagen 1858.</hi>
 	</event>
 
 	<event
 		start="May 28 1859 00:00:00 GMT"
 		textColor="#669900"
 		title="Digt til Ingemanns 70-&#x00E5;rsdag">
-		Digtet &#x00BB;Til Skjalden Ingemann med Guldhornet fra den danske Ungdom den 28de Mai 1859&#x00AB; til til B.S. Ingemanns 70-&#x00E5;rsf&#x00F8;dselsdag; optrykt samme dag i &#x00BB;F&#x00E6;drelandet.&#x00AB;
+		Digtet <hi rend="italic">Til Skjalden Ingemann med Guldhornet fra den danske Ungdom den 28de Mai 1859</hi> til <persName key="pe138">B.S. Ingemanns</persName> 70-&#x00E5;rs f&#x00F8;dselsdag; optrykt samme dag i <hi rend="italic">F&#x00E6;drelandet.</hi>
 	</event>
 
 	<event
@@ -1852,22 +1845,22 @@
 		end="Nov 02 1859 00:00:00 GMT"
 		durationEvent="true"
 		textColor="#669900"
-		title="Menneske-Historien og Bibel-Historien hos Jøderne og de Christne">
-		Oktober eller november. &#x201C;Menneske-Historien og Bibel-Historien hos Jøderne og de Christne&#x201D; trykt i &#x00BB;Kirkelig Samler&#x00AB;, hefte 3 (optrykt i &#x00BB;Den christelige B&#x00F8;rnel&#x00E6;rdom&#x00AB; 1868).
+		title="Menneske-Historien og Bibel-Historien hos J&#x00F8;derne og de Christne">
+		Oktober eller november. &#x201C;Menneske-Historien og Bibel-Historien hos J&#x00F8;derne og de Christne&#x201D; trykt i <hi rend="italic">Kirkelig Samler</hi>, hefte 3 (optrykt i <hi rend="italic">Den christelige B&#x00F8;rnel&#x00E6;rdom</hi> 1868).
 	</event>
 
 	<event
 		start="Dec 13 1859 00:00:00 GMT"
 		textColor="#669900"
 		title="Christenhedens Syvstjerne">
-		&#x00BB;Christenhedens Syvstjerne&#x00AB; udkommer i bogform (med &#x00E5;rstal 1860; optryk fra &#x00BB;Dansk Kirketidende&#x00AB; 1854-55).
+		<hi rend="italic">Christenhedens Syvstjerne</hi> udkommer i bogform (med &#x00E5;rstal 1860; optryk fra <hi rend="italic">Dansk Kirketidende</hi> 1854-1855).
 	</event>
 	
 	<event
 		start="Feb 01 1861 00:00:00 GMT"
 		textColor="#669900"
 		title="Ved H&#x00F8;iskolens Aabning paa Marielyst">
-		&#x201C;Ved H&#x00F8;iskolens Aabning paa Marielyst, (Den 3die Novbr. 1859)&#x201D;, Grundtvigs tale trykkes i &#x00BB;Dannebrog. Et Kirke- Skole og Folkeblad.&#x00AB;
+		&#x201C;Ved H&#x00F8;iskolens Aabning paa Marielyst. (Den 3die Novbr. 1859)&#x201D;, <persName key="pe4">Grundtvigs</persName> tale trykkes i <hi rend="italic">Dannebrog. Et Kirke-, Skole- og Folkeblad.</hi>
 	</event>
 	
 	
@@ -1879,7 +1872,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Bjowulfs-Drapen">
-		Ca. 3. december. &#x00BB;Beowulfes Beorh eller Bjowulfs-Drapen&#x00AB;, Grundtvigs udgave af det oldengelske heltedigt udkommer.
+		Ca. 3. december. <hi rend="italic">Beowulfes Beorh eller Bjowulfs-Drapen</hi>, <persName key="pe4">Grundtvigs</persName> udgave af det oldengelske heltedigt udkommer.
 	</event>
 
 
@@ -1887,14 +1880,14 @@
 		start="Feb 24 1862 00:00:00 GMT"
 		textColor="#669900"
 		title="Mindedigt over Ingemann">
-		Mindedigt over B.S. Ingemann i &#x00BB;F&#x00E6;drelandet&#x00AB; (&#x201C;Mellem Nordens Hoved-Skjalde,&#x0085;&#x201D;).
+		Mindedigt over <persName key="pe138">B.S. Ingemann</persName> i <hi rend="italic">F&#x00E6;drelandet</hi> (&#x201C;Mellem Nordens Hoved-Skjalde&#x201D;).
 	</event>
 
 	<event
 		start="Sep 15 1862 00:00:00 GMT"
 		textColor="#669900"
 		title="Ligtale over P.O. Boisen">
-		Ligtale 26. august over pastor P.O. Boisen, Grundtvigs svigers&#x00F8;n og kapellan i Vartov, der d&#x00F8;de 21. august, trykt i &#x00BB;Budstikken.&#x00AB;
+		Ligtale 26. august over pastor <persName key="pe86">P.O. Boisen</persName>, <persName key="pe4">Grundtvig</persName>s svigers&#x00F8;n og kapellan i Vartov, der d&#x00F8;de 21. august, trykt i <hi rend="italic">Budstikken.</hi>
 	</event>
 
 
@@ -1906,7 +1899,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="2. udgave af Snorros Norske Konge-Kr&#x00F8;nike">
-		April 1863-september 1865. 2. udgave af Grundtvigs overs&#x00E6;ttelse af &#x00BB;Snorros Norske Konge-Kr&#x00F8;nike&#x00AB; udkommer i hefter.
+		April 1863-september 1865. 2. udgave af <persName key="pe4">Grundtvigs</persName> overs&#x00E6;ttelse af <hi rend="italic">Snorros Norske Konge-Kr&#x00F8;nike</hi> udkommer i hefter.
 	</event>
 
 	<event
@@ -1917,7 +1910,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Den levende R&#x00F8;st. Mindeblade fra Venne-M&#x00F8;det">
-		December. &#x00BB;Den levende R&#x00F8;st. Mindeblade fra Venne-M&#x00F8;det i September-Bladene&#x00AB; udkommer offentligt i 2. udgave (1. udgave som privattryk, uddelt ved vennem&#x00F8;det 9.-10. september).
+		December. <hi rend="italic">Den levende R&#x00F8;st. Mindeblade fra Venne-M&#x00F8;det i September-Dagene</hi> udkommer offentligt i 2. udgave (1. udgave som privattryk, uddelt ved vennem&#x00F8;det 9.-10. september).
 	</event>
 
 
@@ -1925,7 +1918,7 @@
 		start="Jan 05 1864 00:00:00 GMT"
 		textColor="#669900"
 		title="Kong Frederik den Syvendes Ihukommelse">
-		&#x00BB;Kong Frederik den Syvendes Ihukommelse.&#x00AB;
+		<hi rend="italic">Kong Frederik den Syvendes Ihukommelse.</hi>
 	</event>
 
 	<event
@@ -1936,21 +1929,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Livs-Fyrsten og Morderen">
-		Primo april. &#x00BB;Livs-Fyrsten og Morderen. Faste-Pr&#x00E6;diken.&#x00AB;
+		Primo april. <hi rend="italic">Livs-Fyrsten og Morderen. Faste-Pr&#x00E6;diken.</hi>
 	</event>
 
 	<event
 		start="May 23 1864 00:00:00 GMT"
 		textColor="#669900"
 		title="&#x201C;Dannebrog og Niels Juel&#x201C;">
-		Digtet &#x201C;Dannebrog og Niels Juel&#x201C; trykkes i &#x00BB;F&#x00E6;drelandet&#x00AB; i anledning af den danske fl&#x00E5;desejr ved Helgoland 9. maj.
+		Digtet &#x201C;Dannebrog og Niels Juel&#x201D; trykkes i <hi rend="italic">F&#x00E6;drelandet</hi> i anledning af den danske fl&#x00E5;desejr ved Helgoland 9. maj.
 	</event>
 
 	<event
 		start="Jun 08 1864 00:00:00 GMT"
 		textColor="#669900"
 		title="Tr&#x00F8;stebrev til Danmark">
-		&#x00BB;Tr&#x00F8;stebrev til Danmark.&#x00AB;
+		<hi rend="italic">Tr&#x00F8;stebrev til Danmark.</hi>
 	</event>
 
 	<event
@@ -1961,7 +1954,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Budstikke i H&#x00F8;inorden">
-		Ca. 20.-25. juni. &#x00BB;Budstikke i H&#x00F8;inorden.&#x00AB;
+		Ca. 20.-25. juni. <hi rend="italic">Budstikke i H&#x00F8;inorden.</hi>
 	</event>
 
 	<event
@@ -1972,14 +1965,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Til Ansgars Minde">
-		Digtet &#x00BB;Til Ansgars Minde. 3die Februar 1865&#x00AB; (&#x201C;Han var ingen m&#x00E6;gtig Aand&#x201D;) fra tusinds&#x00E5;rsfesten i Casino 3. februar til minde om Ansgars d&#x00F8;d. Digtet optrykkes i flere blade.
+		Digtet <hi rend="italic">Til Ansgars Minde. 3die Februar 1865</hi> (&#x201C;Han var ingen m&#x00E6;gtig Aand&#x201D;) fra tusinds&#x00E5;rsfesten i Casino 3. februar til minde om <persName key="pe17"></persName>Ansgars d&#x00F8;d. Digtet optrykkes i flere blade.
 	</event>
 
 	<event
 		start="Sep 17 1865 00:00:00 GMT"
 		textColor="#669900"
 		title="Taler ved vennem&#x00F8;det">
-		Grundtvigs taler ved vennem&#x00F8;det 7.-8. september trykkes i &#x00BB;Dansk Kirketidende.&#x00AB;
+		<persName key="pe4">Grundtvig</persName>s taler ved vennem&#x00F8;det 7.-8. september trykkes i <hi rend="italic">Dansk Kirketidende.</hi>
 	</event>
 
 	<event
@@ -1990,21 +1983,21 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Bjovulfs-Drapen, 2. udg.">
-		November (?). &#x00BB;Bjovulfs-Drapen, &#x201C;Anden forbedrede Udgave&#x201C;&#x00AB;; Grundtvigs fortale er dateret &#x201C;November 1865&#x201D;. 
+		November (?). <hi rend="italic">Bjovulfs-Drapen, &#x201C;Anden forbedrede Udgave&#x201D;</hi>; <persName key="pe4">Grundtvigs</persName> fortale er dateret &#x201C;November 1865&#x201D;. 
 	</event>
 
 	<event
 		start="Jul 13 1866 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen 8. maj af pigeskolen p&#x00E5; Marielyst h&#x00F8;jskole, det f&#x00F8;rste pigekursus p&#x00E5; denne skole, trykt i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen 8. maj af pigeskolen p&#x00E5; Marielyst h&#x00F8;jskole, det f&#x00F8;rste pigekursus p&#x00E5; denne skole, trykt i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
 		start="May 28 1866 00:00:00 GMT"
 		textColor="#669900"
-		title="Hver Ting i Verden har sin Tid&#x0085;">
-		Digtet &#x00BB;Ved Hundredaarsfesten paa Klampenborg&#x00AB; (&#x201C;Hver Ting i Verden har sin Tid&#x0085;&#x201D;) i anledning af hundred&#x00E5;rsfesten for et af de f&#x00F8;rste skridt mod stavnsb&#x00E5;ndets afskaffelse 1788.
+		title="Hver Ting i Verden har sin Tid">
+		Digtet <hi rend="italic">Ved Hundredaarsfesten paa Klampenborg</hi> (&#x201C;Hver Ting i Verden har sin Tid&#x201D;) i anledning af hundred&#x00E5;rsfesten for et af de f&#x00F8;rste skridt mod stavnsb&#x00E5;ndets afskaffelse 1788.
 	</event>
 
 	<event
@@ -2013,14 +2006,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler i Landstinget">
-		Grundtvigs taler 9.-28. juli i Landstinget trykt i &#x00BB;Rigsdagstidende&#x00AB;, efter de stenografiske referater.
+		<persName key="pe4">Grundtvigs</persName> taler 9.-28. juli i Landstinget trykt i <hi rend="italic">Rigsdagstidende</hi>, efter de stenografiske referater.
 	</event>
 
 	<event
 		start="Aug 03 1866 00:00:00 GMT"
 		textColor="#669900"
 		title="Grundtvig og Tschernings adresse til kongen">
-		Grundtvig og Tschernings adresse af 26. juli til kongen med anmodning om, at han skulle undlade at stadf&#x00E6;ste den reviderede grundlov, trykkes i &#x00BB;Dansk Folketidende&#x00AB; og senere i flere andre blade.
+		<persName key="pe4">Grundtvig</persName> og <persName key="pe208">Tschernings</persName> adresse af 26. juli til kongen med anmodning om, at han skulle undlade at stadf&#x00E6;ste den reviderede grundlov, trykkes i <hi rend="italic">Dansk Folketidende</hi> og senere i flere andre blade.
 	</event>
 
 	<event
@@ -2031,35 +2024,35 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler ved vennem&#x00F8;det">
-		Ultimo oktober. Grundtvigs taler ved vennem&#x00F8;det 10.-11. september udkommer i en beretning, redigeret af Kristian K&#x00F8;ster.
+		Ultimo oktober. <persName key="pe4">Grundtvigs</persName> taler ved vennem&#x00F8;det 10.-11. september udkommer i en beretning, redigeret af <persName key="pe283">Kristian K&#x00F8;ster</persName>.
 	</event>
 
 	<event
 		start="Nov 09 1866 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
 		start="Nov 08 1867 00:00:00 GMT"
 		textColor="#669900"
 		title="Taler ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
 		start="May 02 1868 00:00:00 GMT"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, bind 1, 2. udg.">
-		2. uforandrede udgave af &#x00BB;Sang-V&#x00E6;rk til den Danske Kirke,&#x00AB; bind 1.
+		2. uforandrede udgave af <hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke,</hi> bind 1.
 	</event>
 
 	<event
 		start="May 15 1868 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 6. maj trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 6. maj trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
@@ -2070,7 +2063,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Tale ved vennem&#x00F8;det">
-		Oktober. Grundtvigs taler ved vennem&#x00F8;det 10. september udkommer i en beretning, redigeret af Kristian K&#x00F8;ster.
+		Oktober. <persName key="pe4">Grundtvigs</persName> taler ved vennem&#x00F8;det 10. september udkommer i en beretning, redigeret af <persName key="pe283">Kristian K&#x00F8;ster</persName>.
 	</event>
 
 	<event
@@ -2081,7 +2074,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Den Christelige B&#x00F8;rnel&#x00E6;rdom">
-		Medio oktober. &#x00BB;Den Christelige B&#x00F8;rnel&#x00E6;rdom&#x00AB; udkommer i samlet bogform, optrykt efter &#x00BB;Kirkelig Samler&#x00AB; 1855-61; fortalen er dateret september.
+		Medio oktober. <hi rend="italic">Den Christelige B&#x00F8;rnel&#x00E6;rdom</hi> udkommer i samlet bogform, optrykt efter <hi rend="italic">Kirkelig Samler</hi> 1855-1861; fortalen er dateret september.
 	</event>
 
 	<event
@@ -2090,14 +2083,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst">
-		13. og 20. november. Grundtvigs to taler ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		13. og 20. november. <persName key="pe4">Grundtvigs</persName> to taler ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 5. november trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
 		start="May 14 1869 00:00:00 GMT"
 		textColor="#669900"
 		title="Taler ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst">
-		Grundtvigs to taler ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst h&#x00F8;jskole 7. maj trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> to taler ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst h&#x00F8;jskole 7. maj trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
@@ -2106,7 +2099,7 @@
 		durationEvent="false"
 		textColor="#669900"
 		title="Digte">
-		Primo juni. &#x00BB;Digte;&#x00AB; 62 digte 1807-66, i udvalg ved Svend Grundtvig.
+		Primo juni. <hi rend="italic">Digte;</hi> 62 digte 1807-1866, i udvalg ved <persName key="pe138">Svend Grundtvig</persName>.
 	</event>
 
 	<event
@@ -2117,14 +2110,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Taler og pr&#x00E6;diken ved vennem&#x00F8;det">
-		Oktober (?). Grundtvigs taler ved vennem&#x00F8;det 8.-9. september udkommer i en beretning, redigeret af Kristian K&#x00F8;ster.
+		Oktober (?). <persName key="pe4">Grundtvigs</persName> taler ved vennem&#x00F8;det 8.-9. september udkommer i en beretning, redigeret af <persName key="pe283">Kristian K&#x00F8;ster</persName>.
 	</event>
 
 	<event
 		start="Nov 12 1869 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst. Tale p&#x00E5; 25-&#x00E5;rs dagen for R&#x00F8;dding h&#x00F8;jskoles &#x00E5;bning">
-		Grundtvigs tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 4. november trykkes i &#x00BB;Dansk Folketidende;&#x00AB; samme dag trykker bladet Grundtvigs tale ved mindefesten i K&#x00F8;benhavn p&#x00E5; 25-&#x00E5;rs dagen for R&#x00F8;dding h&#x00F8;jskoles &#x00E5;bning.
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole 4. november trykkes i <hi rend="italic">Dansk Folketidende;</hi> samme dag trykker bladet <persName key="pe4">Grundtvig</persName>s tale ved mindefesten i K&#x00F8;benhavn p&#x00E5; 25-&#x00E5;rs dagen for R&#x00F8;dding h&#x00F8;jskoles &#x00E5;bning.
 	</event>
 	
 	<event
@@ -2135,7 +2128,7 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Mindedigt over Gunni Busck">
-		Medio december. Mindedigt over Gunni Busck, dateret september.
+		Medio december. Mindedigt over <persName key="pe142">Gunni Busck</persName>, dateret september.
 	</event>
 	
 	<event
@@ -2146,14 +2139,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Sang-V&#x00E6;rk, bind 2">
-		Ultimo marts. &#x00BB;Sang-V&#x00E6;rk,&#x00AB; bind 2.
+		Ultimo marts. <hi rend="italic">Sang-V&#x00E6;rk,</hi> bind 2, med titlen <hi rend="italic">Sang-V&#x00E6;rk til Den Danske Kirke-Skole</hi>, indeholdende <persName key="pe4">Grundtvigs</persName> bibel- og kirkehistoriske salmer og sange.
 	</event>
 
 	<event
 		start="May 12 1871 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af pigeskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen af pigeskolen Marielyst h&#x00F8;jskole 3. maj trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af pigeskolen Marielyst h&#x00F8;jskole 3. maj trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
@@ -2164,14 +2157,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Kirke-Speil">
-		Ca. 19-25. maj. &#x00BB;Kirke-Speil eller Udsigt over den christne Menigheds Levnetsl&#x00F8;b&#x00AB;, efter de mundtlige foredrag 1861-63.
+		Ca. 19-25. maj. <hi rend="italic">Kirke-Speil eller Udsigt over den christne Menigheds Levnetsl&#x00F8;b</hi>, efter de mundtlige foredrag 1861-1863.
 	</event>
 
 	<event
 		start="Nov 10 1871 00:00:00 GMT"
 		textColor="#669900"
 		title="Tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst">
-		Grundtvigs tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole  2. november trykkes i &#x00BB;Dansk Folketidende.&#x00AB;
+		<persName key="pe4">Grundtvigs</persName> tale ved &#x00E5;bningen af vinterskolen p&#x00E5; Marielyst h&#x00F8;jskole  2. november trykkes i <hi rend="italic">Dansk Folketidende.</hi>
 	</event>
 
 	<event
@@ -2182,14 +2175,14 @@
 		durationEvent="true"
 		textColor="#669900"
 		title="Smaaskrifter om den historiske H&#x00F8;iskole">
-		Ca. 30. august. &#x00BB;Smaaskrifter om den historiske H&#x00F8;iskole&#x00AB;, heri de betydeligste af Grundtvigs h&#x00F8;jskoleskrifter, dog ikke &#x00BB;B&#x00F8;n og Begreb om en Dansk H&#x00F8;iskole i Soer&#x00AB; (1840).
+		Ca. 30. august. <hi rend="italic">Smaaskrifter om den historiske H&#x00F8;iskole</hi>, heri de betydeligste af <persName key="pe4">Grundtvigs</persName> h&#x00F8;jskoleskrifter, dog ikke <hi rend="italic">B&#x00F8;n og Begreb om en Dansk H&#x00F8;iskole i Soer</hi> (1840).
 	</event>
 
 	<event
 		start="Sep 06 1872 00:00:00 GMT"
 		textColor="#669900"
 		title="Grundtvigs sidste pr&#x00E6;diken">
-		Grundtvigs sidste pr&#x00E6;diken i Vartov, s&#x00F8;ndag 1. september, 14. s&#x00F8;ndag efter trinitatis, trykkes i &#x00BB;Dansk Folketidende&#x00AB; efter manuskript.
+		<persName key="pe4">Grundtvig</persName>s sidste pr&#x00E6;diken i Vartov, s&#x00F8;ndag 1. september, 14. s&#x00F8;ndag efter trinitatis, trykkes i <hi rend="italic">Dansk Folketidende</hi> efter manuskript.
 	</event>
 	
 </data>
