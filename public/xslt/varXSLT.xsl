@@ -16,11 +16,14 @@
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editionPhilologist']"/>
                 </i>
                 <p class="witness">Tekstkilde:</p>
-                <i>
-                    <p class="witness">
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:sourceDesc/TEI:listWit[@xml:id='variantList']/TEI:witness"/>
-                    </p>                
-                </i>
+                
+                <tr>
+                    <xsl:for-each select="//TEI:listWit[@xml:id='variantList']/TEI:witness">
+                        <div class="witness">
+                            <xsl:apply-templates select="."/>
+                        </div>
+                    </xsl:for-each>
+                </tr>
                 <!-- vil andre udgaver afgive varianter?
                 <p class="witness">Anvendte udgaver:</p>
                 <i>
