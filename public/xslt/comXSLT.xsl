@@ -54,19 +54,7 @@
                     filnavn: <xsl:value-of select="TEI:teiHeader/TEI:title[@key]/@key"/>
                 </div>
                 -->
-            
-                <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='com']">
-                        <xsl:text>Indhold</xsl:text>
-                        <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
-                        <xsl:apply-templates select="TEI:text"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <div class="head">
-                            <xsl:text>er under udarbejdelse</xsl:text>
-                        </div>
-                    </xsl:otherwise>
-                </xsl:choose>
+            <xsl:apply-templates select="TEI:teext"/>
         </div>
         
     </xsl:template>
