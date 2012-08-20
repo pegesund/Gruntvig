@@ -50,11 +50,6 @@
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor"/>
             </div>
                 <!--
-                <div class="filename">
-                    filnavn: <xsl:value-of select="TEI:teiHeader/TEI:title[@key]/@key"/>
-                </div>
-                -->
-                
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='com']">
                         <xsl:apply-templates select="TEI:text"/>
@@ -65,6 +60,8 @@
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
+                -->
+            <xsl:apply-templates select="TEI:text"/>
         </div>
         
     </xsl:template>
