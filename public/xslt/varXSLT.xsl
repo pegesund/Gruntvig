@@ -22,19 +22,18 @@
                     <xsl:choose>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                             <xsl:apply-templates select="TEI:text"/>
-                            <hr class="footLine"/>
                         </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
                             <div>
                                 <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
                             </div>
                         </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
                             <div>
                                 <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
                             </div>
                         </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='comingSoonVar']">
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
                             <div>
                                 <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
                             </div>
