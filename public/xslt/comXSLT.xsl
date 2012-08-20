@@ -54,7 +54,7 @@
                     filnavn: <xsl:value-of select="TEI:teiHeader/TEI:title[@key]/@key"/>
                 </div>
                 -->
-            <xsl:apply-templates select="TEI:teext"/>
+            <xsl:apply-templates select="TEI:text"/>
         </div>
         
     </xsl:template>
