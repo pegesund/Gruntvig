@@ -56,7 +56,7 @@
                 -->
             
                 <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='noCom']">
+                    <xsl:when test="//TEI:note[@type='com']">
                         <xsl:text>Indhold</xsl:text>
                         <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
                         <xsl:apply-templates select="TEI:text"/>
