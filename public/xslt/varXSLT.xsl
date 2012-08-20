@@ -22,6 +22,7 @@
                     <xsl:choose>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                             <xsl:apply-templates select="TEI:text"/>
+                            <hr class="footLine"/>
                         </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
                             <div>
@@ -41,7 +42,7 @@
                     </xsl:choose>
                 </div>
                 <br/>    
-                <hr class="footLine"/>
+                
                 <xsl:apply-templates select="//TEI:note[@type='editor']" mode="editor"/>
         </div>
         
