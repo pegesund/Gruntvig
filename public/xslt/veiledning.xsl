@@ -72,13 +72,13 @@
     </xsl:template>
     
     <xsl:template match="TEI:row[@rend='head']">        
-        <tr class="rowHead">
+        <tr>
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
     <xsl:template match="TEI:row[not(@rend='head')]"> 
-        <tr class="row">
+        <tr>
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
