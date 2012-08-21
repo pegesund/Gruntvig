@@ -65,8 +65,14 @@
     
     <xsl:template match="tei:table">        
         <div>
-            <xsl:apply-templates select="tei:row"/>
+            <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:row">        
+        <tr>
+            <xsl:apply-templates/>
+        </tr>
     </xsl:template>
 
 
