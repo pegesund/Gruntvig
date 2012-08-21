@@ -63,12 +63,6 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:table">
-        <table>
-            <xsl:appay-templates/>
-        </table>
-    </xsl:template>
-    
     <xsl:template match="tei:row">        
         <tr>
             <xsl:apply-templates/>
