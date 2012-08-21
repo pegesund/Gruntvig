@@ -70,24 +70,6 @@
             <xsl:apply-templates/>
         </table>
     </xsl:template>
-    
-    <xsl:template match="TEI:row[@rend='head']">        
-        <tr>
-            <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <xsl:template match="TEI:row[not(@rend='head')]"> 
-        <tr>
-            <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell">        
-        <td>
-            <xsl:apply-templates/>
-        </td>
-    </xsl:template>
 
 
     <xsl:include href="popups.xsl"/>
