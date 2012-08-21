@@ -481,6 +481,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="seg">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>
                     <xsl:apply-templates/>
                 </span>                
             </xsl:when>
@@ -496,6 +499,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="segStart">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>
                     &#x25BA;
                     <xsl:apply-templates/>
                 </span>
@@ -512,6 +518,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="segEnd">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>                                        
                     &#x25C4;
                     <xsl:apply-templates/>
                 </span>
