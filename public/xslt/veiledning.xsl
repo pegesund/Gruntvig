@@ -64,7 +64,7 @@
     </xsl:template>
     
     <xsl:template match="tei:table">        
-        <div style="border: 1px solid black;">
+        <div style="font-size: 16px">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
