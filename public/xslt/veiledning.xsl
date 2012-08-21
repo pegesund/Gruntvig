@@ -63,12 +63,28 @@
         </span>
     </xsl:template>
     
-    <!-- tabel -->
-    
-    <xsl:template match="TEI:table"> 
+    <xsl:template match="tei:table">
         <table>
-            <xsl:apply-templates/>
+            <xsl:appay-templates/>
         </table>
+    </xsl:template>
+    
+    <xsl:template match="tei:row[@rend='head']">        
+        <tr>
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="tei:row[not(@rend='head')]"> 
+        <tr>
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="tei:cell">        
+        <td>
+            <xsl:apply-templates/>
+        </td>
     </xsl:template>
 
 
