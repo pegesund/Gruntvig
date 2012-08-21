@@ -63,16 +63,10 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:row">        
-        <tr>
+    <xsl:template match="tei:table">        
+        <div>
             <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <xsl:template match="tei:cell">        
-        <td>
-            <xsl:apply-templates/>
-        </td>
+        </div>
     </xsl:template>
 
 
