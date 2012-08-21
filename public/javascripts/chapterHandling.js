@@ -20,6 +20,17 @@ var gotoPrevChapter = function() {
     gotoChapter(currentTextId, currentChapter); 
 }
 
+
+var fixFootnotes = function() {
+   $(".footMarker").each(function(index, value) { 
+       $(this).parent().click(function() {
+              var noteId = $(this).attr("href");
+              $("#tekst_innhold").scrollTo(noteId, 800);
+              return false;
+       });
+    });
+}
+
 var gotoChapter = function(text, chapter) {
     var chapterUrl = "ajax/getChapter/" + text + "/" + chapter;
     $.ajax({
@@ -28,6 +39,7 @@ var gotoChapter = function(text, chapter) {
             var chapterContent = $("#tekst_innhold");
             chapterContent.html(data);
             $("#tekst_innhold .chapter").hide();
+            fixFootnotes();
             $("#tekst_innhold .chapter").fadeIn(3000, function() {
                 
                 });
