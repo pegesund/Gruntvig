@@ -70,15 +70,15 @@
     </xsl:template>
     
     <xsl:template match="tei:row">        
-        <tr>
+        <div>
             <xsl:apply-templates/>
-        </tr>
+        </div>
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <td>
+        <span>
             <xsl:apply-templates/>
-        </td>
+        </span>
     </xsl:template>
 
 
