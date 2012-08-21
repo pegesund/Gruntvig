@@ -74,6 +74,12 @@
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
+    
+    <xsl:template match="tei:cell">        
+        <td>
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
 
 
     <xsl:include href="popups.xsl"/>
