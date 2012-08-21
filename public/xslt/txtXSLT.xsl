@@ -548,21 +548,21 @@
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        
         <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>        
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
         </a>  
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>
