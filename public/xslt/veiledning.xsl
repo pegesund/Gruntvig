@@ -70,13 +70,13 @@
     </xsl:template>
     
     <xsl:template match="tei:row">        
-        <div style="width: 25%">
+        <div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <span>
+        <span style="width: 25%">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
