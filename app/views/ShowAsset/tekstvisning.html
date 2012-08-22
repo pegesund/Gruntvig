@@ -15,7 +15,8 @@ currentTextId = ${asset.id};
       rootFile = "${asset.fileNameWithoutXml}";
       numOfPictures = ${asset.numberOfPictures};
       var startupHash = window.location.hash;
-  
+      
+        
       // takes an optional argument containing a hashtable
       addReaderColumn = function() {
             var options = arguments[0] || {};
@@ -125,11 +126,13 @@ currentTextId = ${asset.id};
                  var txrContent = $("#txr" + num);
                  txrContent.html(data);
                  addTooltip($('.persName, .placeName, .myth'));
+                 
                  $(".txrmenu").unbind("click").click(function() {
                     var scrollElement = $(this).closest(".mainTxr").parent();
                     var id = $(this).attr("hrel").replace(/\./g, "\\.");
                     scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
                     scrollElement.scrollTo("-=30px", 700);
+                    
                 });
 
              }

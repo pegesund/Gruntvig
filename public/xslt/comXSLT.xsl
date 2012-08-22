@@ -28,7 +28,7 @@
                 </div>
                 -->
                 
-            <div class="head">
+            <div class="head about">
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                     Punktkommentarer til 
                     <i>
@@ -40,7 +40,7 @@
                 </xsl:if>
             </div>
                 
-            <div>
+            <div class="about">
                 Forfatter:
                 <br/>
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>

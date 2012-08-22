@@ -20,19 +20,18 @@ var gotoPrevChapter = function() {
     gotoChapter(currentTextId, currentChapter); 
 }
 
-var gotoChapter = function(text, chapter) {
-    var chapterUrl = "ajax/getChapter/" + text + "/" + chapter;
-    $.ajax({
-        url: chapterUrl,
-        success: function(data) {
-            var chapterContent = $("#tekst_innhold");
-            chapterContent.html(data);
-            $("#tekst_innhold .chapter").hide();
-            $("#tekst_innhold .chapter").fadeIn(3000, function() {
-                
-                });
-            addTooltip($('.persName, .placeName, .myth'));
-            addCommentListener();
+
+var fixFootnotes = function() {
+   $(".footMarker").each(function(index, value) { 
+       $(this).parent().click(function() {
+              var noteId = $(this).attr("href");
+              $("#tekst_innhold").scrollTo(noteId, 800);
+              return false;
+       });
+    });
+}
+
+var fixPageNumbersToFaks = function() {
             $(".faksimile_viewer").click(function() {
                 $(".faksimile_tab:first").trigger('click');
                 var fax = $(this).attr("hrel");
@@ -42,8 +41,24 @@ var gotoChapter = function(text, chapter) {
                 faksimiler[tab_nr].gotoPage(faxNumber);
                 uriChangeTab(tab_nr, 2);
                 uriChangeFaksimile(tab_nr, faxNumber);
-            });
-                        
+            });   
+}
+
+var gotoChapter = function(text, chapter) {
+    var chapterUrl = "ajax/getChapter/" + text + "/" + chapter;
+    $.ajax({
+        url: chapterUrl,
+        success: function(data) {
+            var chapterContent = $("#tekst_innhold");
+            chapterContent.html(data);
+            $("#tekst_innhold .chapter").hide();
+            fixFootnotes();
+            $("#tekst_innhold .chapter").fadeIn(3000, function() {
+                
+                });
+            addTooltip($('.persName, .placeName, .myth'));
+            addCommentListener();
+            fixPageNumbersToFaks();
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");

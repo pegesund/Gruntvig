@@ -481,6 +481,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="seg">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>
                     <xsl:apply-templates/>
                 </span>                
             </xsl:when>
@@ -496,6 +499,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="segStart">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>
                     &#x25BA;
                     <xsl:apply-templates/>
                 </span>
@@ -512,6 +518,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
                 <span class="segEnd">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>                                        
                     &#x25C4;
                     <xsl:apply-templates/>
                 </span>
@@ -539,21 +548,21 @@
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        
         <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>        
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
         </a>  
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        <a href="{@facs}" class="app">
+        <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </a>
