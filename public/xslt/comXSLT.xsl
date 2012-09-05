@@ -58,40 +58,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                 </div>
-                <!--
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                    Punktkommentarer til 
-                    <i>
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
-                    </i>
-                </xsl:if>                    
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                    Punktkommentarer til &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>&#x201D;
-                </xsl:if>
-                -->
             </div>
-            <!--    
-            <div class="about">
-                Forfatter:
-                <br/>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
-                <br/>
-                Redaktion:
-                <br/>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']"/>
-            </div>
-                
-                <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='com']">
-                        <xsl:apply-templates select="TEI:text"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <div class="head">
-                            <xsl:text>er under udarbejdelse</xsl:text>
-                        </div>
-                    </xsl:otherwise>
-                </xsl:choose>
-                -->
             <xsl:apply-templates select="TEI:text"/>
         </div>
         
