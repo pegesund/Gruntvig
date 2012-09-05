@@ -30,6 +30,7 @@
                 
             <div class="head about">
                 Punktkommentarer til
+                <lb/>
                 <xsl:choose>
                     <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                         <i>
@@ -42,7 +43,6 @@
                         &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:when>
                 </xsl:choose>
-                <lb/>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                             <xsl:for-each select="//TEI:author">
