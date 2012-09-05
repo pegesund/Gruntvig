@@ -61,7 +61,7 @@
             </div>
             <xsl:choose>
                  <xsl:when test="//TEI:note[@type='noCom']">
-                     <div class="head">
+                     <div class="head about">
                         <xsl:text>er under udarbejdelse</xsl:text>
                     </div>
                 </xsl:when>
