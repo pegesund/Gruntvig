@@ -29,7 +29,7 @@
                 -->
                 
             <div class="head about">
-                Punktkommentarer til
+                <div>Punktkommentarer til</div>
                 <xsl:choose>
                     <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                         <i>
