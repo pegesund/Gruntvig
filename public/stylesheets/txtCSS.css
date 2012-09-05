@@ -203,7 +203,8 @@
 
 #tekst_innhold .l_firstIndentRight
         {
-        text-indent: 2em;
+        margin-right: 2em;
+        text-align: right;
         }
 
 #tekst_innhold .l_hangingIndent
