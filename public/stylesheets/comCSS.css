@@ -11,6 +11,14 @@
         font-size: 120%;
         margin-bottom: 2em;
         }
+ 
+ .kommentar .author
+        {
+        font-size: 65%;
+        margin: 0em 0em 0em 0em;
+        text-align: center;
+        line-height:1.6em;
+        }
 
 .kommentar .italic
         {
