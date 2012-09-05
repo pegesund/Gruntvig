@@ -42,6 +42,7 @@
                         &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:when>
                 </xsl:choose>
+                <lb/>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                             <xsl:for-each select="//TEI:author">
