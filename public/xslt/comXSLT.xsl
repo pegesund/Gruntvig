@@ -29,6 +29,20 @@
                 -->
                 
             <div class="head about">
+                Punktkommentarer til
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                        <i>
+                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                        </i>
+                    </xsl:when>
+                </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:when>
+                </xsl:choose>
+                <!--
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                     Punktkommentarer til 
                     <i>
@@ -38,6 +52,7 @@
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
                     Punktkommentarer til &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>&#x201D;
                 </xsl:if>
+                -->
             </div>
                 
             <div class="about">
@@ -47,7 +62,7 @@
                 <br/>
                 Redaktion:
                 <br/>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor"/>
+                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']"/>
             </div>
                 <!--
                 <xsl:choose>
