@@ -61,17 +61,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 -->
-            
-                <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='noCom']">
-                        <div class="head">
-                            <xsl:text>er under udarbejdelse</xsl:text>
-                        </div>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:apply-templates select="TEI:text"/>
-                    </xsl:otherwise>
-                </xsl:choose>
+            <xsl:apply-templates select="TEI:text"/>
         </div>
         
     </xsl:template>
