@@ -70,7 +70,7 @@
                 </xsl:if>
                 -->
             </div>
-                
+            <!--    
             <div class="about">
                 Forfatter:
                 <br/>
@@ -80,7 +80,7 @@
                 <br/>
                 <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']"/>
             </div>
-                <!--
+                
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='com']">
                         <xsl:apply-templates select="TEI:text"/>
