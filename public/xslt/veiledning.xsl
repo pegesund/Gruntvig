@@ -54,12 +54,29 @@
         </li>
     </xsl:template>
 
-
     <xsl:template match="tei:hi">
         <span>
             <xsl:attribute name="class">
                 <xsl:value-of select="concat('teihi ', @rend)"/>
             </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:table">        
+        <div style="font-size: 16px; width:100%;">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:row">        
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:cell">        
+        <span>
             <xsl:apply-templates/>
         </span>
     </xsl:template>

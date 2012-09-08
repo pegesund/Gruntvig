@@ -64,10 +64,18 @@
                         </div>
                 </xsl:if>
             </div>
-            <h2>Indhold</h2>
-                
-            <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>                
-            <xsl:apply-templates select="TEI:text"/>
+                <xsl:choose>
+                    <xsl:when test="//TEI:note[@type='txr']">
+                        <xsl:text>Indhold</xsl:text>
+                        <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
+                        <xsl:apply-templates select="TEI:text"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <div class="head">
+                            <xsl:text>er under udarbejdelse</xsl:text>
+                        </div>
+                    </xsl:otherwise>
+                </xsl:choose>
         </div>
         
     </xsl:template>

@@ -212,12 +212,17 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:if>
-                        <xsl:if test="//TEI:note[@type='noVar']">
-                            <xsl:text>Varianter er endnu ikke etableret</xsl:text>
-                        </xsl:if>
-                        <xsl:if test="//TEI:note[@type='minusVar']">
-                            <xsl:text> </xsl:text>
-                        </xsl:if>
+                        <xsl:choose>
+                            <xsl:when test="//TEI:note[@type='noVar']">
+                                <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:note[@type='minusVar']">
+                                <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:note[@type='unknownVar']">
+                                <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
+                            </xsl:when>
+                        </xsl:choose>
                     </div>
                     
                     <div class="kolofon">

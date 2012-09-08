@@ -11,26 +11,37 @@
     <xsl:template match="TEI:TEI">
         
         <div class="variantMain">
-                <p class="witness">Teksten er etableret af:</p>
-                <i>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editionPhilologist']"/>
-                </i>
-                <p class="witness">Tekstkilde:</p>
-                <i>
-                    <p class="witness">
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:sourceDesc/TEI:listWit[@xml:id='variantList']/TEI:witness"/>
-                    </p>                
-                </i>
-                <!-- vil andre udgaver afgive varianter?
-                <p class="witness">Anvendte udgaver:</p>
-                <i>
-                <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:sourceDesc/TEI:listWit[@xml:id='pageNumber']/TEI:witness"/>
-                </i>
-                -->
-                <hr/>
-                <xsl:apply-templates select="TEI:text"/>
+                
+                <div class="head">
+                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>                        
+                    </xsl:if>                    
+                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"> 
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:if>
+                    <xsl:choose>
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
+                            <xsl:apply-templates select="TEI:text"/>
+                        </xsl:when>
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
+                            <div>
+                                <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
+                            </div>
+                        </xsl:when>
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
+                            <div>
+                                <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
+                            </div>
+                        </xsl:when>
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
+                            <div>
+                                <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
+                            </div>
+                        </xsl:when>
+                    </xsl:choose>
+                </div>
                 <br/>    
-                <hr class="footLine"/>
+                
                 <xsl:apply-templates select="//TEI:note[@type='editor']" mode="editor"/>
         </div>
         
