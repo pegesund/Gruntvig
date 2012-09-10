@@ -150,6 +150,11 @@
         font-style: italic;
         }
 
+.innledningContent .underLine
+        {
+        text-decoration: underline;
+        }
+
 .innledningContent .lgNumber
         {
         font-size: 100%;
