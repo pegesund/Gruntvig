@@ -24,19 +24,13 @@
                             <xsl:apply-templates select="TEI:text"/>
                         </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
-                            <div class="head">
                                 <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
-                            </div>
                         </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
-                            <div class="head">
                                 <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
-                            </div>
                         </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
-                            <div class="head">
                                 <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
-                            </div>
                         </xsl:when>
                     </xsl:choose>
                 
