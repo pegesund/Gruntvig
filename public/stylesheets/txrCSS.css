@@ -231,6 +231,12 @@ KSR: 2011.09.26: hi-element
         margin: 1em;
         }
 
+.mainTxr .subSimple
+        {
+        list-style-type: circle;
+        margin: 0.5em;
+        }
+
 .mainTxr .ordered
         {
         list-style-type: circle;
