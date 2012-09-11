@@ -19,12 +19,10 @@
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"> 
                         &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                     </xsl:if>
-                </div>
                     <xsl:choose>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                             <xsl:apply-templates select="TEI:text"/>
                         </xsl:when>
-                <div class="head">
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
                             <div>
                                 <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
@@ -40,7 +38,6 @@
                                 <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
                             </div>
                         </xsl:when>
-                 </div>
                     </xsl:choose>
                 
                 <br/>    
