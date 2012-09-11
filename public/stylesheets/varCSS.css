@@ -137,7 +137,12 @@ span.appInvisible
         font-size: 100%;
         margin: 2em 0em 2em 0em;
         text-align: left;
-        }        
+        }
+
+.variantMain ul.source
+        {
+        list-style-type: none;
+        }
         
 .variantMain .italic 
         {
