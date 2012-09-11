@@ -12,7 +12,7 @@
         
         <div class="variantMain">
                 
-                <div>
+                <div class="head">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                         <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>                        
                     </xsl:if>                    
@@ -23,17 +23,23 @@
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                             <xsl:apply-templates select="TEI:text"/>
                         </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
-                                <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
-                        </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
+                            <div>
                                 <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
+                            </div>
                         </xsl:when>
                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
+                            <div>
                                 <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
+                            </div>
+                        </xsl:when>
+                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
+                            <div>
+                                <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
+                            </div>
                         </xsl:when>
                     </xsl:choose>
-                
+                </div>
                 <br/>    
                 
                 <xsl:apply-templates select="//TEI:note[@type='editor']" mode="editor"/>
