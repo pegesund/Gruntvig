@@ -353,13 +353,13 @@
     </xsl:template>
     
     <xsl:template match="TEI:row">        
-        <div class="row">
+        <div class="tr">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
     <xsl:template match="TEI:cell">        
-        <span class="cell">
+        <span class="td">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
