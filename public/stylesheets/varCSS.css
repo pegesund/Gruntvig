@@ -124,6 +124,12 @@ span.appInvisible
         font-weight: bold;
         text-align: center;
         }
+        
+.variantMain .title 
+        {
+        font-size: 144%;
+        text-align: center;
+        }
 
 .variantMain .italic 
         {
