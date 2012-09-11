@@ -12,7 +12,7 @@
         
         <div class="variantMain">
                 
-                <div class="head">
+                <div>
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                         <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>                        
                     </xsl:if>                    
