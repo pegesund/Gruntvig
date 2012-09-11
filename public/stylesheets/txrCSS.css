@@ -234,7 +234,7 @@ KSR: 2011.09.26: hi-element
 .mainTxr .subSimple
         {
         list-style-type: circle;
-        margin: 1em;
+        margin: 0.5em auto 0.5em 1em;
         }
 
 .mainTxr .ordered
