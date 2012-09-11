@@ -278,9 +278,17 @@ KSR: 2011.09.26: hi-element
 
 /* element table start */
 
-.mainTxr .table
+
+
+.mainTxr table, tr, td
         {
-        margin: 0em 2em 0em 2em
+        border: 0px solid black;
+        padding: 5px;
+        }
+        
+.mainTxr td
+        {
+        width: auto
         }
 
 /* element table end */
