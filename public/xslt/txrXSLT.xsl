@@ -278,6 +278,16 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
+        <xsl:if test="@type='subSimple'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="subSimple">
+                        <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
         <xsl:if test="@type='ordered'">
             <ul>
                 <xsl:for-each select="TEI:item">
