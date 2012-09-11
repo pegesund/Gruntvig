@@ -132,6 +132,13 @@ span.appInvisible
         text-align: center;
         }
 
+.variantMain .source
+        {
+        font-size: 100%;
+        margin: 2em 0em 2em 0em;
+        text-align: left;
+        }        
+        
 .variantMain .italic 
         {
         font-style: italic;
