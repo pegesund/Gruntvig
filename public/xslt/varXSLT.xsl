@@ -12,7 +12,7 @@
         
         <div class="variantMain">            
             <div>
-                <div class="head">
+                <div class="title">
                     <xsl:choose>                            
                         <xsl:when test="//TEI:title[@rend='main']">
                             <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i> 
