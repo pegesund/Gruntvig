@@ -21,7 +21,17 @@
                             &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
                         </xsl:when>
                     </xsl:choose>
-                </div>                
+                </div>
+                
+                <div class="source">
+                    <div>
+                        <xsl:text>Tekstkilde:</xsl:text>
+                    </div>
+                    <xsl:for-each select="//TEI:witness[@rend]">
+                        <xsl:apply-templates select="."/>
+                    </xsl:for-each>
+                </div>
+                
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                         <xsl:apply-templates select="TEI:text"/>
