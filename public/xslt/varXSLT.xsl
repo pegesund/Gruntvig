@@ -132,6 +132,13 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="//TEI:div">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
+    </xsl:template>
+    
     <xsl:template name="footnote">
         <xsl:if test=".//TEI:note[@type='footnote']">
             <br/>
