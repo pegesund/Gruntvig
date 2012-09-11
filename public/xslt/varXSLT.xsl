@@ -27,9 +27,13 @@
                     <div>
                         <xsl:text>Tekstkilde:</xsl:text>
                     </div>
-                    <xsl:for-each select="//TEI:witness[@rend]">
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
+                    <ul>
+                        <xsl:for-each select="//TEI:witness[@rend]">
+                            <li>
+                                <xsl:apply-templates/>
+                            </li>
+                        </xsl:for-each>
+                    </ul>
                 </div>
                 
                 <xsl:choose>
