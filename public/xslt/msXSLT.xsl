@@ -72,7 +72,7 @@
         
     </xsl:template>
     
-    <xsl:template match="tei:lb">        
+    <xsl:template match="TEI:lb">        
         <br>
             <xsl:apply-templates/>
         </br>        
@@ -80,45 +80,45 @@
     
     <!-- titelblad start -->
     
-    <xsl:template match="tei:titlePage">
+    <xsl:template match="TEI:titlePage">
         <div class="titlePage">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:titlePart">
+    <xsl:template match="TEI:titlePart">
         <div class="{@type}">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:docTitle">
+    <xsl:template match="TEI:docTitle">
         <div class="docTitle">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:byline">
+    <xsl:template match="TEI:byline">
         <div class="byline">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:docImprint">        
+    <xsl:template match="TEI:docImprint">        
         <div class="docImprint">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
     
-    <xsl:template match="tei:fw[@type='longLine']">
+    <xsl:template match="TEI:fw[@type='longLine']">
         <hr align="center" class="fwLongLine"/>        
     </xsl:template>
     
-    <xsl:template match="tei:fw[@type='shortLine']">
+    <xsl:template match="TEI:fw[@type='shortLine']">
         <hr align="center" class="fwShortLine"/>
     </xsl:template>
     
-    <xsl:template match="tei:titlePart[@type='part']">
+    <xsl:template match="TEI:titlePart[@type='part']">
         <div class="titlePart">
             <xsl:apply-templates/>
         </div>
@@ -126,135 +126,123 @@
     
     <!-- titelblad end -->
     
-    <xsl:template match="tei:div[@type='motto']">
+    <xsl:template match="TEI:div[@type='motto']">
         <div class="motto">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
     
-    <xsl:template match="tei:div[@type='preFace']">        
+    <xsl:template match="TEI:div[@type='preFace']">        
         <div class="preFace">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-
-<!--
-    henter nummer på stofe; konflikt med næste template?
-    <xsl:template match="tei:lg[@n]">        
-        <div class="lgNumber">
-                <xsl:value-of select="@n"/>
-            <xsl:apply-templates/>
-            <br/>
-        </div>        
-    </xsl:template>
--->
     
-    <xsl:template match="tei:head">        
+    <xsl:template match="TEI:head">        
         <div class="head{@rend}">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:lg">
+    <xsl:template match="TEI:lg">
         <div class="lg">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:l">
+    <xsl:template match="TEI:l">
         <div class="l">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:app[@type='ms']">
+    <xsl:template match="TEI:app[@type='ms']">
         <span class="ms">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:lem[@type='add']">
-        <span class="add">
+    <xsl:template match="TEI:rdg">
+        <span>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:lem[@type='add' and not(TEI:l)]">
+        <span class="l">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
             <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='firstDel']">
-        <span class="firstDel">
+    <xsl:template match="//TEI:lem[@type='add']/TEI:l[position()=1]">
+        <div class="l">
+            <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
-        </span>
+        </div>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='shading']">
-        <span class="shading">
+    <xsl:template match="//TEI:lem[@type='add']/TEI:l[position()=last()]">
+        <div class="l">
             <xsl:apply-templates/>
-        </span>
+            <xsl:text>]</xsl:text>
+        </div>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='immediate']">
-        <span class="immediate">
-            <xsl:apply-templates/>
-        </span>
+    <xsl:template match="TEI:del">
+        <xsl:choose>
+            <xsl:when test="@type='add'">
+                <xsl:text>[</xsl:text>
+                <xsl:apply-templates/>
+                <xsl:text>]</xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='firstDel'">                
+                <span class="firstDel">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='shading'">
+                <span class="shading">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@hand='doubt'">
+                <xsl:text>&lt;</xsl:text>
+                <xsl:apply-templates/>
+                <xsl:text>&gt;</xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='immediate'">
+                <span class="immediate">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='secondDel'">
+                <span class="secondDel">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='thirdDel'">
+                <span class="thirdDel">
+                    <span class="redLine">
+                        <xsl:apply-templates/>
+                    </span>                    
+                </span>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='secondDel']">
-        <span class="secondDel">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="tei:del[@type='doubt']">
-        <span class="doubt">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <!-- app til mouse-over
-    
-    <xsl:template match="tei:app">
-        <a class="app" href="#">
-            <span class="lem">
-                <xsl:apply-templates select="tei:lem"/>
-            </span>
-            <span class="appInvisible">
-                <xsl:text>] </xsl:text>
-                <xsl:apply-templates select="tei:rdg"/>
-            </span>
-        </a>
-    </xsl:template>
-    
-    <xsl:template match="tei:rdg">
-        <xsl:apply-templates/>
-        <span class="wit">                
-            <xsl:text> </xsl:text>
-            <i>
-                <xsl:choose>
-                    <xsl:when test="following-sibling::tei:rdg[current()/@type or not(@type)]">
-                        <xsl:text>, </xsl:text>
-                    </xsl:when>
-                    <xsl:when test="following-sibling::tei:rdg[not(current()/@type) and @type]">
-                        <xsl:text>; </xsl:text>
-                    </xsl:when>
-                </xsl:choose>
-            </i>
-        </span>
-    </xsl:template>
-    
-    -->
-    
-    <xsl:template match="tei:note[@type='add']">        
+    <xsl:template match="TEI:note[@type='add']">        
         <span class="editor">
             <i>
-                <xsl:value-of select="tei:note[@type='add']"/>
+                <xsl:value-of select="TEI:note[@type='add']"/>
             </i>                        
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:note[@type='footnote']">
+    <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="tei:text"/>
+            <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
             <a id="retur{$id}" href="#note{$id}">
                 <span class="footMarker">
@@ -263,9 +251,9 @@
             </a>                            
     </xsl:template>
     
-    <xsl:template match="tei:note[@type='footnote']" mode="foot">
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="tei:text"/>
+            <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
         <a id="note{$id}" href="#retur{$id}">
             <span class="footMarker">
@@ -279,7 +267,7 @@
     
     <!--
     
-    <xsl:template match="tei:note[@type='footnote']">
+    <xsl:template match="TEI:note[@type='footnote']">
         *
         <hr class="footLine"/>
         <div class="footnote">
@@ -289,7 +277,7 @@
     
     -->
     
-    <xsl:template match="tei:hi">        
+    <xsl:template match="TEI:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
@@ -297,31 +285,31 @@
     
     <!-- til brugs for txtEditCSS-css start -->
     
-    <xsl:template match="tei:persName">
+    <xsl:template match="TEI:persName">
         <span class="persName">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:placeName">
+    <xsl:template match="TEI:placeName">
         <span class="placeName">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:rs[@type='bible']">
+    <xsl:template match="TEI:rs[@type='bible']">
         <span class="rs_bible">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:rs[@type='myth']">
+    <xsl:template match="TEI:rs[@type='myth']">
         <span class="rs_myth">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:rs[@type='title']">
+    <xsl:template match="TEI:rs[@type='title']">
         <span class="rs_title">
             <xsl:apply-templates/>
         </span>
@@ -329,19 +317,19 @@
     
     <!-- til brugs for txtEditCSS-css end -->
     
-    <xsl:template match="tei:p[@rend and not(@rend='hangingIndent')]">        
+    <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">        
         <div class="{@rend}">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:p[@rend='hangingIndent']">        
+    <xsl:template match="TEI:p[@rend='hangingIndent']">        
         <div class="hangingIndent">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        |
         <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
         <a href="{@facs}">            
             <span class="pbA">
@@ -351,7 +339,7 @@
         </a>        
     </xsl:template>
     
-    <xsl:template match="tei:pb[@type='text' and @rend='supp']">
+    <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         |
         <a href="{@facs}">
             <span class="pbA">
@@ -360,7 +348,7 @@
         </a>        
     </xsl:template>
     
-    <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
+    <xsl:template match="TEI:pb[@type='ms' and @rend='supp']">
         |
         <a href="{@facs}">
             <span class="pbMs">
@@ -369,7 +357,7 @@
         </a>       
     </xsl:template>
     
-    <xsl:template match="tei:pb[@type='ms' and not(@rend='supp')]">
+    <xsl:template match="TEI:pb[@type='ms' and not(@rend='supp')]">
         |
         <a href="{@facs}">
             <span class="pbMs">
@@ -385,22 +373,5 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-<!--
-    
-    <xsl:template match="tei:lg">        
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="tei:l">        
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
--->
     
 </xsl:stylesheet>
