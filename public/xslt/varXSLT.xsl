@@ -11,15 +11,17 @@
     <xsl:template match="TEI:TEI">
         
         <div class="variantMain">            
-            <div class="head">                    
-                <xsl:choose>                            
-                    <xsl:when test="//TEI:title[@rend='main']">
-                        <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i> 
-                    </xsl:when>
-                    <xsl:when test="//TEI:title[@rend='part']">
-                        &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
-                    </xsl:when>
-                </xsl:choose>
+            <div>
+                <div class="head">
+                    <xsl:choose>                            
+                        <xsl:when test="//TEI:title[@rend='main']">
+                            <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i> 
+                        </xsl:when>
+                        <xsl:when test="//TEI:title[@rend='part']">
+                            &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+                        </xsl:when>
+                    </xsl:choose>
+                </div>                
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                         <xsl:apply-templates select="TEI:text"/>
