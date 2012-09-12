@@ -62,17 +62,20 @@
         
 .kommentar .myth 
         {
-        margin:0;
-            
+        margin:0;            
         }
-.kommentar .plusComment {
+        
+.kommentar .plusComment 
+        {
         color: #4DBC4D; cursor:arrow;
         }
         
-.kommentar .appInvisible {
+.kommentar .appInvisible 
+        {
         display:none;
         }
         
-   .kommentar .readMore i {
+   .kommentar .readMore i 
+        {
         display:none;
         }             
