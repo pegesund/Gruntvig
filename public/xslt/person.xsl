@@ -35,9 +35,12 @@
     </xsl:template>
 
     <xsl:template match="tei:table">
+            <xsl:apply-templates>
               <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
             </xsl:apply-templates>
     </xsl:template>
+
+
 
     <xsl:template match="tei:row">
         <div class="person refdiv">
@@ -47,6 +50,13 @@
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
     </xsl:template>
+<!--
+    <xsl:template match="tei:cell[@type='name']">
+        <b>
+                <xsl:apply-templates/>
+        </b>
+    </xsl:template>
+-->
 
     <xsl:template match="tei:note[@type='firstName']">
                 <xsl:apply-templates/>
@@ -55,7 +65,27 @@
     <xsl:template match="tei:note[@type='lastName']">
                 <xsl:apply-templates/>
     </xsl:template>
-    
+
+<!--
+    <xsl:template match="tei:cell[@type='year']">
+        <i>
+            <xsl:apply-templates/>
+        </i>
+    </xsl:template>
+
+
+    <xsl:template match="tei:cell[@type='nation']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:cell[@type='profes']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:cell[@type='facts']">
+                <xsl:apply-templates/>
+    </xsl:template>
+-->
    <xsl:template match="tei:cell[@rend='name']">
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
