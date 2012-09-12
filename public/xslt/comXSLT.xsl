@@ -146,7 +146,9 @@
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]">
-        <xsl:apply-templates select="TEI:p"/>
+        <div class="note">
+            <xsl:apply-templates select="TEI:p"/>
+        </div>
     </xsl:template>
 
     
