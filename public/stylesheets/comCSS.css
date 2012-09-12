@@ -51,25 +51,28 @@
 
 .kommentar .p
         {
-        margin: -1em 0em 0em 0em;
+        margin: 0em 0em 0em 0em;
         }
         
 .kommentar .note
         {
         text-align: left;
-        margin: 2em 1em 2em 1em;
+        margin: 0em 0em 0em 0em;
         }
         
-.kommentar .myth {
+.kommentar .myth 
+        {
         margin:0;
             
         }
 .kommentar .plusComment {
         color: #4DBC4D; cursor:arrow;
         }
+        
 .kommentar .appInvisible {
         display:none;
         }
+        
    .kommentar .readMore i {
         display:none;
         }             
