@@ -150,7 +150,8 @@
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">        
-        <div class="p" id="{../@xml:id}">
+        <div class="note">
+            <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
@@ -163,6 +164,7 @@
                 </xsl:when>
             </xsl:choose>       
         </div>
+      </div>
     </xsl:template>
     
     <xsl:template name="next-lemma-part">
