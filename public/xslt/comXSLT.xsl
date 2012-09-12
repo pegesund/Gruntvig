@@ -139,10 +139,8 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:p">        
-        <div class="p">
-            <xsl:apply-templates/>
-        </div>
+    <xsl:template match="TEI:p"> 
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="TEI:note[@xml:id]">
