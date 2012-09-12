@@ -162,9 +162,9 @@
     </xsl:template>
 
     <xsl:template match="TEI:note[@xml:id]">
-        <div>
-            <xsl:apply-templates/>
-        </div>
+        <span>
+            <xsl:apply-templates select="TEI:p"/>
+        </span>
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">        
