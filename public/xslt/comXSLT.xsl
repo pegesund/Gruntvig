@@ -138,18 +138,17 @@
             <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
-
+    
     <xsl:template match="TEI:p">        
         <div class="p">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-
+    
     <xsl:template match="TEI:note[@xml:id]">
-        <div class="note">
-            <xsl:apply-templates select="TEI:p"/>
-        </div>
+        <xsl:apply-templates select="TEI:p"/>
     </xsl:template>
+
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
         <div class="note commentNote" id="{../@xml:id}">
