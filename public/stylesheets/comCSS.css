@@ -51,7 +51,7 @@
 
 .kommentar .p
         {
-        margin:1em;
+        margin: -1em 0em 0em 0em;
         }
         
 .kommentar .note
