@@ -181,8 +181,6 @@
         </div>
     </xsl:template>
     
-    
-    
     <xsl:template match="TEI:head">
         <div class="head">
             <xsl:apply-templates/>
