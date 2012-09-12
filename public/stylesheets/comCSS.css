@@ -48,11 +48,18 @@
         margin-right: 2em;
         text-align: left;
         }
+
+.kommentar .p
+        {
+        margin:0em 0em 0em 0em;
+        }
+        
 .kommentar .note
         {
         text-align: left;
         margin: 1em 1em 1em 1em;
         }
+        
 .kommentar .myth {
         margin:0;
             
