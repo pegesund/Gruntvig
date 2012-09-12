@@ -115,7 +115,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='readMore']/p">        
+    <xsl:template match="TEI:note[@type='readMore']/TEI:p">        
         <div class="readMoreP">
             <i>readMore:</i>
             <xsl:apply-templates/>
