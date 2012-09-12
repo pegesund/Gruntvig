@@ -107,6 +107,7 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    
     <!--
     <xsl:template match="TEI:note[@type='readMore']">        
         <div class="readMore">
@@ -122,6 +123,7 @@
         </div>
     </xsl:template>
     -->
+    
     <xsl:template match="TEI:note[@type='sic']">
         <span class="sic">
             <xsl:apply-templates/>
@@ -149,9 +151,8 @@
         <xsl:apply-templates select="TEI:p"/>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@xml:id]/TEI:p">        
-        <div class="readMore">
-            <div class="p" id="{../@xml:id}">
+    <xsl:template match="TEI:note[@xml:id]/TEI:p">
+        <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
@@ -164,7 +165,6 @@
                 </xsl:when>
             </xsl:choose>       
         </div>
-      </div>
     </xsl:template>
     
     <xsl:template name="next-lemma-part">
