@@ -127,6 +127,11 @@
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
     </xsl:template>
     
+    <xsl:template match="tei:note">
+        <!-- firstName eller lastName springer addName= etc over -->
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
+    </xsl:template>
+    
      <xsl:template match="tei:addName">
         <span class="addName">
             <xsl:if test="@type='birthName'">
@@ -203,7 +208,6 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='facts']"/>
-    <!-- built-in rule -->
     
     <xsl:template name="delimiterComma">
         <xsl:if test="following-sibling::tei:cell">

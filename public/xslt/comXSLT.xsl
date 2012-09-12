@@ -108,6 +108,7 @@
         </span>
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:note[@type='readMore']">        
         <div class="readMore">
             <i>readMore:</i>
@@ -115,12 +116,13 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='readMore']/p">        
+    <xsl:template match="TEI:note[@type='readMore']/TEI:p">        
         <div class="readMoreP">
             <i>readMore:</i>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    -->
     
     <xsl:template match="TEI:note[@type='sic']">
         <span class="sic">
@@ -139,30 +141,33 @@
         </span>
     </xsl:template>
     
-    
-    <xsl:template match="TEI:note[@xml:id]">
-        <xsl:apply-templates select="TEI:p"/>
+    <xsl:template match="TEI:p">        
+        <div class="p">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
 
+    <xsl:template match="TEI:note[@xml:id]">
+          <div class="note">
+            <xsl:apply-templates select="TEI:p"/>
+        </div>
+    </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
-        <div class="note commentNote" id="{../@xml:id}">
-            <div class="p">
-                <xsl:apply-templates/>
-                <xsl:choose>
-                    <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
-                        <span class="app">
-                            <span id="plus{../@xml:id}" class="plusComment"> Læs mere -</span>
-                            <div id="more{../@xml:id}" class="appInvisible">
-                                <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
-                            </div>
-                        </span>
-                    </xsl:when>
-                </xsl:choose>
-            </div>
-        </div>  
+        <div class="p" id="{../@xml:id}">
+            <xsl:apply-templates/>
+            <xsl:choose>
+                <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
+                    <span class="app">                        
+                        <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
+                        <div id="more{../@xml:id}" class="appInvisible">
+                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
+                        </div>
+                    </span>
+                </xsl:when>
+            </xsl:choose>       
+        </div>
     </xsl:template>
-
     
     <xsl:template name="next-lemma-part">
         <xsl:param name="n"/>
@@ -180,14 +185,6 @@
         </xsl:if>
         <!--otherwise stop-->
     </xsl:template>
-    
-    <xsl:template match="TEI:p">        
-        <div class="p">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    
     
     <xsl:template match="TEI:head">
         <div class="head">

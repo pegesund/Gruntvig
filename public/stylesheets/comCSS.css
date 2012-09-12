@@ -48,21 +48,34 @@
         margin-right: 2em;
         text-align: left;
         }
+
+.kommentar .p
+        {
+        margin: 1em 0em 1em 0em;
+        }
+        
 .kommentar .note
         {
         text-align: left;
-        margin: 1em 1em 1em 1em;
+        margin: 2em 1em 2em 1em;
         }
-.kommentar .myth {
-        margin:0;
-            
+        
+.kommentar .myth 
+        {
+        margin:0;            
         }
-.kommentar .plusComment {
+        
+.kommentar .plusComment 
+        {
         color: #4DBC4D; cursor:arrow;
         }
-.kommentar .appInvisible {
+        
+.kommentar .appInvisible 
+        {
         display:none;
         }
-   .kommentar .readMore i {
+        
+   .kommentar .readMore i 
+        {
         display:none;
         }             

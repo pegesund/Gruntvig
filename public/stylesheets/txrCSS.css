@@ -188,7 +188,18 @@ KSR: 2011.09.26: hi-element
         margin: 2em 2em 2em 2em;
         }
 
-/* list begynd */
+/* list start */
+
+.mainTxr .litList
+        {
+        list-style: circle;
+        }
+
+.mainTxr .decimal
+        {
+        list-style-type: decimal;
+        margin: 1em;
+        }
 
 .mainTxr .upperAlpha
         {
@@ -220,7 +231,25 @@ KSR: 2011.09.26: hi-element
         margin: 1em;
         }
 
-/* list slut */
+.mainTxr .subSimple
+        {
+        list-style-type: circle;
+        margin: 0.5em 0.5em 0.5em 1em;
+        }
+
+.mainTxr .ordered
+        {
+        list-style-type: circle;
+        margin: 1em;
+        }
+
+.mainTxr .textualCriticism
+        {
+        list-style-type: circle;
+        margin: 1em;
+        }
+        
+/* list END */
 
 .mainTxr .noIndent
         {
@@ -278,9 +307,17 @@ KSR: 2011.09.26: hi-element
 
 /* element table start */
 
-.mainTxr .table
+
+
+.mainTxr table, tr, td
         {
-        margin: 0em 2em 0em 2em
+        border: 0px solid black;
+        padding: 5px;
+        }
+        
+.mainTxr td
+        {
+        width: auto
         }
 
 /* element table end */

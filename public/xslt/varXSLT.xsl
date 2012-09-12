@@ -10,36 +10,53 @@
     <xsl:include href="popups.xsl"/>
     <xsl:template match="TEI:TEI">
         
-        <div class="variantMain">
-                
-                <div class="head">
-                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>                        
-                    </xsl:if>                    
-                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"> 
-                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                    </xsl:if>
-                    <xsl:choose>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
-                            <xsl:apply-templates select="TEI:text"/>
+        <div class="variantMain">            
+            <div>
+                <div class="title">
+                    <xsl:choose>                            
+                        <xsl:when test="//TEI:title[@rend='main']">
+                            <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i> 
                         </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
-                            <div>
-                                <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
-                            </div>
-                        </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
-                            <div>
-                                <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
-                            </div>
-                        </xsl:when>
-                        <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
-                            <div>
-                                <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
-                            </div>
+                        <xsl:when test="//TEI:title[@rend='part']">
+                            &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
                         </xsl:when>
                     </xsl:choose>
                 </div>
+                
+                <div class="source">
+                    <div>
+                        <xsl:text>Tekstkilde:</xsl:text>
+                    </div>
+                    <ul>
+                        <xsl:for-each select="//TEI:witness[@rend]">
+                            <li>
+                                <xsl:apply-templates/>
+                            </li>
+                        </xsl:for-each>
+                    </ul>
+                </div>
+                
+                <xsl:choose>
+                    <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
+                        <xsl:apply-templates select="TEI:text"/>
+                    </xsl:when>
+                    <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='minusVar']">
+                        <div class="head">
+                            <xsl:text>GV udgiver ikke varianter til dette værk.</xsl:text>
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='noVar']">
+                        <div class="head">
+                            <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='unknownVar']">
+                        <div class="head">
+                            <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
+                        </div>
+                    </xsl:when>
+                </xsl:choose>
+            </div>
                 <br/>    
                 
                 <xsl:apply-templates select="//TEI:note[@type='editor']" mode="editor"/>
@@ -110,6 +127,46 @@
                 <xsl:value-of select="$id"/>
             </span>
         </a>               
+        <div class="footnote">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:div">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
+    </xsl:template>
+    
+    <xsl:template name="footnote">
+        <xsl:if test=".//TEI:note[@type='footnote']">
+            <br/>
+            <hr class="footLine"/>            
+            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>            
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="retur{$id}" href="#note{$id}">
+            <span class="footMarker">
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="note{$id}" href="#retur{$id}">
+            <span class="footMarker">
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
         <div class="footnote">
             <xsl:apply-templates/>
         </div>
