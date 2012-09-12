@@ -139,6 +139,18 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:p">        
+        <div class="p">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="TEI:note[@xml:id]">
+        <div class="test">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
         <div class="p" id="{../@xml:id}">
                 <xsl:apply-templates/>
@@ -154,7 +166,6 @@
                 </xsl:choose>
         </div>  
     </xsl:template>
-
     
     <xsl:template name="next-lemma-part">
         <xsl:param name="n"/>
