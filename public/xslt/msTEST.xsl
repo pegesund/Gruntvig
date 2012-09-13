@@ -104,12 +104,12 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:lg">
         <div class="lg">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="TEI:l">
         <div class="l">
@@ -200,57 +200,11 @@
         </div>
     </xsl:template>
     
-    <!--
-    
-    <xsl:template match="TEI:note[@type='footnote']">
-        *
-        <hr class="footLine"/>
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
-    
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    <!-- til brugs for txtEditCSS-css start -->
-    
-    <xsl:template match="TEI:persName">
-        <span class="persName">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:placeName">
-        <span class="placeName">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:rs[@type='bible']">
-        <span class="rs_bible">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:rs[@type='myth']">
-        <span class="rs_myth">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:rs[@type='title']">
-        <span class="rs_title">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <!-- til brugs for txtEditCSS-css end -->
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">        
         <div class="{@rend}">
@@ -308,22 +262,5 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-<!--
-    
-    <xsl:template match="TEI:lg">        
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:l">        
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
--->
     
 </xsl:stylesheet>
