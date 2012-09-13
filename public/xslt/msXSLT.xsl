@@ -369,7 +369,7 @@
         <xsl:text>.</xsl:text>
     </xsl:template>
     
-    <xsl:template match="tei:lg">        
+    <xsl:template match="tei:lgX">        
         <div class="lg">
             <xsl:apply-templates/>
         </div>        
