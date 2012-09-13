@@ -78,7 +78,7 @@
         </br>        
     </xsl:template>
     
-    <!-- titelblad start -->
+    <!-- titelblad START -->
     
     <xsl:template match="tei:titlePage">
         <div class="titlePage">
@@ -124,7 +124,7 @@
         </div>
     </xsl:template>
     
-    <!-- titelblad end -->
+    <!-- titelblad END -->
     
     <xsl:template match="tei:div[@type='motto']">
         <div class="motto">
@@ -253,18 +253,6 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <!--
-    
-    <xsl:template match="tei:note[@type='footnote']">
-        *
-        <hr class="footLine"/>
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
     
     <xsl:template match="tei:hi">        
         <span class="{@rend}">
