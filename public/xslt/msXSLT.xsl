@@ -372,7 +372,6 @@
     <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
-            <xsl:text>HAT</xsl:text>
         </div>        
     </xsl:template>
     
