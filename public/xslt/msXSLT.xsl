@@ -144,12 +144,6 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:l">
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="tei:app[@type='ms']">
         <span class="ms">
             <xsl:apply-templates/>
@@ -369,13 +363,13 @@
         <xsl:text>.</xsl:text>
     </xsl:template>
     
-    <xsl:template match="tei:lgX">        
+    <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
     
-    <xsl:template match="tei:lX">        
+    <xsl:template match="tei:l">        
         <div class="l">
             <xsl:apply-templates/>
         </div>        
