@@ -368,13 +368,14 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-    <!--
+    
     <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
+            <sxl:text>HAT</sxl:text>
         </div>        
     </xsl:template>
-    -->
+    
     <xsl:template match="tei:l">        
         <div class="l">
             <xsl:apply-templates/>
