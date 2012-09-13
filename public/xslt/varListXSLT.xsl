@@ -128,12 +128,6 @@
         </td>
     </xsl:template>
     
-    <xsl:template match="TEI:cell">
-        <td>
-            <xsl:apply-templates/>
-        </td>
-    </xsl:template>
-    
     <xsl:template match="TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
