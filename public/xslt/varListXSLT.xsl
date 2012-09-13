@@ -73,12 +73,6 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:head">
-        <div class="head">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:p">
         <div class="p">
             <xsl:apply-templates/>
@@ -97,10 +91,30 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="TEI:table">
+        <table>
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:head">
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>     
+    </xsl:template>
+    
     <xsl:template match="TEI:row">
-        <tr>
+        <tr class="row">
             <xsl:apply-templates/>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell">
+        <td class="simple">
+            <a href="{@corresp}" target="_blank" class="reg">
+                <xsl:apply-templates/>
+            </a>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='regList']">
