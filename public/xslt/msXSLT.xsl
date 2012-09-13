@@ -375,7 +375,7 @@
         </div>        
     </xsl:template>
     
-    <xsl:template match="tei:l">        
+    <xsl:template match="tei:lX">        
         <div class="l">
             <xsl:apply-templates/>
         </div>        
