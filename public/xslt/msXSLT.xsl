@@ -386,9 +386,6 @@
         <xsl:text>.</xsl:text>
     </xsl:template>
 
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-
     <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
