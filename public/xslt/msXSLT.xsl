@@ -388,8 +388,7 @@
 
 <!-- pb{@ed} til forsk stil til hver ed -->
 
-<!--
-    
+
     <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
@@ -401,6 +400,6 @@
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
--->
+
     
 </xsl:stylesheet>
