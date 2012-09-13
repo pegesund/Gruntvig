@@ -137,26 +137,9 @@
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-
-<!--
-    henter nummer på stofe; konflikt med næste template?
-    <xsl:template match="tei:lg[@n]">        
-        <div class="lgNumber">
-                <xsl:value-of select="@n"/>
-            <xsl:apply-templates/>
-            <br/>
-        </div>        
-    </xsl:template>
--->
     
     <xsl:template match="tei:head">        
         <div class="head{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="tei:lg">
-        <div class="lg">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -397,6 +380,5 @@
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-
     
 </xsl:stylesheet>
