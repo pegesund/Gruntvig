@@ -19,14 +19,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <div class="theComments">                
-                <!--
-                <div class="title">
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:title[@key]"/>
-                    <br/>
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:title[@ref]"/>
-                </div>
-                -->
+        <div class="theComments">
                 
             <div class="head about">
                 <div>Punktkommentarer til</div>
