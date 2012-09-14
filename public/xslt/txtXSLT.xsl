@@ -324,6 +324,12 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:publisher">        
+        <div class="docImprint">
+            <xsl:apply-templates/>
+        </div>        
+    </xsl:template>
+    
     <xsl:template match="TEI:docImprint">        
         <div class="docImprint">
             <xsl:apply-templates/>
