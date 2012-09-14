@@ -164,7 +164,7 @@
     
     <xsl:template match="tei:lem[@type='add']">
         <span class="add">
-            <xsl:text>[</xsl:text>
+            <xsl:text>[HAT</xsl:text>
             <xsl:apply-templates/>
             <xsl:text>]</xsl:text>
         </span>
