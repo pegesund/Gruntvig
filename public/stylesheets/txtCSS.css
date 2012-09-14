@@ -443,7 +443,7 @@
 
 #tekst_innhold .docTitle
         {
-        margin: 2em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .byline
