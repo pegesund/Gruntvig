@@ -298,7 +298,7 @@
         </br>        
     </xsl:template>
     
-    <!-- titelblad start -->
+    <!-- titelblad START -->
     
     <xsl:template match="TEI:titlePage">
         <div class="titlePage">
@@ -325,15 +325,21 @@
     </xsl:template>
     
     <xsl:template match="TEI:publisher">        
-        <div class="docImprint">
+        <div class="publisher">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
     
-    <xsl:template match="TEI:docImprint">        
-        <div class="docImprint">
+    <xsl:template match="TEI:epigraph">
+        <div class="epigraph">
             <xsl:apply-templates/>
-        </div>        
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='prof']">
+        <div class="noteProf">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
     <xsl:template match="TEI:fw">
@@ -365,8 +371,6 @@
     </xsl:template>
     
     <!-- titelblad end -->
-    
-
     
     <xsl:template match="TEI:lg">
         <div class="lg">
