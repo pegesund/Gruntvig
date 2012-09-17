@@ -120,12 +120,12 @@
 
 #tekst_innhold .fwLongLine
         {
-        margin: 2em 0em 4em 0em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .fwShortLine
         {
-        margin: 2em 0em 4em 0em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .hangingIndent
@@ -447,6 +447,11 @@
 #tekst_innhold .byline
         {
         margin: 2em 0em 2em 0em;
+        }
+
+#tekst_indhold .pubPlace
+        {
+        margin: 2em 0em 0em 0em;
         }
 
 #tekst_innhold .epigraph
