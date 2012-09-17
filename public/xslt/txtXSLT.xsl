@@ -356,10 +356,14 @@
                 </div>
             </xsl:when>
             <xsl:when test="@type='longLine'">
-                <hr align="center" class="longLine" width="8%"/>
+                <div class="longLine">
+                    <hr align="center" width="16%"/>
+                </div>
             </xsl:when>
             <xsl:when test="@type='shortLine'">
-                <hr align="center" class="shortLine" width="4%"/>
+                <div class="shortLine">
+                    <hr align="center" width="8%"/>
+                </div>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
