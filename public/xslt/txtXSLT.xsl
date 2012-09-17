@@ -330,6 +330,12 @@
         </div>        
     </xsl:template>
     
+    <xsl:template match="TEI:pubPlace">        
+        <div class="pubPlace">
+            <xsl:apply-templates/>
+        </div>        
+    </xsl:template>
+    
     <xsl:template match="TEI:epigraph">
         <div class="epigraph">
             <xsl:apply-templates/>
