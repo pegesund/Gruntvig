@@ -410,34 +410,34 @@
 
 #tekst_innhold .part1
         {
-        font-size: 120%;
+        font-size: 110%;
         }
 
 #tekst_innhold .part2
         {
-        font-size: 144%;
+        font-size: 120%;
         }
 
 #tekst_innhold .part3
         {
-        font-size: 172%;
+        font-size: 130%;
         }
 
 #tekst_innhold .part4
         {
-        font-size: 207%;
+        font-size: 140%;
         line-height: 200%;
         }
 
 #tekst_innhold .part5
         {
-        font-size: 248%;
+        font-size: 150%;
         line-height: 200%;
         }
 
 #tekst_innhold .part6
         {
-        font-size: 298%;
+        font-size: 160%;
         line-height: 200%;
         }
 
@@ -447,6 +447,11 @@
         }
 
 #tekst_innhold .byline
+        {
+        margin: 2em 0em 2em 0em;
+        }
+
+#tekst_innhold .epigraph
         {
         margin: 2em;
         }
