@@ -362,12 +362,12 @@
                 </div>
             </xsl:when>
             <xsl:when test="@type='longLine'">
-                <div class="longLine">
+                <div class="fwLongLine">
                     <hr align="center" width="16%"/>
                 </div>
             </xsl:when>
             <xsl:when test="@type='shortLine'">
-                <div class="shortLine">
+                <div class="fwShortLine">
                     <hr align="center" width="8%"/>
                 </div>
             </xsl:when>
