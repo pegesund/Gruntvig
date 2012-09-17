@@ -365,7 +365,7 @@
 
 #tekst_innhold .main1,#tekst_innhold .main2,#tekst_innhold .main3,#tekst_innhold .main4,#tekst_innhold .main5,#tekst_innhold .main6
         {
-        margin: 2em;
+        margin: 1em;
         }
         
 #tekst_innhold .main1
@@ -403,7 +403,7 @@
 
 #tekst_innhold .part1,#tekst_innhold .part2,#tekst_innhold .part3,#tekst_innhold .part4,#tekst_innhold .part5,#tekst_innhold .part6
         {
-        margin: 2em;
+        margin: 0.5em;
         }
 
 #tekst_innhold .part1
