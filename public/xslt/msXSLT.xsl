@@ -16,15 +16,8 @@
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
     
-    <xsl:template match="//tei:title">
-        <xsl:choose>
-            <xsl:when test="[@type='main']">
-                <i><xsl:apply-templates select="."/></i>
-            </xsl:when>
-            <xsl:when test="[@type='part']">
-                &#x201C;<xsl:apply-templates select="."/>&#x201D;
-            </xsl:when>
-        </xsl:choose>
+    <xsl:template match="tei:teiHeader">
+                <xsl:apply-templates select="//tei:title"/>
     </xsl:template>
     
     <div class="source">
@@ -45,6 +38,10 @@
     <xsl:template match="tei:tei">
             
             <div class="manusMain">
+                
+                <div class="head">
+                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
+                </div>                
                 
                 <xsl:apply-templates select="tei:text"/>
                 
