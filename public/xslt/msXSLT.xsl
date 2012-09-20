@@ -42,16 +42,16 @@
                     <div class="source">
                         <xsl:text>Tekstkilde:</xsl:text>
                     </div>
-                    <xsl:for-each select="//tei:bibl/tei:author">
+                    <xsl:for-each select="//TEI:bibl/TEI:author">
                         <xsl:apply-templates select="."/>
                         <xsl:text> </xsl:text>
                         <xsl:text>(</xsl:text>
-                        <xsl:for-each select="//tei:bibl/tei:date">
+                        <xsl:for-each select="//TEI:bibl/TEI:date">
                             <xsl:apply-templates select="."/>
                         </xsl:for-each>
                         <xsl:text>) </xsl:text>
                     </xsl:for-each>
-                    <xsl:for-each select="//tei:title[@type='katalogsignatur']">
+                    <xsl:for-each select="//TEI:title[@type='katalogsignatur']">
                         <xsl:apply-templates select="."/>
                     </xsl:for-each>
                 </div>
