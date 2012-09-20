@@ -318,6 +318,20 @@
             </xsl:attribute>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="TEI:pb[@type='supp' and @ed='A']">
+        <xsl:text>|</xsl:text>
+        <span class="pb">
+            [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+        </span> 
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[not(@type='supp') and @ed='A' or @ed='V']">
+        <xsl:text>|</xsl:text>
+        <span class="pb">
+            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+        </span> 
+    </xsl:template>
 
     
 </xsl:stylesheet>
