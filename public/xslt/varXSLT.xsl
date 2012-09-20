@@ -24,16 +24,21 @@
                 </div>
                 
                 <div class="source">
-                    <div>
-                        <xsl:text>Tekstkilde:</xsl:text>
-                    </div>
-                    <ul>
-                        <xsl:for-each select="//TEI:witness[@rend]">
-                            <li>
-                                <xsl:apply-templates/>
-                            </li>
-                        </xsl:for-each>
-                    </ul>
+                    <xsl:choose>
+                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
+                             <div>
+                                 <xsl:text>Tekstkilde:</xsl:text>
+                             </div>
+                             <ul class="source">
+                                 <xsl:for-each select="//TEI:witness[@rend]">
+                                    <li>
+                                        <xsl:apply-templates/>
+                                    </li>
+                                </xsl:for-each>
+                            </ul>
+                        </xsl:when>
+                        <xsl:otherwise/>
+                    </xsl:choose>
                 </div>
                 
                 <xsl:choose>
