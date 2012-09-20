@@ -17,14 +17,7 @@
     <xsl:include href="popups.xsl"/>
     
     <xsl:template match="tei:teiHeader">
-        <xsl:if test="//tei:title[@rend='main']">
-                            N.F.S. Grundtvig:
-                            <i><xsl:apply-templates select="//tei:title[@rend='main']"/></i>
-                        </xsl:if>
-                        <xsl:if test="//tei:title[@rend='part']">
-                            N.F.S. Grundtvig:
-                            &#x201C;<xsl:apply-templates select="//tei:title[@rend='part']"/>&#x201D;
-                        </xsl:if>
+        <xsl:apply-templates select="//tei:title[type='main']"/>
     </xsl:template>
     
     <div class="source">
