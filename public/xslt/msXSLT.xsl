@@ -26,7 +26,7 @@
             <xsl:for-each select="//tei:bibl/tei:author">
                 <xsl:apply-templates select="."/>
             </xsl:for-each>
-        <xsl:text>: </xsl:text>
+            <xsl:text> </xsl:text>
             <xsl:for-each select="//tei:title[@type='katalogsignatur']">
                 <xsl:apply-templates select="."/>
             </xsl:for-each>
