@@ -184,7 +184,7 @@
     </xsl:template>
     
     
-    <!-- added by pe 16/1 -->
+    <!-- added by pe 16/1, ændret 2012.09.20 KSR -->
     
     <xsl:template match="TEI:app[@type='ide' or @type='ort' or @type='int' or @type='sub']">
         <span>
@@ -223,7 +223,7 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="TEI:rdg">
+    <xsl:template match="TEI:rdg[not(@wit)]">
         <xsl:choose>
             <xsl:when test="@type='empty'">
                 <span class="seg">
