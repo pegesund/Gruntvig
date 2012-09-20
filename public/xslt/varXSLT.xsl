@@ -186,6 +186,54 @@
     
     <!-- added by pe 16/1, ændret 2012.09.20 KSR -->
     
+    
+    
+    <xsl:template match="TEI:app[@type='corrNote']">
+        <span class="app" href="#">
+            <span class="lem">
+                <xsl:apply-templates select="TEI:lem"/>
+            </span>
+            <span class="appInvisible">
+                <xsl:text>] </xsl:text>
+                <xsl:if test="TEI:lem/@wit!='A'">
+                    <span class="wit">
+                        <i>
+                            <xsl:value-of select="TEI:lem/@wit"/>
+                            <xsl:text>, </xsl:text>
+                        </i>
+                    </span>
+                </xsl:if>
+                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                <xsl:text> </xsl:text>
+                <xsl:if test="*[@type='add']">
+                    <xsl:apply-templates select="*[@type='add']"/>
+                </xsl:if>
+            </span>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rdg[@wit]">
+        <xsl:apply-templates/>
+        <span class="wit">                
+            <xsl:text> </xsl:text>
+            <i>
+                <xsl:value-of select="@wit"/>
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:rdg[current()/@type or not(@type)]">
+                        <xsl:text>, </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="following-sibling::TEI:rdg[not(current()/@type) and @type]">
+                        <xsl:text>; </xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+                <!-- kan koges ned til: 
+                    <xsl:when test="following-sibling::TEI:rdg">
+                    <xsl:text>; </xsl:text>
+                    </xsl:when> -->                
+            </i>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:app[@type='ide' or @type='ort' or @type='int' or @type='sub']">
         <span>
             <xsl:attribute name="class">
