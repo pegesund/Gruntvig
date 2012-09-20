@@ -16,9 +16,18 @@
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
     
-    <xsl:template match="//tei:title[@type='main']">
+    <xsl:template match="tei:teiHeader">
+        <xsl:apply-templates select="//tei:title[@type='main']"/>
         <div>
-            <xsl:apply-templates/>
+            <xsl:text>Tekstkilde:</xsl:text>
+            <xsl:for-each select="//tei:bibl/tei:author">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </div>
+        <div>
+            <xsl:for-each select="//tei:title[@type='katalogsignatur']">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
         </div>
     </xsl:template>
     
