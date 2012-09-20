@@ -17,7 +17,7 @@
     <xsl:include href="popups.xsl"/>
     
     <xsl:template match="tei:teiHeader">
-        <xsl:apply-templates select="//tei:title[type='main']"/>
+        <xsl:apply-templates select="//tei:title"/>
     </xsl:template>
     
     <div class="source">
