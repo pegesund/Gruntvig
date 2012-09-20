@@ -17,8 +17,10 @@
     <xsl:include href="popups.xsl"/>
     
     <xsl:template match="tei:teiHeader">
-        <xsl:apply-templates select="//tei:title[@type='main']"/>
         <div>
+            <xsl:apply-templates select="//tei:title[@type='main']"/>
+        </div>
+        <div class="source">
             <xsl:text>Tekstkilde:</xsl:text>
             <xsl:for-each select="//tei:bibl/tei:author">
                 <xsl:apply-templates select="."/>
