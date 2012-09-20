@@ -16,8 +16,10 @@
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
     
-    <xsl:template match="tei:teiHeader">
-                <xsl:apply-templates select="//tei:title[@type='main']"/>
+    <xsl:template match="//tei:title[@type='main']">
+        <div>
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
     <div class="source">
