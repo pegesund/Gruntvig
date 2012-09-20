@@ -30,8 +30,6 @@
     <div class="source">
         <div>
             <xsl:text>Tekstkilde:</xsl:text>
-        </div>
-        <div>
             <xsl:for-each select="//tei:bibl/tei:author">
                 <xsl:apply-templates select="."/>
             </xsl:for-each>
