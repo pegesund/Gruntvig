@@ -186,7 +186,7 @@
     
     <!-- added by pe 16/1 -->
     
-    <xsl:template match="TEI:app">
+    <xsl:template match="TEI:app[@type='ide' or @type='ort' or @type='int' or @type='sub']">
         <span>
             <xsl:attribute name="class">
                 <xsl:choose>
