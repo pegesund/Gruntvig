@@ -20,14 +20,28 @@
     </xsl:template>
     
     <xsl:template match="tei:title">
-        <p><h3>
+        <p>
+            <h3>
             <xsl:apply-templates/>
            </h3>
         </p>
     </xsl:template>
- 
-    <xsl:template match="tei:title[@type='katalogsignatur']">
-    </xsl:template>
+    
+    <div class="source">
+        <div>
+            <xsl:text>Tekstkilde:</xsl:text>
+        </div>
+        <div>
+            <xsl:for-each select="//tei:bibl/tei:author">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </div>
+        <div>
+            <xsl:for-each select="//tei:title[@type='katalogsignatur']">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </div> 
+     </div>
  
     
     <xsl:template match="tei:tei">
@@ -36,19 +50,7 @@
                 
                 <div class="head">
                     <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
-                </div>
-                
-                <div class="source">
-                    <div class="source">
-                        <xsl:text>Tekstkilde:</xsl:text>
-                    </div>
-                    <xsl:for-each select="//tei:bibl/tei:author">
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
-                    <xsl:for-each select="//tei:title[@type='katalogsignatur']">
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
-                </div>
+                </div>                
                 
                 <xsl:apply-templates select="tei:text"/>
                 
