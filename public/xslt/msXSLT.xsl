@@ -144,7 +144,7 @@
     </xsl:template>
     
     <xsl:template match="tei:lg">        
-        <div class="lg">
+        <div class="hat">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
