@@ -17,11 +17,11 @@
                 <div class="title">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
                     <br/>
-                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></i>
+                        <i><xsl:apply-templates select="TEI:title[@rend='main']"/></i>
                     </xsl:if>                    
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
                     <br/>
-                         <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/><xsl:text>&#x201D;</xsl:text>
+                         <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="TEI:title[@rend='part']"/><xsl:text>&#x201D;</xsl:text>
                      </xsl:if>
                 </div>
                 
