@@ -64,8 +64,16 @@
         
     /* Variantoversigt */
         
-#theVarList .title, #theVarList .philologist, #theVarList .editor, #theVarList .test
+#theVarList .philologist, #theVarList .editor, #theVarList .test
         {
+        font-size: 16px;
+        margin: 0em;
+        text-align: center;
+        }
+        
+#theVarList .title
+        {
+            color: aqua;
         font-size: 16px;
         margin: 0em;
         text-align: center;
