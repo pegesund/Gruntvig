@@ -51,7 +51,12 @@
 
 .kommentar .p
         {
-        margin: 4em 0em 4em 0em;
+        margin: 2em 0em 2em 0em;
+        }
+
+.kommentar .p, .p
+        {
+        margin: 0em 0em 2em 0em;
         }
         
 .kommentar .note
