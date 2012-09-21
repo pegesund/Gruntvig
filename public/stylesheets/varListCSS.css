@@ -95,7 +95,7 @@
         background: none;
         }
         
-#theVarList .head
+#theVarList .head, #theVarList .list
         {
         font-weight: bold;
         margin: 1em 0em 1em 0em;
