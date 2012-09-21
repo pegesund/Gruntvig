@@ -18,7 +18,14 @@
     
     <xsl:template match="tei:teiHeader">
         <div class="title">
-            <xsl:apply-templates select="//tei:title[@type='main']"/>
+            <xsl:choose>
+                <xsl:when test="//tei:title[@type='main']">
+                    <i><xsl:apply-templates select="."/></i>
+                </xsl:when>
+                <xsl:when test="//tei:title[@type='part']">
+                    <xsl:apply-templates select="."/>
+                </xsl:when>
+            </xsl:choose>
         </div>
         <div class="source">
             <xsl:text>Tekstkilde:</xsl:text>
