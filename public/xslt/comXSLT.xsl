@@ -146,7 +146,7 @@
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
         <div class="p" id="{../@xml:id}">
-            <xsl:apply-templates/><div class="p" id="{../@xml:id}">
+            <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="ancestor::TEI:p">
                     <div class="pAncestor">                        
