@@ -148,7 +148,7 @@
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
-                <xsl:when test="ancestor::TEI:p[position()=last()-1]">
+                <xsl:when test="ancestor::TEI:p">
                     <div class="pAncestor">                        
                         <xsl:apply-templates/>
                     </div>
