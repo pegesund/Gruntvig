@@ -64,7 +64,7 @@
         
     /* Variantoversigt */
         
-#theVarList .title
+#theVarList .title, #theVarList .philologist, #theVarList .editor
         {
         font-size: 16px;
         margin: 1em;
