@@ -16,12 +16,12 @@
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
     
-    <xsl:template match="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title">
+    <xsl:template match="tei:teiHeader">
         <div class="title">
-             <xsl:if test="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']">
+             <xsl:if test="//tei:title[@type='main']">
                         <i><xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']"/></i>
                     </xsl:if>
-                    <xsl:if test="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='part']">
+                    <xsl:if test="//tei:title[@type='part']">
                         &#x201C;<xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='part']"/>&#x201D;
                     </xsl:if>
         </div>
