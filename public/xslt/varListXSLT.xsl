@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="test">
-                    <xsl:text>ved</xsl:text>
+                    <xsl:text>Variantoversigt ved</xsl:text>
                 </div>
                 
                 <div class="philologist">
@@ -46,7 +46,7 @@
                 </div>
                 
                 <div class="test">
-                    <xsl:text>redigeret af</xsl:text>
+                    <xsl:text>Redigeret af</xsl:text>
                 </div>
                 
                 <div class="editor">
