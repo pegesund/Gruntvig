@@ -148,6 +148,11 @@
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
+                <xsl:when test="following-sibling::TEI:p">
+                    <div class="pFollowing">                        
+                        <xsl:apply-templates/></div>
+                    </div>
+                </xsl:when>
                 <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
                     <span class="app">                        
                         <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
