@@ -114,6 +114,32 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="TEI:row">
+        <tr>
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td>
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:head">
         <div class="{@rend}">
             <xsl:apply-templates/>
