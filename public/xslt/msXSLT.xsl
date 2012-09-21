@@ -161,7 +161,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:lem[@type='add']">
+    <xsl:template match="tei:lem[@type='add' and not(TEI:l)]">
         <span class="add">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
