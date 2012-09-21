@@ -169,6 +169,20 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="//tei:lem[@type='add']/tei:l[position()=1]">
+        <div class="l">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="//tei:lem[@type='add']/tei:l[position()=last()]">
+        <div class="l">
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="tei:del[@type='firstDel']">
         <span class="firstDel">
             <xsl:apply-templates/>
