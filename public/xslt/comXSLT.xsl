@@ -148,7 +148,7 @@
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
-                <xsl:when test="following-sibling::TEI:p and position()=1]">
+                <xsl:when test="ancestor::TEI:p">
                     <div class="p">                        
                         <xsl:apply-templates/>
                     </div>
