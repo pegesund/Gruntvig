@@ -150,7 +150,7 @@
             <xsl:choose>
                 <xsl:when test="following-sibling::TEI:p">
                     <div class="pFollowing">                        
-                        <xsl:apply-templates/></div>
+                        <xsl:apply-templates/>
                     </div>
                 </xsl:when>
                 <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
