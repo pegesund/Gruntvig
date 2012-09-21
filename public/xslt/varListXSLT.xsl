@@ -12,10 +12,6 @@
         
             <div id="theVarList">
                 
-                <div class="test">
-                    <xsl:text>Variantoversigt for</xsl:text>
-                </div>
-                
                 <div class="title">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
                     <br/>
