@@ -144,11 +144,11 @@
             <xsl:apply-templates select="TEI:p"/>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@xml:id]/TEI:p[position()=1]">
+    <xsl:template match="TEI:note[@xml:id">
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
-                <xsl:when test="following-sibling::TEI:p">
+                <xsl:when test="ancestor::TEI:p[position()=last()-1]">
                     <div class="pAncestor">                        
                         <xsl:apply-templates/>
                     </div>
