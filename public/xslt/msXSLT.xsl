@@ -32,20 +32,6 @@
             </xsl:for-each>
         </div>
     </xsl:template>
-    
-    <div class="source">
-        <div>
-            <xsl:text>Tekstkilde:</xsl:text>
-            <xsl:for-each select="//tei:bibl/tei:author">
-                <xsl:apply-templates select="."/>
-            </xsl:for-each>
-        </div>
-        <div>
-            <xsl:for-each select="//tei:title[@type='katalogsignatur']">
-                <xsl:apply-templates select="."/>
-            </xsl:for-each>
-        </div> 
-     </div>
  
     
     <xsl:template match="tei:tei">
