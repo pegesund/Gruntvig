@@ -22,7 +22,7 @@
                 <i><xsl:apply-templates select="//tei:title[@type='main']"/></i>
             </xsl:if>
             <xsl:if test="//tei:title[@type='part']">
-                <xsl:apply-templates select="//tei:title[@type='part']"/>
+                <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="//tei:title[@type='part']"/><xsl:text>&#x201D;</xsl:text>
             </xsl:if>            
         </div>
         <div class="source">
