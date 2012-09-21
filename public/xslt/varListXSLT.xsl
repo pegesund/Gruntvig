@@ -145,7 +145,7 @@
             <xsl:apply-templates/>
         </div>     
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:row">
         <tr class="row">
             <xsl:apply-templates/>
@@ -170,7 +170,7 @@
             </a>
         </td>
     </xsl:template>
-    
+    -->
     <xsl:template match="TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
