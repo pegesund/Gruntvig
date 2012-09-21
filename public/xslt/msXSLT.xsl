@@ -142,13 +142,13 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+    <!--
     <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-    
+    -->
     <xsl:template match="tei:l">        
         <div class="l">
             <xsl:apply-templates/>
