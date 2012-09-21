@@ -66,6 +66,7 @@
         
 #theVarList .philologist, #theVarList .editor, #theVarList .test
         {
+        color: crimson;
         font-size: 12px;
         margin: 0em;
         text-align: center;
