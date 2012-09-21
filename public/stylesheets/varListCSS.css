@@ -7,7 +7,7 @@
 
 #theVarList .preFace, #registranten .preFace 
         {
-        margin: 1em;
+        margin: 1em 0em 1em 0em;
         }
         
 #registranten .head
