@@ -181,6 +181,11 @@ span.appInvisible
         text-indent: 4em;
         }
 
+.manusMain .l
+        {
+        color: red;
+        }
+
 .manusMain .lg
         {
         text-align: left;
