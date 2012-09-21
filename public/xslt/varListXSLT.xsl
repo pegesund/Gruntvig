@@ -10,14 +10,16 @@
 
     <xsl:template match="TEI:TEI">
         
-
             <div id="theVarList">
                 
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                    Variantoversigt for <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></i>
+                <xsl:text>Variantoversigt for</xsl:text>
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
+                    <br/>
+                    <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/></i>
                 </xsl:if>                    
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                    Variantoversigt for &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/>&#x201D;
+                    <br/>
+                    <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title"/><xsl:text>&#x201D;</xsl:text>
                 </xsl:if>
                 
                 <p class="witness">Variantoversigt ved</p>
