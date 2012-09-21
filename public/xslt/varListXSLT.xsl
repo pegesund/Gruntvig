@@ -10,7 +10,7 @@
 
     <xsl:template match="TEI:TEI">
         
-            <div id="theVarList">
+            <div class="theVarList">
                 
                 <xsl:text>Variantoversigt for</xsl:text>
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
