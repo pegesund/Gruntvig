@@ -21,7 +21,7 @@
         margin: 1em;
         }
         
-#theVarList .table, #theVarList td, #registranten .table, #registranten td
+#registranten .table, #registranten td
         {
         border: 1px solid #ccc;
         empty-cells: hide;
@@ -83,4 +83,30 @@
         font-size: 12px;
         margin: 0em;
         text-align: center;
+        }
+
+
+#theVarList .table
+        {
+        border: 1px solid #ccc;
+        empty-cells: hide;
+        font-size: 10px;
+        margin: 0em;
+        vertical-align: super;
+        background: none;
+        }
+
+#theVarList .td, tr
+        {
+        border: 1px solid #ccc;
+        empty-cells: hide;
+        font-size: 10px;
+        margin: 0em;
+        vertical-align: super;
+        background: none;
+        }
+
+#theVarList .tr
+        {
+        empty-cells: show;
         }
