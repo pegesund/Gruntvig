@@ -149,7 +149,7 @@
             <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="ancestor::TEI:p">
-                    <div class="p">                        
+                    <div class="pAncestor">                        
                         <xsl:apply-templates/>
                     </div>
                 </xsl:when>
