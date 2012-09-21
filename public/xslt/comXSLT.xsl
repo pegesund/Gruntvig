@@ -148,8 +148,8 @@
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>
-                <xsl:when test="following-sibling::*[local-name()='note' and TEI:p">
-                    <div class="pFollowing">                        
+                <xsl:when test="following-sibling::TEI:p">
+                    <div class="p">                        
                         <xsl:apply-templates/>
                     </div>
                 </xsl:when>
