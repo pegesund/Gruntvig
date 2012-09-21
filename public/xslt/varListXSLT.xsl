@@ -145,6 +145,15 @@
             <xsl:apply-templates/>
         </div>     
     </xsl:template>
+    
+    <xsl:template match="TEI:hi">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note"/>
+    
     <!--
     <xsl:template match="TEI:row">
         <tr class="row">
@@ -171,12 +180,5 @@
         </td>
     </xsl:template>
     -->
-    <xsl:template match="TEI:hi">
-        <span class="{@rend}">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note"/>
     
 </xsl:stylesheet>
