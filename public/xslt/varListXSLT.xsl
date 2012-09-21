@@ -12,9 +12,9 @@
         
             <div id="theVarList">
                 
-                <div class="test">
-                    <xsl:text>Variantoversigt for</xsl:text>
-                </div>
+                
+                    <xsl:text class="test">Variantoversigt for</xsl:text>
+                
                 
                 
                 <div class="title">
