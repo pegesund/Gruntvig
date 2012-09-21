@@ -16,7 +16,6 @@
                     <xsl:text>Variantoversigt for</xsl:text>
                 </div>
                 
-                
                 <div class="title">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
                     <br/>
@@ -28,7 +27,9 @@
                      </xsl:if>
                 </div>
                 
-                <xsl:text>Variantoversigt ved</xsl:text>
+                <div class="test">
+                    <xsl:text>Variantoversigt ved</xsl:text>
+                </div>
                 
                 <div class="philologist">
                     <i>
@@ -48,7 +49,9 @@
                     </i>
                 </div>
                 
-                <xsl:text>Variantoversigt redigeret af</xsl:text>
+                <div class="test">
+                    <xsl:text>Variantoversigt redigeret af</xsl:text>
+                </div>
                 
                 <div class="editor">
                     <i>
