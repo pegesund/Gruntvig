@@ -145,8 +145,8 @@
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">
-        <div class="p" id="{../@xml:id}">
-            <xsl:apply-templates select="position()=1"/>
+        
+            <xsl:apply-templates/><div class="p" id="{../@xml:id}">
             <xsl:choose>
                 <xsl:when test="ancestor::TEI:p">
                     <div class="pAncestor">                        
@@ -161,8 +161,8 @@
                         </div>
                     </span>
                 </xsl:when>
-            </xsl:choose>       
-        </div>
+            </div></xsl:choose>       
+        
     </xsl:template>
     
     <xsl:template name="next-lemma-part">
