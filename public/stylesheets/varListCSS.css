@@ -85,7 +85,7 @@
         text-align: center;
         }
         
-#theVarList .table, #theVarList td, #registranten .table, #registranten td
+#theVarList .table, #theVarList td
         {
         border: 1px solid #ccc;
         empty-cells: hide;
