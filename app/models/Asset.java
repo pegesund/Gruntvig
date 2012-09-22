@@ -34,13 +34,12 @@ import play.modules.search.Indexed;
  * This class holds all xml-files
  * Variants of originals are held in variant-counter, original is number 0
  * Name of xml-file is preserved as given when uploaded
- * Name of assets should be on type:
+ * Name of assets should be on type
  *
- * 
+ * Enunmeration of asset-type is kept in string due to db-restrinctions on jpa-enums
  *
  */
 @Indexed
-// @javax.persistence.Entity
 @Entity
 public class Asset extends GenericModel {
 
@@ -116,6 +115,10 @@ public class Asset extends GenericModel {
         System.out.println("Root-name: " + rootName);
     }
 
+    
+    /*
+     * Always make html searchable as text before saving
+     */
     @Override
     public <T extends JPABase> T save() {
         System.out.println("Hey - I am saved");
@@ -123,48 +126,76 @@ public class Asset extends GenericModel {
         return super.save();
     }
 
+    /*
+     * create teaser for search-list
+     * 
+     * @return html with lookfor highlighted
+     */
     public String getTeaser(String lookfor) {
         return DoSearch.createTeaser(htmlAsText, lookfor);
     }
 
+    
+    /*
+     * Get the id for an asset
+     * Use the filename is a key
+     *
+     * @return database-id
+     * 
+     */
     public long getCorrespondingRootId() {
         System.out.println("Getting root for: " + this.fileName);
         Asset root = Asset.find("rootName = ? and type = ?", rootName, Asset.rootType).first();
         return root.id;
     }
 
+    /*
+     * The txt-file should have a corresponding intro-file
+     * @return id of intro-file asset
+     * 
+     */
     public String getCorrespondingIntro() {
         System.out.println("Looking for rootname: " + rootName);
         Asset intro = Asset.find("rootName = ? and type = ?", rootName, Asset.introType).first();
         return (intro != null ? intro.html : "");
     }
 
+    /*
+     * The txt-file should have a corresponding txr-file
+     * @return id of txt-file
+     * 
+     */
     public String getCorrespondingTxr() {
         Asset txr = Asset.find("rootName = ? and type = ?", rootName, Asset.txrType).first();
         System.out.println("Txr is: " + txr);
         return (txr != null ? txr.html : "");
     }
 
-    
+    /*
+     * The txt-file should have a corresponding comment-file
+     *
+     * @return comment-content as String after preprocessing
+     * 
+     */
     public String getCorrespondingComment() {
         Asset comment = Asset.find("fileName = ? and type = ?", rootName + "_com.xml", Asset.commentType).first();
         // System.out.println("Corresponding comment: " + intro.html);
         return (comment != null ? comment.html : "");
     }
 
-    public int getNumberOfPictures() {
-        System.out.println("**** Looking for rootName: " + rootName);
-        return Asset.find("rootName = ? and type = ?", rootName, Asset.imageType).fetch().size();
-    }
-
-    public String getFileNameWithoutXml() {
-        return this.rootName;
-    }
-
+    /*
+     * Get xml and references for this asset
+     * Currently not in use
+     */
     public String getHtmlAndReferences() {
         return xml + refs;
     }
 
+    /*
+     * Calculates root name of an asset, based on the syntax of the filename
+     * The root-name is stored in the asset model
+     * @return root-name of the asset
+     */
     public static String getRootName(String fileNameIn, String assetType) {
         String fileName = fileNameIn;
         fileName = fileName.replaceFirst(".xml", "").replaceFirst("_intro", "").replaceFirst("_com", "").replaceFirst("_txt", "").replaceFirst("_varList", "").replaceFirst("_txr", "").replaceFirst("_fax", "");
@@ -185,6 +216,14 @@ public class Asset extends GenericModel {
         }
     }
 
+    /*
+     * 
+     * Handles upload of fix-image
+     * Binary file is copied and kept in the application-path
+     * Every picture has a number, this is calculated based on the file-name
+     * Asset with type Asset.imageType is created
+     * 
+     */
     public static Asset uploadImage(String name, String comment, File epub) {
         String fileName = epub.getName();
         fileName = fileName.replaceFirst("_fax", "_").replaceFirst("_0+", "_");
@@ -207,6 +246,11 @@ public class Asset extends GenericModel {
         return asset;
     }
 
+    /*
+     * Keep a local version of the uploaded xml
+     * Might not be needed?
+     * 
+     */
     private static String copyXmlToXmlDirectory(File epub) {
         File newFile = new File(play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xml" + File.separator + epub.getName());
         Helpers.copyfile(epub.getAbsolutePath(), newFile.getAbsolutePath());
@@ -214,6 +258,13 @@ public class Asset extends GenericModel {
     }
     
     /*
+     * 
+     * Handle upload of xml-file
+     * Calculate asset-type based on file-name
+     * Copy and keep xml-file
+     * Calculate and keep html based on the right xslt
+     * 
+     * Note:
      * variant = 0 means it is the original
      *
      *
@@ -364,15 +415,12 @@ public class Asset extends GenericModel {
         return html;
     }
 
+    /*
+     * Get variants and manuses based on the root-asset
+     * @return List of variants, manuses and varLists connected to this asset
+     * 
+     */
     public static List<Asset> getVariants(long assetId) {
-        /*
-        System.out.println("Finding all assets");
-        List<Asset> assets = Asset.findAll();
-        for (Asset a : assets) {
-            System.out.println(" Asset root-name: " + a.rootName + " - type: " + a.type);
-        }
-        * 
-        */
 
         Asset rootAsset = Asset.findById(assetId);
         System.out.println("rootName: " + rootAsset.id);  
@@ -380,6 +428,11 @@ public class Asset extends GenericModel {
         return variants;
     }
 
+    
+    /*
+     * Get correspondig manus to an asset
+     * @return List of manuses 
+     */
     public static List<Asset> getManus(long assetId) {
         Asset rootAsset = Asset.findById(assetId);
         List<Asset> manus = Asset.find("rootName = ? and type = ? ", rootAsset.rootName, "manus").fetch();
@@ -389,32 +442,50 @@ public class Asset extends GenericModel {
         return manus;
     }
 
+    /*
+     * Combine xml and xslt for ref-type assets
+     */
     public static String xmlRefToHtml(String fileName, String xsltPath) {
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + xsltPath;
         return xmlToHtml(fileName, filePath);
     }
 
+    /*
+     * Combine xml and xslt for myth-type assets
+     */
     public static String xmlToHtmlMyth(String fileName) {
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "mythXSLT.xsl";
         return xmlToHtml(fileName, filePath);
     }
 
+    /*
+     * Combine xml and xslt for manus-type assets
+     */
     public static String xmlToHtmlManus(String fileName) {
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "msXSLT.xsl";
         return xmlToHtml(fileName, filePath);
     }
 
+    /*
+     * Combine xml and xslt for intro-type assets
+     */
     public static String xmlToHtmlIntro(String fileName) {
         System.out.println("Uploading introduction");
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "introXSLT.xsl";
         return xmlToHtml(fileName, filePath);
     }
 
+    /*
+     * Combine xml and xslt for var-type assets
+     */
     public static String xmlToHtmlVariant(String fileName) {
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "varXSLT.xsl";
         return xmlToHtml(fileName, filePath);
     }
 
+    /*
+     * Combine xml and xslt for root-type assets
+     */
     public static String xmlToHtml(String fileName) {
         // String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "xhtml2" + File.separator + "tei.xsl";
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "xslt" + File.separator + "txtXSLT.xsl";
@@ -422,7 +493,12 @@ public class Asset extends GenericModel {
     }
 
     
-    // transform a upload tei-xml to html
+    /*
+     * Does the xslt-transformation of a xml-file and and a xslt-file
+     * @params fileName - name of xml-file
+     * @params fileName - name of xslt - file
+     * 
+     */
     public static String xmlToHtml(String fileName, String filePath) {
         System.out.println("User dir: " + System.getProperty("user.dir"));
         try {

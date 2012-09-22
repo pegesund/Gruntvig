@@ -31,11 +31,8 @@ import play.modules.search.Indexed;
  *
  * @author pe
  *
- * This class holds all xml-files
- * Variants of originals are held in variant-counter, original is number 0
- * Name of xml-file is preserved as given when uploaded
- * Name of assets should be on type:
- *
+ * This class is only in use for development with local fs-database
+ * It is currently not in use as postgresql is the default database
  *
  *
  */
