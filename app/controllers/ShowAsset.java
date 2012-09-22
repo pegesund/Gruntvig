@@ -10,14 +10,13 @@ import models.Chapter;
 
 /**
  *
- * @author pe
  * 
  * Handles showing of asset assets
  * 
  */
 public class ShowAsset extends Application {
 
-    /*
+    /**
      * Man function to show all tabs
      * 
      */
@@ -35,7 +34,7 @@ public class ShowAsset extends Application {
     }
 
     
-    /*
+    /**
      * 
      * Used by ajax-calls from javascript
      * 
@@ -49,7 +48,7 @@ public class ShowAsset extends Application {
         } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");
     }   
     
-    /* 
+    /** 
      * TODO: rewrite to one path
      * 
      * Currently called from javascript

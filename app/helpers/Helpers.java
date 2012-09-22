@@ -41,7 +41,6 @@ import org.jsoup.Jsoup;
 
 /**
  *
- * @author pe
  * 
  * This class keeps utility-functions which are common for different parts of the program
  * 
@@ -49,7 +48,7 @@ import org.jsoup.Jsoup;
  */
 public class Helpers {
 
-    /*
+    /**
      * Slurp in a file and return as String
      */
     public static String readFile(String path) throws IOException {
@@ -64,7 +63,7 @@ public class Helpers {
         }
     }
 
-    /*
+    /**
      * Extracts references from a xml
      * Note: Currently not in use, keep some time before delete
      * 
@@ -105,7 +104,7 @@ public class Helpers {
 
     }
 
-    /*
+    /**
      * Xml/html node to string
      */
     public static String nodeToString(Node node) {
@@ -120,7 +119,7 @@ public class Helpers {
         return sw.toString();
     }
 
-    /*
+    /**
      * Parse xml-string and return doc
      */
     public static Document stringToNode(String str) {
@@ -139,7 +138,7 @@ public class Helpers {
     }
 
 
-    /*
+    /**
      * Iterate a doc for all children with this tagname
      * 
      * @return List of nodes
@@ -156,7 +155,7 @@ public class Helpers {
         return nodes;
     }
 
-    /*
+    /**
      * Get first child with this tagname
      */
     public static Node getChildOfType(Node parent, String tagName) {
@@ -169,7 +168,7 @@ public class Helpers {
         return null;
     }
 
-    /*
+    /**
      * 
      * Currently not in use, keep for example
      * 
@@ -204,7 +203,7 @@ public class Helpers {
 
     }
 
-    /*
+    /**
      * 
      * Clone a file in the filesystem
      * 
@@ -235,7 +234,7 @@ public class Helpers {
     }
 
     
-    /*
+    /**
      * 
      * Remove html-formatting from a tring
      * 
@@ -245,7 +244,7 @@ public class Helpers {
         return Jsoup.parse(html).text();
     }
 
-    /*
+    /**
      * 
      * Helper function to create search-teasers
      * 

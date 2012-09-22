@@ -14,7 +14,6 @@ import play.mvc.Controller;
 
 /**
  *
- * @author pe
  * 
  * Starting point for uploading of xml-files
  * 
@@ -31,7 +30,7 @@ public class UploadXml extends Application {
         render();
     }
 
-    /*
+    /**
      * Handle upload of xml-file
      * Check for file-type and create assets in database
      * 

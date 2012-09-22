@@ -16,7 +16,7 @@ import play.modules.search.Search;
 
 /**
  *
- * @author pe
+ * 
  * 
  * Controller to handle search for freetext
  * 
@@ -25,7 +25,7 @@ import play.modules.search.Search;
 public class DoSearch extends Application {
 
     
-    /*
+    /**
      * 
      * Search
      * Look in intro, variants, manus and txt-files (chapters).
@@ -68,7 +68,7 @@ public class DoSearch extends Application {
         return createTeaser(str, lookfor, 70);
     }
 
-    /*
+    /**
      * 
      * Helper function
      * add caching later if slow

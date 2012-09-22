@@ -13,7 +13,6 @@ import play.mvc.Controller;
 
 /**
  *
- * @author pe
  * 
  * Small ajax-functions to be called from javascript
  * 

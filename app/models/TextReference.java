@@ -17,8 +17,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- *
- * @author pe
  * 
  * Text-refs which are shown in popups are kept in this model
  * 
@@ -55,7 +53,7 @@ public class TextReference extends GenericModel {
         this.type = type;
     }
 
-    /*
+    /**
      * Return a xml-file as a xml-doc
      */
     private static Document fileAsXml(File file) {
@@ -71,7 +69,7 @@ public class TextReference extends GenericModel {
         return doc;
     }
 
-    /*
+    /**
      * delete old refs when uploading new reference-file
      */
     private static void deleteOldRererences(String fileName, String type) {
@@ -82,7 +80,7 @@ public class TextReference extends GenericModel {
     }
 
     
-    /*
+    /**
      * 
      * Handle upload of comments shown in the the comments-tab
      * Each comment is kept precompiiled and separately in the database and the complete comments-doc is concatenated
@@ -120,7 +118,7 @@ public class TextReference extends GenericModel {
         asset.save();
     }
 
-    /*
+    /**
      * Extract text-references to be shown i popups
      * Each ref is kept separately and precompiled in the database
      * 
@@ -145,7 +143,7 @@ public class TextReference extends GenericModel {
         }
     }
 
-    /*
+    /**
      * Get a reference based on its id
      * Used from ajax-lookups
      * @return ref as html

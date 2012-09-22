@@ -29,7 +29,6 @@ import play.modules.search.Indexed;
 
 /**
  *
- * @author pe
  *
  * This class holds all xml-files
  * Variants of originals are held in variant-counter, original is number 0
@@ -89,8 +88,10 @@ public class Asset extends GenericModel {
     public static String registranten = "registranten";
     public static String bookinventory = "bookinventory";
 
-    // used by images
-    // images on form rootname_number.jpg
+    /**
+     * Used by images
+     * images on form rootname_number.jpg
+     */
     public Asset(String name, String fileName, String comment, String type) {
         this.name = name;
         this.fileName = fileName;
@@ -116,7 +117,7 @@ public class Asset extends GenericModel {
     }
 
     
-    /*
+    /**
      * Always make html searchable as text before saving
      */
     @Override
@@ -126,7 +127,7 @@ public class Asset extends GenericModel {
         return super.save();
     }
 
-    /*
+    /**
      * create teaser for search-list
      * 
      * @return html with lookfor highlighted
@@ -136,7 +137,7 @@ public class Asset extends GenericModel {
     }
 
     
-    /*
+    /**
      * Get the id for an asset
      * Use the filename is a key
      *
@@ -149,7 +150,7 @@ public class Asset extends GenericModel {
         return root.id;
     }
 
-    /*
+    /**
      * The txt-file should have a corresponding intro-file
      * @return id of intro-file asset
      * 
@@ -160,7 +161,7 @@ public class Asset extends GenericModel {
         return (intro != null ? intro.html : "");
     }
 
-    /*
+    /**
      * The txt-file should have a corresponding txr-file
      * @return id of txt-file
      * 
@@ -171,7 +172,7 @@ public class Asset extends GenericModel {
         return (txr != null ? txr.html : "");
     }
 
-    /*
+    /**
      * The txt-file should have a corresponding comment-file
      *
      * @return comment-content as String after preprocessing
@@ -183,7 +184,7 @@ public class Asset extends GenericModel {
         return (comment != null ? comment.html : "");
     }
 
-    /*
+    /**
      * Get xml and references for this asset
      * Currently not in use
      */
@@ -191,7 +192,7 @@ public class Asset extends GenericModel {
         return xml + refs;
     }
 
-    /*
+    /**
      * Calculates root name of an asset, based on the syntax of the filename
      * The root-name is stored in the asset model
      * @return root-name of the asset
@@ -216,7 +217,7 @@ public class Asset extends GenericModel {
         }
     }
 
-    /*
+    /**
      * 
      * Handles upload of fix-image
      * Binary file is copied and kept in the application-path
@@ -246,7 +247,7 @@ public class Asset extends GenericModel {
         return asset;
     }
 
-    /*
+    /**
      * Keep a local version of the uploaded xml
      * Might not be needed?
      * 
@@ -257,7 +258,7 @@ public class Asset extends GenericModel {
         return newFile.getAbsolutePath();
     }
     
-    /*
+    /**
      * 
      * Handle upload of xml-file
      * Calculate asset-type based on file-name
@@ -415,7 +416,7 @@ public class Asset extends GenericModel {
         return html;
     }
 
-    /*
+    /**
      * Get variants and manuses based on the root-asset
      * @return List of variants, manuses and varLists connected to this asset
      * 
@@ -429,7 +430,7 @@ public class Asset extends GenericModel {
     }
 
     
-    /*
+    /**
      * Get correspondig manus to an asset
      * @return List of manuses 
      */
@@ -442,7 +443,7 @@ public class Asset extends GenericModel {
         return manus;
     }
 
-    /*
+    /**
      * Combine xml and xslt for ref-type assets
      */
     public static String xmlRefToHtml(String fileName, String xsltPath) {
@@ -450,7 +451,7 @@ public class Asset extends GenericModel {
         return xmlToHtml(fileName, filePath);
     }
 
-    /*
+    /**
      * Combine xml and xslt for myth-type assets
      */
     public static String xmlToHtmlMyth(String fileName) {
@@ -458,7 +459,7 @@ public class Asset extends GenericModel {
         return xmlToHtml(fileName, filePath);
     }
 
-    /*
+    /**
      * Combine xml and xslt for manus-type assets
      */
     public static String xmlToHtmlManus(String fileName) {
@@ -466,7 +467,7 @@ public class Asset extends GenericModel {
         return xmlToHtml(fileName, filePath);
     }
 
-    /*
+    /**
      * Combine xml and xslt for intro-type assets
      */
     public static String xmlToHtmlIntro(String fileName) {
@@ -475,7 +476,7 @@ public class Asset extends GenericModel {
         return xmlToHtml(fileName, filePath);
     }
 
-    /*
+    /**
      * Combine xml and xslt for var-type assets
      */
     public static String xmlToHtmlVariant(String fileName) {
@@ -483,7 +484,7 @@ public class Asset extends GenericModel {
         return xmlToHtml(fileName, filePath);
     }
 
-    /*
+    /**
      * Combine xml and xslt for root-type assets
      */
     public static String xmlToHtml(String fileName) {
@@ -493,7 +494,7 @@ public class Asset extends GenericModel {
     }
 
     
-    /*
+    /**
      * Does the xslt-transformation of a xml-file and and a xslt-file
      * @params fileName - name of xml-file
      * @params fileName - name of xslt - file

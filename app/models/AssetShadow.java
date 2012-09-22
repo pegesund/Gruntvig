@@ -29,7 +29,6 @@ import play.modules.search.Indexed;
 
 /**
  *
- * @author pe
  *
  * This class is only in use for development with local fs-database
  * It is currently not in use as postgresql is the default database

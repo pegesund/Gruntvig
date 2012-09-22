@@ -6,13 +6,13 @@ import java.util.List;
 import models.Asset;
 import play.mvc.*;
 
-/*
+/**
  * Main class, all other controllers should extend this
  */
 public class Application extends Controller {
 
 
-    /*
+    /**
      * Make sure header always can reach assets
      * This way all controllers keeps a sorted version of the assets as arguments
      * 
@@ -37,7 +37,7 @@ public class Application extends Controller {
         return year;
     }
     
-    /*
+    /**
      * Sort txt-files in menu by order of year in filename :-)
      */
     private static class SillyComparator implements Comparator<Asset> {

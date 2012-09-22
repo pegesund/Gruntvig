@@ -28,8 +28,6 @@ import play.modules.search.Indexed;
 
 /**
  *
- * @author pe
- * 
  * 
  * Root-texts are dividet into Chapters
  * Starts counting from 0
@@ -65,7 +63,7 @@ public class Chapter extends GenericModel {
     }
 
     
-    /*
+    /**
      * Override of save function in JPA
      * Currently all div-tags with empty class-defs are deleted
      * 
@@ -79,7 +77,7 @@ public class Chapter extends GenericModel {
     }
 
     
-    /*
+    /**
      * Create text-teaser where lookfor is highlightet
      * 
      * @return teser as html
@@ -90,7 +88,7 @@ public class Chapter extends GenericModel {
 
 
     
-    /*
+    /**
      * When a new Asset is imported all old chapters connected to this assed are deleted
      */
     private static void deleteOldChapters(Asset asset) {
@@ -107,7 +105,7 @@ public class Chapter extends GenericModel {
     }
 
     
-    /*
+    /**
      * Helper function only: Translates a html-dom-tree to a String
      * 
      * @return html-string without xml-declaration
@@ -124,7 +122,7 @@ public class Chapter extends GenericModel {
         return sw.toString();
     }
 
-    /*
+    /**
      * Divide a xml-file into chapters, chapters are divided by div-tags, attribute name is name of chapter
      * Fixme: use xpath selector. Should work with current library which should be the latest
      * 
