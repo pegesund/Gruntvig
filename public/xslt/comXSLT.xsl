@@ -19,14 +19,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <div class="theComments">                
-                <!--
-                <div class="title">
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:title[@key]"/>
-                    <br/>
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:title[@ref]"/>
-                </div>
-                -->
+        <div class="theComments">
                 
             <div class="head about">
                 <div>Punktkommentarer til</div>
@@ -148,12 +141,10 @@
     </xsl:template>
 
     <xsl:template match="TEI:note[@xml:id]">
-          <div class="note">
             <xsl:apply-templates select="TEI:p"/>
-        </div>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@xml:id]/TEI:p">
+    <xsl:template match="TEI:note[@xml:id]/TEI:p">        
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
             <xsl:choose>

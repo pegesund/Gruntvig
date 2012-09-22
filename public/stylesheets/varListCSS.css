@@ -1,16 +1,16 @@
-/* varCSS.css til styling af varianter */
+/* varCSS.css til styling af varianter registrant */
 /* Kim Steen Ravn
    2011.10.11: testversion
 */
 
-
+/* Variantoversigt og Registranten */
 
 #theVarList .preFace, #registranten .preFace 
         {
-        margin: 1em;
+        margin: 1em 0em 1em 0em;
         }
         
-#theVarList .head, #registranten .head
+#registranten .head
         {
         font-weight: bold;
         margin: 1em 0em 0.5em 2em;
@@ -18,25 +18,26 @@
         
 #theVarList .p, #registranten .p
         {
-        margin: 1em;
+        margin: 1em 0em 1em 0em;
         }
         
-#theVarList .table, #theVarList td, #registranten .table, #registranten td
+#registranten .table, #registranten td
         {
         border: 1px solid #ccc;
-        empty-cells: show;
+        empty-cells: hide;
+        font-size: 12px;
         margin: 0em;
         vertical-align: super;
         background: none;
         }
-        
-    /* Registranten */
 
 #theVarList 
         {
             font-size: 16px;
             padding-top:20px;
         }
+        
+    /* Registranten */
         
 #registranten .preFace, #registranten i, #registranten hr, #registranten p {display:none;}     
                 
@@ -59,4 +60,43 @@
 #registranten div.head 
         {
             margin-left:0; margin: 20px 0 10px 0;font-size: 1.2em; font-family: Times new roman;
+        }
+        
+    /* Variantoversigt */
+        
+#theVarList .philologist, #theVarList .editor, #theVarList .test
+        {
+        font-size: 12px;
+        margin: 0em;
+        text-align: center;
+        }
+        
+#theVarList .title
+        {
+        font-size: 16px;
+        margin: -2em 0em 1em 0em;
+        text-align: center;
+        }
+        
+#theVarList .test
+        {
+        font-size: 12px;
+        margin: 0em;
+        text-align: center;
+        }
+        
+#theVarList .table, #theVarList td
+        {
+        border: 1px solid #ccc;
+        empty-cells: hide;
+        font-size: 12px;
+        margin: 0em;
+        vertical-align: super;
+        background: none;
+        }
+        
+#theVarList .head, #theVarList .list
+        {
+        font-weight: bold;
+        margin: 1em 0em 1em 0em;
         }

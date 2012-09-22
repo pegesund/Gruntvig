@@ -120,14 +120,12 @@
 
 #tekst_innhold .fwLongLine
         {
-        margin: 2em;
-        width: 5em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .fwShortLine
         {
-        margin: 2em;
-        width: 3em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .hangingIndent
@@ -367,7 +365,7 @@
 
 #tekst_innhold .main1,#tekst_innhold .main2,#tekst_innhold .main3,#tekst_innhold .main4,#tekst_innhold .main5,#tekst_innhold .main6
         {
-        margin: 2em;
+        margin: 1em;
         }
         
 #tekst_innhold .main1
@@ -405,48 +403,58 @@
 
 #tekst_innhold .part1,#tekst_innhold .part2,#tekst_innhold .part3,#tekst_innhold .part4,#tekst_innhold .part5,#tekst_innhold .part6
         {
-        margin: 2em;
+        margin: 0.5em;
         }
 
 #tekst_innhold .part1
         {
-        font-size: 120%;
+        font-size: 110%;
         }
 
 #tekst_innhold .part2
         {
-        font-size: 144%;
+        font-size: 120%;
         }
 
 #tekst_innhold .part3
         {
-        font-size: 172%;
+        font-size: 130%;
         }
 
 #tekst_innhold .part4
         {
-        font-size: 207%;
+        font-size: 140%;
         line-height: 200%;
         }
 
 #tekst_innhold .part5
         {
-        font-size: 248%;
+        font-size: 150%;
         line-height: 200%;
         }
 
 #tekst_innhold .part6
         {
-        font-size: 298%;
+        font-size: 160%;
         line-height: 200%;
         }
 
 #tekst_innhold .docTitle
         {
-        margin: 2em;
+        margin: 2em 0em 2em 0em;
         }
 
 #tekst_innhold .byline
+        {
+        margin: 2em 0em 2em 0em;
+        }
+
+#tekst_innhold .pubPlace
+        {
+        margin: 2em 0em 0em 0em;
+        }
+
+#tekst_innhold .epigraph
         {
         margin: 2em;
         }

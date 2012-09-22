@@ -3,8 +3,7 @@
    2011.10.11: testversion
 */
 
-/*
-a.app 
+.variantMain a.app
         {
         color: black;
         text-decoration: none;
@@ -13,9 +12,10 @@ a.app
 span.appInvisible
          {
          display: none;
+         color: blue;
          }
 
-.variantMain .app:hover 
+.variantMain .app:hover
          {
          color: green;
          }
@@ -23,16 +23,15 @@ span.appInvisible
 .variantMain .app:hover .appInvisible
         {
         display: inline;
+        color: green;
+        font-size: 80%;
         }
 
 .variantMain .lem
         {
         color: gray;
+        cursor: pointer;
         }
-
-*/
-
-
 
 .variantMain .anchor
         {

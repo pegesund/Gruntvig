@@ -3,8 +3,7 @@
   xmlns="http://www.w3.org/1999/xhtml"
   version="2.0"
   xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-  xmlns:fo="http://www.w3.org/1999/XSL/Format"
-  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"  
   xmlns:local="http://www.pantor.com/ns/local"
   xmlns:rng="http://relaxng.org/ns/structure/1.0"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
@@ -16,18 +15,32 @@
 
 <!-- KSR: 2011.12.09 -->
     <xsl:include href="popups.xsl"/>
-    <xsl:template match="tei:teiHeader">
-        <xsl:apply-templates select="//tei:title"/>
-    </xsl:template>
     
-    <xsl:template match="tei:title">
-        <p><h3>
-            <xsl:apply-templates/>
-           </h3>
-        </p>
-    </xsl:template>
- 
-    <xsl:template match="tei:title[@type='katalogsignatur']">
+    <xsl:template match="tei:teiHeader">
+        <div class="title">
+            <xsl:if test="//tei:title[@type='main']">
+                <i><xsl:apply-templates select="//tei:title[@type='main']"/></i>
+            </xsl:if>
+            <xsl:if test="//tei:title[@type='part']">
+                <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="//tei:title[@type='part']"/><xsl:text>&#x201D;</xsl:text>
+            </xsl:if>            
+        </div>
+        <div class="source">
+            <xsl:text>Tekstkilde:</xsl:text>
+            <br/>
+            <xsl:for-each select="//tei:bibl/tei:author">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+            <xsl:text> </xsl:text>
+            <xsl:text>(</xsl:text>
+            <xsl:for-each select="//tei:bibl/tei:date">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+            <xsl:text>) </xsl:text>
+            <xsl:for-each select="//tei:title[@type='katalogsignatur']">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </div>
     </xsl:template>
  
     
@@ -37,25 +50,7 @@
                 
                 <div class="head">
                     <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
-                </div>
-                
-                <div class="source">
-                    <div class="source">
-                        <xsl:text>Tekstkilde:</xsl:text>
-                    </div>
-                    <xsl:for-each select="//tei:bibl/tei:author">
-                        <xsl:apply-templates select="."/>
-                        <xsl:text> </xsl:text>
-                        <xsl:text>(</xsl:text>
-                        <xsl:for-each select="//tei:bibl/tei:date">
-                            <xsl:apply-templates select="."/>
-                        </xsl:for-each>
-                        <xsl:text>) </xsl:text>
-                    </xsl:for-each>
-                    <xsl:for-each select="//tei:title[@type='katalogsignatur']">
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
-                </div>
+                </div>                
                 
                 <xsl:apply-templates select="tei:text"/>
                 
@@ -78,7 +73,7 @@
         </br>        
     </xsl:template>
     
-    <!-- titelblad start -->
+    <!-- titelblad START -->
     
     <xsl:template match="tei:titlePage">
         <div class="titlePage">
@@ -124,7 +119,7 @@
         </div>
     </xsl:template>
     
-    <!-- titelblad end -->
+    <!-- titelblad END -->
     
     <xsl:template match="tei:div[@type='motto']">
         <div class="motto">
@@ -137,17 +132,6 @@
             <xsl:apply-templates/>
         </div>        
     </xsl:template>
-
-<!--
-    henter nummer på stofe; konflikt med næste template?
-    <xsl:template match="tei:lg[@n]">        
-        <div class="lgNumber">
-                <xsl:value-of select="@n"/>
-            <xsl:apply-templates/>
-            <br/>
-        </div>        
-    </xsl:template>
--->
     
     <xsl:template match="tei:head">        
         <div class="head{@rend}">
@@ -155,16 +139,16 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:lg">
+    <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
-        </div>
+        </div>        
     </xsl:template>
     
-    <xsl:template match="tei:l">
+    <xsl:template match="tei:l">        
         <div class="l">
             <xsl:apply-templates/>
-        </div>
+        </div>        
     </xsl:template>
     
     <xsl:template match="tei:app[@type='ms']">
@@ -173,12 +157,26 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:lem[@type='add']">
+    <xsl:template match="tei:lem[@type='add' and not(tei:l)]">
         <span class="add">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
             <xsl:text>]</xsl:text>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="//tei:lem[@type='add']/tei:l[position()=1]">
+        <div class="l">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="//tei:lem[@type='add']/tei:l[position()=last()]">
+        <div class="l">
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
+        </div>
     </xsl:template>
     
     <xsl:template match="tei:del[@type='firstDel']">
@@ -277,18 +275,6 @@
         </div>
     </xsl:template>
     
-    <!--
-    
-    <xsl:template match="tei:note[@type='footnote']">
-        *
-        <hr class="footLine"/>
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
-    
     <xsl:template match="tei:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
@@ -385,22 +371,5 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-<!--
-    
-    <xsl:template match="tei:lg">        
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="tei:l">        
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
--->
     
 </xsl:stylesheet>

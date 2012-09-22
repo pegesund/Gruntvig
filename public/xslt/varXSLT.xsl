@@ -24,16 +24,21 @@
                 </div>
                 
                 <div class="source">
-                    <div>
-                        <xsl:text>Tekstkilde:</xsl:text>
-                    </div>
-                    <ul>
-                        <xsl:for-each select="//TEI:witness[@rend]">
-                            <li>
-                                <xsl:apply-templates/>
-                            </li>
-                        </xsl:for-each>
-                    </ul>
+                    <xsl:choose>
+                         <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
+                             <div>
+                                 <xsl:text>Tekstkilde:</xsl:text>
+                             </div>
+                             <ul class="source">
+                                 <xsl:for-each select="//TEI:witness[@rend]">
+                                    <li>
+                                        <xsl:apply-templates/>
+                                    </li>
+                                </xsl:for-each>
+                            </ul>
+                        </xsl:when>
+                        <xsl:otherwise/>
+                    </xsl:choose>
                 </div>
                 
                 <xsl:choose>
@@ -179,9 +184,57 @@
     </xsl:template>
     
     
-    <!-- added by pe 16/1 -->
+    <!-- added by pe 16/1, ændret 2012.09.20 KSR -->
     
-    <xsl:template match="TEI:app">
+    
+    
+    <xsl:template match="TEI:app[@type='corrNote']">
+        <span class="app" href="#">
+            <span class="lem">
+                <xsl:apply-templates select="TEI:lem"/>
+            </span>
+            <span class="appInvisible">
+                <xsl:text>] </xsl:text>
+                <xsl:if test="TEI:lem/@wit!='A'">
+                    <span class="wit">
+                        <i>
+                            <xsl:value-of select="TEI:lem/@wit"/>
+                            <xsl:text>, </xsl:text>
+                        </i>
+                    </span>
+                </xsl:if>
+                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                <xsl:text> </xsl:text>
+                <xsl:if test="*[@type='add']">
+                    <xsl:apply-templates select="*[@type='add']"/>
+                </xsl:if>
+            </span>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rdg[@wit]">
+        <xsl:apply-templates/>
+        <span class="wit">                
+            <xsl:text> </xsl:text>
+            <i>
+                <xsl:value-of select="@wit"/>
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:rdg[current()/@type or not(@type)]">
+                        <xsl:text>, </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="following-sibling::TEI:rdg[not(current()/@type) and @type]">
+                        <xsl:text>; </xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+                <!-- kan koges ned til: 
+                    <xsl:when test="following-sibling::TEI:rdg">
+                    <xsl:text>; </xsl:text>
+                    </xsl:when> -->                
+            </i>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:app[@type='ide' or @type='ort' or @type='int' or @type='sub']">
         <span>
             <xsl:attribute name="class">
                 <xsl:choose>
@@ -218,7 +271,7 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="TEI:rdg">
+    <xsl:template match="TEI:rdg[not(@wit)]">
         <xsl:choose>
             <xsl:when test="@type='empty'">
                 <span class="seg">
@@ -264,6 +317,20 @@
                 <xsl:text>", WIDTH, 0)</xsl:text>
             </xsl:attribute>
         </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[@type='supp' and @ed='A']">
+        <xsl:text>|</xsl:text>
+        <span class="pb">
+            [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+        </span> 
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[not(@type='supp') and @ed='A' or @ed='V']">
+        <xsl:text>|</xsl:text>
+        <span class="pb">
+            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+        </span> 
     </xsl:template>
 
     
