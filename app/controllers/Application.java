@@ -13,7 +13,9 @@ public class Application extends Controller {
 
 
     /*
-     * make sure header always can reach assets
+     * Make sure header always can reach assets
+     * This way all controllers keeps a sorted version of the assets as arguments
+     * 
      */
     @Before
     static void addAssetToTemplate() {
@@ -58,8 +60,5 @@ public class Application extends Controller {
         render();
     }
 
-//     public static void vejledning() {
-//        Asset asset = Asset.find("fileName = ?", "place.xml").first();
-//        render();
-//    }
+
 }

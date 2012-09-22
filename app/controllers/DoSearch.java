@@ -17,9 +17,20 @@ import play.modules.search.Search;
 /**
  *
  * @author pe
+ * 
+ * Controller to handle search for freetext
+ * 
+ * 
  */
 public class DoSearch extends Application {
 
+    
+    /*
+     * 
+     * Search
+     * Look in intro, variants, manus and txt-files (chapters).
+     * 
+     */
     public static void doSearch() {
         String lookfor = Application.params.get("lookfor");
         System.out.println("Searching for: " + lookfor);
@@ -57,8 +68,13 @@ public class DoSearch extends Application {
         return createTeaser(str, lookfor, 70);
     }
 
-    // add caching if slow later
-    public static String createTeaser(String str, String lookforOrig, int len) {
+    /*
+     * 
+     * Helper function
+     * add caching later if slow
+     * 
+     */
+    private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase();
         int lookforStart = str.indexOf(lookfor) + 1;
         Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
