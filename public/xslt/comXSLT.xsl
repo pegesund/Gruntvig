@@ -140,10 +140,11 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="TEI:note[@xml:id]">
-                     <div class="note-som-helhed" id="{../@xml:id}">
-                         <xsl:apply-templates select="p"/>
+   <xsl:template match="TEI:note[@xml:id]">
+                     <div class="hat" id="{../@xml:id}">
+                         <xsl:apply-templates select="TEI:p"/>
                      </div>
+                     
                  </xsl:template>
              
                  
