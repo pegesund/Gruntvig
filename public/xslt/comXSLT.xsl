@@ -66,42 +66,33 @@
         
     </xsl:template>
     
-    <xsl:template match="TEI:div" mode="toc">
-        <div class="toc">
-            <a class="toc intro_menu">
-                <xsl:attribute name="hrel">
-                    <xsl:text>AA</xsl:text>
-                    <xsl:number level="multiple" count="TEI:div"/>
-                </xsl:attribute>
-                <xsl:number level="multiple" count="TEI:div"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="TEI:head"/>
-            </a>
-            <xsl:for-each select="TEI:div">
-                <xsl:apply-templates mode="toc" select="."/>
-            </xsl:for-each>
-        </div>
+    <xsl:template match="TEI:ref[@type='web']">
+        <span class="web">
+            <xsl:text>&lt;</xsl:text><a href="http://{.}" target="_blank"><xsl:apply-templates/></a><xsl:text>&gt;</xsl:text>
+        </span>
     </xsl:template>
     
-    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
-        <div class="editor">
+    <xsl:template match="TEI:ref[@select or @target]">
+        <span class="web">
+            <a href="{@target}" target="_blank"><xsl:apply-templates/></a>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:editor">
+        <div>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:head">
-        <a>
-            <xsl:attribute name="id">
-                <xsl:text>AA</xsl:text>
-                <xsl:number level="multiple" count="TEI:div"/>
-            </xsl:attribute>
-        </a>
-        <div class="head{@rend}">
-            <a href="{@name}" class="toc">
-                <xsl:number level="multiple" count="TEI:div"/>
-                <xsl:text> </xsl:text>
-                <xsl:apply-templates/>
-            </a>
+    <xsl:template match="TEI:l">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:lg">
+        <div>
+            <xsl:apply-templates/>
         </div>
     </xsl:template>
     
@@ -109,164 +100,6 @@
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div">        
-        <div class="div">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:fw[@type='longLine']">
-        <hr class="fwLongLine"/>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:fw[@type='shortLine']">
-        <hr class="fwShortLine"/>
-    </xsl:template>
-    
-    <xsl:template match="TEI:lb">        
-        <br>
-            <xsl:apply-templates/>
-        </br>        
-    </xsl:template>
-
-<!--
-    henter nummer på stofe; konflikt med næste template?
-    <xsl:template match="TEI:lg[@n]">        
-        <div class="lgNumber">
-                <xsl:value-of select="@n"/>
-            <xsl:apply-templates/>
-            <br/>
-        </div>        
-    </xsl:template>
--->
-
-    <xsl:template match="TEI:lg|TEI:l">
-        <div class="{name()}">
-            <!--xsl:attribute name="class"><xsl:value-of select="name()"/></xsl:attribute-->
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='litList']">
-        <div class="litList">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='webList']">
-        <div class="webList">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:list">
-        <xsl:if test="@type='decimal'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="decimal">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='upperAlpha'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperAlpha">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerAlpha'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="lowerAlpha">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='upperRoman'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperRoman">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerRoman'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="lowerRoman">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='simple'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="simple">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='ordered'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="ordered">
-                        <xsl:apply-templates/>
-                    </li>
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='addendon' or @type='webList'">
-            <div class="litList">
-                <xsl:apply-templates/>
-            </div>
-        </xsl:if>
-        <xsl:if test="@type='litList'">
-            <div class="litList">
-                <ul>
-                    <xsl:for-each select="TEI:item">
-                        <li class="ordered">
-                            <xsl:apply-templates/>
-                            <xsl:text>.</xsl:text>
-                        </li>
-                    </xsl:for-each>
-                </ul>
-            </div>
-        </xsl:if>
-    </xsl:template>
-    
-    <xsl:template match="TEI:item[not(@n)]">
-        <li class="liOrdered">
-            <xsl:apply-templates/>
-        </li>
-    </xsl:template>
-    
-    <xsl:template match="TEI:item[@n]">
-        <ul>
-            <li class="ordered">
-                <xsl:text>&lt;</xsl:text>
-                <a href="{.}">
-                    <xsl:apply-templates/>
-                </a>
-                <xsl:text>&gt;</xsl:text>
-                <xsl:text> (</xsl:text>
-                <xsl:number value="substring(@n, 9,2)" format="1"/>
-                <xsl:text>. </xsl:text>
-                <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="substring(@n, 1,4)"/>
-                <xsl:text>)</xsl:text>
-            </li>
-        </ul>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
@@ -286,92 +119,91 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='readMore']"/>    
-    
-    <xsl:template match="TEI:p[@rend]">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-            <xsl:if test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
-                <span class="app">
-                    <xsl:text> </xsl:text>
-                    <span class="plus" onclick="showhide(this,'more{generate-id()}')">Læs mere +</span>
-                    <div id="more{generate-id()}" class="appInvisible">
-                        <div class="readMore">
-                            <xsl:apply-templates select="following-sibling::TEI:note[local-name()='note' and @type='readMore' and position()=1]/node()"/>
-                        </div>
-                    </div>
-                </span>
-            </xsl:if>
-        </div>
-    </xsl:template>
-    
-    <!--
-        udgår, udg.møde 2011.12.08
-        <xsl:template match="TEI:p[@rend='quote']">        
-        <div class="{@rend}">
-        <br/>
-        <xsl:text>&#x201C;</xsl:text>
-        <xsl:apply-templates/>
-        <xsl:text>&#x201D;</xsl:text>
-        <br/>
-        <br/>
-        </div>
-        </xsl:template>
-        
-        <xsl:template match="TEI:p[@rend='unQuote']">        
-        <div class="{@rend}">
-        <br/>
-        <xsl:apply-templates/>
-        <br/>
-        <br/>
-        </div>
-        </xsl:template>
-    -->
-    
-    <xsl:template match="TEI:table">        
-        <div class="table">
+    <xsl:template match="TEI:p">        
+        <div class="p">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:row">        
-        <div class="row">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell">        
-        <span class="cell">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:ref[@type='web' or @select or @target]">
-        <span class="web">
-            <xsl:choose>
-                <xsl:when test="@type='web'">
-                    <xsl:text>&lt;</xsl:text>
-                    <a href="#http://{.}">
-                        <xsl:apply-templates/>
-                    </a>
-                    <xsl:text>&gt;</xsl:text>
-                </xsl:when>
-                <xsl:when test="@select">                    
-                    <a href="#http://{.}">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-            </xsl:choose>            
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:ref[@type='docIn' or @type='docOut']">
-        <span class="web">
-             <a href="{@target}">
-                 <xsl:apply-templates/>
-             </a>
-        </span>
     </xsl:template>
 
+   <xsl:template match="TEI:note[@xml:id]">
+       <div class="note" id="{@xml:id}">
+           <xsl:apply-templates select="TEI:p"/>
+       </div>
+   </xsl:template>
+   
+   <xsl:template match="TEI:note[@xml:id]/TEI:p">
+       <div class="p">
+           <xsl:apply-templates/>
+           <xsl:choose>
+               <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
+                   <span class="app">
+                       <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
+                       <div id="more{../@xml:id}" class="appInvisible">
+                           <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
+                       </div>
+                   </span>
+               </xsl:when>
+           </xsl:choose>
+       </div>
+   </xsl:template>
+   
+   <xsl:template name="next-lemma-part">
+        <xsl:param name="n"/>
+        <xsl:param name="node"/>
+        <xsl:param name="i"/>
+        <xsl:if test="name($node[$i]) != 'seg' or $node[$i]/@type != 'comEnd' or $node[$i]/@n != $n">
+            <xsl:if test="not(name($node[$i]))"> <!--text or comment node-->
+                <xsl:apply-templates select="$node[$i]" mode="in-lemma"/>
+            </xsl:if>
+            <xsl:call-template name="next-lemma-part">
+                <xsl:with-param name="n" select="$n"/>
+                <xsl:with-param name="node" select="$node"/>
+                <xsl:with-param name="i" select="$i+1"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:head">
+        <div class="head">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div[@type='litList' or @type='webList']">
+        <div class="litList">
+            <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:list">
+        <ul class="ul">
+            <xsl:apply-templates/>
+        </ul>        
+    </xsl:template>
+    
+    <xsl:template match="TEI:item[not(@n)]">
+        <li class="liOrdered">
+            <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
+        </li>
+    </xsl:template>
+    
+    <xsl:template match="TEI:item[@n]">
+        <li class="liOrdered">
+            <xsl:text>&lt;</xsl:text>
+            <a href="{.}">                
+                <xsl:apply-templates/>                
+            </a>
+            <xsl:text>&gt;</xsl:text>
+            <xsl:text> (</xsl:text>
+            <xsl:number value="substring(@n, 9,2)" format="1"/>
+            <xsl:text>. </xsl:text>
+            <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring(@n, 1,4)"/>
+            <xsl:text>).</xsl:text>
+        </li>
+    </xsl:template>
     
 </xsl:stylesheet>
