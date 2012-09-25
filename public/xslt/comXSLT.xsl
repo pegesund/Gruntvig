@@ -185,6 +185,14 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:div[@type='litList']">
+        <div class="litList">
+            <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
+        </div>
+    </xsl:template>
+    
+    <!--
     <xsl:template match="TEI:div[@type='litList' or @type='webList']">
         <div class="litList">
             <xsl:apply-templates/>
@@ -204,7 +212,7 @@
             <xsl:text>.</xsl:text>
         </li>
     </xsl:template>
-    
+    -->
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
             <xsl:text>&lt;</xsl:text>
