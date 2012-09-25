@@ -192,7 +192,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='ordered']">
+    <xsl:template match="TEI:list">
         <ul class="ul">
             <xsl:apply-templates/>
         </ul>        
