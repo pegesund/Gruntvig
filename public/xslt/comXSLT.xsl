@@ -66,11 +66,14 @@
         
     </xsl:template>
     
-    <xsl:template match="TEI:ref">
+    <xsl:template match="TEI:ref[@type='web']">
         <span class="web">
-            <a href="{@target}">
-                <xsl:apply-templates/>
-            </a>
+            <xsl:text>&lt;</xsl:text><a href="http://{.}" target="_blank"><xsl:apply-templates/></a><xsl:text>&gt;</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:ref[@select or @target]">
+        <span class="web"><a href="{@target}" target="_blank"><xsl:apply-templates/></a>
         </span>
     </xsl:template>
     
@@ -98,6 +101,22 @@
         </span>
     </xsl:template>
     
+    <!--
+    <xsl:template match="TEI:note[@type='readMore']">        
+        <div class="readMore">
+            <i>readMore:</i>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='readMore']/TEI:p">        
+        <div class="readMoreP">
+            <i>readMore:</i>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    -->
+    
     <xsl:template match="TEI:note[@type='sic']">
         <span class="sic">
             <xsl:apply-templates/>
@@ -122,9 +141,9 @@
     </xsl:template>
 
     <xsl:template match="TEI:note[@xml:id]">
-            <xsl:apply-templates select="TEI:p"/>
+        
     </xsl:template>
-
+    
     <xsl:template match="TEI:note[@xml:id]/TEI:p">        
         <div class="p" id="{../@xml:id}">
             <xsl:apply-templates/>
@@ -139,6 +158,23 @@
                 </xsl:when>
             </xsl:choose>       
         </div>
+    </xsl:template>
+    
+    <xsl:template name="next-lemma-part">
+        <xsl:param name="n"/>
+        <xsl:param name="node"/>
+        <xsl:param name="i"/>
+        <xsl:if test="name($node[$i]) != 'seg' or $node[$i]/@type != 'comEnd' or $node[$i]/@n != $n">
+            <xsl:if test="not(name($node[$i]))"> <!--text or comment node-->
+                <xsl:apply-templates select="$node[$i]" mode="in-lemma"/>
+            </xsl:if>
+            <xsl:call-template name="next-lemma-part">
+                <xsl:with-param name="n" select="$n"/>
+                <xsl:with-param name="node" select="$node"/>
+                <xsl:with-param name="i" select="$i+1"/>
+            </xsl:call-template>
+        </xsl:if>
+        <!--otherwise stop-->
     </xsl:template>
     
     <xsl:template match="TEI:head">
@@ -182,6 +218,6 @@
             <xsl:value-of select="substring(@n, 1,4)"/>
             <xsl:text>).</xsl:text>
         </li>
-    </xsl:template>
+    </xsl:template>    
     
 </xsl:stylesheet>
