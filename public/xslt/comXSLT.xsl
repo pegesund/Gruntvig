@@ -135,7 +135,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:p">        
-        <div class="p">
+        <div class="note">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
