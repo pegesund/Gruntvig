@@ -135,14 +135,14 @@
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]">
-        <div class="hat">
+        <div class="hat" id="{../@xml:id}">
             <xsl:apply-templates select="TEI:note[@xml:id]"/>
         </div>
         
     </xsl:template>
     
     <xsl:template match="TEI:note[@xml:id]/TEI:p">        
-        <div class="p" id="{../@xml:id}">
+        <div class="p">
             <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
