@@ -176,8 +176,8 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:list">
-        <ul class="ul">
+    <xsl:template match="TEI:list[@type='ordered']">
+        <ul>
             <xsl:apply-templates/>
         </ul>        
     </xsl:template>
