@@ -78,6 +78,7 @@
 .kommentar .appInvisible 
         {
         display:none;
+        margin: 0em 1em 0em 1em;
         }
         
    .kommentar .readMore i 
