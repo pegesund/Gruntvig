@@ -169,9 +169,9 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:div[@type='litList']/TEI:head/TEI:p/TEI:list[type='ordered']/TEI:item">
+    <xsl:template match="TEI:div[@type='litList' or @type='webList']">
         <div class="litList">
-            <xsl:apply-templates select="TEI:item"/>
+            <xsl:apply-templates/>
             <xsl:text>.</xsl:text>
         </div>
     </xsl:template>
