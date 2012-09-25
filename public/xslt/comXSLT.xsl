@@ -130,12 +130,12 @@
         <span class="supp">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
-            <xsl:text>hat]</xsl:text>
+            <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
     
     <xsl:template match="TEI:p">        
-        <div class="p">
+        <div class="hat">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
