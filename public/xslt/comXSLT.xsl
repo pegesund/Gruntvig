@@ -73,7 +73,8 @@
     </xsl:template>
     
     <xsl:template match="TEI:ref[@select or @target]">
-        <span class="web"><a href="{@target}" target="_blank"><xsl:apply-templates/></a>
+        <span class="web">
+            <a href="{@target}" target="_blank"><xsl:apply-templates/></a>
         </span>
     </xsl:template>
     
@@ -162,6 +163,8 @@
         </xsl:if>
     </xsl:template>
     
+    <!--
+    
     <xsl:template match="TEI:head">
         <div class="head">
             <xsl:apply-templates/>
@@ -204,5 +207,7 @@
             <xsl:text>).</xsl:text>
         </li>
     </xsl:template>
+    
+    -->
     
 </xsl:stylesheet>
