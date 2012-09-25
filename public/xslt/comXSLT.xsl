@@ -134,12 +134,6 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:p">        
-        <div class="hat">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:note[@xml:id]">
         <xsl:apply-templates select="TEI:p"/>
     </xsl:template>
