@@ -141,14 +141,12 @@
     </xsl:template>
 
    <xsl:template match="TEI:note[@xml:id]">
-                     <div class="hat" id="{../@xml:id}">
-                         <xsl:apply-templates select="TEI:p"/>
-                     </div>
-                     
-                 </xsl:template>
-             
-                 
-                 <xsl:template match="TEI:note[@xml:id]/TEI:p">        
+       <div class="note" id="{../@xml:id}">
+           <xsl:apply-templates select="TEI:p"/>
+       </div>
+   </xsl:template>
+   
+   <xsl:template match="TEI:note[@xml:id]/TEI:p">        
                      <div class="p">
                          <xsl:apply-templates/>
                          <xsl:choose>
@@ -163,8 +161,8 @@
                          </xsl:choose>       
                      </div>
                  </xsl:template>
-    
-    <xsl:template name="next-lemma-part">
+   
+   <xsl:template name="next-lemma-part">
         <xsl:param name="n"/>
         <xsl:param name="node"/>
         <xsl:param name="i"/>
