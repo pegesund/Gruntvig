@@ -130,7 +130,7 @@
         <span class="supp">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
-            <xsl:text>]</xsl:text>
+            <xsl:text>hat]</xsl:text>
         </span>
     </xsl:template>
     
