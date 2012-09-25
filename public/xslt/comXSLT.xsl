@@ -101,22 +101,6 @@
         </span>
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:note[@type='readMore']">        
-        <div class="readMore">
-            <i>readMore:</i>
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note[@type='readMore']/TEI:p">        
-        <div class="readMoreP">
-            <i>readMore:</i>
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    -->
-    
     <xsl:template match="TEI:note[@type='sic']">
         <span class="sic">
             <xsl:apply-templates/>
@@ -176,7 +160,6 @@
                 <xsl:with-param name="i" select="$i+1"/>
             </xsl:call-template>
         </xsl:if>
-        <!--otherwise stop-->
     </xsl:template>
     
     <xsl:template match="TEI:head">
@@ -220,6 +203,6 @@
             <xsl:value-of select="substring(@n, 1,4)"/>
             <xsl:text>).</xsl:text>
         </li>
-    </xsl:template>    
+    </xsl:template>
     
 </xsl:stylesheet>
