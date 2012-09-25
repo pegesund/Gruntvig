@@ -185,10 +185,10 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:div[@type='litList']">
-        <div class="litList">
+    <xsl:template match="TEI:div">
+        <div class="div">
             <xsl:apply-templates/>
-            <xsl:text>.</xsl:text>
+            <xsl:text>HAT</xsl:text>
         </div>
     </xsl:template>
     
