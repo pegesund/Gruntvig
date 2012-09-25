@@ -139,7 +139,28 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <xsl:template match="TEI:note[@xml:id]">
+        <div class="note-som-helhed" id="{../@xml:id}">
+            <xsl:apply-templates select="p"/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@xml:id]/TEI:p">
+        <div class="indre-p">
+          <xsl:apply-templates/>
+          <xsl:if test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
+                    <span class="app">
+                        <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
+                        <div id="more{../@xml:id}" class="appInvisible">
+                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
+                        </div>
+                    </span>
+         </xsl:if>
+        </div>
+</xsl:template>
 
+    <!--
     <xsl:template match="TEI:note[@xml:id]">
             <xsl:apply-templates select="TEI:p"/>
     </xsl:template>
@@ -159,7 +180,7 @@
             </xsl:choose>       
         </div>
     </xsl:template>
-    
+    -->
     <xsl:template name="next-lemma-part">
         <xsl:param name="n"/>
         <xsl:param name="node"/>
