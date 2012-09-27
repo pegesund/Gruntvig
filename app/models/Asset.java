@@ -530,4 +530,16 @@ public class Asset extends GenericModel {
         }
 
     }
+    
+    public int getNumberOfPictures() {
+        System.out.println("**** Looking for rootName: " + rootName);
+        return Asset.find("rootName = ? and type = ?", rootName, Asset.imageType).fetch().size();
+    }
+
+    public String getFileNameWithoutXml() {
+        return this.rootName;
+    }
+
+    
+    
 }
