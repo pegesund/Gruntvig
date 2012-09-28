@@ -282,7 +282,9 @@
         </br>        
     </xsl:template>
     
-    <!-- titelblad START --> <xsl:template match="TEI:titlePage[@type]">
+    <!-- titelblad START -->
+    
+    <xsl:template match="TEI:titlePage[@type]">
         <div class="titlePage">
             <xsl:choose>
                 <xsl:when test="@type='dustTitlePage'">
@@ -304,7 +306,7 @@
             </xsl:choose>
         </div>
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:titlePart">
         <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
@@ -324,7 +326,7 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    
+    -->
     <xsl:template match="TEI:byline">
         <div class="byline">
             <xsl:apply-templates/>
