@@ -285,8 +285,8 @@
     <!-- titelblad START -->
     
     <xsl:template match="TEI:titlePage">
-        <div class="titlePage">
-            <xsl:apply-templates/><xsl:choose>
+            <xsl:apply-templates/>
+            <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
                 <div class="dustTitlePage">
                     <xsl:apply-templates/>
@@ -303,7 +303,6 @@
                 </div>
             </xsl:when>
         </xsl:choose>
-        </div>
     </xsl:template>
     <!--
     <xsl:template match="TEI:titlePart">
