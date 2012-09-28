@@ -272,25 +272,9 @@
                 </div>
                 
                 <xsl:apply-templates select="TEI:text"/>
-
-                
-                
-                
-
                 
             </div>
     </xsl:template>
-    
-    
-    <!--
-    
-    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editionPhilologist']">        
-        <div class="editionPhilologist">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
     
     <xsl:template match="TEI:lb">        
         <br>
@@ -301,21 +285,33 @@
     <!-- titelblad START -->
     
     <xsl:template match="TEI:titlePage">
-        <div class="titlePage">
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="@type='main'">
+                <div class="titlePageMain">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='part'">
+                <div class="titlePagePart">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:titlePart">
-        <div class="{@type}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:docTitle">
-        <div class="docTitle">
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="@type='main'">
+                <div class="titlePartMain">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='part'">
+                <div class="titlePartPart">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:byline">
@@ -324,20 +320,8 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:publisher">        
-        <div class="publisher">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:pubPlace">        
-        <div class="pubPlace">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="TEI:epigraph">
-        <div class="epigraph">
+    <xsl:template match="TEI:docAuthor">
+        <div class="docAuthor">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -348,39 +332,43 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:fw">
-        <xsl:choose>
-            <xsl:when test="@type='blank'">
-                <br/>
-                <br/>
-            </xsl:when>
-            <xsl:when test="@type='asterisk3'">
-                <div class="asterisk3">
-                    <xsl:text>&#x002A;</xsl:text>
-                    <br/>
-                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
-                </div>
-            </xsl:when>
-            <xsl:when test="@type='longLine'">
-                <div class="fwLongLine">
-                    <hr align="center" width="16%"/>
-                </div>
-            </xsl:when>
-            <xsl:when test="@type='shortLine'">
-                <div class="fwShortLine">
-                    <hr align="center" width="8%"/>
-                </div>
-            </xsl:when>
-        </xsl:choose>
+    <xsl:template match="TEI:docImprint">        
+        <div class="docImprint">
+            <xsl:apply-templates/>
+        </div>        
     </xsl:template>
     
-    <xsl:template match="TEI:titlePart[@type='part']">
-        <div class="titlePart">
+    <xsl:template match="TEI:docTitle">
+        <div class="docTitle">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <!-- titelblad end -->
+    <xsl:template match="TEI:pubPlace">        
+        <div class="pubPlace">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:docDate">
+        <div class="docDate">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:publisher">        
+        <div class="publisher">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:epigraph">
+        <div class="epigraph">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <!-- titelblad END -->
     
     <xsl:template match="TEI:lg">
         <div class="lg">
