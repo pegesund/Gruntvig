@@ -311,12 +311,8 @@
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
-        <span class="sic">
             <xsl:apply-templates/>
-            <xsl:text>
-                [sic]
-            </xsl:text>
-        </span>
+            <xsl:text>[sic]</xsl:text>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='supp']">
