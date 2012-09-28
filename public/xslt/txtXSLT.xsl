@@ -284,18 +284,10 @@
     
     <!-- titelblad START -->
     
-    <xsl:template match="TEI:titlePage">
+    <xsl:template match="TEI:titlePage[@type]">
         <div class="titlePage">
             <xsl:apply-templates/>
         </div>
-        <div class="dustTitlePage">
-                    <xsl:choose>
-            <xsl:when test="@type='dustTitlePage'">
-                <div class="dustTitlePage">
-                    <xsl:apply-templates/>
-                </div>
-        </xsl:choose>
-                </div>
     </xsl:template>
     
     <xsl:template match="TEI:titlePart">
