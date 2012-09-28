@@ -357,9 +357,14 @@
 
 /* titlePage START */
 
+#tekst_innhold .titlePage
+        {
+        margin: 0em 0em 2em 12em;
+        }
+
 #tekst_innhold .dustTitlePage
         {
-        margin: 12em 0em 2em 0em;
+        margin: 6em 0em 2em 0em;
         }
 
 #tekst_innhold .titlePageMain
