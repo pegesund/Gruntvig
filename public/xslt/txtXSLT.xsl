@@ -285,7 +285,7 @@
     <!-- titelblad START -->
     
     <xsl:template match="TEI:titlePage">
-        <div class="titlePage">
+        <div class="titlePageHAT">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
