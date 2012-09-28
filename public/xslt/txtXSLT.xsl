@@ -293,8 +293,8 @@
     <xsl:template match="TEI:titlePart">
         <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
-                <br/><br/><br/><br/><br/>
                 <div class="dustTitlePage">
+                    <br/><br/><br/><br/><br/>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
