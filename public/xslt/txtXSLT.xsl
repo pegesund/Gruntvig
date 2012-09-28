@@ -286,6 +286,7 @@
     
     <xsl:template match="TEI:titlePage">
         <div class="titlePage">
+            <br/><br/><br/><br/><br/>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
