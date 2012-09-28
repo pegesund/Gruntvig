@@ -286,10 +286,26 @@
     
     <xsl:template match="TEI:titlePage">
         <div class="titlePage">
-            <xsl:apply-templates/>
+            <xsl:apply-templates/><xsl:choose>
+            <xsl:when test="@type='dustTitlePage'">
+                <div class="dustTitlePage">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='main'">
+                <div class="titlePartMain">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='part'">
+                <div class="titlePartPart">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
         </div>
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:titlePart">
         <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
@@ -308,7 +324,7 @@
                 </div>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="TEI:byline">
         <div class="byline">
