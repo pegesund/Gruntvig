@@ -292,6 +292,11 @@
     
     <xsl:template match="TEI:titlePart">
         <xsl:choose>
+            <xsl:when test="@type='dustTitlePage'">
+                <div class="dustTitlePage">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
             <xsl:when test="@type='main'">
                 <div class="titlePartMain">
                     <xsl:apply-templates/>
