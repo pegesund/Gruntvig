@@ -373,20 +373,21 @@
         }
 
 #tekst_innhold .titlePartMain, .titlePartPart
-        {
-        font-size: 140%;        
+        {        
         margin: 0.5em 0em 0.5em 0em;
         text-align: center;
         }
 
 #tekst_innhold .titlePartMain
         {
+        font-size: 140%;
         font-weight: bold;
         line-height: 200%;
         }
 
 #tekst_innhold .titlePartPart
         {
+        font-size: 120%;
         font-weight: normal;
         line-height: 125%;
         }
