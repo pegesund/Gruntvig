@@ -306,28 +306,11 @@
         </div>
     </xsl:template>
     
-    <!--
-        udgår, udg.møde 2011.12.08
-        <xsl:template match="TEI:p[@rend='quote']">        
+    <xsl:template match="TEI:p">
         <div class="{@rend}">
-        <br/>
-        <xsl:text>&#x201C;</xsl:text>
-        <xsl:apply-templates/>
-        <xsl:text>&#x201D;</xsl:text>
-        <br/>
-        <br/>
+            <xsl:apply-templates/>
         </div>
-        </xsl:template>
-        
-        <xsl:template match="TEI:p[@rend='unQuote']">        
-        <div class="{@rend}">
-        <br/>
-        <xsl:apply-templates/>
-        <br/>
-        <br/>
-        </div>
-        </xsl:template>
-    -->
+    </xsl:template>
     
     <xsl:template match="TEI:table">        
         <div class="table">
