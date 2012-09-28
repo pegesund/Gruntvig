@@ -285,23 +285,17 @@
     <!-- titelblad START -->
     
     <xsl:template match="TEI:titlePage">
-       <xsl:choose>
+        <div class="titlePage">
+            <xsl:apply-templates/>
+        </div>
+        <div class="dustTitlePage">
+                    <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
                 <div class="dustTitlePage">
                     <xsl:apply-templates/>
                 </div>
-            </xsl:when>
-            <xsl:when test="@type='main'">
-                <div class="titlePartMain">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:when test="@type='part'">
-                <div class="titlePartPart">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
         </xsl:choose>
+                </div>
     </xsl:template>
     
     <xsl:template match="TEI:titlePart">
