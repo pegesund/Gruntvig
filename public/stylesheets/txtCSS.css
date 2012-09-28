@@ -378,14 +378,14 @@
         text-align: center;
         }
 
-#tekst_innhold .titlePartMain
+.titlePartMain
         {
         font-size: 140%;
         font-weight: bold;
         line-height: 200%;
         }
 
-#tekst_innhold .titlePartPart
+.titlePartPart
         {
         font-size: 120%;
         font-weight: normal;
