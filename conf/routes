@@ -17,6 +17,7 @@ GET     /css/img/                               staticDir:public/images
 GET     /css/images/                            staticDir:public/images
 GET     /css/                                   staticDir:public/stylesheets
 GET     /public/stylesheets/                    staticDir:public/stylesheets
+GET     /doc                                    staticDir:javadoc
 GET     /admin/removeXmlFile/{fileId}           Admin.removeXmlFile
 GET     /admin/deleteAll                        Admin.removeAllData
 GET     /tekstvisning/{assetId}/{chapterNum}    ShowAsset.tekstvisning

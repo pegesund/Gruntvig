@@ -17,8 +17,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- *
- * @author pe
+ * 
+ * Text-refs which are shown in popups are kept in this model
+ * 
  */
 @Entity
 public class TextReference extends GenericModel {
@@ -52,6 +53,9 @@ public class TextReference extends GenericModel {
         this.type = type;
     }
 
+    /**
+     * Return a xml-file as a xml-doc
+     */
     private static Document fileAsXml(File file) {
         Document doc = null;
         try {
@@ -65,7 +69,7 @@ public class TextReference extends GenericModel {
         return doc;
     }
 
-    /*
+    /**
      * delete old refs when uploading new reference-file
      */
     private static void deleteOldRererences(String fileName, String type) {
@@ -76,7 +80,14 @@ public class TextReference extends GenericModel {
     }
 
     
-    
+    /**
+     * 
+     * Handle upload of comments shown in the the comments-tab
+     * Each comment is kept precompiiled and separately in the database and the complete comments-doc is concatenated
+     * If the strucure of com-files it chaged, this function must be updated
+     * 
+     * 
+     */
     public static void uploadComments(Asset asset) {
         System.out.println("Processing asset: " + asset.html);
         int del = TextReference.delete("fileName =  ? and type = ?", asset.fileName, Asset.commentType);
@@ -107,6 +118,11 @@ public class TextReference extends GenericModel {
         asset.save();
     }
 
+    /**
+     * Extract text-references to be shown i popups
+     * Each ref is kept separately and precompiled in the database
+     * 
+     */
     // check if dtd sequence is set, this is an assumption here
     public static void uploadReferenceFile(Asset asset) {
         System.out.println("Uploading reference-file");
@@ -127,6 +143,12 @@ public class TextReference extends GenericModel {
         }
     }
 
+    /**
+     * Get a reference based on its id
+     * Used from ajax-lookups
+     * @return ref as html
+     * 
+     */
     public static String getReference(String textId) {
         TextReference ref = TextReference.find("textId = ?", textId).first();
         if (ref != null) {

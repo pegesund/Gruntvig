@@ -41,10 +41,16 @@ import org.jsoup.Jsoup;
 
 /**
  *
- * @author pe
+ * 
+ * This class keeps utility-functions which are common for different parts of the program
+ * 
+ * 
  */
 public class Helpers {
 
+    /**
+     * Slurp in a file and return as String
+     */
     public static String readFile(String path) throws IOException {
         FileInputStream stream = new FileInputStream(new File(path));
         try {
@@ -57,6 +63,11 @@ public class Helpers {
         }
     }
 
+    /**
+     * Extracts references from a xml
+     * Note: Currently not in use, keep some time before delete
+     * 
+     */
     public static String getReferencesFromXml(String xml, String fileName) {
         StringBuilder refs = new StringBuilder(xml);
         try {
@@ -93,6 +104,9 @@ public class Helpers {
 
     }
 
+    /**
+     * Xml/html node to string
+     */
     public static String nodeToString(Node node) {
         StringWriter sw = new StringWriter();
         try {
@@ -105,6 +119,9 @@ public class Helpers {
         return sw.toString();
     }
 
+    /**
+     * Parse xml-string and return doc
+     */
     public static Document stringToNode(String str) {
         Document doc = null;
         try {
@@ -121,6 +138,12 @@ public class Helpers {
     }
 
 
+    /**
+     * Iterate a doc for all children with this tagname
+     * 
+     * @return List of nodes
+     * 
+     */
     public static List<Node> getChildrenOfType(Node parent, String tagName) {
         ArrayList<Node> nodes = new ArrayList<Node>();
         NodeList children = parent.getFirstChild().getChildNodes();
@@ -132,6 +155,9 @@ public class Helpers {
         return nodes;
     }
 
+    /**
+     * Get first child with this tagname
+     */
     public static Node getChildOfType(Node parent, String tagName) {
         NodeList children = parent.getChildNodes();
         for (int i = 0; i < children.getLength(); i++) {
@@ -142,6 +168,11 @@ public class Helpers {
         return null;
     }
 
+    /**
+     * 
+     * Currently not in use, keep for example
+     * 
+     */
     public static String xmlToHtml(String xml, String filePath) {
         try {
             // File xmlIn = new File(fileName);
@@ -172,6 +203,11 @@ public class Helpers {
 
     }
 
+    /**
+     * 
+     * Clone a file in the filesystem
+     * 
+     */
     public static void copyfile(String srFile, String dtFile) {
         try {
             File f1 = new File(srFile);
@@ -197,11 +233,22 @@ public class Helpers {
         }
     }
 
+    
+    /**
+     * 
+     * Remove html-formatting from a tring
+     * 
+     */
     public static String stripHtml(String html) {
         if (html == null) return ""; // in case of pictures :-)
         return Jsoup.parse(html).text();
     }
 
+    /**
+     * 
+     * Helper function to create search-teasers
+     * 
+     */
     public static String createTeaser(String str, String lookfor, int len) {
         int lookforStart = str.indexOf(lookfor);
         int lookforEnd = lookforStart + lookfor.length();

@@ -16,10 +16,16 @@ import play.mvc.Controller;
 
 /**
  *
- * @author pe
+ * 
+ * 
+ * Admin-page to keep track of uploaded files
+ * Based on play-crud
+ * 
+ * 
  */
 public class Admin extends Application {
 
+    
     public static void uploadXmlFile() {
         render();
     }

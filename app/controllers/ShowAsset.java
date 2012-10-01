@@ -10,10 +10,16 @@ import models.Chapter;
 
 /**
  *
- * @author pe
+ * 
+ * Handles showing of asset assets
+ * 
  */
 public class ShowAsset extends Application {
 
+    /**
+     * Man function to show all tabs
+     * 
+     */
     public static void tekstvisning(long assetId, int chapterNum) {
         Asset asset = Asset.findById(assetId);
         List<Asset> variants = Asset.getVariants(asset.id);
@@ -27,6 +33,12 @@ public class ShowAsset extends Application {
         render(asset, chapter, chapters, variants, manus);
     }
 
+    
+    /**
+     * 
+     * Used by ajax-calls from javascript
+     * 
+     */
     public static void findAsset(String fileName) {
         Asset asset = Asset.find("fileName = ?", fileName).first();
         if (asset != null) {
@@ -36,10 +48,14 @@ public class ShowAsset extends Application {
         } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");
     }   
     
-    /* 
+    /** 
      * TODO: rewrite to one path
      * 
+     * Currently called from javascript
+     * 
      */
+    
+    
     
     public static void vejledning(String fileName) {
         String vejledningSomSkalVises = fileName;

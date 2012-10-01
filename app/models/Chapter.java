@@ -28,7 +28,12 @@ import play.modules.search.Indexed;
 
 /**
  *
- * @author pe
+ * 
+ * Root-texts are dividet into Chapters
+ * Starts counting from 0
+ * Keeps a version of text to index as well as precompiled html
+ * 
+ * 
  */
 @Indexed
 @Entity
@@ -57,7 +62,12 @@ public class Chapter extends GenericModel {
         this.html = html;
     }
 
-
+    
+    /**
+     * Override of save function in JPA
+     * Currently all div-tags with empty class-defs are deleted
+     * 
+     */
     @Override
     public <T extends JPABase> T save() {
         this.htmlAsText = Helpers.stripHtml(html);
@@ -66,11 +76,21 @@ public class Chapter extends GenericModel {
         return super.save();
     }
 
+    
+    /**
+     * Create text-teaser where lookfor is highlightet
+     * 
+     * @return teser as html
+     */
     public String getTeaser(String lookfor) {
         return DoSearch.createTeaser(htmlAsText, lookfor);
     }
 
 
+    
+    /**
+     * When a new Asset is imported all old chapters connected to this assed are deleted
+     */
     private static void deleteOldChapters(Asset asset) {
         // System.out.println("**** Chapters on this asset: " + TextReference.find("asset", asset).fetch().size());
         for (Object o : Chapter.all().fetch()) {
@@ -84,6 +104,12 @@ public class Chapter extends GenericModel {
         System.out.println("Asset id: " + asset.id);
     }
 
+    
+    /**
+     * Helper function only: Translates a html-dom-tree to a String
+     * 
+     * @return html-string without xml-declaration
+     */
     private static String nodeToString(Node node) {
         StringWriter sw = new StringWriter();
         try {
@@ -96,8 +122,10 @@ public class Chapter extends GenericModel {
         return sw.toString();
     }
 
-    /*
+    /**
      * Divide a xml-file into chapters, chapters are divided by div-tags, attribute name is name of chapter
+     * Fixme: use xpath selector. Should work with current library which should be the latest
+     * 
      */
     public static void createChaptersFromAsset(Asset asset) {
         System.out.println("Creating chapters from asset: " + asset.fileName + " , id: " + asset.id);

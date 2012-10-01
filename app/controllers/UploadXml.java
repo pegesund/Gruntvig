@@ -14,7 +14,9 @@ import play.mvc.Controller;
 
 /**
  *
- * @author pe
+ * 
+ * Starting point for uploading of xml-files
+ * 
  */
 public class UploadXml extends Application {
 
@@ -28,6 +30,11 @@ public class UploadXml extends Application {
         render();
     }
 
+    /**
+     * Handle upload of xml-file
+     * Check for file-type and create assets in database
+     * 
+     */
     public static void uploadFile(String filesname, String comment, File epub) {
         System.out.println("Starting upload");
         Asset asset = null;
