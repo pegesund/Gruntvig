@@ -183,41 +183,6 @@
     </xsl:template>
     
     <xsl:template match="TEI:list">
-        <xsl:if test="@type='textualCriticism'">
-            <table class="textualCriticism">
-                <tr bgcolor="lightgray">
-                    <td>Side</td>
-                    <td>Note</td>
-                </tr>
-                <xsl:for-each select="document(//TEI:note[@type='txt']/@target)//TEI:app">
-                    <tr>
-                        <td align="right">
-                            <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
-                            &#x2003;
-                        </td>
-                        <td align="left">
-                            <xsl:apply-templates select="TEI:lem"/>
-                            <xsl:text>] </xsl:text>
-                            <xsl:if test="TEI:lem/@wit!='A'">
-                                <i>
-                                    <xsl:value-of select="TEI:lem/@wit"/>
-                                    <xsl:text>, </xsl:text>
-                                </i>                                    
-                            </xsl:if>
-                            <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
-                            <xsl:if test="TEI:rdg[@type='add']">
-                                <xsl:apply-templates select="TEI:rdg[@type='add']"/>
-                            </xsl:if>
-                            <xsl:if test="TEI:note[@type='add']">
-                                <i>
-                                    <xsl:apply-templates select="TEI:note[@type='add']"/>
-                                </i>
-                            </xsl:if>
-                        </td>
-                    </tr>
-                </xsl:for-each>
-            </table>
-        </xsl:if>
         <xsl:if test="@type='decimal'">
             <ul>
                 <xsl:for-each select="TEI:item">
@@ -310,6 +275,85 @@
         </xsl:if>
     </xsl:template>
     
+    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis']">
+        <xsl:choose>
+            <xsl:when test="@type='textualCriticismPluralis'">                
+                <xsl:text>Der er foretaget følgende tekstrettelser (se vejledning til de tekstkritiske noter):</xsl:text>
+                <table class="textualCriticism">
+                    <tr bgcolor="lightgray">
+                        <td>Side</td>
+                        <td>Note</td>
+                    </tr>
+                    <xsl:for-each select="document(//TEI:note[@type='txt']/@target)//TEI:app">
+                        <tr>
+                            <td align="right">
+                                <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
+                                &#x2003;
+                            </td>
+                            <td align="left">
+                                <xsl:apply-templates select="TEI:lem"/>
+                                <xsl:text>] </xsl:text>
+                                <xsl:if test="TEI:lem/@wit!='A'">
+                                    <i>
+                                        <xsl:value-of select="TEI:lem/@wit"/>
+                                        <xsl:text>, </xsl:text>
+                                    </i>                                    
+                                </xsl:if>
+                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[@type='add']">
+                                    <xsl:apply-templates select="TEI:rdg[@type='add']"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:note[@type='add']">
+                                    <xsl:text> </xsl:text>
+                                    <i>
+                                        <xsl:apply-templates select="TEI:note[@type='add']"/>
+                                    </i>
+                                </xsl:if>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </xsl:when>
+            <xsl:when test="@type='textualCriticismSingularis'">                
+                <xsl:text>Der er foretaget følgende tekstrettelse (se vejledning til de tekstkritiske noter):</xsl:text>
+                <table class="textualCriticism">
+                    <tr bgcolor="lightgray">
+                        <td>Side</td>
+                        <td>Note</td>
+                    </tr>
+                    <xsl:for-each select="document(//TEI:note[@type='txt']/@target)//TEI:app">
+                        <tr>
+                            <td align="right">
+                                <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
+                                &#x2003;
+                            </td>
+                            <td align="left">
+                                <xsl:apply-templates select="TEI:lem"/>
+                                <xsl:text>] </xsl:text>
+                                <xsl:if test="TEI:lem/@wit!='A'">
+                                    <i>
+                                        <xsl:value-of select="TEI:lem/@wit"/>
+                                        <xsl:text>, </xsl:text>
+                                    </i>                                    
+                                </xsl:if>
+                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[@type='add']">
+                                    <xsl:apply-templates select="TEI:rdg[@type='add']"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:note[@type='add']">
+                                    <xsl:text> </xsl:text>
+                                    <i>
+                                        <xsl:apply-templates select="TEI:note[@type='add']"/>
+                                    </i>
+                                </xsl:if>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:note[@type='sic']">
             <xsl:apply-templates/>
             <xsl:text>[sic]</xsl:text>
@@ -328,29 +372,6 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <!--
-        udgår, udg.møde 2011.12.08
-        <xsl:template match="TEI:p[@rend='quote']">        
-        <div class="{@rend}">
-        <br/>
-        <xsl:text>&#x201C;</xsl:text>
-        <xsl:apply-templates/>
-        <xsl:text>&#x201D;</xsl:text>
-        <br/>
-        <br/>
-        </div>
-        </xsl:template>
-        
-        <xsl:template match="TEI:p[@rend='unQuote']">        
-        <div class="{@rend}">
-        <br/>
-        <xsl:apply-templates/>
-        <br/>
-        <br/>
-        </div>
-        </xsl:template>
-    -->
     
     <xsl:template match="TEI:table">        
         <div class="table">
