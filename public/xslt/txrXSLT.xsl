@@ -83,7 +83,7 @@
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc">
             <a class="toc txrmenu">
-                <xsl:attribute name="href">
+                <xsl:attribute name="hrel">
                     <xsl:text>A</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
