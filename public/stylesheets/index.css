@@ -203,7 +203,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 
 /* Hovedtekst */
-#tekst_innhold{width:387px; font-size: 16px; height:580px; background: #fff; overflow:auto; padding: 23px 34px; font-family: georgia, garamond, serif; color: #333; line-height: 1.5em; background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;}
+#tekst_innhold{width:387px; font-size: 12px; height:580px; background: #fff; overflow:auto; padding: 23px 34px; font-family: georgia, garamond, serif; color: #333; line-height: 1.5em; background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;}
 #tekst_innhold h2 {font-size: 1.4em;} /* Undertittel */
 #tekst_innhold h3 {font-size: 1.2em; margin: 20px 0 4px 0; line-height:1em;} /* Underundertittel */
 
