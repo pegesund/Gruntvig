@@ -105,7 +105,7 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a href="{@name}" class="toc">
+            <a hrel="{@name}" class="toc">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
