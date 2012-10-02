@@ -306,7 +306,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:p[not(@rend='quote')]">
+    <xsl:template match="TEI:p">
         <div class="{@rend}">
             <xsl:apply-templates/>
         </div>
