@@ -277,15 +277,15 @@ a:hover, a:active {color: #299629 /* #367092;*/}
     margin: -16px 0 0 -19px;
     overflow: auto;
     padding: 23px 26px;
-    width: 387px;
-	}
+    width: 300px;
+    }
 	
 .innledningContent h2 
     {
     font-size: 1.4em;
     }
 
-.innledningContent p, .innledningContent quote
+.innledningContent p
     {
     font-size: 1em;
     }
