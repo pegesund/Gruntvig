@@ -290,6 +290,12 @@ a:hover, a:active {color: #299629 /* #367092;*/}
     font-size: 1em;
     }
 
+.innledningContent quote
+    {
+    font-size: 1em;
+    width: 387px;
+    }
+
 /* innledning-visning END  */
 
 
