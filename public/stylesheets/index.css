@@ -293,7 +293,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 .innledningContent quote
     {
     font-size: 1em;
-    width: inherit;
+    width: -14px;
     }
 
 /* innledning-visning END  */
