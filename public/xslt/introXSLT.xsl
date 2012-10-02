@@ -85,14 +85,14 @@
     </xsl:template>
     
     <xsl:template match="TEI:head">
-        <a class="toc intro_menu">
+        <a>
             <xsl:attribute name="id">
                 <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a href="{@name}" class="toc intro_menu">
+            <a href="@name" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
