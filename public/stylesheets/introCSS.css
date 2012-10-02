@@ -28,7 +28,7 @@
           background-color: white;
           color: green;
           cursor: pointer;
-          font-family: "New Times Roman";
+          font-family: "Georgia";
           text-align: center;
           }
 
@@ -90,7 +90,7 @@
         text-align: left;
         }
 
-.innledningContent .firstIndent, .innledningContent .noIndent
+.innledningContent .firstIndent, .innledningContent .noIndent, .innledningContent .quote
         {
         margin: 1em;
         text-align: justify;
@@ -239,11 +239,6 @@
 .innledningContent .p
         {
         margin: 2em 2em 2em 2em;
-        }
-
-.innledningContent .quote, headQuote
-        {
-        margin: 2em 2em 2em 2em
         }
         
 .innledningContent .headQuote
