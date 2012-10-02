@@ -95,6 +95,12 @@
         margin: 1em;
         text-align: justify;
         }
+        
+.innledningContent .quote
+        {
+        margin: 1em;
+        text-align: center;
+        }
 
 .innledningContent .fwLongLine
         {
