@@ -3,7 +3,7 @@ KSR: 2011.10.04: list-style: alpha, roman and simple
 KSR: 2011.09.26: hi-element
 */
 
-.mainTxr, .mainTxr .toc, .mainTxr .head { line-height: 1.5em; font-family: georgia, garamond, serif; }
+.mainTxr, .mainTxr .toc, .mainTxr .head { font-size: 16px; line-height: 1.5em; font-family: georgia, garamond, serif; }
 
 .mainTxr
         {
