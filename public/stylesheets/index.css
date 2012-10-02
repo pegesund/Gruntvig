@@ -242,29 +242,31 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #timeline_vejledning {float:right; }
 
 
-/* innledning-visning  */
+/* innledning-visning START  */
 
-.innledningContent {
-    
-    color:#333333;
-    font-family:georgia,garamond,serif;
-    font-size:12px;
-    line-height:1.5em;
-   
-
+.innledningContent 
+    {
+    color: #333333;
+    font-family: georgia, garamond, serif;
+    font-size: 16px;
+    line-height: 1.5em;
     margin: -16px 0 0 -19px;
     overflow: auto;
     padding: 23px 26px;
     width: 387px;
-}
-
-    .innledningContent h2 {
-      font-size:1.4em;
+	}
+	
+.innledningContent h2 
+    {
+    font-size: 1.4em;
     }
 
-    .innledningContent p {
-      font-size:1em;
+.innledningContent p
+    {
+    font-size: 1em;
     }
+
+/* innledning-visning END  */
 
 
 /* variant-visning  */
