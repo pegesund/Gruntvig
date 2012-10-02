@@ -71,7 +71,7 @@
         <div class="toc">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
-                    <xsl:text>AA</xsl:text>
+                    <xsl:text>#AA</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
@@ -86,7 +86,7 @@
     
     <xsl:template match="TEI:head">
         <a>
-            <xsl:attribute name="hrel">
+            <xsl:attribute name="id">
                 <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
