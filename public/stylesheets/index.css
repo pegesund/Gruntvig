@@ -277,7 +277,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
     margin: -16px 0 0 -19px;
     overflow: auto;
     padding: 23px 26px;
-    width: 300px;
+    width: 387px;
     }
 	
 .innledningContent h2 
@@ -288,6 +288,12 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 .innledningContent p
     {
     font-size: 1em;
+    }
+
+.innledningContent quote
+    {
+    font-size: 1em;
+    width: inherit;
     }
 
 /* innledning-visning END  */
