@@ -68,7 +68,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
-        <div class="toc" id="toc">
+        <div class="toc">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
                     <xsl:text>#AA</xsl:text>
@@ -86,7 +86,7 @@
     
     <xsl:template match="TEI:head">
         <a id="toc">
-            <xsl:attribute name="id">
+            <xsl:attribute name="toc">
                 <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
