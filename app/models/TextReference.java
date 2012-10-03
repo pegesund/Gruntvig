@@ -101,6 +101,8 @@ public class TextReference extends GenericModel {
             // System.out.println("Processing row: " + Helpers.nodeToString(row));
             if ((row.getAttributes().getNamedItem("class") != null) &&  (row.getAttributes().getNamedItem("class").getNodeValue().contains("about"))) 
                 strB.append(Helpers.nodeToString(row));
+            if ((row.getAttributes().getNamedItem("class") != null) &&  (row.getAttributes().getNamedItem("class").getNodeValue().contains("litList"))) 
+                strB.append(Helpers.nodeToString(row));                        
             if (row.getAttributes().getNamedItem("id") == null) continue;
             i++;
             String id = "scrollTarget" + "_" + row.getAttributes().getNamedItem("id").getNodeValue();
