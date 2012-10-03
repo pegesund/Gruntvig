@@ -68,7 +68,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
-        <div class="toc">
+        <div class="toc" id="#retur">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
                     <xsl:text>#AA</xsl:text>
