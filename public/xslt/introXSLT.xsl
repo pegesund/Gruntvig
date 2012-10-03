@@ -92,7 +92,7 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a hrel="{toc}" class="toc intro_menu">
+            <a hrel="{@id}" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
