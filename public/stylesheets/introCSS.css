@@ -40,13 +40,14 @@
 .innledningContent a.toc
         {
         text-decoration: none;
-        color: #000000;
+        color: red;
         }
 
 .innledningContent a.toc:hover
         {
         color: #006633;
         }
+        
 .innledningContent .author
         {
         text-align: left;
