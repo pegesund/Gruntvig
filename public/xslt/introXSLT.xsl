@@ -85,7 +85,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:head">
-        <a>
+        <a id="toc">
             <xsl:attribute name="id">
                 <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
