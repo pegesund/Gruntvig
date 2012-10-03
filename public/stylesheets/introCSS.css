@@ -39,8 +39,8 @@
 
 .innledningContent a.toc
         {
-        text-decoration: underline;
-        color: red;
+        text-decoration: none;
+        color: #000000;
         }
 
 .innledningContent a.toc:hover
