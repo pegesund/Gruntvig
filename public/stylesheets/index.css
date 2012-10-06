@@ -202,10 +202,34 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 
 
-/* Hovedtekst */
-#tekst_innhold{width:387px; font-size: 16px; height:580px; background: #fff; overflow:auto; padding: 23px 34px; font-family: georgia, garamond, serif; color: #333; line-height: 1.5em; background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;}
-#tekst_innhold h2 {font-size: 1.4em;} /* Undertittel */
-#tekst_innhold h3 {font-size: 1.2em; margin: 20px 0 4px 0; line-height:1em;} /* Underundertittel */
+/* Hovedtekst START */
+
+#tekst_innhold
+        {
+        width: 387px;
+        font-size: 16px;
+        height: 580px;
+        background: #fff;
+        overflow: auto;
+        padding: 23px 34px;
+        font-family: georgia, garamond, serif;
+        color: #333;
+        line-height: 1.5em;
+        background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;
+        }
+        
+#tekst_innhold h2 
+        {
+        font-size: 1.4em;
+        } /* Undertittel */
+        
+#tekst_innhold h3
+        {font-size: 1.2em;
+        margin: 20px 0 4px 0;
+        line-height:1em;
+        } /* Underundertittel */
+
+/* Hovedtekst END */
 
 /* Høyre kolonne */
 #høyre_innhold{ float:left; width:405px; height:642px; background: #f4f4f4; border: 1px solid #e2e2e2; border-top:0px; overflow:auto; padding:15px 25px 12px 25px; font-size: 1.4em; font-family: arial, myriad-pro, sans-serif; color: #444; line-height: 1.5em; }
@@ -242,29 +266,37 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #timeline_vejledning {float:right; }
 
 
-/* innledning-visning  */
+/* innledning-visning START  */
 
-.innledningContent {
-    
-    color:#333333;
-    font-family:georgia,garamond,serif;
-    font-size:16px;
-    line-height:1.5em;
-   
-
+.innledningContent 
+    {
+    color: #333333;
+    font-family: georgia, garamond, serif;
+    font-size: 14px;
+    line-height: 1.5em;
     margin: -16px 0 0 -19px;
     overflow: auto;
     padding: 23px 26px;
     width: 387px;
-}
-
-    .innledningContent h2 {
-      font-size:1.4em;
+    }
+	
+.innledningContent h2 
+    {
+    font-size: 1.4em;
     }
 
-    .innledningContent p {
-      font-size:1em;
+.innledningContent p
+    {
+    font-size: 1em;
     }
+
+.innledningContent quote
+    {
+    font-size: 1em;
+    width: 387px;
+    }
+
+/* innledning-visning END  */
 
 
 /* variant-visning  */
@@ -735,11 +767,16 @@ span.firstDel { text-decoration: line-through;}
 span.secondDel { background: url('../img/stripe_test2_h.png') repeat 0 0;  }
 span.immediate { color: #4DBC4D; }
 
-/* farger/stiler for kommentarvisning */
+/* farger/stiler for kommentar_visning START */
 
-.kommentar {
+.kommentar 
+    {
     font-family: georgia, garamond, serif;
-    line-height: 1.5em;}
+    font-size: 14px;
+    line-height: 1.5em;
+    }
+
+/* kommentar_visning END */
 
 /* Indeks sider (stedsindeks, personindeks etc..) */
 

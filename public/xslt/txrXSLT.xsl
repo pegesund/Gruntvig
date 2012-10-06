@@ -97,30 +97,24 @@
         </div>
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:author">        
-        <div class="author">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    -->
-    
-    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
-        <div class="editor">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:head">
-        <a>
+        <a class="toc txrmenu">
             <xsl:attribute name="id">
                 <xsl:text>A</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <xsl:number level="multiple" count="TEI:div"/>
-            <xsl:text> </xsl:text>
+            <a hrel="{@name}" class="toc txrmenu">
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates/>
+            </a>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
+        <div class="editor">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
