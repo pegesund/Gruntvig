@@ -32,7 +32,7 @@
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
                                 
-                                var addName = $(this).find('.row span.addName:last').text();
+                                var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
                                 
