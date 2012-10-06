@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="#default a fo local dbk xlink xhtml rng tei teix xd"
@@ -16,49 +16,77 @@
   xmlns:xd="http://www.pnp-software.com/XSLTdoc"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<!-- 
-     KSR:
-     2011.08.24: addName, delimiter etc
-     2011.04.06
-     
-     
-     
-     WARNING!!!!!!!!!!!!!!!!!!!
-     
-     WARNING: Denne er ikke i bruk, oppdater person.xsl i stedet
-     
-     
-     
--->
+    <xsl:template match="/">
+            <div class="root">
+                <xsl:apply-templates/>
+            </div>
+    </xsl:template>
 
-    <xsl:template match="tei:TEI">
-        
-       
-                <xsl:apply-templates select="tei:text"/>
-        
-        
+    <xsl:template match="tei:teiHeader">
     </xsl:template>
-    
+
+    <xsl:template match="tei:head">
+            <xsl:apply-templates/>
+    </xsl:template>
+
+
+    <xsl:template match="tei:text">
+            <xsl:apply-templates/>
+    </xsl:template>
+
     <xsl:template match="tei:table">
-        <div class="table">
-            <xsl:apply-templates select="tei:row/tei:cell[@rend='name' or @rend='altName']">
-                <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'Ã¦Ã¸Ã¥Ã†Ã˜Ã… ', '{|}{|}')"/>
+            <xsl:apply-templates>
+              <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
             </xsl:apply-templates>
-        </div>
     </xsl:template>
-    
-    
+
+
+
     <xsl:template match="tei:row">
-        <div class="myth refdiv">
+        <div class="person refdiv">
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
     </xsl:template>
-    
-    
-    <xsl:template match="tei:cell[@rend='name']">
+<!--
+    <xsl:template match="tei:cell[@type='name']">
+        <b>
+                <xsl:apply-templates/>
+        </b>
+    </xsl:template>
+-->
+
+    <xsl:template match="tei:note[@type='firstName']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:note[@type='lastName']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+<!--
+    <xsl:template match="tei:cell[@type='year']">
+        <i>
+            <xsl:apply-templates/>
+        </i>
+    </xsl:template>
+
+
+    <xsl:template match="tei:cell[@type='nation']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:cell[@type='profes']">
+                <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:cell[@type='facts']">
+                <xsl:apply-templates/>
+    </xsl:template>
+-->
+   <xsl:template match="tei:cell[@rend='name']">
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
@@ -90,7 +118,7 @@
             </span>
         </div>        
     </xsl:template>
-    
+
     <xsl:template name="name">        
         <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
@@ -100,13 +128,11 @@
     </xsl:template>
     
     <xsl:template match="tei:note">
-        <!-- firstName eller lastName springer addName="etc" over -->
-        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original']"/>
+        <!-- firstName eller lastName springer addName= etc over -->
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
     
-    <!-- prÃ¦dikat eller choose; when dette er dÃ¥rlig stil -->
-    
-    <xsl:template match="tei:addName">
+     <xsl:template match="tei:addName">
         <span class="addName">
             <xsl:if test="@type='birthName'">
                 <xsl:text> f. </xsl:text>
@@ -182,30 +208,13 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='facts']"/>
-    <!-- built-in rule -->
     
     <xsl:template name="delimiterComma">
         <xsl:if test="following-sibling::tei:cell">
                 <xsl:text>, </xsl:text>
         </xsl:if>
     </xsl:template>
+   
     
-    <!-- intern redaktion etc: -->
-    
-    <!--
-        
-        <xsl:template match="tei:row[@xml:id]">
-        <div class="row">
-        <div class="xmlID">
-        <text>xml:id </text>
-        <xsl:value-of select="@xml:id"/>
-        <text>&#x25AA; SJ-nr: </text>
-        <xsl:value-of select="@n"/>
-        </div>            
-        <xsl:apply-templates/>
-        </div>
-        </xsl:template>
-        
-    -->
 
 </xsl:stylesheet>
