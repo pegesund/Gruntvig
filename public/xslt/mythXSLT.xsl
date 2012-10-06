@@ -64,8 +64,19 @@
             <xsl:otherwise>, </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+
     
-    <xsl:template match="TEI:cell[@rend='normForm' or @rend='popUp' or @rend='encyc']">
+    <xsl:template match="TEI:cell[@rend='normForm']">
+        <div class="{@rend}">
+            <xsl:variable name="theId" select="../@xml:id"/>
+            <a href="myter#{$theId}" target="_blank">
+                <xsl:apply-templates/>
+            </a>    
+        </div>
+    </xsl:template>
+    
+    
+    <xsl:template match="TEI:cell[@rend='popUp' or @rend='encyc']">
         <div class="{@rend}">
             <xsl:apply-templates/>
         </div>
@@ -76,7 +87,7 @@
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <a href="#{$sameAs}">
+                <a href="myter#{$sameAs}" target="_blank">
                     <xsl:text> > </xsl:text>                    
                     <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
                 </a>
@@ -90,15 +101,7 @@
         </span>
     </xsl:template>    
     
-    <xsl:template name="delimiter">
-        <xsl:choose>
-            <xsl:when test="position()=1"> </xsl:when>
-            <xsl:when test="position()=1 and position()=last">.</xsl:when>
-            <xsl:when test="position()=last()">.</xsl:when>
-            <xsl:when test="position()=last()-1"> eller </xsl:when>
-            <xsl:otherwise>, </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
+
     
     <xsl:template name="delimiterKomma">
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
