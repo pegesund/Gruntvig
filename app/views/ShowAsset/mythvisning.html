@@ -113,6 +113,13 @@
                     $.scrollTo(scrolltarget, 500);
                }); 
                
+                // get current location and scrolldown to this if exists
+                var loc = String(document.location);
+                var idx = loc.indexOf('#');
+                var href = (idx > 0) ? loc.substring(idx + 1) : "";
+                if (href) $.scrollTo("#X" + href, 500);
+                     
+               
         }); // onloaded
                
                 // make sameas-links scroll

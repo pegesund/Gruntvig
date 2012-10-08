@@ -335,7 +335,7 @@ public class Asset extends GenericModel {
         } else if (type.equals(Asset.placeType)) {
             html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "place.xsl"));
         } else if (type.equals(Asset.personType)) {
-            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "person.xsl");
+            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "persXSLT.xsl");
         } else if (type.equals(Asset.commentType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "comXSLT.xsl"));
         } else if (type.equals(Asset.introType)) {

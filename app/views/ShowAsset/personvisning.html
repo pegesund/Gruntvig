@@ -30,12 +30,13 @@
                                 $(this).hide();
                                 
                                 year = $(this).find('.row span.year').text() + ', '; 
-                                    if( year == ', ') { year = '';};
+                                if( year == ', ') { year = '';};
                                 
+                                var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
                                 
-                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + nation + ' ' + about + '</td></tr>';
+                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
                                 
                                 nodes.push(node);
                                 
