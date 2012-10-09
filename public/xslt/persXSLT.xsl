@@ -68,7 +68,6 @@
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='encyc']"/>
             <xsl:text>.</xsl:text>
@@ -89,14 +88,23 @@
             </span>
         </div>        
     </xsl:template>
-
-    <xsl:template name="name">        
+    
+    <xsl:template name="name">
         <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
     </xsl:template>
+    
+    <xsl:template match="tei:note[@type='firstName']">
+        <xsl:value-of select="normalize-space(text())"/>
+        <xsl:if test="tei:addName[@type='original']">
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="tei:addName[@type='original']"/>
+        </xsl:if>
+    </xsl:template>
+    
     
     <xsl:template match="tei:note">
         <!-- firstName eller lastName springer addName= etc over -->
