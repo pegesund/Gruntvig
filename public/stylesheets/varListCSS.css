@@ -94,6 +94,12 @@
         vertical-align: super;
         background: none;
         }
+
+#theVarList .td.year
+        {
+        font-weight: bold;
+        background-color: #DDDDDD;
+        }
         
 #theVarList .head, #theVarList .list
         {
