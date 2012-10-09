@@ -50,13 +50,6 @@
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
     </xsl:template>
-<!--
-    <xsl:template match="tei:cell[@type='name']">
-        <b>
-                <xsl:apply-templates/>
-        </b>
-    </xsl:template>
--->
 
     <xsl:template match="tei:note[@type='firstName']">
                 <xsl:apply-templates/>
@@ -65,27 +58,7 @@
     <xsl:template match="tei:note[@type='lastName']">
                 <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
-
-<!--
-    <xsl:template match="tei:cell[@type='year']">
-        <i>
-            <xsl:apply-templates/>
-        </i>
-    </xsl:template>
-
-
-    <xsl:template match="tei:cell[@type='nation']">
-                <xsl:apply-templates/>
-    </xsl:template>
-
-    <xsl:template match="tei:cell[@type='profes']">
-                <xsl:apply-templates/>
-    </xsl:template>
-
-    <xsl:template match="tei:cell[@type='facts']">
-                <xsl:apply-templates/>
-    </xsl:template>
--->
+    
    <xsl:template match="tei:cell[@rend='name']">
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
@@ -118,13 +91,21 @@
             </span>
         </div>        
     </xsl:template>
-
-    <xsl:template name="name">        
+    
+    <xsl:template name="name">
         <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:note[@type='firstName']">
+        <xsl:value-of select="normalize-space(text())"/>
+        <xsl:if test="tei:addName[@type='original']">
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="tei:addName[@type='original']"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:note">
