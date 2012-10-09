@@ -48,11 +48,13 @@
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
     </xsl:template>
-
+    
+    <!--
     <xsl:template match="tei:note[@type='firstName']">
                 <xsl:apply-templates/>
     </xsl:template>
-
+    -->
+    
     <xsl:template match="tei:note[@type='lastName']">
                 <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
@@ -68,7 +70,7 @@
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>
+            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='encyc']"/>
             <xsl:text>.</xsl:text>
@@ -90,12 +92,20 @@
         </div>        
     </xsl:template>
 
-    <xsl:template name="name">        
+    <xsl:template name="name">
         <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:note[@type='firstName']">
+        <xsl:value-of select="normalize-space(text())"/>
+        <xsl:if test="tei:addName[@type='original']">
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="tei:addName[@type='original']"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:note">
