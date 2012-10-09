@@ -50,11 +50,7 @@
     </xsl:template>
 
     <xsl:template match="tei:note[@type='firstName']">
-        <xsl:value-of select="normalize-space(text())"/>
-        <xsl:if test="tei:addName[@type='original']">
-            <xsl:text>, </xsl:text>
-            <xsl:apply-templates select="tei:addName[@type='original']"/>
-        </xsl:if>
+        <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="tei:note[@type='lastName']">
