@@ -40,8 +40,6 @@
             </xsl:apply-templates>
     </xsl:template>
 
-
-
     <xsl:template match="tei:row">
         <div class="person refdiv">
              <xsl:attribute name="id">
@@ -91,21 +89,13 @@
             </span>
         </div>        
     </xsl:template>
-    
-    <xsl:template name="name">
+
+    <xsl:template name="name">        
         <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
-    </xsl:template>
-    
-    <xsl:template match="tei:note[@type='firstName']">
-        <xsl:value-of select="normalize-space(text())"/>
-        <xsl:if test="tei:addName[@type='original']">
-            <xsl:text>, </xsl:text>
-            <xsl:apply-templates select="tei:addName[@type='original']"/>
-        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:note">
