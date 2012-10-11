@@ -3,12 +3,16 @@ KSR: 2011.10.04: list-style: alpha, roman and simple
 KSR: 2011.09.26: hi-element
 */
 
-.mainTxr, .mainTxr .toc, .mainTxr .head { line-height: 1.5em; font-family: georgia, garamond, serif; }
+.mainTxr, .mainTxr .toc, .mainTxr .head
+        {
+        line-height: 1.5em;
+        font-family: georgia, garamond, serif;
+        }
 
 .mainTxr
         {
-            line-height: 1.4em;
-            font-size: 0.8em;
+        line-height: 1.4em;
+        font-size: 0.8em;
         }
         
 .mainTxr a.toc
@@ -73,6 +77,30 @@ KSR: 2011.09.26: hi-element
 
 /* indhold hyperlink start */
 
+mainTxr a.app 
+        {
+        color: green;
+        font-size: 100%;
+        text-decoration: none;
+        }
+
+div.appInvisible
+         {
+         display: none;
+         font-size: 100%;
+         line-height: 100%;
+         margin: 0.5em 0em 1em 1em;
+         text-align: justify;
+         }
+
+.plus
+          {
+          background-color: white;
+          color: green;
+          cursor: pointer;
+          font-family: "New Times Roman";
+          text-align: center;
+          }
 
 .mainTxr .toc
         {
@@ -270,6 +298,11 @@ KSR: 2011.09.26: hi-element
 /* element p start */
 
 .mainTxr .p
+        {
+        margin: 2em 2em 2em 2em;
+        }
+        
+.mainTxr .readMore
         {
         margin: 2em 2em 2em 2em;
         }
