@@ -40,13 +40,13 @@
 .kommentar .readMore
         {
         margin: 2em 2em 2em 2em;
-        text-align: left;
+        text-align: justify;
         }
         
 .kommentar .readMoreP
         {
         margin-right: 2em;
-        text-align: left;
+        text-align: justify;
         }
         
 .kommentar .note
