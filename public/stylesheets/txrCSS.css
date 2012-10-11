@@ -54,12 +54,6 @@ KSR: 2011.09.26: hi-element
         {
         text-align: justify;
         }
-        
-.mainTxr div.noIndent
-        {
-        text-indent: 1em;
-        text-align: justify;
-        }
 
 .mainTxr .editor
         {
@@ -302,11 +296,6 @@ div.appInvisible
         }
         
 .mainTxr .readMore
-        {
-        margin: 2em 2em 2em 2em;
-        }
-        
-.mainTxr .noIndent        
         {
         margin: 1em;
         text-align: justify;
