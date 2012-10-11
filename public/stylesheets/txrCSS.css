@@ -305,6 +305,12 @@ div.appInvisible
         {
         margin: 2em 2em 2em 2em;
         }
+        
+.mainTxr .noIndent        
+        {
+        margin: 1em;
+        text-align: justify;
+        }
 
 .mainTxr .right
         {
