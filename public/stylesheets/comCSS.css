@@ -58,6 +58,7 @@
 .kommentar .p
         {
         margin: 0em;
+        text-align: justify;
         }
 
 .kommentar .pAncestor
@@ -71,8 +72,11 @@
         }
         
 .kommentar .plusComment 
-        {
-        color: #4DBC4D; cursor:arrow;
+        {        
+        color: green;
+        cursor: pointer;
+        font-family: "Georgia";
+        text-align: center;
         }
         
 .kommentar .appInvisible 
