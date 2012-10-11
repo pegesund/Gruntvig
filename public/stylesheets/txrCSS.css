@@ -61,11 +61,11 @@ KSR: 2011.09.26: hi-element
         }
 
 .mainTxr .firstIndent, .noIndent
-        {        
+        {
+        font-size: 14px;
+        line-height: 100%;        
         margin: 1em;
         text-align: justify;
-        line-height: 1.4em;
-        font-size: 0.8em;
         }
 
 .mainTxr .fwLongLine
