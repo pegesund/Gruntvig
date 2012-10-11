@@ -95,10 +95,10 @@ div.appInvisible
 
 .plus
           {
-          background-color: white;
+          background-color: none;
           color: green;
           cursor: pointer;
-          font-family: "New Times Roman";
+          font-family: "Georgia";
           text-align: center;
           }
 
