@@ -78,14 +78,32 @@
         font-family: "Georgia";
         text-align: center;
         }
-        
-.kommentar .appInvisible 
+
+.kommentar a.app 
         {
-        display:none;
-        margin: 0em 1em 0em 1em;
+        color: green;
+        font-size: 100%;
+        text-decoration: none;
         }
+
+div.appInvisible
+         {
+         display: none;
+         font-size: 100%;
+         line-height: 100%;
+         margin: 0.5em 0em 1em 1em;
+         text-align: justify;
+         }
+
+.kommentar .plus
+          {
+          color: green;
+          cursor: pointer;
+          font-family: "Georgia";
+          text-align: center;
+          }
         
-   .kommentar .readMore i 
+.kommentar .readMore i 
         {
         display:none;
-        }             
+        }
