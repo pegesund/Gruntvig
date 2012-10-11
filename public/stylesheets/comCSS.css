@@ -44,6 +44,7 @@
         
 .kommentar .readMoreP
         {
+        line-height: 100%;
         margin-right: 2em;
         text-align: justify;
         }
