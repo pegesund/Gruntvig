@@ -54,6 +54,12 @@ KSR: 2011.09.26: hi-element
         {
         text-align: justify;
         }
+        
+.mainTxr div.noIndent
+        {
+        text-indent: 1em;
+        text-align: justify;
+        }
 
 .mainTxr .editor
         {
@@ -279,12 +285,6 @@ div.appInvisible
         }
         
 /* list END */
-
-.mainTxr .noIndent
-        {
-        text-indent: 0em;
-        text-align: justify;
-        }
 
 .mainTxr .pageNumber
         {
