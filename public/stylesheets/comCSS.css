@@ -1,6 +1,5 @@
 /* KSR: 2011.03.24 */
 
-
 .kommentar .bold
         {
         font-weight: bold;
@@ -38,8 +37,8 @@
         }
 
 .kommentar .readMore
-        {
-        margin: 2em 2em 2em 2em;
+        {        
+        margin: 1em;
         text-align: justify;
         }
         
