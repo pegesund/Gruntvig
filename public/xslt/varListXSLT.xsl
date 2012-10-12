@@ -118,8 +118,13 @@
     
     <xsl:template match="TEI:cell">
         <xsl:choose>
-            <xsl:when test="@rows and @rend='year'">
+            <xsl:when test="@rend='year'">
                 <td rowspan="{@rows}" class="year">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@rend='shortForm'">
+                <td rowspan="{@rows}" class="shortForm">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
