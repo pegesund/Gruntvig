@@ -150,8 +150,8 @@ public class Chapter extends GenericModel {
                 // System.out.println("xhtml: " + asset.html);
                 for (int i = 0; i < nodes.getLength(); i++) {
                     Node node = nodes.item(i);
-                    System.out.println("Chapter node: " + Helpers.nodeToString(node));
-                    System.out.println("---------------------------------------------------");
+                    // System.out.println("Chapter node: " + Helpers.nodeToString(node));
+                    // System.out.println("---------------------------------------------------");
                     String name = "- Afsnit - " + (i + 0);
                     if (i == 0) name = "Kolofon";
                     if (node.getAttributes().getNamedItem("name") != null) {
