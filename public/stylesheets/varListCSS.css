@@ -88,11 +88,16 @@
 #theVarList .table, #theVarList td
         {
         border: 1px solid #ccc;
-        empty-cells: hide;
+        empty-cells: show;
         font-size: 12px;
         margin: 0em;
         vertical-align: super;
-        background: none;
+        }
+
+#theVarList td.year
+        {
+        font-weight: bold;
+        background-color: #DDDDDD;
         }
         
 #theVarList .head, #theVarList .list

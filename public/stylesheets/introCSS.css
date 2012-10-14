@@ -25,7 +25,6 @@
 
 .innledningContent .plus
           {
-          background-color: white;
           color: green;
           cursor: pointer;
           font-family: "Georgia";
@@ -47,6 +46,7 @@
         {
         color: #006633;
         }
+        
 .innledningContent .author
         {
         text-align: left;

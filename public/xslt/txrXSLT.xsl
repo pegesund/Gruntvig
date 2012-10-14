@@ -81,7 +81,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
-        <div class="toc">
+        <div class="toc" id="retur">
             <a class="toc txrmenu">
                 <xsl:attribute name="hrel">
                     <xsl:text>A</xsl:text>
@@ -105,7 +105,7 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a hrel="{@name}" class="toc txrmenu">
+            <a hrel="#retur" class="toc txrmenu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
@@ -361,9 +361,22 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:p[@rend]">        
+    <xsl:template match="TEI:note[@type='readMore']"/>    
+    
+    <xsl:template match="TEI:p[@rend]">
         <div class="{@rend}">
             <xsl:apply-templates/>
+            <xsl:if test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
+                <span class="app">
+                    <xsl:text> </xsl:text>
+                    <span class="plus" onclick="showhide(this,'more{generate-id()}')">Læs mere +</span>
+                    <div id="more{generate-id()}" class="appInvisible">
+                        <div class="readMore">
+                            <xsl:apply-templates select="following-sibling::TEI:note[local-name()='note' and @type='readMore' and position()=1]/node()"/>
+                        </div>
+                    </div>
+                </span>
+            </xsl:if>
         </div>
     </xsl:template>
     

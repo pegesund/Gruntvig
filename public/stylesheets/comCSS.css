@@ -1,6 +1,5 @@
 /* KSR: 2011.03.24 */
 
-
 .kommentar .bold
         {
         font-weight: bold;
@@ -38,15 +37,16 @@
         }
 
 .kommentar .readMore
-        {
-        margin: 2em 2em 2em 2em;
-        text-align: left;
+        {        
+        margin: 1em;
+        text-align: justify;
         }
         
 .kommentar .readMoreP
         {
+        line-height: 100%;
         margin-right: 2em;
-        text-align: left;
+        text-align: justify;
         }
         
 .kommentar .note
@@ -55,9 +55,11 @@
         margin: 2em 0em 2em 0em;
         }
 
-.kommentar .p
+.kommentar .p, .p
         {
+        line-height: 120%;
         margin: 0em;
+        text-align: justify;
         }
 
 .kommentar .pAncestor
@@ -71,17 +73,38 @@
         }
         
 .kommentar .plusComment 
-        {
-        color: #4DBC4D; cursor:arrow;
+        {        
+        color: green;
+        cursor: pointer;
+        font-family: "Georgia";
+        text-align: center;
         }
+
+.kommentar a.app 
+        {
+        color: green;
+        font-size: 100%;
+        text-decoration: none;
+        }
+
+div.appInvisible
+         {
+         display: none;
+         font-size: 100%;
+         line-height: 100%;
+         margin: 0.5em 0em 1em 1em;
+         text-align: justify;
+         }
+
+.kommentar .plus
+          {
+          color: green;
+          cursor: pointer;
+          font-family: "Georgia";
+          text-align: center;
+          }
         
-.kommentar .appInvisible 
+.kommentar .readMore i 
         {
         display:none;
-        margin: 0em 1em 0em 1em;
         }
-        
-   .kommentar .readMore i 
-        {
-        display:none;
-        }             
