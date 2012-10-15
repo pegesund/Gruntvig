@@ -284,6 +284,17 @@
     
     <!-- titelblad START -->
     
+    <xsl:template match="TEI:front[@rend]">
+        <div class="frontChapter">
+            <xsl:if test="@rend">   
+                <xsl:attribute name="name">
+                    <xsl:value-of select="@rend"/>
+               </xsl:attribute> 
+            </xsl:if>
+            <xsl:apply-templates/>
+        </div>               
+    </xsl:template>    
+    
     <xsl:template match="TEI:titlePage[@type]">
         <div class="titlePage">
             <xsl:choose>
