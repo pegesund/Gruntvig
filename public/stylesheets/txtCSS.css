@@ -91,9 +91,16 @@
         margin: 2em 2em 2em 2em;
         }
 
-#tekst_innhold .firstIndent, .noIndent
+#tekst_innhold .firstIndent
         {
         text-indent: 2em;
+        text-align: justify;
+        }
+
+#tekst_innhold .noIndent
+        {
+        color: red;
+        text-indent: 0em;
         text-align: justify;
         }
 
