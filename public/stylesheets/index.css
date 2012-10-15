@@ -220,6 +220,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 #tekst_innhold noIndent
         {
+        margin: 0em;
         text-indent: 0em;
         }
         
