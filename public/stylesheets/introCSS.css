@@ -99,7 +99,8 @@
         
 .innledningContent .quoteCenter
         {
-        margin: 1em;
+        font-size: 14px;
+        margin: 1em 0em 1em 0em;
         text-align: center;
         }
 
