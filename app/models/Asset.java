@@ -284,7 +284,7 @@ public class Asset extends GenericModel {
             type = Asset.bibleType;
         } else if (epub.getName().equals("regList.xml")) {
             type = Asset.registranten;
-        } else if (epub.getName().equals("pers.xml")) {
+        } else if (epub.getName().equals("persXSLT.xml")) {
             type = Asset.personType;
         } else if (epub.getName().equals("myth.xml")) {
             type = Asset.mythType;
