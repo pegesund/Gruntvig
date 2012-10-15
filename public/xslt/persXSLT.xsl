@@ -61,7 +61,6 @@
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
-                <xsl:text>HAT</xsl:text>
             </span>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='year']"/>
             <xsl:if test="following-sibling::tei:cell[@rend!='year']">
