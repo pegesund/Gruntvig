@@ -500,9 +500,6 @@
         </span>
     </xsl:template>
     
-        
-    
-    
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
         <xsl:choose>
             <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
@@ -635,6 +632,36 @@
             <xsl:apply-templates/>
         </div>
         <xsl:call-template name="footnote"/>
+    </xsl:template>
+    
+    <xsl:template match="TEI:persName">
+        <span class="persName">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:placeName">
+        <span class="placeName">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='bible']">
+        <span class="rs_bible">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='myth']">
+        <span class="rs_myth">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='title']">
+        <span class="rs_title">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
 </xsl:stylesheet>
