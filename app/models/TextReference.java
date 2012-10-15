@@ -127,7 +127,7 @@ public class TextReference extends GenericModel {
      */
     // check if dtd sequence is set, this is an assumption here
     public static void uploadReferenceFile(Asset asset) {
-        System.out.println("Uploading reference-file");
+        // System.out.println("Uploading reference-file: " + asset.html);
         TextReference.delete("type = ?", asset.type);
         try {
             Document doc = Helpers.stringToNode(asset.html);

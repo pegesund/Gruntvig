@@ -284,7 +284,7 @@ public class Asset extends GenericModel {
             type = Asset.bibleType;
         } else if (epub.getName().equals("regList.xml")) {
             type = Asset.registranten;
-        } else if (epub.getName().equals("persXSLT.xml")) {
+        } else if (epub.getName().equals("pers.xml")) {
             type = Asset.personType;
         } else if (epub.getName().equals("myth.xml")) {
             type = Asset.mythType;
@@ -524,7 +524,7 @@ public class Asset extends GenericModel {
             trans.setSource(source);
             trans.setDestination(out);
             trans.transform();
-            System.out.println("Output generated: " + buf.toString());
+            // System.out.println("Output generated: " + buf.toString());
             return buf.toString("utf-8");
         } catch (Exception e) {
             e.printStackTrace();
