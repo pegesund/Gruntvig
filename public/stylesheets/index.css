@@ -204,7 +204,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 /* Hovedtekst START */
 
-#tekst_innhold
+#tekst_innhold, .firstIndent, .noIndent
         {
         width: 387px;
         font-size: 16px;
