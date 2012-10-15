@@ -94,6 +94,7 @@
 #tekst_innhold .firstIndent
         {
         margin: 0em;
+        line-height: 100%;
         text-indent: 2em;
         text-align: justify;
         }
@@ -101,6 +102,7 @@
 #tekst_innhold .noIndent
         {
         margin: 0em;
+        line-height: 100%;
         text-indent: 0em;
         text-align: justify;
         }
