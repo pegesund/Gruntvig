@@ -217,12 +217,6 @@ a:hover, a:active {color: #299629 /* #367092;*/}
         line-height: 1.5em;
         background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;
         }
-
-#tekst_innhold noIndent
-        {
-        margin: 0em;
-        text-indent: 0em;
-        }
         
 #tekst_innhold h2 
         {
