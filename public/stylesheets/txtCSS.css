@@ -93,6 +93,7 @@
 
 #tekst_innhold .firstIndent
         {
+        margin: 0em;
         text-indent: 2em;
         text-align: justify;
         }
@@ -100,6 +101,7 @@
 #tekst_innhold .noIndent
         {
         color: red;
+        margin: 0em;
         text-indent: 0em;
         text-align: justify;
         }
@@ -289,12 +291,6 @@
         font-size: 80%;
         line-height: 110%;
         margin: 1em 0em 1em 0em;
-        }
-
-#tekst_innhold .noIndent
-        {
-        text-indent: 0em;
-        text-align: justify;
         }
 
 #tekst_innhold .pageNumber
