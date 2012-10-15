@@ -91,7 +91,7 @@
         margin: 2em 2em 2em 2em;
         }
 
-#tekst_innhold .firstIndent
+#tekst_innhold .firstIndent, .noIndent
         {
         text-indent: 2em;
         text-align: justify;
