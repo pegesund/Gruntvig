@@ -204,7 +204,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 
 /* Hovedtekst START */
 
-#tekst_innhold, .firstIndent, .noIndent
+#tekst_innhold
         {
         width: 387px;
         font-size: 16px;
@@ -216,6 +216,11 @@ a:hover, a:active {color: #299629 /* #367092;*/}
         color: #333;
         line-height: 1.5em;
         background: transparent url(../img/tekst_bg.jpg) repeat 0px 0px;
+        }
+
+#tekst_innhold noIndent
+        {
+        text-indent: 0em;
         }
         
 #tekst_innhold h2 
