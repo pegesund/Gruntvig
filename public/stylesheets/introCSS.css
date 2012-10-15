@@ -92,7 +92,8 @@
 
 .innledningContent .firstIndent, .innledningContent .noIndent, .innledningContent .quote
         {
-        margin: 1em;
+        font-size: 14px;
+        margin: 0em;
         text-align: justify;
         }
         
