@@ -175,6 +175,7 @@ div.appInvisible
 .mainTxr .litList
         {
         list-style: circle;
+        margin: 1em;
         }
 
 .mainTxr .item
