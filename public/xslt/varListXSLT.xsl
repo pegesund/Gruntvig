@@ -119,12 +119,12 @@
     <xsl:template match="TEI:cell">
         <xsl:choose>
             <xsl:when test="@rend='year'">
-                <td rowspan="{@rows}" class="year">
+                <td colspan="{@cols}" class="year">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@rend='shortForm'">
-                <td rowspan="{@rows}" class="shortForm">
+                <td colspan="{@cols}" class="shortForm">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
