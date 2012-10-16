@@ -654,13 +654,13 @@
     
     
     <xsl:template match="TEI:persName">
-        <a class="persName">
+        <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <a class="placeName">
+        <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
