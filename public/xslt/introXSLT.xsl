@@ -224,7 +224,7 @@
             <div class="litList">
                 <ul>
                     <xsl:for-each select="TEI:item">
-                        <li class="ordered">
+                        <li class="litList">
                             <xsl:apply-templates/>
                             <xsl:text>.</xsl:text>
                         </li>
