@@ -182,7 +182,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:item[not(@n)]">
-        <li class="liOrdered">
+        <li class="{@type}">
             <xsl:apply-templates/>
             <xsl:text>.</xsl:text>
         </li>
