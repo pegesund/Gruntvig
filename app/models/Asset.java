@@ -1,6 +1,8 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ * 
+ * 
  */
 package models;
 
@@ -522,7 +524,7 @@ public class Asset extends GenericModel {
             trans.setSource(source);
             trans.setDestination(out);
             trans.transform();
-            System.out.println("Output generated: " + buf.toString());
+            // System.out.println("Output generated: " + buf.toString());
             return buf.toString("utf-8");
         } catch (Exception e) {
             e.printStackTrace();
