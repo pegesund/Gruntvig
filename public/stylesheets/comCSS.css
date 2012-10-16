@@ -17,7 +17,7 @@
         font-size: 65%;
         margin: 0em 0em 0em 0em;
         text-align: center;
-        line-height:1.6em;
+        line-height: 1.6em;
         }
 
 .kommentar .italic
@@ -44,7 +44,7 @@
         
 .kommentar .readMoreP
         {
-        line-height: 100%;
+        line-height: 1.5em;
         margin-right: 2em;
         text-align: justify;
         }
@@ -57,7 +57,7 @@
 
 .kommentar .p, .p
         {
-        line-height: 120%;
+        line-height: 1.5em;
         margin: 0em;
         text-align: justify;
         }
