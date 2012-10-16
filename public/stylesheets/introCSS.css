@@ -176,7 +176,7 @@
         text-align: justify;
         }
 
-.innledningContent .litList
+.innledningContent .litList, .innledningContent .webList
         {
         list-style: circle;
         margin: 1em;   
