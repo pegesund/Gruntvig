@@ -99,6 +99,11 @@
         font-weight: bold;
         background-color: #DDDDDD;
         }
+
+#theVarList td.shortForm
+        {
+        background-color: #DDDDDD;
+        }
         
 #theVarList .head, #theVarList .list
         {
