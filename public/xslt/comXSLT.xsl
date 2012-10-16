@@ -175,6 +175,12 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:div[@type='webList']">
+        <div class="webList">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:list">
         <ul class="ul">
             <xsl:apply-templates/>
