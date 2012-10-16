@@ -182,7 +182,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:item[not(@n)]">
-        <li class="{@type}">
+        <li class="webList">
             <xsl:apply-templates/>
             <xsl:text>.</xsl:text>
         </li>
