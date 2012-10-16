@@ -31,7 +31,7 @@
         text-align: justify;
         }
 
-.kommentar li.litList
+.kommentar .litList
         {
         list-style: circle;
         margin: 2em 2em 2em 2em;   
