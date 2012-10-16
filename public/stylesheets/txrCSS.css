@@ -60,7 +60,7 @@ KSR: 2011.09.26: hi-element
         text-align: left;
         }
 
-.mainTxr, .firstIndent, .noIndent
+.mainTxr .firstIndent, .mainTxr .noIndent
         {
         color: red;
         font-size: 14px;
