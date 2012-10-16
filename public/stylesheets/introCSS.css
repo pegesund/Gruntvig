@@ -179,7 +179,7 @@
 .innledningContent .litList
         {
         list-style: circle;
-        margin: 1em;   
+        margin: 1em 0em 1em 0em;   
         }
 
 .innledningContent .lowerAlpha
