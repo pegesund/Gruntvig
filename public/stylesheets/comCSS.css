@@ -31,7 +31,7 @@
         text-align: justify;
         }
 
-.kommentar .litList
+.kommentar .litList, kommentar webList
         {
         list-style: circle;
         margin: 2em 2em 2em 2em;   
