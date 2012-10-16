@@ -652,7 +652,7 @@
         <xsl:call-template name="footnote"/>
     </xsl:template>
     
-    <!--
+    
     <xsl:template match="TEI:persName">
         <span class="persName">
             <xsl:apply-templates/>
@@ -682,6 +682,5 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    -->
 
 </xsl:stylesheet>
