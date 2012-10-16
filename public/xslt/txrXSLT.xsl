@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stylesheet [
+<!ENTITY month "          januar    februar   marts     april     maj       juni      juli      august    september oktober   november  december">
+]>
 <xsl:stylesheet 
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -182,17 +185,15 @@
                 <xsl:for-each select="TEI:item">
                     <li class="decimal">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='lpperAlpha'">
+        <xsl:if test="@type='upperAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="upperAlpha">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -202,7 +203,6 @@
                 <xsl:for-each select="TEI:item">
                     <li class="lowerAlpha">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -212,7 +212,6 @@
                 <xsl:for-each select="TEI:item">
                     <li class="upperRoman">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -222,7 +221,6 @@
                 <xsl:for-each select="TEI:item">
                     <li class="lowerRoman">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -232,17 +230,6 @@
                 <xsl:for-each select="TEI:item">
                     <li class="simple">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='subSimple'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="subSimple">
-                        <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -252,21 +239,52 @@
                 <xsl:for-each select="TEI:item">
                     <li class="ordered">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
-                    </li>                
+                    </li>
                 </xsl:for-each>
             </ul>
         </xsl:if>
-       <xsl:if test="@type='addendon' or @type='litList' or @type='webList'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="simple">
-                        <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
-                    </li>                
-                </xsl:for-each>
-            </ul>
+        <xsl:if test="@type='addendon' or @type='webList'">
+            <div class="litList">
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
+        <xsl:if test="@type='litList'">
+            <div class="litList">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="ordered">
+                            <xsl:apply-templates/>
+                            <xsl:text>.</xsl:text>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </div>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:item[not(@n)]">
+        <li class="liOrdered">
+            <xsl:apply-templates/>
+        </li>
+    </xsl:template>
+    
+    <xsl:template match="TEI:item[@n]">
+        <ul>
+            <li class="ordered">
+                <xsl:text>&lt;</xsl:text>
+                <a href="{.}">
+                    <xsl:apply-templates/>
+                </a>
+                <xsl:text>&gt;</xsl:text>
+                <xsl:text> (</xsl:text>
+                <xsl:number value="substring(@n, 9,2)" format="1"/>
+                <xsl:text>. </xsl:text>
+                <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="substring(@n, 1,4)"/>
+                <xsl:text>)</xsl:text>
+            </li>
+        </ul>
     </xsl:template>
     
     <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis']">
