@@ -133,6 +133,11 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="@cols and @rend='source'">
+                <td colspan="{@cols}" class="source">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td>
                     <xsl:apply-templates/>
