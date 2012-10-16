@@ -672,7 +672,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
-        <a class="myth rs_myth">
+        <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
