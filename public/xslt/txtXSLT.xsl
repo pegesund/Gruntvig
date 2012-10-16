@@ -654,33 +654,33 @@
     
     
     <xsl:template match="TEI:persName">
-        <span class="persName">
+        <a class="persName">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <span class="placeName">
+        <a class="placeName">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
-        <span class="rs_bible">
+        <a class="rs_bible">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
-        <span class="rs_myth">
+        <a class="rs_myth">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='title']">
-        <span class="rs_title">
+        <a class="rs_title">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
 
 </xsl:stylesheet>
