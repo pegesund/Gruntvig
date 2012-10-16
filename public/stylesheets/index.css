@@ -229,6 +229,28 @@ a:hover, a:active {color: #299629 /* #367092;*/}
         line-height:1em;
         } /* Underundertittel */
 
+#tekst_innhold .firstIndent
+        {
+        margin: 0em;
+        line-height: 1.5em;
+        text-indent: 2em;
+        text-align: justify;
+        }
+
+#tekst_innhold .noIndent
+        {
+        margin: 0em;
+        line-height: 1.5em;
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+#tekst_innhold .firstIndentRight
+        {
+        margin-right: 2em;
+        text-align: right;
+        }
+
 /* Hovedtekst END */
 
 /* Høyre kolonne */
