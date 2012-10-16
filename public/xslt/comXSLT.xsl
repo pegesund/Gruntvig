@@ -169,7 +169,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='litList']">
+    <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
         </div>
