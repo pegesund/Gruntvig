@@ -672,7 +672,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
-        <a class="rs_myth">
+        <a class="myth rs_myth">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
