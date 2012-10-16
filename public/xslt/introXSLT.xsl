@@ -242,7 +242,7 @@
     
     <xsl:template match="TEI:item[@n]">
         <ul>
-            <li class="ordered">
+            <li class="webList">
                 <xsl:text>&lt;</xsl:text>
                 <a href="{.}">
                     <xsl:apply-templates/>
