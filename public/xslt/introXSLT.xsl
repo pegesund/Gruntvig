@@ -215,9 +215,16 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='addendon' or @type='webList'">
-            <div class="litList">
-                <xsl:apply-templates/>
+        <xsl:if test="@type='webList'">
+            <div class="webList">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="webList">
+                            <xsl:apply-templates/>
+                            <xsl:text>.</xsl:text>
+                        </li>
+                    </xsl:for-each>
+                </ul>
             </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
