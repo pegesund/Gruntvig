@@ -169,7 +169,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:div[@type='litList']">
+    <xsl:template match="TEI:list[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
         </div>
@@ -179,6 +179,13 @@
         <ul class="ul">
             <xsl:apply-templates/>
         </ul>        
+    </xsl:template>
+    
+    <xsl:template match="TEI:item[not(@n)]">
+        <li class="liOrdered">
+            <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
+        </li>
     </xsl:template>
     
     <xsl:template match="TEI:item[@n]">
