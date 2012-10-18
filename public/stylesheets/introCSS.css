@@ -90,7 +90,7 @@
         text-align: left;
         }
 
-.innledningContent .firstIndent, .innledningContent .noIndent, .innledningContent .quote
+.innledningContent .firstIndent, .innledningContent .noIndent, .innledningContent .quote, .innledningContent .quoteFirst
         {
         font-size: 14px;
         margin: 1em 0em 1em 0em;
