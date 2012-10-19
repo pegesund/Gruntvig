@@ -37,9 +37,7 @@
             padding-top:20px;
         }
         
-    /* Registranten */
-        
-#registranten .preFace, #registranten i, #registranten hr, #registranten p {display:none;}     
+/* regList START */  
                 
 #registranten td
         {
@@ -62,7 +60,10 @@
             margin-left:0; margin: 20px 0 10px 0;font-size: 1.2em; font-family: Times new roman;
         }
         
-    /* Variantoversigt */
+
+/* regList END */
+        
+/* Variantoversigt */
         
 #theVarList .philologist, #theVarList .editor, #theVarList .test
         {
