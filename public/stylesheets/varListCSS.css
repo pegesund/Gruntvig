@@ -3,7 +3,7 @@
    2011.10.11: testversion
 */
 
-/* Variantoversigt og Registranten */
+/* varList og regList fælles START */
 
 #theVarList .preFace, #registranten .preFace 
         {
@@ -37,6 +37,8 @@
             padding-top:20px;
         }
         
+/* varList og regList fælles END */        
+        
 /* regList START */
         
 #registranten .preFace, #registranten i, #registranten hr, #registranten p
@@ -60,6 +62,12 @@
         font-family: "Georgia";
         font-size: 16px;
         text-decoration: none;
+        }        
+        
+#registranten table
+        {
+        margin: 2em 0;
+        border:0;
         }
         
 #registranten div.head 
@@ -73,7 +81,7 @@
 
 /* regList END */
         
-/* Variantoversigt */
+/* varList START */
         
 #theVarList .philologist, #theVarList .editor, #theVarList .test
         {
@@ -121,3 +129,5 @@
         font-weight: bold;
         margin: 1em 0em 1em 0em;
         }
+        
+/* varList END */
