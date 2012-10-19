@@ -39,7 +39,7 @@
         
 /* regList START */
         
-#registranten .preFace, #registranten i, #registranten hr, #registranten p, #registranten test
+#registranten .preFace, #registranten i, #registranten hr, #registranten p
         {
         display:none;
         }     
