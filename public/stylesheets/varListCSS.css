@@ -37,7 +37,12 @@
             padding-top:20px;
         }
         
-/* regList START */  
+/* regList START */
+        
+#registranten .preFace, #registranten i, #registranten hr, #registranten p
+        {
+        display:none;
+        }     
                 
 #registranten td
         {
