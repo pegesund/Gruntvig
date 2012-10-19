@@ -49,7 +49,8 @@
         border: 1px solid #ccc;
         empty-cells: show;
         margin: 2em;
-        padding: 10px; font-size: 1.1em;
+        padding: 10px;
+        font-size: 16px;
         vertical-align: super;
         background: none;
         }
@@ -62,7 +63,10 @@
         
 #registranten div.head 
         {
-            margin-left:0; margin: 20px 0 10px 0;font-size: 1.2em; font-family: Times new roman;
+        margin-left:0;
+        margin: 20px 0 10px 0;
+        font-size: 1.2em; 
+        font-family: Times new roman;
         }
         
 
