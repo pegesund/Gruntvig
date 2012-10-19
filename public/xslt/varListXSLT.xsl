@@ -97,13 +97,13 @@
     </xsl:template>
     
     <xsl:template match="TEI:div[@type='varList']">
-        <table class="table">
+        <table class="tableVar">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
     
     <xsl:template match="TEI:div[@type='regList']">
-        <table class="table">
+        <table class="tableReg">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
