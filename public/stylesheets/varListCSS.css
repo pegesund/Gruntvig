@@ -52,12 +52,16 @@
         font-family: "Georgia";
         font-size: 16px;
         text-decoration: none;
-        }        
+        }
         
-#registranten tableReg
+#registranten .tableReg
         {
-        margin: 2em 0;
-        border:0;
+        border: 1px solid #ccc;
+        empty-cells: hide;
+        font-size: 12px;
+        margin: 0em;
+        vertical-align: super;
+        background: none;
         }
         
 #registranten div.head 
