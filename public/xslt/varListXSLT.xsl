@@ -9,6 +9,8 @@
 <!-- KSR: 2011.10.21 -->
 
     <xsl:template match="TEI:TEI">
+                
+                <xsl:if test="TEI:body[@decls='varList']">
         
             <div id="theVarList">
                 
@@ -22,8 +24,6 @@
                          <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/><xsl:text>&#x201D;</xsl:text>
                      </xsl:if>
                 </div>
-                
-                <xsl:if test="TEI:body[@decls='varList']">
                     
                     <div class="test">
                         <xsl:text>Variantoversigt ved</xsl:text>
