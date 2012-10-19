@@ -158,7 +158,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:head">
-        <div class="{@type}">
+        <div class="head">
             <xsl:apply-templates/>
         </div>     
     </xsl:template>
