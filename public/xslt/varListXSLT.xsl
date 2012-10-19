@@ -24,56 +24,54 @@
                 </div>
                 
                 <xsl:if test="TEI:body[@decls='varList']">
-                
-                <div class="test">
-                    <xsl:text>Variantoversigt ved</xsl:text>
-                </div>
-                
-                <div class="philologist">
-                    <i>
-                        <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
-                            <xsl:value-of select="."/>
-                            <xsl:if test="following-sibling::TEI:author">
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:author[position()!=last()]">
-                                       <xsl:call-template name="delimiterComma"/>
-                                   </xsl:when>
-                                   <xsl:otherwise>
-                                       <xsl:text> og </xsl:text>
-                                   </xsl:otherwise>
-                               </xsl:choose>
-                           </xsl:if>
-                       </xsl:for-each>
-                    </i>
-                </div>
-                
-                <div class="test">
-                    <xsl:text>Redigeret af</xsl:text>
-                </div>
-                
-                <div class="editor">
-                    <i>
-                        <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                            <xsl:value-of select="."/>
-                            <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                        <xsl:call-template name="delimiterComma"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text> og </xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                           </xsl:if>
-                       </xsl:for-each>
-                    </i>
-                </div>
-                
-                
+                    
+                    <div class="test">
+                        <xsl:text>Variantoversigt ved</xsl:text>
+                    </div>
+                    
+                    <div class="philologist">
+                        <i>
+                            <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="following-sibling::TEI:author">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:author[position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </i>
+                    </div>
+                    
+                    <div class="test">
+                        <xsl:text>Redigeret af</xsl:text>
+                    </div>
+                    
+                    <div class="editor">
+                        <i>
+                            <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='editor']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </i>
+                    </div>
                     
                 </xsl:if>
                 
-                <hr/>
+                
                 <xsl:apply-templates select="TEI:text"/>
                 
         </div>
