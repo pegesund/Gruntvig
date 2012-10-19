@@ -107,13 +107,13 @@
             <xsl:apply-templates/>
         </table>
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:table">
         <table>
             <xsl:apply-templates/>
         </table>
     </xsl:template>
-    
+    -->
     <xsl:template match="TEI:row">
         <tr>
             <xsl:apply-templates/>
