@@ -9,10 +9,10 @@
 <!-- KSR: 2011.10.21 -->
 
     <xsl:template match="TEI:TEI">
-                
-                <xsl:if test="TEI:body[@decls='varList']">
         
             <div id="theVarList">
+                
+                <xsl:if test="TEI:body[@decls='varList']">
                 
                 <div class="title">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">                    
