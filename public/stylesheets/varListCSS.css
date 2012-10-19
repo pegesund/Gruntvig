@@ -20,16 +20,6 @@
         {
         margin: 1em 0em 1em 0em;
         }
-        
-#registranten .tableReg, #registranten td
-        {
-        border: 1px solid #ccc;
-        empty-cells: hide;
-        font-size: 12px;
-        margin: 0em;
-        vertical-align: super;
-        background: none;
-        }
 
 #theVarList 
         {
