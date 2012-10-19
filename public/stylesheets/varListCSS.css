@@ -21,7 +21,7 @@
         margin: 1em 0em 1em 0em;
         }
         
-#registranten .table, #registranten td
+#registranten .tableReg, #registranten td
         {
         border: 1px solid #ccc;
         empty-cells: hide;
@@ -64,7 +64,7 @@
         text-decoration: none;
         }        
         
-#registranten table
+#registranten tableReg
         {
         margin: 2em 0;
         border:0;
@@ -104,7 +104,7 @@
         text-align: center;
         }
         
-#theVarList .table, #theVarList td
+#theVarList .tableVar, #theVarList td
         {
         border: 1px solid #ccc;
         empty-cells: show;
