@@ -23,6 +23,8 @@
                      </xsl:if>
                 </div>
                 
+                <xsl:if test="TEI:body[@decls='varList']">
+                
                 <div class="test">
                     <xsl:text>Variantoversigt ved</xsl:text>
                 </div>
@@ -66,6 +68,10 @@
                        </xsl:for-each>
                     </i>
                 </div>
+                
+                
+                    
+                </xsl:if>
                 
                 <hr/>
                 <xsl:apply-templates select="TEI:text"/>
