@@ -375,9 +375,18 @@
     </xsl:template>
     
     <xsl:template match="TEI:docDate">
-        <div class="docDate">
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="parent::TEI:pubPlace">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="docDate">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:publisher">        
