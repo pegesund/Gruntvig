@@ -103,13 +103,11 @@
         {
         font-weight: bold;
         background-color: #DDDDDD;
-        width: 10%;
         }
 
 #theVarList td.shortForm
         {
         background-color: #DDDDDD;
-        width: 90%;
         }
         
 #theVarList .head, #theVarList .list
