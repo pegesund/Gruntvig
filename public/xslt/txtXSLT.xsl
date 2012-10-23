@@ -580,8 +580,7 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]">        
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
         <a hrel="{@facs}" class="app faksimile_viewer">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
@@ -605,7 +604,7 @@
         
     <xsl:template match="TEI:seg/TEI:pb">
             <xsl:text>|</xsl:text>
-                <xsl:value-of select="@n"/>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
     </xsl:template>
     
     
