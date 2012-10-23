@@ -109,6 +109,7 @@
 #theVarList td.shortForm
         {
         background-color: #DDDDDD;
+        width: 90%;
         }
         
 #theVarList .head, #theVarList .list
