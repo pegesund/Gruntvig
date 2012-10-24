@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="timeline.xsl"?>
-<?oxygen RNGSchema="timelinePV.rnc" type="compact"?>
+<?xml-stylesheet type="text/xsl" href="timelineKorr.xsl"?>
+<?xml-model href="timelineRNC.rnc" type="application/relax-ng-compact-syntax"?>
 
 <data>
 	<!--  
@@ -20,7 +20,14 @@
 			<change who="HY" when="2011-02-23">Fjernet mæslinger og valideret</change>
 			<change who="HY" when="2011-02-24">Sidste korrektur, afgang til fjeldlandet</change>
 			<change who="KSR" when="2011-02-27">durationEvent, textColor</change>
-			<change who="KSR" when="2011-03-01"><persName> og <rs> fjernet aht prøveversion; skema timelinePV.rnc; <hi rend=ital> udskiftet med 00BB og 00AB</change>
+			<change who="HY" when="2011-04-01">Indført rettelser fra skærmkorrektur</change>
+			<change who="HY" when="2011-29-06">Indført rettelser fra 2. redaktion</change>
+			<change who="HY" when="2011-09-13">indført sep 01 1808</change>
+			<change who="KSR" when="2011-11-01">valideret i forhold til ret skema</change>'
+			<change who="HY" when="2011-11-01">en rettelse</change>
+			<change who="HY" when="2011-11-14">rettelser i Oct 30 1826 og Dec 24 1837</change>
+			<change who="HY" when="2012-03-02">Sammensatte årstal skrevet helt ud</change>
+			<change who="JMR" when="2012-10-24">Fjernet persName, rs, placeName og hi</change>
 		</revisionDesc>
 	</dataHeader>
 	-->
@@ -28,7 +35,7 @@
 		start="Sep 08 1783 00:00:00 GMT"
 		textColor="#009799"
 		title="Grundtvig f&#x00F8;des">
-		Yngste barn af sognepr&#x00E6;st <persName key="pe164">Johan Ottosen Grundtvig</persName> og hustru <persName key="pe166">Cathrine Marie f. Bang</persName> f&#x00F8;des i Udby pr&#x00E6;steg&#x00E5;rd, hjemmed&#x00F8;bes af faderen 10. september og navngives <persName key="pe4">Nicolai Frederik Severin</persName> (if. kirkebogen o.a. samtidig kilde egl.: Nicolaj Frideric Severin).
+		Yngste barn af sognepr&#x00E6;st Johan Ottosen Grundtvig og hustru Cathrine Marie f. Bang f&#x00F8;des i Udby pr&#x00E6;steg&#x00E5;rd, hjemmed&#x00F8;bes af faderen 10. september og navngives Nicolai Frederik Severin (if. kirkebogen o.a. samtidig kilde egl.: Nicolaj Frideric Severin).
 	</event>
 
 	<event
@@ -39,7 +46,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Ophold i Thyregod">
-		Efter&#x00E5;ret. Som forberedelse til latinskolen indleder <persName key="pe4">Grundtvig</persName> et 6-&#x00E5;rigt ophold hos pastor <persName key="pe167">Laurits Feld</persName> i Thyregod ved Vejle.
+		Efter&#x00E5;ret. Som forberedelse til latinskolen indleder Grundtvig et 6-&#x00E5;rigt ophold hos pastor Laurits Feld i Thyregod ved Vejle.
 	</event>
 
 	<event
@@ -68,14 +75,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="L&#x00E6;ser Suhm">
-		1799-1800. L&#x00E6;ser <persName key="pe7">P.F. Suhm</persName>: <hi rend="italic">Om Odin og den hedniske Gudel&#x00E6;re</hi> (1771).
+		1799-1800. L&#x00E6;ser P.F. Suhm: Om Odin og den hedniske Gudel&#x00E6;re (1771).
 	</event>
 
 	<event
 		start="Sep 03 1800 00:00:00 GMT"
 		textColor="#009799"
 		title="Broderen Jakob d&#x00F8;r">
-		Broderen <persName key="pe168">Jakob</persName> d&#x00F8;r 25 &#x00E5;r gammel som pr&#x00E6;st p&#x00E5; Guinea-kysten.
+		Broderen Jakob d&#x00F8;r 25 &#x00E5;r gammel som pr&#x00E6;st p&#x00E5; Guinea-kysten.
 	</event>
 
 	<event
@@ -117,7 +124,7 @@
 		start="Apr 17 1801 00:00:00 GMT"
 		textColor="#009799"
 		title="L&#x00E6;ser i Udby Suhms Historie af Danmark, bind I">
-		Rejser hjem til Udby pr&#x00E6;steg&#x00E5;rd, hvor han l&#x00E6;ser <persName key="pe7">P.F. Suhm</persName>s <hi rend="italic">Historie af Danmark,</hi> bind 1, <hi rend="italic">Fra de &#x00E6;ldste Tider til Aar 803</hi> (1782).
+		Rejser hjem til Udby pr&#x00E6;steg&#x00E5;rd, hvor han l&#x00E6;ser P.F. Suhms Historie af Danmark, bind 1, Fra de &#x00E6;ldste Tider til Aar 803 (1782).
 	</event>
 
 	<event
@@ -152,14 +159,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="I K&#x00F8;benhavn">
-		September. <persName key="pe4">Grundtvig</persName> vender tilbage til K&#x00F8;benhavn.
+		September. Grundtvig vender tilbage til K&#x00F8;benhavn.
 	</event>
 
 	<event
 		start="Oct 12 1801 00:00:00 GMT"
 		textColor="#009799"
 		title="Filologisk eksamen">
-		<persName key="pe4">Grundtvig</persName> best&#x00E5;r den filologiske eksamen.
+		Grundtvig best&#x00E5;r den filologiske eksamen.
 	</event>
 
 	<event
@@ -170,14 +177,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Broderen Niels pr&#x00E6;st p&#x00E5; Guinea-kysten">
-		Marts. Broderen <persName key="pe169">Niels</persName> efterf&#x00F8;lger Jakob som pr&#x00E6;st p&#x00E5; Guinea-kysten.
+		Marts. Broderen Niels efterf&#x00F8;lger Jakob som pr&#x00E6;st p&#x00E5; Guinea-kysten.
 	</event>
 
 	<event
 		start="Dec 26 1802 00:00:00 GMT"
 		textColor="#009799"
 		title="Pr&#x00E6;diker f&#x00F8;rste gang">
-		<persName key="pe4">Grundtvig</persName> pr&#x00E6;diker for f&#x00F8;rste gang, b&#x00E5;de i Udby og &#x00D8;rslev.
+		Grundtvig pr&#x00E6;diker for f&#x00F8;rste gang, b&#x00E5;de i Udby og &#x00D8;rslev.
 	</event>
 
 	<event
@@ -187,7 +194,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Samv&#x00E6;r med Marie Blicher">
-		Januar-10. marts. Ophold p&#x00E5; Falster i Torkildstrup, Gundslev m.v.; hyppigt samv&#x00E6;r med pr&#x00E6;stedatteren <persName key="pe170">Marie Blicher</persName>.
+		Januar-10. marts. Ophold p&#x00E5; Falster i Torkildstrup, Gundslev m.v.; hyppigt samv&#x00E6;r med pr&#x00E6;stedatteren Marie Blicher.
 	</event>
 
 	<event
@@ -198,14 +205,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Broderen Niels d&#x00F8;r">
-		Maj. Broderen <persName key="pe169">Niels</persName> d&#x00F8;r 26 &#x00E5;r gammel p&#x00E5; Guinea-kysten.
+		Maj. Broderen Niels d&#x00F8;r 26 &#x00E5;r gammel p&#x00E5; Guinea-kysten.
 	</event>
 
 	<event
 		start="Oct 25 1803 00:00:00 GMT"
 		textColor="#009799"
 		title="Teologisk attestats">
-		<persName key="pe4">Grundtvig</persName> best&#x00E5;r den teologiske attestats, dvs. embedseksamen.
+		Grundtvig best&#x00E5;r den teologiske attestats, dvs. embedseksamen.
 	</event>
 
 	<event
@@ -219,14 +226,14 @@
 		start="Nov 25 1803 00:00:00 GMT"
 		textColor="#009799"
 		title="Gensyn med Marie Blicher">
-		Er atter i Gundslev p&#x00E5; Falster; gensyn med <persName key="pe170">Marie Blicher</persName>.
+		Er atter i Gundslev p&#x00E5; Falster; gensyn med Marie Blicher.
 	</event>
 
 	<event
 		start="Mar 04 1804 00:00:00 GMT"
 		textColor="#009799"
 		title="F&#x00E5;r &#x00F8;je for Lise Blicher">
-		Tr&#x00E6;ffer Blichers p&#x00E5; Neb&#x00F8;llegaard; f&#x00E5;r &#x00F8;je for <persName key="pe170">Marie</persName>s lilles&#x00F8;ster, <persName key="pe171">Lise Blicher</persName>.
+		Tr&#x00E6;ffer Blichers p&#x00E5; Neb&#x00F8;llegaard; f&#x00E5;r &#x00F8;je for Maries lilles&#x00F8;ster, Lise Blicher.
 	</event>
 
 	<event
@@ -237,7 +244,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="L&#x00E6;ser Holberg">
-		April. L&#x00E6;ser intenst <persName key="pe172">Holberg</persName>.
+		April. L&#x00E6;ser intenst Holberg.
 	</event>
 
 	<event
@@ -248,7 +255,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="F&#x00F8;rste mytologiske overvejelser">
-		Juni. L&#x00E6;ser <persName key="pe173">Christian Bastholms</persName> <hi rend="italic"><rs key="bib171">Historisk-philosophiske Unders&#x00F8;gelser over de &#x00E6;ldste Folkesl&#x00E6;gters religi&#x00F8;se og philosophiske Meninger</rs></hi>; g&#x00F8;r sig de f&#x00F8;rste mytologiske overvejelser i dagbogen; udarbejder en islandsk ordliste.
+		Juni. L&#x00E6;ser Christian Bastholms Historisk-philosophiske Unders&#x00F8;gelser over de &#x00E6;ldste Folkesl&#x00E6;gters religi&#x00F8;se og philosophiske Meninger; g&#x00F8;r sig de f&#x00F8;rste mytologiske overvejelser i dagbogen; udarbejder en islandsk ordliste.
 	</event>
 
 	<event
@@ -293,14 +300,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Gensyn med Lise">
-		November-december. Gensyn med <persName key="pe171">Lise Blicher</persName> i Gundslev.
+		November-december. Gensyn med Lise Blicher i Gundslev.
 	</event>
 
 	<event
 		start="Mar 06 1805 00:00:00 GMT"
 		textColor="#009799"
 		title="Forholdet til Lise uafklaret">
-		Forlader Falster; forholdet til <persName key="pe171">Lise</persName> er endnu uafklaret.
+		Forlader Falster; forholdet til Lise er endnu uafklaret.
 	</event>
 
 	<event
@@ -318,7 +325,7 @@
 		start="Jun 28 1805 00:00:00 GMT"
 		textColor="#009799"
 		title="Lises far d&#x00F8;r">
-		Pastor <persName key="pe174">D.N. Blicher</persName>, Gundslev, d&#x00F8;r ved landemodet i Maribo.
+		Pastor D.N. Blicher, Gundslev, d&#x00F8;r ved landemodet i Maribo.
 	</event>
 
 	<event
@@ -329,14 +336,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="S&#x00F8;steren d&#x00F8;r">
-		December. <persName key="pe4">Grundtvigs</persName> eneste s&#x00F8;ster, <persName key="pe175">Ulrike Eleonore</persName> d&#x00F8;r, 23 &#x00E5;r gammel.
+		December. Grundtvigs eneste s&#x00F8;ster, Ulrike Eleonore d&#x00F8;r, 23 &#x00E5;r gammel.
 	</event>
 
 	<event
 		start="Feb 12 1806 00:00:00 GMT"
 		textColor="#009799"
 		title="Langelands L&#x00E6;seselskab">
-		Langelands L&#x00E6;seselskab stiftes; <persName key="pe4">Grundtvig</persName> har forberedt det siden 8. november 1805; frem til opl&#x00F8;sningen i januar 1808 er han protokolf&#x00F8;rer.
+		Langelands L&#x00E6;seselskab stiftes; Grundtvig har forberedt det siden 8. november 1805; frem til opl&#x00F8;sningen i januar 1808 er han protokolf&#x00F8;rer.
 	</event>
 
 	<event
@@ -347,7 +354,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="L&#x00E6;ser Skirners Rejse">
-		Maj. L&#x00E6;ser en bearbejdelse af edda-digtet <hi rend="italic">Skirners Rejse</hi> i <hi rend="italic">Ny Minerva.</hi>
+		Maj. L&#x00E6;ser en bearbejdelse af edda-digtet Skirners Rejse i Ny Minerva.
 	</event>
 
 	<event
@@ -358,7 +365,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="L&#x00E6;ser Schiller">
-		Juli. L&#x00E6;ser <persName key="pe35">Schiller</persName>s <rs key="bib172"><hi rend="italic">Kleinere prosaische Schriften.</hi></rs>
+		Juli. L&#x00E6;ser Schillers Kleinere prosaische Schriften.
 	</event>
 
 
@@ -392,7 +399,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="M&#x00F8;der Willemoes">
-		September. M&#x00F8;der <persName key="pe99">Peter Willemoes</persName>, hvis sidste rapport fra Langeland er dateret 28. oktober 1807.
+		September. M&#x00F8;der Peter Willemoes, hvis sidste rapport fra Langeland er dateret 28. oktober 1807.
 	</event>
 
 	<event
@@ -417,7 +424,7 @@
 		start="May 25 1808 00:00:00 GMT"
 		textColor="#009799"
 		title="Alumne p&#x00E5; Valkendorf">
-		<persName key="pe4">Grundtvig</persName> bliver alumne p&#x00E5; Valkendorfs Kollegium i K&#x00F8;benhavn.
+		Grundtvig bliver alumne p&#x00E5; Valkendorfs Kollegium i K&#x00F8;benhavn.
 	</event>
 
 	<event
@@ -428,7 +435,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Venskab med Chr. Molbech">
-		Maj. Venskab med den j&#x00E6;vnaldrende <persName key="pe23">Christian Molbech</persName>.
+		Maj. Venskab med den j&#x00E6;vnaldrende Christian Molbech.
 	</event>
 
 	<event
@@ -437,7 +444,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bes&#x00F8;ger Sor&#x00F8;">
-		Bes&#x00F8;ger Sor&#x00F8; og stendyssen i Gunderslev Skov sammen med vennerne <persName key="pe23">Chr. Molbech</persName> og <persName key="pe176">Povel Dons</persName>.
+		Bes&#x00F8;ger Sor&#x00F8; og stendyssen i Gunderslev Skov sammen med vennerne Chr. Molbech og Povel Dons.
 	</event>
 
 	<event
@@ -456,7 +463,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Logerer med Sibbern">
-		Efter&#x00E5;r. Deler v&#x00E6;relse p&#x00E5; Valkendorfs Kollegium med <persName key="pe122">F.C. Sibbern</persName>.
+		Efter&#x00E5;r. Deler v&#x00E6;relse p&#x00E5; Valkendorfs Kollegium med F.C. Sibbern.
 	</event>
 
 	<event
@@ -470,14 +477,14 @@
 		start="May 29 1810 00:00:00 GMT"
 		textColor="#009799"
 		title="Dimispr&#x00E6;dikenen trykt uden tilladelse">
-		Seks pr&#x00E6;ster indsender klage til Danske Kancelli over, at <persName key="pe4">Grundtvig</persName>s dimispr&#x00E6;diken er trykt uden K&#x00F8;benhavns Universitets tilladelse.
+		Seks pr&#x00E6;ster indsender klage til Danske Kancelli over, at Grundtvigs dimispr&#x00E6;diken er trykt uden K&#x00F8;benhavns Universitets tilladelse.
 	</event>
 
 	<event
 		start="Oct 09 1810 00:00:00 GMT"
 		textColor="#009799"
 		title="F&#x00F8;rste psykiske krise">
-		<persName key="pe4">Grundtvig</persName>s f&#x00F8;rste alvorlige psykiske krise s&#x00E6;tter ind ved l&#x00E6;sning af <persName key="pe177">Kotzebue</persName>: <rs key="bib173"><hi rend="italic">Preussens &#x00E4;ltere Geschichte,</hi></rs> hvori <persName key="pe45">Kristi</persName> kors omtales som "das dürre Kreuz" (det visne kors).
+		Grundtvigs f&#x00F8;rste alvorlige psykiske krise s&#x00E6;tter ind ved l&#x00E6;sning af Kotzebue: Preussens &#x00E4;ltere Geschichte, hvori Kristi kors omtales som "das dürre Kreuz" (det visne kors).
 	</event>
 
 	<event
@@ -505,7 +512,7 @@
 		start="Dec 20 1810 00:00:00 GMT"
 		textColor="#009799"
 		title="Overnatning p&#x00E5; Vindbyholt kro">
-		Vennen <persName key="pe122">F.C. Sibbern</persName> ledsager <persName key="pe4">Grundtvig</persName> p&#x00E5; julerejsen hjem til Udby; overnatning p&#x00E5; Vindbyholt kro.
+		Vennen F.C. Sibbern ledsager Grundtvig p&#x00E5; julerejsen hjem til Udby; overnatning p&#x00E5; Vindbyholt kro.
 	</event>
 
 	<event
@@ -533,7 +540,7 @@
 		start="Jan 13 1811 00:00:00 GMT"
 		textColor="#009799"
 		title="Audiens hos kongen">
-		Audiens hos <persName key="pe96">kongen</persName> ang. sagen om dimispr&#x00E6;dikenen.
+		Audiens hos kongen ang. sagen om dimispr&#x00E6;dikenen.
 	</event>
 
 	<event
@@ -561,14 +568,14 @@
 		start="May 29 1811 00:00:00 GMT"
 		textColor="#009799"
 		title="Ordination">
-		<persName key="pe4">Grundtvig</persName> ordineres til pr&#x00E6;st i Trinitatis Kirke; rejser straks efter til Udby.
+		Grundtvig ordineres til pr&#x00E6;st i Trinitatis Kirke; rejser straks efter til Udby.
 	</event>
 
 	<event
 		start="Jun 16 1811 00:00:00 GMT"
 		textColor="#009799"
 		title="Kapellan i Udby">
-		<persName key="pe4">Grundtvig</persName> inds&#x00E6;ttes som sin fars personlige kapellan i Udby-&#x00D8;rslev af broderen <persName key="pe178">Otto</persName> fra Torkildstrup 1. s&#x00F8;ndag efter trinitatis.
+		Grundtvig inds&#x00E6;ttes som sin fars personlige kapellan i Udby-&#x00D8;rslev af broderen Otto fra Torkildstrup 1. s&#x00F8;ndag efter trinitatis.
 	</event>
 
 	<event
@@ -579,7 +586,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Forlovelse">
-		Ultimo september. Forlover sig med <persName key="pe171">Elisabeth (Lise) Christina Margretha Blicher</persName>.
+		Ultimo september. Forlover sig med Elisabeth (Lise) Christina Margretha Blicher.
 	</event>
 
 	<event
@@ -590,14 +597,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Opfordres til at søge professorat i historie">
-		April. Professor <persName key="pe179">Georg Sverdrup</persName> m.fl. opfordrer <persName key="pe4">Grundtvig</persName> til at s&#x00F8;ge det ledige professorat i historie ved det ny&#x00E5;bnede universitet i Christiania (Oslo); i maj s&#x00F8;ger <persName key="pe4">Grundtvig</persName> <persName key="pe96">kongens</persName> st&#x00F8;tte i sagen, men uden resultat.
+		April. Professor Georg Sverdrup m.fl. opfordrer Grundtvig til at s&#x00F8;ge det ledige professorat i historie ved det ny&#x00E5;bnede universitet i Christiania (Oslo); i maj s&#x00F8;ger Grundtvig kongens st&#x00F8;tte i sagen, men uden resultat.
 	</event>
 
 	<event
 		start="Jun 28 1812 00:00:00 GMT"
 		textColor="#009799"
 		title="Oehlenschl&#x00E4;ger bryder forbindelsen">
-		<persName key="pe3">Oehlenschl&#x00E4;ger</persName> afbryder i et brev forbindelsen med <persName key="pe4">Grundtvig</persName> pga. hans kritik af den manglende &#x2018;religi&#x00F8;se alvor&#x2019; i <persName key="pe3">Oehlenschl&#x00E4;gers</persName> digtning.
+		Oehlenschl&#x00E4;ger afbryder i et brev forbindelsen med Grundtvig pga. hans kritik af den manglende &#x2018;religi&#x00F8;se alvor&#x2019; i Oehlenschl&#x00E4;gers digtning.
 	</event>
 
 	<event
@@ -608,7 +615,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Faderen syg">
-		December. Faderen <persName key="pe164">Johan Grundtvig</persName> bliver syg.
+		December. Faderen Johan Grundtvig bliver syg.
 	</event>
 
 
@@ -616,7 +623,7 @@
 		start="Jan 05 1813 00:00:00 GMT"
 		textColor="#009799"
 		title="Faderen d&#x00F8;r">
-		Faderen <persName key="pe164">Johan Grundtvig</persName> d&#x00F8;r.
+		Faderen Johan Grundtvig d&#x00F8;r.
 	</event>
 
 	<event
@@ -627,35 +634,35 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Uoverensstemmelse med Molbech">
-		Januar-februar. <persName key="pe4">Grundtvig</persName> i K&#x00F8;benhavn; uoverensstemmelse med <persName key="pe23">Chr. Molbech</persName> ang. <hi rend="italic">Kort Begreb af Verdens Kr&#x00F8;nike i Sammenh&#x00E6;ng.</hi>
+		Januar-februar. Grundtvig i K&#x00F8;benhavn; uoverensstemmelse med Chr. Molbech ang. Kort Begreb af Verdens Kr&#x00F8;nike i Sammenh&#x00E6;ng.
 	</event>
 
 	<event
 		start="Jul 24 1813 00:00:00 GMT"
 		textColor="#009799"
 		title="Molbech opsiger venskabet">
-		<persName key="pe23">Chr. Molbech</persName> opsiger offentligt sit venskab med <persName key="pe4">Grundtvig</persName> (venskabet genoptages 1826).
+		Chr. Molbech opsiger offentligt sit venskab med Grundtvig (venskabet genoptages 1826).
 	</event>
 
 	<event
 		start="Oct 27 1813 00:00:00 GMT"
 		textColor="#009799"
 		title="Flytter til K&#x00F8;benhavn">
-		Moderen <persName key="pe166">Cathrine Marie Bang Grundtvig</persName> flytter til Pr&#x00E6;st&#x00F8;, <persName key="pe4">Grundtvig</persName> selv og ogs&#x00E5; <persName key="pe171">Lise Blicher</persName> flytter til K&#x00F8;benhavn.
+		Moderen Cathrine Marie Bang Grundtvig flytter til Pr&#x00E6;st&#x00F8;, Grundtvig selv og ogs&#x00E5; Lise Blicher flytter til K&#x00F8;benhavn.
 	</event>
 
 	<event
 		start="Nov 15 1813 00:00:00 GMT"
 		textColor="#009799"
 		title="Kapellani i Norge ledigt">
-		<persName key="pe4">Grundtvig</persName> l&#x00E6;ser i avisen, at kapellaniet ved Akers Kirke uden for Christiania (Oslo) st&#x00E5;r ledigt.
+		Grundtvig l&#x00E6;ser i avisen, at kapellaniet ved Akers Kirke uden for Christiania (Oslo) st&#x00E5;r ledigt.
 	</event>
 
 	<event
 		start="Dec 26 1815 00:00:00 GMT"
 		textColor="#009799"
 		title="Nedl&#x00E6;gger pr&#x00E6;steembedet">
-		Efter pr&#x00E6;diken i Frederiksberg Kirke erkl&#x00E6;rer <persName key="pe4">Grundtvig</persName> fra pr&#x00E6;dikestolen at ville afst&#x00E5; fra fortsat virke som pr&#x00E6;st; som begrundelse giver han dels den mangelfulde tilslutning til sin forkyndelse, dels at han ikke &#x00F8;nsker at anses for (Bibel-fundamentalistisk) fanatiker.
+		Efter pr&#x00E6;diken i Frederiksberg Kirke erkl&#x00E6;rer Grundtvig fra pr&#x00E6;dikestolen at ville afst&#x00E5; fra fortsat virke som pr&#x00E6;st; som begrundelse giver han dels den mangelfulde tilslutning til sin forkyndelse, dels at han ikke &#x00F8;nsker at anses for (Bibel-fundamentalistisk) fanatiker.
 	</event>
 
 	<event
@@ -666,21 +673,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Underst&#x00F8;ttelse til historiske studier">
-		Sommer. <persName key="pe4">Grundtvig</persName> tildeles kongelig underst&#x00F8;ttelse til studier i Nordens historie.
+		Sommer. Grundtvig tildeles kongelig underst&#x00F8;ttelse til studier i Nordens historie.
 	</event>
 
 	<event
 		start="Aug 12 1818 00:00:00 GMT"
 		textColor="#009799"
 		title="Bryllup med Lise">
-		Efter syv &#x00E5;rs forlovelse gifter <persName key="pe4">Grundtvig</persName> sig i Ulse Kirke med <persName key="pe171">Elisabeth (Lise) Christina Margretha Blicher</persName>; udgifterne til brylluppet afholdes af <persName key="pe4">Grundtvigs</persName> m&#x00E6;cen, grev <persName key="pe181">Danneskjold-Sams&#x00F8;e</persName> til Gisselfeld.
+		Efter syv &#x00E5;rs forlovelse gifter Grundtvig sig i Ulse Kirke med Elisabeth (Lise) Christina Margretha Blicher; udgifterne til brylluppet afholdes af Grundtvigs m&#x00E6;cen, grev Danneskjold-Sams&#x00F8;e til Gisselfeld.
 	</event>
 
 	<event
 		start="Jul 20 1820 00:00:00 GMT"
 		textColor="#009799"
 		title="C.F. Christensens portr&#x00E6;t">
-		Det tidligst kendte portr&#x00E6;t af <persName key="pe4">Grundtvig</persName>, et maleri udf&#x00F8;rt af <persName key="pe182">C.F. Christensen</persName>, signeres.
+		Det tidligst kendte portr&#x00E6;t af Grundtvig, et maleri udf&#x00F8;rt af C.F. Christensen, signeres.
 	</event>
 
 
@@ -688,7 +695,7 @@
 		start="Feb 02 1821 00:00:00 GMT"
 		textColor="#009799"
 		title="Sognepr&#x00E6;st i Pr&#x00E6;st&#x00F8;">
-		Uden ans&#x00F8;gning bliver <persName key="pe4">Grundtvig</persName> kongeligt kaldet til embedet som sognepr&#x00E6;st for Pr&#x00E6;st&#x00F8; og Skibbinge.
+		Uden ans&#x00F8;gning bliver Grundtvig kongeligt kaldet til embedet som sognepr&#x00E6;st for Pr&#x00E6;st&#x00F8; og Skibbinge.
 	</event>
 
 	<event
@@ -702,28 +709,28 @@
 		start="Apr 14 1822 00:00:00 GMT"
 		textColor="#009799"
 		title="Johan Grundtvig f&#x00F8;des">
-		Den &#x00E6;ldste s&#x00F8;n, <persName key="pe183">Johan Diderik Nikolai Blicher Grundtvig</persName>, f&#x00F8;des i Pr&#x00E6;st&#x00F8;.
+		Den &#x00E6;ldste s&#x00F8;n, Johan Diderik Nikolai Blicher Grundtvig, f&#x00F8;des i Pr&#x00E6;st&#x00F8;.
 	</event>
 
 	<event
 		start="Apr 19 1822 00:00:00 GMT"
 		textColor="#009799"
 		title="Johan hjemmed&#x00F8;bt">
-		S&#x00F8;nnen <persName key="pe183">Johan</persName> hjemmed&#x00F8;bes.
+		S&#x00F8;nnen Johan hjemmed&#x00F8;bes.
 	</event>
 
 	<event
 		start="Sep 17 1822 00:00:00 GMT"
 		textColor="#009799"
 		title="Moderen d&#x00F8;r">
-		<persName key="pe4">Grundtvigs</persName> mor d&#x00F8;r i Pr&#x00E6;st&#x00F8;.
+		Grundtvigs mor d&#x00F8;r i Pr&#x00E6;st&#x00F8;.
 	</event>
 
 	<event
 		start="Sep 23 1822 00:00:00 GMT"
 		textColor="#009799"
 		title="Moderen begraves">
-		<persName key="pe4">Grundtvig</persName> forretter sin mors begravelse i Pr&#x00E6;st&#x00F8;.
+		Grundtvig forretter sin mors begravelse i Pr&#x00E6;st&#x00F8;.
 	</event>
 
 	<event
@@ -748,21 +755,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Otto Grundtvig flytter til Gladsaxe">
-		Maj. Broderen, provst <persName key="pe178">Otto Grundtvig</persName>, flytter fra Torkildstrup til Gladsaxe.
+		Maj. Broderen, provst Otto Grundtvig, flytter fra Torkildstrup til Gladsaxe.
 	</event>
 
 	<event
 		start="Sep 09 1824 00:00:00 GMT"
 		textColor="#009799"
 		title="Svend Grundtvig f&#x00F8;des">
-		<persName key="pe4">Grundtvigs</persName> n&#x00E6;st&#x00E6;ldste s&#x00F8;n, <persName key="pe135">Svend Hersleb Grundtvig</persName>, f&#x00F8;des i K&#x00F8;benhavn; han hjemmed&#x00F8;bes 28. september.
+		Grundtvigs n&#x00E6;st&#x00E6;ldste s&#x00F8;n, Svend Hersleb Grundtvig, f&#x00F8;des i K&#x00F8;benhavn; han hjemmed&#x00F8;bes 28. september.
 	</event>
 
 	<event
 		start="Oct 07 1825 00:00:00 GMT"
 		textColor="#009799"
 		title="St&#x00E6;vnet for injurier">
-		<persName key="pe4">Grundtvig</persName> indsender gennem biskop <persName key="pe109">M&#x00FC;nter</persName> en klage til <persName key="pe96">kongen</persName> over at v&#x00E6;re blevet indst&#x00E6;vnet som injuriant af <persName key="pe11">H.N. Clausen</persName>. Han ans&#x00F8;ger om at f&#x00E5; afvist injuriesagen som ulovlig.
+		Grundtvig indsender gennem biskop M&#x00FC;nter en klage til kongen over at v&#x00E6;re blevet indst&#x00E6;vnet som injuriant af H.N. Clausen. Han ans&#x00F8;ger om at f&#x00E5; afvist injuriesagen som ulovlig.
 	</event>
 
 
@@ -774,63 +781,63 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Venskab med Molbech">
-		Januar. Genoptagelse af venskabet med <persName key="pe23">Chr. Molbech</persName> (afbrudt 1813).
+		Januar. Genoptagelse af venskabet med Chr. Molbech (afbrudt 1813).
 	</event>
 
 	<event
 		start="Apr 10 1826 00:00:00 GMT"
 		textColor="#009799"
 		title="Injuriesag">
-		Retten afviser <persName key="pe4">Grundtvig</persName>s ans&#x00F8;gning af 7. oktober 1825 om at m&#x00E5;tte f&#x00E5; afvist injuriesagen, hvorefter sagen g&#x00E5;r sin gang.
+		Retten afviser Grundtvigs ans&#x00F8;gning af 7. oktober 1825 om at m&#x00E5;tte f&#x00E5; afvist injuriesagen, hvorefter sagen g&#x00E5;r sin gang.
 	</event>
 
 	<event
 		start="May 08 1826 00:00:00 GMT"
 		textColor="#009799"
 		title="Afskedsans&#x00F8;gning">
-		Efter en audiens hos <persName key="pe96">kongen</persName> ans&#x00F8;ger <persName key="pe4">Grundtvig</persName> om at m&#x00E5;tte nedl&#x00E6;gge sit pr&#x00E6;steembede.
+		Efter en audiens hos kongen ans&#x00F8;ger Grundtvig om at m&#x00E5;tte nedl&#x00E6;gge sit pr&#x00E6;steembede.
 	</event>
 
 	<event
 		start="May 26 1826 00:00:00 GMT"
 		textColor="#009799"
 		title="Afskedsans&#x00F8;gningen im&#x00F8;dekommes">
-		<persName key="pe96">Kongen</persName> im&#x00F8;dekommer <persName key="pe4">Grundtvigs</persName> afskedsans&#x00F8;gning.
+		Kongen im&#x00F8;dekommer Grundtvigs afskedsans&#x00F8;gning.
 	</event>
 
 	<event
 		start="Sep 11 1826 00:00:00 GMT"
 		textColor="#009799"
 		title="Sidste indl&#x00E6;g i injurieprocessen">
-		<persName key="pe4">Grundtvigs</persName> sidste indl&#x00E6;g i injurieprocessen freml&#x00E6;gges i retten sammen med hans skrift <hi rend="italic">Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige.</hi>
+		Grundtvigs sidste indl&#x00E6;g i injurieprocessen freml&#x00E6;gges i retten sammen med hans skrift Vigtige Sp&#x00F8;rgsmaal til Danmarks Lovkyndige.
 	</event>
 
 	<event
 		start="Oct 30 1826 00:00:00 GMT"
 		textColor="#009799"
 		title="Livsvarig censur">
-		<persName key="pe4">Grundtvig</persName> id&#x00F8;mmes en b&#x00F8;destraf for injurier; dommen medf&#x00F8;rer automatisk, at han underkastes livsvarig censur.
+		Grundtvig id&#x00F8;mmes en b&#x00F8;destraf for injurier; dommen medf&#x00F8;rer automatisk, at han underkastes livsvarig censur.
 	</event>
 
 	<event
 		start="May 24 1827 00:00:00 GMT"
 		textColor="#009799"
 		title="Meta Grundtvig f&#x00F8;des">
-		Datteren <persName key="pe184">Meta Cathrine Marie Bang Grundtvig</persName> (1847 gift med <persName key="pe86">P.O. Boisen</persName>) f&#x00F8;des; hun hjemmed&#x00F8;bes 3. juni.
+		Datteren Meta Cathrine Marie Bang Grundtvig (1847 gift med P.O. Boisen) f&#x00F8;des; hun hjemmed&#x00F8;bes 3. juni.
 	</event>
 
 	<event
 		start="May 21 1828 00:00:00 GMT"
 		textColor="#009799"
 		title="Anmodning om underst&#x00F8;ttelse til ophold i London">
-		<persName key="pe4">Grundtvig</persName> anmoder <persName key="pe96">kongen</persName> om underst&#x00F8;ttelse til et &#x00E5;rs ophold i London med henblik p&#x00E5; studier af angelsaksiske h&#x00E5;ndskrifter.
+		Grundtvig anmoder kongen om underst&#x00F8;ttelse til et &#x00E5;rs ophold i London med henblik p&#x00E5; studier af angelsaksiske h&#x00E5;ndskrifter.
 	</event>
 
 	<event
 		start="Dec 24 1828 00:00:00 GMT"
 		textColor="#009799"
 		title="Fornyet anmodning">
-		Indgiver p&#x00E5; ny ans&#x00F8;gning til <persName key="pe96">kongen</persName> om underst&#x00F8;ttelse til et studieophold i England; ans&#x00F8;gningen im&#x00F8;dekommes.
+		Indgiver p&#x00E5; ny ans&#x00F8;gning til kongen om underst&#x00F8;ttelse til et studieophold i England; ans&#x00F8;gningen im&#x00F8;dekommes.
 	</event>
 
 	<event
@@ -847,7 +854,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Studerer Bjowulf">
-		28. maj-september. <persName key="pe4">Grundtvig</persName> studerer hovedsagelig <hi rend="italic">Bjowulf-kvadet</hi> p&#x00E5; British Museum.
+		28. maj-september. Grundtvig studerer hovedsagelig Bjowulf-kvadet p&#x00E5; British Museum.
 	</event>
 
 	<event
@@ -868,7 +875,7 @@
 		start="Sep 28 1829 00:00:00 GMT"
 		textColor="#009799"
 		title="Samtale med Oehlenschl&#x00E4;ger">
-		F&#x00F8;rste samtale med <persName key="pe3">Oehlenschl&#x00E4;ger</persName> efter 17 &#x00E5;rs uvenskab.
+		F&#x00F8;rste samtale med Oehlenschl&#x00E4;ger efter 17 &#x00E5;rs uvenskab.
 	</event>
 
 	<event
@@ -882,14 +889,14 @@
 		start="May 11 1830 00:00:00 GMT"
 		textColor="#009799"
 		title="Anden Englandsrejse">
-		<persName key="pe4">Grundtvig</persName> tiltr&#x00E6;der sin anden Englandsrejse, hvor han forts&#x00E6;tter sit arbejde p&#x00E5; British Museum.
+		Grundtvig tiltr&#x00E6;der sin anden Englandsrejse, hvor han forts&#x00E6;tter sit arbejde p&#x00E5; British Museum.
 	</event>
 
 	<event
 		start="Jun 24 1830 00:00:00 GMT"
 		textColor="#009799"
 		title="M&#x00F8;de med Clara Bolton">
-		M&#x00F8;der den 26-&#x00E5;rige Mrs. <persName key="pe185">Clara Bolton</persName>, som han finder betagende og dertil en samtalepartner uden lige; deres &#x00E5;ndfulde samv&#x00E6;r denne ene aften bliver til fremtidig inspiration for <persName key="pe4">Grundtvig</persName>.
+		M&#x00F8;der den 26-&#x00E5;rige Mrs. Clara Bolton, som han finder betagende og dertil en samtalepartner uden lige; deres &#x00E5;ndfulde samv&#x00E6;r denne ene aften bliver til fremtidig inspiration for Grundtvig.
 	</event>
 
 	<event
@@ -914,21 +921,21 @@
 		start="Nov 14 1830 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;ger forl&#x00E6;nget underst&#x00F8;ttelse">
-		Ans&#x00F8;ger <persName key="pe96">kongen</persName> om at m&#x00E5;tte f&#x00E5; en 3-&#x00E5;rige underst&#x00F8;ttelse; ans&#x00F8;gningen afvises.
+		Ans&#x00F8;ger kongen om at m&#x00E5;tte f&#x00E5; en 3-&#x00E5;rige underst&#x00F8;ttelse; ans&#x00F8;gningen afvises.
 	</event>
 
 	<event
 		start="May 24 1831 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;ger nyt rejselegat">
-		Ans&#x00F8;ger <persName key="pe96">kongen</persName> om finansiel st&#x00F8;tte til endnu en rejse til England; ans&#x00F8;gningen im&#x00F8;dekommes.
+		Ans&#x00F8;ger kongen om finansiel st&#x00F8;tte til endnu en rejse til England; ans&#x00F8;gningen im&#x00F8;dekommes.
 	</event>
 
 	<event
 		start="Jun 02 1831 00:00:00 GMT"
 		textColor="#009799"
 		title="Tredje Englandsrejse">
-		<persName key="pe4">Grundtvig</persName> tiltr&#x00E6;der sin tredje Englandsrejse; ophold i Cambridge, derefter i London.
+		Grundtvig tiltr&#x00E6;der sin tredje Englandsrejse; ophold i Cambridge, derefter i London.
 	</event>
 
 	<event
@@ -942,7 +949,7 @@
 		start="Nov 24 1831 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;ger tilladelse til at danne menighed">
-		Ans&#x00F8;ger sammen med <persName key="pe186">Lorenz Siemonsen</persName> og <persName key="pe80">Jac. Chr. Lindberg</persName> <persName key="pe96">kongen</persName> om tilladelse til at danne en fri menighed ved Frederiks Tyske Kirke (siden 1901: Christianskirken) p&#x00E5; Christianshavn.
+		Ans&#x00F8;ger sammen med Lorenz Siemonsen og Jac. Chr. Lindberg kongen om tilladelse til at danne en fri menighed ved Frederiks Tyske Kirke (siden 1901: Christianskirken) p&#x00E5; Christianshavn.
 	</event>
 
 	<event
@@ -956,14 +963,14 @@
 		start="Feb 11 1832 00:00:00 GMT"
 		textColor="#009799"
 		title="Fornyet afslag">
-		I audiens hos kancellipr&#x00E6;sident <persName key="pe187">P.C. Stemann</persName>, der atter afsl&#x00E5;r ans&#x00F8;gningen om at m&#x00E5;tte danne frimenighed.
+		I audiens hos kancellipr&#x00E6;sident P.C. Stemann, der atter afsl&#x00E5;r ans&#x00F8;gningen om at m&#x00E5;tte danne frimenighed.
 	</event>
 
 	<event
 		start="Feb 12 1832 00:00:00 GMT"
 		textColor="#009799"
 		title="&#x0027;Kalkbr&#x00E6;nderi-Forsamlingerne&#x0027;">
-		Deltager for f&#x00F8;rste gang i de s&#x00E5;kaldte &#x0027;Kalkbr&#x00E6;nderi-Forsamlinger&#x0027; i <persName key="pe80">Jac. Chr. Lindberg</persName>s bolig Lille Rolighed nord for K&#x00F8;benhavn (m&#x00F8;derne p&#x00E5;begyndtes 25. september 1831).
+		Deltager for f&#x00F8;rste gang i de s&#x00E5;kaldte &#x0027;Kalkbr&#x00E6;nderi-Forsamlinger&#x0027; i Jac. Chr. Lindbergs bolig Lille Rolighed nord for K&#x00F8;benhavn (m&#x00F8;derne p&#x00E5;begyndtes 25. september 1831).
 	</event>
 
 	<event
@@ -977,7 +984,7 @@
 		start="Mar 01 1832 00:00:00 GMT"
 		textColor="#009799"
 		title="Tilladelse til aftensangs-gudstjenester">
-		If. kongelig resolution f&#x00E5;r <persName key="pe4">Grundtvig</persName> overladt Frederiks Tyske Kirke (siden 1901: Christianskirken) p&#x00E5; Christianshavn til aftensangs-gudstjenester.
+		If. kongelig resolution f&#x00E5;r Grundtvig overladt Frederiks Tyske Kirke (siden 1901: Christianskirken) p&#x00E5; Christianshavn til aftensangs-gudstjenester.
 	</event>
 
 	<event
@@ -992,7 +999,7 @@
 		start="Sep 08 1833 00:00:00 GMT"
 		textColor="#009799"
 		title="Fylder 50 &#x00E5;r">
-		<persName key="pe4">Grundtvig</persName> fylder 50 &#x00E5;r.
+		Grundtvig fylder 50 &#x00E5;r.
 	</event>
 
 	<event
@@ -1003,21 +1010,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Arbejder p&#x00E5; Sang-V&#x00E6;rk">
-		Sommer. Lejer &#x201C;en Huus-Ende&#x201D; til sig og sin familie ved Emiliekilde p&#x00E5; Strandvejen; arbejder p&#x00E5; <hi rend="italic">Sang-V&#x00E6;rk til den Danske Kirke.</hi>
+		Sommer. Lejer &#x201C;en Huus-Ende&#x201D; til sig og sin familie ved Emiliekilde p&#x00E5; Strandvejen; arbejder p&#x00E5; Sang-V&#x00E6;rk til den Danske Kirke.
 	</event>
 
 	<event
 		start="Oct 28 1836 00:00:00 GMT"
 		textColor="#009799"
 		title="Opponent mod Rothes disputats">
-		<persName key="pe4">Grundtvig</persName> er opponent ved pastor <persName key="pe188">Vald. Henrik Rothe</persName>s disputats.
+		Grundtvig er opponent ved pastor Vald. Henrik Rothes disputats.
 	</event>
 
 	<event
 		start="Mar 18 1837 00:00:00 GMT"
 		textColor="#009799"
 		title="Ans&#x00F8;gning om underst&#x00F8;ttelse">
-		Ans&#x00F8;gning til <persName key="pe96">kongen</persName> om p&#x00E5; ny at f&#x00E5; bevilget den 3-&#x00E5;rige underst&#x00F8;ttelse; der gives afslag.
+		Ans&#x00F8;gning til kongen om p&#x00E5; ny at f&#x00E5; bevilget den 3-&#x00E5;rige underst&#x00F8;ttelse; der gives afslag.
 	</event>
 
 	<event
@@ -1028,21 +1035,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Ans&#x00F8;gning om oph&#x00E6;velse af censur">
-		November. Ans&#x00F8;gning til <persName key="pe96">kongen</persName> om oph&#x00E6;velse af den nu 11 &#x00E5;r lange censur.
+		November. Ans&#x00F8;gning til kongen om oph&#x00E6;velse af den nu 11 &#x00E5;r lange censur.
 	</event>
 
 	<event
 		start="Dec 24 1837 00:00:00 GMT"
 		textColor="#009799"
 		title="Censuren oph&#x00E6;ves">
-		<persName key="pe96">Kongen</persName> im&#x00F8;dekommer <persName key="pe4">Grundtvigs</persName> ans&#x00F8;gning om at blive fritaget for censur.
+		Kongen im&#x00F8;dekommer Grundtvigs ans&#x00F8;gning om at blive fritaget for censur.
 	</event>
 
 	<event
 		start="Jan 04 1838 00:00:00 GMT"
 		textColor="#009799"
 		title="Censurophævelsen officiel">
-		Officiel meddelelse i <hi rend="italic">Kj&#x00F8;benhavns-Posten</hi> om oph&#x00E6;velsen af <persName key="pe4">Grundtvigs</persName> censurunderkastelse.
+		Officiel meddelelse i Kj&#x00F8;benhavns-Posten om oph&#x00E6;velsen af Grundtvigs censurunderkastelse.
 	</event>
 
 	<event
@@ -1053,7 +1060,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bekendtskab med Caroline Amalie">
-		Januar. G&#x00F8;r kronprinsesse <persName key="pe108">Caroline Amalie</persName>s personlige bekendtskab.
+		Januar. G&#x00F8;r kronprinsesse Caroline Amalies personlige bekendtskab.
 	</event>
 
 	<event
@@ -1069,21 +1076,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Mands Minde-foredrag">
-		Med kongelig tilladelse p&#x00E5;begynder <persName key="pe4">Grundtvig</persName> sine historiske forel&#x00E6;sninger p&#x00E5; Borchs Kollegium; mellem 20. juni og 26. november 1838 holdes i alt 51 velbes&#x00F8;gte aftenforel&#x00E6;sninger (udgivet efter manuskript 1877 under titlen <hi rend="italic">Mands Minde 1788-1838</hi>).
+		Med kongelig tilladelse p&#x00E5;begynder Grundtvig sine historiske forel&#x00E6;sninger p&#x00E5; Borchs Kollegium; mellem 20. juni og 26. november 1838 holdes i alt 51 velbes&#x00F8;gte aftenforel&#x00E6;sninger (udgivet efter manuskript 1877 under titlen Mands Minde 1788-1838).
 	</event>
 
 	<event
 		start="Dec 16 1838 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;ger om ret til altergang og konfirmation">
-		Ans&#x00F8;gning til <persName key="pe96">kongen</persName> om indtil videre at m&#x00E5;tte holde altergang med sine tilh&#x00F8;rere i Frederiks Tyske Kirke (siden 1901: Christianskirken) og at m&#x00E5;tte konfirmere deres (og sine egne) b&#x00F8;rn.
+		Ans&#x00F8;gning til kongen om indtil videre at m&#x00E5;tte holde altergang med sine tilh&#x00F8;rere i Frederiks Tyske Kirke (siden 1901: Christianskirken) og at m&#x00E5;tte konfirmere deres (og sine egne) b&#x00F8;rn.
 	</event>
 
 	<event
 		start="Dec 31 1838 00:00:00 GMT"
 		textColor="#009799"
 		title="Mynster afviser ans&#x00F8;gningen">
-		Lang samtale med biskop <persName key="pe136">Mynster</persName>, der stiller sig fuldst&#x00E6;ndig afvisende over for <persName key="pe4">Grundtvig</persName>s ans&#x00F8;gning af 16. december 1838.
+		Lang samtale med biskop Mynster, der stiller sig fuldst&#x00E6;ndig afvisende over for Grundtvigs ans&#x00F8;gning af 16. december 1838.
 	</event>
 
 	<event
@@ -1106,21 +1113,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Foredrag for Caroline Amalie">
-		Afholder efter opfordring en foredragsr&#x00E6;kke over Nordens historie for kronprinsesse <persName key="pe108">Caroline Amalie</persName> og en indbudt kreds af damer (opl&#x00E6;ggene hertil udgives 1911).
+		Afholder efter opfordring en foredragsr&#x00E6;kke over Nordens historie for kronprinsesse Caroline Amalie og en indbudt kreds af damer (opl&#x00E6;ggene hertil udgives 1911).
 	</event>
 
 	<event
 		start="Mar 25 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;ger embede i Vartov">
-		Ans&#x00F8;ger <persName key="pe96">kongen</persName> om embedet som pr&#x00E6;st i Vartov.
+		Ans&#x00F8;ger kongen om embedet som pr&#x00E6;st i Vartov.
 	</event>
 
 	<event
 		start="May 14 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="Danske Samfund">
-		Det folkelige historiske samfund, Danske Samfund, stiftes med <persName key="pe4">Grundtvig</persName> som formand og <persName key="pe78">Fr. Barfod</persName> som sekret&#x00E6;r og kasserer.
+		Det folkelige historiske samfund, Danske Samfund, stiftes med Grundtvig som formand og Fr. Barfod som sekret&#x00E6;r og kasserer.
 	</event>
 
 	<event
@@ -1134,7 +1141,7 @@
 		start="Jun 09 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="Pr&#x00E6;st i Vartov">
-		<persName key="pe4">Grundtvig</persName> inds&#x00E6;ttes i sit nye embede som pr&#x00E6;st i Vartov.
+		Grundtvig inds&#x00E6;ttes i sit nye embede som pr&#x00E6;st i Vartov.
 	</event>
 
 	<event
@@ -1145,14 +1152,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bogsamlingen registreres">
-		Juli-august. S&#x00F8;nnen <persName key="pe183">Johan</persName> registrerer <persName key="pe4">Grundtvig</persName>s bogsamling.
+		Juli-august. S&#x00F8;nnen Johan registrerer Grundtvigs bogsamling.
 	</event>
 
 	<event
 		start="Jul 17 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="Til Nys&#x00F8;">
-		Ankommer til Nys&#x00F8; efter invitation fra baronesse <persName key="pe189">Christine Stampe</persName>.
+		Ankommer til Nys&#x00F8; efter invitation fra baronesse Christine Stampe.
 	</event>
 
 	<event
@@ -1166,49 +1173,49 @@
 		start="Jul 24 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="Thorvaldsens atelier i Nys&#x00F8;">
-		<persName key="pe124">Thorvaldsen</persName>s atelier i Nys&#x00F8; have, af <persName key="pe4">Grundtvig</persName> d&#x00F8;bt &#x0027;V&#x00F8;lunds V&#x00E6;rksted,&#x0027; indvies, bl.a. med sang og tale af <persName key="pe4">Grundtvig</persName>.
+		Thorvaldsens atelier i Nys&#x00F8; have, af Grundtvig d&#x00F8;bt &#x0027;V&#x00F8;lunds V&#x00E6;rksted,&#x0027; indvies, bl.a. med sang og tale af Grundtvig.
 	</event>
 
 	<event
 		start="Jul 26 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="D&#x00F8;ber Hauchs datter">
-		D&#x00F8;ber <persName key="pe190">Carsten Hauch</persName>s datter i Sor&#x00F8;.
+		D&#x00F8;ber Carsten Hauchs datter i Sor&#x00F8;.
 	</event>
 
 	<event
 		start="Oct 06 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="&#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D;">
-		Konfirmerer s&#x00F8;nnerne <persName key="pe183">Johan</persName> og <persName key="pe135">Svend</persName> i Vartov og digter til denne lejlighed &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D; (trykt 1841, revideret 1872).
+		Konfirmerer s&#x00F8;nnerne Johan og Svend i Vartov og digter til denne lejlighed &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D; (trykt 1841, revideret 1872).
 	</event>
 
 	<event
 		start="Oct 21 1839 00:00:00 GMT"
 		textColor="#009799"
 		title="Videnskabeligt arbejde">
-		<persName key="pe4">Grundtvig</persName> ans&#x00F8;ger <persName key="pe96">kongen</persName> om en ny forl&#x00E6;ngelse af den 3-&#x00E5;rige underst&#x00F8;ttelse til sin videnskabelige virksomhed; ans&#x00F8;gningen im&#x00F8;dekommes f&#x00E5; dage senere.
+		Grundtvig ans&#x00F8;ger kongen om en ny forl&#x00E6;ngelse af den 3-&#x00E5;rige underst&#x00F8;ttelse til sin videnskabelige virksomhed; ans&#x00F8;gningen im&#x00F8;dekommes f&#x00E5; dage senere.
 	</event>
 
 	<event
 		start="Jan 16 1840 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler p&#x00E5; Frederik 6.s bis&#x00E6;ttelsesdag">
-		Taler i Vartov p&#x00E5; <persName key="pe96">Frederik 6.</persName>s bis&#x00E6;ttelsesdag.
+		Taler i Vartov p&#x00E5; Frederik 6.s bis&#x00E6;ttelsesdag.
 	</event>
 
 	<event
 		start="Jan 28 1840 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler p&#x00E5; Frederik 6.s f&#x00F8;dselsdag">
-		Taler i Danske Samfund p&#x00E5; den afd&#x00F8;de <persName key="pe96">konge</persName>s f&#x00F8;dselsdag.
+		Taler i Danske Samfund p&#x00E5; den afd&#x00F8;de konges f&#x00F8;dselsdag.
 	</event>
 
 	<event
 		start="May 22 1840 00:00:00 GMT"
 		textColor="#009799"
 		title="Ridder af Dannebrog">
-		I anledning af <persName key="pe98">Christian 8.</persName>s og dronning <persName key="pe108">Caroline Amalies</persName> s&#x00F8;lvbryllup udn&#x00E6;vnes <persName key="pe4">Grundtvig</persName> til ridder af Dannebrog (den eneste orden, han modtog).
+		I anledning af Christian 8.s og dronning Caroline Amalies s&#x00F8;lvbryllup udn&#x00E6;vnes Grundtvig til ridder af Dannebrog (den eneste orden, han modtog).
 	</event>
 
 	<event
@@ -1226,14 +1233,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Samv&#x00E6;r med Steffens, Oehlenschl&#x00E4;ger, Thorvaldsen og Sibbern">
-		Juli. G&#x00E6;st hos baron <persName key="pe191">Henrik Stampe</persName> og baronesse <persName key="pe189">Christine Stampe</persName> p&#x00E5; Nys&#x00F8;; samv&#x00E6;r med <persName key="pe18">Steffens</persName>, <persName key="pe3">Oehlenschl&#x00E4;ger</persName>, <persName key="pe124">Thorvaldsen</persName>, <persName key="pe122">Sibbern</persName> m.fl. 
+		Juli. G&#x00E6;st hos baron Henrik Stampe og baronesse Christine Stampe p&#x00E5; Nys&#x00F8;; samv&#x00E6;r med Steffens, Oehlenschl&#x00E4;ger, Thorvaldsen, Sibbern m.fl. 
 	</event>
 
 	<event
 		start="Jun 07 1842 00:00:00 GMT"
 		textColor="#009799"
 		title="Karikatur i Corsaren">
-		Karikatur i <hi rend="italic">Corsaren:</hi> &#x201C;Grundtvig holder sin Tale om den mage-l&#x00F8;se Kongelig-Danske F&#x00E6;drelandskj&#x00E6;rlighed.&#x201D;
+		Karikatur i Corsaren: &#x201C;Grundtvig holder sin Tale om den mage-l&#x00F8;se Kongelig-Danske F&#x00E6;drelandskj&#x00E6;rlighed.&#x201D;
 	</event>
 
 	<event
@@ -1242,28 +1249,28 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Nye foredrag for Caroline Amalie">
-		Efter opfordring holder <persName key="pe4">Grundtvig</persName> frem til 26. maj 1843 en ny r&#x00E6;kke historiske foredrag for dronning <persName key="pe108">Caroline Amalie</persName> (f&#x00F8;rste r&#x00E6;kke afholdtes marts-maj 1839).
+		Efter opfordring holder Grundtvig frem til 26. maj 1843 en ny r&#x00E6;kke historiske foredrag for dronning Caroline Amalie (f&#x00F8;rste r&#x00E6;kke afholdtes marts-maj 1839).
 	</event>
 
 	<event
 		start="Jan 14 1843 00:00:00 GMT"
 		textColor="#009799"
 		title="Broderen Otto d&#x00F8;r">
-		Provst i Gladsaxe-Herlev <persName key="pe178">Otto Grundtvig</persName>, <persName key="pe4">Grundtvig</persName>s &#x00E6;ldste bror d&#x00F8;r; han begraves 21. januar.
+		Provst i Gladsaxe-Herlev Otto Grundtvig, Grundtvigs &#x00E6;ldste bror d&#x00F8;r; han begraves 21. januar.
 	</event>
 
 	<event
 		start="May 05 1843 00:00:00 GMT"
 		textColor="#009799"
 		title="Caroline Amalie tilbyder Englandsrejse">
-		Dronning <persName key="pe108">Caroline Amalie</persName> tilbyder <persName key="pe4">Grundtvig</persName> en Englandsrejse p&#x00E5; hendes bekostning.
+		Dronning Caroline Amalie tilbyder Grundtvig en Englandsrejse p&#x00E5; hendes bekostning.
 	</event>
 
 	<event
 		start="Jun 08 1843 00:00:00 GMT"
 		textColor="#009799"
 		title="Fjerde Englandsrejse">
-		Ledsaget af s&#x00F8;nnen <persName key="pe135">Svend</persName> tiltr&#x00E6;der <persName key="pe4">Grundtvig</persName> sin fjerde og sidste Englandsrejse via Hamburg; ophold i London, Oxford og Birmingham.
+		Ledsaget af s&#x00F8;nnen Svend tiltr&#x00E6;der Grundtvig sin fjerde og sidste Englandsrejse via Hamburg; ophold i London, Oxford og Birmingham.
 	</event>
 
 	<event
@@ -1294,14 +1301,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Anden psykiske krise">
-		P&#x00E5;begynder en ny historisk foredragsr&#x00E6;kke for dronning <persName key="pe108">Caroline Amalie</persName>, men m&#x00E5; afbryde i marts, da hans anden alvorlige psykiske krise s&#x00E6;tter ind.
+		P&#x00E5;begynder en ny historisk foredragsr&#x00E6;kke for dronning Caroline Amalie, men m&#x00E5; afbryde i marts, da hans anden alvorlige psykiske krise s&#x00E6;tter ind.
 	</event>
 
 	<event
 		start="Apr 19 1844 00:00:00 GMT"
 		textColor="#009799"
 		title="Karikatur i Corsaren">
-		Karikatur i <hi rend="italic">Corsaren:</hi> "Nationalitetens Portner. Optrin af <persName key="pe4">Grundtvig</persName>s Kj&#x00E6;mpeliv".
+		Karikatur i Corsaren: "Nationalitetens Portner. Optrin af Grundtvigs Kj&#x00E6;mpeliv".
 	</event>
 
 	<event
@@ -1339,14 +1346,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="M&#x00F8;der Luise Hennings">
-		Ultimo juli. Ved et bes&#x00F8;g hos pastor <persName key="pe142">Gunni Busck</persName> i Stigsbjergby m&#x00F8;der <persName key="pe4">Grundtvig</persName> fru <persName key="pe192">Luise Hennings</persName> fra Gottorp og oplever en kort, men intens forelskelse.
+		Ultimo juli. Ved et bes&#x00F8;g hos pastor Gunni Busck i Stigsbjergby m&#x00F8;der Grundtvig fru Luise Hennings fra Gottorp og oplever en kort, men intens forelskelse.
 	</event>
 
 	<event
 		start="Oct 20 1844 00:00:00 GMT"
 		textColor="#009799"
 		title="Andragende om slaveriets oph&#x00F8;r">
-		<persName key="pe4">Grundtvig</persName> er medunderskriver p&#x00E5; et andragende om snarest at bringe negerslaveriet p&#x00E5; de Dansk-Vestindiske &#x00D8;er til oph&#x00F8;r.
+		Grundtvig er medunderskriver p&#x00E5; et andragende om snarest at bringe negerslaveriet p&#x00E5; de Dansk-Vestindiske &#x00D8;er til oph&#x00F8;r.
 	</event>
 
 	<event
@@ -1371,7 +1378,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bor p&#x00E5; Bakkehuset">
-		Sommer. Frem til slutningen af september bor <persName key="pe4">Grundtvig</persName> med familie p&#x00E5; Bakkehuset.
+		Sommer. Frem til slutningen af september bor Grundtvig med familie p&#x00E5; Bakkehuset.
 	</event>
 
 	<event
@@ -1382,14 +1389,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Meta forlovet med Boisen">
-		Juli. Datteren <persName key="pe184">Meta</persName> forlover sig med cand.theol. <persName key="pe86">P.O. Boisen</persName>.
+		Juli. Datteren Meta forlover sig med cand.theol. P.O. Boisen.
 	</event>
 
 	<event
 		start="Apr 12 1846 00:00:00 GMT"
 		textColor="#009799"
 		title="&#x201C;Paaske-Cantate&#x201D; opf&#x00F8;res">
-		P&#x00E5; p&#x00E5;skedag opf&#x00F8;res <persName key="pe4">Grundtvig</persName>s <hi rend="italic">Paaske-Cantate</hi> i Christiansborg Slotskirke.
+		P&#x00E5; p&#x00E5;skedag opf&#x00F8;res Grundtvigs Paaske-Cantate i Christiansborg Slotskirke.
 	</event>
 
 	<event
@@ -1407,14 +1414,14 @@
 		start="Aug 10 1846 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler for E.G. Geijer">
-		Taler ved festen i K&#x00F8;benhavn for den svenske historiker og digter <persName key="pe193">E.G. Geijer</persName>.
+		Taler ved festen i K&#x00F8;benhavn for den svenske historiker og digter E.G. Geijer.
 	</event>
 
 	<event
 		start="Dec 12 1846 00:00:00 GMT"
 		textColor="#009799"
 		title="Opl&#x00E6;ser Den Christelige B&#x00F8;rnel&#x00E6;rdom">
-		Opl&#x00E6;ser sin afhandling <hi rend="italic">Den Christelige B&#x00F8;rnel&#x00E6;rdom</hi> (udkommer i <hi rend="italic">Dansk Kirketidende</hi> 31. januar 1847) p&#x00E5; K&#x00F8;benhavns Pr&#x00E6;stekonvent.
+		Opl&#x00E6;ser sin afhandling Den Christelige B&#x00F8;rnel&#x00E6;rdom (udkommer i Dansk Kirketidende 31. januar 1847) p&#x00E5; K&#x00F8;benhavns Pr&#x00E6;stekonvent.
 	</event>
 
 	<event
@@ -1428,7 +1435,7 @@
 		start="Oct 29 1847 00:00:00 GMT"
 		textColor="#009799"
 		title="Metas bryllup med Boisen. Skovgaards portr&#x00E6;t">
-		Datteren <persName key="pe184">Meta</persName> vies til <persName key="pe86">P.O. Boisen</persName> i Vartov; <persName key="pe194">P.C. Skovgaard</persName>s nyudf&#x00F8;rte portr&#x00E6;tmaleri af <persName key="pe4">Grundtvig</persName> er blandt bryllupsgaverne.
+		Datteren Meta vies til P.O. Boisen i Vartov; P.C. Skovgaards nyudf&#x00F8;rte portr&#x00E6;tmaleri af Grundtvig er blandt bryllupsgaverne.
 	</event>
 
 	<event
@@ -1442,14 +1449,14 @@
 		start="Feb 26 1848 00:00:00 GMT"
 		textColor="#009799"
 		title="S&#x00F8;rgearrangementer ved Christian 8.s bis&#x00E6;ttelse">
-		Holder s&#x00F8;rgegudstjeneste i Vartov p&#x00E5; <persName key="pe98">Christian 8.</persName>s bis&#x00E6;ttelsesdag og derefter en s&#x00F8;rgetale i enkedronning <persName key="pe108">Caroline Amalie</persName>s kabinet.
+		Holder s&#x00F8;rgegudstjeneste i Vartov p&#x00E5; Christian 8.s bis&#x00E6;ttelsesdag og derefter en s&#x00F8;rgetale i enkedronning Caroline Amalies kabinet.
 	</event>
 
 	<event
 		start="Apr 16 1848 00:00:00 GMT"
 		textColor="#009799"
 		title="Svend Grundtvig frivillig i Tre&#x00E5;rskrigen">
-		S&#x00F8;nnen <persName key="pe135">Svend</persName> deltager som frivillig i Tre&#x00E5;rskrigen, den 1. Slesvigske Krig.
+		S&#x00F8;nnen Svend deltager som frivillig i Tre&#x00E5;rskrigen, den 1. Slesvigske Krig.
 	</event>
 
 	<event
@@ -1463,7 +1470,7 @@
 		start="Sep 29 1848 00:00:00 GMT"
 		textColor="#009799"
 		title="Valg til Den Grundlovgivende Rigsforsamling">
-		Der afholdes et for <persName key="pe4">Grundtvig</persName> lovende pr&#x00F8;vevalg til Den Grundlovgivende Rigsforsamling, men ved det endelige valg 5. oktober opn&#x00E5;r han ikke stemmer nok.
+		Der afholdes et for Grundtvig lovende pr&#x00F8;vevalg til Den Grundlovgivende Rigsforsamling, men ved det endelige valg 5. oktober opn&#x00E5;r han ikke stemmer nok.
 	</event>
 
 	<event
@@ -1484,7 +1491,7 @@
 		start="Nov 06 1848 00:00:00 GMT"
 		textColor="#009799"
 		title="Valgt til Den Grundlovgivende Rigsforsamling">
-		<persName key="pe4">Grundtvig</persName> v&#x00E6;lges i Pr&#x00E6;st&#x00F8; til Den Grundlovgivende Rigsforsamling, hvor han m&#x00F8;der op f&#x00F8;rste gang 8. november.
+		Grundtvig v&#x00E6;lges i Pr&#x00E6;st&#x00F8; til Den Grundlovgivende Rigsforsamling, hvor han m&#x00F8;der op f&#x00F8;rste gang 8. november.
 	</event>
 
 	<event
@@ -1505,7 +1512,7 @@
 		start="Jan 26 1850 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler ved Oehlenschl&#x00E4;gers begravelse">
-		Taler ved jordf&#x00E6;stelsen af <persName key="pe3">Adam Oehlenschl&#x00E4;ger</persName>.
+		Taler ved jordf&#x00E6;stelsen af Adam Oehlenschl&#x00E4;ger.
 	</event>
 
 	<event
@@ -1519,63 +1526,63 @@
 		start="Jan 14 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Lise d&#x00F8;r">
-		Hustruen <persName key="pe171">Lise</persName> d&#x00F8;r, 63 &#x00E5;r gammel; hun begraves fra  Vor Frelsers Kirke 21. januar.
+		Hustruen Lise d&#x00F8;r, 63 &#x00E5;r gammel; hun begraves fra  Vor Frelsers Kirke 21. januar.
 	</event>
 
 	<event
 		start="Apr 02 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler p&#x00E5; 50-&#x00E5;rs dagen for Slaget p&#x00E5; Reden">
-		<persName key="pe4">Grundtvig</persName> taler i Danske Samfund p&#x00E5; 50-&#x00E5;rs dagen for slaget p&#x00E5; Reden.
+		Grundtvig taler i Danske Samfund p&#x00E5; 50-&#x00E5;rs dagen for slaget p&#x00E5; Reden.
 	</event>
 
 	<event
 		start="Apr 21 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Grundtvig bedstefar">
-		<persName key="pe4">Grundtvig</persName> bliver bedstefar, da datteren <persName key="pe184">Meta</persName> f&#x00F8;der en datter, den senere komponist <persName key="pe195">Elisabeth Boisen</persName>.
+		Grundtvig bliver bedstefar, da datteren Meta f&#x00F8;der en datter, den senere komponist Elisabeth Boisen.
 	</event>
 
 	<event
 		start="Jun 04 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Til Norge">
-		<persName key="pe4">Grundtvig</persName> rejser til Norge efter indbydelse af det Norske Studentersamfund.
+		Grundtvig rejser til Norge efter indbydelse af det Norske Studentersamfund.
 	</event>
 
 	<event
 		start="Jun 13 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Pr&#x00E6;diker for Stortinget">
-		<persName key="pe4">Grundtvig</persName> pr&#x00E6;diker for Stortingets medlemmer i Vor Frelsers Kirke i Christiania (Oslo).
+		Grundtvig pr&#x00E6;diker for Stortingets medlemmer i Vor Frelsers Kirke i Christiania (Oslo).
 	</event>
 
 	<event
 		start="Jun 15 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Tale for svenske studenter">
-		Under hjemrejsen fra Norge holder <persName key="pe4">Grundtvig</persName> tale p&#x00E5; skibet for svenske studenter.
+		Under hjemrejsen fra Norge holder Grundtvig tale p&#x00E5; skibet for svenske studenter.
 	</event>
 
 	<event
 		start="Aug 03 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Forlovet med Marie Toft">
-		Rejser til R&#x00F8;nneb&#x00E6;ksholm p&#x00E5; en lille uges ophold kort efter, at hans beslutning om at &#x00E6;gte <persName key="pe196">Marie Toft</persName> er blevet almindelig kendt.
+		Rejser til R&#x00F8;nneb&#x00E6;ksholm p&#x00E5; en lille uges ophold kort efter, at hans beslutning om at &#x00E6;gte Marie Toft er blevet almindelig kendt.
 	</event>
 
 	<event
 		start="Oct 24 1851 00:00:00 GMT"
 		textColor="#009799"
 		title="Andet &#x00E6;gteskab">
-		Indg&#x00E5;r sit andet &#x00E6;gteskab i Br&#x00F8;ndbyvester Kirke med <persName key="pe196">Ane Marie Elise Toft, f. Carlsen</persName>; hvedebr&#x00F8;dsdage p&#x00E5; Gammelkj&#x00F8;gegaard.
+		Indg&#x00E5;r sit andet &#x00E6;gteskab i Br&#x00F8;ndbyvester Kirke med Ane Marie Elise Toft, f. Carlsen; hvedebr&#x00F8;dsdage p&#x00E5; Gammelkj&#x00F8;gegaard.
 	</event>
 
 	<event
 		start="Mar 20 1852 00:00:00 GMT"
 		textColor="#009799"
 		title="Folketingets samling slutter">
-		Det f&#x00F8;rste Folketings 3. samling slutter; nyt folketingsvalg afholdes 4. august, men <persName key="pe4">Grundtvig</persName> stiller ikke op.
+		Det f&#x00F8;rste Folketings 3. samling slutter; nyt folketingsvalg afholdes 4. august, men Grundtvig stiller ikke op.
 	</event>
 
 	<event
@@ -1586,14 +1593,14 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Mathilde Fibiger p&#x00E5; R&#x00F8;nneb&#x00E6;ksholm">
-		April-august, <persName key="pe134">Mathilde Fibiger</persName> (alias Clara Raphael) bor p&#x00E5; R&#x00F8;nneb&#x00E6;ksholm, fra juni sammen med <persName key="pe4">Grundtvig</persName> og hans hustru.
+		April-august, Mathilde Fibiger (alias Clara Raphael) bor p&#x00E5; R&#x00F8;nneb&#x00E6;ksholm, fra juni sammen med Grundtvig og hans hustru.
 	</event>
 
 	<event
 		start="Jul 25 1852 00:00:00 GMT"
 		textColor="#009799"
 		title="Tale om modersm&#x00E5;let">
-		<persName key="pe4">Grundtvig</persName> taler ved en folkefest ved N&#x00E6;stved om modersm&#x00E5;lets v&#x00E6;rd og magt.
+		Grundtvig taler ved en folkefest ved N&#x00E6;stved om modersm&#x00E5;lets v&#x00E6;rd og magt.
 	</event>
 
 	<event
@@ -1604,35 +1611,35 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bes&#x00F8;g af Chr. Kold">
-		Sommer. <persName key="pe141">Christen Kold</persName> afl&#x00E6;gger bes&#x00F8;g hos <persName key="pe4">Grundtvig</persName> og anmoder om &#x00F8;konomisk st&#x00F8;tte til sin h&#x00F8;jskole i Dalby p&#x00E5; Fyn.
+		Sommer. Christen Kold afl&#x00E6;gger bes&#x00F8;g hos Grundtvig og anmoder om &#x00F8;konomisk st&#x00F8;tte til sin h&#x00F8;jskole i Dalby p&#x00E5; Fyn.
 	</event>
 
 	<event
 		start="Jan 03 1853 00:00:00 GMT"
 		textColor="#009799"
 		title="Clara Carlsen d&#x00F8;r">
-		<persName key="pe4">Grundtvig</persName>s svigerinde, <persName key="pe197">Clara Carlsen</persName>, d&#x00F8;r; 27. oktober indvier <persName key="pe4">Grundtvig</persName> p&#x00E5; K&#x00F8;ge &#x00C5;s den private gravlund Claras Kirkegaard, hvor hun begraves som den f&#x00F8;rste.
+		Grundtvigs svigerinde, Clara Carlsen, d&#x00F8;r; 27. oktober indvier Grundtvig p&#x00E5; K&#x00F8;ge &#x00C5;s den private gravlund Claras Kirkegaard, hvor hun begraves som den f&#x00F8;rste.
 	</event>
 
 	<event
 		start="Feb 26 1853 00:00:00 GMT"
 		textColor="#009799"
 		title="Folketingsmand og aldersformand">
-		Ved folketingsvalget indv&#x00E6;lges <persName key="pe4">Grundtvig</persName> atter i tinget, nu som repr&#x00E6;sentant for Sk&#x00E6;lsk&#x00F8;r, Sor&#x00F8; amts 4. valgkreds; han bliver tingets aldersformand.
+		Ved folketingsvalget indv&#x00E6;lges Grundtvig atter i tinget, nu som repr&#x00E6;sentant for Sk&#x00E6;lsk&#x00F8;r, Sor&#x00F8; amts 4. valgkreds; han bliver tingets aldersformand.
 	</event>
 
 	<event
 		start="Apr 14 1853 00:00:00 GMT"
 		textColor="#009799"
 		title="Den Danske Forening">
-		<persName key="pe4">Grundtvig</persName> er medstifter af Den Danske Forening; 3. maj holder foreningen sit f&#x00F8;rste m&#x00F8;de i Casino, hvor <persName key="pe4">Grundtvig</persName> v&#x00E6;lges som formand.
+		Grundtvig er medstifter af Den Danske Forening; 3. maj holder foreningen sit f&#x00F8;rste m&#x00F8;de i Casino, hvor Grundtvig v&#x00E6;lges som formand.
 	</event>
 
 	<event
 		start="May 27 1853 00:00:00 GMT"
 		textColor="#009799"
 		title="Taber folketingsvalg">
-		Nyt folketingsvalg, <persName key="pe4">Grundtvig</persName> stiller atter op i Sk&#x00E6;lsk&#x00F8;r, men taber valget.
+		Nyt folketingsvalg, Grundtvig stiller atter op i Sk&#x00E6;lsk&#x00F8;r, men taber valget.
 	</event>
 
 	<event
@@ -1643,98 +1650,98 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Nervesv&#x00E6;kkelse">
-		Juni-august. Sommerophold p&#x00E5; R&#x00F8;nneb&#x00E6;ksholm; <persName key="pe4">Grundtvig</persName> gennemg&#x00E5;r en &#x00E5;ndelig krise (nervesv&#x00E6;kkelse) af samme art som i 1844, men i mildere form; trods koleraepidemien rejser han til byen hver 14. dag sommeren igennem.
+		Juni-august. Sommerophold p&#x00E5; R&#x00F8;nneb&#x00E6;ksholm; Grundtvig gennemg&#x00E5;r en &#x00E5;ndelig krise (nervesv&#x00E6;kkelse) af samme art som i 1844, men i mildere form; trods koleraepidemien rejser han til byen hver 14. dag sommeren igennem.
 	</event>
 
 	<event
 		start="Sep 08 1853 00:00:00 GMT"
 		textColor="#009799"
 		title="70 &#x00E5;r">
-		<persName key="pe4">Grundtvig</persName> fejrer sin 70-&#x00E5;rs f&#x00F8;dselsdag p&#x00E5; Gammelkj&#x00F8;gegaard.
+		Grundtvig fejrer sin 70-&#x00E5;rs f&#x00F8;dselsdag p&#x00E5; Gammelkj&#x00F8;gegaard.
 	</event>
 
 	<event
 		start="May 07 1854 00:00:00 GMT"
 		textColor="#009799"
 		title="Boisen kapellan i Vartov">
-		<persName key="pe4">Grundtvig</persName> inds&#x00E6;tter svigers&#x00F8;nnen <persName key="pe86">P.O. Boisen</persName> som sin kapellan i Vartov.
+		Grundtvig inds&#x00E6;tter svigers&#x00F8;nnen P.O. Boisen som sin kapellan i Vartov.
 	</event>
 
 	<event
 		start="May 15 1854 00:00:00 GMT"
 		textColor="#009799"
 		title="Frederik Lange Grundtvig f&#x00F8;des">
-		S&#x00F8;nnen <persName key="pe198">Frederik Lange Grundtvig</persName> f&#x00F8;des; hjemmed&#x00F8;bt 25. maj.
+		S&#x00F8;nnen Frederik Lange Grundtvig f&#x00F8;des; hjemmed&#x00F8;bt 25. maj.
 	</event>
 
 	<event
 		start="Jun 02 1854 00:00:00 GMT"
 		textColor="#009799"
 		title="Genvalgt til Folketinget">
-		<persName key="pe4">Grundtvig</persName> genv&#x00E6;lges til Folketinget for Pr&#x00E6;st&#x00F8; Amts 4. valgkreds. Han genv&#x00E6;lges ved valget den 1. december.
+		Grundtvig genv&#x00E6;lges til Folketinget for Pr&#x00E6;st&#x00F8; Amts 4. valgkreds. Han genv&#x00E6;lges ved valget den 1. december.
 	</event>
 
 	<event
 		start="Jul 09 1854 00:00:00 GMT"
 		textColor="#009799"
 		title="Marie d&#x00F8;r">
-		<persName key="pe4">Grundtvig</persName>s 2. hustru, <persName key="pe196">Marie</persName>, d&#x00F8;r i K&#x00F8;benhavn, 41 &#x00E5;r gammel; hun bis&#x00E6;ttes i Vartov 17. juli, hvorefter kisten f&#x00F8;res til K&#x00F8;ge.
+		Grundtvigs 2. hustru, Marie, d&#x00F8;r i K&#x00F8;benhavn, 41 &#x00E5;r gammel; hun bis&#x00E6;ttes i Vartov 17. juli, hvorefter kisten f&#x00F8;res til K&#x00F8;ge.
 	</event>
 	
 	<event
 		start="Dec 01 1854 00:00:00 GMT"
 		textColor="#009799"
 		title="Genvalgt til Folketinget">
-		<persName key="pe4">Grundtvig</persName> genv&#x00E6;lges atter til Folketinget for Pr&#x00E6;st&#x00F8; Amts 4. valgkreds.
+		Grundtvig genv&#x00E6;lges atter til Folketinget for Pr&#x00E6;st&#x00F8; Amts 4. valgkreds.
 	</event>
 
 	<event
 		start="Jun 06 1855 00:00:00 GMT"
 		textColor="#009799"
 		title="Marie gravs&#x00E6;ttes p&#x00E5; K&#x00F8;ge &#x00C5;s">
-		Kisten med <persName key="pe4">Grundtvig</persName>s 2. hustru, <persName key="pe196">Marie</persName>, hens&#x00E6;ttes ved hendes 1. mand i gravkammeret p&#x00E5; Claras Kirkegaard, K&#x00F8;ge &#x00C5;s.
+		Kisten med Grundtvigs 2. hustru, Marie, hens&#x00E6;ttes ved hendes 1. mand i gravkammeret p&#x00E5; Claras Kirkegaard, K&#x00F8;ge &#x00C5;s.
 	</event>
 
 	<event
 		start="Jun 21 1855 00:00:00 GMT"
 		textColor="#009799"
 		title="Folketingets aldersformand">
-		Efter omvalg bliver <persName key="pe4">Grundtvig</persName> valgt til Folketinget for Kerteminde-kredsen og bliver tingets aldersformand.
+		Efter omvalg bliver Grundtvig valgt til Folketinget for Kerteminde-kredsen og bliver tingets aldersformand.
 	</event>
 
 	<event
 		start="Jul 09 1855 00:00:00 GMT"
 		textColor="#009799"
 		title="Samtale om j&#x00F8;ded&#x00E5;b">
-		<persName key="pe4">Grundtvig</persName> har samtale med en j&#x00F8;disk h&#x00E5;ndv&#x00E6;rker om &#x0027;j&#x00F8;ded&#x00E5;b&#x0027;, dvs. kristen d&#x00E5;b af j&#x00F8;de.
+		Grundtvig har samtale med en j&#x00F8;disk h&#x00E5;ndv&#x00E6;rker om &#x0027;j&#x00F8;ded&#x00E5;b&#x0027;, dvs. kristen d&#x00E5;b af j&#x00F8;de.
 	</event>
 
 	<event
 		start="Aug 04 1855 00:00:00 GMT"
 		textColor="#009799"
 		title="Mindesten for Marie">
-		Mindesten for afd&#x00F8;de <persName key="pe196">Marie Grundtvig</persName> afsl&#x00F8;ret ved R&#x00F8;nneb&#x00E6;ksholm.
+		Mindesten for afd&#x00F8;de Marie Grundtvig afsl&#x00F8;ret ved R&#x00F8;nneb&#x00E6;ksholm.
 	</event>
 
 	<event
 		start="Oct 03 1855 00:00:00 GMT"
 		textColor="#009799"
 		title="Johans bryllup">
-		Den &#x00E6;ldste s&#x00F8;n, <persName key="pe183">Johan</persName>, gifter sig i Christiania (Oslo) med <persName key="pe199">Vilhelmine (&#x0027;Mina&#x0027;) Stenersen</persName>.
+		Den &#x00E6;ldste s&#x00F8;n, Johan, gifter sig i Christiania (Oslo) med Vilhelmine (&#x0027;Mina&#x0027;) Stenersen.
 	</event>
 
 	<event
 		start="Apr 29 1856 00:00:00 GMT"
 		textColor="#009799"
 		title="Taber skifteretssag">
-		<persName key="pe4">Grundtvig</persName> m&#x00F8;der personligt for h&#x00F8;jesteret i skiftesagen efter <persName key="pe196">Marie</persName>; han taber sagen.
+		Grundtvig m&#x00F8;der personligt for h&#x00F8;jesteret i skiftesagen efter Marie; han taber sagen.
 	</event>
 
 	<event
 		start="Jun 20 1856 00:00:00 GMT"
 		textColor="#009799"
 		title="Taler for norske studenter">
-		<persName key="pe4">Grundtvig</persName> taler for norske studenter i Tivoli.
+		Grundtvig taler for norske studenter i Tivoli.
 	</event>
 
 	<event
@@ -1759,14 +1766,14 @@
 		start="Nov 03 1856 00:00:00 GMT"
 		textColor="#009799"
 		title="Marielyst H&#x00F8;iskole">
-		<persName key="pe4">Grundtvig</persName> &#x00E5;bner Marielyst H&#x00F8;iskole p&#x00E5; N&#x00F8;rrebro ved K&#x00F8;benhavn; den blev opkaldt efter hans anden hustru.
+		Grundtvig &#x00E5;bner Marielyst H&#x00F8;iskole p&#x00E5; N&#x00F8;rrebro ved K&#x00F8;benhavn; den blev opkaldt efter hans anden hustru.
 	</event>
 
 	<event
 		start="Jun 05 1857 00:00:00 GMT"
 		textColor="#009799"
 		title="Grundlovstale">
-		<persName key="pe4">Grundtvig</persName> taler ved grundlovsfest i Tivoli.
+		Grundtvig taler ved grundlovsfest i Tivoli.
 	</event>
 
 	<event
@@ -1775,7 +1782,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Skandinavisk kirkem&#x00F8;de">
-		14.-17. juli. <persName key="pe4">Grundtvig</persName> leverer flere bidrag til det skandinaviske kirkem&#x00F8;de i K&#x00F8;benhavn.
+		14.-17. juli. Grundtvig leverer flere bidrag til det skandinaviske kirkem&#x00F8;de i K&#x00F8;benhavn.
 	</event>
 
 	<event
@@ -1786,21 +1793,21 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Forlovet med Asta Reedtz">
-		Primo december. <persName key="pe4">Grundtvig</persName> forlover sig med fru <persName key="pe200">Asta Reedtz</persName>, f. komtesse Krag-Juel-Vind-Frijs.
+		Primo december. Grundtvig forlover sig med fru Asta Reedtz, f. komtesse Krag-Juel-Vind-Frijs.
 	</event>
 
 	<event
 		start="Dec 08 1857 00:00:00 GMT"
 		textColor="#009799"
 		title="Ligtale over J.C. Lindberg">
-		<persName key="pe4">Grundtvig</persName> holder ligtale over <persName key="pe80">Jac. Chr. Lindberg</persName>.
+		Grundtvig holder ligtale over Jac. Chr. Lindberg.
 	</event>
 
 	<event
 		start="Apr 16 1858 00:00:00 GMT"
 		textColor="#009799"
 		title="Tredje &#x00E6;gteskab">
-		Indg&#x00E5;r i Frederiksberg Kirke sit tredje &#x00E6;gteskab med <persName key="pe200">Asta Tugendreich Reedtz, f. komtesse Krag-Juel-Vind-Frijs</persName>.
+		Indg&#x00E5;r i Frederiksberg Kirke sit tredje &#x00E6;gteskab med Asta Tugendreich Reedtz, f. komtesse Krag-Juel-Vind-Frijs.
 	</event>
 
 	<event
@@ -1818,35 +1825,35 @@
 		start="Dec 10 1858 00:00:00 GMT"
 		textColor="#009799"
 		title="Svends bryllup">
-		S&#x00F8;nnen <persName key="pe135">Svend</persName> vies i Vartov til <persName key="pe201">Laura Jensine Christine Bloch</persName>.
+		S&#x00F8;nnen Svend vies i Vartov til Laura Jensine Christine Bloch.
 	</event>
 
 	<event
 		start="Feb 10 1860 00:00:00 GMT"
 		textColor="#009799"
 		title="Asta f&#x00F8;des">
-		<persName key="pe4">Grundtvig</persName>s yngste barn, <persName key="pe202">Asta Marie Elisabeth Frijs Grundtvig</persName>, f&#x00F8;des.
+		Grundtvigs yngste barn, Asta Marie Elisabeth Frijs Grundtvig, f&#x00F8;des.
 	</event>
 
 	<event
 		start="Jun 05 1860 00:00:00 GMT"
 		textColor="#009799"
 		title="Grundlovstale">
-		<persName key="pe4">Grundtvig</persName> taler ved grundlovsfest i Tivoli.
+		Grundtvig taler ved grundlovsfest i Tivoli.
 	</event>
 
 	<event
 		start="Jul 08 1860 00:00:00 GMT"
 		textColor="#009799"
 		title="Bj&#x00F8;rnson p&#x00E5; bes&#x00F8;g">
-		<persName key="pe204">Bj&#x00F8;rnstjerne Bj&#x00F8;rnson</persName> afl&#x00E6;gger bes&#x00F8;g hos <persName key="pe4">Grundtvig</persName> i dennes Villa Gladhjem p&#x00E5; Gl. Kongevej.
+		Bj&#x00F8;rnstjerne Bj&#x00F8;rnson afl&#x00E6;gger bes&#x00F8;g hos Grundtvig i dennes Villa Gladhjem p&#x00E5; Gl. Kongevej.
 	</event>
 
 	<event
 		start="May 29 1861 00:00:00 GMT"
 		textColor="#009799"
 		title="50-&#x00E5;rs pr&#x00E6;stejubil&#x00E6;um. Biskop">
-		I forbindelse med sit 50-&#x00E5;rs pr&#x00E6;stejubil&#x00E6;um tildeles <persName key="pe4">Grundtvig</persName> rang med Sj&#x00E6;llands biskop; stor festivitas, festgudstjeneste i Vartov, pr&#x00E6;gning af medalje m.m.
+		I forbindelse med sit 50-&#x00E5;rs pr&#x00E6;stejubil&#x00E6;um tildeles Grundtvig rang med Sj&#x00E6;llands biskop; stor festivitas, festgudstjeneste i Vartov, pr&#x00E6;gning af medalje m.m.
 	</event>
 
 	<event
@@ -1866,7 +1873,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Bes&#x00F8;g af Kold">
-		Sommer. <persName key="pe141">Christen Kold</persName> og den 18-&#x00E5;rige <persName key="pe205">Klaus Berntsen</persName> bes&#x00F8;ger <persName key="pe4">Grundtvig</persName> i hans hjem.
+		Sommer. Christen Kold og den 18-&#x00E5;rige Klaus Berntsen bes&#x00F8;ger Grundtvig i hans hjem.
 	</event>
 
 	<event
@@ -1877,7 +1884,7 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Portr&#x00E6;tteret af Marstrand og Constantin Hansen">
-		Sommer. <persName key="pe206">Constantin Hansen</persName> og <persName key="pe207">Wilhelm Marstrand</persName> maler hver deres portr&#x00E6;t af <persName key="pe4">Grundtvig</persName> p&#x00E5; Store Tuborg.
+		Sommer. Constantin Hansen og Wilhelm Marstrand maler hver deres portr&#x00E6;t af Grundtvig p&#x00E5; Store Tuborg.
 	</event>
 
 	<event
@@ -1893,7 +1900,7 @@
 		start="Dec 19 1863 00:00:00 GMT"
 		textColor="#009799"
 		title="Gudstjeneste ved Frederik 7.s d&#x00F8;d">
-		S&#x00F8;rgegudstjeneste i Vartov i anledning af <persName key="pe116">Frederik 7.</persName>s d&#x00F8;d.
+		S&#x00F8;rgegudstjeneste i Vartov i anledning af Frederik 7.s d&#x00F8;d.
 	</event>
 
 	<event
@@ -1902,35 +1909,35 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="25 &#x00E5;r i Vartov">
-		<persName key="pe4">Grundtvig</persName>s 25-&#x00E5;rs jubil&#x00E6;um i Vartov den 28. maj fejres ved gudstjenesten s&#x00F8;ndag den 29.
+		Grundtvigs 25-&#x00E5;rs jubil&#x00E6;um i Vartov den 28. maj fejres ved gudstjenesten s&#x00F8;ndag den 29.
 	</event>	
 
 	<event
 		start="Jun 23 1866 00:00:00 GMT"
 		textColor="#009799"
 		title="Landstingsmand">
-		<persName key="pe4">Grundtvig</persName> v&#x00E6;lges til landstingsmand for Horsens-kredsen.
+		Grundtvig v&#x00E6;lges til landstingsmand for Horsens-kredsen.
 	</event>
 
 	<event
 		start="Jul 26 1866 00:00:00 GMT"
 		textColor="#009799"
 		title="Kamp mod grundlovsrevisionen">
-		Sammen med <persName key="pe208">A.F. Tscherning</persName> henvender <persName key="pe4">Grundtvig</persName> sig til kong <persName key="pe140">Christian 9.</persName> med anmodning om, at han skal undlade at stadf&#x00E6;ste den reviderede grundlov; de n&#x00E6;gtes audiens.
+		Sammen med A.F. Tscherning henvender Grundtvig sig til kong Christian 9. med anmodning om, at han skal undlade at stadf&#x00E6;ste den reviderede grundlov; de n&#x00E6;gtes audiens.
 	</event>
 
 	<event
 		start="Apr 12 1867 00:00:00 GMT"
 		textColor="#009799"
 		title="Fotograferes af Rosenkilde">
-		<persName key="pe4">Grundtvig</persName> fotograferes i sit hjem af fotograf <persName key="pe209">Georg Rosenkilde</persName>.
+		Grundtvig fotograferes i sit hjem af fotograf Georg Rosenkilde.
 	</event>
 
 	<event
 		start="Apr 14 1867 00:00:00 GMT"
 		textColor="#009799"
 		title="Tredje psykiske krise">
-		Palmes&#x00F8;ndag. <persName key="pe4">Grundtvig</persName>s tredje store psykiske krise s&#x00E6;tter ind under gudstjenesten; i dagene derefter indgiver han sin afskedsans&#x00F8;gning, som dog ikke bliver taget til f&#x00F8;lge.
+		Palmes&#x00F8;ndag. Grundtvigs tredje store psykiske krise s&#x00E6;tter ind under gudstjenesten; i dagene derefter indgiver han sin afskedsans&#x00F8;gning, som dog ikke bliver taget til f&#x00F8;lge.
 	</event>
 
 	<event
@@ -1952,28 +1959,28 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="Flytter til Store Tuborg">
-		September. <persName key="pe4">Grundtvig</persName> flytter til sit sidste hjem, villaen Store Tuborg ved Strandvejen nord for K&#x00F8;benhavn, som hustruen havde k&#x00F8;bt sidst i august.
+		September. Grundtvig flytter til sit sidste hjem, villaen Store Tuborg ved Strandvejen nord for K&#x00F8;benhavn, som hustruen havde k&#x00F8;bt sidst i august.
 	</event>
 
 	<event
 		start="Dec 22 1867 00:00:00 GMT"
 		textColor="#009799"
 		title="Pr&#x00E6;diker igen">
-		4. s&#x00F8;ndag i advent pr&#x00E6;diker <persName key="pe4">Grundtvig</persName> i Vartov for f&#x00F8;rste gang siden p&#x00E5;ske.
+		4. s&#x00F8;ndag i advent pr&#x00E6;diker Grundtvig i Vartov for f&#x00F8;rste gang siden p&#x00E5;ske.
 	</event>
 
 	<event
 		start="Jun 16 1870 00:00:00 GMT"
 		textColor="#009799"
 		title="St&#x00F8;tter h&#x00F8;jskolen i Dalum">
-		<persName key="pe4">Grundtvig</persName> m.fl. opfordrer til at st&#x00F8;tte den nu afd&#x00F8;de <persName key="pe141">Christen Kold</persName>s h&#x00F8;jskole i Dalum p&#x00E5; Fyn.
+		Grundtvig m.fl. opfordrer til at st&#x00F8;tte den nu afd&#x00F8;de Christen Kolds h&#x00F8;jskole i Dalum p&#x00E5; Fyn.
 	</event>
 
 	<event
 		start="May 29 1871 00:00:00 GMT"
 		textColor="#009799"
 		title="60-&#x00E5;ret for ordinationen">
-		60-&#x00E5;rs jubil&#x00E6;umsfest for <persName key="pe4">Grundtvigs</persName> ordination med festgudstjeneste i Vartov, vennem&#x00F8;de og omfattende festligheder over flere dage.
+		60-&#x00E5;rs jubil&#x00E6;umsfest for Grundtvigs ordination med festgudstjeneste i Vartov, vennem&#x00F8;de og omfattende festligheder over flere dage.
 	</event>
 
 	<event
@@ -1982,35 +1989,35 @@
 		durationEvent="true"
 		textColor="#009799"
 		title="4. nordiske kirkem&#x00F8;de">
-		<persName key="pe4">Grundtvig</persName> bidrager til det 4. nordiske kirkem&#x00F8;de i K&#x00F8;benhavn.
+		Grundtvig bidrager til det 4. nordiske kirkem&#x00F8;de i K&#x00F8;benhavn.
 	</event>
 
 	<event
 		start="Sep 08 1871 00:00:00 GMT"
 		textColor="#009799"
 		title="F&#x00F8;dselsdagsm&#x00F8;de">
-		<persName key="pe4">Grundtvig</persName> taler under f&#x00F8;dselsdagsm&#x00F8;det ved hjemmet, Store Tuborg.
+		Grundtvig taler under f&#x00F8;dselsdagsm&#x00F8;det ved hjemmet, Store Tuborg.
 	</event>
 
 	<event
 		start="Aug 27 1872 00:00:00 GMT"
 		textColor="#009799"
 		title="Fotograferet af L&#x00F8;nborg">
-		<persName key="pe4">Grundtvig</persName> fotograferes i sit hjem af fotograf og litograf <persName key="pe210">Adolph L&#x00F8;nborg</persName>.
+		Grundtvig fotograferes i sit hjem af fotograf og litograf Adolph L&#x00F8;nborg.
 	</event>
 
 	<event
 		start="Sep 02 1872 00:00:00 GMT"
 		textColor="#009799"
 		title="Grundtvig d&#x00F8;r">
-		<persName key="pe4">Grundtvig</persName> d&#x00F8;r om eftermiddagen i sit hjem p&#x00E5; Store Tuborg, seks dage f&#x00F8;r sin 89-&#x00E5;rs f&#x00F8;dselsdag.
+		Grundtvig d&#x00F8;r om eftermiddagen i sit hjem p&#x00E5; Store Tuborg, seks dage f&#x00F8;r sin 89-&#x00E5;rs f&#x00F8;dselsdag.
 	</event>
 
 	<event
 		start="Sep 11 1872 00:00:00 GMT"
 		textColor="#009799"
 		title="Gravs&#x00E6;ttes p&#x00E5; K&#x00F8;ge &#x00C5;s">
-		Efter bis&#x00E6;ttelse fra Vor Frelsers Kirke hens&#x00E6;ttes kisten i gravkammeret p&#x00E5; Claras Kirkeg&#x00E5;rd p&#x00E5; K&#x00F8;ge &#x00C5;s ved siden af <persName key="pe4">Grundtvig</persName>s 2. hustru, <persName key="pe196">Marie</persName>.
+		Efter bis&#x00E6;ttelse fra Vor Frelsers Kirke hens&#x00E6;ttes kisten i gravkammeret p&#x00E5; Claras Kirkeg&#x00E5;rd p&#x00E5; K&#x00F8;ge &#x00C5;s ved siden af Grundtvigs 2. hustru, Marie.
 	</event>
 	    
 </data>

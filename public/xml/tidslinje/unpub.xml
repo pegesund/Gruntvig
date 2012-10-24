@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="timelineKorr.xsl"?>
-<?oxygen RNGSchema="timelinePV.rnc" type="compact"?>
+<?xml-model href="timelineRNC.rnc" type="application/relax-ng-compact-syntax"?>
 
 <data> 
 	
@@ -20,7 +20,11 @@
 			<change who="HY" when="2011-02-23">Fjernet mæslinger og valideret</change>
 			<change who="HY" when="2011-02-24">Sidste korrektur, afgang til fjeldlandet</change>
 			<change who="KSR" when="2011-02-27">durationEvent, textColor</change>
-			<change who="KSR" when="2011-03-01"><persName> og <rs> fjernet aht prøveversion; skema timelinePV.rnc; <hi rend=ital> udskiftet med 00BB og 00AB</change>
+			<change who="HY" when="2011-04-01">Indført rettelser fra skærmkorrektur</change>
+			<change who="HY" when="2011-06-29">Indført rettelser fra 2. redaktion</change>
+			<change who="KSR" when="2011-11-01">valideret i forhold til ret skema</change>
+			<change who="HY" when="2012-03-02">Sammensatte årstal skrevet helt ud</change>
+			<change who="JMR" when="2012-10-24">Fjernet persName, rs, placeName og hi</change>
 		</revisionDesc>
 	</dataHeader>
 	-->
@@ -29,7 +33,7 @@
 		start="Jan 02 1798 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Overs&#x00E6;tter Ovid">
-    		<persName key="pe4">Grundtvig</persName> p&#x00E5;begynder overs&#x00E6;ttelse af 1. bog af <persName key="pe264">Ovid</persName>s <hi rend="italic">Epistulae ex Ponto</hi> (<hi rend="italic">Ovidii breve fra Ponto</hi>), som han f&#x00E6;rdigg&#x00F8;r, hvorefter han overs&#x00E6;tter en del af 4. bog, som han signerer &#x201C;Nicolai Friderik Severin Grundtvig&#x201D;.
+    		Grundtvig p&#x00E5;begynder overs&#x00E6;ttelse af 1. bog af Ovids Epistulae ex Ponto (Ovidii breve fra Ponto), som han f&#x00E6;rdigg&#x00F8;r, hvorefter han overs&#x00E6;tter en del af 4. bog, som han signerer &#x201C;Nicolai Friderik Severin Grundtvig&#x201D;.
     	</event>
 
 	<event		
@@ -39,7 +43,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Sigurd og Brynhild. Sagnhistoriske rim">
-		Skriver under &#x00E5;rets f&#x00F8;rste Udby-ophold versfort&#x00E6;llingen <hi rend="italic">Sigurd og Brynhild.</hi>
+		Skriver under &#x00E5;rets f&#x00F8;rste Udby-ophold versfort&#x00E6;llingen Sigurd og Brynhild.
 	</event>
 	
 	<event	
@@ -50,7 +54,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Sagnhistoriske rim">
-		Inspireret af <persName key="pe7">P.F. Suhm</persName>: <hi rend="italic">Historie af Danmark</hi>, bd. 1, digter <persName key="pe4">Grundtvig</persName> flere rim med motiver fra nordisk sagnhistorie.
+		Inspireret af P.F. Suhm: Historie af Danmark, bd. 1, digter Grundtvig flere rim med motiver fra nordisk sagnhistorie.
 	</event>
 
 	<event		
@@ -64,7 +68,7 @@
 		start="Nov 28 1802 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Dagbog. Skoleholderne">
-		P&#x00E5;begynder dagbog; indsender samme dag <hi rend="italic">Skoleholderne, original Comedie i 3 Akter</hi> til Det Kongelige Teaters direktion; komedien forkastes.
+		P&#x00E5;begynder dagbog; indsender samme dag Skoleholderne, original Comedie i 3 Akter til Det Kongelige Teaters direktion; komedien forkastes.
 	</event>
 	
 	<event		
@@ -74,7 +78,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Brevet">
-		December 1802-29. juli 1803. Skriver komedien <hi rend="italic">Brevet</hi> i 4 akter.
+		December 1802-29. juli 1803. Skriver komedien Brevet i 4 akter.
 	</event>
 
 	<event		
@@ -83,7 +87,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Sigurd Fofnisbane">
-		Skriver udkast til s&#x00F8;rgespillet <hi rend="italic">Sigurd Fofnisbane. En Nordisk Tragedie. I 5 Akter.</hi>
+		Skriver udkast til s&#x00F8;rgespillet Sigurd Fofnisbane. En Nordisk Tragedie. I 5 Akter.
 	</event>
 	
 	<event		
@@ -97,7 +101,7 @@
 		start="Sep 11 1803 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Brevet opf&#x00F8;res">
-		<hi rend="italic">Brevet</hi> opf&#x00F8;rt som dilettantkomedie med <persName key="pe4">Grundtvig</persName> selv i en af rollerne.
+		Brevet opf&#x00F8;rt som dilettantkomedie med Grundtvig selv i en af rollerne.
 	</event>
 	
 	<event		
@@ -108,7 +112,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Ulfhild">
-		December. <hi rend="italic">Ulfhild, historisk Fort&#x00E6;lling</hi> f&#x00E6;rdigskrevet.
+		December. Ulfhild, historisk Fort&#x00E6;lling f&#x00E6;rdigskrevet.
 	</event>
 
 	<event	
@@ -125,7 +129,7 @@
 		start="May 14 1804 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Digt til s&#x00F8;steren">
-		F&#x00F8;dselsdagsdigt til s&#x00F8;steren <persName key="pe175">Ulrike Eleonore</persName>.
+		F&#x00F8;dselsdagsdigt til s&#x00F8;steren Ulrike Eleonore.
 	</event>
 	
 	<event		
@@ -143,7 +147,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Kritisk digt om Napoleon">
-		December. Skriver bl.a. et digt under indtryk af tyrannen <persName key="pe158">Napoleon</persName>s kejserkroning.
+		December. Skriver bl.a. et digt under indtryk af tyrannen Napoleons kejserkroning.
 	</event>
 
 	<event		
@@ -157,14 +161,14 @@
 		start="Apr 11 1805 00:00:00 GMT"
 		textColor="#9B8418"
 		title="F&#x00F8;dselsdagsdigt til Constance Leth">
-		F&#x00F8;rste f&#x00F8;dselsdagsdigt til den 28-&#x00E5;rige <persName key="pe14">Constance Steensen-Leth</persName>.
+		F&#x00F8;rste f&#x00F8;dselsdagsdigt til den 28-&#x00E5;rige Constance Steensen-Leth.
 	</event>
 	
 	<event		
 		start="Jul 11 1805 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Udtogs-Bog">
-		11. juli, datering af <hi rend="italic">Udtogs-Bog. F&#x00F8;rste Afdeling.</hi>
+		11. juli, datering af Udtogs-Bog. F&#x00F8;rste Afdeling.
 	</event>
 	
 	<event		
@@ -182,14 +186,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Optegnelser">
-		September. Vigtige optegnelser om poesi i <hi rend="italic">Dagbog for Aaret 1805.</hi>
+		September. Vigtige optegnelser om poesi i Dagbog for Aaret 1805.
 	</event>
 	
 	<event		
 		start="Dec 20 1805 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Optegnelse paa de B&#x00F8;ger jeg eier og eiende vorder">
-		P&#x00E5;begynder bogfortegnelsen <hi rend="italic">Optegnelse paa de B&#x00F8;ger jeg eier og eiende vorder.</hi>
+		P&#x00E5;begynder bogfortegnelsen Optegnelse paa de B&#x00F8;ger jeg eier og eiende vorder.
 	</event>
 
 	<event		
@@ -203,7 +207,7 @@
 		start="Mar 01 1806 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Skoledagbog for Carl">
-		<persName key="pe4">Grundtvig</persName> p&#x00E5;begynder skoledagbog for sin elev, <persName key="pe21">Carl Frederik Steensen-Leth.</persName>
+		Grundtvig p&#x00E5;begynder skoledagbog for sin elev, Carl Frederik Steensen-Leth.
 	</event> 
 	
 
@@ -215,7 +219,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Til Laura. Med en Fiol&#x201D;">
-		For&#x00E5;r (?). Digt til &#x201C;Laura&#x201D;, dvs. <persName key="pe14">Constance Leth</persName>, &#x201C;Til Laura. Med en Fiol&#x201D; (&#x201C;Jeg vandred tankefuld i Vaar&#x0085;&#x201D;). 
+		For&#x00E5;r (?). Digt til &#x201C;Laura&#x201D;, dvs. Constance Leth, &#x201C;Til Laura. Med en Fiol&#x201D; (&#x201C;Jeg vandred tankefuld i Vaar&#x0085;&#x201D;). 
 	</event>
 	
 	<event		
@@ -226,14 +230,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Til Laura, med en Rose&#x201D;">
-		Juni (?). Digt til &#x201C;Laura&#x201D;, dvs. <persName key="pe14">Constance Leth</persName>, &#x201C;Til Laura, med en Rose&#x201D; (&#x201C;Trygt i Ly for kaade Vinde&#x0085;&#x201D;). 
+		Juni (?). Digt til &#x201C;Laura&#x201D;, dvs. Constance Leth, &#x201C;Til Laura, med en Rose&#x201D; (&#x201C;Trygt i Ly for kaade Vinde&#x0085;&#x201D;). 
 	</event>
 	
 	<event		
 		start="May 06 1806 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Optegnelse om &#x201C;Tryllerinden&#x201D;">
-		Vigtig dagbogsoptegnelse om &#x201C;Tryllerinden&#x201D;, dvs. <persName key="pe14">Constance Leth</persName>. 
+		Vigtig dagbogsoptegnelse om &#x201C;Tryllerinden&#x201D;, dvs. Constance Leth. 
 	</event>
 	
 	<event		
@@ -251,7 +255,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Afskeden. Til Laura.&#x201D;">
-		Efter&#x00E5;r (september?). <persName key="pe14">Constance</persName> rejser til K&#x00F8;benhavn; digtet &#x201C;Afskeden. Til Laura.&#x201D;
+		Efter&#x00E5;r (september?). Constance rejser til K&#x00F8;benhavn; digtet &#x201C;Afskeden. Til Laura.&#x201D;
 	</event>
 	
 	<event		
@@ -290,21 +294,21 @@
 		start="May 15 1808 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Digt til Marie Blichers bryllup">
-		Digt til <persName key="pe170">Marie Blicher</persName>s bryllup med pastor <persName key="pe265">Poul Egede Glahn</persName>.
+		Digt til Marie Blichers bryllup med pastor Poul Egede Glahn.
 	</event>
 	
 	<event		
 		start="Oct 08 1808 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Versificeret brev til Molbech">
-		Versificeret brev til <persName key="pe23">Chr. Molbech</persName> p&#x00E5; dennes f&#x00F8;dselsdag.
+		Versificeret brev til Chr. Molbech p&#x00E5; dennes f&#x00F8;dselsdag.
 	</event>
 	
 	<event		
 		start="Nov 01 1808 00:00:00 GMT"
 		textColor="#9B8418"
 		title="L&#x00E6;rebog i Verdenshistorien">
-		<hi rend="italic">L&#x00E6;rebog i Verdenshistorien for de tvende &#x00F8;verste Klasser i Schouboes Institut. (1. Novbr. 1808).</hi>	
+		L&#x00E6;rebog i Verdenshistorien for de tvende &#x00F8;verste Klasser i Schouboes Institut. (1. Novbr. 1808).	
 	</event>
 
 	<event		
@@ -315,14 +319,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Udkast til en Afhandling om Dramaet">
-		<hi rend="italic">Udkast til en Afhandling om Dramaet og den dramatiske Historie af N. F. S. Grundtvig som Alumn paa Valkendorfs Kollegium April 1809</hi>
+		Udkast til en Afhandling om Dramaet og den dramatiske Historie af N. F. S. Grundtvig som Alumn paa Valkendorfs Kollegium April 1809
 	</event>
 
 	<event		
 		start="Jul 05 1810 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Erkl&#x00E6;ring om dimispr&#x00E6;dikenen">
-		<persName key="pe4">Grundtvig</persName>s erkl&#x00E6;ring til Det Teologiske Fakultet i aff&#x00E6;ren om hans dimispr&#x00E6;diken.
+		Grundtvigs erkl&#x00E6;ring til Det Teologiske Fakultet i aff&#x00E6;ren om hans dimispr&#x00E6;diken.
 	</event>
 	
 	<event		
@@ -342,14 +346,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Overs&#x00E6;ttelse af Werner: Martin Luther.">
-		April. Ufuldendt overs&#x00E6;ttelse af <persName key="pe266">Zacharias Werner</persName>s tragedie <hi rend="italic">Martin Luther.</hi>
+		April. Ufuldendt overs&#x00E6;ttelse af Zacharias Werners tragedie Martin Luther.
 	</event>
 	
 	<event		
 		start="Apr 11 1811 00:00:00 GMT"
 		textColor="#9B8418"
 		title="F&#x00F8;dselsdagsdigt til Constance Leth">
-		Sidste f&#x00F8;dselsdagsdigt til <persName key="pe14">Constance Steensen-Leth</persName>, &#x201C;Til en Veninde.&#x201D;
+		Sidste f&#x00F8;dselsdagsdigt til Constance Steensen-Leth, &#x201C;Til en Veninde.&#x201D;
 	</event>
 	
 	<event		
@@ -443,7 +447,7 @@
 		start="Nov 01 1813 00:00:00 GMT"
 		textColor="#9B8418"
 		title="&#x201C;Tr&#x00E6;nge vi til en Reformation, som den i Luthers Dage?&#x201D;">
-		Allehelgenspr&#x00E6;diken i K&#x00F8;benhavn, &#x201C;Tr&#x00E6;nge vi til en Reformation, som den i <persName key="pe42">Luther</persName>s Dage?&#x201D;
+		Allehelgenspr&#x00E6;diken i K&#x00F8;benhavn, &#x201C;Tr&#x00E6;nge vi til en Reformation, som den i Luthers Dage?&#x201D;
 	</event>
 
 	<event		
@@ -457,7 +461,7 @@
 		start="Jul 16 1814 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Nogle Pr&#x00E6;dikener efter Tidens Tarv">
-		Datering i Torkildstrup af fortalen i manuskriptet til <hi rend="italic">Nogle Pr&#x00E6;dikener efter Tidens Tarv</hi> (udkom aldrig).
+		Datering i Torkildstrup af fortalen i manuskriptet til Nogle Pr&#x00E6;dikener efter Tidens Tarv (udkom aldrig).
 	</event>
 	
 	<event		
@@ -471,7 +475,7 @@
 		start="Apr 16 1822 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Brev til Ingemann">
-		F&#x00F8;rste bevarede brev til <persName key="pe138">B.S. Ingemann</persName>.
+		F&#x00F8;rste bevarede brev til B.S. Ingemann.
 	</event>
 
 	<event		
@@ -489,14 +493,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;De Levendes Land&#x201D;">
-	Digtet &#x201C;O deilige Land&#x201D; eller &#x201C;De Levendes Land&#x201D; er muligvis f&#x00F8;rst skrevet 1825, dateringen er omstridt; publiceres 1832 i <persName key="pe77">L.C. Hagen</persName>: <hi rend="italic">Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom.</hi> (Publiceres senere i forskellige varianter af <persName key="pe135">Svend Grundtvig</persName> 1883 og af <persName key="pe267">Johan Borup</persName> 1912 efter det oprindelige, eneste bevarede kladdemanuskript).
+	Digtet &#x201C;O deilige Land&#x201D; eller &#x201C;De Levendes Land&#x201D; er muligvis f&#x00F8;rst skrevet 1825, dateringen er omstridt; publiceres 1832 i L.C. Hagen: Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom. (Publiceres senere i forskellige varianter af Svend Grundtvig 1883 og af Johan Borup 1912 efter det oprindelige, eneste bevarede kladdemanuskript).
 	</event>
 	
 	<event		
 		start="Jul 03 1824 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Rimbrev til Ingemann">
-		Rimbrev til <persName key="pe138">Ingemann</persName> som tak for dennes <hi rend="italic">Valdemar den Store og hans M&#x00E6;nd.</hi>
+		Rimbrev til Ingemann som tak for dennes Valdemar den Store og hans M&#x00E6;nd.
 	</event>
 	
 	<event		
@@ -524,14 +528,14 @@
 		start="Jan 28 1827 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Brev til Gunni Busck">
-		F&#x00F8;rste bevarede brev til pastor <persName key="pe142">Gunni Busck</persName>, Stigsbjergby ved Jyderup.
+		F&#x00F8;rste bevarede brev til pastor Gunni Busck, Stigsbjergby ved Jyderup.
 	</event>
 	
 	<event		
 		start="Mar 31 1832 00:00:00 GMT"
 		textColor="#9B8418"
 		title="&#x201C;Tag det sorte Kors fra Graven&#x201D;">
-		Sender <persName key="pe142">Gunni Busck</persName> en afskrift af sin nydigtede salme &#x201C;Tag det sorte Kors fra Graven&#x201D; (udkom december 1832 i <persName key="pe77">L.C. Hagen</persName> (red.): <hi rend="italic">Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom</hi>).
+		Sender Gunni Busck en afskrift af sin nydigtede salme &#x201C;Tag det sorte Kors fra Graven&#x201D; (udkom december 1832 i L.C. Hagen (red.): Historiske Psalmer og Riim til B&#x00F8;rne-L&#x00E6;rdom).
 	</event>
 
 	<event		
@@ -542,7 +546,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Digte til Marie Toft">
-		Ca. 4. august. To f&#x00F8;dselsdagsdigte til enkefru <persName key="pe196">Marie Toft</persName>, der i 1851 blev <persName key="pe4">Grundtvig</persName>s anden hustru.
+		Ca. 4. august. To f&#x00F8;dselsdagsdigte til enkefru Marie Toft, der i 1851 blev Grundtvigs anden hustru.
 	</event>
 
 	<event		
@@ -553,7 +557,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Klara Rafael.&#x201D;">
-		Maj (?). Digtet &#x201C;Klara Rafael&#x201D;, skrevet foran i et eksemplar af <persName key="pe134">Mathilde Fibigers</persName> <hi rend="italic">Clara Raphael. Tolv Breve</hi>, som <persName key="pe4">Grundtvig</persName> sendte til <persName key="pe196">Marie Toft.</persName>
+		Maj (?). Digtet &#x201C;Klara Rafael&#x201D;, skrevet foran i et eksemplar af Mathilde Fibigers Clara Raphael. Tolv Breve, som Grundtvig sendte til Marie Toft.
 	</event>
 	
 	<event		
@@ -563,14 +567,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Hvad er det, min Marie!&#x0085;&#x201D;">
-		Ca. 4. august. F&#x00F8;dselsdagsdigte til <persName key="pe196">Marie Toft</persName>, bl.a. &#x201C;Hvad er det, min Marie!&#x0085;&#x201D;
+		Ca. 4. august. F&#x00F8;dselsdagsdigte til Marie Toft, bl.a. &#x201C;Hvad er det, min Marie!&#x0085;&#x201D;
 	</event>
 
 	<event		
 		start="Aug 04 1852 00:00:00 GMT"
 		textColor="#9B8418"
 		title="&#x201C;Til min egen Marie&#x201D;">
-		F&#x00F8;dselsdagsdigte til <persName key="pe196">Marie Toft</persName>, &#x201C;Til min egen Marie (paa hendes Aarsdag 1852)&#x201D;, indeholdende fem digte.
+		F&#x00F8;dselsdagsdigte til Marie Toft, &#x201C;Til min egen Marie (paa hendes Aarsdag 1852)&#x201D;, indeholdende fem digte.
 	</event>
 
 	<event		
@@ -606,7 +610,7 @@
 		start="Mar 12 1858 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Digt til Asta">
-		<persName key="pe4">Grundtvig</persName> skriver f&#x00F8;dselsdagsdigt til sin kommende tredje hustru, <persName key="pe200">Asta Reedtz</persName>.
+		Grundtvig skriver f&#x00F8;dselsdagsdigt til sin kommende tredje hustru, Asta Reedtz.
 	</event>
 
 	<event		
@@ -617,7 +621,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Kirkehistoriske forel&#x00E6;sninger">
-		Vinteren 1860-1861. Kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som <hi rend="italic">Kirke-Speil.</hi>)
+		Vinteren 1860-1861. Kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som Kirke-Speil.)
 	</event>
 
 	<event		
@@ -628,14 +632,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Kirkehistoriske forel&#x00E6;sninger">
-		Vinteren 1861-1862. Forts&#x00E6;tter de kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som <hi rend="italic">Kirke-Speil.</hi>)
+		Vinteren 1861-1862. Forts&#x00E6;tter de kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som Kirke-Speil.)
 	</event>
 
 	<event		
 		start="Feb 21 1862 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Mindedigt over Marie Glahn">
-		<persName key="pe170">Bodil Marie Glahn, f. Blicher</persName>, s&#x00F8;ster til <persName key="pe4">Grundtvig</persName>s f&#x00F8;rste hustru, d&#x00F8;r i Sor&#x00F8;; <persName key="pe4">Grundtvig</persName> skriver et mindedigt.
+		Bodil Marie Glahn, f. Blicher, s&#x00F8;ster til Grundtvigs f&#x00F8;rste hustru, d&#x00F8;r i Sor&#x00F8;; Grundtvig skriver et mindedigt.
 	</event>
 	
 	<event		
@@ -646,7 +650,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Afslutter kirkehistoriske forel&#x00E6;sninger">
-		Vinteren 1862-1863. Afslutter de kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som <hi rend="italic">Kirke-Speil.</hi>)
+		Vinteren 1862-1863. Afslutter de kirkehistoriske hjemmeforel&#x00E6;sninger (udgivet 1871 som Kirke-Speil.)
 	</event>
 
 	<event		
@@ -657,7 +661,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="Nordens Myther">
-		I &#x00E5;rets l&#x00F8;b skriver <persName key="pe4">Grundtvig</persName> det store kvad <hi rend="italic">Nordens Myther</hi> (trykt i sin helhed 1930).
+		I &#x00E5;rets l&#x00F8;b skriver Grundtvig det store kvad Nordens Myther (trykt i sin helhed 1930).
 	</event>
 	
 	<event		
@@ -668,14 +672,14 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Oktober-Freden&#x201D;">
-		November eller december (?). I anledning af fredsslutningen 30. oktober, skriver <persName key="pe4">Grundtvig</persName> digtet &#x201C;Oktober-Freden&#x201D;.
+		November eller december (?). I anledning af fredsslutningen 30. oktober, skriver Grundtvig digtet &#x201C;Oktober-Freden&#x201D;.
 	</event>
 
 	<event		
 		start="Sep 05 1865 00:00:00 GMT"
 		textColor="#9B8418"
 		title="Taler for slesvigere">
-		<persName key="pe4">Grundtvig</persName> taler i Dyrehaven for et par tusinde slesvigere.
+		Grundtvig taler i Dyrehaven for et par tusinde slesvigere.
 	</event>
 
 	<event
@@ -686,7 +690,7 @@
 		durationEvent="true"
 		textColor="#9B8418"
 		title="&#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D;">
-		Medio august. Under en timelang samtale med forstander <persName key="pe269">Ernst Trier</persName>, Vallekilde H&#x00F8;jskoles grundl&#x00E6;gger, digter Grundtvig de sidste fire linjer af &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D; fra 1839 (udgivet med den nye slutning 1874 i <persName key="pe269">Trier</persName>s <hi rend="italic">Sange for den kristelige Folke-Skole</hi>).
+		Medio august. Under en timelang samtale med forstander Ernst Trier, Vallekilde H&#x00F8;jskoles grundl&#x00E6;gger, digter Grundtvig de sidste fire linjer af &#x201C;Et j&#x00E6;vnt og muntert, virksomt Liv paa Jord&#x201D; fra 1839 (udgivet med den nye slutning 1874 i Triers Sange for den kristelige Folke-Skole).
 	</event>
     
 </data>
