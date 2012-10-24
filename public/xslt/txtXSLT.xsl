@@ -604,10 +604,8 @@
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        <a hrel="{@facs}" class="app faksimile_viewer">
-            <xsl:text>|</xsl:text>
-                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-        </a>
+        <xsl:text>|</xsl:text>
+        <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
     </xsl:template>
     
         
