@@ -122,25 +122,23 @@
                 </td>
             </xsl:when>
             <xsl:when test="@rend='shortForm'">
-                <td colspan="{@cols}" class="shortForm">
+                <td colspan="{@cols}" class="shortForm" title="variantnavn">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="@cols and @rend='year'">
-                <td colspan="{@cols}" class="year">
+            <xsl:when test="@rend='source'">
+                <td colspan="{@cols}" class="source" title="titel">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="@cols and @rend='source'">
-                <td colspan="{@cols}" class="source">
+            <xsl:when test="@rend='comVariant'">
+                <td colspan="{@cols}" class="source" title="kommentar">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="@corresp">
-                <td>
-                    <a href="{@corresp}" target="_blank" class="reg">
-                        <xsl:apply-templates/>
-                    </a>
+            <xsl:when test="@rend='comEdition'">
+                <td colspan="{@cols}" class="source" title="oplysninger">
+                    <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
