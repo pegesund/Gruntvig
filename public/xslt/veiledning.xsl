@@ -70,7 +70,7 @@
     </xsl:template>
     -->
     <xsl:template match="tei:table"> 
-        <table>
+        <table style="font-size: 16px">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
@@ -82,7 +82,7 @@
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <td>
+        <td style="font-size: 16px">
             <xsl:apply-templates/>
         </td>
     </xsl:template>
