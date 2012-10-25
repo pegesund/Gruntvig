@@ -84,13 +84,23 @@
     </xsl:template>
     
     <xsl:template match="tei:row">        
-        <tr>
+        <tr style="
+        margin: 1em;
+        border: 1px solid black;
+        table-layout: fixed;
+        vertical-align: middle;
+        ">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <td>
+        <td style="
+        margin: 1em;
+        border: 1px solid black;
+        table-layout: fixed;
+        vertical-align: middle;
+        ">
             <xsl:apply-templates/>
         </td>
     </xsl:template>
