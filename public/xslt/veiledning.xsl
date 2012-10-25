@@ -62,23 +62,29 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+    <!--
     <xsl:template match="tei:table">        
+        <div style="font-size: 16px; width:100%;">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    -->
+    <xsl:template match="tei:table"> 
         <div style="font-size: 16px; width:100%;">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
     <xsl:template match="tei:row">        
-        <div>
+        <tr>
             <xsl:apply-templates/>
-        </div>
+        </tr>
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <span>
+        <td>
             <xsl:apply-templates/>
-        </span>
+        </td>
     </xsl:template>
 
 
