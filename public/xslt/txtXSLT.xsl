@@ -226,6 +226,10 @@
                     </div>
                     
                     <div class="kolofon">
+                        <xsl:text>XML ved Kim Steen Ravn</xsl:text>
+                    </div>
+                    
+                    <div class="kolofon">
                         <xsl:if test="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
                             <xsl:text>For hjælp til punktkommentarer takkes </xsl:text>
                             <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
