@@ -71,10 +71,12 @@
     -->
     <xsl:template match="tei:table"> 
         <div style="
+        font-size: 16px;
         margin: 1em 2em 1em 2em;
         border: 1px solid black;
         border-collapse: collapse;
         vertical-align: middle;
+        width:100%;
         table-layout: fixed;
         ">
             <xsl:apply-templates/>
