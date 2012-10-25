@@ -70,37 +70,19 @@
     </xsl:template>
     -->
     <xsl:template match="tei:table"> 
-        <div style="
-        font-size: 16px;
-        margin: 1em 2em 1em 2em;
-        border: 1px solid black;
-        border-collapse: collapse;
-        vertical-align: middle;
-        width:100%;
-        table-layout: fixed;
-        ">
+        <table>
             <xsl:apply-templates/>
-        </div>
+        </table>
     </xsl:template>
     
     <xsl:template match="tei:row">        
-        <tr style="
-        margin: 1em;
-        border: 1px solid black;
-        table-layout: fixed;
-        vertical-align: middle;
-        ">
+        <tr>
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
     <xsl:template match="tei:cell">        
-        <td style="
-        margin: 1em;
-        border: 1px solid black;
-        table-layout: fixed;
-        vertical-align: middle;
-        ">
+        <td>
             <xsl:apply-templates/>
         </td>
     </xsl:template>
