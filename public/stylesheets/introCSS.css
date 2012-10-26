@@ -308,3 +308,8 @@
         display: block;
         float: left; 
         }
+
+.innledningContent .docIn
+        {
+        color: red;
+        }
