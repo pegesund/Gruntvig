@@ -337,16 +337,6 @@
             </xsl:choose>            
         </span>
     </xsl:template>
-    
-    <xsl:template match="TEI:ref">
-        <xsl:choose>
-            <xsl:when test="@type='docIn'">
-                <a href="{@target}">
-                    <xsl:apply-templates/>
-                </a>
-            </xsl:when>            
-        </xsl:choose>
-    </xsl:template>
 
     
 </xsl:stylesheet>
