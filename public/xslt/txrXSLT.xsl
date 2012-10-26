@@ -147,13 +147,35 @@
             <xsl:apply-templates/>
         </br>        
     </xsl:template>
-    
+    <!--
     <xsl:template match="TEI:ref[@target and not(@select)]">
         <span class="ref">
             <a href="{@target}" target="_blank">
                 <xsl:apply-templates/>
             </a>
         </span>
+    </xsl:template>
+    -->
+    <xsl:template match="TEI:ref[@type]">
+            <xsl:choose>
+                <xsl:when test="@type='web'">
+                    <xsl:text>&lt;</xsl:text>
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                    <xsl:text>&gt;</xsl:text>
+                </xsl:when>
+                <xsl:when test="@select">                    
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>                
+                <xsl:when test="@type='docIn'">
+                    <a hrel="{@target}" class="docIn intro_menu">
+                       <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+            </xsl:choose>   
     </xsl:template>
 
     <xsl:template match="TEI:lg|TEI:l">
