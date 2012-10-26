@@ -340,13 +340,6 @@
     
     <xsl:template match="TEI:ref">
         <xsl:choose>
-            <xsl:when test="@type='web'">
-                <span class="web">
-                    <a href="{@target}">
-                        <xsl:apply-templates/>
-                    </a>
-                </span>                
-            </xsl:when>
             <xsl:when test="@type='docIn'">
                 <a href="{@target}">
                     <xsl:apply-templates/>
