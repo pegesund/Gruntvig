@@ -320,7 +320,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
-        <span class="web">
+        <span>
             <xsl:choose>
                 <xsl:when test="@type='web'">
                     <xsl:text>&lt;</xsl:text>
