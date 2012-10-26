@@ -309,7 +309,7 @@
         float: left; 
         }
 
-.innledningContent a.docIn
+.innledningContent .docIn
         {
-        text-decoration: underline;
+        text-decoration: underline; 
         }
