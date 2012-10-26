@@ -38,7 +38,7 @@
 
 .innledningContent a.toc
         {
-        text-decoration: none;
+        text-decoration: underline;
         color: #000000;
         }
 
