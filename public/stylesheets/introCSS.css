@@ -309,7 +309,7 @@
         float: left; 
         }
 
-.innledningContent .docIn
+.innledningContent a.docIn
         {
-        color: red;
+        text-decoration: underline;
         }
