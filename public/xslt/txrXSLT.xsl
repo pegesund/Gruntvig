@@ -171,7 +171,7 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@target}" class="toc txrmenu">
+                    <a hrel="{@target}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
