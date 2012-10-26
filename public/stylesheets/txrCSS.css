@@ -24,7 +24,7 @@ KSR: 2011.09.26: hi-element
 
 .mainTxr a.toc:hover
         {
-        color: #006633;
+        color: red;
         }
         
 .mainTxr .author
@@ -112,13 +112,13 @@ div.appInvisible
         margin-left: 1em;
         }
 
-mainTxr.toc a.docIn
+.toc a.docIn
         {
         text-decoration: underline;
         color: #000000;
         }
 
-mainTxr.toc a.docIn:hover
+.toc a.docIn:hover
         {
         color: #006633;
         }
