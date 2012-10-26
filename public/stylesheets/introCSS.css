@@ -39,7 +39,7 @@
 .innledningContent a.toc
         {
         text-decoration: none;
-        color: green;
+        color: #000000;
         }
 
 .innledningContent a.toc:hover
