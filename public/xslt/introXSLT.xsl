@@ -335,7 +335,7 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='docIn'">
-                    <a hrel="#{@target}">
+                    <a hrel="{@target}">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
