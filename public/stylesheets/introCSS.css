@@ -36,6 +36,17 @@
         color: gray;
         }
 
+.innledningContent a.docIn
+        {
+        text-decoration: underline;
+        color: #000000;
+        }
+
+.innledningContent a.docIn:hover
+        {
+        color: red;
+        }
+
 .innledningContent a.toc
         {
         text-decoration: none;
