@@ -107,7 +107,7 @@
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}">
+        <div class="head{@rend}" id="{@xml:id}">
             <a hrel="#retur" class="toc txrmenu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
