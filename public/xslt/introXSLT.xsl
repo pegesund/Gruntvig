@@ -84,14 +84,14 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:head">
+    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
         <a id="toc">
             <xsl:attribute name="id">
                 <xsl:text>AA</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}" id="#{@xml:id}">
+        <div class="head{@rend}" id="{@xml:id}">
             <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
