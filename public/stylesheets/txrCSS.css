@@ -111,6 +111,17 @@ div.appInvisible
         margin: 0em;
         margin-left: 1em;
         }
+
+.toc a.docIn
+        {
+        text-decoration: underline;
+        color: #000000;
+        }
+
+.toc a.docIn:hover
+        {
+        color: #006633;
+        }
  .toc a
         {
         color: #4DBC4D;
