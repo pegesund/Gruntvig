@@ -332,9 +332,9 @@
                     <a href="#http://{.}">
                         <xsl:apply-templates/>
                     </a>
-                </xsl:when>
+                </xsl:when>                
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@target}" class="toc intro_menu">
+                    <a hrel="{@target}" class="toc intro_menu" class="docIn">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
