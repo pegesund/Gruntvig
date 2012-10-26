@@ -36,13 +36,13 @@
         color: gray;
         }
 
-a.docIn
+.innledningContent a.docIn
         {
         text-decoration: underline;
         color: #000000;
         }
 
-a.docIn:hover
+.innledningContent a.docIn:hover
         {
         color: red;
         }
