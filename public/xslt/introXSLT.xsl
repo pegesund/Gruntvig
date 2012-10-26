@@ -334,7 +334,7 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='docIn'">
-                    <a href="{@target}" class="toc">
+                    <a hrel="{@target}" class="toc">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
