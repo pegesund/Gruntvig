@@ -91,7 +91,7 @@
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}">
+        <div class="head{@rend}" id="{@xml:id}>
             <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
@@ -338,12 +338,21 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:ref[@type='docIn' or @type='docOut']">
-        <span class="web">
-             <a href="{@target}">
-                 <xsl:apply-templates/>
-             </a>
-        </span>
+    <xsl:template match="TEI:ref">
+        <xsl:choose>
+            <xsl:when test="@type='web'">
+                <span class="web">
+                    <a href="{@target}">
+                        <xsl:apply-templates/>
+                    </a>
+                </span>                
+            </xsl:when>
+            <xsl:when test="@type='docIn'">
+                <a href="{@target}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>            
+        </xsl:choose>
     </xsl:template>
 
     
