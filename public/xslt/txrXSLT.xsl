@@ -416,36 +416,36 @@
         </span>
     </xsl:template>
     
-    <!-- til brugs for txtEditCSS-css start -->
-    
     <xsl:template match="TEI:persName">
-        <span class="persName">
+        <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <span class="placeName">
+        <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
-        <span class="rs_bible">
+        <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
-        <span class="rs_myth">
+        <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:rs[@type='title']">
-        <span class="rs_title">
+        <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        </span>
+        </a>
     </xsl:template>
+    -->
     
 </xsl:stylesheet>
