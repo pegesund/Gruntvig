@@ -45,6 +45,7 @@
 .innledningContent a.docIn:hover
         {
         color: #006633;
+        cursor: pointer;
         }
 
 .innledningContent a.toc
