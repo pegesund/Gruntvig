@@ -91,7 +91,7 @@
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}" hrel="#{@xml:id}">
+        <div class="head{@rend}" id="{@xml:id}">
             <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
@@ -335,7 +335,7 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='docIn'">
-                    <a href="{@target}">
+                    <a hrel="#{@target}">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
