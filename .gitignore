@@ -1,7 +1,11 @@
-/tmp/
+tmp/
+/tmp/*
 /db/
 *.xml
 /logs/
 /public/xml/
+/public/images/
+nbproject/project.xml
+/nbproject/
 !/public/xml/tidslinje/
 !/public/xml/veiledninger/
