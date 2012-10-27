@@ -7,7 +7,7 @@
 
 <!-- KSR: 2011.09.26 -->
 
-
+    <xsl:include href="popups.xsl"/>
 
     <xsl:template match="TEI:TEI">
 

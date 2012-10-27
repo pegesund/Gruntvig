@@ -123,10 +123,11 @@ public class Helpers {
      * Parse xml-string and return doc
      */
     public static Document stringToNode(String str) {
+        System.out.println("Trying to parse: " + str);
         Document doc = null;
         try {
             DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
-            domFactory.setNamespaceAware(true);
+            domFactory.setNamespaceAware(false);
             DocumentBuilder builder = domFactory.newDocumentBuilder();
             InputStream in = new ByteArrayInputStream(str.getBytes("UTF-8"));
             doc = builder.parse(in);

@@ -44,13 +44,17 @@ public class UploadXml extends Application {
         } else {
             asset = Asset.uploadXmlFile(filesname, comment, epub);
         }
+        if (fileName.equals("place.xml")) {
+            TextReference.uploadReferenceFilePlace(asset);
+        } else
         if (fileName.equals("myth.xml")
                 || fileName.equals("pers.xml")
-                || fileName.equals("place.xml")) {
+                ) {
             TextReference.uploadReferenceFile(asset);
         } else if (fileName.replace(".xml", "").endsWith("_com")) {
             TextReference.uploadComments(asset);
-        }
+        }        
+        
         if (asset == null) {
             Controller.renderHtml("Upload of file done: ");
         } else {

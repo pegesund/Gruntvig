@@ -19,29 +19,39 @@
                       // alert(index + ': ' + value);  
                        
                         nodes = [];
-                        $('div.place_title').each(function(index2) {
+                        $('div.row').not("div.row > div.row").each(function(index2) {
                     
-                            name = $(this).find('b').text();
+                            name = $(this).find('span.placeAltName,span.placeName').first().text();
                             firstLetter = name.charAt(0).toLowerCase();; 
                            // alert(firstLetter);
                             
-                            if(firstLetter == value){ 
+                            if(firstLetter == value){
                             
                                 $(this).hide();
 
-                                desc = $(this).find('i').text();
+                                desc = $(this).find('.placeContent').html() || "";
                                 
-                                node = '<tr><td class="navn"><a href="../steder#">' + name + '</a></td><td class="definisjon">' + desc + '</td></tr>';
+                                var header = $(this).find('span.placeHeader').html();
+                                var id = $(this).find('span.placeHeader').parent().attr("id");
+                                
+                                node = '<tr id="' + id + '"><td class="navn">' + header + '</td><td class="definisjon">' + desc + '</td></tr>';
+                                
+                                $(this).find("div.row").each(function (index3) {
+                                    var header = $(this).find('span.placeHeader').html();
+                                    // var id = $(this).find('span.placeHeader').attr("id");
+                                    desc = $(this).find('.placeContent').html() || "";
+                                    node += '<tr><td class="navn">' + '<span class="placeInnrykk">' + header + '</span></td><td class="definisjon">' + desc + '</td></tr>';
+                                });
                                 
                                 nodes.push(node);
-                                
-   
+                                $(this).remove();
+ 
                             }
 
 
                         });
                         
-                        nodes = nodes.sort().reverse();
+                        nodes = nodes.reverse();
                         //alert(nodes);
                         
                         $(nodes).each( function(index, value2) {
@@ -53,7 +63,19 @@
                 }); 
                 
                
-
+               $("a[name]").click(function(e) {
+                    e.preventDefault();
+                    var scrolltarget = $("#" + $(this).attr("name"));
+                    $.scrollTo(scrolltarget, 500);
+               }); 
+               
+                // get current location and scrolldown to this if exists
+                var loc = String(document.location);
+                var idx = loc.indexOf('#');
+                var href = (idx > 0) ? loc.substring(idx + 1) : "";
+                if (href) {
+                    $.scrollTo("#" + href, 500);
+                }
 
 		});
 
@@ -87,7 +109,7 @@
 
 	</div>
 
-	<div id="kolonne1_bred">
+	<div class="placelook" id="kolonne1_bred">
 
 		<h1>Stedregister</h1>
 		<p>En oversigt over centrale steder i Grundtvigs værker.</p>

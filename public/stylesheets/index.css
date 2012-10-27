@@ -1112,3 +1112,18 @@ h1.subtitle { margin-left: 0px !important; }
        
     #kolofon_page { width:100%; }
     #kolofon_page h2 { font-size: 1.5em; }
+    
+ /* popup for places */
+
+ span.placeHeader { visibility: hidden; }
+ 
+ span.placeHeader .placeName { 
+     visibility: visible;
+     color: blue;
+     padding: 15px;
+     padding-bottom: 30px;
+ }
+ 
+ div.placeContent { visibility: hidden; }
+ 
+ div.placeContent .explanation { visibility: visible }

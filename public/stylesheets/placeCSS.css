@@ -1,0 +1,53 @@
+/*
+placeCSS.css
+
+Kim Steen Ravn
+
+*/
+
+
+.placelook .placeInnrykk {
+    padding: 25px;
+    display: inline-block;
+}
+
+.placelook .fact {
+    width: 400px;
+    padding-left: 10px;
+}
+
+.placelook #liste .navn {
+    width: 300px;
+}
+
+.placelook a {
+    color: blue;
+    font-size: 75%    
+}
+        
+.placeName
+        {
+        color: blue
+        }
+        
+.altNameSyn
+        {
+        color: red
+        }
+        
+.altNameDia
+        {
+        color: green
+        }
+        
+.specify
+        {
+        color: gray;
+        }
+        
+.explanation
+        {
+        color: gray;
+        width: 400px;
+        padding-left: 10px;
+        }

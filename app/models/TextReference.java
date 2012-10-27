@@ -144,6 +144,35 @@ public class TextReference extends GenericModel {
             e.printStackTrace();
         }
     }
+    
+    
+    public static void uploadReferenceFilePlace(Asset asset) {
+        // System.out.println("Uploading reference-file: " + asset.html);
+        TextReference.delete("type = ?", asset.type);
+        try {
+            Document doc = Helpers.stringToNode(asset.html);
+            List<Node> refs = Helpers.getChildrenOfType(doc, "div");
+            System.out.println("Number of possible refs: " + refs.size());
+            for (Node ref : refs) {
+                if (ref.getAttributes().getNamedItem("id") == null) {
+                    System.out.println("not found id");
+                    continue;
+                } else System.out.println("Found id");
+                String id = ref.getAttributes().getNamedItem("id").getNodeValue();
+                if (id.equals("fak16")) {
+                    System.out.println("-------- Hey, its magic...: " + Helpers.nodeToString(ref));
+                }
+                // System.out.println("Creating ref-id: " + id);
+                TextReference textRef = new TextReference(id, -1, Helpers.nodeToString(ref), asset.type, asset.fileName);
+                // System.out.println("Ref: " + textRef.showName);
+                textRef.save();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
 
     /**
      * Get a reference based on its id
