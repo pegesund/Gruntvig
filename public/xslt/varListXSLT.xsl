@@ -132,12 +132,12 @@
                 </td>
             </xsl:when>
             <xsl:when test="@rend='comVariant'">
-                <td colspan="{@cols}" class="source" title="kommentar">
+                <td colspan="{@cols}" class="source" title="forhold til anden variant">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@rend='comEdition'">
-                <td colspan="{@cols}" class="source" title="oplysninger">
+                <td colspan="{@cols}" class="source" title="øvrige oplysninger">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
