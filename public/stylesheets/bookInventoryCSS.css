@@ -33,7 +33,7 @@
         margin: 0.5em
         }
 
-#bookinventory .frontPage
+#bookinventory div.frontPage
         {
             color: red;
         font-size: 144%;
