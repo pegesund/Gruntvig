@@ -10,7 +10,7 @@
 
 #bookinventory div.main
         {
-        font-size: 50%;
+        font-size: 144%;
         text-indent: 1em;
         }
 
@@ -35,6 +35,7 @@
 
 #bookinventory .frontPage
         {
+            color: red;
         font-size: 144%;
         text-align: center;
         line-height: 100%;
