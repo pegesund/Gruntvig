@@ -8,13 +8,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <div id="bookinventory">
-                <xsl:apply-templates select="TEI:text"/>
-        </div>
-        
-    </xsl:template>
-    
-    <xsl:template match="TEI:head[@type='bookInventory']">
+        <xsl:template match="TEI:head[@type='bookInventory']">
         <div class="bookInventory">
             <xsl:apply-templates/>
         </div>
@@ -60,7 +54,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:row">
-        <tr class="row">
+        <tr class="row" id="{@xml:id}">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
@@ -135,6 +129,5 @@
     <xsl:template name="conjunction">
         <xsl:if test="following-sibling::TEI:note[@type='author']">;</xsl:if>
     </xsl:template>
-    
     
 </xsl:stylesheet>
