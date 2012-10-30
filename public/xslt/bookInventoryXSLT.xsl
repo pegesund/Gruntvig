@@ -19,7 +19,7 @@
             <xsl:apply-templates/>
         </div>
         <div class="kbSignatur">
-            <xsl:text>Det Kongelige Bibliotek,</xsl:text>
+            <xsl:text>Det Kongelige Bibliotek, HAT</xsl:text>
         </div>
         <div class="kbSignatur">
             <xsl:text>katalogsignatur: </xsl:text>
