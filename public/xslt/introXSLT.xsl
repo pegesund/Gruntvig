@@ -328,6 +328,11 @@
                     </a>
                     <xsl:text>&gt;</xsl:text>
                 </xsl:when>
+                <xsl:when test="@type='image'">
+                    <a href="{@target}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
                 <xsl:when test="@select">                    
                     <a href="#http://{.}">
                         <xsl:apply-templates/>
