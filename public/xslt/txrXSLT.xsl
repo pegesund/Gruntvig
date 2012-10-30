@@ -166,7 +166,7 @@
                     <xsl:text>&gt;</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <a href="{@target}" class="app faksimile_viewer>
+                    <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
