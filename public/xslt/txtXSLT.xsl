@@ -700,5 +700,45 @@
         </a>
     </xsl:template>
     -->
+    
+    <!-- skilletegn START -->
+    
+    <xsl:template match="TEI:fw">
+        <xsl:choose>
+            <xsl:when test="@type='blank'">
+                <br/>
+                <br/>
+            </xsl:when>
+            <xsl:when test="@type='asterisk'">
+                <div class="asterisk">
+                    <xsl:text>&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='asterisk2'">
+                <div class="asterisk3">
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='asterisk3'">
+                <div class="asterisk3">
+                    <xsl:text>&#x002A;</xsl:text>
+                    <br/>
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='longLine'">
+                <div class="longLine">
+                    <hr align="center" width="16%"/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='shortLine'">
+                <div class="shortLine">
+                    <hr align="center" width="8%"/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- skilletegn END -->
 
 </xsl:stylesheet>
