@@ -1,13 +1,6 @@
 /* KSR: 2011.05.06 */
 
-#bookinventory div   
-        {
-        font-family:"Times New Roman";
-        font-size: 16px;
-        margin: 15px 10px;
-        }
-
-.bookInventory
+#bookinventory .bookInventory
         {
         font-size: 172%;
         text-align: center;
@@ -45,15 +38,9 @@
         font-size: 144%;
         text-align: center;
         line-height: 100%;
-        margin: 0.4em; 
+        margin: 1em;
         }
-        
-        
-    #bookinventory div:nth-child(4)
-        {
-            margin-top: 3em; 
-        }
-        
+
 #bookinventory .translator
         {
         font-size: 100%;
@@ -62,17 +49,17 @@
 
 #bookinventory table
         {
-        margin: 0 1em 1em;
-        border: 0px solid black;
+        margin: 1em;
+        border: 1px solid black;
         border-collapse: collapse;
         vertical-align: middle;
         table-layout: fixed;
         }
 
-#bookinventory td, #bookinventory tr
+#bookinventory td, tr
         {
-        margin: 1em; padding: 0.5em;
-        border: 1px solid #555;
+        margin: 1em;
+        border: 1px solid black;
         vertical-align: middle;
         table-layout: fixed;
         }
