@@ -9,7 +9,7 @@
     <xsl:template match="TEI:TEI">
         
         <div id="bookinventory">
-                <xsl:apply-templates select="TEI:text"/>
+            <xsl:apply-templates select="TEI:text"/>
         </div>
         
     </xsl:template>
