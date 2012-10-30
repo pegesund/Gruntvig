@@ -72,7 +72,11 @@ public class Ajax extends Application {
     
     public static void getVeiledning(String fileName) {
         Asset asset = Asset.find("fileName = ?", fileName + ".xml").first();
-        Controller.renderHtml(asset.html);
+        if (asset == null) {
+            Controller.renderHtml("");
+        } else {
+            Controller.renderHtml(asset.html);
+        }
     }
     
     public static void getChapter(long assetId, int chapterNum) {
