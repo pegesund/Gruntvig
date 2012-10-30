@@ -172,6 +172,7 @@
     <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
         </div>
     </xsl:template>
     
