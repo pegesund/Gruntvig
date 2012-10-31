@@ -81,8 +81,37 @@
         </td>
     </xsl:template>
     
-    
-
+    <xsl:template match="tei:ref[@type]">
+            <xsl:choose>
+                <xsl:when test="@type='web'">
+                    <xsl:text>&lt;</xsl:text>
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                    <xsl:text>&gt;</xsl:text>
+                </xsl:when>
+                <xsl:when test="@type='image'">
+                    <!--<a href="{@target}">-->
+                        <xsl:apply-templates/>
+                    <!--</a>-->
+                </xsl:when>
+                <xsl:when test="@select">                    
+                    <a href="#http://{.}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>                
+                <xsl:when test="@type='docIn'">
+                    <a hrel="{@target}" target="_blank">
+                       <xsl:apply-templates/>
+                    </a>
+                </xsl:when>                
+                <xsl:when test="@type='docOut'">
+                    <a hrel="{@target}" target="_blank">
+                       <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+            </xsl:choose>   
+    </xsl:template>
 
     <xsl:include href="popups.xsl"/>
 
