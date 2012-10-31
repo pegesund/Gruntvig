@@ -104,7 +104,7 @@
                     <a hrel="#{@target}" target="_blank">
                        <xsl:apply-templates/>
                     </a>
-                </xsl:when>-->                
+                </xsl:when>
                 <xsl:when test="@type='docOut'">
                     <!--<a hrel="#{@target}" target="_blank">-->
                        <xsl:apply-templates/>
