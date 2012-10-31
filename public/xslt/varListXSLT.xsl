@@ -170,31 +170,4 @@
     
     <xsl:template match="TEI:note"/>
     
-    <!--
-    <xsl:template match="TEI:row">
-        <tr class="row">
-            <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell">
-        <td class="simple">
-            <a href="{@corresp}" target="_blank" class="reg">
-                <xsl:apply-templates/>
-            </a>
-        </td>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@rend='regList']">
-        <td>
-            <a> 
-                <xsl:attribute name="href">
-                    <xsl:value-of select="text()" />
-                </xsl:attribute>
-                <xsl:apply-templates/>
-            </a>
-        </td>
-    </xsl:template>
-    -->
-    
 </xsl:stylesheet>
