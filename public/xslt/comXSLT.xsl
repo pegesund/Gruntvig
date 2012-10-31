@@ -92,7 +92,7 @@
                     <!--</a>-->
                 </xsl:when>              
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{TEI:note/@xml:id}" class="docIn txrmenu">
+                    <a hrel="{../@xml:id}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>                
