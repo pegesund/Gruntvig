@@ -92,9 +92,9 @@
                     <!--</a>-->
                 </xsl:when>              
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@id}" class="docIn txrmenu">
+                    <!--<a hrel="{@id}" class="docIn txrmenu">-->
                        <xsl:apply-templates/>
-                    </a>
+                    <!--</a>-->
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
                     <!--<a hrel="{@target}" class="docOut txrmenu">-->
