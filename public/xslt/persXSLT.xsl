@@ -64,7 +64,7 @@
             </span>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='year']"/>
             <xsl:if test="following-sibling::tei:cell[@rend!='year']">
-                <xsl:text>, </xsl:text>
+                <xsl:text>, HAT</xsl:text>
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
