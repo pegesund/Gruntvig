@@ -141,6 +141,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="@corresp">
+                <td class="simple">
+                    <a href="{@corresp}" target="_blank" class="reg">
+                        <xsl:apply-templates/>
+                    </a>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td>
                     <xsl:apply-templates/>
