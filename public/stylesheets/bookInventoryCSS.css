@@ -57,7 +57,7 @@
         table-layout: fixed;
         }
 
-#bookinventory td, tr
+#bookinventory tr
         {
         margin: 1em;
         border: 1px solid black;
@@ -65,6 +65,15 @@
         table-layout: fixed;
         }
 
+#bookinventory td
+        {
+        margin: 1em;
+        border: 1px solid black;
+        vertical-align: middle;
+        table-layout: fixed;
+        }
+        
+        
 #bookinventory td.nr
         {
         width: 10em
