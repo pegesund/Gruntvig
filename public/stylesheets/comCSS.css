@@ -109,3 +109,15 @@ div.appInvisible
         {
         display:none;
         }
+
+.kommentar a.docIn
+        {
+        text-decoration: underline;
+        color: #000000;
+        }
+
+.kommentar a.docIn:hover
+        {
+        color: #006633;
+        cursor: pointer;
+        }
