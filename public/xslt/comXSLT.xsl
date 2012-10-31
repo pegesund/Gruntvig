@@ -92,7 +92,7 @@
                     <!--</a>-->
                 </xsl:when>              
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{../@xml:id}" class="docIn txrmenu">
+                    <a hrel="{@xml:id}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>                
@@ -158,7 +158,7 @@
    </xsl:template>
    
    <xsl:template match="TEI:note[@xml:id]/TEI:p">
-       <div class="p">
+       <div class="p" id="retur{@xml:id}">
            <xsl:apply-templates/>
            <xsl:choose>
                <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
