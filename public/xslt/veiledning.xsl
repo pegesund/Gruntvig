@@ -84,9 +84,9 @@
     <xsl:template match="tei:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="#{@target}" target="_blank">-->
+                    <a hrel="#{@target}" target="_blank">
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
