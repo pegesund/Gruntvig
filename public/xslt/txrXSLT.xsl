@@ -179,6 +179,11 @@
                     <a hrel="{@target}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
+                </xsl:when>                
+                <xsl:when test="@type='docOut'">
+                    <!--<a hrel="{@target}" class="docIn txrmenu">-->
+                       <xsl:apply-templates/>
+                    <!--</a>-->
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
