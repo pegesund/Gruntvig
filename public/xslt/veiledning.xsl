@@ -103,12 +103,12 @@
                 <xsl:when test="@type='docIn'">
                     <a hrel="{@target}" target="_blank">
                        <xsl:apply-templates/>
-                    </a>-->
+                    </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="{@target}" class="docOut txrmenu">-->
+                    <a hrel="{@target}" target="_blank">
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
