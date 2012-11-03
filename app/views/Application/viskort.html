@@ -1,0 +1,32 @@
+#{extends 'main_kort.html' /}
+#{ header /}
+
+<script>
+    $(document).ready(function() {
+        
+            var image = $(".landKort img:first");
+            image.remove();
+            var iv1 = $("#viewer").iviewer({
+                src: image.attr("src"), 
+                update_on_resize: false,
+                zoom_animation: true,
+                zoom: 100,
+                zoom_base: 1,
+                zoom_delta: 1.05,
+                mousewheel: true
+            });
+    });
+    
+</script>
+            <div id="landKort" class="landKort">
+
+                <div class="mypad" style="padding:25px;"> </div>
+                <div class="container" >
+                    <div class="wrapper">
+                        <div id="viewer" class="viewer"></div>
+                    </div>
+                 ${asset.html.raw()}
+                </div>
+            </div>
+
+#{ footer /}

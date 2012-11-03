@@ -11,6 +11,16 @@
 
     .wrapper { overflow: hidden;  }
 
+div#landKort .viewer
+    {
+        border: none;
+        position: relative;
+        cursor: move;
+        cursor: -moz-grab !important;
+        width: 860px;
+        height: 550px;        
+    }
+    
 
 .iviewer_common {
     position:absolute;

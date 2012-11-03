@@ -31,18 +31,22 @@ public class UploadXml extends Application {
     }
 
     /**
-     * Handle upload of xml-file
-     * Check for file-type and create assets in database
+     * Handle upload of xml-theFile
+     * Check for theFile-type and create assets in database
      * 
      */
-    public static void uploadFile(String filesname, String comment, File epub) {
-        System.out.println("Starting upload");
+    public static void uploadFile(String filesname, String comment, File theFile) {
+        System.out.println("Starting upload of: " + filesname);
         Asset asset = null;
-        String fileName = epub.getName();
+        String fileName = theFile.getName();
         if (fileName.endsWith(".jpg")) {
-            Asset.uploadImage(filesname, comment, epub);
+            if (fileName.contains("_medium") || fileName.contains("_low")) {
+                Asset.uploadCountryImage(fileName, comment, theFile);
+            } else {
+                Asset.uploadImage(filesname, comment, theFile);
+            }
         } else {
-            asset = Asset.uploadXmlFile(filesname, comment, epub);
+            asset = Asset.uploadXmlFile(filesname, comment, theFile);
         }
         if (fileName.equals("place.xml")) {
             TextReference.uploadReferenceFilePlace(asset);
@@ -53,7 +57,7 @@ public class UploadXml extends Application {
             TextReference.uploadReferenceFile(asset);
         } else if (fileName.replace(".xml", "").endsWith("_com")) {
             TextReference.uploadComments(asset);
-        }        
+        }       
         
         if (asset == null) {
             Controller.renderHtml("Upload of file done: ");

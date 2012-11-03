@@ -75,6 +75,7 @@ public class Asset extends GenericModel {
     
     /* no enum-support in db, unfornately */
     public static String imageType = "imageType";
+    public static String countryImage = "countryuImage";
     public static String introType = "introType";
     public static String manusType = "manus";
     public static String rootType = "root";
@@ -89,6 +90,8 @@ public class Asset extends GenericModel {
     public static String bibleType = "bible";
     public static String registranten = "registranten";
     public static String bookinventory = "bookinventory";
+    public static String mapVej = "mapVej";
+    public static String mapXml = "mapXml";
 
     /**
      * Used by images
@@ -219,6 +222,16 @@ public class Asset extends GenericModel {
         }
     }
 
+    public static Asset uploadCountryImage(String name, String comment, File file) {
+        String fileName = file.getName();
+        Asset asset = new Asset(name, fileName, comment, Asset.countryImage);
+        asset.importDate = new Date();
+        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
+        Helpers.copyfile(file.getAbsolutePath(), filePath); 
+        asset.save();
+        return asset;
+    }
+    
     /**
      * 
      * Handles upload of fix-image
@@ -227,8 +240,8 @@ public class Asset extends GenericModel {
      * Asset with type Asset.imageType is created
      * 
      */
-    public static Asset uploadImage(String name, String comment, File epub) {
-        String fileName = epub.getName();
+    public static Asset uploadImage(String name, String comment, File file) {
+        String fileName = file.getName();
         fileName = fileName.replaceFirst("_fax", "_").replaceFirst("_0+", "_");
         Asset asset;
         if (Asset.find("fileName = ?", fileName).first() != null) {
@@ -241,7 +254,7 @@ public class Asset extends GenericModel {
         }
         asset.importDate = new Date();
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
-        Helpers.copyfile(epub.getAbsolutePath(), filePath);
+        Helpers.copyfile(file.getAbsolutePath(), filePath);
         String[] pictureNums = fileName.replace(".jpg", "").split("_");
         int pictureNum = Integer.parseInt(pictureNums[pictureNums.length - 1]);
         asset.pictureNumber = pictureNum;
@@ -276,7 +289,11 @@ public class Asset extends GenericModel {
         int variant = 0;
         String type;
         System.out.println("Epub name: " + epub.getName());
-        if (epub.getName().contains("_vej")) {
+        if (epub.getName().equals("map_vej.xml")) {
+            type = Asset.mapVej;
+        } else if (epub.getName().startsWith("map_")) {
+            type = Asset.mapXml;
+        } else if (epub.getName().contains("_vej")) {
             type = Asset.veiledningType;
         } else if (epub.getName().equals("place.xml")) {
             type = Asset.placeType;
@@ -332,7 +349,9 @@ public class Asset extends GenericModel {
         String html;
         
         // consider a hash :-)
-        if (type.equals(Asset.veiledningType)) {
+        if (type.equals(Asset.mapVej) || type.equals(Asset.mapXml)) {
+          html =  Asset.xmlRefToHtml(epub.getAbsolutePath(), "vejXSLT.xsl"); 
+        } else if (type.equals(Asset.veiledningType)) {
           html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "veiledning.xsl"));
         } else if (type.equals(Asset.placeType)) {
             html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "placeXSLT.xsl"));

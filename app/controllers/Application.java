@@ -55,6 +55,17 @@ public class Application extends Controller {
         render();
     }
 
+    public static void kort() {
+        Asset asset = Asset.find("fileName = ?", "map_vej.xml").first();
+        render(asset);
+    }
+
+    public static void viskort(String fileName) {
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        render(asset);
+    }
+    
+    
     // eksempel på en register/leksikon side
     public static void register_side() {
         render();
