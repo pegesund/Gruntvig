@@ -209,7 +209,8 @@ public class Asset extends GenericModel {
                 assetType.equals(Asset.commentType) ||
                 assetType.equals(Asset.introType) ||
                 assetType.equals(Asset.txrType) ||
-                assetType.equals(Asset.veiledningType)) return fileName;
+                assetType.equals(Asset.veiledningType) ||
+                assetType.equals(Asset.varListType)) return fileName;
         
         Pattern pattern = Pattern.compile("(.*)_.*\\d+$");
         Matcher matcher = pattern.matcher(fileName);
