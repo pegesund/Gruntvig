@@ -447,6 +447,15 @@
 
 /* titlePage END */
 
+/* rs START */
+
+#tekst_innhold a.rs_bible
+        {
+        text-decoration: none;
+        }
+
+/* rs END*/
+
 #tekst_innhold .witness
         {
         margin-left: 50px; 
