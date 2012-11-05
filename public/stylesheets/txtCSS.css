@@ -447,6 +447,15 @@
 
 /* titlePage END */
 
+/* rs START */
+
+#tekst_innhold .rs_bible
+        {
+        coloer: red;
+        }
+
+/* rs END*/
+
 #tekst_innhold .witness
         {
         margin-left: 50px; 
