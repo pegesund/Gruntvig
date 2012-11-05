@@ -612,16 +612,18 @@
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        <span class="size">
-        <xsl:text>|</xsl:text>
-        <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-        </span>
+            <span class="size">
+                <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
     </xsl:template>
     
         
     <xsl:template match="TEI:seg/TEI:pb">
-            <xsl:text>|</xsl:text>
+            <span class="size">
+                <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
     </xsl:template>
     
     
