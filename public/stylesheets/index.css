@@ -1124,6 +1124,11 @@ h1.subtitle { margin-left: 0px !important; }
      padding-bottom: 30px;
  }
  
+ div.fact {
+    visibility: hidden;
+}
+
+ 
  div.placeContent { visibility: hidden; }
  
  div.placeContent .explanation { visibility: visible }

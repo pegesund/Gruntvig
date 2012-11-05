@@ -21,8 +21,8 @@
                         nodes = [];
                         $('div.row').not("div.row > div.row").each(function(index2) {
                     
-                            name = $(this).find('span.placeAltName,span.placeName').first().text();
-                            firstLetter = name.charAt(0).toLowerCase();; 
+                            name = $.trim($(this).find('span.placeAltName,span.placeName').first().text());
+                            firstLetter = name.charAt(0).toLowerCase(); 
                            // alert(firstLetter);
                             
                             if(firstLetter == value){

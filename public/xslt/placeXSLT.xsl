@@ -3,6 +3,8 @@
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0">
+        
+    <xsl:strip-space elements="*"/>    
     
     <!-- 2012.06.20: Karsten Kynde & Kim Steen Ravn
          2012.07.03: Karsten Kynde og Niels Holger Berg -->
@@ -21,6 +23,15 @@
     
     <xsl:template match="TEI:head">
     </xsl:template>
+
+    <xsl:template match="TEI:del[@rend='afterComma']"/>
+    
+    <xsl:template match="TEI:del[@rend='afterComma']" mode="afterComma">
+
+        <xsl:text>, </xsl:text>
+        <xsl:apply-templates/>
+
+    </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='name']">
         <xsl:param name="copy"/>
@@ -32,6 +43,7 @@
           <span class="placeHeader">
             <span class="placeName">
                 <xsl:apply-templates/>
+                <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
             </span>
             <xsl:call-template name="comma-sep-list">
                 <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
@@ -55,6 +67,7 @@
             </xsl:apply-templates>
         </div>
     </xsl:template>
+
 
     <xsl:template match="TEI:cell[@rend='altNameSyn']" mode="comma-sep">
       <xsl:if test="position()=1"> (</xsl:if>
