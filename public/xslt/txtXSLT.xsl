@@ -684,7 +684,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
-        <a class="s_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+        <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
