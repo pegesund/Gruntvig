@@ -449,9 +449,9 @@
 
 /* rs START */
 
-#tekst_innhold .rs_bible
+#tekst_innhold a.rs_bible
         {
-        coloer: red;
+        text-decoration: none;
         }
 
 /* rs END*/
