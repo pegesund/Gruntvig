@@ -195,6 +195,22 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:rs[@type]">
+        <span>
+            <xsl:choose>
+                <xsl:when test="@type='bible'">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:when test="@type='title'">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:when test="@type='myth'">
+                    <xsl:apply-templates/>
+                </xsl:when>
+            </xsl:choose>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
