@@ -195,6 +195,38 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:persName">
+        <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:placeName">
+        <!--<a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">-->
+            <xsl:apply-templates/>
+        <!--</a>-->
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='bible']">
+        <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='myth']">
+        <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <!--
+    <xsl:template match="TEI:rs[@type='title']">
+        <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    -->
+    
     <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
