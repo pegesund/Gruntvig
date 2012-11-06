@@ -5,6 +5,9 @@ Kim Steen Ravn
 
 */
 
+div.fact {
+    visibility: hidden;
+}
 
 .placelook .placeInnrykk {
     padding: 25px;
