@@ -66,12 +66,25 @@
         
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:ref[@type='web']">
         <span class="web">
             <xsl:text>&lt;</xsl:text>
             <a href="http://{.}" target="_blank">
                 <xsl:apply-templates/>
             </a>
+            <xsl:text>&gt;</xsl:text>
+        </span>
+    </xsl:template>
+    -->
+    
+    
+    <xsl:template match="TEI:ref[@type='web']">
+        <span>
+            <xsl:text>&lt;</xsl:text>
+            
+                <xsl:apply-templates/>
+            
             <xsl:text>&gt;</xsl:text>
         </span>
     </xsl:template>
