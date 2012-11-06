@@ -93,7 +93,7 @@
                 </xsl:when>
                 <xsl:when test="@type='web'">
                     <xsl:text>&lt;</xsl:text>
-                    <a href="#http://{.}" target="_blank">
+                    <a href="http://{.}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
                     <xsl:text>&gt;</xsl:text>
