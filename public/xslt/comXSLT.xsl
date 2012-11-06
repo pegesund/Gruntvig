@@ -66,29 +66,6 @@
         
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:ref[@type='web']">
-        <span class="web">
-            <xsl:text>&lt;</xsl:text>
-            <a href="http://{.}" target="_blank">
-                <xsl:apply-templates/>
-            </a>
-            <xsl:text>&gt;</xsl:text>
-        </span>
-    </xsl:template>
-    -->
-    
-    
-    <xsl:template match="TEI:ref[@type='web']">
-        <span>
-            <xsl:text>&lt;</xsl:text>
-            
-                <xsl:apply-templates/>
-            
-            <xsl:text>&gt;</xsl:text>
-        </span>
-    </xsl:template>
-    
     <xsl:template match="TEI:ref[@select or @target]">
         <span class="web">
             <a href="{@target}" target="_blank">
@@ -98,12 +75,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
-            <xsl:choose>
-                <xsl:when test="@type='image'">
-                    <!--<a href="{@target}">-->
-                        <xsl:apply-templates/>
-                    <!--</a>-->
-                </xsl:when>              
+            <xsl:choose>              
                 <xsl:when test="@type='docIn'">
                     <!--<a hrel="{@id}" class="docIn txrmenu">-->
                        <xsl:apply-templates/>
@@ -113,6 +85,16 @@
                     <!--<a hrel="{@target}" class="docOut txrmenu">-->
                        <xsl:apply-templates/>
                     <!--</a>-->
+                </xsl:when>
+                <xsl:when test="@type='image'">
+                    <!--<a href="{@target}">-->
+                        <xsl:apply-templates/>
+                    <!--</a>-->
+                </xsl:when>
+                <xsl:when test="@type='web'">
+                    <a href="http://{.}" target="_blank">
+                        <xsl:apply-templates/>
+                    </a>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
