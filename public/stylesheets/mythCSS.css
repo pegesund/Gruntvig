@@ -58,7 +58,12 @@
 .myth .popUp
         {
         margin: 0.5em 0em 0.5em 0em;
+        visibility: visible;
         }
+        
+div#cluetip-inner .row {
+        visibility: hidden;
+}
 
 .myth .orthography
         {
