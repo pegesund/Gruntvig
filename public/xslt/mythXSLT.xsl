@@ -69,7 +69,7 @@
     <xsl:template match="TEI:cell[@rend='normForm']">
         <div class="{@rend}">
             <xsl:variable name="theId" select="../@xml:id"/>
-            <a href="myter#{$theId}" target="_blank">
+            <a href="myter#{$theId}">
                 <xsl:apply-templates/>
             </a>    
         </div>
@@ -87,7 +87,7 @@
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <a href="myter#{$sameAs}" target="_blank">
+                <a href="myter#{$sameAs}">
                     <xsl:text> > </xsl:text>                    
                     <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
                 </a>

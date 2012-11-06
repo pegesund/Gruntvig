@@ -75,7 +75,7 @@
                                 content = '';
                                 
                                 
-                                internal_link = $(this).find("a").attr("href").substr(1);
+                                internal_link = $(this).find("a").attr("href").substr(6);
                                 
                                 firstLetter2 = name.charAt(0).toLowerCase();
                                 
@@ -108,8 +108,9 @@
                
                $("a[name]").click(function(e) {
                     e.preventDefault();
+                    alert("Name: " + $(this).attr("name"));
                     var scrolltarget = $("#X" + $(this).attr("name"));
-                    // alert("Scrolling to: " + scrolltarget.position().top);
+                    // alert("Scrolling to: " + scrolltarget.html());
                     $.scrollTo(scrolltarget, 500);
                }); 
                
