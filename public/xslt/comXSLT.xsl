@@ -195,6 +195,7 @@
         </div>
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:persName">
         <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
@@ -202,9 +203,9 @@
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <!--<a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">-->
+        <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        <!--</a>-->
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
@@ -219,7 +220,7 @@
         </a>
     </xsl:template>
     
-    <!--
+    
     <xsl:template match="TEI:rs[@type='title']">
         <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
