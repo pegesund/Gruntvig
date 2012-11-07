@@ -761,7 +761,14 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 .variantContent .orthographic { background-color: #bbcedb;}
 
 /* farger/stiler START */
-        
+
+div.source
+        {
+        font-size: 100%;
+        margin: 2em 0em 2em 0em;
+        text-align: left;
+        }
+
 span.firstDel
         {
         text-decoration: line-through;
