@@ -320,7 +320,7 @@
             <xsl:choose>
                 <xsl:when test="@type='web'">
                     <xsl:text>&lt;</xsl:text>
-                    <a href="{@target}" target=_blank">
+                    <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
                     <xsl:text>&gt;</xsl:text>
