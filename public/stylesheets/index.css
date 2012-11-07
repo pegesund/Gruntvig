@@ -1,4 +1,4 @@
-/* Meyer reset */
+sec/* Meyer reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -760,12 +760,39 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 .variantContent .ortografisk { background-color: #bbcedb;}
 .variantContent .orthographic { background-color: #bbcedb;}
 
-/* farger/stiler for manusvisning */
+/* farger/stiler START */
+        
+span.firstDel
+        {
+        text-decoration: line-through;
+        }
+        
+span.immediate 
+        {
+        color: #4DBC4D;
+        }
+        
+span.secondDel 
+        {
+        color: red;
+        text-decoration: line-through;
+        background: url('../img/stripe_test2_h.png') repeat 0 0;
+        }
 
-span.later { color: red }
-span.firstDel { text-decoration: line-through;}
-span.secondDel { background: url('../img/stripe_test2_h.png') repeat 0 0;  }
-span.immediate { color: #4DBC4D; }
+span.shading
+        {
+        background-color: silver;
+        background-image: url('../img/stripe_test2_h.png');
+        background-repeat: repeat;
+        }
+
+span.thirdDel
+        {
+        color: red;
+        text-decoration: line-through;
+        }
+
+/* farger/stiler END */
 
 /* farger/stiler for kommentar_visning START */
 
