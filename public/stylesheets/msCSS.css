@@ -70,7 +70,7 @@ span.appInvisible
 div.title
         {
         font-size: 110%;
-        margin: 1em 0em 1em 0em;
+        margin: 1em 0em 2em 0em;
         text-align: center;
         }
 
@@ -78,7 +78,7 @@ div.source
         {
         font-size: 90%;
         line-height: 100%;
-        margin: 1em 0em 1em 0em;
+        margin: 2em 0em 1em 0em;
         }
 
 .manusMain body   
