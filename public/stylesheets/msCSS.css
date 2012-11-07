@@ -55,11 +55,6 @@ span.appInvisible
 
 .manusMain .secondDel
         {
-        text-decoration: line-through;
-        }
-
-.manusMain .secondDel
-        {
         color: red;
         }
 
