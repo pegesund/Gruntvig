@@ -76,9 +76,9 @@ span.appInvisible
 
 .manusMain div.source
         {
-        font-size: 90%;
-        line-height: 100%;
-        margin: 2em 0em 1em 0em;
+        font-size: 100%;
+        margin: 2em 0em 2em 0em;
+        text-align: left;
         }
 
 .manusMain body   
