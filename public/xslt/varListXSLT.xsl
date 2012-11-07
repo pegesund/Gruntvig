@@ -141,11 +141,13 @@
                 </td>
             </xsl:when>
             <xsl:when test="@corresp">
-                <tr class="simple">
+                <ol class="simple"><li>
                     <a href="{@corresp}" target="_blank" class="reg">
                         <xsl:apply-templates/>
                     </a>
-                </tr>
+                </li>
+                    
+                </ol>
             </xsl:when>
             <xsl:otherwise>
                 <td>
