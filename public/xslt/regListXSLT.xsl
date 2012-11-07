@@ -50,7 +50,7 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:cell>
+    <xsl:template match="TEI:cell">
         <td class="simple">
             <a href="{@corresp}" target="_blank" class="reg">
                 <xsl:apply-templates/>
