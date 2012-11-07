@@ -51,11 +51,11 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell">
-        <tr class="row">
+        <td class="simple">
             <a href="{@corresp}" target="_blank" class="reg">
                 <xsl:apply-templates/>
             </a>
-        </tr>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
