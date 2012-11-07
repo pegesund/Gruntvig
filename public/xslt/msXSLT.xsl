@@ -198,7 +198,7 @@
     </xsl:template>
     
     <xsl:template match="tei:del[@type='secondDel']">
-        <span class="secondDel">
+        <span class="secondDe">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
