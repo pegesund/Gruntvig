@@ -17,6 +17,7 @@
     <xsl:include href="popups.xsl"/>
     
     <xsl:template match="tei:teiHeader">
+        
         <div class="title">
             <xsl:if test="//tei:title[@type='main']">
                 <i><xsl:apply-templates select="//tei:title[@type='main']"/></i>
@@ -25,6 +26,7 @@
                 <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="//tei:title[@type='part']"/><xsl:text>&#x201D;</xsl:text>
             </xsl:if>            
         </div>
+        
         <div class="source">
             <xsl:text>Tekstkilde:</xsl:text>
             <br/>
@@ -41,6 +43,7 @@
                 <xsl:apply-templates select="."/>
             </xsl:for-each>
         </div>
+        
     </xsl:template>
  
     
