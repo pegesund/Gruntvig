@@ -764,8 +764,15 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 div.source
         {
-        font-size: 100%;
-        margin: 2em 0em 2em 0em;
+        font-size: 90%;
+        margin: 2em 0em 1em 0em;
+        text-align: left;
+        }
+
+div.title
+        {
+        font-size: 90%;
+        margin: 1em 0em 1em 0em;
         text-align: left;
         }
 
