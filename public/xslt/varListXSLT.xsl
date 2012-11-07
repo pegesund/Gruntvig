@@ -71,10 +71,6 @@
                     
                 </xsl:if>
                 
-                <xsl:if test="TEI:body/TEI:div[@type='regList']">
-                    <xsl:text>hat</xsl:text>
-                </xsl:if>
-                
                 <xsl:apply-templates select="TEI:text"/>
                 
         </div>
@@ -152,9 +148,11 @@
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td>
-                    <xsl:apply-templates/>
-                </td>
+                <ol>
+                    <li>
+                        <xsl:apply-templates/>
+                    </li>
+                </ol>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
