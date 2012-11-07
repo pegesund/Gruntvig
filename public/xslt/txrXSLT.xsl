@@ -217,6 +217,7 @@
                 <xsl:for-each select="TEI:item">
                     <li class="decimal">
                         <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
@@ -262,6 +263,7 @@
                 <xsl:for-each select="TEI:item">
                     <li class="simple">
                         <xsl:apply-templates/>
+                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
