@@ -746,21 +746,50 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 #kolonne1_bred { width: 630px; float:left; margin:0px 26px 0 0; min-height:600px;}
 
 
-/* farger for variantvisning */
+/* variantvisning START */
 
-.variantContent .substantiel { background-color: #cacaca;}
-.variantContent .substantial { background-color: #cacaca;}
+.variantContent .substantiel
+        { 
+        background-color: #cacaca;
+        }
+        
+.variantContent .substantial
+        { 
+        background-color: #cacaca;
+        }
 
-.variantContent .interpunktion { background-color: #dbc9bb;}
-.variantContent .interpunction { background-color: #dbc9bb;}
+.variantContent .interpunktion
+        { 
+        background-color: #dbc9bb;
+        }
+.variantContent .interpunction
+        { 
+        background-color: #dbc9bb;
+        }
 
-.variantContent .identisk { background-color: #adcfaf;}
-.variantContent .identical { background-color: #adcfaf;}
+.variantContent .identisk
+        { 
+        background-color: #adcfaf;
+        }
+        
+.variantContent .identical
+        { 
+        background-color: #adcfaf;
+        }
 
-.variantContent .ortografisk { background-color: #bbcedb;}
-.variantContent .orthographic { background-color: #bbcedb;}
+.variantContent .ortografisk
+        { 
+        background-color: #bbcedb;
+        }
+        
+.variantContent .orthographic
+        { 
+        background-color: #bbcedb;
+        }
 
-/* farger/stiler START */
+/* variantvisning END */
+        
+/* manuskripter START */
 
 div.source
         {
@@ -806,7 +835,7 @@ span.thirdDel
         text-decoration: line-through;
         }
 
-/* farger/stiler END */
+/* manuskripter END */
 
 /* farger/stiler for kommentar_visning START */
 
