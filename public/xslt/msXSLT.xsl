@@ -330,41 +330,40 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        <a href="{@facs}">            
-            <span class="pbA">
+    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='text' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbA">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
-            </span>            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>]
-            </span> 
-        </a>       
+            </a>
+       </span>       
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and not(@rend='supp')]">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>
-            </span> 
-        </a>        
+            </a>
+        </span>         
     </xsl:template>
     
     <xsl:template name="delimiterComma">
