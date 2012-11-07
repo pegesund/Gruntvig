@@ -236,9 +236,26 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #høyre_innhold h2 {font-family: arial, myriad-pro, sans-serif; font-size: 1.4em; margin: 15px 0 4px 0;} /* Undertittel */
 #høyre_innhold h3 {font-family: arial, myriad-pro, sans-serif; font-size: 1.2em; margin: 16px 0 4px 0; line-height:1em;} /* Underundertittel */
 
-	/* Faksimilevisning */
-	#høyre_innhold_faksimile{ float:left; width:405px; height:642px; background: #f4f4f4; border: 1px solid #e2e2e2; border-top:0px; overflow:auto; padding:15px 25px 12px 25px; font-size: 1.4em; font-family: arial, myriad-pro, sans-serif; color: #444; line-height: 1.5em; }
+/* faksimilevisning START */
 
+#høyre_innhold_faksimile
+        {
+        float:left;
+        width:405px;
+        height:642px;
+        background: #f4f4f4; 
+        border: 1px solid #e2e2e2; 
+        border-top:0px; 
+        overflow:auto; 
+        padding:15px 25px 12px 25px; 
+        font-size: 1.4em; 
+        font-family: arial, myriad-pro, sans-serif; 
+        color: #444; 
+        line-height: 1.5em; 
+        }
+
+/* faksimilevisning END */
+        
 /* Overskriv jQuery UI til fanemeny i høyre kolonne */
 .ui-tabs {padding:0;}
 .ui-tabs .ui-tabs-nav {padding:0;}
