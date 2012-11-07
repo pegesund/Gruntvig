@@ -335,7 +335,7 @@
             <xsl:when test="@type='textualCriticismPluralis'">                
                 <xsl:text>Der er foretaget følgende tekstrettelser (se vejledning til de tekstkritiske noter):</xsl:text>
                 <table class="textualCriticism">
-                    <tr bgcolor="lightgray">
+                    <tr>
                         <td>Side</td>
                         <td>Note</td>
                     </tr>
