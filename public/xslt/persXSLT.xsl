@@ -63,7 +63,7 @@
                 <xsl:call-template name="name"/>
             </span>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='year']"/>
-            <xsl:if test="following-sibling::tei:cell[@rend!='year']">
+            <xsl:if test="following-sibling::tei:cell[@rend='encyc']">
                 <xsl:text>, </xsl:text>
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
