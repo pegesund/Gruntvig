@@ -35,7 +35,8 @@ public class UploadXml extends Application {
      * Check for theFile-type and create assets in database
      * 
      */
-    public static void uploadFile(String filesname, String comment, File theFile) {
+    public static void uploadFile(String filesname, String comment, File epub) {
+        File theFile = epub;
         System.out.println("Starting upload of: " + filesname);
         Asset asset = null;
         String fileName = theFile.getName();
