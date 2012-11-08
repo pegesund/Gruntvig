@@ -71,7 +71,6 @@
                     
                 </xsl:if>
                 
-                
                 <xsl:apply-templates select="TEI:text"/>
                 
         </div>
@@ -142,11 +141,13 @@
                 </td>
             </xsl:when>
             <xsl:when test="@corresp">
-                <td class="simple">
-                    <a href="{@corresp}" target="_blank" class="reg">
-                        <xsl:apply-templates/>
-                    </a>
-                </td>
+                <ol class="simple">
+                    <li>
+                        <a href="{@corresp}" target="_blank" class="reg">
+                            <xsl:apply-templates/>
+                        </a>
+                    </li>
+                </ol>
             </xsl:when>
             <xsl:otherwise>
                 <td>
