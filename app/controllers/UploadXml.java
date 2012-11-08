@@ -54,6 +54,7 @@ public class UploadXml extends Application {
         } else
         if (fileName.equals("myth.xml")
                 || fileName.equals("pers.xml")
+                || fileName.equals("bible.xml")
                 ) {
             TextReference.uploadReferenceFile(asset);
         } else if (fileName.replace(".xml", "").endsWith("_com")) {
