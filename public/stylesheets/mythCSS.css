@@ -61,13 +61,10 @@
         visibility: visible;
         }
         
-div#cluetip-inner .row {
+div#cluetip-inner .myth {
         visibility: hidden;
 }
 
-div#cluetip-inner .person .row {
-        visibility: hidden;
-}
 
 .myth .orthography
         {
