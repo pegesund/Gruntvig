@@ -55,12 +55,8 @@ span.appInvisible
 
 .manusMain .secondDel
         {
-        text-decoration: line-through;
-        }
-
-.manusMain .secondDel
-        {
         color: red;
+        text-decoration: line-through;
         }
 
 /* app end */
@@ -71,18 +67,18 @@ span.appInvisible
         margin: 2em 0em 2em 0em;
         }
 
-div.title
+.manusMain div.title
         {
         font-size: 110%;
-        margin: 1em 0em 1em 0em;
+        margin: 1em 0em 2em 0em;
         text-align: center;
         }
 
-div.source
+.manusMain div.source
         {
-        font-size: 90%;
-        line-height: 100%;
-        margin: 1em 0em 1em 0em;
+        font-size: 100%;
+        margin: 2em 0em 2em 0em;
+        text-align: left;
         }
 
 .manusMain body   
@@ -225,7 +221,7 @@ div.source
 .manusMain .pbA, .manusMain .pbMs
         {
         color: #008000;
-        font-size: 80%;
+        font-size: 120%;
         font-weight: bold;
         }
 

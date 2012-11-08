@@ -1,4 +1,4 @@
-/* Meyer reset */
+sec/* Meyer reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -236,9 +236,26 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #høyre_innhold h2 {font-family: arial, myriad-pro, sans-serif; font-size: 1.4em; margin: 15px 0 4px 0;} /* Undertittel */
 #høyre_innhold h3 {font-family: arial, myriad-pro, sans-serif; font-size: 1.2em; margin: 16px 0 4px 0; line-height:1em;} /* Underundertittel */
 
-	/* Faksimilevisning */
-	#høyre_innhold_faksimile{ float:left; width:405px; height:642px; background: #f4f4f4; border: 1px solid #e2e2e2; border-top:0px; overflow:auto; padding:15px 25px 12px 25px; font-size: 1.4em; font-family: arial, myriad-pro, sans-serif; color: #444; line-height: 1.5em; }
+/* faksimilevisning START */
 
+#høyre_innhold_faksimile
+        {
+        float:left;
+        width:405px;
+        height:642px;
+        background: #f4f4f4; 
+        border: 1px solid #e2e2e2; 
+        border-top:0px; 
+        overflow:auto; 
+        padding:15px 25px 12px 25px; 
+        font-size: 1.4em; 
+        font-family: arial, myriad-pro, sans-serif; 
+        color: #444; 
+        line-height: 1.5em; 
+        }
+
+/* faksimilevisning END */
+        
 /* Overskriv jQuery UI til fanemeny i høyre kolonne */
 .ui-tabs {padding:0;}
 .ui-tabs .ui-tabs-nav {padding:0;}
@@ -746,26 +763,103 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 #kolonne1_bred { width: 630px; float:left; margin:0px 26px 0 0; min-height:600px;}
 
 
-/* farger for variantvisning */
+/* variantvisning START */
 
-.variantContent .substantiel { background-color: #cacaca;}
-.variantContent .substantial { background-color: #cacaca;}
+.variantContent .substantiel
+        { 
+        background-color: #cacaca;
+        }
+        
+.variantContent .substantial
+        { 
+        background-color: #cacaca;
+        }
 
-.variantContent .interpunktion { background-color: #dbc9bb;}
-.variantContent .interpunction { background-color: #dbc9bb;}
+.variantContent .interpunktion
+        { 
+        background-color: #dbc9bb;
+        }
+.variantContent .interpunction
+        { 
+        background-color: #dbc9bb;
+        }
 
-.variantContent .identisk { background-color: #adcfaf;}
-.variantContent .identical { background-color: #adcfaf;}
+.variantContent .identisk
+        { 
+        background-color: #adcfaf;
+        }
+        
+.variantContent .identical
+        { 
+        background-color: #adcfaf;
+        }
 
-.variantContent .ortografisk { background-color: #bbcedb;}
-.variantContent .orthographic { background-color: #bbcedb;}
+.variantContent .ortografisk
+        { 
+        background-color: #bbcedb;
+        }
+        
+.variantContent .orthographic
+        { 
+        background-color: #bbcedb;
+        }
 
-/* farger/stiler for manusvisning */
+/* variantvisning END */
+        
+/* manuskripter START */
 
-span.later { color: red }
-span.firstDel { text-decoration: line-through;}
-span.secondDel { background: url('../img/stripe_test2_h.png') repeat 0 0;  }
-span.immediate { color: #4DBC4D; }
+div.source
+        {
+        font-size: 90%;
+        margin: 2em 0em 1em 0em;
+        text-align: left;
+        }
+
+div.title
+        {
+        font-size: 110%;
+        margin: 1em 0em 1em 0em;
+        text-align: center;
+        }
+
+span.firstDel
+        {
+        text-decoration: line-through;
+        }
+        
+span.immediate 
+        {
+        color: #4DBC4D;
+        }
+        
+span.secondDel 
+        {
+        color: red;
+        text-decoration: line-through;
+        background: url('../img/stripe_test2_h.png') repeat 0 0;
+        }
+
+span.shading
+        {
+        background-color: silver;
+        background-image: url('../img/stripe_test2_h.png');
+        background-repeat: repeat;
+        }
+
+span.thirdDel
+        {
+        color: red;
+        text-decoration: line-through;
+        }
+
+span.pbA, span.pbMs
+        {
+        color: #008000;
+        font-size: 70%;
+        font-weight: bold;
+        }
+        
+/* manuskripter END */
 
 /* farger/stiler for kommentar_visning START */
 

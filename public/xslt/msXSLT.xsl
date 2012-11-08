@@ -17,6 +17,7 @@
     <xsl:include href="popups.xsl"/>
     
     <xsl:template match="tei:teiHeader">
+        
         <div class="title">
             <xsl:if test="//tei:title[@type='main']">
                 <i><xsl:apply-templates select="//tei:title[@type='main']"/></i>
@@ -25,6 +26,7 @@
                 <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="//tei:title[@type='part']"/><xsl:text>&#x201D;</xsl:text>
             </xsl:if>            
         </div>
+        
         <div class="source">
             <xsl:text>Tekstkilde:</xsl:text>
             <br/>
@@ -41,6 +43,7 @@
                 <xsl:apply-templates select="."/>
             </xsl:for-each>
         </div>
+        
     </xsl:template>
  
     
@@ -327,41 +330,40 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        <a href="{@facs}">            
-            <span class="pbA">
+    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='text' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbA">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
-            </span>            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>]
-            </span> 
-        </a>       
+            </a>
+       </span>       
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and not(@rend='supp')]">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>
-            </span> 
-        </a>        
+            </a>
+        </span>         
     </xsl:template>
     
     <xsl:template name="delimiterComma">

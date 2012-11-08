@@ -42,8 +42,14 @@
         </p>
     </xsl:template>
 
-    <xsl:template match="tei:list">
+    <xsl:template match="tei:list[@type='decimal']">
         <ol style="list-style-type: decimal; margin-left: 15px; padding-left: 15px">
+            <xsl:apply-templates/>
+        </ol>
+    </xsl:template>
+
+    <xsl:template match="tei:list[@type='simple']">
+        <ol style="list-style-type: circle; margin-left: 15px; padding-left: 15px">
             <xsl:apply-templates/>
         </ol>
     </xsl:template>
