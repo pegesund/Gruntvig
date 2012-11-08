@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="timelineKorr.xsl"?>
+<?xml-model href="timelineRNC.rnc" type="application/relax-ng-compact-syntax"?>
+
+<data>
+	<!-- 
+	<dataHeader>
+		<revisionDesc>
+			<change xml:id="KSR" who="KSR" when="2010-11-26">struktur</change>
+			<change who="KSR" when="2010-11-29">indhold fra Word til XML</change>
+			<change who="KSR" when="2010-11-30">test af indhold</change>
+			<change who="KSR" when="2010-12-30">validering, etc</change>
+			<change xml:id="JEL" who="JEL" when="2011-01-10">navnemærker indsat</change>
+			<change who="JEL" when="2011-01-13">flernavnemærker indsat</change>
+			<change who="KSR" when="2011-01-24">nyt skema; validering</change>
+			<change who="HY" when="2011-02-21">indført redaktionelle rettelser</change>
+			<change who="HY" when="2011-02-22">omkodning af tidsangivelser. Ny omkodning af tidsangivelser til visning af usikkerhed</change>
+			<change who="HY" when="2011-02-23">indført Rebekka-korrektur. Fjernet mæslinger og valideret</change>
+			<change who="HY" when="2011-02-24">Fjernet mæslinger og valideret</change>
+			<change who="HY" when="2011-02-24">Sidste korrektur, afgang til fjeldlandet</change>
+			<change who="KSR" when="2011-02-27">durationEvent, textColor</change>
+			<change who="HY" when="2011-04-01">Indført rettelser fra skærmkorrektur</change>
+			<change who="HY" when="2011-05-16">Rettet Hugos pe-nr. til 276</change>
+			<change who="HY" when="2011-06-30">indført rettelser fra sidste redaktion</change>
+			<change who="HY" when="2011-09-13">indført feb 21 1808</change>
+			<change who="KSR" when="2011-11-01">valideret i forhold til ret skema</change>
+			<change who="HY" when="2012-03-02">Sammensatte årstal skrevet helt ud</change>
+		</revisionDesc>
+	</dataHeader>
+	-->
+	<event
+		start="Sep 03 1783 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Den Amerikanske Frihedskrig slutter">
+		Den Nordamerikanske Frihedskrig slutter ved indg&#x00E5;elsen af Parisaftalen.
+	</event>
+	
+	<event
+		start="Jul 14 1789 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Stormen p&#x00E5; Bastillen">
+		Stormen p&#x00E5; Bastillen indleder Den Franske Revolution.
+	</event>
+	
+	<event
+		start="Jan 21 1793 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Ludvig 16. guillotineres">
+		<persName key="pe147">Ludvig 16.</persName> guillotineres i Paris.
+	</event>
+
+	<event
+		start="Aug 02 1798 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="S&#x00F8;slaget ved Abu Qir">
+		Engelsk sejr i s&#x00F8;slaget ved Abu Qir betyder afslutningen p&#x00E5; <persName key="pe104">Napoleon Bonapartes</persName> &#x00E6;gyptiske felttog.
+	</event>
+
+	<event
+		start="Nov 09 1799 00:00:00 GMT"
+		end="Nov 10 1799 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Brumairekuppet">
+		9.-10. november, <persName key="pe104">Napoleon Bonaparte</persName> gennemf&#x00F8;rer Brumairekuppet; republikken afskaffes, og <persName key="pe104">Bonaparte</persName> udn&#x00E6;vnes til f&#x00F8;rstekonsul.
+	</event>
+
+	<event
+		start="May 15 1800 00:00:00 GMT"
+		earliestStart="May 01 1800 00:00:00 GMT"
+		end="Jun 15 1800 00:00:00 GMT"
+		latestEnd="Jun 30 1800 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Bonapartes italienske felttog">
+		Maj-juni, <persName key="pe104">Bonaparte</persName>s norditalienske felttog.
+	</event>
+
+	<event
+		start="Mar 27 1802 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Engelsk-fransk fred">
+		Engelsk-fransk fredstraktat.
+	</event>
+
+	<event
+		start="May 16 1803 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Engelsk-fransk krig p&#x00E5; ny">
+		England erkl&#x00E6;rer Frankrig krig p&#x00E5; ny.
+	</event>
+
+	<event
+		start="Dec 02 1804 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Napoleon krones">
+		<persName key="pe104">Bonaparte</persName> kroner sig selv som kejser Napoleon og salves af paven i Notre Dame-katedralen.
+	</event>
+
+	<event
+		start="May 09 1805 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Schiller d&#x00F8;r">
+		<persName key="pe35">Friedrich Schiller</persName> d&#x00F8;r, 44 &#x00E5;r gammel.
+	</event>
+	
+	<event
+		start="Sep 10 1805 00:00:00 GMT"
+		earliestStart="Sep 01 1805 00:00:00 GMT"
+		end="Sep 20 1805 00:00:00 GMT"
+		latestEnd="Sep 30 1805 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Krig i Europa">
+		September. Atter krig p&#x00E5; det europ&#x00E6;iske kontinent.
+	</event>
+	
+	<event
+		start="Oct 21 1805 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Slaget ved Trafalgar">
+		England sejrer i s&#x00F8;slaget ved Trafalgar; admiral <persName key="pe100">Nelson</persName> falder.
+	</event>
+	
+	<event
+		start="Dec 02 1805 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Slaget ved Austerlitz">
+		<persName key="pe104">Napoleon</persName> sejrer over tyskere og &#x00F8;strigere i slaget ved Austerlitz (i det nuv&#x00E6;rende Tjekkiet).
+	</event>
+
+	<event
+		start="Oct 08 1806 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Slaget ved Jena og Auerstedt">
+		Franske tropper besejrer preusserne i slaget ved Jena og den n&#x00E6;rliggende landsby Auerstedt.
+	</event>
+	
+	<event
+		start="Nov 21 1806 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Fastlandssp&#x00E6;rring mod England">
+		<persName key="pe104">Napoleon</persName> proklamerer Fastlandssp&#x00E6;rringen (ogs&#x00E5; kaldet Kontinentalsystemet) som &#x00F8;konomisk krigsf&#x00F8;relse mod England.
+	</event>
+
+	<event
+		start="Jun 15 1807 00:00:00 GMT"
+		earliestStart="Jun 01 1807 00:00:00 GMT"
+		end="Aug 15 1807 00:00:00 GMT"
+		latestEnd="Aug 31 1807 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Danmark med i Fastlandssp&#x00E6;rringen">
+		Sommer. <persName key="pe104">Napoleon</persName> aftaler med den russiske <persName key="pe148">zar</persName> at tvinge Danmark-Norge ind under Fastlandssp&#x00E6;rringen.
+	</event>
+
+	<event
+		start="Feb 21 1808 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Krig mellem Rusland og Sverige">
+		Rusland invaderer Finland og angriber dermed det svenske kongerige. 
+	</event>
+	
+	<event
+		start="Jul 05 1809 00:00:00 GMT"
+		end="Jul 06 1809 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Slaget ved Wagram">
+		Slaget ved Wagram i &#x00D8;strig mellem Frankrig og &#x00D8;strig sv&#x00E6;kker &#x00D8;strig.
+	</event>
+	
+	<event
+		start="Oct 10 1809 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Schönbrunn-freden">
+		Schönbrunn-freden mellem &#x00D8;strig og Frankrig.
+	</event>
+
+	<event
+		start="May 28 1810 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Svensk tronf&#x00F8;lger d&#x00F8;r">
+		Den svenske tronf&#x00F8;lger prins <persName key="pe149">Christian August af Augustenborg</persName> d&#x00F8;r.
+	</event>
+	
+	<event
+		start="Jul 10 1810 00:00:00 GMT"
+		earliestStart="Jul 01 1810 00:00:00 GMT"
+		end="Jul 20 1810 00:00:00 GMT"
+		latestEnd="Jul 31 1810 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Frederik 6. kandidat til svensk trone">
+		Juli. <persName key="pe96">Frederik 6.</persName> optr&#x00E6;der som kandidat til den svenske trone.
+	</event>
+	
+	<event
+		start="Aug 21 1810 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Bernadotte svensk kronprins">
+		<persName key="pe104">Napoleon</persName>s marskal <persName key="pe150">Jean Baptiste Bernadotte</persName> v&#x00E6;lges til svensk kronprins.
+	</event>
+
+	<event
+		start="Jun 10 1812 00:00:00 GMT"
+		earliestStart="Jun 01 1812 00:00:00 GMT"
+		end="Jun 30 1812 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Napoleon invaderer Rusland">
+		Juni 1812. Med sin &#x201C;Grande Armée&#x201D; p&#x00E5; 600.000 mand indleder <persName key="pe104">Napoleon</persName> en invasion af Rusland.
+	</event>
+	
+	<event
+		start="Sep 14 1812 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Napoleon i Moskva">
+		<persName key="pe104">Napoleon</persName> marcherer ind i Moskva, som er blevet evakueret; i den f&#x00F8;lgende uge br&#x00E6;nder russerne byen af.
+	</event>
+	
+	<event
+		start="Oct 19 1812 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Fransk tilbagetog">
+		Den franske armé indleder sit tilbagetog fra Moskva.
+	</event>
+	
+	<event
+		start="Dec 18 1812 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Fransk felttog endt i katastrofe">
+		<persName key="pe104">Napoleon</persName> vender hjem til Paris fulgt af mindre end 100.000 mand, resterne af hans oprindelige &#x201C;Grande Armée&#x201D;; felttoget er endt som en katastrofe.
+	</event>
+
+	<event
+		start="Mar 13 1813 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Første damplokomotiv">
+		Engl&#x00E6;nderen <persName key="pe151">William Hedley</persName> udtager patent p&#x00E5; det f&#x00F8;rste brugbare damplokomotiv. 
+	</event>
+	
+	<event
+		start="Oct 16 1813 00:00:00 GMT"
+		end="Oct 18 1813 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Slaget ved Leipzig">
+		Efter slaget ved Leipzig 16.-18. oktober g&#x00E5;r det hastigt tilbage for <persName key="pe104">Napoleon</persName>.
+	</event>
+	
+	<event
+		start="Dec 15 1813 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="V&#x00E5;benstilstand">
+		<persName key="pe104">Napoleon</persName> indg&#x00E5;r v&#x00E5;benstilstand med sine fjender.
+	</event>
+
+	<event
+		start="Apr 11 1814 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Napoleon p&#x00E5; Elba">
+		<persName key="pe104">Napoleon</persName> abdicerer og interneres p&#x00E5; &#x00F8;en Elba.
+	</event>
+	
+	<event
+		start="Nov 11 1814 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Norge i personalunion med Sverige">
+		Under navnet Karl 2. v&#x00E6;lges <persName key="pe152">Karl 13.</persName> af Sverige til konge af Norge og afl&#x00E6;gger ed p&#x00E5; Eidsvollforfatningen af 17. maj. Norge er nu i personalunion med Sverige, og udenrigspolitikken fastl&#x00E6;gges fra Stockholm.
+	</event>
+
+	<event
+		start="Mar 01 1815 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Napoleons &#x0027;100 dage&#x0027;">
+		<persName key="pe104">Napoleon</persName> forlader Elba og vender med 1.200 soldater tilbage til Paris; de &#x0027;100 dage&#x0027; er begyndt.
+	</event>
+	
+	<event
+		start="Jun 18 1815 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Waterloo">
+		<persName key="pe104">Napoleon</persName> besejres af engelske og preussiske tropper ved Waterloo (i det nuv&#x00E6;rende Belgien); han abdicerer for anden gang og sendes i august til St. Helena.
+	</event>
+
+	<event
+		start="Feb 05 1818 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Bernadotte svensk-norsk konge">
+		<persName key="pe150">Jean Baptiste Bernadotte</persName>, der blev valgt til svensk kronprins i 1810, bliver under navnet Karl 14. Johan konge af Sverige og under navnet Karl 3. Johan konge af Norge.
+	</event>
+	
+	<event
+		start="May 05 1818 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Marx f&#x00F8;des">
+		<persName key="pe153">Karl Marx</persName> f&#x00F8;des i Trier.
+	</event>
+	
+	<event
+		start="Aug 16 1819 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="&#x0027;Peterloo-massakren&#x0027;">
+		Flere &#x00E5;rs arbejderuroligheder i England kulminerer med &#x0027;Peterloo-massakren&#x0027; i Manchester, hvor milit&#x00E6;ret angriber et fredeligt agitationsm&#x00F8;de, dr&#x00E6;ber 11 og s&#x00E5;rer mere end 400.
+	</event>
+
+	<event
+		start="Jun 01 1824 00:00:00 GMT"
+		earliestStart="Jan 01 1824 00:00:00 GMT"
+		end="Sep 31 1824 00:00:00 GMT"
+		latestEnd="Dec 31 1824 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Fotografiet opfindes">
+		1824. <persName key="pe154">Joseph Nicéphore Niépce</persName> opfinder den fotografiske (heliografiske) proces.
+	</event>
+
+	<event
+		start="Jul 28 1830 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Julirevolutionen">
+		Julirevolutionen i Paris bryder ud.
+	</event>
+	
+	<event
+		start="Aug 25 1830 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Opstand medf&#x00F8;rer Belgiens uafh&#x00E6;ngighed">
+		En opstand i Bruxelles mod holl&#x00E6;nderne resulterer i november i Belgiens uafh&#x00E6;ngighed.
+	</event>
+	
+	<event
+		start="Nov 29 1830 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Opstand i Warszawa">
+		Et militært opr&#x00F8;r i Warszawa udvikler sig til en folkelig opstand mod det russiske fremmedherred&#x00F8;mme.
+	</event>
+
+	<event
+		start="Sep 06 1831 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Polen underl&#x00E6;gges Rusland">
+		Den polske revolution bryder sammen, og landet underl&#x00E6;gges en russisk statholder.
+	</event>
+
+	<event
+		start="Mar 22 1832 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Goethe d&#x00F8;r">
+		<persName key="pe29">J.W. Goethe</persName> d&#x00F8;r i Weimar, 82 &#x00E5;r gammel.
+	</event>
+
+	<event
+		start="Aug 23 1833 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Slaveriet afskaffes i det britiske rige">
+		Slaveriet afskaffes overalt i det britiske rige.
+	</event>	
+
+	<event
+		start="Aug 29 1833 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Britisk fabrikslov">
+		Parlamentet i London vedtager en fabrikslov til begr&#x00E6;nsning af arbejdstiden for b&#x00F8;rn.
+	</event>
+
+	<event
+		start="Jun 20 1837 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Dronning Victoria krones">
+		Dronning <persName key="pe165">Victoria</persName> krones i London.
+	</event>	
+
+	<event
+		start="Sep 02 1837 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Morses telegraf">
+		<persName key="pe156">Samuel Morse</persName> pr&#x00E6;senterer den f&#x00F8;rste brugbare elektriske telegraf.
+	</event>
+
+	<event
+		start="Feb 21 1848 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Marx og Engels: Manifestet">
+		<persName key="pe153">Karl Marx</persName> og <persName key="pe157">Friedrich Engels</persName> udgiver i London <hi rend="italic">Manifest der kommunistischen Partei</hi> (f&#x00F8;rste danske udgave 1884).
+	</event>
+	
+	<event
+		start="Feb 22 1848 00:00:00 GMT"
+		end="Feb 24 1848 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Februarrevolutionen">
+		I Paris udbryder en revolution&#x00E6;r bev&#x00E6;gelse, der breder sig over store dele af Europa.
+	</event>
+	
+	<event
+		start="Mar 15 1848 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Martsrevolutionen">
+		Martsrevolutionen i Berlin og Wien.
+	</event>
+	
+	<event
+		start="Jun 22 1848 00:00:00 GMT"
+		end="Jun 26 1848 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Opstand i Paris nedk&#x00E6;mpes">
+		En arbejderopstand i Paris nedk&#x00E6;mpes milit&#x00E6;rt p&#x00E5; f&#x00E5; dage.
+	</event>
+
+	<event
+		start="Dec 02 1852 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Napoleon 3. fransk kejser">
+		<persName key="pe158">Napoleon 3.</persName> udr&#x00E5;bes til fransk kejser.
+	</event>
+
+	<event
+		start="Oct 04 1853 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Krimkrigen">
+		Krimkrigen bryder ud.
+	</event>
+
+	<event
+		start="Mar 18 1856 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Ruslands nederlag i Krimkrigen">
+		Krimkrigen slutter med en fredsaftale i Paris, der markerer Ruslands nederlag.
+	</event>
+
+	<event
+		start="Nov 24 1859 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Darwin: On the Origin of Species">
+		<persName key="pe159">Charles Darwin</persName>: <hi rend="italic">On the Origin of Species by Means of Natural Selection</hi> udkommer (dansk udgave ved <persName key="pe162">J.P. Jacobsen</persName> 1871-1872).
+	</event>
+
+	<event
+		start="Mar 17 1861 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Italien samlet">
+		<persName key="pe160">Victor Emanuel 2.</persName> udr&#x00E5;bes til konge af det samlede Italien.
+	</event>
+	
+	<event
+		start="Apr 12 1861 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Den Amerikanske Borgerkrig">
+		Den Amerikanske Borgerkrig bryder ud.
+	</event>
+	
+	<event
+		start="Mar 10 1862 00:00:00 GMT"
+		earliestStart="Mar 01 1862 00:00:00 GMT"
+		end="Jun 20 1862 00:00:00 GMT"
+		latestEnd="Jun 31 1862 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Hugo: Les Misérables">
+		For&#x00E5;r. <persName key="pe276">Victor Hugo</persName> udgiver <rs key="bib288"><hi rend="italic">Les Misérables</hi></rs> (da. 1862-1864: <hi rend="italic">De Fattige og de Forladte).</hi>
+	</event>
+
+	<event
+		start="Sep 23 1862 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Bismarck ministerpr&#x00E6;sident">
+		<persName key="pe139">Otto von Bismarck</persName> bliver ministerpr&#x00E6;sident i Preussen.
+	</event>
+
+	<event
+		start="Jan 10 1863 00:00:00 GMT"
+		earliestStart="Jan 01 1863 00:00:00 GMT"
+		end="Jan 20 1863 00:00:00 GMT"
+		latestEnd="Jan 31 1863 00:00:00 GMT"
+		durationEvent="true"
+		textColor="#9B9B9B"
+		title="Polsk revolution sl&#x00E5;s ned">
+		Januar. En revolution i Polen sl&#x00E5;s h&#x00E5;rdt ned af Rusland, st&#x00F8;ttet af Preussen.
+	</event>
+
+	<event
+		start="Sep 28 1864 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="1. Internationale">
+		Den Internationale Arbejderassociation (1. Internationale) stiftes i London.
+	</event>
+
+	<event
+		start="Apr 09 1865 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Den Amerikanske Borgerkrig slutter">
+		Den Amerikanske Borgerkrig slutter.
+	</event>
+	
+	<event
+		start="Apr 14 1865 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Lincoln myrdes">
+		Pr&#x00E6;sident <persName key="pe161">Abraham Lincoln</persName> myrdes i Washinton, D.C.
+	</event>
+	
+	<event
+		start="Jun 15 1866 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Krig mellem Preussen og &#x00D8;strig">
+		Krigen mellem Preussen og &#x00D8;strig bryder ud.
+	</event>
+	
+	<event
+		start="Aug 23 1866 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Fred mellem Preussen og &#x00D8;strig">
+		Der sluttes fred mellem Preussen og &#x00D8;strig.
+	</event>
+
+	<event
+		start="Sep 14 1867 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Marx: Das Kapital">
+		<persName key="pe153">Karl Marx</persName>: <hi rend="italic">Das Kapital,</hi> bind 1 udkommer (f&#x00F8;rste danske udgave 1885).
+	</event>
+
+	<event
+		start="Nov 16 1869 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Suezkanalen">
+		Suezkanalen &#x00E5;bner.
+	</event>
+
+	<event
+		start="Jul 19 1870 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Krig mellem Frankrig og Preussen">
+		Frankrig erkl&#x00E6;rer Preussen krig.
+	</event>
+	
+	<event
+		start="Sep 02 1870 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Slaget ved Sedan">
+		Tysk sejr i slaget ved Sedan; <persName key="pe158">Napoleon 3.</persName> er blandt krigsfangerne.
+	</event>
+
+	<event
+		start="Jan 18 1871 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Bismarck rigskansler i samlet Tyskland">
+		Kong <persName key="pe163">Wilhelm af Preussen</persName> udr&#x00E5;bes i Versailles til tysk kejser. <persName key="pe139">Otto von Bismarck</persName> bliver rigskansler i det samlede Tyskland.
+	</event>
+	
+	<event
+		start="Jan 28 1871 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Paris kapitulerer">
+		Paris kapitulerer.
+	</event>
+	
+	<event
+		start="Feb 24 1871 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Darwin: The Descent of Man">
+		<persName key="pe159">Charles Darwin</persName>: <hi rend="italic">The Descent of Man</hi> udkommer (dansk udgave ved <persName key="pe162">J.P. Jacobsen</persName> 1874-1875).
+	</event>
+	
+	<event
+		start="Mar 18 1871 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Pariserkommunen">
+		Et opr&#x00F8;r i Paris f&#x00F8;rer til Pariserkommunen, som nedk&#x00E6;mpes blodigt af franske regeringstropper 21.-28. maj.
+	</event>
+	
+	<event
+		start="Aug 31 1871 00:00:00 GMT"
+		textColor="#9B9B9B"
+		title="Republik i Frankrig">
+		Der indf&#x00F8;res republik i Frankrig.
+	</event>
+    
+</data>
