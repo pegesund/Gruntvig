@@ -26,7 +26,7 @@
     </xsl:template>
 
     <xsl:template match="tei:head">
-        <h2 style="font-size: 18px">
+        <h2>
             <xsl:apply-templates/>
         </h2>
     </xsl:template>
