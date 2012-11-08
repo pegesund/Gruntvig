@@ -126,7 +126,7 @@ var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
 
 
 
-Timeline.loadXML("../public/xml/tidslinje/unpub.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/unpub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 
     $i = 0;
@@ -144,19 +144,19 @@ Timeline.loadXML("../public/xml/tidslinje/unpub.xml", function(xml, url) {
 
 });
 
-Timeline.loadXML("../public/xml/tidslinje/life.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/life.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
-Timeline.loadXML("../public/xml/tidslinje/pub.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/pub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
-Timeline.loadXML("../public/xml/tidslinje/domestic.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/domestic.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
-Timeline.loadXML("../public/xml/tidslinje/international.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/international.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
