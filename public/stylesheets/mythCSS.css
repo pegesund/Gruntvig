@@ -65,6 +65,10 @@ div#cluetip-inner .row {
         visibility: hidden;
 }
 
+div#cluetip-inner .person .row {
+        visibility: hidden;
+}
+
 .myth .orthography
         {
         font-size: 90%;
