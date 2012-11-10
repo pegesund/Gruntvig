@@ -188,9 +188,6 @@ public class TextReference extends GenericModel {
                 String html = "<div class='bibleref'>" + ref + "</div>";
                 TextReference textRef = new TextReference(ref, -1, html, asset.type, asset.fileName);
                 textRef.save();
-                if (TextReference.find("textId = ?", ref).fetch().size() < 0) {
-                    System.out.println("Probably an error in: " + ref);
-                }
             }
             System.out.println("Number of bible refs: " + TextReference.find("type = ?", asset.type).fetch().size());
         } catch (Exception e) {
