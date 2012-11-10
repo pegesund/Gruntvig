@@ -413,6 +413,7 @@ public class Asset extends GenericModel {
             asset.refs = references;
             asset.fileName = epub.getName();
             asset.rootName = getRootName(epub.getName(), asset.type);
+            asset.xml = xml;
         } else {
             asset = new Asset(name, epub.getName(), html, xml, comment, variant, type, references);
         }
