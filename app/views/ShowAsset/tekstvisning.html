@@ -125,7 +125,7 @@ currentTextId = ${asset.id};
              success: function(data) {
                  var txrContent = $("#txr" + num);
                  txrContent.html(data);
-                 addTooltip($('.persName, .placeName, .myth'));
+                 addTooltip($('.persName, .placeName, .myth, .rs_bible'));
                  
                  $(".txrmenu").unbind("click").click(function() {
                     var scrollElement = $(this).closest(".mainTxr").parent();
@@ -148,7 +148,7 @@ currentTextId = ${asset.id};
              success: function(data) {
                  var introContent = $("#kommentar" + num);
                  introContent.html(data);
-                 addTooltip($('.persName, .placeName, .myth'));
+                 addTooltip($('.persName, .placeName, .myth, .rs_bible'));
                  $(".plusComment").click(function() {    
                     $(this).next().slideToggle("slow"); 
                  });
@@ -172,7 +172,7 @@ currentTextId = ${asset.id};
                     });
                     a.removeAttr("href");
                  });
-                 addTooltip($('.persName, .placeName, .myth'));
+                 addTooltip($('.persName, .placeName, .myth, .rs_bible'));
                  $(".plus").click(function() {    
                     $(this).next().slideToggle("slow"); 
                  });

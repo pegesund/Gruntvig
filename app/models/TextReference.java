@@ -177,7 +177,6 @@ public class TextReference extends GenericModel {
     public static void uploadReferenceFileBible(Asset asset) {
         TextReference.delete("type = ?", asset.type);
         try {
-            System.out.println("Asset xml: " + asset.xml);
             Document doc = Helpers.stringToNode(asset.xml);            
             XPathExpression expr = XPathFactory.newInstance().newXPath().compile("//*:rs");
             NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
@@ -185,7 +184,6 @@ public class TextReference extends GenericModel {
             for (int i = 0; i < nodes.getLength(); i++) {
                 Node n = nodes.item(i);
                 String ref = n.getAttributes().getNamedItem("key").getNodeValue();
-                System.out.println("Ref: " + ref);   
                 String html = "<div class='bibleref'>" + ref + "</div>";
                 TextReference textRef = new TextReference(ref, -1, html, asset.type, asset.fileName);
                 textRef.save();
