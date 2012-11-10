@@ -49,8 +49,12 @@ public class Ajax extends Application {
     public static void getRef(String textId) {
         textId = textId.replaceAll("%20", " ");
         TextReference ref = TextReference.find("textId = ?", textId).first();
-        System.out.println("Showing ref: " + ref.showName);
-        Controller.renderHtml(ref.showName);
+        if (ref != null) {
+            System.out.println("Showing ref: " + ref.showName);
+            Controller.renderHtml(ref.showName);
+        } else {
+            Controller.renderHtml("");
+        }
     }
 
 
