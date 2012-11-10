@@ -123,7 +123,7 @@ public class Helpers {
      * Parse xml-string and return doc
      */
     public static Document stringToNode(String str) {
-        System.out.println("Trying to parse: " + str);
+        // System.out.println("Trying to parse: " + str);
         Document doc = null;
         try {
             DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();

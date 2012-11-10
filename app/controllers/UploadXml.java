@@ -51,10 +51,10 @@ public class UploadXml extends Application {
         }
         if (fileName.equals("place.xml")) {
             TextReference.uploadReferenceFilePlace(asset);
-        } else
-        if (fileName.equals("myth.xml")
+        } else if (fileName.equals(("bible.xml"))) {
+            TextReference.uploadReferenceFileBible(asset);
+        } else if (fileName.equals("myth.xml")
                 || fileName.equals("pers.xml")
-                || fileName.equals("bible.xml")
                 ) {
             TextReference.uploadReferenceFile(asset);
         } else if (fileName.replace(".xml", "").endsWith("_com")) {

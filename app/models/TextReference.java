@@ -5,11 +5,18 @@
 package models;
 
 import helpers.Helpers;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 import javax.persistence.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
+import net.sf.saxon.lib.NamespaceConstant;
 import play.db.jpa.GenericModel;
 
 import org.w3c.dom.Document;
@@ -159,12 +166,27 @@ public class TextReference extends GenericModel {
                     continue;
                 } else System.out.println("Found id");
                 String id = ref.getAttributes().getNamedItem("id").getNodeValue();
-                if (id.equals("fak16")) {
-                    System.out.println("-------- Hey, its magic...: " + Helpers.nodeToString(ref));
-                }
-                // System.out.println("Creating ref-id: " + id);
                 TextReference textRef = new TextReference(id, -1, Helpers.nodeToString(ref), asset.type, asset.fileName);
-                // System.out.println("Ref: " + textRef.showName);
+                textRef.save();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void uploadReferenceFileBible(Asset asset) {
+        TextReference.delete("type = ?", asset.type);
+        try {
+            Document doc = Helpers.stringToNode(asset.xml);            
+            XPathExpression expr = XPathFactory.newInstance().newXPath().compile("//*:rs");
+            NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+            System.out.println("------- Number of bible-references found: " + nodes.getLength());
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Node n = nodes.item(i);
+                String ref = n.getAttributes().getNamedItem("key").getNodeValue();
+                System.out.println("Ref: " + ref);   
+                String html = "<div class='bibleref'>" + ref + "</div>";
+                TextReference textRef = new TextReference(ref, -1, html, asset.type, asset.fileName);
                 textRef.save();
             }
         } catch (Exception e) {
