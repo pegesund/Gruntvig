@@ -56,7 +56,7 @@ var gotoChapter = function(text, chapter) {
             $("#tekst_innhold .chapter").fadeIn(3000, function() {
                 
                 });
-            addTooltip($('.persName, .placeName, .myth'));
+            addTooltip($('.persName, .placeName, .myth, .rs_bible'));
             addCommentListener();
             fixPageNumbersToFaks();
         }
