@@ -19,9 +19,7 @@
              success: function(data) {
                  var veiledningContent = $("#veiledning_tekst");
                  veiledningContent.html(data);
-                 addTooltip($('.persName'));
-                 addTooltip($('.placeName'));
-                 addTooltip($('.myth'));
+                 addTooltip($('.persName, .placeName, .myth, .rs_bible'));
              }
          });
 
