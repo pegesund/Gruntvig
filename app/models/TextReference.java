@@ -177,6 +177,7 @@ public class TextReference extends GenericModel {
     public static void uploadReferenceFileBible(Asset asset) {
         TextReference.delete("type = ?", asset.type);
         try {
+            System.out.prinltn("Asset xml: " + xml);
             Document doc = Helpers.stringToNode(asset.xml);            
             XPathExpression expr = XPathFactory.newInstance().newXPath().compile("//*:rs");
             NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
