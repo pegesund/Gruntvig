@@ -5,6 +5,7 @@
 
 <script>
 currentChapter = ${chapter.num};
+<<<<<<< Updated upstream
 currentTextId = ${asset.id};   
     
   $(document).ready(function() {
@@ -379,6 +380,15 @@ currentTextId = ${asset.id};
 
 
 
+=======
+currentTextId = ${asset.id};
+numOfPictures = ${asset.numberOfPictures};
+var txrUrl = "ajax/getTxr/" + ${asset.id};
+var kommentarUrl = "ajax/getComment/" + ${asset.id};
+var introUrl = "ajax/getIntro/" + ${asset.id};
+rootFile = "${asset.fileNameWithoutXml}";
+var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
+>>>>>>> Stashed changes
 
 </script>
 
