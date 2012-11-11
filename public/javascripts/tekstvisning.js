@@ -5,6 +5,7 @@
 
 
     
+
 $(document).ready(function() {
     fixMissingFirstTab();
     // takes an optional argument containing a hashtable

@@ -1,8 +1,4 @@
-/* 
- * 
- * Function to add main reader window
- * 
- */
+
 readerNum = 0;
 var columnWidth = 471; // how wide new columns should be, in pixel
 var startupHash = window.location.hash;
@@ -188,3 +184,4 @@ addNewReader = function(num) {
     }
 
 } // end new reader
+
