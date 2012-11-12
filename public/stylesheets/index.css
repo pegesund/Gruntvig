@@ -824,6 +824,7 @@ div.title
 
 span.firstDel
         {
+        color: red;
         text-decoration: line-through;
         }
         

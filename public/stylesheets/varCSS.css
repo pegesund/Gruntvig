@@ -162,10 +162,15 @@ span.appInvisible
         {
         margin: 1em
         }
-        
-.variantMain .editorNote
-        {
-        font-size: 80%;
-        }
 
 /* footnote end */
+       
+/* editor notes START */
+
+.editorInLine
+        {
+        font-size: 12px;
+        margin: 0.5em 0em 0.5em 0em;
+        }
+        
+/* editor notes END */

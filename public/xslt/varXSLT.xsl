@@ -112,30 +112,15 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='editor']">
-        <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
-        </xsl:variable>
-        <a id="retur{$id}" href="#note{$id}">
-            <span class="footMarker">
-                <xsl:value-of select="$id"/>
-            </span>
-        </a>                            
-    </xsl:template>
+    <!-- editor-note START -->
     
-    <xsl:template match="TEI:note[@type='editor']" mode="editor">
-        <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
-        </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}">
-            <span class="footMarker">
-                <xsl:value-of select="$id"/>
-            </span>
-        </a>               
-        <div class="footnote">
+    <xsl:template match="TEI:note[@type='editorInLine']">
+        <div class="editorInLine">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <!-- editor-note END -->
     
     <xsl:template match="//TEI:div">
         <div>
