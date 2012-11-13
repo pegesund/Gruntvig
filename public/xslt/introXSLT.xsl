@@ -249,7 +249,7 @@
                 <xsl:number value="substring(@n, 9,2)" format="1"/>
                 <xsl:text>. </xsl:text>
                 <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
-                <xsl:text> </xsl:text>
+                <xsl:text> Hat </xsl:text>
                 <xsl:value-of select="substring(@n, 1,4)"/>
                 <xsl:text>)</xsl:text>
             </li>
