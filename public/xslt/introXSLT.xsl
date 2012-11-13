@@ -223,7 +223,7 @@
                     <xsl:for-each select="TEI:item">
                         <li class="litList">
                             <xsl:apply-templates/>
-                            <xsl:text>HAT.</xsl:text>
+                            <xsl:text>.</xsl:text>
                         </li>
                     </xsl:for-each>
                 </ul>
