@@ -223,7 +223,7 @@
                     <xsl:for-each select="TEI:item">
                         <li class="litList">
                             <xsl:apply-templates/>
-                            <xsl:text>.</xsl:text>
+                            <xsl:text>HAT.</xsl:text>
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -249,7 +249,7 @@
                 <xsl:number value="substring(@n, 9,2)" format="1"/>
                 <xsl:text>. </xsl:text>
                 <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
-                <xsl:text> Hat </xsl:text>
+                <xsl:text> </xsl:text>
                 <xsl:value-of select="substring(@n, 1,4)"/>
                 <xsl:text>)</xsl:text>
             </li>
