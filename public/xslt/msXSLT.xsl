@@ -206,7 +206,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='doubt']">
+    <xsl:template match="tei:del[@hand='doubt']">
         <span class="doubt">
             <xsl:apply-templates/>
         </span>
