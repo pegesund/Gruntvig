@@ -1157,7 +1157,7 @@ h1.subtitle { margin-left: 0px !important; }
 .refdiv p.altForm {font-size: 16px; line-height: 1.2em; margin:5px 0 0 0; }
 
 
-/* Veiledninger */
+/* Veiledninger START */
 
 #veiledning_tekst ol, #veiledning_tekst ul, #intro_tekst ol, #intro_tekst ul {
     font-size: 1.6em;
@@ -1182,12 +1182,19 @@ h1.subtitle { margin-left: 0px !important; }
 
 #veiledning_tekst h2, #intro_tekst h2 {
  font-size: 1.8em;
+ 
 }
+
+#veiledning_tekst italic
+        {
+        font-style: italic;
+        }
 
 #veiledning_tekst h2:first-child,  #intro_tekst h2:first-child {
  font-size: 2.8em;
 }
 
+/* Veiledninger END */
 
     /* farger/stiler for veiledning til manuskriptvisning */
 
