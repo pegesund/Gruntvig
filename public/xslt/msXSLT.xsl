@@ -182,6 +182,14 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="tei:del[@type='add']">
+        <span>
+            <xsl:text class="add">[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text class="add">]</xsl:text>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:del[@type='firstDel']">
         <span class="firstDel">
             <xsl:apply-templates/>
