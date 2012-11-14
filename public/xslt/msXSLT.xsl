@@ -206,6 +206,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="tei:del[@type='thirdDel']">
+        <span class="thirdDel">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:del[@hand='doubt']">
         <span class="doubt">
             <xsl:text>&lt;</xsl:text>
