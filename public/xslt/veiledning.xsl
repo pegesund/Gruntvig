@@ -71,6 +71,12 @@
     </xsl:template>
     -->
     
+    <xsl:template match="tei:hi[@rend='italic']"> 
+        <span style="font-style: italic">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:table"> 
         <table style="font-size: 16px">
             <xsl:apply-templates/>
