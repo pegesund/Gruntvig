@@ -66,7 +66,7 @@
             <xsl:if test="following-sibling::tei:cell[@rend='encyc']">
                 <xsl:text>, </xsl:text>
             </xsl:if>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
+            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>-->
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
             <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
@@ -105,13 +105,11 @@
     
      <xsl:template match="tei:addName">
         <span class="addName">
-            <!--
             <xsl:if test="@type='birthName'">
                 <xsl:text> f. </xsl:text>
                 <xsl:apply-templates/>
                 <xsl:text>, </xsl:text>                
             </xsl:if>
-            -->
             <xsl:if test="@type='epithet'">
                 <xsl:text> (</xsl:text>
                 <xsl:apply-templates/>
