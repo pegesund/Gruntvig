@@ -183,11 +183,9 @@
     </xsl:template>
     
     <xsl:template match="tei:del[@type='add']">
-        <span class="addDel">
+        <span class="add">
             <xsl:text>[</xsl:text>
-            </span>
             <xsl:apply-templates/>
-            <span class="addDel">
             <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
