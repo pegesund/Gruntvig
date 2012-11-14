@@ -105,11 +105,13 @@
     
      <xsl:template match="tei:addName">
         <span class="addName">
+            <!--
             <xsl:if test="@type='birthName'">
                 <xsl:text> f. </xsl:text>
                 <xsl:apply-templates/>
                 <xsl:text>, </xsl:text>                
-            </xsl:if>            
+            </xsl:if>
+            -->
             <xsl:if test="@type='epithet'">
                 <xsl:text> (</xsl:text>
                 <xsl:apply-templates/>
