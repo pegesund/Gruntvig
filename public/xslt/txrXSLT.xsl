@@ -166,9 +166,9 @@
                     <xsl:text>&gt;</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <!--<a href="{@target}">-->
+                    <a href="{@target}">
                         <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>
                 <xsl:when test="@select">                    
                     <a href="#http://{.}">
@@ -176,14 +176,14 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docIn'">
-                    <!--<a hrel="{@target}" class="docIn txrmenu">-->
+                    <a hrel="{@target}" class="docIn txrmenu">
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="{@target}" class="docOut txrmenu">-->
+                    <a hrel="{@target}" class="docOut txrmenu">-->
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
