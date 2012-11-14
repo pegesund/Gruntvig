@@ -37,7 +37,6 @@
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
-            <xsl:text>HAT</xsl:text>
         </span>
     </xsl:template>
     
