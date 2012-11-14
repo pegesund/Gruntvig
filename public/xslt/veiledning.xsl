@@ -60,7 +60,7 @@
         </li>
     </xsl:template>
     
-    
+    <!--
     <xsl:template match="tei:hi">
         <span>
             <xsl:attribute name="class">
@@ -69,7 +69,13 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+    -->
     
+    <xsl:template match="tei:hi[@rend='italic']">
+        <span class="italic">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
     <xsl:template match="tei:table"> 
         <table style="font-size: 16px">
