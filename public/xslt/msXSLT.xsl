@@ -208,7 +208,9 @@
     
     <xsl:template match="tei:del[@hand='doubt']">
         <span class="doubt">
+            <xsl:text>&lt;</xsl:text>
             <xsl:apply-templates/>
+            <xsl:text>&gt;</xsl:text>
         </span>
     </xsl:template>
     
