@@ -828,11 +828,6 @@ span.firstDel
         text-decoration: line-through;
         }
         
-span.addDel 
-        {
-        color: red;
-        }
-        
 span.immediate 
         {
         color: #4DBC4D;
@@ -850,6 +845,11 @@ span.shading
         background-color: silver;
         background-image: url('../img/stripe_test2_h.png');
         background-repeat: repeat;
+        }
+
+span.add
+        {
+        color: black;        
         }
 
 span.thirdDel
