@@ -51,6 +51,7 @@
     <xsl:template match="tei:list[@type='simple']">
         <ol style="list-style-type: circle; margin-left: 15px; padding-left: 15px">
             <xsl:apply-templates/>
+            <xsl:text>HAT</xsl:text>
         </ol>
     </xsl:template>
 
