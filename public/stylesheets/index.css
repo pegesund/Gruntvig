@@ -828,6 +828,11 @@ span.firstDel
         text-decoration: line-through;
         }
         
+span.addDel 
+        {
+        color: red;
+        }
+        
 span.immediate 
         {
         color: #4DBC4D;
