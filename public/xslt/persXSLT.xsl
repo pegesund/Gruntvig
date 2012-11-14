@@ -35,7 +35,7 @@
     </xsl:template>
 
     <xsl:template match="tei:table">
-            <xsl:apply-templates>
+            <xsl:apply-templates select="tei:row/tei:cell[@rend='name' or @rend='altName']">
               <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
             </xsl:apply-templates>
     </xsl:template>
@@ -66,7 +66,7 @@
             <xsl:if test="following-sibling::tei:cell[@rend='encyc']">
                 <xsl:text>, </xsl:text>
             </xsl:if>
-            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>-->
+            <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
             <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
