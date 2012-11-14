@@ -853,6 +853,11 @@ span.thirdDel
         text-decoration: line-through;
         }
 
+span.underLine
+        {        
+        text-decoration: underline;
+        }
+
 span.pbA, span.pbMs
         {
         color: #008000;
