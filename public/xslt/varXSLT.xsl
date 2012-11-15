@@ -64,7 +64,7 @@
             </div>
                 <br/>    
                 
-                <xsl:apply-templates select="//TEI:note[@type='editor']" mode="editor"/>
+                <xsl:apply-templates select="//TEI:note[@type='footnote']" mode="editor"/>
         </div>
         
     </xsl:template>
