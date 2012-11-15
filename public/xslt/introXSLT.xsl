@@ -338,7 +338,7 @@
                 <xsl:when test="@type='docIn'">
                     <a hrel="{@target}" class="docIn intro_menu">
                        <xsl:apply-templates/>
-                    </a>-->
+                    </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
                     <a hrel="{@target}" class="docOut intro_menu">
