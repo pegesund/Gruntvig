@@ -114,7 +114,7 @@
     
     <!-- editor-note START -->
     
-    <xsl:template match="TEI:note[@type='editorInLine' or @type='editorFoornote']">
+    <xsl:template match="TEI:note[@type='editorInLine' or @type='editorFootnote']">
         <div class="editorInLine">
             <xsl:apply-templates/>
         </div>
