@@ -343,7 +343,7 @@
                 <xsl:when test="@type='docOut'">
                     <a hrel="{@target}" class="docOut intro_menu">
                        <xsl:apply-templates/>
-                    </a>-->
+                    </a>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
