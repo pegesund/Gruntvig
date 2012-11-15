@@ -114,7 +114,7 @@
     
     <!-- editor-note START -->
     
-    <xsl:template match="TEI:note[@type='editorInLine' or @type='editorFootnote']">
+    <xsl:template match="TEI:note[@type='editorInLine']">
         <div class="editorInLine">
             <xsl:apply-templates/>
         </div>
@@ -130,14 +130,18 @@
     </xsl:template>
     
     <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
+        <xsl:if test=".//TEI:note[@type='footnote' or @type='editorFootnote']">
+        <div class="editorInLine">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>]">
             <br/>
             <hr class="footLine"/>            
             <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>            
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='footnote']">
+    <xsl:template match="TEI:note[@type='footnote' or @type='editorFootnote']">
         <xsl:variable name="id">
             <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
@@ -148,7 +152,7 @@
         </a>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+    <xsl:template match="TEI:note[@type='footnote or @type='editorFootnote'']" mode="foot">
         <xsl:variable name="id">
             <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
