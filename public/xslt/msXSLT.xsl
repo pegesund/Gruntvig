@@ -182,6 +182,14 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="tei:del[@type='add']">
+        <span class="add">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:del[@type='firstDel']">
         <span class="firstDel">
             <xsl:apply-templates/>
@@ -206,9 +214,17 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:del[@type='doubt']">
-        <span class="doubt">
+    <xsl:template match="tei:del[@type='thirdDel']">
+        <span class="thirdDel">
             <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@hand='doubt']">
+        <span class="doubt">
+            <xsl:text>&lt;</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>&gt;</xsl:text>
         </span>
     </xsl:template>
     

@@ -66,6 +66,7 @@
         
     </xsl:template>
     
+    <!--
     <xsl:template match="TEI:ref[@select or @target]">
         <span class="web">
             <a href="{@target}" target="_blank">
@@ -73,6 +74,7 @@
             </a>
         </span>
     </xsl:template>
+    -->
     
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>              
