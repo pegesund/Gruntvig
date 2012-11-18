@@ -248,7 +248,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
         border-top:0px; 
         overflow:auto; 
         padding:15px 25px 12px 25px; 
-        font-size: 1.4em; 
+        font-size: 1.0em; 
         font-family: arial, myriad-pro, sans-serif; 
         color: #444; 
         line-height: 1.5em; 
@@ -443,12 +443,10 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	list-style: none;
 }
 
+/* main level link KSR */
 
-
-
-/* main level link */
-#nav a {
-
+#nav a 
+        {
 	color: #e7e5e5;
 	text-decoration: none;
 	display: block;
@@ -456,10 +454,9 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	margin: 0;
 	background: #102c0e; /* #192a43;*/
 	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
 	border-radius: 7px;
 	text-shadow: 0 1px 1px rgba(0,0,0, .3);
-}
+        }
 
 #nav a.a_with_dropdown {
 	padding:9px 30px 8px 20px;
@@ -470,21 +467,17 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 }
 
 /* main level link hover */
+
 #nav .current a, #nav li:hover > a {
 	background: #192a43;
 	color: #d2d2d2;
 	text-shadow: 0 1px 0 rgba(0,0,0, .6);
-	-moz-border-radius-bottomright: 7px;
-	-moz-border-radius-bottomleft: 7px;
-	-webkit-border-bottom-right-radius: 7px;
-	-webkit-border-bottom-left-radius: 7px;
-	border-radius-bottomright: 7px;
-	border-radius-bottomleft: 7px;
+
 }
 
 #nav .current a, #nav li.with_dropdown:hover > a {
-	-moz-border-radius-bottomright: 0px;
-	-moz-border-radius-bottomleft: 0px;
+	border-radius-bottomright: 0px;
+	border-radius-bottomleft: 0px;
 	-webkit-border-bottom-right-radius: 0px;
 	-webkit-border-bottom-left-radius: 0px;
 	border-radius-bottomright: 0px;
@@ -493,8 +486,22 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 }
 
-#nav li.with_dropdown a {
-	background: /*#192a43*/ #102c0e url("../img/arrow.png") top right no-repeat;
+#nav .current a, #nav li.with_dropdown:hover > a {
+	border-radius-bottomright: 0px;
+	border-radius-bottomleft: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-radius-bottomright: 0px;
+	border-radius-bottomleft: 0px;
+	border:none;
+
+}
+
+ul#nav li:first-child ul {
+	width: 440px;
+}
+    ul#nav li.with_dropdown:first-child ul li {
+	width: 220px; float:left;
 }
 
 #nav li:hover > a {
@@ -528,6 +535,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 /* dropdown */
 #nav li:hover > ul {
 	display: block;
+        border-radius: 0px 0px 6px 6px;
 }
 
 /* level 2 list */
@@ -539,11 +547,12 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	width: 185px;
 	position: absolute;
 	top: 33px;
+        
 	left: 0;
 	background: #ddd url(../img/gradient.png) repeat-x 0 0;
 	border: solid 0px #b4b4b4;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+	
+	
 	-webkit-border-top-left-radius: 0px;
 	-moz-border-radius-topleft: 0px;
 	-webkit-box-shadow: 0 2px 3px rgba(0,0,0, .3);
@@ -604,6 +613,8 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	-moz-border-radius-bottomright: 9px;
 
 }
+
+    
 
 /* rounded corners of first link of sublinks*/
 #nav ul ul li:first-child > a {
@@ -847,10 +858,19 @@ span.shading
         background-repeat: repeat;
         }
 
+span.add
+        {
+        color: black;        
+        }
+
 span.thirdDel
         {
-        color: red;
-        text-decoration: line-through;
+        color: black;        
+        }
+
+span.underLine
+        {        
+        text-decoration: underline;
         }
 
 span.pbA, span.pbMs
@@ -1157,7 +1177,7 @@ h1.subtitle { margin-left: 0px !important; }
 .refdiv p.altForm {font-size: 16px; line-height: 1.2em; margin:5px 0 0 0; }
 
 
-/* Veiledninger */
+/* Veiledninger START */
 
 #veiledning_tekst ol, #veiledning_tekst ul, #intro_tekst ol, #intro_tekst ul {
     font-size: 1.6em;
@@ -1182,12 +1202,19 @@ h1.subtitle { margin-left: 0px !important; }
 
 #veiledning_tekst h2, #intro_tekst h2 {
  font-size: 1.8em;
+ 
 }
+
+#veiledning_tekst italic
+        {
+        font-style: italic;
+        }
 
 #veiledning_tekst h2:first-child,  #intro_tekst h2:first-child {
  font-size: 2.8em;
 }
 
+/* Veiledninger END */
 
     /* farger/stiler for veiledning til manuskriptvisning */
 
