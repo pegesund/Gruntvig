@@ -13,6 +13,7 @@ $(document).ready(function() {
     options["variant"] = getCurrentHash(window.location.hash)["v0"];
     options["open_tab"] =  getCurrentHash(window.location.hash)[0];
     options["current_chapter"] = getCurrentHash(window.location.hash)["k"];
+          
     if (getCurrentHash(window.location.hash)["f0"]) theUrl["f0"] = getCurrentHash(window.location.hash)["f0"];
     addNewReader(0, options);
     addCommentListener();
@@ -116,6 +117,7 @@ $(document).ready(function() {
                 
     initChapterHandling();
     startupUri(startupHash);  
-                
+    // addReaderColumn();
+    addSimpleReader("1804_28_txr.xml");                
 });
 

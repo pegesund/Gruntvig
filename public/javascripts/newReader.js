@@ -27,22 +27,16 @@ addReaderColumn = function() {
     });          
 }
 
-
-addNewReader = function(num) {
-    var options = arguments[1] || {};
-    uriChangeTab(num,0); 
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Fax.</span></a></li> <li><a href="#txr' + num + '"><span>Tekstred.</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
-    newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
-    newReader +=  '<div id="variant' + num + '"><div class="variant_select">' + hovedtekstSelect + ' <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
-    newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">Næste side</a></div> <div class="faksimileContent"></div></div>';
-    newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
-    newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
-    newReader += '</div></span>';
-    
-    $("#hovedtekst_select").html(hovedtekstSelect);
-    $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
-    //alert($("#høyre_toppmeny_nytt_navn").html());
-    // update uri-hash if changing tab-panel  
+/**
+ * 
+ * @param {int} num
+ * @param {type} hash
+ * @returns {void}
+ * 
+ * Set focus on right tab, adds focus handles
+ * 
+ */
+tabFocusHandler = function(num, options) {
     var i_tab=0;
     for (i_tab = 0; i_tab <= num; i_tab++) {
         if ($("#tab" + i_tab).size() == 0) continue;
@@ -58,8 +52,35 @@ addNewReader = function(num) {
             uriChangeTab(currentTab, ui.index);
         });          
     }
+}
 
-      
+
+/**
+ * 
+ * @param {int} num
+ * @returns {void}
+ * 
+ * Opens up a new column and fills this with content
+ * 
+ * 
+ */
+addNewReader = function(num) {
+    var options = arguments[1] || {};
+    uriChangeTab(num,0); 
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Fax.</span></a></li> <li><a href="#txr' + num + '"><span>Tekstred.</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
+    newReader +=  '<div id="variant' + num + '"><div class="variant_select">' + hovedtekstSelect + ' <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
+    newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">Næste side</a></div> <div class="faksimileContent"></div></div>';
+    newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
+    newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
+    newReader += '</div></span>';
+    
+    $("#hovedtekst_select").html(hovedtekstSelect);
+    $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
+    //alert($("#høyre_toppmeny_nytt_navn").html());
+    // update uri-hash if changing tab-panel  
+    tabFocusHandler(num, options);
+    
     $('.variantsAsDropDown').change(function() {
         var parentId = $(this).closest("div.ui-tabs").attr("id");
         var tabNumber = parseInt(parentId.substring(3));
@@ -83,15 +104,7 @@ addNewReader = function(num) {
         success: function(data) {
             var txrContent = $("#txr" + num);
             txrContent.html(data);
-            addTooltip($('.persName, .placeName, .myth, .rs_bible'));                
-            $(".txrmenu").unbind("click").click(function() {
-                var scrollElement = $(this).closest(".mainTxr").parent();
-                var id = $(this).attr("hrel").replace(/\./g, "\\.");
-                scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
-                scrollElement.scrollTo("-=30px", 700);
-                    
-            });
-
+            addMouseHandlers(txrUrl);
         }
     });
 
@@ -101,15 +114,10 @@ addNewReader = function(num) {
         success: function(data) {
             var introContent = $("#kommentar" + num);
             introContent.html(data);
-            addTooltip($('.persName, .placeName, .myth, .rs_bible'));
-            $(".plusComment").click(function() {    
-                $(this).next().slideToggle("slow"); 
-            });
+            addMouseHandlers(kommentarUrl);
         }
     });
 
-    // add intro
-         
     $.ajax({
         url: introUrl,
         success: function(data) {
@@ -178,10 +186,61 @@ addNewReader = function(num) {
             currentChapter = parseInt(options["current_chapter"]);
         } else {
             currentChapter = 0; 
-        }
-                  
+        }             
         gotoChapter(currentTextId, currentChapter);
     }
-
 } // end new reader
 
+
+
+/**
+ * 
+ * adds click handlers to txt- or comfiles
+ * 
+ */
+var addMouseHandlers = function(fileName) {
+    addTooltip($('.persName, .placeName, .myth, .rs_bible'));
+    if (fileName.match(/getComment/) || fileName.match(/_com/)) {
+        $(".plusComment").click(function() {    
+            $(this).next().slideToggle("slow"); 
+        });
+    }
+    if (fileName.match(/getTxr/) || fileName.match(/_txr/)) {                
+        $(".txrmenu").unbind("click").click(function() {
+            var scrollElement = $(this).closest(".mainTxr").parent();
+            var id = $(this).attr("hrel").replace(/\./g, "\\.");
+            scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
+            scrollElement.scrollTo("-=30px", 700);     
+        });
+    }    
+} 
+
+/*
+ * This function adds a reader for links between different root-texts
+ * In this reader only one text is showed
+ * 
+ */
+addSimpleReader = function(url) {
+    readerNum += 1;
+    var num = readerNum;
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>Innhold</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    newReader += '<div id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
+    newReader += '</div></span>';
+    $("#hovedtekst_select").html(hovedtekstSelect);
+    $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
+    tabFocusHandler(num, {});
+    number_of_present_tabreaders = $(".tabReader").length;
+    $(".container").width($(".container").width() + columnWidth);
+    $("#høyre").width($("#høyre").width() + columnWidth);
+    resize_window();
+    $( ".text-resizeable" ).css('font-size', $('#hovedtekst .text-resizeable').css('font-size'));
+    $.ajax({
+        url: "ajax/getManusByName/"  + url,
+        success: function(data) {
+            var introContent = $("#foreign" + num);
+            introContent.html(data);
+            addMouseHandlers(url);
+        }
+    });
+    
+}
