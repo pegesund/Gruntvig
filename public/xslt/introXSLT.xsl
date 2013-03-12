@@ -82,7 +82,7 @@
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
         </div>
-    </xsl:template>
+    </xsl:template> 
     
     <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
         <a id="toc">
@@ -336,9 +336,12 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="{@target}" class="docOut intro_menu">-->
-                       <xsl:apply-templates/>
-                    <!--</a>-->
+                    <span class="docout">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>           
+                        <xsl:apply-templates/>         
+                    </span>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>

@@ -1,6 +1,6 @@
 /* *
  * 
- * Handling of 
+ * Handle chapters
  * 
  * 
  */
