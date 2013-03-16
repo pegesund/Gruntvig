@@ -267,19 +267,39 @@
         text-align: left;
         }
 
-#tekst_innhold .lfirstIndent
+#tekst_innhold .l_firstIndent
         {
         text-indent: 1em;
         }
 
-#tekst_innhold .lsecondIndent
+#tekst_innhold .l_secondIndent
         {
         text-indent: 2em;
         }
 
-#tekst_innhold .lthirdIndent
+#tekst_innhold .l_thirdIndent
         {
         text-indent: 4em;
+        }
+
+#tekst_innhold table.lg
+        {
+        padding: 0.5em;    
+        }
+        
+#tekst_innhold td.lgNumber
+        {
+        font-size: 80%;
+        color: gray;
+        width: 10%;
+        }
+
+#tekst_innhold td.lg
+        {
+        font-size: 14px;
+        line-height: 150%;
+        margin: 2em 2em 2em 3em;
+        text-align: left;
         }
 
 #tekst_innhold .lg

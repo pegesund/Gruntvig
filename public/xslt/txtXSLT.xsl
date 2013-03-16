@@ -408,9 +408,16 @@
     <!-- titelblad END -->
     
     <xsl:template match="TEI:lg">
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>
+        <table class="lg">            
+            <tr valign="top">
+                <td class="lgNumber">
+                    <xsl:value-of select="@n"/>
+                </td>
+                <td class="lg">
+                    <xsl:apply-templates/>
+                </td>
+            </tr>
+        </table>
     </xsl:template>
     
     <xsl:template match="TEI:l">
@@ -669,7 +676,6 @@
         </div>
         <xsl:call-template name="footnote"/>
     </xsl:template>
-    
     
     <xsl:template match="TEI:persName">
         <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
