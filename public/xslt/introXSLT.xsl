@@ -72,11 +72,14 @@
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
                     <xsl:text>#AA</xsl:text>
-                    <xsl:number level="multiple" count="TEI:div"/>
+                        <xsl:text>_</xsl:text>
+                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                        <xsl:text>_</xsl:text>
+                        <xsl:number level="multiple" count="TEI:div"/>      
+                        <xsl:number level="multiple" count="TEI:div"/>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="TEI:head"/>
                 </xsl:attribute>
-                <xsl:number level="multiple" count="TEI:div"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="TEI:head"/>
             </a>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
@@ -88,10 +91,18 @@
         <a id="toc">
             <xsl:attribute name="id">
                 <xsl:text>AA</xsl:text>
+                <xsl:text>_</xsl:text>
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                <xsl:text>_</xsl:text>                
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}" id="{@xml:id}">
+        <div class="head{@rend}">
+             <xsl:attribute name="id">
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                <xsl:text>_</xsl:text>                
+                <xsl:value-of select="@xml:id" />
+             </xsl:attribute>           
             <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
@@ -331,8 +342,13 @@
                     <!--</a>-->
                 </xsl:when>                                
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@target}" class="docIn intro_menu">
-                       <xsl:apply-templates/>
+                    <a class="docIn intro_menu">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                            <xsl:text>_</xsl:text>
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>
+                    <xsl:apply-templates/>
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
