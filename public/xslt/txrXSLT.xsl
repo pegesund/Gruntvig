@@ -13,7 +13,7 @@
     2011.10.04: list-style: alpha, roman and simple
     2011.06.27: sic and supp, note element
     2011.03.21
-    2011.03.18 
+    2011.03.18  
 -->
 
     <xsl:template match="TEI:TEI">
@@ -87,7 +87,8 @@
         <div class="toc" id="retur">
             <a class="toc txrmenu">
                 <xsl:attribute name="hrel">
-                    <xsl:text>A</xsl:text>
+                    <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
+                    <xsl:text>_A</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
@@ -103,11 +104,16 @@
     <xsl:template match="TEI:head">
         <a class="toc txrmenu">
             <xsl:attribute name="id">
-                <xsl:text>A</xsl:text>
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
+                <xsl:text>_A</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
-        <div class="head{@rend}" id="{@xml:id}">
+        <div class="head{@rend}">
+            <xsl:attribute name="id">
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1_')" />
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
             <a hrel="#retur" class="toc txrmenu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
@@ -176,7 +182,7 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@target}" class="docIn txrmenu">
+                    <a hrel="{base-uri()}_{@target}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>                

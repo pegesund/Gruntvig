@@ -112,7 +112,7 @@ public class TextReference extends GenericModel {
                 strB.append(Helpers.nodeToString(row));                        
             if (row.getAttributes().getNamedItem("id") == null) continue;
             i++;
-            String id = "scrollTarget" + "_" + row.getAttributes().getNamedItem("id").getNodeValue();
+            String id = "scrollTarget" + "_" + asset.fileName.replace("_com.xml", "") + "_" + row.getAttributes().getNamedItem("id").getNodeValue();
 
             row.getAttributes().getNamedItem("id").setNodeValue(id);
             String content = Helpers.nodeToString(row);
