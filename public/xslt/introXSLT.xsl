@@ -71,7 +71,7 @@
         <div class="toc" id="retur">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
-                    <xsl:text>#AA</xsl:text>
+                    <xsl:text>#intro</xsl:text>
                         <xsl:text>_</xsl:text>
                         <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
                         <xsl:text>_</xsl:text>
@@ -90,7 +90,7 @@
     <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
         <a id="toc">
             <xsl:attribute name="id">
-                <xsl:text>AA</xsl:text>
+                <xsl:text>intro</xsl:text>
                 <xsl:text>_</xsl:text>
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
                 <xsl:text>_</xsl:text>                
@@ -100,7 +100,7 @@
         <div class="head{@rend}">
              <xsl:attribute name="id">
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
-                <xsl:text>_</xsl:text>                
+                <xsl:text>_intro_</xsl:text>                
                 <xsl:value-of select="@xml:id" />
              </xsl:attribute>           
             <a hrel="#retur" class="toc intro_menu">

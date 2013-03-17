@@ -1254,3 +1254,7 @@ h1.subtitle { margin-left: 0px !important; }
  div.placeContent { visibility: hidden; }
  
  div.placeContent .explanation { visibility: visible }
+
+ .docout {
+     color: blue;
+ }

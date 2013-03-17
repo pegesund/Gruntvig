@@ -88,7 +88,7 @@
             <a class="toc txrmenu">
                 <xsl:attribute name="hrel">
                     <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
-                    <xsl:text>_A</xsl:text>
+                    <xsl:text>_txr_</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
@@ -105,13 +105,14 @@
         <a class="toc txrmenu">
             <xsl:attribute name="id">
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
-                <xsl:text>_A</xsl:text>
+                <xsl:text>_txr_</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
             <xsl:attribute name="id">
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1_')" />
+                <xsl:text>txr_</xsl:text>
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
             <a hrel="#retur" class="toc txrmenu">

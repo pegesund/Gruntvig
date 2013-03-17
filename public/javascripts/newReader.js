@@ -212,7 +212,7 @@ var addMouseHandlers = function(fileName) {
             scrollElement.scrollTo(scrollElement.find("#" + id)); // hack as id should be unique - fix if problems
             scrollElement.scrollTo("-=30px", 700);     
         });
-    }    
+    }  
 } 
 
 /*

@@ -9,6 +9,13 @@
 
 // tooltip
 
+/**
+ * 
+ * Adds tooltip, but also link-handlers for docin/docout
+ * 
+ * @param {type} tags
+ * @returns {undefined}
+ */
 var addTooltip = function (tags) {
     tags.cluetip({ 
        cluetipClass: 'jtip', 
@@ -20,6 +27,7 @@ var addTooltip = function (tags) {
         ajaxCache: false, 
         arrows: false
     });
+    addDocOutListener();
 }
 
 var removeTooltip = function(tags) {
@@ -72,3 +80,30 @@ var addCommentListener = function() {
 
     });
 }
+
+
+var docOutTodocInLink = function(link) {
+    var l = link.split("#");
+    if (l.length < 2) {
+        return "Not found";
+    }
+    
+    var fileElements = l[0].match("(.*?)_([a-z]+).xml$");
+    var link = fileElements[1] + "_" + fileElements[2] + "_" + l[1];
+    return link;
+}
+
+var addDocOutListener = function() {
+    $(".docout").unbind("click").click(function() {
+        var target = $(this).attr("name");
+        var link = docOutTodocInLink(target);
+        var linkElement = $("#" + link);
+        if (linkElement != []) {
+            var scrollElement = linkElement.closest(".ui-tabs-panel");
+            alert("Id scrol-element: " + scrollElement.attr("id"));
+            scrollElement.scrollTo(linkElement);
+            scrollElement.scrollTo(scrollElement.find("#" + linkElement.attr("id")));
+            scrollElement.scrollTo("-=30px", 700);
+        }
+    });
+};
