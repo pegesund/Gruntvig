@@ -232,11 +232,9 @@
             <xsl:choose>
                 <xsl:when test="@type='litList'">
                     <xsl:apply-templates/>
-                    <xsl:text>.</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='webList'">
                     <xsl:apply-templates/>
-                    <xsl:text>.</xsl:text>
                 </xsl:when>
             </xsl:choose>
         </div>
@@ -251,7 +249,6 @@
     <xsl:template match="TEI:item[not(@n)]">
         <li class="webList">
             <xsl:apply-templates/>
-            <xsl:text>.</xsl:text>
         </li>
     </xsl:template>
     
