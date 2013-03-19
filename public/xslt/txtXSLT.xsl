@@ -67,6 +67,24 @@
                             </xsl:if>
                         </tr>
                         
+                        <tr>
+                            <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
+                                <xsl:text>Andre udgaver</xsl:text>
+                                <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
+                                    <div class="table">
+                                        <table>
+                                            <td class="sigel">
+                                                <xsl:value-of select="@rend"/>
+                                            </td>
+                                            <td class="source">
+                                                <xsl:apply-templates select="."/>
+                                            </td>
+                                        </table>
+                                    </div>
+                                </xsl:for-each>
+                            </xsl:if>
+                        </tr>
+                        
                     </div>
                     
                     <div class="kolofon">
