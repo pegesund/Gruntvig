@@ -439,9 +439,16 @@
     </xsl:template>
     
     <xsl:template match="TEI:l">
-        <div class="l_{@rend}">
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="@rend='blank'">
+                <br/>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="l_{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:head">        
