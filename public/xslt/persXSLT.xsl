@@ -144,7 +144,7 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='year']">
-        <span class="year">
+        <span class="yar">
             (<xsl:apply-templates/>
             <xsl:text>)</xsl:text>
         </span>
