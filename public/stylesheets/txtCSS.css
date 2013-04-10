@@ -1,13 +1,15 @@
 /* txtCSS.css til styling af tekster */
 /* KSR: 2011.09.05 */
 
-
+/* fodnoter START */
 
 #tekst_innhold a.footMarker 
         {
         color: red;
         text-decoration: none;
         }
+
+/* fodnoter END */
 
 #tekst_innhold a.app 
         {
