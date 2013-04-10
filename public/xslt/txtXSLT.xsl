@@ -517,7 +517,7 @@
         <xsl:variable name="id">
             <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="retur{$id}" href="#note{$id}" class="footMarker">
+        <a id="retur{$id}" href="#note{$id}">
             <span>
                 <xsl:value-of select="$id"/>
             </span>
@@ -528,7 +528,7 @@
         <xsl:variable name="id">
             <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}" class="footMarker">
+        <a id="note{$id}" href="#retur{$id}">
             <span>
                 <xsl:value-of select="$id"/>
             </span>
