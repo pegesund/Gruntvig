@@ -183,7 +183,7 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{base-uri()}_{@target}" class="docIn txrmenu" style="color:red">
+                    <a hrel="{base-uri()}_{@target}" class="docIn txrmenu">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>                
