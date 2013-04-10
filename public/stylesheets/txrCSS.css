@@ -118,10 +118,14 @@ div.appInvisible
         color: #000000;
         }
 
+/* docIn START */
+        
 .toc a.docIn:hover
         {
-        color: #006633;
+        color: red;
         }
+
+/* docIn END */
         
  .toc a
         {
