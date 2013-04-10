@@ -1,6 +1,14 @@
 /* txtCSS.css til styling af tekster */
 /* KSR: 2011.09.05 */
 
+
+
+#tekst_innhold a.footMarker 
+        {
+        color: red;
+        text-decoration: none;
+        }
+
 #tekst_innhold a.app 
         {
         color: black;
