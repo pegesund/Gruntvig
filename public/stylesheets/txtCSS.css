@@ -5,8 +5,9 @@
 
 #tekst_innhold a.footMarker 
         {
-        color: red;
+        font-size: 80%;
         text-decoration: none;
+        vertical-align: super;
         }
 
 /* fodnoter END */
