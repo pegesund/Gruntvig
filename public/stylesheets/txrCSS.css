@@ -112,20 +112,20 @@ div.appInvisible
         margin-left: 1em;
         }
 
-/* docIn START 
+/* docIn START */
 
-.mainTxr a.docIn txrmenu
+.docIn txrmenu
         {
         text-decoration: underline;
         color: red;
         }
         
-.mainTxr a.docIn txrmenu:hover 
+.docIn txrmenu:hover 
         {
         color: red;
         }
 
- docIn END */
+/* docIn END */
         
  .toc a
         {
