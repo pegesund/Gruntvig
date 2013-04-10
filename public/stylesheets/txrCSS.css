@@ -117,7 +117,7 @@ div.appInvisible
 a.docIn txrmenu
         {
         text-decoration: underline;
-        color: #000000;
+        color: red;
         }
         
 a.docIn txrmenu:hover 
