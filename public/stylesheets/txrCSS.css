@@ -116,8 +116,8 @@ div.appInvisible
 
 a.docIn
         {
-        text-decoration: underline;
-        color: red;
+        text-decoration: none;
+        cursor: pointer
         }
         
 a.docIn:hover 
