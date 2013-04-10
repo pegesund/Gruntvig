@@ -632,7 +632,7 @@
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
-        <a hrel="{@facs}" class="app faksimile_viewer">
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="size">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
@@ -641,7 +641,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
-        <a hrel="{@facs}" class="app faksimile_viewer">
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="size">
             <xsl:text>|</xsl:text>
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
