@@ -114,13 +114,13 @@ div.appInvisible
 
 /* docIn START */
 
-a.docIn txrmenu
+.mainTxr a.docIn txrmenu
         {
         text-decoration: underline;
         color: red;
         }
         
-a.docIn txrmenu:hover 
+.mainTxr a.docIn txrmenu:hover 
         {
         color: red;
         }
