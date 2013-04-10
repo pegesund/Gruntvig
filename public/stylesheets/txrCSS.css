@@ -112,15 +112,15 @@ div.appInvisible
         margin-left: 1em;
         }
 
-.toc a.docIn
+/* docIn START */
+
+a.docIn txrmenu
         {
         text-decoration: underline;
         color: #000000;
         }
-
-/* docIn START */
         
-.toc a.docIn:hover
+a.docIn txrmenu:hover 
         {
         color: red;
         }
