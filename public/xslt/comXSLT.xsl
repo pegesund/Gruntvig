@@ -79,19 +79,19 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>              
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@id}" class="docIn txrmenu">
+                    <!--<a hrel="{@id}" class="docIn txrmenu">-->
                        <xsl:apply-templates/>
-                    </a>
+                    <!--</a>-->
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <a hrel="{@target}" class="docOut txrmenu">
+                    <!--<a hrel="{@target}" class="docOut txrmenu">-->
                        <xsl:apply-templates/>
-                    </a>
+                    <!--</a>-->
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <a href="{@target}">
+                    <!--<a href="{@target}">-->
                         <xsl:apply-templates/>
-                    </a>
+                    <!--</a>-->
                 </xsl:when>
                 <xsl:when test="@type='web'">
                     <xsl:text>&lt;</xsl:text>
