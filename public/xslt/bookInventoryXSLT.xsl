@@ -15,11 +15,11 @@
     </xsl:template>
     
     <xsl:template match="TEI:head[@type='bookInventory']">
-        <!--
+        
         <div class="bookInventory">
             <xsl:apply-templates/>
         </div>
-        -->
+        
         <div class="kbSignatur">
             <xsl:text>Det Kongelige Bibliotek,</xsl:text>
         </div>
