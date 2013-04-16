@@ -307,7 +307,7 @@
     <!-- til brugs for txtEditCSS-css end -->
     
     <xsl:template match="tei:p[not(@rend)]">        
-        <div class="{footnote}">
+        <div class="footnote">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
