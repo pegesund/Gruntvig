@@ -572,9 +572,8 @@
                 <xsl:value-of select="$id"/>
             </span>
         </a>
-        <span class="footnote">
-            <xsl:apply-templates/>
-        </span>
+        <xsl:apply-templates/>
+        
     </xsl:template>
     
     
