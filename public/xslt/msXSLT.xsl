@@ -247,13 +247,11 @@
     
     <xsl:template match="tei:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number level="any" from="tei:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}" class="footMarker">
-            <span>
-                <xsl:value-of select="$id"/>
-            </span>
-        </a>
+        <a id="note{$id}" href="#retur{$id}" class="footnote">
+            <xsl:value-of select="$id"/>
+        </a>               
         <span class="footnote">
             <xsl:apply-templates/>
         </span>
