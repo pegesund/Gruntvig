@@ -567,13 +567,12 @@
         <xsl:variable name="id">
             <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
+        <span>
         <a id="note{$id}" href="#retur{$id}" class="footMarker">
-            <span>
-                <xsl:value-of select="$id"/>
-            </span>
+        <xsl:value-of select="$id"/>    
         </a>
         <xsl:apply-templates/>
-        
+            </span>
     </xsl:template>
     
     
