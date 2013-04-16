@@ -269,30 +269,91 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:note[@type='footnote']">
-        <xsl:variable name="id">
-            <xsl:number level="any" from="tei:text"/>
-        </xsl:variable>
-            <a id="retur{$id}" href="#note{$id}">
-                <span class="footMarker">
-                    <xsl:value-of select="$id"/>
-                </span>
-            </a>                            
+    <!-- footnote STRAT -->
+    
+    <xsl:template name="footnote">
+        <xsl:if test=".//TEI:note[@type='footnote']">
+            <br/>
+            <hr class="footLine"/>            
+            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
+        </xsl:if>
     </xsl:template>
     
-    <xsl:template match="tei:note[@type='footnote']" mode="foot">
+    <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="tei:text"/>
+            <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}">
-            <span class="footMarker">
+        <a id="retur{$id}" href="#note{$id}" class="footMarker">
+            <span>
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="note{$id}" href="#retur{$id}" class="footMarker">
+            <span>
                 <xsl:value-of select="$id"/>
             </span>
         </a>               
         <div class="footnote">
             <xsl:apply-templates/>
         </div>
+    </xsl:template>       
+
+    <xsl:template match="TEI:body/TEI:div">        
+        <div class="chapter">
+            <xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:value-of select="@type"/>
+               </xsl:attribute> 
+            </xsl:if>
+            <xsl:apply-templates/>
+            <xsl:call-template name="footnote"/>
+        </div>
     </xsl:template>
+    
+    <!-- footnote template fra linj 698 -->
+    
+    <xsl:template match="TEI:note[@type='footnote']">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="retur{$id}" href="#note{$id}" class="footMarker">
+            <span>
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+        <xsl:variable name="id">
+            <xsl:number level="any" from="TEI:text"/>
+        </xsl:variable>
+        <a id="note{$id}" href="#retur{$id}" class="footMarker">
+            <span>
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+        <span class="footnote">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    
+    <!-- <xsl:call-template name="footnote"/> -->
+    
+    <xsl:template match="TEI:div[@type='bibleVerse' or @type='motto' or @type='preFace']">
+        <div class="{@type}">
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
+    </xsl:template>
+    
+    <!-- footnote END -->
     
     <xsl:template match="tei:hi">        
         <span class="{@rend}">
