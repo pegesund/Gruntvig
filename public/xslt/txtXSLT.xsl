@@ -503,7 +503,7 @@
         </span>
     </xsl:template>
     
-    <!-- footnote STRAT -->
+    <!-- footnote STRAT 
     
     <xsl:template name="footnote">
         <xsl:if test=".//TEI:note[@type='footnote']">
@@ -550,7 +550,7 @@
         </div>
     </xsl:template>
     
-    <!-- footnote END -->
+     footnote END -->
     
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
