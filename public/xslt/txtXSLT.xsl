@@ -569,6 +569,7 @@
         </xsl:variable>
         <a id="note{$id}" href="#retur{$id}" class="footMarker">
             <span>
+                <xsl:text>HAT</xsl:text>
                 <xsl:value-of select="$id"/>
             </span>
         </a>               
@@ -656,7 +657,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
         <div class="{@rend}">
