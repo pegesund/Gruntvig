@@ -79,8 +79,7 @@
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
-        </div>
-        
+        </div>        
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
@@ -181,7 +180,7 @@
                     <a href="#http://{.}">
                         <xsl:apply-templates/>
                     </a>
-                </xsl:when>                
+                </xsl:when>
                 <xsl:when test="@type='docIn'">
                     <a hrel="{base-uri()}_{@target}" class="docIn">
                        <xsl:apply-templates/>
@@ -412,6 +411,11 @@
                         </tr>
                     </xsl:for-each>
                 </table>
+            </xsl:when>
+            <xsl:when test="@type='textualCriticismZero'">
+                <div class="firstIndent">
+                    <xsl:text>Der er ikke foretaget tekstrettelser.</xsl:text>
+                </div>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
