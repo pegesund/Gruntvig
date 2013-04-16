@@ -550,6 +550,8 @@
         </div>
     </xsl:template>
     
+    <!-- footnote END -->
+    
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
@@ -745,7 +747,6 @@
     <xsl:template match="TEI:fw">
         <xsl:choose>
             <xsl:when test="@type='blank'">
-                <br/>
                 <br/>
             </xsl:when>
             <xsl:when test="@type='asterisk'">
