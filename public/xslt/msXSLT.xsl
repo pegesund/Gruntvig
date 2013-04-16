@@ -306,6 +306,12 @@
     
     <!-- til brugs for txtEditCSS-css end -->
     
+    <xsl:template match="tei:p[not(@rend)]">        
+        <div class="{footnote}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="tei:p[@rend and not(@rend='hangingIndent')]">        
         <div class="{@rend}">
             <xsl:apply-templates/>
