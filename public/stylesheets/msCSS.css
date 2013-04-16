@@ -33,6 +33,11 @@ span.appInvisible
 
 /* app start */
 
+.manusMain a.footnote
+        {
+        color: red;
+        }
+
 .manusMain .ms
         {
         color: black;
