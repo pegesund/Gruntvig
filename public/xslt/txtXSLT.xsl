@@ -533,9 +533,9 @@
                 <xsl:value-of select="$id"/>
             </span>
         </a>               
-        <div class="footnote">
+        <span class="footnote">
             <xsl:apply-templates/>
-        </div>
+        </span>
     </xsl:template>       
 
     <xsl:template match="TEI:body/TEI:div">        
