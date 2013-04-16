@@ -413,7 +413,7 @@
                 </table>
             </xsl:when>
             <xsl:when test="@type='textualCriticismZero'">
-                <div class="firstIndent">
+                <div class="noIndent">
                     <xsl:text>Der er ikke foretaget tekstrettelser.</xsl:text>
                 </div>
             </xsl:when>
