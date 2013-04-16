@@ -18,32 +18,42 @@
     
     <xsl:template match="tei:teiHeader">
         
-        <div class="head">
-                    <xsl:if test="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']">
-                        <i><xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']"/></i>
-                    </xsl:if>
-                    <xsl:if test="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='part']">
-                        &#x201C;<xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='part']"/>&#x201D;
-                    </xsl:if>
-                </div>
+        <div class="title">
+            <xsl:if test="//tei:title[@type='main']">
+                <i><xsl:apply-templates select="//tei:title[@type='main']"/></i>
+            </xsl:if>
+            <xsl:if test="//tei:title[@type='part']">
+                <xsl:text>&#x201C;</xsl:text><xsl:apply-templates select="//tei:title[@type='part']"/><xsl:text>&#x201D;</xsl:text>
+            </xsl:if>            
+        </div>
+        
+        <div class="source">
+            <xsl:text>Tekstkilde:</xsl:text>
+            <br/>
+            <xsl:for-each select="//tei:bibl/tei:author">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+            <xsl:text> </xsl:text>
+            <xsl:text>(</xsl:text>
+            <xsl:for-each select="//tei:bibl/tei:date">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+            <xsl:text>) </xsl:text>
+            <xsl:for-each select="//tei:title[@type='katalogsignatur']">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </div>
+        
+    </xsl:template>
+ 
+    
+    <xsl:template match="tei:tei">
+            
+            <div class="manusMain">
                 
-                <div class="source">
-                    <div class="source">
-                        <xsl:text>Tekstkilde:</xsl:text>
-                    </div>
-                    <xsl:for-each select="//tei:bibl/tei:author">
-                        <xsl:apply-templates select="."/>
-                        <xsl:text> </xsl:text>
-                        <xsl:text>(</xsl:text>
-                        <xsl:for-each select="//tei:bibl/tei:date">
-                            <xsl:apply-templates select="."/>
-                        </xsl:for-each>
-                        <xsl:text>) </xsl:text>
-                    </xsl:for-each>
-                    <xsl:for-each select="//tei:title[@type='katalogsignatur']">
-                        <xsl:apply-templates select="."/>
-                    </xsl:for-each>
-                </div>
+                <div class="head">
+                    <xsl:apply-templates select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
+                </div>                
                 
                 <xsl:apply-templates select="tei:text"/>
                 
@@ -56,9 +66,7 @@
                     <xsl:apply-templates select="//tei:note[@type='footnote']" mode="foot"/>
                 
                 </xsl:if>
-                
-            </body>
-        </html>
+            </div>
         
     </xsl:template>
     
@@ -134,16 +142,16 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:lg">
+    <xsl:template match="tei:lg">        
         <div class="lg">
             <xsl:apply-templates/>
-        </div>
+        </div>        
     </xsl:template>
     
-    <xsl:template match="tei:l">
+    <xsl:template match="tei:l">        
         <div class="l">
             <xsl:apply-templates/>
-        </div>
+        </div>        
     </xsl:template>
     
     <xsl:template match="tei:app[@type='ms']">
@@ -152,14 +160,8 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="tei:rdg">
-        <span>
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
     <xsl:template match="tei:lem[@type='add' and not(tei:l)]">
-        <span class="l">
+        <span class="add">
             <xsl:text>[</xsl:text>
             <xsl:apply-templates/>
             <xsl:text>]</xsl:text>
@@ -180,47 +182,84 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="tei:del">
-        <xsl:choose>
-            <xsl:when test="@type='add'">
-                <xsl:text>[</xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>]</xsl:text>
-            </xsl:when>
-            <xsl:when test="@type='firstDel'">                
-                <span class="firstDel">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@type='shading'">
-                <span class="shading">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@hand='doubt'">
-                <xsl:text>&lt;</xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>&gt;</xsl:text>
-            </xsl:when>
-            <xsl:when test="@type='immediate'">
-                <span class="immediate">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@type='secondDel'">
-                <span class="secondDel">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@type='thirdDel'">
-                <span class="thirdDel">
-                    <span class="redLine">
-                        <xsl:apply-templates/>
-                    </span>                    
-                </span>
-            </xsl:when>
-        </xsl:choose>
+    <xsl:template match="tei:del[@type='add']">
+        <span class="add">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>]</xsl:text>
+        </span>
     </xsl:template>
+    
+    <xsl:template match="tei:del[@type='firstDel']">
+        <span class="firstDel">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@type='shading']">
+        <span class="shading">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@type='immediate']">
+        <span class="immediate">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@type='secondDel']">
+        <span class="secondDel">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@type='thirdDel']">
+        <span class="thirdDel">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:del[@hand='doubt']">
+        <span class="doubt">
+            <xsl:text>&lt;</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>&gt;</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <!-- app til mouse-over
+    
+    <xsl:template match="tei:app">
+        <a class="app" href="#">
+            <span class="lem">
+                <xsl:apply-templates select="tei:lem"/>
+            </span>
+            <span class="appInvisible">
+                <xsl:text>] </xsl:text>
+                <xsl:apply-templates select="tei:rdg"/>
+            </span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="tei:rdg">
+        <xsl:apply-templates/>
+        <span class="wit">                
+            <xsl:text> </xsl:text>
+            <i>
+                <xsl:choose>
+                    <xsl:when test="following-sibling::tei:rdg[current()/@type or not(@type)]">
+                        <xsl:text>, </xsl:text>
+                    </xsl:when>
+                    <xsl:when test="following-sibling::tei:rdg[not(current()/@type) and @type]">
+                        <xsl:text>; </xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </i>
+        </span>
+    </xsl:template>
+    
+    -->
     
     <xsl:template match="tei:note[@type='add']">        
         <span class="editor">
@@ -254,18 +293,6 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    <!--
-    
-    <xsl:template match="tei:note[@type='footnote']">
-        *
-        <hr class="footLine"/>
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    -->
     
     <xsl:template match="tei:hi">        
         <span class="{@rend}">
@@ -319,41 +346,40 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
-        <a href="{@facs}">            
-            <span class="pbA">
+    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='text' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbA">
+        <span class="pbA">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
-            </span>            
-        </a>        
+            </a>
+        </span>        
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 [<xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>]
-            </span> 
-        </a>       
+            </a>
+       </span>       
     </xsl:template>
     
     <xsl:template match="tei:pb[@type='ms' and not(@rend='supp')]">
-        |
-        <a href="{@facs}">
-            <span class="pbMs">
+        <span class="pbMs">
+            |
+            <a href="{@facs}">
                 <xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>
-            </span> 
-        </a>        
+            </a>
+        </span>         
     </xsl:template>
     
     <xsl:template name="delimiterComma">
@@ -363,22 +389,5 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-
-<!-- pb{@ed} til forsk stil til hver ed -->
-
-<!--
-    
-    <xsl:template match="tei:lg">        
-        <div class="lg">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
-    
-    <xsl:template match="tei:l">        
-        <div class="l">
-            <xsl:apply-templates/>
-        </div>        
-    </xsl:template>
--->
     
 </xsl:stylesheet>
