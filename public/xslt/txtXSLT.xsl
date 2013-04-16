@@ -570,10 +570,10 @@
         <a id="note{$id}" href="#retur{$id}" class="footMarker">
             
                 <xsl:value-of select="$id"/>
-            
+            <xsl:apply-templates/>
         </a>
         
-            <xsl:apply-templates/>
+            
         </span>
     </xsl:template>
     
