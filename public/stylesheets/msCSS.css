@@ -41,7 +41,7 @@ a.footnote
         vertical-align: super;
         }
 
-.manusMain .footLine
+.manusMain hr.footLine
         {
         color: blue;
         text-align: left;
