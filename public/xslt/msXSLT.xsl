@@ -247,14 +247,16 @@
     
     <xsl:template match="tei:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="tei:text"/>
+            <xsl:number level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}" class="footnote">
-            <xsl:value-of select="$id"/>
-        </a>               
-        <div class="footnote">
+        <a id="note{$id}" href="#retur{$id}" class="footMarker">
+            <span>
+                <xsl:value-of select="$id"/>
+            </span>
+        </a>
+        <span class="footnote">
             <xsl:apply-templates/>
-        </div>
+        </span>
     </xsl:template>
     
     <xsl:template match="tei:div">
@@ -305,12 +307,6 @@
     </xsl:template>
     
     <!-- til brugs for txtEditCSS-css end -->
-    
-    <xsl:template match="tei:p[not(@rend)]">        
-        <div class="footnote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
     
     <xsl:template match="tei:p[@rend and not(@rend='hangingIndent')]">        
         <div class="{@rend}">
