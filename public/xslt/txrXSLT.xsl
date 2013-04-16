@@ -336,7 +336,7 @@
         </ul>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis']">
+    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero']">
         <xsl:choose>
             <xsl:when test="@type='textualCriticismPluralis'">                
                 <xsl:text>Der er foretaget følgende tekstrettelser (se vejledning til de tekstkritiske noter):</xsl:text>
