@@ -231,7 +231,7 @@
     
     <xsl:template name="footnote">
         <xsl:if test=".//tei:note[@type='footnote']">
-            <hr class="footLine"/>            
+            <!--<hr class="footLine"/>            -->
             <xsl:apply-templates select=".//tei:note[@type='footnote']" mode="foot"/>
         </xsl:if>
     </xsl:template>
