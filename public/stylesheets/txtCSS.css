@@ -126,7 +126,7 @@
         text-align: right;
         }
 
-#tekst_innhold .footnote
+#tekst_innhold span.footnote
         {
         font-size: 80%;
         margin: 1em 0em 1em 2em;
