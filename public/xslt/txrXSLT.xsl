@@ -228,16 +228,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='upperAlpha'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperAlpha">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerAlpha'">
+        <xsl:if test="@type='lowerAlpha' or @type='subLowerAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="lowerAlpha">
@@ -246,16 +237,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='upperRoman'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperRoman">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerRoman'">
+        <xsl:if test="@type='lowerRoman' or @type='subLowerRoman'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="lowerRoman">
@@ -264,7 +246,16 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='simple'">
+        <xsl:if test="@type='ordered' or @type='subOrdered'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="ordered">
+                        <xsl:apply-templates/>
+                    </li>
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='simple' or @type='subSimple'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="simple">
@@ -274,21 +265,21 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='subSimple'">
+        <xsl:if test="@type='upperAlpha' or @type='subUpperAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
-                    <li class="subSimple">
+                    <li class="upperAlpha">
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='ordered'">
+        <xsl:if test="@type='upperRoman' or @type='subUpperRoman'">
             <ul>
                 <xsl:for-each select="TEI:item">
-                    <li class="ordered">
+                    <li class="upperRoman">
                         <xsl:apply-templates/>
-                    </li>
+                    </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
@@ -303,7 +294,6 @@
                     <xsl:for-each select="TEI:item">
                         <li class="ordered">
                             <xsl:apply-templates/>
-                            <xsl:text>.</xsl:text>
                         </li>
                     </xsl:for-each>
                 </ul>
