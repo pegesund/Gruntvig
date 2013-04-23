@@ -217,6 +217,11 @@
         text-align: justify;
         }
 
+#tekst_innhold .largeCaps
+        {
+        text-transform: uppercase;
+        }
+
 #tekst_innhold .l_center
         {
         text-align: center;
