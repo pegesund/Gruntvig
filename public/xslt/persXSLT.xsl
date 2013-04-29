@@ -56,39 +56,6 @@
     <xsl:template match="tei:note[@type='lastName']">
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography']"/>
     </xsl:template>
-    
-   <xsl:template match="tei:cell[@rend='name']">
-        <div class="row" id="{parent::tei:row/@xml:id}">
-            <span class="name">
-                <xsl:call-template name="name"/>
-            </span>
-            <xsl:apply-templates select="following-sibling::tei:cell[@rend='year']"/>
-            <xsl:if test="following-sibling::tei:cell[@rend='encyc']">
-                <xsl:text>, </xsl:text>
-            </xsl:if>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
-            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
-            <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
-            <xsl:apply-templates select="following-sibling::tei:cell[@rend='encyc']"/>
-            <xsl:text>.</xsl:text>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="tei:cell[@rend='altName']">
-        <div class="row" id="{parent::tei:row/@xml:id}">
-            <span class="altName">
-                <xsl:call-template name="name"/>
-                <xsl:text> (se: </xsl:text>
-                <a href="{parent::tei:row/@xml:id}">
-                    <xsl:for-each select="preceding-sibling::tei:cell[@rend='name']">                        
-                        <xsl:call-template name="name"/>                        
-                    </xsl:for-each>                
-                </a>
-                <xsl:text>)</xsl:text>
-            </span>
-        </div>        
-    </xsl:template>
 
     <xsl:template name="name">        
         <xsl:if test="tei:note[@type='lastName']">
