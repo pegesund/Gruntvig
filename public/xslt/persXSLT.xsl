@@ -98,10 +98,12 @@
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
     </xsl:template>
     
+    <!--
     <xsl:template match="tei:note">
-        <!-- firstName eller lastName springer addName= etc over -->
+        firstName eller lastName springer addName= etc over 
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
+    -->
     
      <xsl:template match="tei:addName">
         <span class="addName">
