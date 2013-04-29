@@ -57,7 +57,7 @@
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography']"/>
     </xsl:template>
     
-   <xsl:template match="tei:cell[@rend='name']">
+   <xsl:template match="tei:cell[@rend='HATname']">
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
