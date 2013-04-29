@@ -56,7 +56,7 @@
     <xsl:template match="tei:note[@type='lastName']">
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography']"/>
     </xsl:template>
-    <!--
+    
    <xsl:template match="tei:cell[@rend='name']">
         <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
@@ -68,13 +68,13 @@
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
-            <xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>
+            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='encyc']"/>
             <xsl:text>.</xsl:text>
         </div>
     </xsl:template>
-    -->
+    
     <xsl:template match="tei:cell[@rend='altName']">
         <div class="row">
             <span class="altName">
