@@ -77,7 +77,7 @@
     
     <xsl:template match="tei:cell[@rend='altName']">
         <div class="row" id="{parent::tei:row/@xml:id}">
-            <span class="altName">
+            <span class="name">
                 <xsl:call-template name="name"/>
                 <xsl:text> (se: </xsl:text>
                 <a href="#{parent::tei:row/@xml:id}">
