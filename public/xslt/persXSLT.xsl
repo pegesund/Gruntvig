@@ -47,7 +47,7 @@
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>
-            <xsl:apply-templates select="tei:cell[@rend='name' and @rend='altName']"/>
+            <xsl:apply-templates select="tei:cell[@rend='name' or @rend='altName']"/>
         </div>
     </xsl:template> 
 
