@@ -48,14 +48,6 @@
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
-            
-        </div>
-        
-    </xsl:template><xsl:template match="tei:row">
-        <div class="person refdiv">
-             <xsl:attribute name="id">
-                 <xsl:value-of select="@xml:id"/>
-             </xsl:attribute>             
             <xsl:apply-templates select="tei:cell[@rend='altName']"/>
         </div>
     </xsl:template> 
