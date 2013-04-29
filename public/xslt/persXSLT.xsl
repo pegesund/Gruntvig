@@ -60,7 +60,7 @@
     </xsl:template>
     
    <xsl:template match="tei:cell[@rend='name']">
-        <div class="person refdiv" id="{parent::tei:row/@xml:id}">
+        <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
             </span>
@@ -78,7 +78,7 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='altName']">
-        <div class="person refdiv" id="{parent::tei:row/@xml:id}">
+        <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="altName">
                 <xsl:call-template name="name"/>
                 <xsl:text> (se: </xsl:text>
