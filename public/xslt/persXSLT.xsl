@@ -40,8 +40,9 @@
             <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
         </xsl:apply-templates>
     </xsl:template>
+   -->
    
-    <xsl:template match="tei:row">
+   <xsl:template match="tei:row">
         <div class="person refdiv">
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
@@ -49,7 +50,6 @@
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
     </xsl:template> 
-    -->
 
     <xsl:template match="tei:note[@type='firstName']">
         <xsl:apply-templates/>
