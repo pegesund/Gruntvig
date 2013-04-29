@@ -33,13 +33,13 @@
     <xsl:template match="tei:text">
             <xsl:apply-templates/>
     </xsl:template>
-
+    <!--
     <xsl:template match="tei:table">
         <xsl:apply-templates>
             <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
         </xsl:apply-templates>
     </xsl:template>
-
+    -->
     <xsl:template match="tei:row">
         <div class="person refdiv">
              <xsl:attribute name="id">
