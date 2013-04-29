@@ -58,7 +58,7 @@
     </xsl:template>
     
    <xsl:template match="tei:cell[@rend='name']">
-        <div class="row" id="#{parent::tei:row/@xml:id}">
+        <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
             </span>
@@ -76,11 +76,11 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='altName']">
-        <div class="row" id="#{parent::tei:row/@xml:id}">
+        <div class="row" id="{parent::tei:row/@xml:id}">
             <span class="altName">
                 <xsl:call-template name="name"/>
                 <xsl:text> (se: </xsl:text>
-                <a href="#{parent::tei:row/@xml:id}">
+                <a href="{parent::tei:row/@xml:id}">
                     <xsl:for-each select="preceding-sibling::tei:cell[@rend='name']">                        
                         <xsl:call-template name="name"/>                        
                     </xsl:for-each>                
