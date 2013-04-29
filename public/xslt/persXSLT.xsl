@@ -36,8 +36,8 @@
     
     <xsl:template match="tei:table">
         <div>
-            <xsl:apply-templates select="TEI:row/TEI:cell[@rend='name' or @rend='altName']">
-                <xsl:sort select="translate(concat(TEI:note[@type='lastName'], TEI:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
+            <xsl:apply-templates select="tei:row/tei:cell[@rend='name' or @rend='altName']">
+                <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
             </xsl:apply-templates>
         </div>
     </xsl:template>
