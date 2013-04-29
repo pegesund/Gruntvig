@@ -33,6 +33,7 @@
     <xsl:template match="tei:text">
             <xsl:apply-templates/>
     </xsl:template>
+    
     <!--
     <xsl:template match="tei:table">
         <xsl:apply-templates>
@@ -47,7 +48,8 @@
              </xsl:attribute>
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
-    </xsl:template> -->
+    </xsl:template> 
+    -->
 
     <xsl:template match="tei:note[@type='firstName']">
         <xsl:apply-templates/>
@@ -58,7 +60,7 @@
     </xsl:template>
     
    <xsl:template match="tei:cell[@rend='name']">
-        <div class="row" id="{parent::tei:row/@xml:id}">
+        <div class="person refdiv" id="{parent::tei:row/@xml:id}">
             <span class="name">
                 <xsl:call-template name="name"/>
             </span>
@@ -76,7 +78,7 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='altName']">
-        <div class="row" id="{parent::tei:row/@xml:id}">
+        <div class="person refdiv" id="{parent::tei:row/@xml:id}">
             <span class="altName">
                 <xsl:call-template name="name"/>
                 <xsl:text> (se: </xsl:text>
