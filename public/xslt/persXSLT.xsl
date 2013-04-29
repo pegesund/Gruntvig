@@ -46,7 +46,6 @@
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
-            <xsl:text>HAT</xsl:text>
         </div>
     </xsl:template>
 
@@ -55,7 +54,7 @@
     </xsl:template>
 
     <xsl:template match="tei:note[@type='lastName']">
-                <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography']"/>
     </xsl:template>
     
    <xsl:template match="tei:cell[@rend='name']">
