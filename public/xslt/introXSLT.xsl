@@ -15,6 +15,7 @@
     
     <xsl:template match="TEI:TEI">        
         <div class="mainIntro">
+            <!--
             <div class="head">
                 <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
                     <div>
@@ -51,6 +52,7 @@
                     </div>
                 </xsl:if>
             </div>
+            -->
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='intro']">
                         <xsl:text>Indhold</xsl:text>
