@@ -33,38 +33,21 @@
                     <xsl:text>)</xsl:text>
                 </div>
                 
-                    <div class="kolofon">                        
-                        <xsl:text>Tekstkilder</xsl:text>
-                        
+                <div class="kolofon">
+                        <xsl:text>Tekstkilder</xsl:text>                        
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table>
                                         <td class="sigel">
-                                        <xsl:value-of select="@rend"/>
-                                    </td>
-                                    <td class="source">
-                                        <xsl:apply-templates select="."/>
-                                    </td>
-                                    </table>
-                                </div>
-                            </xsl:for-each>
-                        </tr>
-                        <tr>
-                            <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
-                                <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
-                                    <div class="table">
-                                        <table>
-                                            <td class="sigel">
                                             <xsl:value-of select="@rend"/>
                                         </td>
                                         <td class="source">
                                             <xsl:apply-templates select="."/>
                                         </td>
-                                        </table>
-                                    </div>
-                                </xsl:for-each>
-                            </xsl:if>
+                                    </table>
+                                </div>
+                            </xsl:for-each>
                         </tr>
                         
                         <tr>
@@ -84,7 +67,6 @@
                                 </xsl:for-each>
                             </xsl:if>
                         </tr>
-                        
                     </div>
                     
                     <div class="kolofon">
