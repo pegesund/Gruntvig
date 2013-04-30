@@ -83,7 +83,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
-        <div class="{@rend}">
+        <div class="{@rend} popUp">
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">

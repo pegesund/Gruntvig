@@ -140,9 +140,11 @@ public class TextReference extends GenericModel {
             Document doc = Helpers.stringToNode(asset.html);
             List<Node> refs = Helpers.getChildrenOfType(doc, "div");
             System.out.println("Number of refs: " + refs.size());
+            // System.out.println("Trasformed refs as html: " + asset.html);
             for (Node ref : refs) {
                 String id = ref.getAttributes().getNamedItem("id").getNodeValue();
-                // System.out.println("Creating ref-id: " + id);
+                System.out.println("Creating ref-id: " + id);
+                System.out.println("  " + Helpers.nodeToString(ref));
                 TextReference textRef = new TextReference(id, -1, Helpers.nodeToString(ref), asset.type, asset.fileName);
                 // System.out.println("Ref: " + textRef.showName);
                 textRef.save();
