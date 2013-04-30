@@ -15,42 +15,63 @@
     
     <xsl:template match="TEI:TEI">        
         <div class="mainIntro">
-            <div class="head">
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                <div class="head">
                     <div>
                         <xsl:text>Indledning til</xsl:text>
                     </div>
-                    <i>
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
-                    </i>
-                    <div class="author">
-                        <xsl:text>ved </xsl:text>
-                        <xsl:for-each select="//TEI:author">
-                            <xsl:value-of select="."/>
-                            <xsl:if test="following-sibling::TEI:author">
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                        <xsl:text>, </xsl:text>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text> og </xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>
-                        </xsl:for-each>
-                    </div>
-                </xsl:if>                    
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                    <div>
-                        <xsl:text>Indledning til</xsl:text>
-                    </div>
-                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    <!-- en indledning til flere værker -->
+                    <xsl:choose>
+                        <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' or @rend='part']">
+                            <xsl:for-each select="//TEI:title[@rend='main' or @rend='part']">
+                                <div>
+                                    <xsl:choose>
+                                        <xsl:when test="@rend='main'">
+                                            <i><xsl:value-of select="."/></i>
+                                        </xsl:when>
+                                        <xsl:when test="@rend='part'">
+                                            &#x201C;<xsl:value-of select="."/>&#x201D;
+                                        </xsl:when>
+                                    </xsl:choose>                                    
+                                </div>
+                            </xsl:for-each>
+                        </xsl:when>
+                    </xsl:choose>
+                    <!--
+                        gammel model:
+                        <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
+                        <div>
+                            <xsl:text>Indledning til</xsl:text>
+                        </div>
+                        <div><i><xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i></div>
+                        <div class="author">
+                            <xsl:text>ved </xsl:text>
+                            <xsl:for-each select="//TEI:author">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="following-sibling::TEI:author">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </div>
+                    </xsl:if>
+                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
+                        <div>
+                            <xsl:text>Indledning til</xsl:text>
+                        </div>
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;                        
+                    </xsl:if>
+                    -->
                     <div class="author">
                         <xsl:text>ved </xsl:text>
                         <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
                     </div>
-                </xsl:if>
-            </div>
+                </div>
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='intro']">
                         <xsl:text>Indhold</xsl:text>
@@ -63,29 +84,44 @@
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
-        </div>
+            </body>
+        </html>
         
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
-            <a class="toc intro_menu">
-                <xsl:attribute name="hrel">
-                    <xsl:text>#intro</xsl:text>
-                        <xsl:text>_</xsl:text>
-                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
-                        <xsl:text>_</xsl:text>
-                        <xsl:number level="multiple" count="TEI:div"/>      
-                        <xsl:number level="multiple" count="TEI:div"/>
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="TEI:head"/>
+            <a class="toc">
+                <xsl:attribute name="href">
+                    <xsl:text>#A</xsl:text>
+                    <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]"/>
             </a>
+            <a id="{@xml:id}"/>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
         </div>
-    </xsl:template> 
+    </xsl:template>
+    
+    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
+        <a>
+            <xsl:attribute name="id">
+                <xsl:text>A</xsl:text>
+                <xsl:number level="multiple" count="TEI:div"/>
+            </xsl:attribute>
+        </a>
+        <div class="head{@rend}" id="{@xml:id}">
+            <a href="#retur" class="toc">
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates/>
+            </a>
+        </div>
+    </xsl:template>
     
     <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
         <a id="toc">
