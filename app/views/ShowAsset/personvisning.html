@@ -19,10 +19,10 @@
                                 $(this).hide();
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
-                                var altName = $(this).find('.row span.altName').not($('span span')).text();
+                                var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
-                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + altName + nation + ' ' + about + '</td></tr>';
+                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">''HAT' + year + addName + nation + ' ' + about + '</td></tr>';
                                 nodes.push(node);
                             }
                         });
