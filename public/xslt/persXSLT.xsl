@@ -21,17 +21,17 @@
                 <xsl:apply-templates/>
             </div>
     </xsl:template>
-
-    <xsl:template match="tei:teiHeader">
+    
+    <xsl:template match="tei:teiHeader"/>
     </xsl:template>
-
+    
     <xsl:template match="tei:head">
-            <xsl:apply-templates/>
+        <xsl:apply-templates/>
     </xsl:template>
-
-
+    
+    
     <xsl:template match="tei:text">
-            <xsl:apply-templates/>
+        <xsl:apply-templates/>
     </xsl:template>
     
     <!--
@@ -41,12 +41,12 @@
         </xsl:apply-templates>
     </xsl:template>
    -->
-   
-   <xsl:template match="tei:row">
+    
+    <xsl:template match="tei:row">
         <div class="person refdiv">
-             <xsl:attribute name="id">
-                 <xsl:value-of select="@xml:id"/>
-             </xsl:attribute>
+            <xsl:attribute name="id">
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
             <xsl:apply-templates select="tei:cell[@rend='name' or @rend='altName']"/>
         </div>
     </xsl:template>
@@ -92,13 +92,13 @@
             </span>
         </div>        
     </xsl:template>
-
+    
     <xsl:template name="name">        
         <xsl:if test="tei:note[@type='lastName']">
-            <xsl:apply-templates select="tei:note[@type='lastName']"/>
+            <xsl:apply-templates select="tei:note[@type='lastName']/text()"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
-        <xsl:apply-templates select="tei:note[@type='firstName']"/>
+        <xsl:apply-templates select="tei:note[@type='firstName']/text()"/>
     </xsl:template>
     
     <!--
@@ -108,7 +108,7 @@
     </xsl:template>
     -->
     
-     <xsl:template match="tei:addName">
+    <xsl:template match="tei:addName">
         <span class="addName">
             <xsl:if test="@type='birthName'">
                 <xsl:text> f. </xsl:text>
@@ -187,7 +187,7 @@
     
     <xsl:template name="delimiterComma">
         <xsl:if test="following-sibling::tei:cell">
-                <xsl:text>, </xsl:text>
+            <xsl:text>, </xsl:text>
         </xsl:if>
     </xsl:template>
     
