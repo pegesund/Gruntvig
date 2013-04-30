@@ -4,66 +4,37 @@
 
 
 <script type="text/javascript">
-
-	
-
-		$(document).ready(function() {
-                           
-                $('div.person').hide();
-                $('div.root').hide();
-                
+    $(document).ready(function() {
+        $('div.person').hide();
+                $('div.root').hide();                
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-                
-                $.each(alphabet, function(index, value) { 
-                      
+                $.each(alphabet, function(index, value) {                       
                       // alert(index + ': ' + value);  
-                       
                         nodes = [];
                         $('div.person').each(function(index2) {
-                    
                             name = $(this).find('span.name').text();
                             firstLetter = name.charAt(0).toLowerCase();; 
                            // alert(firstLetter);
-                            
                             if(firstLetter == value){ 
-                            
                                 $(this).hide();
-                                
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
-                                
-                                var addName = $(this).find('.row span.addName').not($('span span')).text();
+                                var altName = $(this).find('.row span.altName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
-                                
-                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
-                                
+                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + altName + nation + ' ' + about + '</td></tr>';
                                 nodes.push(node);
-                                
-   
                             }
-
-
                         });
-                        
                         nodes = nodes.sort().reverse();
                         //alert(nodes);
-                        
                         $(nodes).each( function(index, value2) {
                             //alert(value);
                             $('#' + value.toUpperCase()).after(value2);
-                            
-                        
                         });
-                }); 
-                
-               
-
-
-		});
-
-
-	</script>
+                    });
+                    });
+</script>
         
 
 <div id="main">
