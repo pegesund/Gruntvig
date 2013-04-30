@@ -56,6 +56,7 @@ public class UploadXml extends Application {
         } else if (fileName.equals("myth.xml")
                 || fileName.equals("pers.xml")
                 ) {
+            // System.out.println("--- Upload ref-file: " + asset.fileName);
             TextReference.uploadReferenceFile(asset);
         } else if (fileName.replace(".xml", "").endsWith("_com")) {
             TextReference.uploadComments(asset);
