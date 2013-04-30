@@ -916,34 +916,34 @@ text-decoration:none;
 text-transform:uppercase;
 width:19px;}
 
-	#innholdsfortegnelse a:hover {color:#fff; border-color: #888; background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444;}
-		
-
-		#innholdsfortegnelse a.selected {background: #777 url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444; border:1px solid #888; color:#fff;padding:5px;}
-		#innholdsfortegnelse a.selected:hover {}
+#innholdsfortegnelse a:hover {color:red; border-color: #888; background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444;}
+#innholdsfortegnelse a.selected {background: #777 url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444; border:1px solid #888; color:#fff;padding:5px;}
+#innholdsfortegnelse a.selected:hover {}
 
 #liste { float:left; width: 100%; font-size: 1.6em; margin-top:10px; line-height:1.2em;} /* Selve listen */
 
-	#liste table {
-		float:left;
-		border-collapse:collapse;
+#liste table 
+    {
+    float:left;
+    border-collapse:collapse;
+    }
+    
+#liste tr 
+    {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+    text-align: left;
+    }
 
-	  }
-	#liste tr {
-		border-top: 1px solid #eee;
-		padding: 15px 0;
-		float: left;
-		width: 100%;
-		text-align: left;
-
-	  }
-	#liste tr.bottom_border {
-		border-top: 0px solid #eee; margin-bottom: 15px;
-		border-bottom: 1px solid #bbb;
-		margin-top:8px;
-		padding: 10px 0 5px 0;
-
-	  }
+#liste tr.bottom_border 
+    {
+    border-top: 0px solid #eee; margin-bottom: 15px;
+    border-bottom: 1px solid #bbb;
+    margin-top:8px;
+    padding: 10px 0 5px 0;
+    }
 
 	#liste td {
 		border-top: 0px solid #ddd;
