@@ -33,6 +33,7 @@
                     <xsl:text>)</xsl:text>
                 </div>
                 
+                
                 <div class="kolofon">
                         <xsl:text>Tekstkilder</xsl:text>                        
                         <tr>
