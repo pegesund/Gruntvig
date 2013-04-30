@@ -95,12 +95,10 @@
 
     <xsl:template name="name">        
         <xsl:if test="tei:note[@type='lastName']">
-            <xsl:apply-templates select="tei:note[@type='lastName']"/>
-            <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography' and @type!='original']"/>
+            <xsl:apply-templates select="tei:note[@type='lastName']/text()"/>
             <xsl:text>, </xsl:text>
         </xsl:if>
-        <xsl:apply-templates select="tei:note[@type='firstName']"/>
-        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography' and @type!='original']"/>
+        <xsl:apply-templates select="tei:note[@type='firstName']/text()"/>
     </xsl:template>
     
     <!--
