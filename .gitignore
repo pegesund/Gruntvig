@@ -1,5 +1,7 @@
 tmp/
-project_doc/*
+/logs/system.out
+/project_doc/*
+nbproject/private/*
 /tmp/*
 /db/
 *.xml

@@ -15,49 +15,50 @@
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
                 
                 $.each(alphabet, function(index, value) { 
-                      
-                      // alert(index + ': ' + value);  
-                       
-                        nodes = [];
+                        var nodes = [];
                         $('div.person').each(function(index2) {
-                    
                             name = $(this).find('span.name').text();
+                            // alert("Adding: " + name);
                             firstLetter = name.charAt(0).toLowerCase();; 
-                           // alert(firstLetter);
-                            
                             if(firstLetter == value){ 
-                            
                                 $(this).hide();
-                                
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
-                                
                                 var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
-                                
-                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
-                                
+                                if ($(this).find(".altName").length > 0) {
+                                    var gotoName = $(this).find(".gotoName").html();
+                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
+                                } else { 
+                                    var id = $(this).attr("id");
+                                    node = '<tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
+                                }
+                                $(this).attr("id", "");
                                 nodes.push(node);
-                                
-   
                             }
-
-
                         });
-                        
                         nodes = nodes.sort().reverse();
-                        //alert(nodes);
-                        
                         $(nodes).each( function(index, value2) {
-                            //alert(value);
-                            $('#' + value.toUpperCase()).after(value2);
-                            
-                        
+                        $('#' + value.toUpperCase()).after(value2);
                         });
                 }); 
                 
+                
+                // later: remove duplicate code with mythvisning.html
+                $("a[href]").click(function(e) {
+                    e.preventDefault();
+                    alert("Scrolling to: " + $(this).attr("href"));
+                    var scrolltarget = $($(this).attr("href"));
+                    $.scrollTo(scrolltarget, 500);
+                    
+               }); 
                
+                // get current location and scrolldown to this if exists
+                var loc = String(document.location);
+                var idx = loc.indexOf('#');
+                var href = (idx > 0) ? loc.substring(idx + 1) : "";
+                if (href) $.scrollTo("#" + href, 500);              
 
 
 		});
