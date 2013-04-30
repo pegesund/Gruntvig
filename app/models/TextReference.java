@@ -100,7 +100,7 @@ public class TextReference extends GenericModel {
         int del = TextReference.delete("fileName =  ? and type = ?", asset.fileName, Asset.commentType);
         System.out.println("Number of deleted comments: " + del);
         Document doc = Helpers.stringToNode(asset.html);
-        List<Node> refs = Helpers.getChildrenOfType(doc, "div");
+        List<Node> refs = Helpers.getChildrenOfType(doc, "list");
         StringBuilder strB = new StringBuilder();
         int i = 0;
         for (Node row : refs) {
