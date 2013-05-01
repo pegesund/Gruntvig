@@ -43,7 +43,7 @@
                     </xsl:for-each>                    
                 </xsl:when>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='orthography']]">
-                    <i><xsl:text>Kaldes også: </xsl:text></i>
+                    <i><xsl:text>Staves også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
