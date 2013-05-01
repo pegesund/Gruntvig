@@ -22,21 +22,14 @@
        
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
-           <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
-            <xsl:if test="TEI:cell[@rend='orthography']">
-                <div>
-                    <i>Staves også: </i>
-                    <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
-                    <xsl:call-template name="delimiter"/>
-                </div>
-            </xsl:if>
+            <xsl:apply-templates/>
             <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='epithet']/text()"/>
-                            <xsl:call-template name="delimiterKomma"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>                    
                 </xsl:when>
@@ -49,21 +42,21 @@
                         </span>
                     </xsl:for-each>                    
                 </xsl:when>
-                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                    <i><xsl:text>I romersk mytologi: </xsl:text></i>
+                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='orthography']]">
+                    <i><xsl:text>Kaldes også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='latin']/text()"/>
-                            <xsl:call-template name="fullStop"/>
+                            <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each> 
                 </xsl:when>
-                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
-                    <i><xsl:text>Latinsk form: </xsl:text></i>
+                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                    <i><xsl:text>Kaldes også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='saxo']/text()"/>
-                            <xsl:call-template name="fullStop"/>
+                            <xsl:apply-templates select="./TEI:cell[@rend='latin']/text()"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each> 
                 </xsl:when>
