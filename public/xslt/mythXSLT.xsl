@@ -76,7 +76,7 @@
             <xsl:apply-templates/>
             <xsl:if test="following-sibling::TEI:cell[@rend='orthography' or @rend='pseudoEpithet' or @rend='epithet']">
                 <xsl:choose>
-                    <xsl:when test="following-sibling::TEI:cell[@rend='orthography'][position()!=last()]">
+                    <xsl:when test="following-sibling::TEI:cell[@rend='orthography' or @rend='pseudoEpithet' or @rend='epithet'][position()!=last()]">
                         <xsl:call-template name="delimiterKomma"/>
                     </xsl:when>
                     <xsl:otherwise>
