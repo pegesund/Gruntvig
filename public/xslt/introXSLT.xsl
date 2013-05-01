@@ -146,14 +146,6 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:div[@type='webList']">
-        <div class="webList">
-            <a href="{@target}">
-                <xsl:apply-templates/>
-            </a>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:list">
         <xsl:if test="@type='decimal'">
             <ul>
@@ -217,6 +209,10 @@
                     </li>
                 </xsl:for-each>
             </ul>
+        </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
+            <div class="litList">
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
             <div class="litList">
@@ -240,9 +236,9 @@
     
     <xsl:template match="TEI:item[@n]">
         <ul>
-            <li class="webList">
+            <li class="litList">
                 <xsl:text>&lt;</xsl:text>
-                <a href="{.}">
+                <a href="{@target}">
                     <xsl:apply-templates/>
                 </a>
                 <xsl:text>&gt;</xsl:text>

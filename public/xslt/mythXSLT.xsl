@@ -18,11 +18,18 @@
                 </xsl:apply-templates>
         </div>
         
-    </xsl:template>    
+    </xsl:template>
        
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
+            <xsl:if test="TEI:cell[@rend='orthography']">
+                <div>
+                    <i>Staves også: </i>
+                    <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
+                    <xsl:call-template name="delimiter"/>
+                </div>
+            </xsl:if>
             <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
@@ -43,16 +50,43 @@
                     </xsl:for-each>                    
                 </xsl:when>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                    <i><xsl:text>Kaldes også: </xsl:text></i>
+                    <i><xsl:text>I romersk mytologi: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='latin']/text()"/>
-                            <xsl:call-template name="delimiter"/>
+                            <xsl:call-template name="fullStop"/>
+                        </span>
+                    </xsl:for-each> 
+                </xsl:when>
+                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
+                    <i><xsl:text>Latinsk form: </xsl:text></i>
+                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
+                        <span>
+                            <xsl:apply-templates select="./TEI:cell[@rend='saxo']/text()"/>
+                            <xsl:call-template name="fullStop"/>
                         </span>
                     </xsl:for-each> 
                 </xsl:when>
             </xsl:choose>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@rend='orthography']">
+        <span class="orthography">
+            <xsl:apply-templates/>
+            <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:cell[@rend='orthography'][position()!=last()]">
+                        <xsl:call-template name="delimiterKomma"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <i>
+                            <xsl:text> eller </xsl:text>
+                        </i>                
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+        </span>
     </xsl:template>
     
     <xsl:template name="delimiter">
@@ -61,7 +95,7 @@
             <xsl:when test="position()=1 and position()=last">.</xsl:when>
             <xsl:when test="position()=last()">.</xsl:when>
             <xsl:when test="position()=last()-1"> eller </xsl:when>
-            <xsl:otherwise>, </xsl:otherwise>
+            <xsl:otherwise>.</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
@@ -100,8 +134,6 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>    
-    
-
     
     <xsl:template name="delimiterKomma">
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
