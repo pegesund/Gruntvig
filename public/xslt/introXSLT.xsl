@@ -59,40 +59,6 @@
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
-            <a class="toc">
-                <xsl:attribute name="href">
-                    <xsl:text>#A</xsl:text>
-                    <xsl:number level="multiple" count="TEI:div"/>
-                </xsl:attribute>
-                <xsl:number level="multiple" count="TEI:div"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]"/>
-            </a>
-            <a id="{@xml:id}"/>
-            <xsl:for-each select="TEI:div">
-                <xsl:apply-templates mode="toc" select="."/>
-            </xsl:for-each>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
-        <a>
-            <xsl:attribute name="id">
-                <xsl:text>A</xsl:text>
-                <xsl:number level="multiple" count="TEI:div"/>
-            </xsl:attribute>
-        </a>
-        <div class="head{@rend}" id="{@xml:id}">
-            <a href="#retur" class="toc">
-                <xsl:number level="multiple" count="TEI:div"/>
-                <xsl:text> </xsl:text>
-                <xsl:apply-templates/>
-            </a>
-        </div>
-    </xsl:template>
-    <!--
-    <xsl:template match="TEI:div" mode="toc">
-        <div class="toc" id="retur">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
                     <xsl:text>#intro</xsl:text>
@@ -134,7 +100,7 @@
             </a>
         </div>
     </xsl:template>
-    -->
+    
     <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
         <div class="editor">
             <xsl:apply-templates/>
@@ -177,14 +143,6 @@
     <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='webList']">
-        <div class="webList">
-            <a href="{@target}">
-                <xsl:apply-templates/>
-            </a>
         </div>
     </xsl:template>
     
@@ -251,12 +209,16 @@
                     </li>
                 </xsl:for-each>
             </ul>
+        </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
+            <div class="litList">
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
             <div class="litList">
                 <ul>
                     <xsl:for-each select="TEI:item">
-                        <li class="litList">
+                        <li class="ordered">
                             <xsl:apply-templates/>
                             <xsl:text>.</xsl:text>
                         </li>
@@ -274,9 +236,9 @@
     
     <xsl:template match="TEI:item[@n]">
         <ul>
-            <li class="webList">
+            <li class="ordered">
                 <xsl:text>&lt;</xsl:text>
-                <a href="{.}">
+                <a href="{@target}">
                     <xsl:apply-templates/>
                 </a>
                 <xsl:text>&gt;</xsl:text>
