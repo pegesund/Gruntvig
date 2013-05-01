@@ -24,11 +24,11 @@
         <div class="row myth" id="{@xml:id}">
            <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
             <xsl:if test="TEI:cell[@rend='orthography']">
-                <div>
+                <span>
                     <i>Staves også: </i>
                     <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
                     <xsl:call-template name="delimiter"/>
-                </div>
+                </span>
             </xsl:if>
             <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
@@ -73,7 +73,7 @@
     
     <xsl:template name="delimiter">
         <xsl:choose>
-            <xsl:when test="position()=1"> HAT </xsl:when>
+            <xsl:when test="position()=1"> </xsl:when>
             <xsl:when test="position()=1 and position()=last">.</xsl:when>
             <xsl:when test="position()=last()">.</xsl:when>
             <xsl:when test="position()=last()-1"> eller </xsl:when>
