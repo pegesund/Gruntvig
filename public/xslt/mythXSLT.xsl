@@ -71,10 +71,10 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@rend='orthography']">
+    <xsl:template match="TEI:cell[@rend='orthography' or @rend='pseudoEpithet' or @rend='epithet']">
         <span class="orthography">
             <xsl:apply-templates/>
-            <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
+            <xsl:if test="following-sibling::TEI:cell[@rend='orthography' or @rend='pseudoEpithet' or @rend='epithet']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@rend='orthography'][position()!=last()]">
                         <xsl:call-template name="delimiterKomma"/>
@@ -136,7 +136,7 @@
     </xsl:template>    
     
     <xsl:template name="delimiterKomma">
-        <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
+        <xsl:if test="following-sibling::TEI:cell[@rend='orthography' or @rend='pseudoEpithet' or @rend='epithet']">
             <xsl:text>,</xsl:text>
         </xsl:if>
     </xsl:template>
