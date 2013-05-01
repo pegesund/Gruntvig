@@ -45,7 +45,7 @@
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
-                            <xsl:call-template name="delimiterKomma"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>                    
                 </xsl:when>
@@ -77,24 +77,6 @@
             <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@rend='orthography'][position()!=last()]">
-                        <xsl:call-template name="delimiterKomma"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <i>
-                            <xsl:text> eller </xsl:text>
-                        </i>                
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:if>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@rend='epithet']">
-        <span class="orthography">
-            <xsl:apply-templates/>
-            <xsl:if test="following-sibling::TEI:cell[@rend='epithet']">
-                <xsl:choose>
-                    <xsl:when test="following-sibling::TEI:cell[@rend='epithet'][position()!=last()]">
                         <xsl:call-template name="delimiterKomma"/>
                     </xsl:when>
                     <xsl:otherwise>
