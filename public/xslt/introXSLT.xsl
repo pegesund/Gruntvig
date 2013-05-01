@@ -236,7 +236,7 @@
     
     <xsl:template match="TEI:item[@n]">
         <ul>
-            <li class="ordered">
+            <li class="litList">
                 <xsl:text>&lt;</xsl:text>
                 <a href="{@target}">
                     <xsl:apply-templates/>
