@@ -21,7 +21,7 @@
     </xsl:template>
        
     <xsl:template match="TEI:row">
-        <div class="row" id="{@xml:id}">
+        <div class="row myth" id="{@xml:id}">
             <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
             <xsl:if test="TEI:cell[@rend='orthography']">
                 <div>
