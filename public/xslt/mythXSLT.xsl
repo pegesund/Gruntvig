@@ -36,7 +36,7 @@
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='epithet']/text()"/>
-                            <xsl:call-template name="delimiterKomma"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>                    
                 </xsl:when>
@@ -45,7 +45,7 @@
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
-                            <xsl:call-template name="delimiterKomma"/>
+                            <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>                    
                 </xsl:when>
