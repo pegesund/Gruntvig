@@ -89,6 +89,24 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@rend='epithet']">
+        <span class="orthography">
+            <xsl:apply-templates/>
+            <xsl:if test="following-sibling::TEI:cell[@rend='epithet']">
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:cell[@rend='epithet'][position()!=last()]">
+                        <xsl:call-template name="delimiterKomma"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <i>
+                            <xsl:text> eller </xsl:text>
+                        </i>                
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+        </span>
+    </xsl:template>
+    
     <xsl:template name="delimiter">
         <xsl:choose>
             <xsl:when test="position()=1"> </xsl:when>
