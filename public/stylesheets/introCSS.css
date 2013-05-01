@@ -190,6 +190,7 @@
 
 .innledningContent .litList, .innledningContent .webList
         {
+        font-size: 65%;
         list-style: circle;
         margin: 1em;   
         }
