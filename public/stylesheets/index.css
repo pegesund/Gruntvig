@@ -945,16 +945,17 @@ width:19px;}
     padding: 10px 0 5px 0;
     }
 
-	#liste td {
-		border-top: 0px solid #ddd;
-		margin: 0 0 0 0px;
-		padding: 0px 0;
+#liste td 
+    {
+    border-top: 0px solid #ddd;
+    margin: 0 0 0 0px;
+    padding: 0px 0;
+    }
 
-	  }
+#liste .navn {width: 200px; font-size: 1.1em;}
+#liste .definisjon {width: 410px;}
 
-	 #liste .navn {width: 200px; font-size: 1.1em;color:red}
-	 #liste .definisjon {width: 410px;}
-	 /*#liste .definisjon a {font-size:0.9em;padding-left: 2px; }*/
+/*#liste .definisjon a {font-size:0.9em;padding-left: 2px; }*/
 
 /* Hjelpe-link */
 
@@ -1163,14 +1164,14 @@ h1.subtitle { margin-left: 0px !important; }
 
 /* Register */
 
-/* Personregister */
+/* pers.xml START  */
 
 .refdiv {font-size: 1.0em; line-height: 1.2em; margin: 0 0 10px 0;  }
 .refdiv b {font-family: georgia, garamond, serif; font-size: 18px; line-height: 1.2em; margin: 0 0 10px 0; }
 .refdiv i {font-size: 0.9em; line-height: 1.2em; margin: 0 0 10px 0;
 }
 
-/* Personregister */
+/* pers.xml END */
 
 
 .myth_title b {font-family: georgia, garamond, serif; font-size: 18px; line-height: 1.2em; margin: 0 0 10px 0; }
