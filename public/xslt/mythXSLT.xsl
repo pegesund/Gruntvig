@@ -27,7 +27,7 @@
                 <div>
                     <i>Staves også: </i>
                     <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
-                    <xsl:call-template name="delimiterKomma"/>
+                    <xsl:call-template name="delimiter"/>
                 </div>
             </xsl:if>
             <xsl:choose>
@@ -68,7 +68,7 @@
             <xsl:when test="position()=1 and position()=last">.</xsl:when>
             <xsl:when test="position()=last()">.</xsl:when>
             <xsl:when test="position()=last()-1"> eller </xsl:when>
-            <xsl:otherwise>, </xsl:otherwise>
+            <xsl:otherwise>.</xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
