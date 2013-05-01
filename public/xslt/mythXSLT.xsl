@@ -46,7 +46,7 @@
                     <i><xsl:text>Staves også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
+                            <xsl:apply-templates select="./TEI:cell[@rend='orthography']/text()"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>                    
