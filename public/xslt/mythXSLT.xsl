@@ -23,14 +23,14 @@
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
            <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
-            <xsl:choose>
-            <xsl:when test="TEI:cell[@rend='orthography']">
-                <span>
+            <xsl:if test="TEI:cell[@rend='orthography']">
+                <div>
                     <i>Staves også: </i>
                     <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
                     <xsl:call-template name="delimiter"/>
-                </span>
-            </xsl:when>
+                </div>
+            </xsl:if>
+            <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
