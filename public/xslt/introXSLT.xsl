@@ -210,7 +210,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
-            <div class="litList">
+            <div class="webList">
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
