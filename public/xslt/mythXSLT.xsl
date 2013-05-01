@@ -27,7 +27,7 @@
                 <div>
                     <i>Staves også: </i>
                     <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
-                    <xsl:call-template name="delimiter"/>
+                    <xsl:call-template name="delimiterKomma"/>
                 </div>
             </xsl:if>
             <xsl:choose>
