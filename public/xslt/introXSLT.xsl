@@ -57,6 +57,44 @@
         
     </xsl:template>
     
+    <!-- toc hvis ikke den nedenunder fungerer:
+    
+    <xsl:template match="TEI:div" mode="toc">
+        <div class="toc" id="retur">
+            <a class="toc">
+                <xsl:attribute name="href">
+                    <xsl:text>#A</xsl:text>
+                    <xsl:number level="multiple" count="TEI:div"/>
+                </xsl:attribute>
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]"/>
+            </a>
+            <a id="{@xml:id}"/>
+            <xsl:for-each select="TEI:div">
+                <xsl:apply-templates mode="toc" select="."/>
+            </xsl:for-each>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
+        <a>
+            <xsl:attribute name="id">
+                <xsl:text>A</xsl:text>
+                <xsl:number level="multiple" count="TEI:div"/>
+            </xsl:attribute>
+        </a>
+        <div class="head{@rend}" id="{@xml:id}">
+            <a href="#retur" class="toc">
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates/>
+            </a>
+        </div>
+    </xsl:template>    
+    
+    -->
+    
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
             <a class="toc intro_menu">
