@@ -57,8 +57,6 @@
         
     </xsl:template>
     
-    <!-- toc hvis ikke den nedenunder fungerer:
-    
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
             <a class="toc">
@@ -93,7 +91,7 @@
         </div>
     </xsl:template>    
     
-    -->
+    <!-- toc Petter
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
@@ -138,6 +136,8 @@
             </a>
         </div>
     </xsl:template>
+    
+    -->
     
     <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
         <div class="editor">
