@@ -59,7 +59,7 @@
     
     <xsl:template match="TEI:div" mode="toc">
         <div class="toc" id="retur">
-            <a class="toc txrmenu">
+            <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
                     <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
                     <xsl:text>_txr_</xsl:text>
@@ -76,7 +76,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:head">
-        <a class="toc txrmenu">
+        <a class="toc intro_menu">
             <xsl:attribute name="id">
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
                 <xsl:text>_txr_</xsl:text>
@@ -89,7 +89,7 @@
                 <xsl:text>txr_</xsl:text>
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <a hrel="#retur" class="toc txrmenu">
+            <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
@@ -97,6 +97,7 @@
         </div>
     </xsl:template>
     
+    <!--toc intro_menu -->
     <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
         <div class="editor">
             <xsl:apply-templates/>
