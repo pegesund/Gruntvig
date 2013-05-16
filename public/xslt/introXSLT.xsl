@@ -61,8 +61,8 @@
         <div class="toc" id="retur">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
-                    <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
-                    <xsl:text>_txr_</xsl:text>
+                    <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                    <xsl:text>_intro_</xsl:text>
                     <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
                 <xsl:number level="multiple" count="TEI:div"/>
@@ -78,15 +78,15 @@
     <xsl:template match="TEI:head">
         <a class="toc intro_menu">
             <xsl:attribute name="id">
-                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
-                <xsl:text>_txr_</xsl:text>
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                <xsl:text>_intro_</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
             <xsl:attribute name="id">
-                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1_')" />
-                <xsl:text>txr_</xsl:text>
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1_')" />
+                <xsl:text>intro_</xsl:text>
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
             <a hrel="#retur" class="toc intro_menu">
