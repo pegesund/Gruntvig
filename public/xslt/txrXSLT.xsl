@@ -164,7 +164,7 @@
     -->
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
-                <xsl:when test="@type='web'">
+                <xsl:when test="@type='web' and @target">
                     <xsl:text>&lt;</xsl:text>
                     <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
