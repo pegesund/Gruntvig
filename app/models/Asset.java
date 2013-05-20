@@ -404,7 +404,7 @@ public class Asset extends GenericModel {
         if (Asset.find("filename", epub.getName()).fetch().size() > 0) {
             System.out.println("--- Updating asset with name: " + epub.getName());
             asset = Asset.find("filename", epub.getName()).first();
-            asset.name = name;
+            if (!name.trim().equalsIgnoreCase(epub.getName().trim())) asset.name = name;
             asset.html = html;
             asset.comment = comment;
             asset.variant = variant;
