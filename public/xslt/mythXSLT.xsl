@@ -121,10 +121,15 @@
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <a href="myter#{$sameAs}">
-                    <xsl:text> > </xsl:text>                    
-                    <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
-                </a>
+                    <xsl:if test="@rend='latin' or @rend='saxo'">
+                        <xsl:text> Andet navn for </xsl:text>
+                    </xsl:if>   
+                    <xsl:if test="@rend='epithet' or @rend='pseudoEpithet'">
+                        <xsl:text> Latinsk navn for </xsl:text>
+                    </xsl:if>   
+                    <a href="myter#{$sameAs}">
+                        <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
+                    </a>
             </span>
         </div>
     </xsl:template>

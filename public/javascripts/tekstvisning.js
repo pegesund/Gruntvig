@@ -118,6 +118,6 @@ $(document).ready(function() {
     initChapterHandling();
     startupUri(startupHash);  
     // addReaderColumn();
-    // addSimpleReader("1804_29_txr.xml");                
+    // addSimpleReader("1804_28_txr.xml");                
 });
 
