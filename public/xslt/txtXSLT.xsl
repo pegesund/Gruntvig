@@ -82,8 +82,8 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                        <xsl:call-template name="delimiterFullStop"/>
-                            </xsl:for-each>                        
+                            </xsl:for-each>
+                        <!--<xsl:call-template name="delimiterFullStop"/>                        -->
                     </div>
                     
                      <div class="kolofon">
