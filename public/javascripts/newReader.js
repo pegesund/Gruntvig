@@ -192,6 +192,7 @@ addNewReader = function(num) {
             var introContent = $("#innledning" + num);
             introContent.find(".innledningContent").html(data);
             fixTabMenues();
+            addMouseHandlers(introUrl);
             keepOldScrollPosition(options);
         }
     });
@@ -204,6 +205,7 @@ addNewReader = function(num) {
             success: function(data) {
                 var variantContent = $("#hovedtekst #tekst_innhold");
                 variantContent.html(data);
+                addMouseHandlers(theUrl);
                 keepOldScrollPosition(options);
             }
         })
