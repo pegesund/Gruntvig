@@ -651,7 +651,12 @@
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
-        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer"><span class="size"><xsl:text>|</xsl:text><xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/></span></a>        
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="size">
+            <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>        
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
@@ -684,7 +689,7 @@
     </xsl:template>
     
     <xsl:template name="delimiterFullStop">
-        <xsl:text>.</xsl:text>
+        <xsl:text>. HAT</xsl:text>
     </xsl:template>
     
     <xsl:template match="TEI:persName">
