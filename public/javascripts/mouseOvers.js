@@ -99,7 +99,7 @@ var addDocOutListener = function() {
         options["scrollToObject"] = $(this).attr("name");
         options["scrollToAdjust"] = $(this).position().top;
         var target = $(this).attr("name");
-        if (!target.indexOf("#") !== -1) {
+        if (target.indexOf("#") === -1) {
             var win=window.open(target, '_blank');
             win.focus();
             return;
