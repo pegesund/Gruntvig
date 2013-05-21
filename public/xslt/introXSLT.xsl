@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+½<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stylesheet [
 <!ENTITY month "          januar    februar   marts     april     maj       juni      juli      august    september oktober   november  december">
 ]>
@@ -327,7 +327,7 @@
                 <xsl:when test="@type='docIn'">
                     <a class="docIn intro_menu">
                         <xsl:attribute name="href">
-                            <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                            <xsl:value-of select="replace(base-uri(), '.*?([0-9]._intro*)_intro.xml$', '$1')" />
                             <xsl:text>_</xsl:text>
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>
