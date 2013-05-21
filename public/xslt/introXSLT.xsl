@@ -17,7 +17,7 @@
         <div class="mainIntro">
             <div class="head">
                 <div>
-                    <xsl:text>Indledning til HAT</xsl:text>
+                    <xsl:text>Indledning til</xsl:text>
                 </div>
                 <!-- en indledning til flere værker -->
                 <xsl:choose>
