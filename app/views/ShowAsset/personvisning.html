@@ -46,7 +46,7 @@
                 
                 
                 // later: remove duplicate code with mythvisning.html
-                $("a[href]").click(function(e) {
+                $("tbody").find("a[href]").click(function(e) {
                     e.preventDefault();
                     // alert("Scrolling to: " + $(this).attr("href"));
                     var scrolltarget = $($(this).attr("href"));
