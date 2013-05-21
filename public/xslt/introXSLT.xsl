@@ -325,7 +325,7 @@
                     <!--</a>-->
                 </xsl:when>                                
                 <xsl:when test="@type='docIn'">
-                    <span class="docIn intro_menu">
+                    <span class="docIn">
                         <xsl:attribute name="name">
                             <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
                             <xsl:text>_</xsl:text>
