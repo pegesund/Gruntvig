@@ -82,8 +82,8 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-                            </xsl:for-each>
-                        <xsl:call-template name="delimiterFullStop"/>                        
+                        <xsl:call-template name="delimiterFullStop"/>
+                            </xsl:for-each>                        
                     </div>
                     
                      <div class="kolofon">
@@ -689,7 +689,7 @@
     </xsl:template>
     
     <xsl:template name="delimiterFullStop">
-        <xsl:text>. HAT</xsl:text>
+        <xsl:text>.</xsl:text>
     </xsl:template>
     
     <xsl:template match="TEI:persName">
