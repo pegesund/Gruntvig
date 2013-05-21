@@ -9,7 +9,7 @@
 
     <xsl:include href="popups.xsl"/>
 
-    <xsl:template match="TEI:TEI" xml:space="preserve">
+    <xsl:template match="TEI:TEI">
 
         <div class="rootText">
                 <div class="kolofonBlad">
