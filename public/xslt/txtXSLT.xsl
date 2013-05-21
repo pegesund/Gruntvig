@@ -83,7 +83,7 @@
                                     </xsl:choose>
                                 </xsl:if>
                             </xsl:for-each>
-                        <!--<xsl:call-template name="delimiterFullStop"/>                        -->
+                        <xsl:call-template name="delimiterFullStop"/>
                     </div>
                     
                      <div class="kolofon">
