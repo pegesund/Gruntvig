@@ -325,14 +325,15 @@
                     <!--</a>-->
                 </xsl:when>                                
                 <xsl:when test="@type='docIn'">
-                    <a class="docIn intro_menu">
-                        <xsl:attribute name="href">
+                    <span class="docIn intro_menu">
+                        <xsl:attribute name="name">
                             <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
                             <xsl:text>_</xsl:text>
+                            <xsl:text>intro.xml</xsl:text>
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>
                     <xsl:apply-templates/>
-                    </a>
+                    </span>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
                     <span class="docout">

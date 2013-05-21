@@ -94,7 +94,7 @@ var docOutTodocInLink = function(link) {
 }
 
 var addDocOutListener = function() {
-    $(".docout").unbind("click").click(function() {
+    $(".docout, .docIn").unbind("click").click(function() {
         var options = {};
         options["scrollToObject"] = $(this).attr("name");
         options["scrollToAdjust"] = $(this).position().top;
