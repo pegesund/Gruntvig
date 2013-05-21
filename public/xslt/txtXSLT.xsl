@@ -73,7 +73,7 @@
                             <xsl:for-each select="//TEI:editor[@role='editionPhilologist']">
                                 <xsl:value-of select="."/>
                                 <xsl:if test="following-sibling::TEI:editor[@role='editionPhilologist']">
-                                    <xsl:choose>
+                                    <!--<xsl:choose>
                                         <xsl:when test="following-sibling::TEI:editor[@role='editionPhilologist'][position()!=last()]">
                                             <xsl:call-template name="delimiterComma"/>
                                         </xsl:when>
@@ -81,7 +81,7 @@
                                             <xsl:text> og </xsl:text>
                                         </xsl:otherwise>
                                     </xsl:choose>
-                                </xsl:if>
+                                </xsl:if>-->
                             </xsl:for-each>
                         <xsl:call-template name="delimiterFullStop"/>
                     </div>
