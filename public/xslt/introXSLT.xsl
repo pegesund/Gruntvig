@@ -1,4 +1,4 @@
-½<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stylesheet [
 <!ENTITY month "          januar    februar   marts     april     maj       juni      juli      august    september oktober   november  december">
 ]>
