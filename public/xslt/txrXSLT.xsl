@@ -79,8 +79,7 @@
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
-        </div>
-        
+        </div>        
     </xsl:template>
     
     <xsl:template match="TEI:div" mode="toc">
@@ -165,9 +164,9 @@
     -->
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
-                <xsl:when test="@type='web'">
+                <xsl:when test="@type='web' and @target">
                     <xsl:text>&lt;</xsl:text>
-                    <a href="#http://{.}">
+                    <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
                     <xsl:text>&gt;</xsl:text>
@@ -181,9 +180,9 @@
                     <a href="#http://{.}">
                         <xsl:apply-templates/>
                     </a>
-                </xsl:when>                
+                </xsl:when>
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{base-uri()}_{@target}" class="docIn txrmenu">
+                    <a hrel="{base-uri()}_{@target}" class="docIn">
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>                
@@ -224,21 +223,11 @@
                 <xsl:for-each select="TEI:item">
                     <li class="decimal">
                         <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='upperAlpha'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperAlpha">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerAlpha'">
+        <xsl:if test="@type='lowerAlpha' or @type='subLowerAlpha'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="lowerAlpha">
@@ -247,16 +236,7 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='upperRoman'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="upperRoman">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='lowerRoman'">
+        <xsl:if test="@type='lowerRoman' or @type='subLowerRoman'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="lowerRoman">
@@ -265,31 +245,39 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='simple'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="simple">
-                        <xsl:apply-templates/>
-                        <xsl:text>.</xsl:text>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='subSimple'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="subSimple">
-                        <xsl:apply-templates/>
-                    </li>                
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='ordered'">
+        <xsl:if test="@type='ordered' or @type='subOrdered'">
             <ul>
                 <xsl:for-each select="TEI:item">
                     <li class="ordered">
                         <xsl:apply-templates/>
                     </li>
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='simple' or @type='subSimple'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="simple">
+                        <xsl:apply-templates/>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='upperAlpha' or @type='subUpperAlpha'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="upperAlpha">
+                        <xsl:apply-templates/>
+                    </li>                
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='upperRoman' or @type='subUpperRoman'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="upperRoman">
+                        <xsl:apply-templates/>
+                    </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
@@ -304,7 +292,6 @@
                     <xsl:for-each select="TEI:item">
                         <li class="ordered">
                             <xsl:apply-templates/>
-                            <xsl:text>.</xsl:text>
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -337,7 +324,7 @@
         </ul>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis']">
+    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero']">
         <xsl:choose>
             <xsl:when test="@type='textualCriticismPluralis'">                
                 <xsl:text>Der er foretaget følgende tekstrettelser (se vejledning til de tekstkritiske noter):</xsl:text>
@@ -412,6 +399,11 @@
                         </tr>
                     </xsl:for-each>
                 </table>
+            </xsl:when>
+            <xsl:when test="@type='textualCriticismZero'">
+                <div class="noIndent">
+                    <xsl:text>Der er ikke foretaget tekstrettelser.</xsl:text>
+                </div>
             </xsl:when>
         </xsl:choose>
     </xsl:template>

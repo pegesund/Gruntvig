@@ -1,6 +1,17 @@
 /* txtCSS.css til styling af tekster */
 /* KSR: 2011.09.05 */
 
+/* fodnoter START */
+
+#tekst_innhold a.footMarker 
+        {
+        font-size: 80%;
+        text-decoration: none;
+        vertical-align: super;
+        }
+
+/* fodnoter END */
+
 #tekst_innhold a.app 
         {
         color: black;
@@ -204,6 +215,11 @@
 #tekst_innhold .justify
         {
         text-align: justify;
+        }
+
+#tekst_innhold .largeCaps
+        {
+        text-transform: uppercase;
         }
 
 #tekst_innhold .l_center

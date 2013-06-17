@@ -33,6 +33,13 @@ span.appInvisible
 
 /* app start */
 
+a.footnote
+        {
+        font-size: 80%;
+        text-decoration: none;
+        vertical-align: super;
+        }
+        
 .manusMain .ms
         {
         color: black;

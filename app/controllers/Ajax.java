@@ -89,5 +89,32 @@ public class Ajax extends Application {
         Chapter chapter = Chapter.find("byAssetAndNum", asset, chapterNum).first();
         Controller.renderHtml(chapter.html);
     }
-
+    
+    public static void getNameFromFilename(String fileName) {
+        String res = "Fra: " + fileName;
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        if (asset != null) {
+           Asset root = Asset.find("fileName = ?", asset.rootName + "_txt.xml").first();
+           if (root != null) res = "Fra: " + root.name;
+        }         
+        Controller.renderHtml(res);
+    }
+    
+    public static void getIdFromFilename(String fileName) {
+        String res = "Not found";
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        if (asset != null) {
+            res = Long.toString(asset.id);
+        }
+        Controller.renderHtml(res);
+    }
+    
+     public static void getFilenameFromId(String id) {
+        String res = "Not found";
+        Asset asset = Asset.findById(Long.parseLong(id));
+        if (asset != null) {
+            res = asset.fileName;
+        }
+        Controller.renderHtml(res);
+    }   
 }

@@ -19,74 +19,27 @@
                         $('div.myth').each(function(index2) {
                     
                             name = $(this).find('div.normForm').text();
-                            
-                            //epithet = $(this).find('div.epithet');
-                           // alert(epithet.html());
-                            
-                            
-                            // if of type epithet ("name < name")
-                            //if(epithet != null && epithet != '') { 
-                               
-                               //alert( epithet );
-                               
-                               //content = $(this).html();
-                               //name = $(this).html();
-                               
-                               //node = '<tr><td class="navn"><a href="../myter#">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-
-                               //nodes.push(node);
-                                
-                        
-                            //} else {
-                                
-                                // regular name
                                 firstLetter = name.charAt(0).toLowerCase();
-
-                            
-
                                 if(firstLetter == value){ 
-
                                 $(this).hide();
-
                                     content = $(this).html();
-                                    
                                     internal_anchor = $(this).attr("id");
-
                                     node = '<!-- ' + name.toLowerCase() + "-->"; // hack to keep nodes sorted :-)
                                     node += '<tr><td class="navn"><a href="../myter#" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-
                                     nodes.push(node);
-
                                 }
-                            
-                            //}
-
-                       // epithet == '';
-                       
-                            //alert($(this).html());
-                            
                             $(this).children('.epithet').each( function(index3) {
-                            
                                 content = $(this).text();
                                 name = $(this).text();
-                                //name = name.split(' > '); // funker ikke i chrome
-                                //name = name[0];
                                 content = '';
-                                
-                                
                                 internal_link = $(this).find("a").attr("href").substr(6);
-                                
                                 firstLetter2 = name.charAt(0).toLowerCase();
-                                
                                 if(firstLetter2 == value){ 
                                     node = '<!-- ' + name.toLowerCase() + "-->";
                                     node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-
                                     nodes.push(node);
                                 } 
-                            
                             });
-                        
                         });
                         
                         
@@ -107,7 +60,7 @@
                
                $("a[name]").click(function(e) {
                     e.preventDefault();
-                    alert("Name: " + $(this).attr("name"));
+                    // alert("Name: " + $(this).attr("name"));
                     var scrolltarget = $("#X" + $(this).attr("name"));
                     // alert("Scrolling to: " + scrolltarget.html());
                     $.scrollTo(scrolltarget, 500);
@@ -138,30 +91,26 @@
 		<div id="breadcrumbs"><a href="#" >Forside</a> &raquo; <a href="#">Registre</a> &raquo;  Mytologisk register</div>
 
 		</div>
-
-
-<div class="kolonne1">
+            
+            <div class="kolonne1">
 
 		<ul id="kolonne1_meny">
-
-			<li class="header">Registre</li>
-                               
-                                <li><a href="../reg">Registranten</a></li>				
-				<li ><a class="selected" href="../myter">Mytologisk register</a></li>
-				<li><a href="../personer">Personregister</a></li>
-				<li class=""><a href="../steder">Stedregister</a></li>
-                                <li class=""><a href="../bibel">Bibelregister</a></li>
-                                <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
-
-
-		</ul>
+                    <li class="header">Registre</li>
+                    <li><a href="../reg">Registranten</a></li>	
+                    <li ><a class="selected" href="../myter">Mytologisk register</a></li>
+                    <li><a href="../personer">Personregister</a></li>
+                    <li class=""><a href="../steder">Stedregister</a></li>
+                    <li class=""><a href="../bibel">Bibelregister</a></li>
+                    <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
+                </ul>
 
 	</div>
 
 	<div id="kolonne1_bred">
 
 		<h1>Mytologisk register</h1>
-		<p>En oversigt over mytologiske referencer i Grundtvigs værker.</p>
+                
+		<p>En oversigt over mytologiske og sagnhistoriske figurer, begreber m.v. i Grundtvigs værker.</p>
 
 		<div id="innholdsfortegnelse">
 			
@@ -201,10 +150,10 @@
                 ${asset.html.raw()}
 
                 <table>
-				<tr class="bottom_border" id="A">
-					<td class="navn"><h4>A</h4></td>
-					<td></td>
-				</tr>
+                    <tr class="bottom_border" id="A">
+                        <td class="navn"><h4>A</h4></td>
+                        <td></td>
+                    </tr>
 
 				<tr class="bottom_border" id="B">
 					<td class="navn"><h4>B</h4></td>

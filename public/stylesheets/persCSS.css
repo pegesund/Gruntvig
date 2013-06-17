@@ -23,11 +23,20 @@
         {
         text-decoration: none;
         }
-        
+
+/* hi START */
+
 .person .bold
         {
          font-weight: bold;
         }
+        
+.person .italic
+        {
+         font-style: italic;
+        }
+
+/* hi END*/
 
 .person .cell
         {

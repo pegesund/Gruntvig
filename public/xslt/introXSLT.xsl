@@ -16,41 +16,31 @@
     <xsl:template match="TEI:TEI">        
         <div class="mainIntro">
             <div class="head">
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                    <div>
-                        <xsl:text>Indledning til</xsl:text>
-                    </div>
-                    <i>
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
-                    </i>
-                    <div class="author">
-                        <xsl:text>ved </xsl:text>
-                        <xsl:for-each select="//TEI:author">
-                            <xsl:value-of select="."/>
-                            <xsl:if test="following-sibling::TEI:author">
+                <div>
+                    <xsl:text>Indledning til</xsl:text>
+                </div>
+                <!-- en indledning til flere værker -->
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' or @rend='part']">
+                        <xsl:for-each select="//TEI:title[@rend='main' or @rend='part']">
+                            <div>
                                 <xsl:choose>
-                                    <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                        <xsl:text>, </xsl:text>
+                                    <xsl:when test="@rend='main'">
+                                        <i><xsl:value-of select="."/></i>
                                     </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text> og </xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:if>
+                                    <xsl:when test="@rend='part'">
+                                        &#x201C;<xsl:value-of select="."/>&#x201D;
+                                    </xsl:when>
+                                </xsl:choose>                                    
+                            </div>
                         </xsl:for-each>
-                    </div>
-                </xsl:if>                    
-                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                    <div>
-                        <xsl:text>Indledning til</xsl:text>
-                    </div>
-                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                    <div class="author">
-                        <xsl:text>ved </xsl:text>
-                        <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
-                    </div>
-                </xsl:if>
-            </div>
+                    </xsl:when>
+                </xsl:choose>
+                <div class="author">
+                    <xsl:text>ved </xsl:text>
+                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                </div>
+                </div>
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='intro']">
                         <xsl:text>Indhold</xsl:text>
@@ -71,38 +61,34 @@
         <div class="toc" id="retur">
             <a class="toc intro_menu">
                 <xsl:attribute name="hrel">
-                    <xsl:text>#intro</xsl:text>
-                        <xsl:text>_</xsl:text>
-                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
-                        <xsl:text>_</xsl:text>
-                        <xsl:number level="multiple" count="TEI:div"/>      
-                        <xsl:number level="multiple" count="TEI:div"/>
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="TEI:head"/>
+                    <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
+                    <xsl:text>_intro_</xsl:text>
+                    <xsl:number level="multiple" count="TEI:div"/>
                 </xsl:attribute>
+                <xsl:number level="multiple" count="TEI:div"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="TEI:head"/>
             </a>
             <xsl:for-each select="TEI:div">
                 <xsl:apply-templates mode="toc" select="."/>
             </xsl:for-each>
         </div>
-    </xsl:template> 
+    </xsl:template>
     
-    <xsl:template match="TEI:head[not(@rend='quote' or @rend='quoteFirst' or @rend='quoteCenter')]">
-        <a id="toc">
+    <xsl:template match="TEI:head">
+        <a class="toc intro_menu">
             <xsl:attribute name="id">
-                <xsl:text>intro</xsl:text>
-                <xsl:text>_</xsl:text>
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
-                <xsl:text>_</xsl:text>                
+                <xsl:text>_intro_</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-             <xsl:attribute name="id">
-                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
-                <xsl:text>_intro_</xsl:text>                
-                <xsl:value-of select="@xml:id" />
-             </xsl:attribute>           
+            <xsl:attribute name="id">
+                <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1_')" />
+                <xsl:text>intro_</xsl:text>
+                <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
             <a hrel="#retur" class="toc intro_menu">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
@@ -111,6 +97,7 @@
         </div>
     </xsl:template>
     
+    <!--toc intro_menu -->
     <xsl:template match="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">        
         <div class="editor">
             <xsl:apply-templates/>
@@ -153,14 +140,6 @@
     <xsl:template match="TEI:div[@type='litList']">
         <div class="litList">
             <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='webList']">
-        <div class="webList">
-            <a href="{@target}">
-                <xsl:apply-templates/>
-            </a>
         </div>
     </xsl:template>
     
@@ -227,6 +206,10 @@
                     </li>
                 </xsl:for-each>
             </ul>
+        </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
+            <div class="litList">
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
             <div class="litList">
@@ -250,9 +233,9 @@
     
     <xsl:template match="TEI:item[@n]">
         <ul>
-            <li class="webList">
+            <li class="litList">
                 <xsl:text>&lt;</xsl:text>
-                <a href="{.}">
+                <a href="{@target}">
                     <xsl:apply-templates/>
                 </a>
                 <xsl:text>&gt;</xsl:text>
@@ -342,14 +325,15 @@
                     <!--</a>-->
                 </xsl:when>                                
                 <xsl:when test="@type='docIn'">
-                    <a class="docIn intro_menu">
-                        <xsl:attribute name="href">
+                    <span class="docIn">
+                        <xsl:attribute name="name">
                             <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_intro.xml$', '$1')" />
                             <xsl:text>_</xsl:text>
+                            <xsl:text>intro.xml</xsl:text>
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>
                     <xsl:apply-templates/>
-                    </a>
+                    </span>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
                     <span class="docout">

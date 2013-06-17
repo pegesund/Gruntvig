@@ -112,16 +112,20 @@ div.appInvisible
         margin-left: 1em;
         }
 
-.toc a.docIn
+/* docIn START */
+
+a.docIn
         {
-        text-decoration: underline;
-        color: #000000;
+        text-decoration: none;
+        cursor: pointer
+        }
+        
+a.docIn:hover 
+        {
+        color: green;
         }
 
-.toc a.docIn:hover
-        {
-        color: #006633;
-        }
+/* docIn END */
         
  .toc a
         {

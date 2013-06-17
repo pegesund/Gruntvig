@@ -33,32 +33,36 @@
     <xsl:template match="tei:text">
             <xsl:apply-templates/>
     </xsl:template>
-
+    
+    <!--
     <xsl:template match="tei:table">
-            <xsl:apply-templates>
-              <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
-            </xsl:apply-templates>
+        <xsl:apply-templates>
+            <xsl:sort select="translate(concat(tei:note[@type='lastName'], tei:note[@type='firstName']), 'æøåÆØÅ ', '{|}{|}')"/>
+        </xsl:apply-templates>
     </xsl:template>
-
-    <xsl:template match="tei:row">
+   -->
+   
+   <xsl:template match="tei:row">
         <div class="person refdiv">
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
              </xsl:attribute>
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
-    </xsl:template>
-
-    <xsl:template match="tei:note[@type='firstName']">
-        <xsl:apply-templates/>
-    </xsl:template>
-
-    <xsl:template match="tei:note[@type='lastName']">
-                <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
+        <xsl:apply-templates select="tei:cell[@rend='altName']"/>
     </xsl:template>
     
-   <xsl:template match="tei:cell[@rend='name']">
-        <div class="row" id="{parent::tei:row/@xml:id}">
+    <xsl:template match="tei:note[@type='firstName']">
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original']"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:note[@type='lastName']">
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography' and @type!='original']"/>
+    </xsl:template>
+    
+    <xsl:template match="tei:cell[@rend='name']">
+        <!-- <div class="row" id="{parent::tei:row/@xml:id}"> -->
+            <div class="row">
             <span class="name">
                 <xsl:call-template name="name"/>
             </span>
@@ -68,7 +72,8 @@
             </xsl:if>
             <xsl:apply-templates select="tei:note/tei:addName[@type='birthName']"/>
             <xsl:apply-templates select="tei:note/tei:addName[@type='ladyName']"/>
-            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>-->
+            <!--<xsl:apply-templates select="tei:note/tei:addName[@type='orthography']"/>-->
+            <xsl:apply-templates select="tei:note/tei:addName[@type='original']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='nation']"/>
             <xsl:apply-templates select="following-sibling::tei:cell[@rend='encyc']"/>
             <xsl:text>.</xsl:text>
@@ -76,18 +81,21 @@
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='altName']">
+      <div class="person refdiv">
         <div class="row">
-            <span class="altName">
+            <span class="altName name">
                 <xsl:call-template name="name"/>
-                <xsl:text> (se: </xsl:text>
-                <a href="#{parent::tei:row/@xml:id}">
-                    <xsl:for-each select="preceding-sibling::tei:cell[@rend='name']">                        
-                        <xsl:call-template name="name"/>                        
-                    </xsl:for-each>                
-                </a>
-                <xsl:text>)</xsl:text>
             </span>
-        </div>        
+            <span class="gotoName">
+                    <xsl:text> -&gt; </xsl:text>
+                    <a href="#{parent::tei:row/@xml:id}">
+                        <xsl:for-each select="preceding-sibling::tei:cell[@rend='name']">                        
+                            <xsl:call-template name="name"/>                        
+                        </xsl:for-each>                
+                    </a>
+                </span>
+        </div>  
+      </div>      
     </xsl:template>
 
     <xsl:template name="name">        
@@ -98,10 +106,12 @@
         <xsl:apply-templates select="tei:note[@type='firstName']"/>
     </xsl:template>
     
+    <!--
     <xsl:template match="tei:note">
-        <!-- firstName eller lastName springer addName= etc over -->
+        firstName eller lastName springer addName= etc over 
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
+    -->
     
      <xsl:template match="tei:addName">
         <span class="addName">

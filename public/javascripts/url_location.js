@@ -18,7 +18,7 @@ var sort_keys = function(o)
             keys.push(key);
     }
     return keys.sort();
-}
+};
 
 var theUrl = {};
 
@@ -44,7 +44,7 @@ var fixMissingFirstTab = function() {
         }
     }
     window.location.hash = JSON.stringify(newUrl);
-} 
+};
 
 
 var getCurrentHash = function(hash) {
@@ -60,34 +60,45 @@ var getCurrentHash = function(hash) {
         }
         return value;
     });
-}
+};
 
 var uriChangeChapter = function(chapterNum) {
     theUrl["k"]=chapterNum;
     $(".chapterSelector")[0].selectedIndex = chapterNum;
     window.location.hash = JSON.stringify(theUrl);
-}
+};
 
 var uriChangeTab = function(tabNr, openTab) {
     theUrl[tabNr] = openTab;
     window.location.hash = JSON.stringify(theUrl);
-}
+};
 
 var uriChangeVariant = function(tabNr, varNr) {
     theUrl["v" + tabNr] = varNr;
     window.location.hash = JSON.stringify(theUrl);
-}
+};
 
 var uriChangeFaksimile = function(tabNr, faxNr) {
     theUrl["f" + tabNr] = faxNr;
     window.location.hash = JSON.stringify(theUrl);
-}
+};
 
 var uriRemoveTab = function(tabNr) {
     delete theUrl[tabNr];
     delete theUrl["v" + tabNr];
+    delete theUrl["x" + tabNr];
     window.location.hash = JSON.stringify(theUrl);    
-}
+};
+
+var uriAddForeignTab = function(tabNr, fileName) {
+    $.ajax({
+        url: "ajax/getIdFromFilename/"  + fileName,
+        success: function(fileId) {
+           theUrl["x" + tabNr] = fileId;
+            window.location.hash = JSON.stringify(theUrl);
+        }
+    });   
+};
 
 var startupUri = function(hash) {
     var oldHash = getCurrentHash(hash);
@@ -98,7 +109,7 @@ var startupUri = function(hash) {
     var i;
     for (i=0; i<20; i++) {
         var options = {};
-        if (oldHash[i] != undefined) {
+        if ((oldHash[i] != undefined) || (oldHash["x" + i] != undefined)) {
             options["open_tab"] = oldHash[i];
             if (oldHash["v"+i] != undefined) {
                 options["variant"] = oldHash["v" + i];
@@ -106,9 +117,25 @@ var startupUri = function(hash) {
             if (oldHash["f"+i] != undefined) {
                 theUrl["f" + i] = oldHash["f" + i];
             }
+            if (oldHash["x" + i] != undefined) {
+                theUrl["x" + i] = oldHash["x" + i];
+                var fileName = $.ajax({
+                    type: "GET",
+                    url: "ajax/getFilenameFromId/" + theUrl["x" + i],
+                    async: false,
+                }).responseText;
+                var showName = $.ajax({
+                    type: "GET",
+                    url: "ajax/getNameFromFilename/" + fileName,
+                    async: false,
+                }).responseText;
+                addSimpleReader({}, showName, fileName);
+                continue;
+            }
+    
             if (i != 0) addReaderColumn(options);
             num++;
         }
     }
     window.location.hash = JSON.stringify(theUrl);
-}
+};

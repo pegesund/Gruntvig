@@ -44,6 +44,7 @@
                 <xsl:value-of select="concat('ajax/getReference/', @key)"/>
             </xsl:attribute>
             <xsl:attribute name="rel">
+                <xsl:text>Andet navn for </xsl:text>
                 <xsl:value-of select="concat('ajax/getReference/', @key)"/>
             </xsl:attribute>
             <xsl:apply-templates/>

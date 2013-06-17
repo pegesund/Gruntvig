@@ -43,7 +43,11 @@ GET     /ajax/getReference/{textId}                           Ajax.getRef
 GET     /ajax/getIntro/{id}                                   Ajax.getIntro
 GET     /ajax/getComment/{id}                                 Ajax.getComment
 GET     /ajax/getChapter/{assetId}/{chapterNum}               Ajax.getChapter
+GET     /ajax/getNameFromFilename/{fileName}                  Ajax.getNameFromFilename
+GET     /ajax/getIdFromFilename/{fileName}                    Ajax.getIdFromFilename
+GET     /ajax/getFilenameFromId/{id}                          Ajax.getFilenameFromId
 GET     /search                                               DoSearch.doSearch
+
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

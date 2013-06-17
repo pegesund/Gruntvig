@@ -15,49 +15,50 @@
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
                 
                 $.each(alphabet, function(index, value) { 
-                      
-                      // alert(index + ': ' + value);  
-                       
-                        nodes = [];
+                        var nodes = [];
                         $('div.person').each(function(index2) {
-                    
                             name = $(this).find('span.name').text();
+                            // alert("Adding: " + name);
                             firstLetter = name.charAt(0).toLowerCase();; 
-                           // alert(firstLetter);
-                            
                             if(firstLetter == value){ 
-                            
                                 $(this).hide();
-                                
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
-                                
                                 var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').text();
-                                
-                                node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
-                                
+                                if ($(this).find(".altName").length > 0) {
+                                    var gotoName = $(this).find(".gotoName").html();
+                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
+                                } else { 
+                                    var id = $(this).attr("id");
+                                    node = '<tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
+                                }
+                                $(this).attr("id", "");
                                 nodes.push(node);
-                                
-   
                             }
-
-
                         });
-                        
                         nodes = nodes.sort().reverse();
-                        //alert(nodes);
-                        
                         $(nodes).each( function(index, value2) {
-                            //alert(value);
-                            $('#' + value.toUpperCase()).after(value2);
-                            
-                        
+                        $('#' + value.toUpperCase()).after(value2);
                         });
                 }); 
                 
+                
+                // later: remove duplicate code with mythvisning.html
+                $("tbody").find("a[href]").click(function(e) {
+                    e.preventDefault();
+                    // alert("Scrolling to: " + $(this).attr("href"));
+                    var scrolltarget = $($(this).attr("href"));
+                    $.scrollTo(scrolltarget, 500);
+                    
+               }); 
                
+                // get current location and scrolldown to this if exists
+                var loc = String(document.location);
+                var idx = loc.indexOf('#');
+                var href = (idx > 0) ? loc.substring(idx + 1) : "";
+                if (href) $.scrollTo("#" + href, 500);              
 
 
 		});
@@ -74,62 +75,58 @@
 		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Registre</a> &raquo;  Personregister</div>
 
 		</div>
-
-
-<div class="kolonne1">
+            
+            <div class="kolonne1">
 
 		<ul id="kolonne1_meny">
-
-			<li class="header">Registre</li>
-                                
-                                <li><a href="../reg">Registranten</a></li>	
-				<li><a href="../myter">Mytologisk register</a></li>
-				<li><a class="selected" href="../personer">Personregister</a></li>
-				<li class=""><a href="../steder">Stedregister</a></li>
-                                <li class=""><a href="../bibel">Bibelregister</a></li>
-                                <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
-
-		</ul>
-
-	</div>
+                    <li class="header">Registre</li>
+                    <li><a href="../reg">Registranten</a></li>
+                    <li><a href="../myter">Mytologisk register</a></li>
+                    <li><a class="selected" href="../personer">Personregister</a></li>
+                    <li class=""><a href="../steder">Stedregister</a></li>
+                    <li class=""><a href="../bibel">Bibelregister</a></li>
+                    <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
+                </ul>
+            </div>
 
 	<div id="kolonne1_bred">
-
-		<h1>Personregister</h1>
-		
-
-		<div id="innholdsfortegnelse">
-			
-			<a href="../personer#A">a</a>
-			<a href="../personer#B">b</a>
-			<a href="../personer#C">c</a>
-			<a href="../personer#D">d</a>
-			<a href="../personer#E">e</a>
-			<a href="../personer#F">f</a>
-			<a href="../personer#G">g</a>
-			<a href="../personer#H">h</a>
-			<a href="../personer#I">i</a>
-			<a href="../personer#J">j</a>
-			<a href="../personer#K">k</a>
-			<a href="../personer#L">l</a>
-			<a href="../personer#M">m</a>
-			<a href="../personer#N">n</a>
-			<a href="../personer#O">o</a>
-			<a href="../personer#P">p</a>
-			<a href="../personer#Q">q</a>
-			<a href="../personer#R">r</a>
-			<a href="../personer#S">s</a>
-			<a href="../personer#T">t</a>
-			<a href="../personer#U">u</a>
-			<a href="../personer#V">v</a>
-			<a href="../personer#W">w</a>
-			<a href="../personer#X">x</a>
-			<a href="../personer#Y">y</a>
-			<a href="../personer#Z">z</a>
-			<a href="../personer#Æ">Æ</a>
-			<a href="../personer#Ø">Ø</a>
-			<a href="../personer#Å">Å</a>
-		</div>
+            
+            <h1>Personregister</h1>
+            
+            <p>En oversigt over historiske og fiktive personer i Grundtvigs værker.</p>
+            
+            <div id="innholdsfortegnelse">
+                
+                <a href="../personer#A">a</a>                
+                <a href="../personer#B">b</a>
+                <a href="../personer#C">c</a>
+                <a href="../personer#D">d</a>
+                <a href="../personer#E">e</a>
+                <a href="../personer#F">f</a>
+                <a href="../personer#G">g</a>
+                <a href="../personer#H">h</a>
+                <a href="../personer#I">i</a>
+                <a href="../personer#J">j</a>
+                <a href="../personer#K">k</a>
+                <a href="../personer#L">l</a>
+                <a href="../personer#M">m</a>
+                <a href="../personer#N">n</a>
+                <a href="../personer#O">o</a>
+                <a href="../personer#P">p</a>
+                <a href="../personer#Q">q</a>
+                <a href="../personer#R">r</a>
+                <a href="../personer#S">s</a>
+                <a href="../personer#T">t</a>
+                <a href="../personer#U">u</a>
+                <a href="../personer#V">v</a>
+                <a href="../personer#W">w</a>
+                <a href="../personer#X">x</a>
+                <a href="../personer#Y">y</a>
+                <a href="../personer#Z">z</a>
+                <a href="../personer#Æ">Æ</a>
+                <a href="../personer#Ø">Ø</a>
+                <a href="../personer#Å">Å</a>
+            </div>
 
 		<div id="liste" class="hideroot">
 

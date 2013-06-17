@@ -3,6 +3,37 @@ readerNum = 0;
 var columnWidth = 471; // how wide new columns should be, in pixel
 var startupHash = window.location.hash;
 
+/*
+ * 
+ * @returns {undefined}
+ * 
+ * Fix menu-handlers for toc-anchors
+ * Adds expand-function with plus-ids
+ * Adds handlers to intro_menu
+ * 
+ */
+fixTabMenues = function() {
+    $("a.toc").each(function(index) {
+        var a = $(this);
+        var jump = a.attr("href");
+        a.removeClass("toc");
+        a.click(function() {
+            var id = $(".teidiv1").attr("id");
+            // $(".innledningContent").parent().scrollTo($("#index.xml-body.1_div.1_div.11"));
+        });
+        a.removeAttr("href");
+    });
+
+    $(".plus").unbind("click").click(function() {
+        $(this).next().slideToggle("slow");
+    });
+    $(".intro_menu").unbind("click").click(function() {
+        var scrollElement = $(this).closest(".innledningContent").parent();
+        var id = $(this).attr("hrel").replace(/\./g, "\\.");
+        scrollElement.scrollTo($(scrollElement.find("#" + id)));
+        scrollElement.scrollTo("-=30px", 700);
+    });
+}
 
 addReaderColumn = function() {
     var options = arguments[0] || {};                  
@@ -54,6 +85,41 @@ tabFocusHandler = function(num, options) {
     }
 }
 
+/*
+ * 
+ * @param {hash} options
+ * @returns {undefined}
+ * 
+ * After update of dom-tree, the scrollbar resests to top position
+ * This function scrolls back to last seen position
+ * 
+ */
+keepOldScrollPosition = function(options) {
+    var linkElementId = options["scrollToObject"];
+    var linkNewWindow = options["scrollToInNewWindows"];
+    if (linkElementId) {
+        var linkElement = $("span[name='" + linkElementId + "']");
+        var scrollElement = linkElement.closest(".ui-tabs-panel");
+        scrollElement.scrollTo(linkElement);
+        scrollElement.scrollTo("-=" + options["scrollToAdjust"] + "px");
+    }
+    if (linkNewWindow) {
+        for (i = readerNum; i > 0; i--) {
+            var rightmostScrollTo = $("#tab" + i).find("#" + linkNewWindow);
+            if (rightmostScrollTo.length > 0) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            var linkElement = rightmostScrollTo;
+            var scrollElement = linkElement.closest(".ui-tabs-panel");
+            scrollElement.scrollTo(linkElement);
+            scrollElement.scrollTo("-=30px");
+        }
+    }
+};
+
 
 /**
  * 
@@ -74,7 +140,6 @@ addNewReader = function(num) {
     newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
     newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
     newReader += '</div></span>';
-    
     $("#hovedtekst_select").html(hovedtekstSelect);
     $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
     //alert($("#høyre_toppmeny_nytt_navn").html());
@@ -94,6 +159,7 @@ addNewReader = function(num) {
             success: function(data) {
                 var variantContent = $("#" + parentId + " .variantContent");
                 variantContent.html(data);
+                keepOldScrollPosition(options);
             }
         })
     });
@@ -105,6 +171,7 @@ addNewReader = function(num) {
             var txrContent = $("#txr" + num);
             txrContent.html(data);
             addMouseHandlers(txrUrl);
+            keepOldScrollPosition(options);
         }
     });
 
@@ -115,6 +182,7 @@ addNewReader = function(num) {
             var introContent = $("#kommentar" + num);
             introContent.html(data);
             addMouseHandlers(kommentarUrl);
+            keepOldScrollPosition(options);
         }
     });
 
@@ -123,27 +191,9 @@ addNewReader = function(num) {
         success: function(data) {
             var introContent = $("#innledning" + num);
             introContent.find(".innledningContent").html(data);
-            $("a.toc").each(function(index) {
-                var a = $(this);
-                var jump = a.attr("href");
-                a.removeClass("toc");
-                a.click(function() {
-                    var id = $(".teidiv1").attr("id");
-                // $(".innledningContent").parent().scrollTo($("#index.xml-body.1_div.1_div.11"));
-                });
-                a.removeAttr("href");
-            });
-            addTooltip($('.persName, .placeName, .myth, .rs_bible'));
-            $(".plus").click(function() {    
-                $(this).next().slideToggle("slow"); 
-            });
-            $(".intro_menu").unbind("click").click(function() {
-                var scrollElement = $(this).closest(".innledningContent").parent();
-                var id = $(this).attr("hrel").replace(/\./g, "\\.");
-                scrollElement.scrollTo($(scrollElement.find("#" + id)));
-                scrollElement.scrollTo("-=30px", 700);
-            });
-
+            fixTabMenues();
+            addMouseHandlers(introUrl);
+            keepOldScrollPosition(options);
         }
     });
 
@@ -155,6 +205,8 @@ addNewReader = function(num) {
             success: function(data) {
                 var variantContent = $("#hovedtekst #tekst_innhold");
                 variantContent.html(data);
+                addMouseHandlers(theUrl);
+                keepOldScrollPosition(options);
             }
         })
     });
@@ -201,7 +253,7 @@ addNewReader = function(num) {
 var addMouseHandlers = function(fileName) {
     addTooltip($('.persName, .placeName, .myth, .rs_bible'));
     if (fileName.match(/getComment/) || fileName.match(/_com/)) {
-        $(".plusComment").click(function() {    
+        $(".plusComment").unbind("click").click(function() {    
             $(this).next().slideToggle("slow"); 
         });
     }
@@ -213,18 +265,20 @@ var addMouseHandlers = function(fileName) {
             scrollElement.scrollTo("-=30px", 700);     
         });
     }  
+    fixTabMenues();
 } 
 
 /*
  * This function adds a reader for links between different root-texts
- * In this reader only one text is showed
+ * In this reader only one tab is showed
  * 
  */
-addSimpleReader = function(url) {
+addSimpleReader = function(options, showName, url) {
     readerNum += 1;
     var num = readerNum;
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>Innhold</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
-    newReader += '<div id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
+    uriAddForeignTab(readerNum, url);
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>' + showName + '</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    newReader += '<div class="text-resizeable" id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader += '</div></span>';
     $("#hovedtekst_select").html(hovedtekstSelect);
     $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
@@ -237,9 +291,11 @@ addSimpleReader = function(url) {
     $.ajax({
         url: "ajax/getManusByName/"  + url,
         success: function(data) {
-            var introContent = $("#foreign" + num);
-            introContent.html(data);
+            var simpleContent = $("#foreign" + num);
+            simpleContent.html(data);
             addMouseHandlers(url);
+            fixTabMenues();
+            keepOldScrollPosition(options);
         }
     });
     

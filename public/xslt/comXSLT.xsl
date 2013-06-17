@@ -227,15 +227,16 @@
     </xsl:template>
     -->
     
-    <xsl:template match="TEI:div[@type='litList']">
+    <xsl:template match="TEI:div[@type='litList' or @type='webList']">
         <div class="litList">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:div[@type='webList']">
-        <div class="webList">
-            <xsl:apply-templates/>
+            <xsl:choose>
+                <xsl:when test="@type='litList'">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:when test="@type='webList'">
+                    <xsl:apply-templates/>
+                </xsl:when>
+            </xsl:choose>
         </div>
     </xsl:template>
     
@@ -248,7 +249,6 @@
     <xsl:template match="TEI:item[not(@n)]">
         <li class="webList">
             <xsl:apply-templates/>
-            <xsl:text>.</xsl:text>
         </li>
     </xsl:template>
     
