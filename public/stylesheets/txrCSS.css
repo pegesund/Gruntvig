@@ -14,6 +14,13 @@ KSR: 2011.09.26: hi-element
         line-height: 1.4em;
         font-size: 0.8em;
         }
+
+.mainTxr .content
+        {
+        color: #000000;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        }
         
 .mainTxr a.toc
         {
