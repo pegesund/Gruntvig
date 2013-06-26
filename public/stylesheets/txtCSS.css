@@ -140,6 +140,13 @@
         width: 4em;
         }
 
+#tekst_innhold .engraver
+        {
+        font-size: 80%;
+        margin: 2em 0em 2em 0em;
+        text-align: center;
+        }
+
 #tekst_innhold .fwLongLine
         {
         margin: 2em 0em 2em 0em;
