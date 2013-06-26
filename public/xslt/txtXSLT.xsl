@@ -726,6 +726,13 @@
     
     <!-- skilletegn START -->
     
+    <xsl:template match="TEI:figure">
+        <div class="{@type}">
+            <hr align="center" width="50%"/>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:fw">
         <xsl:choose>
             <xsl:when test="@type='blank'">
