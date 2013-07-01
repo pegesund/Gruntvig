@@ -142,6 +142,7 @@ public class TextReference extends GenericModel {
             System.out.println("Number of refs: " + refs.size());
             // System.out.println("Trasformed refs as html: " + asset.html);
             for (Node ref : refs) {
+                if(ref.getAttributes().getNamedItem("id") == null) continue; // do not create post for altName
                 String id = ref.getAttributes().getNamedItem("id").getNodeValue();
                 System.out.println("Creating ref-id: " + id);
                 System.out.println("  " + Helpers.nodeToString(ref));
