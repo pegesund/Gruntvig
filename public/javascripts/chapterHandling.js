@@ -21,8 +21,9 @@ var gotoPrevChapter = function() {
 
 
 var fixFootnotes = function() {
-   $(".footMarker").each(function(index, value) { 
-       $(this).parent().click(function() {
+   $(".footMarker").each(function(index, value) {
+       $(this).unbind("click").click(function(event) {
+              event.preventDefault();
               var noteId = $(this).attr("href");
               $("#tekst_innhold").scrollTo(noteId, 800);
               return false;

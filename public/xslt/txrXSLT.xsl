@@ -182,14 +182,23 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{base-uri()}_{@target}" class="docIn">
-                       <xsl:apply-templates/>
-                    </a>
-                </xsl:when>                
+                    <span class="docIn">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
+                            <xsl:text>_</xsl:text>
+                            <xsl:text>txr.xml</xsl:text>
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>
+                    <xsl:apply-templates/>
+                    </span>
+                </xsl:when>                   
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="{@target}" class="docOut txrmenu">-->
-                       <xsl:apply-templates/>
-                    <!--</a>-->
+                    <span class="docout">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>           
+                        <xsl:apply-templates/>         
+                    </span>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>

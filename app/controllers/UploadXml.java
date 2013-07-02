@@ -40,6 +40,16 @@ public class UploadXml extends Application {
         System.out.println("Starting upload of: " + filesname);
         Asset asset = null;
         String fileName = theFile.getName();
+        if (fileName.equals("domestic.xml") ||
+                fileName.equals("international.xml") ||
+                fileName.equals("life.xml") ||
+                fileName.equals("pub.xml") ||
+                fileName.equals("unpub.xml")
+                ) {
+            String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "tidslinje" + File.separator + fileName;
+            helpers.Helpers.copyfile(theFile.getAbsolutePath(), filePath);
+        }
+        
         if (fileName.endsWith(".jpg")) {
             if (fileName.contains("_medium") || fileName.contains("_low")) {
                 Asset.uploadCountryImage(fileName, comment, theFile);
@@ -61,6 +71,7 @@ public class UploadXml extends Application {
         } else if (fileName.replace(".xml", "").endsWith("_com")) {
             TextReference.uploadComments(asset);
         }       
+        
         
         if (asset == null) {
             Controller.renderHtml("Upload of file done: ");
