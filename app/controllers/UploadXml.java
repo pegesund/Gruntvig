@@ -46,8 +46,22 @@ public class UploadXml extends Application {
                 fileName.equals("pub.xml") ||
                 fileName.equals("unpub.xml")
                 ) {
-            String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "tidslinje" + File.separator + fileName;
-            helpers.Helpers.copyfile(theFile.getAbsolutePath(), filePath);
+            String tidslinjeDir = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "tidslinje";
+            String filePath = tidslinjeDir + File.separator + fileName;
+            File theDir = new File(tidslinjeDir);
+            if (!theDir.exists()) {
+              System.out.println("creating directory: " + tidslinjeDir);
+              boolean result = theDir.mkdir();  
+              if(result){    
+                 System.out.println("DIR created");  
+               }
+            }
+            try {
+                helpers.Helpers.copyfile(theFile.getAbsolutePath(), filePath);
+            } catch (Exception e) {
+                Controller.renderHtml("Something went wrong: " + e.getMessage());
+            }
+            Controller.renderHtml("Upload of file done: ");
         }
         
         if (fileName.endsWith(".jpg")) {
