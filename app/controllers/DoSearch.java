@@ -25,6 +25,10 @@ import play.modules.search.Search;
 public class DoSearch extends Application {
 
     
+    public static void avanceret() {
+        render();
+    }
+    
     /**
      * 
      * Search

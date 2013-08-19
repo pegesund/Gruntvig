@@ -47,6 +47,7 @@ GET     /ajax/getNameFromFilename/{fileName}                  Ajax.getNameFromFi
 GET     /ajax/getIdFromFilename/{fileName}                    Ajax.getIdFromFilename
 GET     /ajax/getFilenameFromId/{id}                          Ajax.getFilenameFromId
 GET     /search                                               DoSearch.doSearch
+GET     /avanceret                                            DoSearch.avanceret
 
 
 # Catch all
