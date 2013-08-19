@@ -10,6 +10,4 @@ nbproject/private/*
 /public/images/
 nbproject/project.xml
 /nbproject/
-!/public/xml/tidslinje/
 !/public/xml/veiledninger/
-!/public/tidslinje/*.xml
