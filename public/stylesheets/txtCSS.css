@@ -219,6 +219,11 @@
         font-style: italic;
         }
 
+#tekst_innhold .spaced
+        {
+        font-style: italic;
+        }
+
 #tekst_innhold .justify
         {
         text-align: justify;
