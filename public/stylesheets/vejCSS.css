@@ -75,6 +75,12 @@ div.landKort
         margin: 2em 2em 2em 2em;
         }
 
+.li
+        {
+        font-size: 16px;
+        color: red;
+        }
+
 li.liSimple
         {
         margin: 0.25em 0em 0.25em 0em;
