@@ -234,55 +234,84 @@
         text-transform: uppercase;
         }
 
+/* indrykning lyrik START*/
+        
 #tekst_innhold .l_center
         {
         text-align: center;
         }
 
-#tekst_innhold .l_firstIndent
-        {
-        text-indent: 1em;
-        }
-
-#tekst_innhold .l_firstIndentRight
-        {
-        text-indent: 5em;
-        }
-
 #tekst_innhold .l_hangingIndent
         {
-        text-indent: hanging;
+        text-align: justify;
+        text-indent: -1em;
+        padding-left: 1em;
         }
-
-#tekst_innhold .l_secondIndent
-        {
-        text-indent: 1.5em;;
-        }
-
-#tekst_innhold .l_thirdIndent
-        {
-        text-indent: 2em;
-        }
-
-#tekst_innhold .l_fourthIndent
-        {
-        text-indent: 2.5em;
-        }
-
+        
 #tekst_innhold .l_right
         {
         text-align: right;
         }
 
+#tekst_innhold .l_firstIndent
+        {
+        text-indent: 1em;
+        text-align: justify;
+        }
+        
+#tekst_innhold .l_firstIndentRight
+        {
+        margin-right: 1em;
+        text-align: right;
+        }
+
+#tekst_innhold .l_interRefrain
+        {
+        text-indent: 2em;
+        text-align: justify;
+        }
+        
+#tekst_innhold .l_refrain
+        {
+        margin-left: -1em;
+        }
+
+#tekst_innhold .l_secondIndent
+        {
+        text-indent: 2em;
+        text-align: justify;
+        }
+
 #tekst_innhold .l_secondIndentRight
         {
-        text-indent: 6em;
+        margin-right: 2em;
+        text-align: right;
+        }
+
+#tekst_innhold .l_thirdIndent
+        {
+        text-indent: 3em;
+        text-align: justify;
         }
 
 #tekst_innhold .l_thirdIndentRight
         {
-        text-indent: 7em;
+        margin-right: 3em;
+        text-align: right;
         }
+
+#tekst_innhold .l_fourthIndent
+        {
+        text-indent: 4em;
+        text-align: justify;
+        }
+
+#tekst_innhold .l_varRefrain
+        {
+        text-indent: -1em;
+        }
+
+/* indrykning lyrik END*/
 
 #tekst_innhold .lgNumber
         {
