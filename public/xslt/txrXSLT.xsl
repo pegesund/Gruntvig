@@ -336,7 +336,7 @@
     <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero']">
         <xsl:choose>
             <xsl:when test="@type='textualCriticismPluralis'">                
-                <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" target="http://www.sks.dk">se vejledning til de tekstkritiske noter</a>):</span>
+                <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" href="http://www.sks.dk">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
                     <tr>
                         <td>Side</td>
