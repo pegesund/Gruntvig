@@ -20,22 +20,36 @@
                     <xsl:text>Indledning til</xsl:text>
                 </div>
                 <!-- en indledning til flere værker -->
-                <xsl:choose>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' or @rend='part']">
-                        <xsl:for-each select="//TEI:title[@rend='main' or @rend='part']">
+                    <div>
+                        <xsl:for-each select="//TEI:title[@rend='main']">
+                            <i><xsl:value-of select="."/></i>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::TEI:title[@rend='main' or @rend='part'][position()!=last()]">
+                                    <xsl:text>, </xsl:text>
+                                </xsl:when>
+                                <xsl:when test="following-sibling::TEI:title[@rend='main' or @rend='part'][position()=last()]">
+                                    <xsl:text> og </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                    </div>
+                    <div>
+                        <xsl:for-each select="//TEI:title[@rend='part']">
                             <div>
+                                &#x201C;<xsl:value-of select="."/>&#x201D;
                                 <xsl:choose>
-                                    <xsl:when test="@rend='main'">
-                                        <i><xsl:value-of select="."/></i>
+                                    <xsl:when test="following-sibling::TEI:title[@rend='main' or @rend='part'][position()!=last()]">
+                                        <xsl:text>, </xsl:text>
                                     </xsl:when>
-                                    <xsl:when test="@rend='part'">
-                                        &#x201C;<xsl:value-of select="."/>&#x201D;
+                                    <xsl:when test="following-sibling::TEI:title[@rend='main' or @rend='part'][position()=last()]">
+                                        <div>
+                                            <xsl:text> og </xsl:text>
+                                        </div>
                                     </xsl:when>
-                                </xsl:choose>                                    
+                                </xsl:choose>
                             </div>
                         </xsl:for-each>
-                    </xsl:when>
-                </xsl:choose>
+                    </div>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                     <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
