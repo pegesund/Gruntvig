@@ -1181,7 +1181,7 @@ h1.subtitle { margin-left: 0px !important; }
 /* Veiledninger START */
 
 #veiledning_tekst ol, #veiledning_tekst ul, #intro_tekst ol, #intro_tekst ul {
-    font-size: 3em;
+    font-size: 1.6em;
     line-height: 1.6em;
     list-style: none outside none;
     margin-bottom: 10px;
