@@ -55,7 +55,7 @@
     </xsl:template>
 
     <xsl:template match="tei:item">
-        <li class="li">
+        <li>
             <xsl:apply-templates/>
         </li>
     </xsl:template>
