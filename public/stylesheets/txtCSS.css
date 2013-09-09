@@ -290,7 +290,7 @@
 
 #tekst_innhold .l_thirdIndent
         {
-        text-indent: 3em;
+        text-indent: 4em;
         text-align: justify;
         }
 
@@ -302,7 +302,7 @@
 
 #tekst_innhold .l_fourthIndent
         {
-        text-indent: 5em;
+        text-indent: 6em;
         text-align: justify;
         }
 
