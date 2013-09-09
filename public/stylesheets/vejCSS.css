@@ -86,6 +86,7 @@ li.liSimple
 .litList
         {
         list-style: circle;
+        font-size: 16px;
         }
 
 .decimal
