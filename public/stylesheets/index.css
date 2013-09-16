@@ -22,6 +22,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 
+.alfaLink
+        {
+        color: red
+        }
+
 html {
     background: transparent url(../img/fine_grain_bg.JPG); /*#1A4617*/
 
