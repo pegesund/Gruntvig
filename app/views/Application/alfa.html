@@ -8,91 +8,90 @@
 #{ header /}
 
 <script type="text/javascript">
- 
-	
+    
+    
+    
+    $(document).ready(function() {
+    
+    $('div.root').hide();
+    
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+    
+    $.each(alphabet, function(index, value) { 
+    var nodes = [];
+    $('div.work').each(function(index2) {
+    var name = $(this).find('span.name').text(),
+    uri= $(this).find('span.uri').text(),
+    rootName= $(this).find('span.rootName').text(),
+    splitName= rootName.split( "_" );
+    // alert("Adding: " + name);
+    firstLetter = name.charAt(0).toLowerCase();; 
+    if(firstLetter == value){ 
+    $(this).hide();
+    //                                year = $(this).find('.row span.year').text() + ', '; 
+    //                                if( year == ', ') { year = '';};
+    //                                var addName = $(this).find('.row span.addName').not($('span span')).text();
+    //                                nation = $(this).find('.row span.nation').text();
+    //                                about = $(this).find('.row span.encyk').text();
+    //                                if ($(this).find(".altName").length > 0) {
+    //                                    var gotoName = $(this).find(".gotoName").html();
+    //                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
+    //                                } else { 
+    //                                    var id = $(this).attr("id");
+    node = '<tr><td class="navn"><a class="alfaLink" href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td>&nbsp;' + splitName[1] + '</td></tr>';
+    
+    //                                }
+    //                                $(this).attr("id", "");
+    nodes.push(node);
+    }
+    });
+    nodes = nodes.sort().reverse();
+    $(nodes).each( function(index, value2) {
+    $('#' + value.toUpperCase()).after(value2);
+    });
+    }); 
+    
+    
+    // later: remove duplicate code with mythvisning.html
+    //                $("tbody").find("a[href]").click(function(e) {
+    //                    e.preventDefault();
+    //                    // alert("Scrolling to: " + $(this).attr("href"));
+    //                    var scrolltarget = $($(this).attr("href"));
+    //                    $.scrollTo(scrolltarget, 500);
+    //                    
+    //               }); 
+    
+    // get current location and scrolldown to this if exists
+    var loc = String(document.location);
+    var idx = loc.indexOf('#');
+    var href = (idx > 0) ? loc.substring(idx + 1) : "";
+    if (href) $.scrollTo("#" + href, 500);              
+    
+    
+    });
+    
+    
+</script>
 
-		$(document).ready(function() {
-                           
-                $('div.root').hide();
-                
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-                
-                $.each(alphabet, function(index, value) { 
-                        var nodes = [];
-                        $('div.work').each(function(index2) {
-                            var name = $(this).find('span.name').text(),
-                                uri= $(this).find('span.uri').text(),
-                                rootName= $(this).find('span.rootName').text(),
-                                splitName= rootName.split( "_" );
-                            // alert("Adding: " + name);
-                            firstLetter = name.charAt(0).toLowerCase();; 
-                            if(firstLetter == value){ 
-                                $(this).hide();
-//                                year = $(this).find('.row span.year').text() + ', '; 
-//                                if( year == ', ') { year = '';};
-//                                var addName = $(this).find('.row span.addName').not($('span span')).text();
-//                                nation = $(this).find('.row span.nation').text();
-//                                about = $(this).find('.row span.encyk').text();
-//                                if ($(this).find(".altName").length > 0) {
-//                                    var gotoName = $(this).find(".gotoName").html();
-//                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
-//                                } else { 
-//                                    var id = $(this).attr("id");
-                                    node = '<tr><td class="navn"><a class="alfaLink" href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td>&nbsp;' + splitName[1] + '</td></tr>';
-                                    
-//                                }
-//                                $(this).attr("id", "");
-                                nodes.push(node);
-                            }
-                        });
-                        nodes = nodes.sort().reverse();
-                        $(nodes).each( function(index, value2) {
-                        $('#' + value.toUpperCase()).after(value2);
-                        });
-                }); 
-                
-                
-                // later: remove duplicate code with mythvisning.html
-//                $("tbody").find("a[href]").click(function(e) {
-//                    e.preventDefault();
-//                    // alert("Scrolling to: " + $(this).attr("href"));
-//                    var scrolltarget = $($(this).attr("href"));
-//                    $.scrollTo(scrolltarget, 500);
-//                    
-//               }); 
-               
-                // get current location and scrolldown to this if exists
-                var loc = String(document.location);
-                var idx = loc.indexOf('#');
-                var href = (idx > 0) ? loc.substring(idx + 1) : "";
-                if (href) $.scrollTo("#" + href, 500);              
-
-
-		});
-
-
-	</script>
-        
 
 <div id="main">
-
-	<div class="container" id="underside_innhold">
-
-		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Værker</a> &raquo;  Alfabetisk</div>
-
-		</div>
+    
+    <div class="container" id="underside_innhold">
+        
+        <div id="submenu">
+            <div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Værker</a> &raquo;  Alfabetisk</div>
             
-            <div class="kolonne1">
-
-		<ul id="kolonne1_meny">
-                    <li class="header">Værker</li>
-                    <li><a href="/krono">Kronologisk</a></li>
-                    <li class="last"><a class="selected" href="/alfa">Alfabetisk</a></li>
-                </ul>
-            </div>
-
-	<div id="kolonne1_bred">
+        </div>
+        
+        <div class="kolonne1">
+            <ul id="kolonne1_meny">
+                <li class="header">Værker</li>
+                <li><a href="/krono">Kronologisk</a></li>
+                <li class="last"><a class="selected" href="/alfa">Alfabetisk</a></li>
+            </ul>
+        </div>
+        
+        <div id="kolonne1_bred">
             
             <h1>Værker</h1>
             
@@ -130,17 +129,17 @@
                 <a href="../alfa#Ø">Ø</a>
                 <a href="../alfa#Å">Å</a>
             </div>
-
+            
             <div id="liste" class="hideroot">
-
-  <!--div>Her bygges en alfabetisk oversigt!</div-->
-
-            <div class="root">
-             #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-              <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
-             #{/list}
-            </div>
-
+                
+                <!--div>Her bygges en alfabetisk oversigt!</div-->
+                
+                <div class="root">
+                    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+                    <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
+                    #{/list}
+                </div>
+                
                 <table>
                     <tr class="bottom_border" id="A">
                         <td class="navn"><h4>A</h4></td>
@@ -150,123 +149,123 @@
                         <td class="navn"><h4>B</h4></td>
                         <td></td>
                     </tr>
-
-				<tr class="bottom_border" id="C">
-					<td class="navn"><h4>C</h4></td>
-					<td></td>
-				</tr>
-				
-				<tr class="bottom_border" id="D">
-					<td class="navn"><h4>D</h4></td>
-					<td></td>
-				</tr>
-                                <tr class="bottom_border" id="E">
-					<td class="navn"><h4>E</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="F">
-					<td class="navn"><h4>F</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="G">
-					<td class="navn"><h4>G</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="H">
-					<td class="navn"><h4>H</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="I">
-					<td class="navn"><h4>I</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="J">
-					<td class="navn"><h4>J</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="K">
-					<td class="navn"><h4>K</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="L">
-					<td class="navn"><h4>L</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="M">
-					<td class="navn"><h4>M</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="N">
-					<td class="navn"><h4>N</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="O">
-					<td class="navn"><h4>O</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="P">
-					<td class="navn"><h4>P</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Q">
-					<td class="navn"><h4>Q</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="R">
-					<td class="navn"><h4>R</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="S">
-					<td class="navn"><h4>S</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="T">
-					<td class="navn"><h4>T</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="U">
-					<td class="navn"><h4>U</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="V">
-					<td class="navn"><h4>V</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="W">
-					<td class="navn"><h4>W</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="X">
-					<td class="navn"><h4>X</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Y">
-					<td class="navn"><h4>Y</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Z">
-					<td class="navn"><h4>Z</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Æ">
-					<td class="navn"><h4>Æ</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Ø">
-					<td class="navn"><h4>Ø</h4></td>
-					<td></td>
-				</tr>
-				<tr class="bottom_border" id="Å">
-					<td class="navn"><h4>Å</h4></td>
-					<td></td>
-				</tr>
-
-			</table>
-
-		</div>
-
-	</div>
-
-	</div>
+                    
+                    <tr class="bottom_border" id="C">
+                        <td class="navn"><h4>C</h4></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr class="bottom_border" id="D">
+                        <td class="navn"><h4>D</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="E">
+                        <td class="navn"><h4>E</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="F">
+                        <td class="navn"><h4>F</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="G">
+                        <td class="navn"><h4>G</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="H">
+                        <td class="navn"><h4>H</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="I">
+                        <td class="navn"><h4>I</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="J">
+                        <td class="navn"><h4>J</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="K">
+                        <td class="navn"><h4>K</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="L">
+                        <td class="navn"><h4>L</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="M">
+                        <td class="navn"><h4>M</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="N">
+                        <td class="navn"><h4>N</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="O">
+                        <td class="navn"><h4>O</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="P">
+                        <td class="navn"><h4>P</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Q">
+                        <td class="navn"><h4>Q</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="R">
+                        <td class="navn"><h4>R</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="S">
+                        <td class="navn"><h4>S</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="T">
+                        <td class="navn"><h4>T</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="U">
+                        <td class="navn"><h4>U</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="V">
+                        <td class="navn"><h4>V</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="W">
+                        <td class="navn"><h4>W</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="X">
+                        <td class="navn"><h4>X</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Y">
+                        <td class="navn"><h4>Y</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Z">
+                        <td class="navn"><h4>Z</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Æ">
+                        <td class="navn"><h4>Æ</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Ø">
+                        <td class="navn"><h4>Ø</h4></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bottom_border" id="Å">
+                        <td class="navn"><h4>Å</h4></td>
+                        <td></td>
+                    </tr>
+                    
+                </table>
+                
+            </div>
+            
+        </div>
+        
+    </div>
 </div>
 
