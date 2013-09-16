@@ -79,7 +79,20 @@ a:hover, a:active
 
 td.shortForm 
         {
-        border: 1px solid red
+        border: 1px solid red;
+        width: 60%;
+        }
+
+td.definisjon 
+        {
+        border: 1px solid green;
+        width: 20%;
+        }
+
+td.sjNummer 
+        {
+        border: 1px solid blue;
+        width: 20%;
         }
 
 /* Main structure */
