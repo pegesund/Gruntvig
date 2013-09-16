@@ -279,8 +279,18 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 }
 
 /* lenke til vejledning */
-#variant_vejledning {float:right; margin-right:20px; text-decoration: none;}
-#timeline_vejledning {float:right; }
+
+#variant_vejledning 
+        {
+        float:right;
+        margin-right:20px; 
+        text-decoration: none;
+        }
+
+#timeline_vejledning, #person_vejledning 
+        {
+        float:right;
+        }
 
 
 /* innledning-visning START  */
