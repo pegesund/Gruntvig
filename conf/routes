@@ -30,6 +30,9 @@ GET     /bookinvent                             ShowAsset.bookinventoryvisning
 GET     /findAsset/{fileName}                   ShowAsset.findAsset
 GET     /viskort/{fileName}                     Application.viskort
 GET     /kort                                   Application.kort
+GET     /krono                                  Application.krono
+GET     /alfa                                   Application.alfa
+
 
 
 GET     /ajax/getKommentar/{assetId}            Ajax.getKommentar
