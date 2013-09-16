@@ -92,6 +92,7 @@ td.definisjon
 td.sjNummer 
         {
         border: 1px solid blue;
+        float: right;
         width: 20%;
         }
 
