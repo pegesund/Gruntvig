@@ -962,7 +962,12 @@ width:19px;}
     padding: 0px 0;
     }
 
-#liste .navn {width: 200px; font-size: 1.1em;}
+#liste .navn
+        {
+        width: 200px;
+        font-size: 1.1em;
+        color: red
+        }
 #liste .definisjon {width: 410px;}
 
 /*#liste .definisjon a {font-size:0.9em;padding-left: 2px; }*/
