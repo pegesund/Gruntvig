@@ -67,8 +67,15 @@ h3 {font-size: 2em;}
 h4 {font-size: 1.6em; text-transform: uppercase;}
 h5 {font-size: 1.4em; text-transform: uppercase;}
 
-a:link, a:visited {color: #4dbc4d /*#4d93bc;*/}
-a:hover, a:active {color: #299629 /* #367092;*/}
+a:link, a:visited
+        {
+        color: #4dbc4d /*#4d93bc;*/
+        }
+        
+a:hover, a:active 
+        {
+        color: #299629 /* #367092;*/
+        }
 
 
 /* Main structure */
@@ -87,7 +94,7 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #header_small #sok {float:right; margin: 4px 0px 0 0; text-align:right;}
 #header_small #sok #avansert_sok{ margin: 0px 0px 6px 0; display:block; opacity:0;}
 #header_small #sok #avansert_sok a:link, #header_small #sok #avansert_sok a:visited{ color:#ddd; font-size: 13px; text-decoration:none;}
-#header_small #sok #avansert_sok a:hover { color:#fff; text-decoration:none;}
+#header_small #sok #avansert_sok a:hover { color:#fff; text-decoration:underline;}
 #header_small #sok input {width:180px; padding:10px 6px 10px 37px; color: #aaa; border:none; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px; margin-right: 4px; background: url(../img/search_bg.png) no-repeat 0 0;}
 #header_small #sok input[type="submit"] {
 
