@@ -763,7 +763,7 @@ html[xmlns] #nav {
 	#kolonne1_meny li.header:first-child { margin-top:0px; }
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
 
-	#kolonne1_meny li a {display:block;padding:10px 22px 10px 15px; line-height: 1.1em; background:#FAFAFA; text-decoration:none; border-left:2px solid #ddd;
+	#kolonne1_meny li a {display:block;padding:10px 22px 10px 15px; line-height: 1.1em; background:#FAFAFA; text-decoration:none; border-left:2px solid red;
 border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;}
 	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:#eee; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
 		#kolonne1_meny li a.selected {color:#555; background: #fff url(../img/raquo.png) no-repeat 93% 51%;}
@@ -782,7 +782,14 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 /* Underside med 2 kolonner, der den første er bred */
 
-#kolonne1_bred { width: 630px; float:left; margin:0px 26px 0 0; min-height:600px; color: red}
+#kolonne1_bred
+        {
+        width: 630px;
+        float: left; 
+        margin: 0px 26px 0 0;
+        min-height: 600px;
+        color: red
+        }
 
 
 /* variantvisning START */
