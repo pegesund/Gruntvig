@@ -147,12 +147,12 @@ a:hover, a:active {color: #299629 /* #367092;*/}
 #footer #logo_footer:hover {opacity: 1;}
 
 #footer #columns{ float:right; height: 200px; }
-	#footer #columns ul{ float:left; width: 166px; margin:35px 0 0 20px; height: 150px; }
-	#footer #columns ul li{ padding: 4px 0; }
-	#footer #columns a { color:#aaa; font-size:1.4em; text-decoration: none; font-weight:normal;}
-		#footer #columns a:hover { color:#eee; text-decoration: underline; }
-	#footer #columns h2 { padding:0; margin:0;}
-	#footer #columns h2 a { font-size:0.75em; padding: 0px 0; font-family: myriad pro, arial, sans-serif; color: #ddd;}
+#footer #columns ul{ float:left; width: 166px; margin:35px 0 0 20px; height: 150px; }
+#footer #columns ul li{ padding: 4px 0; }
+#footer #columns a { color:#aaa; font-size:1.4em; text-decoration: none; font-weight:normal;}
+#footer #columns a:hover { color:#eee; text-decoration: underline; }
+#footer #columns h2 { padding:0; margin:0;}
+#footer #columns h2 a { font-size:0.75em; padding: 0px 0; font-family: myriad pro, arial, sans-serif; color: #ddd;}
 
 /* Tekstvisning */
 
