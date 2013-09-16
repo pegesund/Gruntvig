@@ -8,22 +8,24 @@
 	<ul id="nav">
 		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Værker</a>
 			<ul>
-                            #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-                            <li>
-                                <a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a>
-                            </li>
-                            #{/list}
+                            <!--
+                               #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+                                 <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
+                               #{/list}
+                            -->
+				<li><a href="/krono">Kronologisk</a></li>
+                                <li><a href="/alfa">Alfabetisk</a></li>
 			</ul>
 		</li>
-		<li class="with_dropdown">
-                    <a class="a_with_dropdown" href="#">Registre</a>
+		<li class="with_dropdown"><a class="a_with_dropdown" href="#">Registre</a>
 					<ul>
-                                            <li><a href="reg">Registranten</a></li>
-                                            <li><a href="../myter">Mytologisk register</a></li>
-                                            <li><a href="../personer">Personregister</a></li>
-                                            <li><a href="../steder">Stedregister</a></li>
-                                            <li><a href="../bibel">Bibelregister</a></li>
-                                            <li><a href="../bookinvent">Bogfortegnelse 1805</a></li>
+						<li><a href="../reg">Registranten</a></li>
+                                                
+                                                <li><a href="../myter">Mytologisk register</a></li>
+                                                <li><a href="../personer">Personregister</a></li>
+                                                <li><a href="../steder">Stedregister</a></li>
+                                                <li><a href="../bibel">Bibelregister</a></li>
+                                                <li><a href="../bookinvent">Bogfortegnelse 1805</a></li>
 					</ul>
 		</li>
 
