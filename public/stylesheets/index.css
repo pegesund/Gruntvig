@@ -781,7 +781,8 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 
 /* Underside med 2 kolonner, der den første er bred */
-#kolonne1_bred { width: 630px; float:left; margin:0px 26px 0 0; min-height:600px;}
+
+#kolonne1_bred { width: 630px; float:left; margin:0px 26px 0 0; min-height:600px; color: red}
 
 
 /* variantvisning START */
