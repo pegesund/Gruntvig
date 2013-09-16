@@ -1,0 +1,65 @@
+<!--
+  Kronologisk værkoversigt
+  Grundtvigs værker
+  KK 2013-09-13
+-->
+#{extends 'main.html' /}
+#{ header /}
+
+<div id="main">
+
+	<div class="container" id="underside_innhold">
+
+		<div id="submenu">
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="#">Værker</a> &raquo;  Kronologisk</div>
+
+		</div>
+            
+            <div class="kolonne1">
+
+		<ul id="kolonne1_meny">
+                    <li class="header">Værker</li>
+                    <li><a class="selected" href="/krono">Kronologisk</a></li>
+                    <li class="last"><a href="/alfa">Alfabetisk</a></li>
+                </ul>
+            </div>
+
+	<div id="kolonne1_bred">
+            
+            <h1>Værker</h1>
+            
+            <p>Kronologisk oversigt</p>
+           
+
+            <div id="liste" class="hideroot">
+
+                
+<!--div>Her bygges en kronologisk oversigt!</div-->
+  <!--ul>
+    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+     <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
+    #{/list}
+  </ul-->
+  
+  <table style="width:100%">
+      <head>
+       <td style="width:400px;border-bottom:thin solid gray">Titel</td>
+       <td style="border-bottom:thin solid gray">År_SJnr.</td>
+      </head>
+    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+     <tr>
+       <td style="width:400px"><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></td>
+       <td>${asset.rootName}</td>
+     </tr>
+    #{/list}
+  </table>
+  
+  
+
+		</div>
+
+	</div>
+
+	</div>
+</div>
+
