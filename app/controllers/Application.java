@@ -32,9 +32,18 @@ public class Application extends Controller {
 
         
     private static String getYearFromFileName(String fileName) {
-        int pos = fileName.indexOf("18");
-        String year = fileName.substring(pos, pos + 4);
-        return year;
+        String[] S= fileName.split( "_" );
+        String year= S[0],
+               sj= S[1],
+               litra= "",
+               res;
+        if( sj.matches("[0-9]*[^0-9]+") ) {
+          litra= sj.substring( sj.length()-1 );
+          sj= sj.substring( 0, sj.length()-1 );
+        }
+        res= String.format( "%4s%4s%s", year, sj, litra );
+        //System.out.println( ">"+res );
+        return res;
     }
     
     /**
@@ -64,7 +73,15 @@ public class Application extends Controller {
         Asset asset = Asset.find("fileName = ?", fileName).first();
         render(asset);
     }
-    
+
+    public static void krono() {
+        render();
+    }
+
+    public static void alfa() {
+        render();
+    }
+
     
     // eksempel på en register/leksikon side
     public static void register_side() {
