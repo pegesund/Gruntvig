@@ -51,7 +51,7 @@
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
      <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
     #{/list}
-  </ul-->
+  </ul
   
   <table style="width:100%">
       <head>
@@ -64,7 +64,13 @@
        <td><span class="rootName">${asset.rootName}</span></td>
      </tr>
     #{/list}
-  </table>
+  </table>-->
+  
+  <div class="root">
+      #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+      <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
+      #{/list}  
+  </div>
   
   <table>
       <tr class="bottom_border" id="00">
