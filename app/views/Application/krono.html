@@ -41,9 +41,6 @@
                 <a href="../krono#70">1870-1872</a>
                 <a href="../krono#72">1872-?</a>
             </div>
-           
-
-            <div id="liste" class="hideroot">
 
                 
 <!--div>Her bygges en kronologisk oversigt!</div-->
@@ -65,58 +62,56 @@
      </tr>
     #{/list}
   </table>-->
-  
-  <div class="root">
-      #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-      <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
-      #{/list}  
-  </div>
-  
-  <table>
-      <tr class="bottom_border" id="00">
-          <td><h4>1800-1809</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="10">
-          <td><h4>1810-1819</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="20">
-          <td><h4>1820-1829</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="30">
-          <td><h4>1830-1839</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="40">
-          <td><h4>1840-1849</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="50">
-          <td><h4>1850-1859</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="60">
-          <td><h4>1860-1869</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="70">
-          <td><h4>1870-1872</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-      <tr class="bottom_border" id="72">
-          <td><h4>1872-?</h4></td>
-          <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-      </tr>
-  </table>
-  
-  
+           
 
-		</div>
-
-	</div>
-
-	</div>
+            <div id="liste" class="hideroot">
+                
+                <div class="root">
+                    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+                    <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
+                    #{/list}
+                </div>
+                
+                <table>
+                    <tr class="bottom_border" id="00">
+                        <td><h4>1800-1809</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="10">
+                        <td><h4>1810-1819</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="20">
+                        <td><h4>1820-1829</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="30">
+                        <td><h4>1830-1839</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="40">
+                        <td><h4>1840-1849</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="50">
+                        <td><h4>1850-1859</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="60">
+                        <td><h4>1860-1869</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="70">
+                        <td><h4>1870-1872</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="72">
+                        <td><h4>1872-?</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
 </div>
 
