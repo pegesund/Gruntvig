@@ -47,8 +47,11 @@
        <td style="border-bottom:thin solid gray">År SJ:nummer</td>
       </head>
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-     <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
-                    #{/list}
+     <tr>
+       <td style="width:400px"><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></td>
+       <td><span class="rootName">${asset.rootName}</span></td>
+     </tr>
+    #{/list}
   </table>
   
   
