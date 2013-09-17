@@ -973,7 +973,7 @@ text-decoration:none;
 text-transform:uppercase;
 width:19px;}
 
-#innholdsfortegnelse a:hover {color:#fff; border-color: #888; background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444;}
+#innholdsfortegnelse a:hover {color:#fff; border-color: red; background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444;}
 #innholdsfortegnelse a.selected {background: #777 url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444; border:1px solid #888; color:#fff;padding:5px;}
 #innholdsfortegnelse a.selected:hover {}
 
