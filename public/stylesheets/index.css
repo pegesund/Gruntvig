@@ -79,21 +79,26 @@ a:hover, a:active
 
 td.shortForm 
         {
-        border: 0px solid red;
+        border: 1px solid red;
         width: 60%;
         }
 
 td.definisjon 
         {
-        border: 0px solid green;
+        border: 1px solid green;
         width: 20%;
         }
 
 td.sjNummer 
         {
-        border: 0px solid blue;
+        border: 1px solid blue;
         text-align: right;
         width: 20%;
+        }
+
+td.returnTop 
+        {
+        text-align: right;
         }
 
 /* Main structure */
