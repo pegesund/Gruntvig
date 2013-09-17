@@ -44,13 +44,11 @@
   <table style="width:100%">
       <head>
        <td style="width:400px;border-bottom:thin solid gray">Titel</td>
-       <td style="border-bottom:thin solid gray">År</td>
-       <td style="border-bottom:thin solid gray">SJ:nummer</td>
+       <td style="border-bottom:thin solid gray">År SJ:nummer</td>
       </head>
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
      <tr>
        <td style="width:400px"><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></td>
-       <td>${asset.rootName}</td>
        <td>${asset.rootName}</td>
      </tr>
     #{/list}
