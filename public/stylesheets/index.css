@@ -959,12 +959,19 @@ margin:15px 0 10px 0;
 padding:10px 14px 10px 19px;
 -moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px;} /* A - Å */
 
-#tidsInterval {background:none repeat scroll 0 0 #FAFAFA;
-border:1px solid #e5e5e5; border-right:none; border-left:none;
-height:72px; width:555px;
-margin:15px 0 10px 0;
-padding:10px 14px 10px 19px;
--moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px;} /* A - Å */
+#tidsInterval 
+        {
+         background:none repeat scroll 0 0 #FAFAFA;
+         border:1px solid #e5e5e5; 
+         border-right:none; 
+         border-left:none;
+         height:144px; width:555px;
+         margin:15px 0 10px 0;
+         padding:10px 14px 10px 19px;
+         -moz-border-radius:3px 3px 3px 3px; 
+         -webkit-border-radius:3px 3px 3px 3px; 
+         border-radius:3px 3px 3px 3px;
+        } /* A - Å */
 
 #innholdsfortegnelse a
         {
