@@ -965,7 +965,8 @@ padding:10px 14px 10px 19px;
          border:1px solid #e5e5e5; 
          border-right:none; 
          border-left:none;
-         height:144px; width:555px;
+         height:124px; 
+         width:555px;
          margin:15px 0 10px 0;
          padding:10px 14px 10px 19px;
          -moz-border-radius:3px 3px 3px 3px; 
@@ -1006,7 +1007,7 @@ padding:10px 14px 10px 19px;
          text-align:center;
          text-decoration:none;
          text-transform:uppercase;
-         width:50px;
+         width: 100px;
         }
 
 #innholdsfortegnelse a:hover
