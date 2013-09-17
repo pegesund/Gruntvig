@@ -959,7 +959,7 @@ margin:15px 0 10px 0;
 padding:10px 14px 10px 19px;
 -moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px;} /* A - Å */
 
-#innholdsfortegnelse a {-moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px;
+#innholdsfortegnelse a, tidsIinterval a {-moz-border-radius:3px 3px 3px 3px; -webkit-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px;
 background:none repeat scroll 0 0 #FFFFFF;
 
 border:1px solid #DDDDDD;
@@ -973,9 +973,43 @@ text-decoration:none;
 text-transform:uppercase;
 width:19px;}
 
-#innholdsfortegnelse a:hover {color:#fff; border-color: red; background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444;}
-#innholdsfortegnelse a.selected {background: #777 url(../img/gradient.png) repeat-x 0 -120px; text-shadow: 0px 1px 0px #444; border:1px solid #888; color:#fff;padding:5px;}
+#innholdsfortegnelse a:hover
+        {
+         color:#fff; 
+         border-color: #888; 
+         background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; 
+         text-shadow: 0px 1px 0px #444;
+        }
+        
+#innholdsfortegnelse a.selected 
+        {
+        background: #777 url(../img/gradient.png) repeat-x 0 -120px;
+        text-shadow: 0px 1px 0px #444; 
+        border:1px solid #888; 
+        color:#fff;
+        padding:5px;
+        }
+        
 #innholdsfortegnelse a.selected:hover {}
+
+#tidsIinterval a:hover
+        {
+         color:#fff; 
+         border-color: #888; 
+         background: #4dbc4d url(../img/gradient.png) repeat-x 0 -120px; 
+         text-shadow: 0px 1px 0px #444;
+        }
+        
+#tidsIinterval a.selected 
+        {
+        background: #777 url(../img/gradient.png) repeat-x 0 -120px;
+        text-shadow: 0px 1px 0px #444; 
+        border:1px solid #888; 
+        color:#fff;
+        padding:15px;
+        }
+        
+#tidsIinterval a.selected:hover {}
 
 #liste { float:left; width: 100%; font-size: 1.6em; margin-top:10px; line-height:1.2em;} /* Selve listen */
 
