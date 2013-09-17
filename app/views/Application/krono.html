@@ -115,7 +115,7 @@
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
      <tr>
        <td style="width:400px"><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></td>
-       <td><span class="rootName">${asset.rootName}</span></td>
+       <td><span class="rootName">${asset.rootName} ' + splitName[1] + '</span></td>
      </tr>
     #{/list}
   </table>
