@@ -103,6 +103,13 @@ td.returnTop
         width: 1%;
         }
 
+
+a.returnTop 
+        {        
+        text-decoration: none;
+        }
+
+        
 /* Main structure */
 
 .container {width:978px; margin: 0 auto; }
