@@ -990,7 +990,7 @@ padding:10px 14px 10px 19px;
          -webkit-border-radius:3px 3px 3px 3px; 
          border-radius:3px 3px 3px 3px;
          background:none repeat scroll 0 0 #FFFFFF;
-         border:5px solid #DDDDDD;
+         border:1px solid #DDDDDD;
          display:block;
          float:left;
          font-size:1.7em;
@@ -999,7 +999,7 @@ padding:10px 14px 10px 19px;
          text-align:center;
          text-decoration:none;
          text-transform:uppercase;
-         width:19px;
+         width:30px;
         }
 
 #innholdsfortegnelse a:hover
