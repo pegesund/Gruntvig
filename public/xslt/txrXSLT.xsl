@@ -161,7 +161,7 @@
             </a>
         </span>
     </xsl:template>
-    -->
+   
     
     <xsl:template match="TEI:ref[@type='biblDesc']">
         <span class="web">
@@ -169,10 +169,16 @@
                 <xsl:apply-templates/>
             </a>
         </span>
-    </xsl:template>    
+    </xsl:template> 
+    -->    
     
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
+                <xsl:when test="@typr='biblDesc'">
+                    <a>
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
                 <xsl:when test="@type='web' and @target">
                     <xsl:text>&lt;</xsl:text>
                     <a href="{@target}" target="_blank">
