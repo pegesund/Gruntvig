@@ -39,21 +39,6 @@
     }); 
     
     
-    // later: remove duplicate code with mythvisning.html
-    //                $("tbody").find("a[href]").click(function(e) {
-    //                    e.preventDefault();
-    //                    // alert("Scrolling to: " + $(this).attr("href"));
-    //                    var scrolltarget = $($(this).attr("href"));
-    //                    $.scrollTo(scrolltarget, 500);
-    //                    
-    //               }); 
-    
-    // get current location and scrolldown to this if exists
-    var loc = String(document.location);
-    var idx = loc.indexOf('#');
-    var href = (idx > 0) ? loc.substring(idx + 1) : "";
-    if (href) $.scrollTo("#" + href, 500);              
-    
     
     });
     
