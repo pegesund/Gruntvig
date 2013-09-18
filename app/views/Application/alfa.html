@@ -38,7 +38,7 @@
     //                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
     //                                } else { 
     //                                    var id = $(this).attr("id");
-    node = '<!--' + name + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+    node = '<!--' + name.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
     
     //                                }
     //                                $(this).attr("id", "");
