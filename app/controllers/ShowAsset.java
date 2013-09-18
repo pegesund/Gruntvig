@@ -98,10 +98,5 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
-    
-    public static void tools() {
-        render();
-    }
-
      
 }
