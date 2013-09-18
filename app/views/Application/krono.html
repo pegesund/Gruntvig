@@ -124,12 +124,6 @@ alert( index + "," + index2 + "," + rootName + "," + year.substr(0,3) + "," + va
 
             <div id="liste" class="hideroot">
                 
-                <div class="root">
-                    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-                    <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
-                    #{/list}
-                </div>
-                
                 <table>
                     <tr class="bottom_border" id="180">
                         <td><h4>1800-1809</h4></td>
