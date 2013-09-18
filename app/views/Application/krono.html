@@ -16,13 +16,13 @@
     
     interval = ['1810-1809','1801-1819','1820-1829','1830-1839','1840-1849','1850-1859','1860-1869','1870-1872','1872-?']
     
-    $.each(interval, function(index, value) { 
+    $.each(alphabet, function(index, value) { 
     var nodes = [];
     $('div.work').each(function(index2) {
     var name = $(this).find('span.name').text(),
     uri= $(this).find('span.uri').text(),
     rootName= $(this).find('span.rootName').text(),
-    splitName= rootName.split( " " );
+    splitName= rootName.split( "_" );
     // alert("Adding: " + name);
     firstLetter = name.charAt(0).toLowerCase();; 
     if(firstLetter == value){ 
