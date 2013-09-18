@@ -162,6 +162,15 @@
         </span>
     </xsl:template>
     -->
+    
+    <xsl:template match="TEI:ref[@type='biblDesc']">
+        <span class="web">
+            <a href="{@target}" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}">
+                <xsl:apply-templates/>
+            </a>
+        </span>
+    </xsl:template>    
+    
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='web' and @target">
