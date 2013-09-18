@@ -174,7 +174,7 @@
     
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
-                <xsl:when test="@typr='biblDesc'">
+                <xsl:when test="@type='biblDesc'">
                     <a>
                         <xsl:apply-templates/>
                     </a>
