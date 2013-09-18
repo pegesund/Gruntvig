@@ -28,11 +28,6 @@ public class DoSearch extends Application {
     public static void avanceret() {
         render();
     }
-
-    
-    public static void tools() {
-        render();
-    }
     
     /**
      * 
