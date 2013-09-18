@@ -1,7 +1,7 @@
 <!--
   Kronologisk værkoversigt
   Grundtvigs værker
-  KK 2013-09-13
+  KK 2013-09-18
 -->
 #{extends 'main.html' /}
 #{ header /}
@@ -14,37 +14,25 @@
     
     $('div.root').hide();
     
-    alphabet = ['1800','1810','1820','1830','1840','1850','1860','1870','1880']
+    alphabet = ['180','181','182','183','184','185','186','187','188','189']
     
     $.each(alphabet, function(index, value) { 
     var nodes = [];
     $('div.work').each(function(index2) {
-    var name = $(this).find('span.name').text(),
-    uri= $(this).find('span.uri').text(),
-    rootName= $(this).find('span.rootName').text(),
-    splitName= rootName.split( "_" );
-    // alert("Adding: " + name);
-    firstLetter = name.charAt(0).toLowerCase();; 
-    if(firstLetter == value){ 
-    $(this).hide();
-    //                                year = $(this).find('.row span.year').text() + ', '; 
-    //                                if( year == ', ') { year = '';};
-    //                                var addName = $(this).find('.row span.addName').not($('span span')).text();
-    //                                nation = $(this).find('.row span.nation').text();
-    //                                about = $(this).find('.row span.encyk').text();
-    //                                if ($(this).find(".altName").length > 0) {
-    //                                    var gotoName = $(this).find(".gotoName").html();
-    //                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
-    //                                } else { 
-    //                                    var id = $(this).attr("id");
-    node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
-    
-    //                                }
-    //                                $(this).attr("id", "");
-    nodes.push(node);
+    var rootName= $(this).find('span.rootName').text(),
+        splitName= rootName.split( "_" )
+        year= splitName[0],
+        sj= splitName[1];
+    if( year.substr(0,3)!=value ) { // end of work loop
+      return false
     }
+    var name = $(this).find('span.name').text(),
+        uri= $(this).find('span.uri').text();
+    
+    node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+    nodes.push(node);
     });
-    nodes = nodes.sort().reverse();
+
     $(nodes).each( function(index, value2) {
     $('#' + value.toUpperCase()).after(value2);
     });
@@ -97,15 +85,14 @@
             <p>Kronologisk oversigt</p>
             
             <div id="tidsInterval">
-                <a href="../krono#00">1800-1809</a>                
-                <a href="../krono#10">1810-1819</a>
-                <a href="../krono#20">1820-1829</a>
-                <a href="../krono#30">1830-1839</a>
-                <a href="../krono#40">1840-1849</a>
-                <a href="../krono#50">1850-1859</a>
-                <a href="../krono#60">1860-1869</a>
-                <a href="../krono#70">1870-1872</a>
-                <a href="../krono#72">1872-?</a>
+                <a href="../krono#180">1800-1809</a>                
+                <a href="../krono#181">1810-1819</a>
+                <a href="../krono#182">1820-1829</a>
+                <a href="../krono#183">1830-1839</a>
+                <a href="../krono#184">1840-1849</a>
+                <a href="../krono#185">1850-1859</a>
+                <a href="../krono#186">1860-1869</a>
+                <a href="../krono#187">1870-1872</a>
             </div>
 
                 
@@ -115,18 +102,22 @@
      <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
     #{/list}
   </ul-->
+
+  <div class="root">
+    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+     <div class="work">
+       <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
+       <span class="name">${asset.name}</span>
+       <span class="rootName">${asset.rootName}</span>
+     </div>
+    #{/list}
+  </div>
   
   <table style="width:100%">
       <head>
        <td style="width:400px;border-bottom:thin solid gray">Titel</td>
        <td style="border-bottom:thin solid gray">År SJ:nummer</td>
       </head>
-    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-     <tr>
-       <td style="width:400px"><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></td>
-       <td><span class="rootName">${asset.rootName}</span></td>
-     </tr>
-    #{/list}
   </table>
            
 
@@ -139,40 +130,36 @@
                 </div>
                 
                 <table>
-                    <tr class="bottom_border" id="00">
+                    <tr class="bottom_border" id="180">
                         <td><h4>1800-1809</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="10">
+                    <tr class="bottom_border" id="181">
                         <td><h4>1810-1819</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="20">
+                    <tr class="bottom_border" id="182">
                         <td><h4>1820-1829</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="30">
+                    <tr class="bottom_border" id="183">
                         <td><h4>1830-1839</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="40">
+                    <tr class="bottom_border" id="184">
                         <td><h4>1840-1849</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="50">
+                    <tr class="bottom_border" id="185">
                         <td><h4>1850-1859</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="60">
+                    <tr class="bottom_border" id="186">
                         <td><h4>1860-1869</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="70">
+                    <tr class="bottom_border" id="187">
                         <td><h4>1870-1872</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="72">
-                        <td><h4>1872-?</h4></td>
                         <td class="returnTop"><a class="returnTop" href="http://prometheus.statsbiblioteket.dk/krono" title="til toppen">&#x25B2;</a></td>
                     </tr>
                 </table>
