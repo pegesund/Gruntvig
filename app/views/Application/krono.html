@@ -14,7 +14,7 @@
     
     $('div.root').hide();
     
-    alphabet = ['1810-1809','1801-1819','1820-1829','1830-1839','1840-1849','1850-1859','1860-1869','1870-1872','1872-?']
+    alphabet = ['1800','1810','1820','1830','1840','1850','1860','1870','1880']
     
     $.each(alphabet, function(index, value) { 
     var nodes = [];
@@ -114,7 +114,7 @@
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
      <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
     #{/list}
-  </ul
+  </ul-->
   
   <table style="width:100%">
       <head>
@@ -127,7 +127,7 @@
        <td><span class="rootName">${asset.rootName}</span></td>
      </tr>
     #{/list}
-  </table>-->
+  </table>
            
 
             <div id="liste" class="hideroot">
