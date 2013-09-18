@@ -67,6 +67,11 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
+    public static void chronovisning() {
+        Asset asset = Asset.find("fileName = ?", "chrono.xml").first();
+        render(asset);
+    }
+
     public static void personvisning() {
         Asset asset = Asset.find("fileName = ?", "pers.xml").first();
         render(asset);
@@ -91,6 +96,11 @@ public class ShowAsset extends Application {
     public static void bookinventoryvisning() {
         Asset asset = Asset.find("fileName = ?", "bookInventory1805.xml").first();
         render(asset);
+    }
+
+    
+    public static void tools() {
+        render();
     }
 
      
