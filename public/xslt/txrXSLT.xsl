@@ -153,6 +153,7 @@
             <xsl:apply-templates/>
         </br>        
     </xsl:template>
+    
     <!--
     <xsl:template match="TEI:ref[@target and not(@select)]">
         <span class="ref">
@@ -161,15 +162,6 @@
             </a>
         </span>
     </xsl:template>
-   
-    
-    <xsl:template match="TEI:ref[@type='biblDesc']">
-        <span class="web">
-            <a href="{@target}" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}">
-                <xsl:apply-templates/>
-            </a>
-        </span>
-    </xsl:template> 
     -->    
     
     <xsl:template match="TEI:ref[@type]">
