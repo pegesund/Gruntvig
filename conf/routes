@@ -27,6 +27,7 @@ GET     /myter                                  ShowAsset.mythvisning
 GET     /bibel                                  ShowAsset.biblevisning
 GET     /reg                                    ShowAsset.registrantenvisning
 GET     /bookinvent                             ShowAsset.bookinventoryvisning
+GET     /tools                                  ShowAsset.tools
 GET     /findAsset/{fileName}                   ShowAsset.findAsset
 GET     /viskort/{fileName}                     Application.viskort
 GET     /kort                                   Application.kort
@@ -51,7 +52,6 @@ GET     /ajax/getIdFromFilename/{fileName}                    Ajax.getIdFromFile
 GET     /ajax/getFilenameFromId/{id}                          Ajax.getFilenameFromId
 GET     /search                                               DoSearch.doSearch
 GET     /avanceret                                            DoSearch.avanceret
-GET     /tools                                                DoSearch.tools
 
 
 # Catch all
