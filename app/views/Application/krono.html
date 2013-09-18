@@ -24,13 +24,13 @@
         year= splitName[0],
         sj= splitName[1];
 //  alert( index + "," + index2 + "," + rootName + "," + year.substr(0,3) + "," + value );
-    if( year.substr(0,3)!=value ) {  // end of work loop
+    if( year.substr(0,3)!=value ) {
       return true
     }
     var name = $(this).find('span.name').text(),
         uri= $(this).find('span.uri').text();
     
-    node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+    node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
 
@@ -97,14 +97,9 @@
             </div>
 
                 
-<!--div>Her bygges en kronologisk oversigt!</div-->
-  <!--ul>
-    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-     <li><a href="@{ShowAsset.tekstvisning(asset.id, 0)}">${asset.name}</a></li>
-    #{/list}
-  </ul-->
+<!--Her bygges en kronologisk oversigt-->
 
-  <div class="root0">
+  <div class="root">
     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
      <div class="work">
        <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
@@ -120,7 +115,12 @@
        <td style="border-bottom:thin solid gray">År SJ:nummer</td>
       </head>
   </table>
-           
+
+  <div>
+      <span class="shortForm">Titel</span>
+      <span class="definisjon">År</span>
+      <span class="sjNummer">SJ</span>
+  </div>           
 
             <div id="liste" class="hideroot">
                 
