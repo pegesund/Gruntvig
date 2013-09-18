@@ -28,9 +28,8 @@
       return true
     }
     var name = $(this).find('span.name').text(),
-        uri= $(this).find('span.uri').text();
-    
-    node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+        uri= $(this).find('span.uri').text(),
+        node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
 
