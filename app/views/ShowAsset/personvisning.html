@@ -29,7 +29,7 @@
                                 about = $(this).find('.row span.encyk').text();
                                 if ($(this).find(".altName").length > 0) {
                                     var gotoName = $(this).find(".gotoName").html();
-                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
+                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr>";
                                 } else { 
                                     var id = $(this).attr("id");
                                     node = '<tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
