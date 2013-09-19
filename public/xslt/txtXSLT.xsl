@@ -17,19 +17,19 @@
                 <div class="kolofonTitle">
                         <xsl:choose>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                <xsl:call-template name="authorName"/>
+                                N.F.S Grundtvig
                                 <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                                <xsl:call-template name="authorName"/>
+                                N.F.S Grundtvig
                                 [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>]
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
-                                <xsl:call-template name="authorName"/>
+                                N.F.S Grundtvig
                                 &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
-                                <xsl:call-template name="authorName"/>
+                                N.F.S Grundtvig
                                 [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
                             </xsl:when>
                         </xsl:choose>
@@ -289,6 +289,7 @@
             </div>
     </xsl:template>
     
+    <!--
     <xsl:template name="authorName">
         <xsl:for-each select="//child::TEI:titleStmt/TEI:author">
             <xsl:value-of select="."/>
@@ -305,6 +306,7 @@
         </xsl:for-each>
         <xsl:text>: </xsl:text>
     </xsl:template>
+    -->
     
     <xsl:template match="TEI:lb">        
         <br>
