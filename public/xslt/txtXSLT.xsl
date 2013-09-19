@@ -497,7 +497,7 @@
     <!-- footnote STRAT -->
     
     <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
+        <xsl:if test="//TEI:note[@type='footnote']">
             <hr class="footLine"/>            
             <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
         </xsl:if>
