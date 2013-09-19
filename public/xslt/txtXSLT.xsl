@@ -546,7 +546,7 @@
         </div>
     </xsl:template>       
 
-    <xsl:template match="TEI:body/TEI:div">        
+    <xsl:template match="TEI:text/TEI:div">        
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
