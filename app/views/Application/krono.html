@@ -28,8 +28,8 @@
       return true
     }
     var name = $(this).find('span.name').text(),
-        uri= $(this).find('span.uri').text(),
-        node = '<tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+        url= $(this).find('span.url').text(),
+        node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
 
@@ -96,11 +96,11 @@
             <div id="liste" class="hideroot">
                 
                 <table>
-      <head>
-       <td class="shortForm">Titel</td>
-       <td class="definisjon">År</td>
-       <td class="sjNummer">SJ</td>
-      </head>
+      <tr>
+       <head class="shortForm">Titel</head>
+       <head class="definisjon">År</head>
+       <head class="sjNummer">SJ</head>
+      </tr>
                     <tr class="bottom_border" id="180">
                         <td><h4>1800-1809</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
@@ -138,3 +138,4 @@
         </div>
         </div>
 </div>
+
