@@ -99,21 +99,6 @@ $(document).ready(function() {
         addReaderColumn();
     });
 
-    $(".lukk_kolonne_knapp").live('click', function() {        
-        var currentTabId = parseInt($(this).parent().parent().parent().attr("id").substring(3));
-        uriRemoveTab(currentTabId);
-        number_of_present_tabreaders = $(".tabReader").length;
-            
-        $(this).parent().parent().parent().parent().remove(); // hide entire tabreader
-        $("#høyre").width($("#høyre").width() - columnWidth);
-
-        if(number_of_present_tabreaders > 1){ // only do this if there are 1 or more tabReaders opened
-            // decrease width of .container and #høyre
-            $(".container").width($(".container").width() - columnWidth);                
-        }
-        resize_window();
-        return false; // hindrer at vi bytter side
-    });   
                 
     initChapterHandling();
     startupUri(startupHash);  

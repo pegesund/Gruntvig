@@ -107,6 +107,7 @@ var addDocOutListener = function() {
         var link = docOutTodocInLink(target);
         var scrollToInNewWindow = link[0] + "_" + link[1] + "_" + link[2];
         options["scrollToInNewWindows"] = scrollToInNewWindow;
+        // check if link to external doc
         if (rootFile == link[0]) {
             var openTab = 0;
             switch (link[1]) {

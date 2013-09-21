@@ -78,9 +78,31 @@ tabFocusHandler = function(num, options) {
                 uriChangeTab(num, options["open_tab"])
             }
         }
+
         theTab.bind('tabsselect', function(event, ui) {
-            var currentTab = parseInt($(ui.panel).parent().attr("id").substring(3));
-            uriChangeTab(currentTab, ui.index);
+            
+            // handle closing of tabs
+            if (ui.panel.id.substring(0,5) == "skjul") {
+                var currentTabId = ui.panel.id.substring(5, 100);
+                uriRemoveTab(currentTabId);
+                number_of_present_tabreaders = $(".tabReader").length;
+
+                $("#" + ui.panel.id).closest(".tabReader").remove();
+                $("#høyre").width($("#høyre").width() - columnWidth);
+
+                if(number_of_present_tabreaders > 1){ // only do this if there are 1 or more tabReaders opened
+                    // decrease width of .container and #høyre
+                    $(".container").width($(".container").width() - columnWidth);                
+                }
+                resize_window();
+            }
+       
+            try {
+                var currentTab = parseInt($(ui.panel).parent().attr("id").substring(3));
+                uriChangeTab(currentTab, ui.index);
+            } catch (err) {
+                
+            }
         });          
     }
 }
@@ -103,6 +125,7 @@ keepOldScrollPosition = function(options) {
         scrollElement.scrollTo(linkElement);
         scrollElement.scrollTo("-=" + options["scrollToAdjust"] + "px");
     }
+    var found = false;
     if (linkNewWindow) {
         for (i = readerNum; i > 0; i--) {
             var rightmostScrollTo = $("#tab" + i).find("#" + linkNewWindow);
@@ -133,12 +156,13 @@ keepOldScrollPosition = function(options) {
 addNewReader = function(num) {
     var options = arguments[1] || {};
     uriChangeTab(num,0); 
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Fax.</span></a></li> <li><a href="#txr' + num + '"><span>Tekstred.</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Fax.</span></a></li> <li><a href="#txr' + num + '"><span>Tekstred.</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><span class="ui-closable-tab"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></span></li> </ul> ';
     newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader +=  '<div id="variant' + num + '"><div class="variant_select">' + hovedtekstSelect + ' <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
     newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">Næste side</a></div> <div class="faksimileContent"></div></div>';
     newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
     newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
+    newReader += '<div class="empty_tab" id="skjul' + num + '"></div>';
     newReader += '</div></span>';
     $("#hovedtekst_select").html(hovedtekstSelect);
     $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
@@ -277,7 +301,7 @@ addSimpleReader = function(options, showName, url) {
     readerNum += 1;
     var num = readerNum;
     uriAddForeignTab(readerNum, url);
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>' + showName + '</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul" class="lukk_kolonne_knapp"></a></li> </ul> ';
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>' + showName + '</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></li> </ul> ';
     newReader += '<div class="text-resizeable" id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader += '</div></span>';
     $("#hovedtekst_select").html(hovedtekstSelect);
