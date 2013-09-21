@@ -23,26 +23,31 @@ var sort_keys = function(o)
 var theUrl = {};
 
 
+var makeContinousUrl = function(oldHash) {
+    var j = 0;
+    var i;
+    var newHash = {};
+    if (typeof oldHash["k"] != 'undefined') newHash["k"] = oldHash["k"]; 
+    for (i=0; i<20; i++) {
+        if (typeof oldHash[i + ""] != 'undefined') { 
+            newHash[j + ""] = oldHash[i + ""];
+            if (typeof oldHash["v"] != 'undefined') newHash["v" + j] = oldHash["v" + i];
+            if (typeof oldHash["x"] != 'undefined') newHash["x" + j] = oldHash["x" + i];
+            
+            if (typeof oldHash["f"] != 'undefined') newHash["f" + j] = oldHash["f" + i];
+            j++;
+        }
+    }
+    return newHash;
+}
+
 // this is a kind of hack
 // it is written since the first reader-column is treated specially in the html and css
 // consider redisign html
 var fixMissingFirstTab = function() {
     var oldUrl = getCurrentHash(window.location.hash);
-    var skeys = sort_keys(oldUrl);
-    var smallest_str = skeys[0];
-    if (!smallest_str) return;
-    var smallest = parseInt(smallest_str);
-    if (smallest == 0) return;
-    var newUrl = {};
-    var i = 0;
-    for (i = smallest; i < skeys.length + smallest; i++) {
-        if (oldUrl[i] + "") {
-            newUrl[i - smallest] = oldUrl[i];
-        }
-        if (oldUrl["v" + i]) {
-            newUrl["v" + (i - smallest)] = oldUrl["v" + i];
-        }
-    }
+    var newUrl = makeContinousUrl(oldUrl);
+    theUrl = newUrl;
     window.location.hash = JSON.stringify(newUrl);
 };
 
@@ -87,6 +92,7 @@ var uriRemoveTab = function(tabNr) {
     delete theUrl[tabNr];
     delete theUrl["v" + tabNr];
     delete theUrl["x" + tabNr];
+    delete theUrl["f" + tabNr];
     window.location.hash = JSON.stringify(theUrl);    
 };
 
@@ -100,14 +106,15 @@ var uriAddForeignTab = function(tabNr, fileName) {
     });   
 };
 
-var startupUri = function(hash) {
-    var oldHash = getCurrentHash(hash);
+var startupUri = function() {
+    var oldHash = theUrl;
     if (oldHash["k"]) {
         theUrl["k"] = oldHash["k"];
     }
     var num = 1;
     var i;
     for (i=0; i<20; i++) {
+        var j = num - 1;
         var options = {};
         if ((oldHash[i] != undefined) || (oldHash["x" + i] != undefined)) {
             options["open_tab"] = oldHash[i];
@@ -132,7 +139,7 @@ var startupUri = function(hash) {
                 addSimpleReader({}, showName, fileName);
                 continue;
             }
-    
+            alert("Adding readerColumnt");
             if (i != 0) addReaderColumn(options);
             num++;
         }

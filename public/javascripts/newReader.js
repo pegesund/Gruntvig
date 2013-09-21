@@ -95,6 +95,7 @@ tabFocusHandler = function(num, options) {
                     $(".container").width($(".container").width() - columnWidth);                
                 }
                 resize_window();
+                return;
             }
        
             try {
