@@ -27,19 +27,19 @@ var makeContinousUrl = function(oldHash) {
     var j = 0;
     var i;
     var newHash = {};
-    if (typeof oldHash["k"] != 'undefined') newHash["k"] = oldHash["k"]; 
+    if (typeof oldHash["k"] !== 'undefined') newHash["k"] = oldHash["k"]; 
     for (i=0; i<20; i++) {
-        if (typeof oldHash[i + ""] != 'undefined') { 
+        if (typeof oldHash[i + ""] !== 'undefined') { 
             newHash[j + ""] = oldHash[i + ""];
-            if (typeof oldHash["v"] != 'undefined') newHash["v" + j] = oldHash["v" + i];
-            if (typeof oldHash["x"] != 'undefined') newHash["x" + j] = oldHash["x" + i];
+            if (typeof oldHash["v"] !== 'undefined') newHash["v" + j] = oldHash["v" + i];
+            if (typeof oldHash["x"] !== 'undefined') newHash["x" + j] = oldHash["x" + i];
             
-            if (typeof oldHash["f"] != 'undefined') newHash["f" + j] = oldHash["f" + i];
+            if (typeof oldHash["f"] !== 'undefined') newHash["f" + j] = oldHash["f" + i];
             j++;
         }
     }
     return newHash;
-}
+};
 
 // this is a kind of hack
 // it is written since the first reader-column is treated specially in the html and css
@@ -139,7 +139,6 @@ var startupUri = function() {
                 addSimpleReader({}, showName, fileName);
                 continue;
             }
-            alert("Adding readerColumnt");
             if (i != 0) addReaderColumn(options);
             num++;
         }
