@@ -126,15 +126,19 @@ var addDocOutListener = function() {
             options["open_tab"] = openTab;
             var found = false;
             var i;
-            for(i = readerNum; i > 0; i--) {
-                var rightmostScrollTo = $("#tab" + i).find("#" + scrollToInNewWindow);
+            var rightmostScrollTo;
+            for(i = readerNum; i >= 0; i--) {
+                rightmostScrollTo = $("#tab" + i).find("#" + scrollToInNewWindow);
                 if (rightmostScrollTo.length > 0) {
-                    found = true;
-                    break;
+                    // check if the wished panel is seleted in the tab
+                    var theTab = $("#tab" + i).tabs();
+                    if (openTab == theTab.tabs('option', 'selected')) {
+                        found = true;
+                        break;
+                    }
                 }
             }
             if (found) {
-                tabFocusHandler(i, options);
                 var linkElement = rightmostScrollTo;
                 var scrollElement = linkElement.closest(".ui-tabs-panel");
                 scrollElement.scrollTo(linkElement);

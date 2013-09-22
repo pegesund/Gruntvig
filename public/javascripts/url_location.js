@@ -41,9 +41,7 @@ var makeContinousUrl = function(oldHash) {
     return newHash;
 };
 
-// this is a kind of hack
-// it is written since the first reader-column is treated specially in the html and css
-// consider redisign html
+
 var fixMissingFirstTab = function() {
     var oldUrl = getCurrentHash(window.location.hash);
     var newUrl = makeContinousUrl(oldUrl);
