@@ -39,7 +39,9 @@
                 </div>
                 <xsl:choose>
                     <xsl:when test="//TEI:note[@type='intro']">
-                        <div class="content"><xsl:text>Indhold</xsl:text></div>
+                        <div class="content">
+                            <xsl:text>Indhold</xsl:text>
+                        </div>
                         <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
                         <xsl:apply-templates select="TEI:text"/>
                     </xsl:when>
