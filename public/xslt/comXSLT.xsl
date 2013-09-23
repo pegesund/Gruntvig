@@ -24,17 +24,17 @@
             <div class="head about">
                 <div>Punktkommentarer til</div>
                 <xsl:choose>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                        [<i>
-                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/>
-                        </i>]
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:choose>
                     <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
                         <i>
                             <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/>
                         </i>
+                    </xsl:when>
+                </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
+                        [<i>
+                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/>
+                        </i>]
                     </xsl:when>
                 </xsl:choose>
                 <xsl:choose>
