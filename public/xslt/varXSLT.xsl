@@ -13,12 +13,20 @@
         <div class="variantMain">            
             <div>
                 <div class="title">
-                    <xsl:choose>                            
-                        <xsl:when test="//TEI:title[@rend='main']">
-                            <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i> 
+                    <xsl:choose>
+                        <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
+                            <i><xsl:apply-templates select="//TEI:title[@rend='main' and not(@type='supp')]"/></i> 
                         </xsl:when>
-                        <xsl:when test="//TEI:title[@rend='part']">
-                            &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+                        <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
+                            &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part' and not(@type='supp')]"/>&#x201D;
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:choose>
+                        <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
+                            [<i><xsl:apply-templates select="//TEI:title[@rend='main' and @type='supp']"/></i>] 
+                        </xsl:when>
+                        <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
+                            [&#x201C;<xsl:apply-templates select="//TEI:title[@rend='part' and @type='supp']"/>&#x201D;]
                         </xsl:when>
                     </xsl:choose>
                 </div>
