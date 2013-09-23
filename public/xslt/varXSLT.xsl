@@ -27,7 +27,7 @@
                         </xsl:when>
                         <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
                             [&#x201C;<xsl:apply-templates select="//TEI:title[@rend='part' and @type='supp']"/>&#x201D;]
-                        </xsl:when>
+                        </xsl:when>                
                     </xsl:choose>
                 </div>
                 
