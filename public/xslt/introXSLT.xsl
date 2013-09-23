@@ -70,11 +70,11 @@
     <xsl:template name="typeTitle">
         <xsl:choose>
             <xsl:when test="@type='supp'">
-                [<xsl:call-emplate name="rendTitle"/>]
+                [<xsl:call-template name="rendTitle"/>]
             </xsl:when>
-            <xsl:oterwise>
-                <xsl:call-emplate name="rendTitle"/>
-            </xsl:oterwise>
+            <xsl:otherwise>
+                <xsl:call-template name="rendTitle"/>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
