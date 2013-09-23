@@ -20,7 +20,7 @@
                     <xsl:text>Indledning til</xsl:text>
                 </div>
                 <div>
-                    <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' or @rend='part']">
+                    <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
                         <xsl:call-template name="rendTitle"/>
                     </xsl:for-each>
                     <xsl:choose>
