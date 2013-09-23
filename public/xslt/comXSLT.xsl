@@ -32,9 +32,9 @@
                 </xsl:choose>
                 <xsl:choose>
                     <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                        [<i>
+                        <i>
                             <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/>
-                        </i>]
+                        </i>
                     </xsl:when>
                 </xsl:choose>
                 <xsl:choose>
