@@ -107,6 +107,7 @@ var addDocOutListener = function() {
         var link = docOutTodocInLink(target);
         var scrollToInNewWindow = link[0] + "_" + link[1] + "_" + link[2];
         options["scrollToInNewWindows"] = scrollToInNewWindow;
+        // check if link to external doc
         if (rootFile == link[0]) {
             var openTab = 0;
             switch (link[1]) {
@@ -125,15 +126,19 @@ var addDocOutListener = function() {
             options["open_tab"] = openTab;
             var found = false;
             var i;
-            for(i = readerNum; i > 0; i--) {
-                var rightmostScrollTo = $("#tab" + i).find("#" + scrollToInNewWindow);
+            var rightmostScrollTo;
+            for(i = readerNum; i >= 0; i--) {
+                rightmostScrollTo = $("#tab" + i).find("#" + scrollToInNewWindow);
                 if (rightmostScrollTo.length > 0) {
-                    found = true;
-                    break;
+                    // check if the wished panel is seleted in the tab
+                    var theTab = $("#tab" + i).tabs();
+                    if (openTab == theTab.tabs('option', 'selected')) {
+                        found = true;
+                        break;
+                    }
                 }
             }
             if (found) {
-                tabFocusHandler(i, options);
                 var linkElement = rightmostScrollTo;
                 var scrollElement = linkElement.closest(".ui-tabs-panel");
                 scrollElement.scrollTo(linkElement);
