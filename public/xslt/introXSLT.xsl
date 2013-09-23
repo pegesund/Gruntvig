@@ -53,8 +53,6 @@
         
     </xsl:template>
     
-    
-    
     <xsl:template name="rendTitle">
         <xsl:choose>
             <xsl:when test="@rend='main'">
@@ -72,11 +70,11 @@
     <xsl:template name="typeTitle">
         <xsl:choose>
             <xsl:when test="@type='supp'">
-                [<xsl:call-template name="rendTitle"/>]
+                [<xsl:call-emplate name="rendTitle"/>]
             </xsl:when>
-            <xsl:otherwise>
-                <xsl:call-template name="rendTitle"/>
-            </xsl:otherwise>
+            <xsl:oterwise>
+                <xsl:call-emplate name="rendTitle"/>
+            </xsl:oterwise>
         </xsl:choose>
     </xsl:template>
     
