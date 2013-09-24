@@ -78,7 +78,7 @@
         <xsl:choose>
             <xsl:when test="@type='supp'">
                 <div>
-                    [ hat <xsl:call-template name="rendTitle"/>]
+                    <span>[<xsl:call-template name="rendTitle"/>]</span>
                 </div>
             </xsl:when>
             <xsl:otherwise>
