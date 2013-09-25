@@ -21,8 +21,7 @@
                 </div>
                 <div>
                     <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
-                        <div><xsl:call-template name="typeTitle"/></div>
-                        
+                        <xsl:call-template name="typeTitle"/>
                         <xsl:choose>
                             <xsl:when test="position() &lt; last()-1">
                                 <xsl:text>, </xsl:text>
