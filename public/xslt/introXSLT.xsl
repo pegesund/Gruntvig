@@ -21,19 +21,15 @@
                 </div>
                 <div>
                     <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
-                        <xsl:call-template name="typeTitle"/>
+                        <div><xsl:call-template name="typeTitle"/></div>
+                        
                         <xsl:choose>
-                            <div>
-                                <xsl:when test="position() &lt; last()-1">
+                            <xsl:when test="position() &lt; last()-1">
                                 <xsl:text>, </xsl:text>
                             </xsl:when>
-                            </div>
-                            <div>
-                                <xsl:when test="position() = last()-1">
+                            <xsl:when test="position() = last()-1">
                                 <xsl:text> og </xsl:text>
                             </xsl:when>
-                            </div>
-                            
                         </xsl:choose>
                     </xsl:for-each>
                  </div>
