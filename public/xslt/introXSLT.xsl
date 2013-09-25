@@ -31,7 +31,7 @@
                             </xsl:when>
                         </xsl:choose>
                     </xsl:for-each>
-                 </span>
+                 </div>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                     <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
@@ -70,8 +70,7 @@
             <xsl:otherwise>
                 <div>
                     <xsl:apply-templates/>
-                </div>
-                
+                </div>                
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
