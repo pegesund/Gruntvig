@@ -304,6 +304,7 @@ addSimpleReader = function(options, showName, url) {
     uriAddForeignTab(readerNum, url);
     var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>' + showName + '</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></li> </ul> ';
     newReader += '<div class="text-resizeable" id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
+    newReader += '<div class="empty_tab" id="skjul' + num + '"></div>';
     newReader += '</div></span>';
     $("#hovedtekst_select").html(hovedtekstSelect);
     $("#høyre_toppmeny_nytt_navn").html($("#høyre_toppmeny_nytt_navn").html() + newReader);
