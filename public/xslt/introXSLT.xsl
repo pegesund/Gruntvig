@@ -377,6 +377,13 @@
                         <xsl:apply-templates/>         
                     </span>
                 </xsl:when>
+                <xsl:when test="@type='epiText'">
+                    <xsl:text>&lt;</xsl:text>
+                    <a href="../img/{concat(substring-before(@target,'_fax'),'.pdf')}" target="_blank">
+                        <xsl:apply-templates/>
+                    </a>
+                    <xsl:text>&gt;</xsl:text>
+                </xsl:when>
             </xsl:choose>   
     </xsl:template>
     
