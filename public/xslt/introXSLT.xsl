@@ -64,9 +64,7 @@
                 &#x201C;<xsl:apply-templates/>&#x201D;
             </xsl:when>
             <xsl:otherwise>
-                <div>
-                    <xsl:apply-templates/>
-                </div>
+                <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -74,10 +72,14 @@
     <xsl:template name="typeTitle">
         <xsl:choose>
             <xsl:when test="@type='supp'">
-                [<xsl:call-template name="rendTitle"/>]
+                <div>
+                    [<xsl:call-template name="rendTitle"/>]
+                </div>                
             </xsl:when>
             <xsl:otherwise>
-                <xsl:call-template name="rendTitle"/>
+                <div>
+                    <xsl:call-template name="rendTitle"/>
+                </div>                
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
