@@ -20,18 +20,18 @@
                     <xsl:text>Indledning til</xsl:text>
                 </div>
                 <div>
-                    <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
-                        <xsl:call-template name="typeTitle"/>
-                        <xsl:choose>
-                            <xsl:when test="position() &lt; last()-1">
-                                <xsl:text>, </xsl:text>
-                            </xsl:when>
-                            <xsl:when test="position() = last()-1">
-                                <xsl:text> og </xsl:text>
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:for-each>
-                 </div>
+                        <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
+                            <xsl:call-template name="typeTitle"/>
+                            <xsl:choose>
+                                <xsl:when test="position() &lt; last()-1">
+                                    <xsl:text>, </xsl:text>
+                                </xsl:when>
+                                <xsl:when test="position() = last()-1">
+                                    <xsl:text> og </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                    </div>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                     <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
@@ -58,19 +58,15 @@
     <xsl:template name="rendTitle">
         <xsl:choose>
             <xsl:when test="@rend='main'">
-                <div>
-                    <i><xsl:apply-templates/></i>
-                </div>                
+                <i><xsl:apply-templates/></i>
             </xsl:when>
             <xsl:when test="@rend='part'">
-                <div>
-                    &#x201C;<xsl:apply-templates/>&#x201D;
-                </div>                
+                &#x201C;<xsl:apply-templates/>&#x201D;
             </xsl:when>
             <xsl:otherwise>
                 <div>
                     <xsl:apply-templates/>
-                </div>                
+                </div>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
