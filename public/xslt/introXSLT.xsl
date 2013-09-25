@@ -19,7 +19,7 @@
                 <div>
                     <xsl:text>Indledning til</xsl:text>
                 </div>
-                <div class="test1">
+                <div>
                     <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
                         <xsl:call-template name="typeTitle"/>
                         <xsl:choose>
@@ -58,17 +58,17 @@
     <xsl:template name="rendTitle">
         <xsl:choose>
             <xsl:when test="@rend='main'">
-                <div class="test2">
+                <div>
                     <i><xsl:apply-templates/></i>
                 </div>                
             </xsl:when>
             <xsl:when test="@rend='part'">
-                <div class="test3">
+                <div>
                     &#x201C;<xsl:apply-templates/>&#x201D;
                 </div>                
             </xsl:when>
             <xsl:otherwise>
-                <div class="test4">
+                <div>
                     <xsl:apply-templates/>
                 </div>                
             </xsl:otherwise>
@@ -78,7 +78,9 @@
     <xsl:template name="typeTitle">
         <xsl:choose>
             <xsl:when test="@type='supp'">
-                [<xsl:call-template name="rendTitle"/>]
+                <div>
+                    [<xsl:call-template name="rendTitle"/>]
+                </div>
             </xsl:when>
             <xsl:otherwise>
                 <div>
