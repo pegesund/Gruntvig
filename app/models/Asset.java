@@ -235,12 +235,9 @@ public class Asset extends GenericModel {
 
     public static Asset uploadEpiText(String name, String comment, File file) {
         String fileName = file.getName();
-        Asset asset = new Asset(name, fileName, comment, Asset.countryImage);
-        asset.importDate = new Date();
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
         Helpers.copyfile(file.getAbsolutePath(), filePath); 
-        asset.save();
-        return asset;
+        return null;
     }
     
     /**
