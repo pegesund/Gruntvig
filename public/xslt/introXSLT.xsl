@@ -20,18 +20,12 @@
                     <xsl:text>Indledning til</xsl:text>
                 </div>
                 <div>
-                        <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
+                    <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
+                       <div>
                             <xsl:call-template name="typeTitle"/>
-                            <xsl:choose>
-                                <xsl:when test="position() &lt; last()-1">
-                                    <xsl:text>, </xsl:text>
-                                </xsl:when>
-                                <xsl:when test="position() = last()-1">
-                                    <xsl:text> og </xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:for-each>
-                    </div>
+                       </div>
+                   </xsl:for-each>
+                </div>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
                     <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
@@ -72,15 +66,28 @@
     <xsl:template name="typeTitle">
         <xsl:choose>
             <xsl:when test="@type='supp'">
-                <div>
-                    [<xsl:call-template name="rendTitle"/>]
-                </div>                
+                [<xsl:call-template name="rendTitle"/>]
             </xsl:when>
             <xsl:otherwise>
-                <div>
-                    <xsl:call-template name="rendTitle"/>
-                </div>                
+                <xsl:call-template name="rendTitle"/>
             </xsl:otherwise>
+        </xsl:choose>
+        <xsl:call-template name="delimiter"/>
+    </xsl:template>
+    
+    <xsl:template name="delimiter">
+        <xsl:choose>
+            <xsl:when test="position() &lt; last()-1">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:when test="position()=last()-1">
+                <div>
+                    <xsl:text> og </xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="position()=1">
+                <xsl:text></xsl:text>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     
