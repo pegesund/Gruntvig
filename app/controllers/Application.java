@@ -73,12 +73,7 @@ public class Application extends Controller {
         Asset asset = Asset.find("fileName = ?", fileName).first();
         render(asset);
     }
-/*
-    public static void epitekst(String fileName) {
-        Asset asset = Asset.find("fileName = ?", fileName).first();
-        renderBinary(asset);
-    }
-*/
+
     public static void krono() {
         render();
     }
