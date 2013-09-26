@@ -493,15 +493,15 @@
     </xsl:template>
     
     <xsl:template match="TEI:row[@rend]">        
-        <div class="tr">
+        <tr class="tr">
             <xsl:apply-templates/>
-        </div>
+        </tr>
     </xsl:template>
     
     <xsl:template match="TEI:cell">        
-        <span class="td">
+        <td class="td">
             <xsl:apply-templates/>
-        </span>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:persName">
