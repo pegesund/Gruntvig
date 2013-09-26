@@ -397,7 +397,7 @@
 
 #tekst_innhold td.cell:last-child
         {
-        border: 1px solid black;
+        border: 0px solid black;
         empty-cells: show;
         text-align: right;
         width: 20%;
