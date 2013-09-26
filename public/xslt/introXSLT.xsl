@@ -13,7 +13,17 @@
     <xsl:include href="popups.xsl"/>
     
     
-    <xsl:template match="TEI:TEI">        
+    <xsl:template match="TEI:TEI"> 
+        <script type="text/javascript">
+function blank(target, loc, x, y) {
+    if ( !x) { x= "675"; }
+    if ( !y) { y= screen.availHeight-100; }
+    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=no,titlebar=no,location=yes",true);
+    w.focus();
+    return false;
+    }
+        </script>
+               
         <div class="mainIntro">
             <div class="head">
                 <div>
@@ -379,7 +389,7 @@
                 </xsl:when>
                 <xsl:when test="@type='epiText'">
                     <xsl:text>&lt;</xsl:text>
-                    <a href="../img/{concat(substring-before(@target,'_fax'),'.pdf')}" target="_blank">
+                    <a href="../img/{concat(substring-before(@target,'_'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>
                     <xsl:text>&gt;</xsl:text>
