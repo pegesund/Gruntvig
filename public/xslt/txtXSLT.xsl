@@ -779,7 +779,7 @@
     
     <xsl:template match="TEI:figure">
         <div class="{@type}">
-            <hr align="center" width="40%"/>
+            <hr align="center" width="50%"/>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
