@@ -492,7 +492,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:row[@rend]">        
+    <xsl:template match="TEI:row">        
         <tr class="tr">
             <xsl:apply-templates/>
         </tr>
