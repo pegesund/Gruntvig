@@ -477,13 +477,22 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:table">        
-        <div class="table">
-            <xsl:apply-templates/>
-        </div>
+    <xsl:template match="TEI:table[@rend]">
+        <xsl:choose>
+            <xsl:when test="not(rend)">
+                <table>
+                    <xsl:apply-templates/>
+                </table>
+            </xsl:when>
+            <xsl:when test="@rend">
+                <table class="{@rend}">
+                    <xsl:apply-templates/>
+                </table>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:row">        
+    <xsl:template match="TEI:row[@rend]">        
         <div class="tr">
             <xsl:apply-templates/>
         </div>
