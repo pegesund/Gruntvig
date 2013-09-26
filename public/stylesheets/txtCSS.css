@@ -416,7 +416,7 @@
         border: 0px solid black;
         empty-cells: show;
         text-align: left;
-        width: 80%;
+        width: 20%;
         }
 
 #tekst_innhold td.cell:last-child
