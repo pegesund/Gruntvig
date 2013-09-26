@@ -70,6 +70,9 @@ public class UploadXml extends Application {
             } else {
                 Asset.uploadImage(filesname, comment, theFile);
             }
+        } else 
+        if (fileName.endsWith(".pdf")) {
+            Asset.uploadEpiText(fileName, comment, theFile);
         } else {
             asset = Asset.uploadXmlFile(filesname, comment, theFile);
         }

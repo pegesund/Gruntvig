@@ -729,6 +729,52 @@
     </xsl:template>
     -->
     
+    <!-- table START -->
+    
+    <xsl:template match="TEI:table[@type='index']">        
+        <table class="index">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row">
+        <tr class="row">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row[@type='head']/TEI:cell">        
+        <td class="cell">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell"> 
+        <xsl:choose>
+            <xsl:when test="@corresp">                
+                <td class="cell">
+                    <a class="index" href="#{@corresp}">
+                        <xsl:apply-templates/>
+                    </a>
+                </td>
+            </xsl:when>
+            <xsl:when test="'@corresp' and '@cols'">                
+                <td class="cell" colspan="{@cols}">
+                    <a class="index" href="#{@corresp}">
+                        <xsl:apply-templates/>
+                    </a>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="cell">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- table END -->
+    
     <!-- skilletegn START -->
     
     <xsl:template match="TEI:figure">

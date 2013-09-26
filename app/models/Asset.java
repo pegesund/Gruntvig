@@ -232,6 +232,13 @@ public class Asset extends GenericModel {
         asset.save();
         return asset;
     }
+
+    public static Asset uploadEpiText(String name, String comment, File file) {
+        String fileName = file.getName();
+        String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
+        Helpers.copyfile(file.getAbsolutePath(), filePath); 
+        return null;
+    }
     
     /**
      * 
