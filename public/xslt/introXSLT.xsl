@@ -14,7 +14,7 @@
     
     
     <xsl:template match="TEI:TEI"> 
-        <script type="text/javascript">
+        <script type="text/javascript"><!-- // Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26
 function blank(target, loc, x, y) {
     if ( !x) { x= "675"; }
     if ( !y) { y= screen.availHeight-100; }
@@ -22,7 +22,7 @@ function blank(target, loc, x, y) {
     w.focus();
     return false;
     }
-        </script>
+//-->   </script>
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
@@ -394,11 +394,9 @@ function blank(target, loc, x, y) {
                     </span>
                 </xsl:when>
                 <xsl:when test="@type='epiText'">
-                    <xsl:text>&lt;</xsl:text>
                     <a class="pdf" href="../img/{concat(substring-before(@target,'_'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>
-                    <xsl:text>&gt;</xsl:text>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
