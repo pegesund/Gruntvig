@@ -23,7 +23,7 @@ function blank(target, loc, x, y) {
     w.focus();
     return false;
     }
-    >   </script>
+        </script>
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
