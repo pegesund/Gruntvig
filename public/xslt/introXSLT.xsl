@@ -13,7 +13,24 @@
     <xsl:include href="popups.xsl"/>
     
     
-    <xsl:template match="TEI:TEI">        
+    <xsl:template match="TEI:TEI"> 
+        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
+        <script type="text/javascript">
+function blank(target, loc, x, y) {
+    if ( !x) { x= "675"; }
+    if ( !y) { y= screen.availHeight-100; }
+    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=no,titlebar=no,location=yes",true);
+    w.focus();
+    return false;
+    }
+        </script>
+        <style>
+.pdf        {background-image: url(../img/pdficon_small.png);
+             padding-left: 20px;
+             background-repeat: no-repeat;
+             background-position: left center;}
+        </style>
+               
         <div class="mainIntro">
             <div class="head">
                 <div>
@@ -378,11 +395,9 @@
                     </span>
                 </xsl:when>
                 <xsl:when test="@type='epiText'">
-                    <xsl:text>&lt;</xsl:text>
-                    <a href="../img/{concat(substring-before(@target,'_fax'),'.pdf')}" target="_blank">
+                    <a class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>
-                    <xsl:text>&gt;</xsl:text>
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>
