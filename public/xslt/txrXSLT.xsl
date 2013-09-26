@@ -494,6 +494,7 @@
     
     <xsl:template match="TEI:row">        
         <tr class="tr">
+            <xsl:text>HAT</xsl:text>
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
