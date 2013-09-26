@@ -477,7 +477,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@rend]">
+    <xsl:template match="TEI:table">
         <xsl:choose>
             <xsl:when test="not(rend)">
                 <table>
