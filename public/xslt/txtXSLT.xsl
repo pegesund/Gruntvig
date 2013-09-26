@@ -753,14 +753,14 @@
         <xsl:choose>
             <xsl:when test="@corresp">                
                 <td class="cell">
-                    <a class="index" href="TEI:a[@hrel]">
+                    <a class="index" href="{@corresp}">
                         <xsl:apply-templates/>
                     </a>
                 </td>
             </xsl:when>
             <xsl:when test="'@corresp' and '@cols'">                
                 <td class="cell" colspan="{@cols}">
-                    <a class="index" href="{@corresp}">
+                    <a class="app faksimile_viewer" href="{@corresp}">
                         <xsl:apply-templates/>
                     </a>
                 </td>
