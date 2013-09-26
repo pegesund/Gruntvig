@@ -760,7 +760,7 @@
             </xsl:when>
             <xsl:when test="'@corresp' and '@cols'">                
                 <td class="cell" colspan="{@cols}">
-                    <a class="app faksimile_viewer" href="{@corresp}">
+                    <a class="index" href="{@corresp}">
                         <xsl:apply-templates/>
                     </a>
                 </td>
