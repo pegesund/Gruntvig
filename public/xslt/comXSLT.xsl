@@ -14,10 +14,28 @@
     2011.10.12: rend att på title i teiHeader
     2011.06.27: sic and supp in note element 
     2012.06.20: templates til <l> og <lg>
+    KK:
+    2013-09-26: Midlertidig visning af epitekst
 -->
     <xsl:include href="popups.xsl"/>
 
     <xsl:template match="TEI:TEI">
+        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
+        <script type="text/javascript">
+function blank(target, loc, x, y) {
+    if ( !x) { x= "675"; }
+    if ( !y) { y= screen.availHeight-100; }
+    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=no,titlebar=no,location=yes",true);
+    w.focus();
+    return false;
+    }
+        </script>
+        <style>
+.pdf        {background-image: url(../img/pdficon_small.png);
+             padding-left: 20px;
+             background-repeat: no-repeat;
+             background-position: left center;}
+        </style>
         
         <div class="theComments">
                 
@@ -112,6 +130,12 @@
                     </a>
                     <xsl:text>&gt;</xsl:text>
                 </xsl:when>
+                <xsl:when test="@type='epiText'">
+                    <a class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+
             </xsl:choose>   
     </xsl:template>
     
