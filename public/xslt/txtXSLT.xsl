@@ -753,7 +753,7 @@
         <xsl:choose>
             <xsl:when test="@corresp">                
                 <td class="cell">
-                    <a class="index" hrel="{@corresp}">
+                    <a class="index" href="TEI:a[@hrel]">
                         <xsl:apply-templates/>
                     </a>
                 </td>
