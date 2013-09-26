@@ -23,6 +23,12 @@ function blank(target, loc, x, y) {
     return false;
     }
         </script>
+        <style>
+.pdf        {background-image: url(../img/pdficon_small.png);
+             padding-left: 20px;
+             background-repeat: no-repeat;
+             background-position: left center;}
+        </style>
                
         <div class="mainIntro">
             <div class="head">
@@ -389,7 +395,7 @@ function blank(target, loc, x, y) {
                 </xsl:when>
                 <xsl:when test="@type='epiText'">
                     <xsl:text>&lt;</xsl:text>
-                    <a href="../img/{concat(substring-before(@target,'_'),'.pdf')}" onclick="return blank('epi',this.href)">
+                    <a class="pdf" href="../img/{concat(substring-before(@target,'_'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>
                     <xsl:text>&gt;</xsl:text>
