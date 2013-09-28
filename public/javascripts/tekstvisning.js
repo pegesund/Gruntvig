@@ -103,6 +103,6 @@ $(document).ready(function() {
     initChapterHandling();
     startupUri();  
     // addReaderColumn();
-    addSimpleReader({}, "Pettertest", "1804_28_txr.xml");                
+    // addSimpleReader({}, "Pettertest", "1804_28_txr.xml");                
 });
 
