@@ -550,7 +550,7 @@ ul#nav li:first-child ul {
 	width: 440px;
 }
     ul#nav li.with_dropdown:first-child ul li {
-	width: 220px; float:left;
+	width: 110px; float:left;
 }
 
 #nav li:hover > a {
