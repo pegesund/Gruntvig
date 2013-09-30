@@ -547,7 +547,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 }
 
 ul#nav li:first-child ul {
-	width: 440px;
+	width: 185px;
 }
     ul#nav li.with_dropdown:first-child ul li {
 	width: 220px; float:left;
