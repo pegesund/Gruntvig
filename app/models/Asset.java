@@ -92,6 +92,7 @@ public class Asset extends GenericModel {
     public static String bookinventory = "bookinventory";
     public static String mapVej = "mapVej";
     public static String mapXml = "mapXml";
+    public static String bibliografi = "bibliografi";
 
     /**
      * Used by images
@@ -297,6 +298,9 @@ public class Asset extends GenericModel {
         int variant = 0;
         String type;
         System.out.println("Epub name: " + epub.getName());
+        if (epub.getName().contains("_bibl")) {
+            type = Asset.bibliografi;
+        } else
         if (epub.getName().equals("map_vej.xml")) {
             type = Asset.mapVej;
         } else if (epub.getName().startsWith("map_")) {
@@ -354,10 +358,12 @@ public class Asset extends GenericModel {
         String copiedFile = copyXmlToXmlDirectory(epub);
         System.out.println("Copied file: " + copiedFile);
         
-        String html;
+        String html = "";
         
         // consider a hash :-)
-        if (type.equals(Asset.mapVej) || type.equals(Asset.mapXml)) {
+        if (type.equals(Asset.bibliografi)) {
+          html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "biblDescXSLT.xsl"); 
+        } else if (type.equals(Asset.mapVej) || type.equals(Asset.mapXml)) {
           html =  Asset.xmlRefToHtml(epub.getAbsolutePath(), "vejXSLT.xsl"); 
         } else if (type.equals(Asset.veiledningType)) {
           html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "veiledning.xsl"));

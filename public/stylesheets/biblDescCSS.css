@@ -1,0 +1,372 @@
+/*
+KSR: 2012.12.03
+2012.12.05: main css for com, intro and txr
+2012.12.05: subSimple
+2013.05.15: tabel
+*/
+
+.biblio .author
+        {
+        font-size: 65%;
+        margin: 1em 0em 1em 0em;
+        text-align: center;
+        }
+
+/* kolofonBlad START */
+
+.biblio .editor
+        {
+        text-align: left;
+        }
+
+/* kolofonBlad END*/
+
+/* head com, txr and intro START */
+
+.biblio .bodyXX   
+        {
+        font-family: "Georgia";
+        font-size: 14px;
+        line-height: 150%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 5em;
+        text-align: justify;
+        width: 40em;
+        }
+
+/* table of content START */
+
+.biblio .content
+        {
+        color: #000000;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        }
+
+.biblio .toc
+        {
+        text-align: left;
+        font-size: 100%;
+        margin: 0em;
+        margin-left: 1em;
+        }
+        
+.biblio a.toc
+        {
+        color: #006633;
+        text-decoration: none;
+        }
+
+.biblio a.toc:hover
+        {
+        color: #006633;
+        text-decoration: underline;
+        }
+        
+/* table of content END */   
+
+/* head + head i toc START */
+
+.biblio .head
+        {
+        font-size: 150%;
+        line-height: 100%;
+        text-align: center;
+        margin: 2em 0em 0em 0em;
+        }
+
+.biblio .div .head
+        {
+        font-size: 144%;
+        line-height: 100%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+.biblio .div .div .head
+        {
+        font-size: 120%;
+        line-height: 100%;
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        }
+
+/* head + head i toc END */
+
+/* p in com START */
+
+.biblio .p
+        {
+        margin:0em 0em 0em 0em;
+        }
+        
+.biblio .p, .biblio .p
+        {
+        margin: 0.5em 0em 0em 0em;
+        }
+
+.biblio .note
+        {
+        text-align: left;
+        margin:1em 0em 1em 0em;
+        }
+
+/* p in com END */
+
+/* readMore START */
+
+.biblio .readMore
+        {
+        margin: 2em 2em 2em 2em;
+        text-align: justify;
+        }
+
+/* readMore END*/
+
+/* hi START */
+
+.biblio .bold
+        {
+        font-weight: bold;
+        }
+        
+.biblio .initial
+        {
+        font-style: normal;
+        font-size: 120%;
+        }
+
+.biblio .italic
+        {
+        font-style: italic;
+        }
+
+.biblio .left
+        {
+        text-align: left;
+        }
+
+.biblio .lineThrough
+        {
+        text-decoration: line-through;
+        }
+
+.biblio .lowered
+        {
+        font-size: 80%;
+        vertical-align: sub;
+        }
+
+.biblio .raised
+        {
+        font-size: 80%;
+        vertical-align: super;
+        }
+
+.biblio .romanType
+        {
+        font-family: arial;
+        font-size: 80%;
+        }
+
+.biblio .smallCaps
+        {
+        font-variant: small-caps;
+        }
+
+.biblio .spaced
+        {
+        letter-spacing: 1px;
+        }
+
+.biblio .underLine
+        {
+        text-decoration: underline;
+        }
+
+/* hi END*/
+
+/* lg and l START */
+
+.biblio .lg
+        {
+        text-align: left;
+        margin: 2em 2em 2em 2em;
+        }
+        
+.biblio .l
+        {
+        text-align: left;
+        margin: 0em 0em 0em 0.5em;
+        }
+
+/* lg and l END */
+
+/*list START */
+
+.biblio .decimal, 
+.biblio .litList, .biblio .webList, 
+.biblio .lowerAlpha, .biblio .subLowerAlpha,
+.biblio .lowerRoman, 
+.biblio .ordered, 
+.biblio .simple, .biblio .subSimple
+.biblio .textualCriticismPluralis, .biblio .textualCriticismSingularis
+.biblio .upperAlpha, .biblio .subUpperAlpha 
+.biblio .upperRoman
+        {
+        margin: 1em;
+        }
+
+.biblio .decimal
+        {
+        list-style-type: decimal;
+        }
+
+.biblio .litList, .biblio .webList
+        {
+        list-style: circle;
+        }
+
+.biblio .lowerAlpha,  .biblio .subLowerAlpha
+        {
+        list-style-type: lower-alpha;
+        }
+
+.biblio .lowerRoman
+        {
+        list-style-type: lower-roman;
+        }
+
+.biblio .ordered
+        {
+        list-style-type: circle;
+        }
+
+.biblio .simple, .biblio .subSimple
+        {
+        list-style-type: circle;
+        }
+
+.biblio .textualCriticismPluralis, .biblio .textualCriticismSingularis
+        {
+        list-style-type: none;
+        }
+        
+.biblio .upperAlpha, .biblio .subUpperAlpha
+        {
+        list-style-type: upper-alpha;
+        }
+
+.biblio .upperRoman
+        {
+        list-style-type: upper-roman;
+        }
+        
+/* list END */
+
+/* p START */
+
+.biblio .center
+        {
+        margin: 1em;
+        text-indent: 0em;
+        text-align: center;
+        }
+
+.biblio .left
+        {
+        margin: 1em;
+        text-indent: 0em;
+        text-align: left;
+        }
+
+.biblio .noIndent, .firstIndent
+        {
+        margin: 1em;
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+.biblio .right
+        {
+        margin: 1em;
+        text-indent: 0em;
+        text-align: right;
+        }
+        
+/* p END*/
+
+/* table START */
+
+.biblio table.msDesc, .biblio table.textualCriticism, .biblio table.printDesc, .biblio table.contentDesc
+        {
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 38em;
+        }
+        
+.biblio table.msDesc, .biblio table.textualCriticism tr, td
+        {
+        border: 1px solid black;        
+        }
+
+.biblio tr:first-child
+        {
+        background-color: #DDDDDD;
+        font-weight: bold;
+        }
+
+.biblio tr
+        {
+        margin: 1em;
+        vertical-align: top;
+        }
+        
+/* table END*/
+
+/* web START */
+
+.biblio .web
+        {
+        text-decoration: underline;
+        color: blue;
+        }
+
+/* web END */
+
+
+/* diverse tjek for brug */
+
+.biblio .div /* fra intro.css*/
+        {
+        text-align: justify;
+        }
+
+.biblio .lgNumber /* fra intro.css*/
+        {
+        font-size: 100%;
+        margin-left: 10px;
+        }
+        
+.biblio .div /* fra txr.css*/
+        {
+        text-align: justify;
+        }
+.biblio .cell /* fra txr.css*/
+        {
+        margin: 0em 3em 0em 3em;
+        }
+        
+/* biblDesc */
+
+.biblio .biblEditor
+        {
+        font-size: 100%;
+        margin: 1em 0em 1em 0em;
+        text-align: center;
+        }

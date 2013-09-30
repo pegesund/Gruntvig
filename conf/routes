@@ -32,6 +32,7 @@ GET     /viskort/{fileName}                     Application.viskort
 GET     /kort                                   Application.kort
 GET     /krono                                  Application.krono
 GET     /alfa                                   Application.alfa
+GET     /biblio/{fileName}                      ShowAsset.biblio
 
 
 

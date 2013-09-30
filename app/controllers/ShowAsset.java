@@ -33,6 +33,12 @@ public class ShowAsset extends Application {
         render(asset, chapter, chapters, variants, manus);
     }
 
+    public static void biblio(String fileName) {
+        Asset asset = Asset.find("fileName = ?", fileName).first();
+        if (asset != null) {
+            render(asset);
+        } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");        
+    }
     
     /**
      * 
