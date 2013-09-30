@@ -219,7 +219,7 @@
         font-style: italic;
         }
 
-#tekst_innhold .spaced
+#tekst_innhold .spaced, #tekst_innhold .schwab
         {
         font-style: italic;
         }
