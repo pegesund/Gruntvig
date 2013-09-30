@@ -4,7 +4,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0">
         
-    <xsl:strip-space elements="*"/>    
+    <!--<xsl:strip-space elements="*"/>    -->
     
     <!-- 2012.06.20: Karsten Kynde & Kim Steen Ravn
          2012.07.03: Karsten Kynde og Niels Holger Berg -->
