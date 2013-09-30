@@ -188,7 +188,7 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='biblDesc'">
-                    <a href="biblio/{@target}" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}">
+                    <a href="biblio/{@target}" target="_blank" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
