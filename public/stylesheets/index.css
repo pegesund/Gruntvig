@@ -98,6 +98,7 @@ td.sjNummer
 
 td.returnTop 
         {
+        border: 0px solid blue;
         text-align: right;
         width: 1%;
         }
