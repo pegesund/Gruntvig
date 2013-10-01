@@ -1073,7 +1073,7 @@ span.pbA, span.pbMs
 
 #liste tr.bottom_border 
     {
-    border-top: 0px solid #eee; 
+    border-top: 10px solid #eee; 
     margin-bottom: 15px;
     border-bottom: 1px solid #bbb;
     margin-top:8px;
