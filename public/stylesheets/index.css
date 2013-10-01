@@ -79,7 +79,7 @@ a:hover, a:active
 
 tr.krono, td.krono, tr.alfa, td.krono
         {
-        border: 0px solid red;
+        border: 1px solid red;
         width: 60%;
         }
 
