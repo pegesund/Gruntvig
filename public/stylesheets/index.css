@@ -77,7 +77,7 @@ a:hover, a:active
         color: #299629 /* #367092;*/
         }
 
-tr.krono, td.krono, tr.alfa, td.krono
+tr.krono > td, tr.alfa, td.krono
         {
         border: 0px solid red;
         width: 60%;
