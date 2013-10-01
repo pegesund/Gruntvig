@@ -1065,8 +1065,6 @@ span.pbA, span.pbMs
 #liste tr 
     {
     border-top: 1px solid #eee;
-         border-right:none; 
-         border-left:none;
     padding: 15px 0;
     float: left;
     width: 100%;
@@ -1076,8 +1074,6 @@ span.pbA, span.pbMs
 #liste tr.bottom_border 
     {
     border-top: 0px solid #eee; 
-         border-right:none; 
-         border-left:none;
     margin-bottom: 15px;
     border-bottom: 1px solid #bbb;
     margin-top:8px;
