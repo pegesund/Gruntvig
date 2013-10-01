@@ -1081,7 +1081,7 @@ span.pbA, span.pbMs
     {
     border-top: 0px solid #eee; 
     margin-bottom: 15px;
-    border-bottom: 0px solid #bbb;
+    border-bottom: 1px solid #bbb;
     margin-top:8px;
     padding: 10px 0 5px 0;
     }
