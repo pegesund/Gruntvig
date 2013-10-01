@@ -77,7 +77,13 @@ a:hover, a:active
         color: #299629 /* #367092;*/
         }
 
-td.shortForm 
+tr.krono, td.krono, tr.alfa, td.krono
+        {
+        border: 0px solid red;
+        width: 60%;
+        }
+
+td.shortForm
         {
         border: 0px solid red;
         width: 60%;
@@ -98,7 +104,6 @@ td.sjNummer
 
 td.returnTop 
         {
-        color: red;
         text-align: right;
         width: 1%;
         }
