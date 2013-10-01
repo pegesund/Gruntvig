@@ -36,7 +36,14 @@
 						<li><h2><a href="#">Om GV</a></h2></li>
 						<li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>
                                                 <li><a href="mailto:mail@grundtvigsvaerker.dk">Kontakt</a></li>
-                                                <li><a href="/home/ksr/NetBeansProjects/Gruntvig/app/views/mailForm.html" target="_blank">Tilmeld nyhedsbrev</a></li>
+                                                <li>
+                                                    <form action="mailto:mail@grundtvigsvaerker.dk" enctype="text/plain" method="post">
+                                                        <p>Navn: <input type="text" id="name" size="60"></p>
+                                                        <p>Email: <input name="E-mail" type="text" id="E-mail" size="60"></p>
+                                                        <p>Evt. kommentar</p>
+                                                        <p><input type="submit" name="submit" value="submit"></p>
+                                                    </form>
+                                                </li>
 					</ul>
 
 			</div>
