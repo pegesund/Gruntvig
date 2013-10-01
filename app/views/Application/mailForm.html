@@ -1,0 +1,141 @@
+<!--
+  Nyhedsbrev
+  Grundtvigs værker
+  KSR 2013-09-18
+-->
+#{extends 'main.html' /}
+#{ header /}
+
+<script type="text/javascript">
+    
+    
+    
+    $(document).ready(function() {
+    
+    $('div.root').hide();
+    
+    interval = ['180','181','182','183','184','185','186','187','188','189']
+    
+    $.each(interval, function(index, value) { 
+    var nodes = [];
+    $('div.work').each(function(index2) {
+    var rootName= $(this).find('span.rootName').text(),
+        splitName= rootName.split( "_" )
+        year= splitName[0],
+        sj= splitName[1];
+//  alert( index + "," + index2 + "," + rootName + "," + year.substr(0,3) + "," + value );
+    if( year.substr(0,3)!=value ) {
+      return true
+    }
+    var name = $(this).find('span.name').text(),
+        url= $(this).find('span.url').text(),
+        node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+    nodes.push(node);
+    });
+
+    $(nodes).each( function(index) {
+    $('#' + value).after(nodes.pop());
+    });
+    }); 
+    
+    
+    
+    });
+    
+    
+</script>
+
+
+
+<div id="main">
+
+	<div class="container" id="underside_innhold">
+
+		<div id="submenu">
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Kronologisk</div>
+
+		</div>
+            
+            <div class="kolonne1">
+
+		<ul id="kolonne1_meny">
+                    <li class="header">Værker</li>
+                    <li><a class="selected" href="/krono">Kronologisk</a></li>
+                    <li class="last"><a href="/alfa">Alfabetisk</a></li>
+                </ul>
+            </div>
+
+	<div id="kolonne1_bred"><h1>Værker</h1>
+            
+            <p>Kronologisk oversigt</p>
+            
+            <div id="tidsInterval">
+                <a href="../krono#180">1800-1809</a>                
+                <a href="../krono#181">1810-1819</a>
+                <a href="../krono#182">1820-1829</a>
+                <a href="../krono#183">1830-1839</a>
+                <a href="../krono#184">1840-1849</a>
+                <a href="../krono#185">1850-1859</a>
+                <a href="../krono#186">1860-1869</a>
+                <a href="../krono#187">1870-1872</a>
+            </div>
+
+                
+<!--Her bygges en kronologisk oversigt-->
+
+  <div class="root">
+    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+     <div class="work">
+       <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
+       <span class="name">${asset.name}</span>
+       <span class="rootName">${asset.rootName}</span>
+     </div>
+    #{/list}
+  </div>
+
+            <div id="liste" class="hideroot">
+                
+                <table>
+                    <tr>
+                        <td class="shortForm">Titel</td>
+                        <td class="definisjon">År</td>
+                        <td class="sjNummer">SJ</td>
+                    </tr>
+                    <tr class="bottom_border" id="180">
+                        <td class="shortForm"><h4>1800-1809</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="181">
+                        <td class="shortForm"><h4>1810-1819</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="182">
+                        <td class="shortForm"><h4>1820-1829</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="183">
+                        <td class="shortForm"><h4>1830-1839</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="184">
+                        <td class="shortForm"><h4>1840-1849</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="185">
+                        <td class="shortForm"><h4>1850-1859</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="186">
+                        <td class="shortForm"><h4>1860-1869</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="187">
+                        <td class="shortForm"><h4>1870-1872</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../krono#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+</div>
+
