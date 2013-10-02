@@ -20,7 +20,7 @@
     <xsl:include href="popups.xsl"/>
 
     <xsl:template match="TEI:TEI">
-        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
+        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 
         <script type="text/javascript">
 function blank(target, loc, x, y) {
     if ( !x) { x= "675"; }
@@ -35,7 +35,7 @@ function blank(target, loc, x, y) {
              padding-left: 20px;
              background-repeat: no-repeat;
              background-position: left center;}
-        </style>
+        </style>-->
         
         <div class="theComments">
                 
