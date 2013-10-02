@@ -274,36 +274,31 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:table">
-        <table class="{@rend}">
-            <xsl:apply-templates/>
-        </table>
+    <xsl:template match="TEI:table[@rend]">
+        <xsl:choose>
+            <xsl:when test="not(rend)">
+                <table>
+                    <xsl:apply-templates/>
+                </table>
+            </xsl:when>
+            <xsl:when test="@rend">
+                <table class="{@rend}">
+                    <xsl:apply-templates/>
+                </table>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:row">
-        <tr>
+    <xsl:template match="TEI:row">        
+        <tr class="tr">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:cell">
-        <xsl:choose>
-            <xsl:when test="@rows">
-                <td rowspan="{@rows}">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-            <xsl:when test="@cols">
-                <td colspan="{@cols}">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-            <xsl:otherwise>
-                <td>
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:otherwise>
-        </xsl:choose>
+    <xsl:template match="TEI:cell">        
+        <td class="td">
+            <xsl:apply-templates/>
+        </td>
     </xsl:template>
     
     <!-- til brugs for txtEditCSS-css START -->
