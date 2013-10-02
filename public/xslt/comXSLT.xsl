@@ -29,13 +29,13 @@ function blank(target, loc, x, y) {
     w.focus();
     return false;
     }
-        </script>
+        </script>-->
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
              background-repeat: no-repeat;
              background-position: left center;}
-        </style>-->
+        </style>
         
         <div class="theComments">
                 
