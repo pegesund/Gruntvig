@@ -299,7 +299,7 @@ KSR: 2012.12.03
 
 /* table START */
 
-.biblio table.msDesc, .biblio table.textualCriticism, .biblio table.printDesc, .biblio table.contentDesc
+.biblio.tabel, .biblio table.msDesc, .biblio table.textualCriticism, .biblio table.printDesc, .biblio table.contentDesc
         {
         font-size: 14px;
         line-height: 150%;
