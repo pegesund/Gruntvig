@@ -282,7 +282,7 @@
                 </table>
             </xsl:when>
             <xsl:when test="@rend">
-                <table class="{@rnd}">
+                <table class="{@rend}">
                     <xsl:apply-templates/>
                 </table>
             </xsl:when>
