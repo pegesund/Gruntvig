@@ -77,7 +77,7 @@ a:hover, a:active
         color: #299629 /* #367092;*/
         }
 
-td.shortForm
+td, td.shortForm
         {
         border: 0px solid red;
         width: 60%;
