@@ -29,13 +29,13 @@ function blank(target, loc, x, y) {
     w.focus();
     return false;
     }
-        </script>-->
+        </script>
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
              background-repeat: no-repeat;
              background-position: left center;}
-        </style>
+        </style>-->
         
         <div class="theComments">
                 
@@ -131,7 +131,10 @@ function blank(target, loc, x, y) {
                     <xsl:text>&gt;</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='epiText'">
-                    <a class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
+                    <a style="background-image: url(../img/pdficon_small.png);
+             padding-left: 20px;
+             background-repeat: no-repeat;
+             background-position: left center;" class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
