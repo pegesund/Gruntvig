@@ -312,7 +312,7 @@ KSR: 2012.12.03
         
 .biblio table.msDesc, .biblio table.textualCriticism tr, td
         {
-        border: 1px solid black;        
+        border: 0px solid black;        
         }
 
 .biblio tr:first-child
