@@ -512,7 +512,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 }
 #nav a:hover {
 	background: #000;
-	color: red;
+	color: #fff;
 }
 
 /* main level link hover */
@@ -576,7 +576,7 @@ ul#nav li.with_dropdown:first-child ul li
 }
 #nav ul a:hover {
 	background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; /* #213657 */
-	color: #fff !important;
+	color: red !important;
 
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
