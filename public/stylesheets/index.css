@@ -832,8 +832,14 @@ html[xmlns] #nav {
         -webkit-border-top-right-radius: 5px;
         -moz-border-radius-topright: 5px;
         border-radius-topright: 5px;
-        text-shadow: 0px 1px 0 #eee;margin-top:0px;
+        text-shadow: 0px 1px 0 #eee;
+        margin-top:0px;
 	}
+   
+#kolonne1_meny li.version       
+        {
+        color: burlywood;    
+        }
 
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
