@@ -512,7 +512,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 }
 #nav a:hover {
 	background: #000;
-	color: #fff;
+	color: red;
 }
 
 /* main level link hover */
