@@ -1373,9 +1373,11 @@ h1.subtitle { margin-left: 0px !important; }
 
 /* Kolofon */ 
 
-#kolonne1_meny li#kolofon { line-height: 19px; padding: 20px; width: 184px; background: #fff; }        
-    #kolonne1_meny li #kolofon_link:link { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:underline; }        
-    #kolonne1_meny li #kolofon_link:hover { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:none; }        
+#kolonne1_meny li#kolofon { line-height: 19px; padding: 20px; width: 184px; background: #fff; }
+
+#kolonne1_meny li #kolofon_link:link { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:none; }
+
+#kolonne1_meny li #kolofon_link:hover { padding: 0; margin:0; border: 0; display:inline; background: #fff;text-decoration:none; }        
        
     #kolofon_page { width:100%; }
     #kolofon_page h2 { font-size: 1.5em; }
