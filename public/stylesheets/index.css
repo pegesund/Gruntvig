@@ -835,7 +835,7 @@ html[xmlns] #nav {
         text-shadow: 0px 1px 0 #eee;
 	}
         
-#kolonne1_meny li.version > li.version
+#kolonne1_meny li.version > #kolonne1_meny li.version
         {
         margin-top:0px;
         color: red
