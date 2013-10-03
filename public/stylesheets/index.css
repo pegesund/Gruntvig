@@ -576,7 +576,7 @@ ul#nav li.with_dropdown:first-child ul li
 }
 #nav ul a:hover {
 	background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; /* #213657 */
-	color: red !important;
+	color: #fff !important;
 
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -857,7 +857,7 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 
 
-	#kolonne1_meny li a:hover { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; color:#fff;}/*#4d93bc */
+	#kolonne1_meny li a:hover { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; color:red;}/*#4d93bc */
 
 	/* Kolonne 1 (hovedinnhold) */
 
