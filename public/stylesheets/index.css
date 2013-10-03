@@ -838,6 +838,7 @@ html[xmlns] #nav {
 #kolonne1_meny li.version:first-child 
         {
         margin-top:0px;
+        color: red
         }
 
 	
