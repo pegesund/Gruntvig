@@ -810,6 +810,11 @@ html[xmlns] #nav {
         border-radius-topright: 5px;
         text-shadow: 0px 1px 0 #eee;
 	}
+        
+#kolonne1_meny li.header:first-child 
+        {
+        margin-top:0px;
+        }
 
 #kolonne1_meny li.version 
         { 
@@ -829,8 +834,13 @@ html[xmlns] #nav {
         border-radius-topright: 5px;
         text-shadow: 0px 1px 0 #eee;
 	}
+        
+#kolonne1_meny li.version:first-child 
+        {
+        margin-top:0px;
+        }
 
-	#kolonne1_meny li.header:first-child { margin-top:0px; }
+	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
 
 	#kolonne1_meny li a {display:block;padding:10px 22px 10px 15px; line-height: 1.1em; background:#FAFAFA; text-decoration:none; border-left:2px solid #ddd;
