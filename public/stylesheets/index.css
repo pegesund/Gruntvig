@@ -836,9 +836,9 @@ html[xmlns] #nav {
         margin-top:0px;
 	}
    
-#kolonne1_meny li:first-child
+#kolonne1_meny li.version:first-child
         {
-        color: burlywood;    
+        color: #666;    
         }
 
 	
