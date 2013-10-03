@@ -840,6 +840,11 @@ html[xmlns] #nav {
         {
         color: #666;    
         }
+   
+#kolonne1_meny li.version
+        {
+        color: blue;    
+        }
 
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
