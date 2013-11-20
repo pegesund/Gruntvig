@@ -794,7 +794,7 @@ html[xmlns] #nav {
 
 #kolonne1_meny li.header 
         { 
-        color:#666; 
+        color:red; 
         font-family: georgia, garamond, serif; 
         padding: 11px 15px 10px 15px; 
         background: #ddd; 
@@ -856,7 +856,7 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 		#kolonne1_meny li a.selected:hover {background: #fff url(../img/raquo.png) no-repeat 93% 51%; color: #555;}
 
 
-
+/*KSR hertil*/
 	#kolonne1_meny li a:hover { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; color:red;}/*#4d93bc */
 
 	/* Kolonne 1 (hovedinnhold) */
