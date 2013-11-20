@@ -532,6 +532,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	border-radius-bottomright: 0px;
 	border-radius-bottomleft: 0px;
 	border:none;
+        color: red;
 
 }
 
@@ -794,7 +795,7 @@ html[xmlns] #nav {
 
 #kolonne1_meny li.header 
         { 
-        color:red; 
+        color:#666; 
         font-family: georgia, garamond, serif; 
         padding: 11px 15px 10px 15px; 
         background: #ddd; 
