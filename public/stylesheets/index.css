@@ -552,7 +552,7 @@ ul#nav li:first-child ul {
 
 ul#nav li.with_dropdown:first-child ul li 
         {
-	width: 385px;
+	width: 130px;
         float:left;
         }
 
