@@ -857,7 +857,8 @@ border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat
 
 
 /*KSR hertil*/
-	#kolonne1_meny li a:hover { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; color:red;}/*#4d93bc */
+#kolonne1_meny li a:hover 
+    { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important;}/*#4d93bc */
 
 	/* Kolonne 1 (hovedinnhold) */
 
