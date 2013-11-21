@@ -1438,17 +1438,14 @@ h1.subtitle { margin-left: 0px !important; }
 
 /* Kolofon */ 
 
-#kolonne1_meny li#kolofon { line-height: 19px; padding: 20px; width: 184px; background: #fff; }
-
-#kolonne1_meny li.kolofon
+#kolonne1_meny li #kolofon_link:link 
         {
-        padding: 5px; 
+        padding: 0; 
         margin: 0; 
         border: 0; 
         display: inline; 
         background: #fff;
         text-decoration: none;
-        border: 0px solid blue;
         }
 
 #kolonne1_meny li #kolofon_link:hover 
