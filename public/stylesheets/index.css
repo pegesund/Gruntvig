@@ -828,7 +828,7 @@ html[xmlns] #nav {
 
 #kolonne1_meny li.version 
         { 
-         
+        color: #666; 
         font-family: georgia, garamond, serif; 
         padding: 11px 15px 10px 15px; 
         background: #ddd; 
@@ -848,7 +848,7 @@ html[xmlns] #nav {
    
 #kolonne1_meny li.version:first-child
         {
-        color: #666;    
+        color: red;    
         }
    
 #kolonne1_meny li.version
