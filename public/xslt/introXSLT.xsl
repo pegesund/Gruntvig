@@ -17,13 +17,10 @@
         <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
         <script type="text/javascript">
 function blank(target, loc, x, y) {
-    if ( !x) { x= "675"; }
-    if ( !y) { y= screen.availHeight-100; }
-    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=no,titlebar=no,location=yes",true);
-    w.focus();
-    return false;
-    }
+  alert( "Under reconstruction" );
+            }
         </script>
+
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
