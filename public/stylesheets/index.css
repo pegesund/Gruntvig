@@ -818,7 +818,7 @@ html[xmlns] #nav {
         -webkit-border-top-right-radius: 5px;
         -moz-border-radius-topright: 5px;
         border-radius-topright: 5px;
-        text-shadow: 0px 1px 0 #eee;
+        text-shadow: 0px 1px 0 red;
 	}
         
 #kolonne1_meny li.header:first-child 
@@ -826,7 +826,7 @@ html[xmlns] #nav {
         margin-top:0px;
         }
 
-/* kolofon START */ 
+/* kolofonboks på forsiden START */ 
 
 #kolonne1_meny li #kolofon_link:link 
         {
@@ -878,7 +878,7 @@ html[xmlns] #nav {
         color: #666;    
         }    
 
-/* kolofon END */
+/* kolofonboks på forsiden END */
 
 #kolonne1_meny li a
         {
