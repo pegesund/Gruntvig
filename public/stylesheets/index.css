@@ -786,7 +786,7 @@ html[xmlns] #nav {
 
 	#kolonne1_meny {margin:0px 0; font-size:1.6em;}
         
-#kolonne1_meny li, #kolonne1_menu li.kolofon 
+#kolonne1_meny li, kolonne1_menu li.kolofon 
         {
         margin:0px 0;
         float:left; 
@@ -859,7 +859,7 @@ html[xmlns] #nav {
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
 
-#kolonne1_meny li a 
+#kolonne1_meny li a, kolonne1_menu li.kolofon 
         {
         display:block;
         padding:10px 22px 10px 15px; 
