@@ -848,7 +848,7 @@ html[xmlns] #nav {
          text-decoration: none; 
         }      
         
-#kolonne1_meny li.header li.kolofon
+#kolonne1_meny li.kolofon
         { 
         color: #666; 
         font-family: georgia, garamond, serif; 
@@ -907,7 +907,7 @@ li.kolofon
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
         
-	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:#eee; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
+	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:red; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
 		#kolonne1_meny li a.selected {color:#555; background: #fff url(../img/raquo.png) no-repeat 93% 51%;}
 		#kolonne1_meny li a.selected:hover {background: #fff url(../img/raquo.png) no-repeat 93% 51%; color: #555;}
 
