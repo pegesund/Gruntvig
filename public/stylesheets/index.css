@@ -503,7 +503,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	margin: 0;
 	background: #102c0e; /* #192a43;*/
 	-webkit-border-radius: 7px;
-	border-radius: 15px;
+	border-radius: 7px;
 	text-shadow: 0 1px 1px rgba(0,0,0, .3);
         }
 
