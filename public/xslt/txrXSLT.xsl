@@ -14,6 +14,7 @@
     2011.06.27: sic and supp, note element
     2011.03.21
     2011.03.18  
+    KK 2013-11-21: ref biblDesc
 -->
 
     <xsl:template match="TEI:TEI">
@@ -188,7 +189,7 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='biblDesc'">
-                    <a href="biblio/{@target}" target="_blank" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}">
+                    <a href="biblio/{@target}" title="Bibliografisk beskrivelse af XXX {//TEI:seriesStmt/TEI:title/text()}" onclick="return blank('biblDesc',this.href)">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
