@@ -801,7 +801,6 @@ html[xmlns] #nav {
 	#kolonne1_meny li ul li { border-top: 1px solid #fff; border-bottom: 1px solid #ddd; font-size:0.95em;}
 	#kolonne1_meny li ul li:first-child { border-top:0;}
 	#kolonne1_meny li ul li:last-child { border-bottom:0;}
-	#kolonne1_meny li ul li.kolofon:last-child { border-bottom:0;}
 
 #kolonne1_meny li.header
         { 
@@ -847,7 +846,7 @@ html[xmlns] #nav {
          display: inline; 
          background: #fff;
          text-decoration: none; 
-        }      
+        } 
         
 #kolonne1_meny li.kolofon
         { 
@@ -879,6 +878,11 @@ li.kolofon
 #kolonne1_meny li.kolofon:first-child
         {
         margin-top:0px;
+        }    
+        
+#kolonne1_meny li.kolofon:last-child 
+        { 
+        border-bottom:0;
         }
    
 #kolonne1_meny li.kolofon
