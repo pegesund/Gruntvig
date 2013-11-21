@@ -1438,7 +1438,7 @@ h1.subtitle { margin-left: 0px !important; }
         display: inline; 
         background: #fff;
         text-decoration: none;
-        border: 1px solid blue;
+        border: 0px solid blue;
         }
 
 #kolonne1_meny li #kolofon_link:hover 
