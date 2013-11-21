@@ -848,12 +848,12 @@ html[xmlns] #nav {
    
 #kolonne1_meny li.version:first-child
         {
-        color: red;    
+        color: #666;    
         }
    
 #kolonne1_meny li.version
         {
-        color: #666;    
+        color: red;    
         }
 
 #kolonne1_meny li a
