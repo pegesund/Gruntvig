@@ -786,7 +786,7 @@ html[xmlns] #nav {
 
 	#kolonne1_meny {margin:0px 0; font-size:1.6em;}
         
-#kolonne1_meny li, kolonne1_menu li.kolofon 
+#kolonne1_meny li, #kolonne1_menu li.kolofon 
         {
         margin:0px 0;
         float:left; 
@@ -859,8 +859,18 @@ html[xmlns] #nav {
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
 
-	#kolonne1_meny li a {display:block;padding:10px 22px 10px 15px; line-height: 1.1em; background:#FAFAFA; text-decoration:none; border-left:2px solid #ddd;
-border-right:2px solid #ddd; background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;}
+#kolonne1_meny li a 
+        {
+        display:block;
+        padding:10px 22px 10px 15px; 
+        line-height: 1.1em;
+        background:#FAFAFA; 
+        text-decoration:none;
+        border-left:2px solid #ddd;
+        border-right:2px solid #ddd; 
+        background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;
+        }
+        
 	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:#eee; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
 		#kolonne1_meny li a.selected {color:#555; background: #fff url(../img/raquo.png) no-repeat 93% 51%;}
 		#kolonne1_meny li a.selected:hover {background: #fff url(../img/raquo.png) no-repeat 93% 51%; color: #555;}
