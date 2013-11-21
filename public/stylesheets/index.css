@@ -559,7 +559,7 @@ ul#nav li.with_dropdown:first-child ul li
 #nav li:hover > a {
 	background:#fff;
 	color: #2c2c2c;
-	text-shadow: 0 0px 0px rgba(1,0,0, 0);
+	text-shadow: 0 0px 0px rgba(0,0,0, 0);
 }
 
 #nav li.with_dropdown:hover > a {
