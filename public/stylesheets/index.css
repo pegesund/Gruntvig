@@ -871,7 +871,7 @@ html[xmlns] #nav {
         background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;
         }
 
-#kolonne1_meny li.kolofon
+li.kolofon
         {
         display: block;
         padding:10px 22px 10px 15px; 
