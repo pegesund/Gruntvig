@@ -848,7 +848,7 @@ html[xmlns] #nav {
          text-decoration: none; 
         }      
         
-#kolonne1_meny li.version 
+#kolonne1_meny li.kolofon
         { 
         color: #666; 
         font-family: georgia, garamond, serif; 
@@ -868,12 +868,12 @@ html[xmlns] #nav {
         margin-top:0px;
 	}
    
-#kolonne1_meny li.version:first-child
+#kolonne1_meny li.kolofon:first-child
         {
         margin-top:0px;
         }
    
-#kolonne1_meny li.version
+#kolonne1_meny li.kolofon
         {
         color: #666;    
         }    
