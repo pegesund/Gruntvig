@@ -15,11 +15,6 @@
     
     <xsl:template match="TEI:TEI"> 
         <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
-        <script type="text/javascript">
-function blank(target, loc, x, y) {
-  alert( "Under reconstruction" );
-            }
-        </script>
 
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
