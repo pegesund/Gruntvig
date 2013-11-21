@@ -903,16 +903,15 @@ li.kolofon
         border-right:2px solid #ddd; 
         background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;
         }
-
-	
-	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
         
-	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:red; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
-		#kolonne1_meny li a.selected {color:#555; background: #fff url(../img/raquo.png) no-repeat 93% 51%;}
-		#kolonne1_meny li a.selected:hover {background: #fff url(../img/raquo.png) no-repeat 93% 51%; color: #555;}
+	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
+	#kolonne1_meny li ul li a {display:block; padding:10px 12px 8px 30px; background:#eee; background: url(../img/meny_bullet.png) 17px 15px no-repeat;}
+	#kolonne1_meny li a.selected {color:#555; background: #fff url(../img/raquo.png) no-repeat 93% 51%;}
+	#kolonne1_meny li a.selected:hover {background: #fff url(../img/raquo.png) no-repeat 93% 51%; color: #555;}
 
 
 /*KSR hertil*/
+
 #kolonne1_meny li a:hover 
     { background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important;}/*#4d93bc */
 
