@@ -859,12 +859,24 @@ html[xmlns] #nav {
 	
 	#kolonne1_meny li.last { border-bottom: 2px solid #ddd; }
 
-#kolonne1_meny li a, kolonne1_menu li.kolofon 
+#kolonne1_meny li a
         {
         display:block;
         padding:10px 22px 10px 15px; 
         line-height: 1.1em;
         background:#FAFAFA; 
+        text-decoration:none;
+        border-left:2px solid #ddd;
+        border-right:2px solid #ddd; 
+        background: #FAFAFA url(../img/gradient.png) repeat-x 0 -120px;
+        }
+
+#kolonne1_menu li.kolofon 
+        {
+        display:block;
+        padding:10px 22px 10px 15px; 
+        line-height: 1.1em;
+        background:red; 
         text-decoration:none;
         border-left:2px solid #ddd;
         border-right:2px solid #ddd; 
