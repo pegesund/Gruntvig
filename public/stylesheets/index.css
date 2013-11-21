@@ -818,7 +818,7 @@ html[xmlns] #nav {
         -webkit-border-top-right-radius: 5px;
         -moz-border-radius-topright: 5px;
         border-radius-topright: 5px;
-        text-shadow: 0px 1px 0 red;
+        text-shadow: 0px 1px 0 #eee;
 	}
         
 #kolonne1_meny li.header:first-child 
@@ -853,7 +853,7 @@ html[xmlns] #nav {
         color: #666; 
         font-family: georgia, garamond, serif; 
         padding: 11px 15px 10px 15px; 
-        background: #ddd; 
+        background: blue; 
         width:195px; 
         text-transform:uppercase; 
         font-size:0.9em; 
