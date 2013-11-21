@@ -1431,7 +1431,7 @@ h1.subtitle { margin-left: 0px !important; }
         border: 1px solid red;
         }
 
-#kolonne1_meny li #kolofon
+#kolonne1_meny li.kolofon
         {
         padding: 0; 
         margin: 0; 
