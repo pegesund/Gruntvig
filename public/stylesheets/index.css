@@ -848,7 +848,7 @@ html[xmlns] #nav {
    
 #kolonne1_meny li.version:first-child
         {
-        color: #666;    
+        margin-top:0px;
         }
    
 #kolonne1_meny li.version
