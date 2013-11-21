@@ -826,6 +826,28 @@ html[xmlns] #nav {
         margin-top:0px;
         }
 
+/* kolofon START */ 
+
+#kolonne1_meny li #kolofon_link:link 
+        {
+        padding: 0; 
+        margin: 0; 
+        border: 0; 
+        display: inline; 
+        background: #fff;
+        text-decoration: none;
+        }
+
+#kolonne1_meny li #kolofon_link:hover 
+        { 
+         padding: 0; 
+         margin: 0; 
+         border: 0; 
+         display: inline; 
+         background: #fff;
+         text-decoration: none; 
+        }      
+        
 #kolonne1_meny li.version 
         { 
         color: #666; 
@@ -854,7 +876,9 @@ html[xmlns] #nav {
 #kolonne1_meny li.version
         {
         color: #666;    
-        }
+        }    
+
+/* kolofon END */
 
 #kolonne1_meny li a
         {
@@ -1434,30 +1458,8 @@ h1.subtitle { margin-left: 0px !important; }
     #veiledning_tekst span.lineThrough { text-decoration: line-through;}
     #veiledning_tekst span.underLine { text-decoration: underline;}
     #veiledning_tekst span.shading { background: url('../img/stripe_test2_h.png') repeat 0 0;  }
-    #veiledning_tekst span.immediate { color: #4DBC4D; }
-
-/* Kolofon */ 
-
-#kolonne1_meny li #kolofon_link:link 
-        {
-        padding: 0; 
-        margin: 0; 
-        border: 0; 
-        display: inline; 
-        background: #fff;
-        text-decoration: none;
-        }
-
-#kolonne1_meny li #kolofon_link:hover 
-        { 
-         padding: 0; 
-         margin: 0; 
-         border: 0; 
-         display: inline; 
-         background: #fff;
-         text-decoration: none; 
-        }        
-       
+    #veiledning_tekst span.immediate { color: #4DBC4D; }      
+        
     #kolofon_page { width:100%; }
     #kolofon_page h2 { font-size: 1.5em; }
     
