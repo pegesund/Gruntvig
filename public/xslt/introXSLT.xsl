@@ -385,8 +385,7 @@ function blank(target, loc, x, y) {
                         </xsl:attribute>
                     <xsl:apply-templates/>
                     </span>
-                </xsl:when>
-                <!--                
+                </xsl:when>                
                 <xsl:when test="@type='docOut'">
                     <span class="docout">
                         <xsl:attribute name="name">
@@ -395,7 +394,6 @@ function blank(target, loc, x, y) {
                         <xsl:apply-templates/>         
                     </span>
                 </xsl:when>
-                -->
                 <xsl:when test="@type='epiText'">
                     <a class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
