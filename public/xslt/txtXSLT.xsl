@@ -53,10 +53,10 @@
                                         </td>
                                         <td class="source">
                                             <xsl:choose>
-                                                <xsl:when test="@rend='A'">
+                                                <xsl:when test="@rend='A' and @rned>='B'">
                                                     <xsl:apply-templates select="."/>
                                                     <xsl:text> (SJ:</xsl:text>
-                                                    <xsl:apply-templates select="//TEI:idno[@type]"/>
+                                                    <xsl:apply-templates select="@n"/>
                                                     <xsl:text>)</xsl:text>
                                                 </xsl:when>
                                                 <xsl:otherwise>
