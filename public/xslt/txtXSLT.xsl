@@ -52,8 +52,17 @@
                                             <xsl:value-of select="@rend"/>
                                         </td>
                                         <td class="source">
-                                            <xsl:apply-templates select="."/>
-                                            <xsl:text> (SJ:</xsl:text><xsl:apply-templates select="//TEI:idno[@type]"/><xsl:text>)</xsl:text>
+                                            <xsl:choose>
+                                                <xsl:when test="@rend='A'">
+                                                    <xsl:apply-templates select="."/>
+                                                    <xsl:text> (SJ:</xsl:text>
+                                                    <xsl:apply-templates select="//TEI:idno[@type]"/>
+                                                    <xsl:text>)</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:apply-templates select="."/>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                         </td>
                                     </table>
                                 </div>
