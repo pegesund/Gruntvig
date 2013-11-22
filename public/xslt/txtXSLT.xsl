@@ -53,7 +53,7 @@
                                         </td>
                                         <td class="source">
                                             <xsl:choose>
-                                                <xsl:when test="@rend='A' and @rned>='B'">
+                                                <xsl:when test="@rend='A' or @rned>='B'">
                                                     <xsl:apply-templates select="."/>
                                                     <xsl:text> (SJ:</xsl:text>
                                                     <xsl:apply-templates select="@n"/>
