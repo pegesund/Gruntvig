@@ -53,6 +53,7 @@
                                         </td>
                                         <td class="source">
                                             <xsl:apply-templates select="."/>
+                                            <xsl:text> (SJ:</xsl:text><xsl:apply-templates select="//TEI:idno[@type]"/><xsl:tetxt>)</xsl:tetxt>
                                         </td>
                                     </table>
                                 </div>
