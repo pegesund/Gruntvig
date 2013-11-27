@@ -157,13 +157,11 @@ public class Chapter extends GenericModel {
                     if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
-                    }
-                    
+                    }                    
                     if (node.getAttributes().getNamedItem("rend") != null) {
                         name = node.getAttributes().getNamedItem("rend").getNodeValue();
                         System.out.println("Chapter id found: " + name);
-                    }
-                    
+                    }                    
                     Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
                     chapter.save();
                     // System.out.println("Chapter: " + i + nodeToString(node));
