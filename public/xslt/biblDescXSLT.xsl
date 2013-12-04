@@ -91,12 +91,12 @@
     <xsl:template match="TEI:head">
         <a>
             <xsl:attribute name="id">
-                <xsl:text>A</xsl:text>
+                <xsl:text>A HAT</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a href="{#main}" class="toc" id="{@xml:id}">
+            <a href="#main" class="toc" id="{@xml:id}">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
