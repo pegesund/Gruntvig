@@ -91,7 +91,7 @@
     <xsl:template match="TEI:head">
         <a>
             <xsl:attribute name="id">
-                <xsl:text>A HAT</xsl:text>
+                <xsl:text>A</xsl:text>
                 <xsl:number level="multiple" count="TEI:div"/>
             </xsl:attribute>
         </a>
