@@ -54,7 +54,14 @@ blockquote, q {
 	quotes: "" "";
 }
 
-body {font-size: 62.5%; color: #555; font-family: georgia, garamond, serif; }
+/* styler teksten i biblDesc KSR */
+
+body 
+        {
+        color: #555;
+        font-family: georgia, garamond, serif;
+        font-size: 62.5%;
+        }
 
 div[id=tekst_innhol] * p { font-size: 1em; } /* fix font size i Asset */
 p {font-size: 1.7em; }
