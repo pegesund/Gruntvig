@@ -16,7 +16,7 @@
         
                 <div class="head">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        <div><xsl:text>Bibliografisk beskrivelse af</xsl:text></div>
+                        <div><xsl:text>ccTekstredegørelse til</xsl:text></div>
                         <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                         <div class="author">
                             <xsl:text>ved </xsl:text>
@@ -36,7 +36,7 @@
                         </div>
                     </xsl:if>                    
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']">
-                        <div><xsl:text>Bibliografisk beskrivelse af</xsl:text></div>
+                        <div><xsl:text>Tekstredegørelse til</xsl:text></div>
                         &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                         <div class="author"><xsl:text>ved </xsl:text>
                             <xsl:for-each select="//TEI:titleStmt/TEI:author">
@@ -96,7 +96,7 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a href="{@name}" class="toc" id="{@xml:id}">
+            <a href="#main" class="toc" id="{@xml:id}">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
