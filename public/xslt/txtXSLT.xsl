@@ -57,9 +57,11 @@
                                             <xsl:choose>
                                                 <xsl:when test="@rend='A' or @rend='B' and @n">
                                                     <xsl:apply-templates select="."/>
+                                                    <span title="hat">
                                                     <xsl:text> (SJ:</xsl:text>
                                                     <xsl:apply-templates select="@n"/>
                                                     <xsl:text>)</xsl:text>
+                                                    </span>
                                                 </xsl:when>
                                                 <xsl:otherwise>
                                                     <xsl:apply-templates select="."/>
