@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <meta http-equiv="Pragma" content="no-cache">
+<!-- Pragma content set to no-cache tells the browser not to cache the page
+     This may or may not work in IE -->
+ <meta http-equiv="expires" content="0">   
+<title>Grundtvigs Værker</title>
+<base href="${play.configuration.getProperty('play.baseurl')}/">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+<link href="css/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="public/javascripts/jquery.mousewheel.min.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.iviewer.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.cluetip.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.hoverIntent.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.cookie.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.scrollTo-min.js" ></script>
+<script type="text/javascript" src="public/javascripts/gv.js" ></script>
+
+<link rel="stylesheet" href="public/stylesheets/jquery.iviewer.css" />
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/varListCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/msCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/txrCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/introCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/txtCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/comCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/mythCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/varCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/placeCSS.css" rel="stylesheet" type="text/css" />
+
+
+<link href="css/bible.css" rel="stylesheet" type="text/css" />
+<link href="css/varListCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/bookInventoryCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/biblDescCSS.css" rel="stylesheet" type="text/css" />
+
+<link href="css/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+		resize_window = function() {
+
+			// finn høyde på nettleservinduet
+			var window_height = $(window).height();
+                        var window_width = $(window).width();
+
+                     
+			hovedtekst_outer_offset = 140; // hvor mye mindre enn window_height de ytre boksene skal være
+			høyre_outer_offset = 137; // hvor mye mindre enn window_height de ytre boksene skal være
+
+			$("#hovedtekst").height(window_height - hovedtekst_outer_offset);
+			$("#høyre").height(window_height - høyre_outer_offset);
+                        $(".tabReader").height(window_height - høyre_outer_offset - 0);
+			$("#ny_kolonne_bar").height(window_height - høyre_outer_offset - 3);
+
+			hovedtekst_inner_offset = 257; // hvor mye mindre enn window_height de indre boksene skal være
+			høyre_inner_offset = 198; // hvor mye mindre enn window_height de indre boksene skal være
+
+                        if ($("#hovedtekst_select").css('display') == 'none') {
+                            
+                            $("#tekst_innhold").height(window_height - hovedtekst_inner_offset);
+                            
+                        } else {
+                            
+                          $("#tekst_innhold").height(window_height - hovedtekst_inner_offset - 41);
+                        }
+
+			$("#høyre_innhold").height(window_height - høyre_inner_offset);
+                        $(".ui-tabs-panel").height(window_height - høyre_inner_offset - 8 );
+                        $(".variantContent").height(window_height - høyre_inner_offset - 39 );
+                        $(".innledningContent").parent().height(window_height - høyre_inner_offset - 8 );
+                        $(".manusContent").height(window_height - høyre_inner_offset - 61 );
+                        $(".faksimileContent").height(window_height - høyre_inner_offset - 15 );
+                        $(".faksimile_frame").height(window_height - høyre_inner_offset + 24 );
+                        
+
+                       //resize html element so it fills the entire width
+                       
+                       var test =  $('#main .container').width();
+                     
+                       if(test > window_width) {$('html').width(test + 50);} // if we need to make the html bigger
+                         else {$('html').css('width', '100%');} // or if it needs to be smaller or stay the same
+
+                  };
+
+
+                var selectChapter = function() {
+
+                }
+
+		$(document).ready(function() {
+
+			// resize layout når siden laster
+			resize_window();
+                        $('.chapterSelector').change(function() {
+                            window.location = "/tekstvisning/${asset?.id}/" + $(this).val();
+                        });
+
+                        $('.chapterSelector').val("${chapter?.num}");
+
+                        // searchbox focus
+
+
+                        $('.clearSearch').bind('focus', function(){
+                            if( this.value == this.defaultValue ) {
+                                this.value = "";
+                            }
+                            $(this).css('color', '#222');
+                        });
+                        $('.clearSearch').bind('blur', function(){
+                            if( !this.value.length ) {
+                                this.value = this.defaultValue;
+                            }
+                            $(this).css('color', '#aaa');
+                        });
+                        
+
+
+                  });
+
+        $(window).resize(function() {
+
+                // resize layout når nettleserens vindu endrer størrelse
+                resize_window();
+
+        });
+
+	</script>
+        <link rel="shortcut icon" href="/img/gv.png" />
+
+</head>
+<body>
+    #{doLayout /}
+</body>
+</html>  
