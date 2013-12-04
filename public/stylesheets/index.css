@@ -54,7 +54,7 @@ blockquote, q {
 	quotes: "" "";
 }
 
-body {font-size: 62.5%; color: #555; font-family: "Myriad pro", arial, sans-serif; }
+body {font-size: 62.5%; color: #555; font-family: georgia, garamond, serif; }
 
 div[id=tekst_innhol] * p { font-size: 1em; } /* fix font size i Asset */
 p {font-size: 1.7em; }
