@@ -16,7 +16,7 @@
         
                 <div class="head">
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']">
-                        <div><xsl:text>Tekstredegørelse til</xsl:text></div>
+                        <div><xsl:text>Bibliografisk beskrivelse af</xsl:text></div>
                         <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                         <div class="author">
                             <xsl:text>ved </xsl:text>
