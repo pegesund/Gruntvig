@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-<!-- Fjern ramme om biblDesc, som vises i separat vindue
+<!-- Ingen ramme om biblDesc, som vises i separat vindue
      KK 2013.12.04 -->
 
 <script>
@@ -19,39 +19,16 @@
 <div id="main">
 
 	<div class="container" id="underside_innhold">
-    <!--
 
-		<div id="submenu">
+            <div id="kolonne1_bred">
 
-		</div>
+                <div id="liste" class="biblio">
 
-<div class="kolonne1">
-
-		<ul id="kolonne1_meny">
-
-			<li class="header">Registre</li>
-                                
-                                <li><a href="../reg">Registranten</a></li>				
-				<li><a href="../myter">Mytologisk register</a></li>
-				<li><a href="../personer">Personregister</a></li>
-				<li class=""><a href="../steder">Stedregister</a></li>
-                                <li class=""><a href="../bibel">Bibelregister</a></li>
-                                <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
-
-
-		</ul>
-
-	</div>
--->
-	<div id="kolonne1_bred">
-
-            <div id="liste" class="biblio">
-
-                ${asset.html.raw()}                
+                    ${asset.html.raw()}                
 
 		</div>
 
-	</div>
+            </div>
 
 	</div>
 </div>
