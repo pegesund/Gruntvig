@@ -312,7 +312,21 @@ a.returnTop
 .ui-tabs .ui-tabs-nav li:hover {background-color: #FAFAFA; border: 1px solid #d6d6d6;}
 .ui-tabs .ui-tabs-panel { overflow:auto; padding:1em 1.2em; background: #FAFAFA; height:300px; border: 1px solid #d6d6d6; border-top: 0;}s
 .ui-tabs { padding:0;}
-.ui-widget-content { background:none; background-color: transparent; border:0; color:#222222; }
+
+/* style af kolonne til docOut KSR */
+
+.ui-widget-content
+        {
+        background:none; 
+        background-color: transparent; 
+        border:0; 
+        color:#222222; 
+        font-family: georgia, garamond, serif;
+        font-size: 100%;
+        line-height: 1.7em;
+        text-align: justify;
+        }
+
 .ui-tabs .ui-tabs-nav li a { float:left; font-size:13px; padding:9px 8px; text-decoration:none; color:#fff;}
 .ui-tabs .ui-tabs-nav li a:hover { color:#444;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected {padding-bottom: 0; background: #FAFAFA; border: 1px solid #d6d6d6; }
@@ -723,7 +737,7 @@ html[xmlns] #nav {
 #høyre_toppmeny * {
  padding:0;
  margin:0;
- font-family: Arial, myriad pro, sans-serif;
+ font-family: sans-serif;
  font-size: 14px;
  text-transform: normal;
  }
