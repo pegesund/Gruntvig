@@ -194,11 +194,9 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='web' and @target">
-                    <xsl:text>&lt;</xsl:text>
                     <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
-                    <xsl:text>&gt;</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='image'">
                     <!--<a href="{@target}">-->
