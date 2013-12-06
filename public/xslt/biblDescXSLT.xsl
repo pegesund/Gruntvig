@@ -96,7 +96,7 @@
             </xsl:attribute>
         </a>
         <div class="head{@rend}">
-            <a href="#main" class="toc" id="{@xml:id}">
+            <a href="#mai" class="toc" id="{@xml:id}">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
