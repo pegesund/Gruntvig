@@ -143,29 +143,32 @@ public class Chapter extends GenericModel {
             XPathExpression expr = xpath.compile("//div[@class='frontChapter']|//div[@class='chapter']|//div[@class='kolofonBlad']|//div[@class='titlePage' and not(ancestor::div[@class='frontChapter'])]");
 
             Object result = expr.evaluate(doc, XPathConstants.NODESET);
-   NodeList nodes = (NodeList) result;
-   System.out.println("Number of chapters: " + nodes.getLength());
-   // System.out.println("Txt-content: " + asset.html);
-   if (nodes.getLength() > 0) {
-      // System.out.println("xhtml: " + asset.html);
-      for (int i = 0; i < nodes.getLength(); i++) {
-         Node node = nodes.item(i);
-         // System.out.println("Chapter node: " + Helpers.nodeToString(node));
-         // System.out.println("--------------------------------------------");
-         String name = "- afsnit mangler titel -";
-         if (i == nodes.getLength()-1) name = "[Kolofon]";
-         if (node.getAttributes().getNamedItem("name") != null) {
-            name = node.getAttributes().getNamedItem("name").getNodeValue();
-            System.out.println("Chapter id found: " + name);
-         }                    
-         if (node.getAttributes().getNamedItem("rend") != null) {
-            name = node.getAttributes().getNamedItem("rend").getNodeValue();
-            System.out.println("Chapter id found: " + name);
-         }                    
-         Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
-         chapter.save();
-         // System.out.println("Chapter: " + i + nodeToString(node));
-      }
+            NodeList nodes = (NodeList) result;
+            System.out.println("Number of chapters: " + nodes.getLength());
+            // System.out.println("Txt-content: " + asset.html);
+            if (nodes.getLength() > 0) {
+                // System.out.println("xhtml: " + asset.html);
+                for (int i = 0; i < nodes.getLength(); i++) {
+                    Node node = nodes.item(i);
+                    // System.out.println("Chapter node: " + Helpers.nodeToString(node));
+                    // System.out.println("---------------------------------------------------");
+                    String name = "- Afsnit - " + (i + 0);
+                    if (i == 0) name = "Kolofon";
+                    if (node.getAttributes().getNamedItem("name") != null) {
+                        name = node.getAttributes().getNamedItem("name").getNodeValue();
+                        System.out.println("Chapter id found: " + name);
+                    if (i == 0) name = "HAT";
+                    }                    
+                    
+                    if (node.getAttributes().getNamedItem("rend") != null) {
+                        name = node.getAttributes().getNamedItem("rend").getNodeValue();
+                        System.out.println("Chapter id found: " + name);
+                    }                    
+                    
+                    Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
+                    chapter.save();
+                    // System.out.println("Chapter: " + i + nodeToString(node));
+                }
             } else {
                 System.out.println("No chapters found, using hole file as chapter 1");
                 Chapter chapter = new Chapter("Afsnit 1", 0, asset, nodeToString(doc.getDocumentElement()));
