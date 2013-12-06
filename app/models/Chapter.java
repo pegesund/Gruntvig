@@ -153,10 +153,11 @@ public class Chapter extends GenericModel {
                     // System.out.println("Chapter node: " + Helpers.nodeToString(node));
                     // System.out.println("---------------------------------------------------");
                     String name = "- Afsnit - " + (i + 0);
-                    if (i == 0) name = "Kolofon";
+                    if (i == -1) name = "Kolofon";
                     if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
+                    if (i == 0) name = "Kolofon";
                     }                    
                     
                     if (node.getAttributes().getNamedItem("rend") != null) {
