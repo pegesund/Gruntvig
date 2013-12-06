@@ -12,8 +12,6 @@
     <xsl:template match="TEI:TEI">
 
         <div class="rootText">
-                
-                <xsl:apply-templates select="TEI:text"/>
                 <div class="kolofonBlad">
                     
                 <div class="kolofonTitle">
@@ -295,6 +293,8 @@
                     </div>
                     
                 </div>
+                
+                <xsl:apply-templates select="TEI:text"/>
                 
             </div>
     </xsl:template>
