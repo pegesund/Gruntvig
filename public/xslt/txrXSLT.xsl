@@ -189,9 +189,9 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='biblDesc'">
-                    <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
+                    <button href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
                         <xsl:apply-templates/>
-                    </a>
+                    </button>
                 </xsl:when>
                 <xsl:when test="@type='web' and @target">
                     <a href="{@target}" target="_blank">
