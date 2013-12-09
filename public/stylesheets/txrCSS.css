@@ -363,7 +363,7 @@ a.docIn:hover
 
 /* table START */
 
-.mainTxr table.msDesc, .mainTxr table.textualCriticism, .mainTxr table.printDesc, .mainTxr table.contentDesc
+.mainTxr table.msDesc, .mainTxr table.printDesc, .mainTxr table.contentDesc
         {
         font-size: 14px;
         line-height: 150%;
