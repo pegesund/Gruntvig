@@ -380,9 +380,9 @@ a.docIn:hover
         line-height: 150%;
         border-collapse: collapse;
         empty-cells: show;
-        margin: 2em 0em 2em 1em;
+        margin: 2em 0em 2em 0em;
         vertical-align: top;
-        width: 27.5em;
+        width: 100%;
         }
 
 .mainTxr table.textualCriticism tr:first-child
