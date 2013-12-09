@@ -371,7 +371,29 @@ a.docIn:hover
         empty-cells: show;
         margin: 2em 0em 2em 1em;
         vertical-align: top;
-        width: 38em;
+        width: 30em;
+        }
+
+.mainTxr table.textualCriticism
+        {
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 27.5em;
+        }
+
+.mainTxr table.textualCriticism tr:first-child
+        {
+        background-color: #DDDDDD;
+        font-weight: bold;
+        }
+
+.mainTxr table.textualCriticism td:first-child
+        {
+        width: 20%;
         }
         
 .mainTxr table, .mainTxr table.msDesc, .mainTxr table.textualCriticism .mainTxr tr, .mainTxr td
