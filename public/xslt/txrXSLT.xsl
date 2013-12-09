@@ -189,7 +189,7 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='biblDesc'">
-                    <a href="biblio/{@target}" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}" onclick="return blank('biblDesc',this.href)">
+                    <a href="biblio/{@target}" title="Bibliografisk beskrivelse af {//TEI:seriesStmt/TEI:title/text()}" onclick="return blank('biblDesc',this.href), width='500px'">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
