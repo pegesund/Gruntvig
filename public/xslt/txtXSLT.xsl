@@ -38,7 +38,7 @@
                 <div class="kolofon">
                     <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
                     <xsl:text>version </xsl:text>
-                    <xsl:apply-templates select="//TEI:edition"/>
+                    <xsl:apply-templates select="//TEI:idno[@rend='content']"/>
                     <xsl:text>)</xsl:text>
                 </div>
                 
@@ -48,22 +48,24 @@
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table>
-                                        <td class="sigel">
-                                            <xsl:value-of select="@rend"/>
-                                        </td>
-                                        <td class="source">
-                                            <xsl:choose>
-                                                <xsl:when test="@rend='A' or @rend='B' and @n">
-                                                    <xsl:apply-templates select="."/>
-                                                    <xsl:text> (SJ:</xsl:text>
-                                                    <xsl:apply-templates select="@n"/>
-                                                    <xsl:text>)</xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:apply-templates select="."/>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </td>
+                                        <tr>
+                                            <td class="sigel">
+                                                <xsl:value-of select="@xml:id"/>
+                                            </td>
+                                            <td class="source">
+                                                <xsl:choose>
+                                                    <xsl:when test="@xml:id='A' or @xml:id='B' and @n">
+                                                        <xsl:apply-templates select="."/>
+                                                        <xsl:text> (SJ:</xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:apply-templates select="."/>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -76,7 +78,7 @@
                                     <div class="table">
                                         <table>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
+                                                <xsl:value-of select="@xml:id"/>
                                             </td>
                                             <td class="source">
                                                 <xsl:apply-templates select="."/>
