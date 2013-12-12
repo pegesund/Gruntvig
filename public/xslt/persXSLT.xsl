@@ -53,7 +53,7 @@
     </xsl:template>
     
     <xsl:template match="tei:note[@type='firstName']">
-        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original']"/>
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original' @type!='patronym']"/>
     </xsl:template>
     
     <xsl:template match="tei:note[@type='lastName']">
