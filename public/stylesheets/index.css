@@ -1470,6 +1470,10 @@ h1.subtitle { margin-left: 0px !important; }
  font-size: 2.8em;
 }
 
+.foreign {
+    font-size: 14px;
+}
+
 /* Veiledninger END */
 
     /* farger/stiler for veiledning til manuskriptvisning */
