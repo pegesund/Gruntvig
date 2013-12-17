@@ -78,7 +78,7 @@
                                     <div class="table">
                                         <table>
                                             <td class="sigel">
-                                                <xsl:value-of select="@xml:id"/>
+                                                <xsl:value-of select="@rend"/>
                                             </td>
                                             <td class="source">
                                                 <xsl:apply-templates select="."/>
