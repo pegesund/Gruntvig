@@ -29,7 +29,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:p">        
-        <div class="{@rend}">
+        <div class="p">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
