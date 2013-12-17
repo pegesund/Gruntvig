@@ -53,17 +53,17 @@
                                                 <xsl:value-of select="@rend"/>
                                             </td>
                                             <td class="source">
-                                                <xsl:choose>
+                                                <!--<xsl:choose>
                                                     <xsl:when test="@rend='A' or @rend='B' or @n">
                                                         <xsl:apply-templates select="."/>
                                                         <xsl:text> (SJ:</xsl:text>
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text>
                                                     </xsl:when>
-                                                    <xsl:otherwise>
+                                                    <xsl:otherwise>-->
                                                         <xsl:apply-templates select="."/>
-                                                    </xsl:otherwise>
-                                                </xsl:choose>
+                                                    <!--</xsl:otherwise>
+                                                </xsl:choose>-->
                                             </td>
                                         </tr>
                                     </table>
