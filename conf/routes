@@ -53,6 +53,7 @@ GET     /ajax/getFilenameFromId/{id}                          Ajax.getFilenameFr
 GET     /search                                               DoSearch.doSearch
 GET     /avanceret                                            DoSearch.avanceret
 GET     /tools                                                DoSearch.tools
+GET     /favicon.ico                                          staticDir:public/
 
 
 # Catch all
