@@ -53,7 +53,7 @@
             <xsl:if test="not($copy or parent::TEI:row/@rend='noSynch')">
                 <xsl:apply-templates select="parent::TEI:row/@synch"/>
             </xsl:if>
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='specify']"/>
+            <!--<xsl:apply-templates select="following-sibling::TEI:cell[@rend='specify']"/>-->
             <xsl:apply-templates select="parent::TEI:row/@select"/>
          </span>
           <div class="placeContent">
