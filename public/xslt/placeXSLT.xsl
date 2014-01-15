@@ -61,10 +61,10 @@
             <xsl:apply-templates select="following-sibling::TEI:cell[@rend='facts']"/>
           </div>
             <xsl:apply-templates select="document('placeH.xml')//TEI:placeName[@key=current()/parent::TEI:row/@xml:id]"/> 
-            <!-- <xsl:apply-templates select="//TEI:row[@synch=current()/parent::TEI:row/@xml:id]/TEI:cell[@rend='name']">
+            <xsl:apply-templates select="//TEI:row[@synch=current()/parent::TEI:row/@xml:id]/TEI:cell[@rend='name']">
                 <xsl:with-param name="copy" select="'yes'"/>
                 <xsl:sort select="translate(., 'æøåÆØÅ ', '{|}{|}')"/>
-            </xsl:apply-templates>-->
+            </xsl:apply-templates>
         </div>
     </xsl:template>
 
