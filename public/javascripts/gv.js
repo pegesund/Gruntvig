@@ -1,6 +1,6 @@
 // gv.js;
 //  (c) Karsten Kynde 2011-12-03
-//  til brug for Grundtvigs Værker
+//  til brug for Grundtvigs VÃ¦rker
 
 var minus= '&#x2013;';
 
@@ -16,3 +16,12 @@ function showhide( plus, id ) {
     plus.innerHTML= minus;
     }
   }
+
+// Visning af tekst i separat vindue, KK 2013-11-21
+function blank(target, loc, x, y) {
+    if ( !x) { x= "685"; }
+    if ( !y) { y= screen.availHeight-100; }
+    var w= window.open(target,loc,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=yes,titlebar=no,location=yes",true);
+    w.focus();
+    return false;
+    }
