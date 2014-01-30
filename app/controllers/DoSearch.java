@@ -71,6 +71,8 @@ public class DoSearch extends Application {
         lookfor= lucene;
         render(renderAssets, chapters, lookfor, totalHits);
       }
+      else
+        render()
     }
 
     
