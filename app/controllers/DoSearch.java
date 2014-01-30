@@ -26,6 +26,7 @@ public class DoSearch extends Application {
 
     
     public static void avanceret() {
+        System.out.println("Advanced search");
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
       if( lookfor!=null ) {
