@@ -12,8 +12,6 @@
     <xsl:template match="TEI:TEI">
 
         <div class="rootText">
-                
-                <xsl:apply-templates select="TEI:text"/>
                 <div class="kolofonBlad">
                     
                 <div class="kolofonTitle">
@@ -50,22 +48,24 @@
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table>
-                                        <td class="sigel">
-                                            <xsl:value-of select="@rend"/>
-                                        </td>
-                                        <td class="source">
-                                            <xsl:choose>
-                                                <xsl:when test="@rend='A' or @rend='B' and @n">
-                                                    <xsl:apply-templates select="."/>
-                                                    <xsl:text> (SJ:</xsl:text>
-                                                    <xsl:apply-templates select="@n"/>
-                                                    <xsl:text>)</xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:apply-templates select="."/>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </td>
+                                        <tr>
+                                            <td class="sigel">
+                                                <xsl:value-of select="@rend"/>
+                                            </td>
+                                            <td class="source">
+                                                <!--<xsl:choose>
+                                                    <xsl:when test="@rend='A' or @rend='B' or @n">
+                                                        <xsl:apply-templates select="."/>
+                                                        <xsl:text> (SJ:</xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>-->
+                                                        <xsl:apply-templates select="."/>
+                                                    <!--</xsl:otherwise>
+                                                </xsl:choose>-->
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -295,6 +295,8 @@
                     </div>
                     
                 </div>
+                
+                <xsl:apply-templates select="TEI:text"/>
                 
             </div>
     </xsl:template>

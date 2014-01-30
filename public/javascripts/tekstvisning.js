@@ -109,9 +109,9 @@ $(document).ready(function() {
  
         // Visning af epitekst, biblDesc mv. i separat vindue, KK 2013-11-21
 function blank(target, loc, x, y) {
-    if ( !x) { x= "675"; }
+    if ( !x) { x= "685"; }
     if ( !y) { y= screen.availHeight-100; }
-    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=no,titlebar=no,location=yes",true);
+    var w= window.open(target,loc,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=yes,titlebar=no,location=yes",true);
     w.focus();
     return false;
     }

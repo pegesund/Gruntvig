@@ -54,7 +54,14 @@ blockquote, q {
 	quotes: "" "";
 }
 
-body {font-size: 62.5%; color: #555; font-family: "Myriad pro", arial, sans-serif; }
+/* styler teksten i biblDesc KSR */
+
+body 
+        {
+        color: #555;
+        font-family: georgia, garamond, serif;
+        font-size: 62.5%;
+        }
 
 div[id=tekst_innhol] * p { font-size: 1em; } /* fix font size i Asset */
 p {font-size: 1.7em; }
@@ -116,6 +123,7 @@ a.returnTop
 #header {width:100%; height: 160px; background: #2c2c2c url(../img/bg_header.png) no-repeat 0 0; }
 #header_small {width:100%; height: 79px; background: transparent url(../img/bg_header.png) no-repeat 0 0;}
 #main {padding: 1px 0 0 0; height: 400px; background:url("../img/hvit_fade.png") repeat-x scroll 0 0 transparent; }
+
 #footer {width:100%; height: 230px; background-color: #2c2c2c; float:left; margin:30px 0 0 0;  background: transparent url(../img/html_bg.png) 0 0;}
 
 /* Header small */
@@ -190,7 +198,16 @@ a.returnTop
 #footer #columns ul li{ padding: 4px 0; }
 #footer #columns a { color:#aaa; font-size:1.4em; text-decoration: none; font-weight:normal;}
 #footer #columns a:hover { color:#eee; text-decoration: underline; }
-#footer #columns h2 { padding:0; margin:0;}
+
+/* style af h-tags i footer.html KSR */
+
+#footer #columns h2 
+        {
+        padding:0; 
+        margin:0; 
+        color: #DDDDDD;
+        }
+
 #footer #columns h2 a { font-size:0.75em; padding: 0px 0; font-family: myriad pro, arial, sans-serif; color: #ddd;}
 
 /* Tekstvisning */
@@ -304,7 +321,21 @@ a.returnTop
 .ui-tabs .ui-tabs-nav li:hover {background-color: #FAFAFA; border: 1px solid #d6d6d6;}
 .ui-tabs .ui-tabs-panel { overflow:auto; padding:1em 1.2em; background: #FAFAFA; height:300px; border: 1px solid #d6d6d6; border-top: 0;}s
 .ui-tabs { padding:0;}
-.ui-widget-content { background:none; background-color: transparent; border:0; color:#222222; }
+
+/* style af kolonne til docOut KSR */
+
+.ui-widget-content
+        {
+        background:none; 
+        background-color: transparent; 
+        border:0; 
+        color:#222222; 
+        font-family: georgia, garamond, serif;
+        font-size: 100%;
+        line-height: 1.7em;
+        text-align: justify;
+        }
+
 .ui-tabs .ui-tabs-nav li a { float:left; font-size:13px; padding:9px 8px; text-decoration:none; color:#fff;}
 .ui-tabs .ui-tabs-nav li a:hover { color:#444;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected {padding-bottom: 0; background: #FAFAFA; border: 1px solid #d6d6d6; }
@@ -715,7 +746,7 @@ html[xmlns] #nav {
 #høyre_toppmeny * {
  padding:0;
  margin:0;
- font-family: Arial, myriad pro, sans-serif;
+ font-family: sans-serif;
  font-size: 14px;
  text-transform: normal;
  }
@@ -1439,6 +1470,10 @@ h1.subtitle { margin-left: 0px !important; }
  font-size: 2.8em;
 }
 
+.foreign {
+    font-size: 14px;
+}
+
 /* Veiledninger END */
 
     /* farger/stiler for veiledning til manuskriptvisning */
@@ -1474,7 +1509,8 @@ h1.subtitle { margin-left: 0px !important; }
  
  div.placeContent .explanation { visibility: visible }
 
- .docout {
+ .docout 
+ {
      color: blue;
  }
  
