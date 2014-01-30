@@ -56,11 +56,11 @@ public class DoSearch extends Application {
         }
 
         int totalHits = renderAssets.size() + chapters.size();
-        System.out.println("Total hits: " + renderAssets.size());
+        System.out.println("Total hits: " + totalHits);
         render(renderAssets, chapters, lookfor, totalHits);
       }
       else if( lucene!="" ) {
-        System.out.println("Searching for: " + lucene);
+        System.out.println("Searching for qps: " + lucene);
         Query qChapter = Search.search("htmlAsText:" + lucene, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
         System.out.println("Chapters found: " + chapters.size());
