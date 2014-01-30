@@ -60,6 +60,7 @@ public class DoSearch extends Application {
         render(renderAssets, chapters, lookfor, totalHits);
       }
       else if( lucene!="" ) {
+        System.out.println("Searching for: " + lucene);
         Query qChapter = Search.search("htmlAsText:" + lucene, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
         System.out.println("Chapters found: " + chapters.size());
