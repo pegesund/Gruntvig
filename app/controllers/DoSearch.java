@@ -64,7 +64,7 @@ public class DoSearch extends Application {
         List<Chapter> chapters = qChapter.fetch();
         System.out.println("Chapters found: " + chapters.size());
         int totalHits = chapters.size();
-        System.out.println("Total hits: " + renderAssets.size());
+        System.out.println("Total hits: " + totalHits);
         render(null, chapters, lucene, totalHits);
       }
       }
