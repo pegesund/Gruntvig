@@ -28,7 +28,7 @@ public class DoSearch extends Application {
     public static void avanceret() {
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
-      if( lookfor ) {
+      if( lookfor!=null ) {
         System.out.println("Simpel search for: " + lookfor);
         Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
@@ -59,7 +59,7 @@ public class DoSearch extends Application {
         System.out.println("Total hits: " + totalHits);
         render(renderAssets, chapters, lookfor, totalHits);
       }
-      else if( lucene!="" ) {
+      else if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
         Query qChapter = Search.search("htmlAsText:" + lucene, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
