@@ -48,6 +48,29 @@
 <h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
 
 
+<h2><b>Resultater i hele filer:</b></h2>
+
+
+#{list renderAssets, as:'asset'}
+<div class="treff">
+<h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
+    <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+</div>
+#{/list}
+
+
+<h2><b>Resultater i kapitler:</b></h2>
+
+
+#{list chapters, as:'chapter'}
+<div class="treff">
+    <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}">
+        ${chapter.asset.name}
+    </a></h4>
+    <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
+</div>
+#{/list}
+
 </div>
 
         </div>
