@@ -28,7 +28,7 @@ public class DoSearch extends Application {
     public static void avanceret() {
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
-      if( lookfor!="" ) {
+      if( lookfor ) {
         System.out.println("Simpel search for: " + lookfor);
         Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
