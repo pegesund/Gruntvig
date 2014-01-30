@@ -26,7 +26,7 @@
 	<div class="kolonne2" id="intro_tekst">
             <p>Mulighed for avanceret søgning følger med en senere version af udgaven.</p>
             <div>
-		<form action="search">
+		<form action="avanceret">
                     <span>
                         <br/>
                     </span>
@@ -34,6 +34,43 @@
                     <input type="submit" value="Søg" />
                 </form>
             </div>
+            
+<div class="container" id="search_results">
+
+
+    <div id="submenu">
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; Søg</div>
+
+    </div>
+
+<h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
+
+
+<h2><b>Resultater i hele filer:</b></h2>
+
+
+#{list renderAssets, as:'asset'}
+<div class="treff">
+<h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
+    <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+</div>
+#{/list}
+
+
+<h2><b>Resultater i kapitler:</b></h2>
+
+
+#{list chapters, as:'chapter'}
+<div class="treff">
+    <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}">
+        ${chapter.asset.name}
+    </a></h4>
+    <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
+</div>
+#{/list}
+
+</div>
+
         </div>
 
 
