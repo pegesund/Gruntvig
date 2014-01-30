@@ -66,8 +66,9 @@ public class DoSearch extends Application {
         System.out.println("Chapters found: " + chapters.size());
         int totalHits = chapters.size();
         System.out.println("Total hits: " + totalHits);
+        ArrayList<Asset> renderAssets = new ArrayList<Asset>();
         lookfor= lucene;
-        render(null, chapters, lookfor, totalHits);
+        render(renderAssets, chapters, lookfor, totalHits);
       }
     }
 
