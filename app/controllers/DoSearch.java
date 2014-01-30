@@ -24,8 +24,11 @@ import play.modules.search.Search;
  */
 public class DoSearch extends Application {
 
-    
-    public static void avanceret() {
+    /**
+     * Advanced Search
+     */
+    /* KK 2014-01-30 */    
+    public static void avanceret() { 
         System.out.println("Advanced search");
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
@@ -129,6 +132,7 @@ public class DoSearch extends Application {
      * add caching later if slow
      * 
      */
+    /* Ændret ifm. avanceret søg, KK 2014-01-30*/
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase();
         int lookforStart = str.indexOf(lookfor) + 1;
@@ -168,6 +172,47 @@ public class DoSearch extends Application {
         return s;
     }
 
+    /*
+    private static String createTeaser(String str, String lookforOrig, int len) {
+        String lookfor = lookforOrig.toLowerCase();
+        int lookforStart = str.indexOf(lookfor) + 1;
+        Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = findWordsPattern.matcher(str);
+        if (matcher.find()) {
+           lookforStart = matcher.start();
+        } else return "";
+        int lookforEnd = lookforStart + lookfor.length();
+        int start = lookforStart;
+        int stop = lookforEnd;
+        while (stop < str.length() && ((stop - lookforEnd) < len)) {
+            stop++;
+        }
+
+        while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
+            stop++;
+        }
+
+        // del kun ved hele ord
+        while (start > 0 && ((lookforStart - start) < len)) {
+            start--;
+        }
+
+        while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
+            start--;
+        }
+
+        String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
+
+        if (start != 0) {
+            s = "..." + s;
+        }
+        if (stop != str.length()) {
+            s += "...";
+        }
+        return s;
+    }
+    */
+    
     static private String replaceAll(String string, String regex, String replaceWith) {
         Pattern myPattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         /*for space,new line, tab checks*/
