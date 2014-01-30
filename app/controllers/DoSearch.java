@@ -72,7 +72,7 @@ public class DoSearch extends Application {
         render(renderAssets, chapters, lookfor, totalHits);
       }
       else
-        render()
+        render();
     }
 
     
