@@ -67,7 +67,6 @@ public class DoSearch extends Application {
         System.out.println("Total hits: " + totalHits);
         render(null, chapters, lucene, totalHits);
       }
-      }
     }
 
     
