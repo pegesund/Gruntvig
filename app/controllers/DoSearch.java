@@ -134,7 +134,7 @@ public class DoSearch extends Application {
      */
     /* Ændret ifm. avanceret søg, KK 2014-01-30*/
     private static String createTeaser(String str, String lookforOrig, int len) {
-        String lookfor = lookforOrig.toLowerCase().replace("*",".*");
+        String lookfor = lookforOrig.toLowerCase().replace("*","[a-z]*");
         int lookforStart = str.indexOf(lookfor) + 1;
         Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
