@@ -26,7 +26,36 @@ public class DoSearch extends Application {
 
     
     public static void avanceret() {
-        render();
+        String lookfor = Application.params.get("lookfor");
+        System.out.println("Searching for: " + lookfor);
+        Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
+        List<Chapter> chapters = qChapter.fetch();
+        System.out.println("Chapters found: " + chapters.size());
+        Query qAsset = Search.search("htmlAsText:" + lookfor, Asset.class);
+        List<Asset> assets = qAsset.fetch();
+        System.out.println("Assets found: " + chapters.size());
+
+        System.out.println("Total assets: " + assets.size());
+        List<Asset> allAssets = Asset.findAll();
+        for (Asset asset : assets) {
+            System.out.println("Asset file match: " + asset.fileName);
+        }
+
+        ArrayList<Asset> renderAssets = new ArrayList<Asset>();
+        for (Asset asset: assets) {
+            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType)) {
+                try {
+                    long _id = asset.getCorrespondingRootId();
+                    renderAssets.add(asset);
+                } catch (Exception _e) {
+                    
+                }
+            }
+        }
+
+        int totalHits = renderAssets.size() + chapters.size();
+        System.out.println("Total hits: " + renderAssets.size());
+        render(renderAssets, chapters, lookfor, totalHits);
     }
 
     
