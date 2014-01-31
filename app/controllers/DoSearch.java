@@ -126,8 +126,8 @@ public class DoSearch extends Application {
         String[] W= lookfor.split(" ");
         String res= "";
         for( int i= 0; i<W.length; i++ )
-            res+= createTeaser( str, W[1], 70 );
-        return res;
+            res+= createTeaser( str, W[i], 70 );
+        return createTeaser( str, W[1], 70 );
     }
 
     /**
