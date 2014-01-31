@@ -147,6 +147,7 @@ public class DoSearch extends Application {
         //} else return "";
         String res= "";
         while( matcher.find() ) {
+            lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
             int stop = lookforEnd;
