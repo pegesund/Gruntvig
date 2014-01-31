@@ -126,7 +126,7 @@ public class DoSearch extends Application {
         String[] W= lookfor.split(" ");
         String res= "";
         for( int i= 0; i<W.length; i++ )
-            res+= createTeaser( str, W[i], 70 );
+            res+= createTeaser( str, W[1], 70 );
         return res;
     }
 
@@ -142,38 +142,42 @@ public class DoSearch extends Application {
         int lookforStart = str.indexOf(lookfor) + 1;
         Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
-        if (matcher.find()) {
-           lookforStart = matcher.start();
-        } else return "";
-        int lookforEnd = lookforStart + lookfor.length();
-        int start = lookforStart;
-        int stop = lookforEnd;
-        while (stop < str.length() && ((stop - lookforEnd) < len)) {
-            stop++;
-        }
+        //if (matcher.find()) {
+        //   lookforStart = matcher.start();
+        //} else return "";
+        String res= "";
+        while( matcher.find() ) {
+            int lookforEnd = lookforStart + lookfor.length();
+            int start = lookforStart;
+            int stop = lookforEnd;
+            while (stop < str.length() && ((stop - lookforEnd) < len)) {
+                stop++;
+            }
 
-        while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
-            stop++;
-        }
+            while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
+                stop++;
+            }
 
-        // del kun ved hele ord
-        while (start > 0 && ((lookforStart - start) < len)) {
-            start--;
-        }
+            // del kun ved hele ord
+            while (start > 0 && ((lookforStart - start) < len)) {
+                start--;
+            }
 
-        while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
-            start--;
-        }
+            while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
+                start--;
+            }
 
-        String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
+            String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor + ")" + "[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
 
-        if (start != 0) {
-            s = "..." + s;
+            if (start != 0) {
+                s = "..." + s;
+            }
+            if (stop != str.length()) {
+                s += " ...";
+            }
+            res+= s;
         }
-        if (stop != str.length()) {
-            s += " ...";
-        }
-        return s;
+        return res;
     }
 
     /*
