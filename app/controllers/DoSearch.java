@@ -123,10 +123,10 @@ public class DoSearch extends Application {
     }
 
     public static String createTeaser(String str, String lookfor) {
-        String[] W= str.split(" ");
+        String[] W= lookfor.split(" ");
         String res= "";
         for( int i= 0; i<W.length; i++ )
-            res+= createTeaser( W[i], lookfor, 70 );
+            res+= createTeaser( str, W[i], 70 );
         return res;
     }
 
