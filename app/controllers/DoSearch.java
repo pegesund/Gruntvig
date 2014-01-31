@@ -171,7 +171,7 @@ public class DoSearch extends Application {
             s = "..." + s;
         }
         if (stop != str.length()) {
-            s += "...";
+            s += " ...";
         }
         return s;
     }
