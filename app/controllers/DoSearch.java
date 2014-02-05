@@ -135,7 +135,7 @@ public class DoSearch extends Application {
     /* Vis kontekst for alle fund af alle søgeord i lookfor
      * Ændret ifm. avanceret søg, KK 2014-02-05 */
     private static String createTeaser(String str, String lookforOrig, int len) {
-        String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}").replace(" ","|");
+        String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}").replace(" ","|").replace("\"","");
         int lookforStart = str.indexOf(lookfor) + 1;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         Pattern findWordsPattern = Pattern.compile("\\b(" + lookfor + ")\\b", Pattern.CASE_INSENSITIVE);
