@@ -12,25 +12,25 @@
   .advSearch input {float: none;}
   .vejl {color: orange;}
 </style>
-<script type="text/javascript"> // <!--
-  function chkall( my ) { //alert( "Box checked!" );
+<!--script type="text/javascript"> //May be used for genres
+  function chkall( my ) {
     if( my.checked ) 
-      for( var i= 0; i < advForm.elements.length; i++ )
+      for( var i= 0; i != advForm.elements.length; i++ )
         if( advForm.elements[i].name==my.name ) {
-          //alert( advForm.elements[i].name + "," + advForm.elements[i].checked );
           advForm.elements[i].checked= true;
       }
   }
 
   function unchkall( my ) {
     if( !my.checked ) 
-      for( var i= 0; i < advForm.elements.length; i++ )
+      for( var i= 0; i != advForm.elements.length; i++ )
         if( advForm.elements[i].name==my.name && advForm.elements[i].value=="0" ) {
           advForm.elements[i].checked= false;
           return;
       }
   }
-
+</script-->
+<script type="text/javascript"> // <!--
   function buildQPS( words ) {
     var lucene= document.getElementById( "luceneString" ),
         prox= document.getElementById( "proxNo" ),
@@ -77,21 +77,17 @@
 		<form name="advForm" action="avanceret" class="advSearch">
 		  <div>
 		    <h5>Søgekategori</h5>
-		    <span class="choice">Alle<input type="checkbox" name="cat" value="0" onclick="chkall(this)"/></span>
-		    <span class="choice">Grundtvig<input type="checkbox" name="cat" value="1" checked="checked" onclick="unchkall(this)"/></span> 
-		    <span class="choice">Indledninger<input type="checkbox" name="cat" value="2" onclick="unchkall(this)"/></span>
-		    <span class="choice">Tekstredegørelser<input type="checkbox" name="cat" value="3" onclick="unchkall(this)"/></span>
-		    <span class="choice">Kommentarer<input type="checkbox" name="cat" value="4" onclick="unchkall(this)"/></span>
-		    <span class="choice">Vejledninger<input type="checkbox" name="cat" value="5" onclick="unchkall(this)"/></span>
+		    <span class="choice">Grundtvig<input type="checkbox" name="cat" value="grundtvig" checked="checked"/></span>
+		    <span class="choice">Kommentar<input type="checkbox" name="cat" value="kommentar"/></span>
 		  </div>
-		  <div>
+		  <!--div>
 		    <h5>Genre</h5>
-		    <span class="choice">MAlle<input type="checkbox" name="genre" value="0" checked="checked" onclick="chkall(this)"/></span>
+		    <span class="choice">Alle<input type="checkbox" name="genre" value="0" checked="checked" onclick="chkall(this)"/></span>
 		    <span class="choice">Salmer<input type="checkbox" name="genre" value="1" checked="checked" onclick="unchkall(this)"/></span>
 		    <span class="choice">Bragesnak<input type="checkbox" name="genre" value="2" checked="checked" onclick="unchkall(this)"/></span>
 		    <span class="choice">Sure opstød<input type="checkbox" name="genre" value="3" checked="checked" onclick="unchkall(this)"/></span>
 		    <span class="choice">Andet<input type="checkbox" name="genre" value="4" checked="checked" onclick="unchkall(this)"/></span>
-		  </div>
+		  </div-->
 		  <div>
 		    <h5>Søgeord</h5>
 		    <input name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
@@ -103,11 +99,12 @@
 		    <span class="choice">Den nøjagtige sætning<input type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
 		    <span class="vejl">Relevant ved flere søgeord</span>
 		    <br/>
-		    Søg i:
+		    <!--Søg i:
 		    <span class="choice">Hele værker<input type="radio" name="chp" value="yes"/></span> 
 		    <span class="choice">Kapitler<input type="radio" name="chp" value="no" checked="checked"/></span>
 		    <span class="vejl">Relevant i forbindelse med Grundtvigs tekst</span> 
 		    <br/>
+                    -->
 		    Søg inden for: <input id="proxNo" type="text" size="2" name="prox" value="" onchange="buildQPS(words)"/> ord
 		  </div>
 
