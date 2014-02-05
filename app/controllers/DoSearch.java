@@ -170,11 +170,11 @@ public class DoSearch extends Application {
 
             String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor + ")" + "[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
 
-            if ( res.length()!=0 ) {
-                s = "<br/>" + s;
-            }
             if (start != 0) {
                 s = "..." + s;
+            }
+            if ( res.length()!=0 ) {
+                s = "<br/>" + s;
             }
             if (stop != str.length()) {
                 s += " ...";
