@@ -123,10 +123,6 @@ public class DoSearch extends Application {
     }
 
     public static String createTeaser(String str, String lookfor) {
-        String[] W= lookfor.split(" ");
-        String res= "";
-        for( int i= 0; i<W.length; i++ )
-            res+= createTeaser( str, W[i], 70 );
         return createTeaser( str, lookfor, 70 );
     }
 
@@ -136,7 +132,8 @@ public class DoSearch extends Application {
      * add caching later if slow
      * 
      */
-    /* Ændret ifm. avanceret søg, KK 2014-02-05*/
+    /* Vis kontekst for alle fund af alle søgeord i lookfor
+     * Ændret ifm. avanceret søg, KK 2014-02-05 */
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}").replace(" ","|");
         int lookforStart = str.indexOf(lookfor) + 1;
