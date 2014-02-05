@@ -22,6 +22,15 @@
       }
   }
 
+  function unchkall( my ) {
+    if( !my.checked ) 
+      for( var i= 0; i < advForm.elements.length; i++ )
+        if( advForm.elements[i].value=="0" ) {
+          advForm.elements[i].checked= false;
+          return;
+      }
+  }
+
   function buildQPS( words ) {
     var lucene= document.getElementById( "luceneString" ),
         prox= document.getElementById( "proxNo" ),
@@ -69,11 +78,11 @@
 		  <div>
 		    <h5>Søgekategori</h5>
 		    <span class="choice">Alle<input type="checkbox" name="cat" value="0" onclick="chkall(this)"/></span>
-		    <span class="choice">Grundtvig<input type="checkbox" name="cat" value="1" checked="checked"/></span> 
-		    <span class="choice">Indledninger<input type="checkbox" name="cat" value="2"/></span>
-		    <span class="choice">Tekstredegørelser<input type="checkbox" name="cat" value="3"/></span>
-		    <span class="choice">Kommentarer<input type="checkbox" name="cat" value="4"/></span>
-		    <span class="choice">Vejledninger<input type="checkbox" name="cat" value="5"/></span>
+		    <span class="choice">Grundtvig<input type="checkbox" name="cat" value="1" checked="checked" onclick="unchkall(this)"/></span> 
+		    <span class="choice">Indledninger<input type="checkbox" name="cat" value="2" onclick="unchkall(this)"/></span>
+		    <span class="choice">Tekstredegørelser<input type="checkbox" name="cat" value="3" onclick="unchkall(this)"/></span>
+		    <span class="choice">Kommentarer<input type="checkbox" name="cat" value="4" onclick="unchkall(this)"/></span>
+		    <span class="choice">Vejledninger<input type="checkbox" name="cat" value="5" onclick="unchkall(this)"/></span>
 		  </div>
 		  <div>
 		    <h5>Genre</h5>
