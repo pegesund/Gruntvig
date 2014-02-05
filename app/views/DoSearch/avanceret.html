@@ -25,7 +25,7 @@
   function unchkall( my ) {
     if( !my.checked ) 
       for( var i= 0; i < advForm.elements.length; i++ )
-        if( advForm.elements[i].value=="0" ) {
+        if( advForm.elements[i].name==my.name && advForm.elements[i].value=="0" ) {
           advForm.elements[i].checked= false;
           return;
       }
