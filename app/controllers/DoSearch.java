@@ -178,7 +178,7 @@ public class DoSearch extends Application {
             }
             res+= s;
         //}
-        return s;
+        return res;
     }
 
     /*
