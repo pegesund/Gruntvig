@@ -127,7 +127,7 @@ public class DoSearch extends Application {
         String res= "";
         for( int i= 0; i<W.length; i++ )
             res+= createTeaser( str, W[i], 70 );
-        return createTeaser( str, str, 70 );
+        return createTeaser( str, lookfor, 70 );
     }
 
     /**
