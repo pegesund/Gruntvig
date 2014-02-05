@@ -136,11 +136,12 @@ public class DoSearch extends Application {
      * add caching later if slow
      * 
      */
-    /* Ændret ifm. avanceret søg, KK 2014-01-30*/
+    /* Ændret ifm. avanceret søg, KK 2014-02-05*/
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         int lookforStart = str.indexOf(lookfor) + 1;
-        Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
+        //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
+        Pattern findWordsPattern = Pattern.compile("(\\b" + lookfor + "\\b", Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
         //if (matcher.find()) {
         //   lookforStart = matcher.start();
@@ -154,22 +155,17 @@ public class DoSearch extends Application {
             while (stop < str.length() && ((stop - lookforEnd) < len)) {
                 stop++;
             }
-
             while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
                 stop++;
             }
-
             // del kun ved hele ord
             while (start > 0 && ((lookforStart - start) < len)) {
                 start--;
             }
-
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-
             String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor + ")" + "[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
-
             if (start != 0) {
                 s = "..." + s;
             }
