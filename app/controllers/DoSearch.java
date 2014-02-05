@@ -142,12 +142,12 @@ public class DoSearch extends Application {
         int lookforStart = str.indexOf(lookfor) + 1;
         Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
-        //if (matcher.find()) {
-        //   lookforStart = matcher.start();
-        //} else return "";
+        if (matcher.find()) {
+           lookforStart = matcher.start();
+        } else return "";
         String res= "";
-        while( matcher.find() ) {
-            lookforStart = matcher.start();
+        //while( matcher.find() ) {
+        //    lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
             int stop = lookforEnd;
@@ -177,7 +177,7 @@ public class DoSearch extends Application {
                 s += " ...";
             }
             res+= s;
-        }
+        //}
         return res;
     }
 
