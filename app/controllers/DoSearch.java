@@ -141,7 +141,7 @@ public class DoSearch extends Application {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         int lookforStart = str.indexOf(lookfor) + 1;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
-        Pattern findWordsPattern = Pattern.compile("(\\b" + lookfor + "\\b", Pattern.CASE_INSENSITIVE);
+        Pattern findWordsPattern = Pattern.compile("\\b" + lookfor + "\\b", Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
         //if (matcher.find()) {
         //   lookforStart = matcher.start();
