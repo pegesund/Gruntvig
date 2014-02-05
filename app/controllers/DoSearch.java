@@ -176,6 +176,9 @@ public class DoSearch extends Application {
             if (stop != str.length()) {
                 s += " ...";
             }
+            if ( res.length()!=0 ) {
+                s += "<br/>";
+            }
             res+= s;
         }
         return res;
