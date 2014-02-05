@@ -147,11 +147,12 @@ public class DoSearch extends Application {
         //   lookforStart = matcher.start();
         //} else return "";
         String res= "";
-        while( matcher.find() ) {
+        int stop= 0;
+        while( matcher.find(stop) ) {
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
-            int stop = lookforEnd;
+            stop = lookforEnd;
             while (stop < str.length() && ((stop - lookforEnd) < len)) {
                 stop++;
             }
