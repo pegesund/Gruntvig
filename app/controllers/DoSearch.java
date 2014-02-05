@@ -65,7 +65,7 @@ public class DoSearch extends Application {
       }
       else if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
-        Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
+        Query qChapter = Search.search("htmlAsText:" + lucene, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
         System.out.println("Chapters found: " + chapters.size());
         int totalHits = chapters.size();
