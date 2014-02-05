@@ -1,7 +1,46 @@
 #{extends 'main.html' /}
 #{ header /}
 
+<style type="text/css">
+  .choice {background-color: #f8f8f8;
+           border: thin solid silver;
+           padding: 5px 0px 0px 1px;
+           line-height: 150%;}
+  .qps {background-color: aliceblue;
+        color: red;
+        float: none;}
+  .advSearch input {float: none;}
+  .vejl {color: orange;}
+</style>
+<script type="text/javascript"> // <!--
+  function chkall( my ) { //alert( "Box checked!" );
+    if( my.checked ) 
+      for( var i= 0; i < advForm.elements.length; i++ )
+        if( advForm.elements[i].name==my.name ) {
+          //alert( advForm.elements[i].name + "," + advForm.elements[i].checked );
+          advForm.elements[i].checked= true;
+      }
+  }
 
+  function buildQPS( words ) {
+    var lucene= document.getElementById( "luceneString" ),
+        prox= document.getElementById( "proxNo" ),
+        proxVal= prox.value.replace(/[^0-9]/g,""),
+        boolVal= " ",
+        quoteVal= "";
+    for( var i= 0; i != advForm.elements.length; i++ )
+      if( advForm.elements[i].name=="bool" && advForm.elements[i].checked ) {
+        if( advForm.elements[i].value==0 )
+          boolVal= " AND ";
+        else if( advForm.elements[i].value==1 )
+          boolVal= " OR ";
+        else if( advForm.elements[i].value==2 )
+          quoteVal= '"';
+      }
+    lucene.value= words.value.replace(/^ *| *$/g,quoteVal).replace(/ +/g,boolVal).replace(/(~[0-9.]*)?$/g,(proxVal?"~":"")+proxVal);
+  }
+  //-->
+</script>
 
 <div id="main">
 
@@ -24,21 +63,70 @@
 	</div>
 
 	<div class="kolonne2" id="intro_tekst">
-            <p>Mulighed for avanceret søgning følger med en senere version af udgaven.</p>
-            <div>
-		<form action="avanceret">
-                    <input name="lookfor" class="clearSearch" type="text" value="Alm. simpel søgning"/>
-                    <input type="submit" value="Søg" />
-                </form>
-		<form action="avanceret">
-                    <input name="lucene" class="clearSearch" type="text" value="Lucene QPS"/>
-                    <input type="submit" value="Søg" />
-                    <a href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html" onclick="return blank(this.href)">
-                        Læs om QPS her
-                    </a>
-                </form>
-                <br/><br/><br/><br/>
-            </div>
+      <p><i>Mock-up</i> for avanceret søgning.</p>
+	  <div>
+		<form name="advForm" action="avanceret" class="advSearch">
+		  <div>
+		    <h5>Søgekategori</h5>
+		    <span class="choice">Alle<input type="checkbox" name="cat" value="0" onclick="chkall(this)"/></span>
+		    <span class="choice">Grundtvig<input type="checkbox" name="cat" value="1" checked="checked"/></span> 
+		    <span class="choice">Indledninger<input type="checkbox" name="cat" value="2"/></span>
+		    <span class="choice">Tekstredegørelser<input type="checkbox" name="cat" value="3"/></span>
+		    <span class="choice">Kommentarer<input type="checkbox" name="cat" value="4"/></span>
+		    <span class="choice">Vejledninger<input type="checkbox" name="cat" value="5"/></span>
+		  </div>
+		  <div>
+		    <h5>Genre</h5>
+		    <span class="choice">Alle<input type="checkbox" name="genre" value="0" checked="checked" onclick="chkall(this)"/></span>
+		    <span class="choice">Salmer<input type="checkbox" name="genre" value="1" checked="checked"/></span>
+		    <span class="choice">Bragesnak<input type="checkbox" name="genre" value="2" checked="checked"/></span>
+		    <span class="choice">Sure opstød<input type="checkbox" name="genre" value="3" checked="checked"/></span>
+		    <span class="choice">Andet<input type="checkbox" name="genre" value="4" checked="checked"/></span>
+		  </div>
+		  <div>
+		    <h5>Søgeord</h5>
+		    <input name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
+		    <span class="vejl"><a onclick="return blank(this.href)" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
+		    <br/>
+		    Søg efter: 
+		    <span class="choice">Alle ord<input type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
+		    <span class="choice">Nogle ord<input type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
+		    <span class="choice">Den nøjagtige sætning<input type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
+		    <span class="vejl">Relevant ved flere søgeord</span>
+		    <br/>
+		    Søg i:
+		    <span class="choice">Hele værker<input type="radio" name="chp" value="yes"/></span> 
+		    <span class="choice">Kapitler<input type="radio" name="chp" value="no" checked="checked"/></span>
+		    <span class="vejl">Relevant i forbindelse med Grundtvigs tekst</span> 
+		    <br/>
+		    Søg inden for: <input id="proxNo" type="text" size="2" name="prox" value="" onchange="buildQPS(words)"/> ord
+		  </div>
+
+		    
+          <div>
+            <br/>
+		    <input type="submit" value="Søg" />               
+          </div>
+		    
+		  <div>
+		    <br/>
+		    <input id="luceneString" name="lucene" class="clearSearch qps" type="text" size="40" value="Lucene QPS"/>
+		    <span class="vejl">Læs mere om <a onclick="return blank(this.href)" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span>
+		  </div>
+		</form>	      
+	  </div>
+
+<div class="container" id="search_results">
+
+<h1>Søgning efter <b></b> gav i alt  resultat(er)</h1>
+
+<h2><b>Resultater i hele filer:</b></h2>
+
+<h2><b>Resultater i kapitler:</b></h2>
+
+</div>
+
+        </div>
             
 <div class="container" id="search_results">
 
