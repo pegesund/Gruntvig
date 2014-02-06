@@ -91,7 +91,7 @@
 		  <div>
 		    <h5>Søgeord</h5>
 		    <input name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
-		    <span class="vejl"><a onclick="return blank('vejl',this.href)" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
+		    <span class="vejl"><a onclick="return blank(this.href,'vejl')" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
 		    <br/>
 		    Søg efter: 
 		    <span class="choice">Alle ord<input type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
@@ -118,7 +118,7 @@
 		  <div>
 		    <br/>
 		    <input id="luceneString" name="lucene" class="clearSearch qps" type="text" size="40" value="Lucene QPS"/>
-		    <span class="vejl">Læs mere om <a onclick="return blank('vejl',this.href)" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span>
+		    <span class="vejl">Læs mere om <a onclick="return blank(this.href,'vejl')" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span>
 		  </div>
 		</form>	      
 	  </div>
