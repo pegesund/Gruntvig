@@ -6,7 +6,7 @@
            border: thin solid silver;
            padding: 5px 0px 0px 1px;
            line-height: 150%;}
-  #proxNo {font-size: 110%;}
+  /*#proxNo {font-size: 100%;}*/
   .qps {background-color: aliceblue;
         color: red;
         float: none;}
@@ -44,7 +44,7 @@
           boolVal= " AND ";
         else if( advForm.elements[i].value==1 )
           boolVal= " OR ";
-        else if( advForm.elements[i].value==2 )
+        else if( advForm.elements[i].value>=2 )
           quoteVal= '"';
       }
     lucene.value= words.value.replace(/^ *| *$/g,quoteVal).replace(/ +/g,boolVal).replace(/(~[0-9.]*)?$/g,(proxVal?"~":"")+proxVal);
