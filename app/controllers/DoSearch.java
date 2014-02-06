@@ -34,7 +34,7 @@ public class DoSearch extends Application {
         String lucene = Application.params.get("lucene");
         String grundtvig = Application.params.get("grundtvig");
         String kommentar = Application.params.get("kommentar");
-        List<Chapter> chapters;
+        List<Chapter> chapters[];
         int chaptersSize= 0;
         ArrayList<Asset> renderAssets = new ArrayList<Asset>();
       if( lucene!=null ) {
