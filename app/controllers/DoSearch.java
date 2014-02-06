@@ -132,10 +132,10 @@ public class DoSearch extends Application {
      * Ændret ifm. avanceret søg, KK 2014-02-05 */
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
-        if( lookfor.contains("\"") )
-            lookfor = lookfor.replaceAll("~[0-9.]*","").replace("\"","");
+        if( lookfor.contains("\"") && !lookfor.contains("~") )
+            lookfor = lookfor.replace("\"","");
         else
-            lookfor = lookfor.replace(" ","|");
+            lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         System.out.println("Look for: " + lookfor );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
