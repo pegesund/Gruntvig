@@ -27,29 +27,28 @@ public class DoSearch extends Application {
     /**
      * Advanced Search
      */
-    /* KK 2014-01-30 */    
+    /* KK 2014-02-06 */    
     public static void avanceret() { 
         System.out.println("Advanced search");
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
-      if( lookfor!=null ) {
-        System.out.println("Simpel search for: " + lookfor);
-        Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
+      if( lucene!=null ) {
+        System.out.println("Searching for qps: " + lucene);
+
+        // Søg i Grundtvigs kapitler (chapters)
+        Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
-        System.out.println("Chapters found: " + chapters.size());
+
+        // Søg i kommentarfiler (assets)
         Query qAsset = Search.search("htmlAsText:" + lookfor, Asset.class);
         List<Asset> assets = qAsset.fetch();
-        System.out.println("Assets found: " + chapters.size());
-
-        System.out.println("Total assets: " + assets.size());
         List<Asset> allAssets = Asset.findAll();
         for (Asset asset : assets) {
             System.out.println("Asset file match: " + asset.fileName);
         }
-
         ArrayList<Asset> renderAssets = new ArrayList<Asset>();
         for (Asset asset: assets) {
-            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType)) {
+            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) /*||  asset.type.equals(Asset.rootType)*/) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderAssets.add(asset);
@@ -61,16 +60,6 @@ public class DoSearch extends Application {
 
         int totalHits = renderAssets.size() + chapters.size();
         System.out.println("Total hits: " + totalHits);
-        render(renderAssets, chapters, lookfor, totalHits);
-      }
-      else if( lucene!=null ) {
-        System.out.println("Searching for qps: " + lucene);
-        Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
-        List<Chapter> chapters = qChapter.fetch();
-        System.out.println("Chapters found: " + chapters.size());
-        int totalHits = chapters.size();
-        System.out.println("Total hits: " + totalHits);
-        ArrayList<Asset> renderAssets = new ArrayList<Asset>();
         lookfor= lucene;
         render(renderAssets, chapters, lookfor, totalHits);
       }
