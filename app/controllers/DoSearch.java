@@ -40,7 +40,8 @@ public class DoSearch extends Application {
         List<Chapter> chapters = qChapter.fetch();
 
         // Søg i kommentarfiler (assets)
-        Query qAsset = Search.search("htmlAsText:" + lookfor, Asset.class);
+
+        Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
         List<Asset> assets = qAsset.fetch();
         List<Asset> allAssets = Asset.findAll();
         for (Asset asset : assets) {
