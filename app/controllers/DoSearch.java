@@ -40,13 +40,13 @@ public class DoSearch extends Application {
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
 
-        if( grundtvig=="jatak" ) { // Søg i Grundtvigs kapitler (chapters)
+        if( grundtvig!=null ) { // Søg i Grundtvigs kapitler (chapters)
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
           chapters = qChapter.fetch();
           chaptersSize= chapters.size();
         }
 
-        if( kommentar=="jatak" ) { // Søg i kommentarfiler (assets)
+        if( kommentar!=null ) { // Søg i kommentarfiler (assets)
           Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
           List<Asset> assets = qAsset.fetch();
           List<Asset> allAssets = Asset.findAll();
