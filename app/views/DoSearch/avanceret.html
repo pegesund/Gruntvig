@@ -12,8 +12,7 @@
         color: red;
         /*float: none;*/}
   .advSearch input {float: none;}
-  .vejl {color: orange;
-         font-size: 100%}
+  .vejl {color: orange;}
 </style>
 <!--script type="text/javascript"> //May be used for genres
   function chkall( my ) {
@@ -101,8 +100,8 @@
 		    <input name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
 		    <span class="vejl"><a onclick="return blank(this.href,'vejl')" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
 		    <br/>
-		    <h5>Søg efter:
-		    <span class="vejl">Relevant ved flere søgeord</span></h5>
+		    <h5>Søg efter:</h5>
+		    <span class="vejl">Relevant ved flere søgeord</span>
 		    <span class="choice">Alle ord<input type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
 		    <span class="choice">Nogle ord<input type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
 		    <span class="choice">Den nøjagtige sætning<input type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
