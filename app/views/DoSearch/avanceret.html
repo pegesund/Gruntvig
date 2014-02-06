@@ -118,11 +118,11 @@
 		    
           <div>
             <br/>
-		    <input type="submit" value="Søg" />               
+            <input type="submit" value="Søg" />
+            <br/>
           </div>
 		    
 		  <div>
-		    <br/>
                     <input id="luceneString" name="lucene" class="clearSearch qps" type="hidden" size="40" value="Lucene QPS"/>
 		    <!--span class="vejl">Læs mere om <a onclick="return blank(this.href,'vejl')" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span-->
 		  </div>
@@ -134,7 +134,7 @@
 <h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
 
 
-<h2><b>Resultater i hele filer:</b></h2>
+<h2><b>Resultater i kommentarer:</b></h2>
 
 
 #{list renderAssets, as:'asset'}
@@ -145,7 +145,7 @@
 #{/list}
 
 
-<h2><b>Resultater i kapitler:</b></h2>
+<h2><b>Resultater hos Grundtvig:</b></h2>
 
 
 #{list chapters, as:'chapter'}
