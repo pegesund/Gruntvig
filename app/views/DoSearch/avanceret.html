@@ -36,6 +36,7 @@
     var lucene= document.getElementById( "luceneString" ),
         prox= document.getElementById( "proxNo" ),
         proxVal= prox.value.replace(/[^0-9]/g,""),
+        putProx= "",
         boolVal= " ",
         quoteVal= "";
     for( var i= 0; i != advForm.elements.length; i++ )
@@ -44,10 +45,14 @@
           boolVal= " AND ";
         else if( advForm.elements[i].value==1 )
           boolVal= " OR ";
-        else if( advForm.elements[i].value>=2 )
+        else if( advForm.elements[i].value==2 )
           quoteVal= '"';
+        else if( advForm.elements[i].value==3 ) {
+          quoteVal= '"';
+          putProx= (proxVal?"~":"") + proxVal;
+        }
       }
-    lucene.value= words.value.replace(/^ *| *$/g,quoteVal).replace(/ +/g,boolVal).replace(/(~[0-9.]*)?$/g,(proxVal?"~":"")+proxVal);
+    lucene.value= words.value.replace(/^ *| *$/g,quoteVal).replace(/ +/g,boolVal).replace(/(~[0-9.]*)?$/g,putProx);
   }
   //-->
 </script>
