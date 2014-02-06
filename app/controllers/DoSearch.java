@@ -34,12 +34,16 @@ public class DoSearch extends Application {
         String lucene = Application.params.get("lucene");
         String grundtvig = Application.params.get("grundtvig");
         String kommentar = Application.params.get("kommentar");
+        List<Chapter> chapters;
+        int chaptersSize= 0;
+        ArrayList<Asset> renderAssets = new ArrayList<Asset>();
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
 
         if( grundtvig=="jatak" ) { // Søg i Grundtvigs kapitler (chapters)
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
-          List<Chapter> chapters = qChapter.fetch();
+          chapters = qChapter.fetch();
+          chaptersSize= chapters.size();
         }
 
         if( kommentar=="jatak" ) { // Søg i kommentarfiler (assets)
@@ -49,7 +53,6 @@ public class DoSearch extends Application {
           for (Asset asset : assets) {
             System.out.println("Asset file match: " + asset.fileName);
           }
-          ArrayList<Asset> renderAssets = new ArrayList<Asset>();
           for (Asset asset: assets) {
             if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) /*||  asset.type.equals(Asset.rootType)*/) {
                 try {
@@ -62,7 +65,7 @@ public class DoSearch extends Application {
           }
         }
 
-        int totalHits = renderAssets.size() + chapters.size();
+        int totalHits = renderAssets.size() + chaptersSize;
         System.out.println("Total hits: " + totalHits);
         lookfor= lucene;
         render(renderAssets, chapters, lookfor, totalHits);
