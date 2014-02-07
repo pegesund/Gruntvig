@@ -136,10 +136,11 @@ public class DoSearch extends Application {
         if( lookfor.contains("\"") && lookfor.contains("~") ) {
             int n= lookfor.indexOf("~")+1;
             int m= n+1;
-            while( m<lookfor.length() && lookfor.substring(n,m).matches("[0-9]+") )
+            while( m<lookfor.length() && lookfor.substring(n,m).matches("[0-9]+") ) {
                 m++;
+                System.out.println( n+","+m+","+prox );
+            }
             prox= (m==n+1)?0:Integer.parseInt(lookfor.substring(n,m));
-            System.out.println( n+","+m+","+prox );
             lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         }
         else if( lookfor.contains("\"") )
