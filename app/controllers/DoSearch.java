@@ -136,10 +136,8 @@ public class DoSearch extends Application {
         if( lookfor.contains("\"") && lookfor.contains("~") ) {
             int n= lookfor.indexOf("~")+1;
             int m= n+1;
-            while( m<=lookfor.length() && lookfor.substring(n,m).matches("[0-9]+") ) {
-                System.out.println( n+","+m+","+lookfor.substring(n,m)+","+lookfor.length() );
+            while( m<=lookfor.length() && lookfor.substring(n,m).matches("[0-9]+") )
                 m++;
-            }
             prox= (m==n+1)?0:Integer.parseInt(lookfor.substring(n,m-1));
             lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         }
@@ -160,6 +158,7 @@ public class DoSearch extends Application {
         String res= "";
         int stop= 0;
         while( matcher.find(stop) ) {
+            boolean skip= false;
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
@@ -177,17 +176,26 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-            String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
-            if (start != 0) {
-                s = "..." + s;
+            String proximity= "";
+            if( prox>0 ) {
+                String[] W= lookfor.split("\\|");
+                for( int i=0; i<W.length; i++ )
+                    if( !proximity.matches("\\b(" + W[i] + ")\\b") )
+                        skip= true;
             }
-            if ( res.length()!=0 ) {
-                s = "<br/>" + s;
+            if( !skip ) {
+                String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
+                if (start != 0) {
+                    s = "..." + s;
+                }
+                if ( res.length()!=0 ) {
+                    s = "<br/>" + s;
+                }
+                if (stop != str.length()) {
+                    s += " ...";
+                }
+                res+= s;
             }
-            if (stop != str.length()) {
-                s += " ...";
-            }
-            res+= s;
         }
         return res;
     }
