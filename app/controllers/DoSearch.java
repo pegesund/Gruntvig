@@ -176,7 +176,7 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-            String proximity= "";
+            String proximity= str.substring(start, stop);
             if( prox>0 ) {
                 String[] W= lookfor.split("\\|");
                 for( int i=0; i<W.length; i++ )
