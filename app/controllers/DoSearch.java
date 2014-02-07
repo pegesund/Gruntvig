@@ -139,6 +139,7 @@ public class DoSearch extends Application {
             while( lookfor.substring(n,m+1).matches("[0-9]+") && m+1<lookfor.length() )
                 m++;
             prox= (m==n)?0:Integer.parseInt(lookfor.substring(n,m-1));
+            System.out.println( n+","+m+","+prox );
             lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         }
         else if( lookfor.contains("\"") )
@@ -146,7 +147,7 @@ public class DoSearch extends Application {
         else
             lookfor = lookfor.replace(" ","|");
         System.out.println("Look for: " + lookfor );
-        System.out.println( n, m, prox );
+        System.out.println( prox );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         String match= "\\b(" + lookfor + ")\\b";
