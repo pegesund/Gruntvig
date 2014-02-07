@@ -158,7 +158,6 @@ public class DoSearch extends Application {
         String res= "";
         int stop= 0;
         while( matcher.find(stop) ) {
-            boolean skip= false;
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
@@ -176,14 +175,6 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-            String proximity= str.substring(start, stop);
-            if( prox>0 ) {
-                String[] W= lookfor.split("\\|");
-                for( int i=0; i<W.length; i++ )
-                    if( !proximity.matches("\\b(" + W[i] + ")\\b") )
-                        skip= true;
-            }
-            if( !skip ) {
                 String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
                 if (start != 0) {
                     s = "..." + s;
@@ -195,7 +186,6 @@ public class DoSearch extends Application {
                     s += " ...";
                 }
                 res+= s;
-            }
         }
         return res;
     }
