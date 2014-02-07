@@ -136,7 +136,7 @@ public class DoSearch extends Application {
         if( lookfor.contains("\"") && lookfor.contains("~") ) {
             int n= lookfor.indexOf("~")+1;
             int m= n;
-            while( lookfor.substring(n,m+1).matches("[0-9]+") && m+1<lookfor.length() )
+            while( lookfor.substring(n,m).matches("[0-9]+") && m<lookfor.length() )
                 m++;
             prox= (m==n)?0:Integer.parseInt(lookfor.substring(n,m-1));
             System.out.println( n+","+m+","+prox );
