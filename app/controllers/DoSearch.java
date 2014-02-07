@@ -134,7 +134,7 @@ public class DoSearch extends Application {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         int prox= 0;
         if( lookfor.contains("\"") && lookfor.contains("~") ) {
-            int n= lookfor.indexOf("~");
+            int n= lookfor.indexOf("~")+1;
             int m= n;
             while( lookfor.substring(n,m+1).matches("[0-9]+") && m+1<lookfor.length() )
                 m++;
