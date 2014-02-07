@@ -141,7 +141,8 @@ public class DoSearch extends Application {
         System.out.println("Look for: " + lookfor );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
-        Pattern findWordsPattern = Pattern.compile("\\b(" + lookfor + ")\\b", Pattern.CASE_INSENSITIVE);
+        String match= "\\b(" + lookfor + ")\\b";
+        Pattern findWordsPattern = Pattern.compile(match, Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
         //if (matcher.find()) {
         //   lookforStart = matcher.start();
@@ -166,7 +167,7 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-            String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor + ")" + "[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
+            String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
             if (start != 0) {
                 s = "..." + s;
             }
