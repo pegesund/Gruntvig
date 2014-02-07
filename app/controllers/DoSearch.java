@@ -146,7 +146,7 @@ public class DoSearch extends Application {
         else
             lookfor = lookfor.replace(" ","|");
         System.out.println("Look for: " + lookfor );
-        System.out.println( prox );
+        System.out.println( n, m, prox );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         String match= "\\b(" + lookfor + ")\\b";
