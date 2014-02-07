@@ -138,7 +138,7 @@ public class DoSearch extends Application {
             int m= n+1;
             while( m<lookfor.length() && lookfor.substring(n,m).matches("[0-9]+") ) {
                 m++;
-                System.out.println( n+","+m+","+prox );
+                System.out.println( n+","+m+","+lookfor.substring(n,m) );
             }
             prox= (m==n+1)?0:Integer.parseInt(lookfor.substring(n,m));
             lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
