@@ -133,7 +133,7 @@ public class DoSearch extends Application {
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         if( lookfor.contains("\"") && lookfor.contains("~") )
-            lookfor = lookfor.replace(" ","\\b.*\\b").replaceAll("~[0-9.]*","").replace("\"","");
+            lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         else if( lookfor.contains("\"") )
             lookfor = lookfor.replace("\"","");
         else
