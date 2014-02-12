@@ -177,21 +177,24 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
+            String proximity= "";
             if( prox>0 ) {
-                String[] W= lookfor.split("\\|");
                 int proxEnd= lookforStart;
+                String[] W= lookfor.split("\\|");
                 int p= prox+W.length;
                 //System.out.println( p );
-                while ( proxEnd < str.length() && p>0 ) {
+                while ( proxEnd+1 < str.length() && p>0 ) {
                   proxEnd++;
                   if( str.substring(proxEnd, proxEnd+1).equals(" ") )
                     p--;
                   //System.out.println( str.substring( lookforStart,proxEnd ) + "," + p + "," + proxEnd );
                 }
-                String proximity= str.substring( lookforStart,proxEnd ).toLowerCase();
+                start= lookforStart;
+                stop= proxEnd;
+                proximity= str.substring( start, stop ).toLowerCase();
                 System.out.println( proximity );
                 for( int i=0; i<W.length; i++ ) {
-                    if( !proximity.matches(".*\\b(" + W[i] + ")\\b.*") ) {
+                    if( !proximity.matches(".*\\b" + W[i] + "\\b.*") ) {
                         skip= true;
                         break;
                     }
@@ -199,7 +202,8 @@ public class DoSearch extends Application {
                 }
             }
             if( !skip ) {
-                String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
+                String s= ( prox>0 ) ? replaceAll(proximity, match, " <span class='lookedfor'> $1 </span> ")
+                                     : replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
                 if (start != 0) {
                     s = "..." + s;
                 }
