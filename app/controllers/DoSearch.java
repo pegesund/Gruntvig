@@ -27,7 +27,7 @@ public class DoSearch extends Application {
     /**
      * Advanced Search
      */
-    /* KK 2014-02-06 */    
+    /* KK 2014-02-12 */    
     public static void avanceret() { 
         System.out.println("Advanced search");
         String lookfor = Application.params.get("lookfor");
@@ -40,7 +40,7 @@ public class DoSearch extends Application {
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
 
-        if( grundtvig!=null ) { // Søg i Grundtvigs kapitler (chapters)
+        if( grundtvig!=null ) { // Søg i Grundtvigteksternes kapitler (chapters)
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
           chapters = qChapter.fetch();
           chaptersSize= chapters.size();
@@ -128,8 +128,9 @@ public class DoSearch extends Application {
      * add caching later if slow
      * 
      */
-    /* Vis kontekst for alle fund af alle søgeord i lookfor
-     * Ændret ifm. avanceret søg, KK 2014-02-05 */
+    /* Vis kontekst for *alle* fund af *alle* søgeord i lookfor
+     * Vis kontekst for proximity søgning (afsluttende med ~tal)
+     * KK 2014-02-12 */
     private static String createTeaser(String str, String lookforOrig, int len) {
         String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         int prox= 0;
@@ -158,6 +159,7 @@ public class DoSearch extends Application {
         String res= "";
         int stop= 0;
         while( matcher.find(stop) ) {
+            boolean skip= false;
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
             int start = lookforStart;
@@ -175,6 +177,28 @@ public class DoSearch extends Application {
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
+            if( prox>0 ) {
+                String[] W= lookfor.split("\\|");
+                int proxEnd= lookforStart;
+                int p= prox+W.length;
+                //System.out.println( p );
+                while ( proxEnd < str.length() && p>0 ) {
+                  proxEnd++;
+                  if( str.substring(proxEnd, proxEnd+1).equals(" ") )
+                    p--;
+                  //System.out.println( str.substring( lookforStart,proxEnd ) + "," + p + "," + proxEnd );
+                }
+                String proximity= str.substring( lookforStart,proxEnd ).toLowerCase();
+                System.out.println( proximity );
+                for( int i=0; i<W.length; i++ ) {
+                    if( !proximity.matches(".*\\b(" + W[i] + ")\\b.*") ) {
+                        skip= true;
+                        break;
+                    }
+                    System.out.println( W[i] + (skip?" skipped":" found") );
+                }
+            }
+            if( !skip ) {
                 String s = replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
                 if (start != 0) {
                     s = "..." + s;
@@ -186,6 +210,7 @@ public class DoSearch extends Application {
                     s += " ...";
                 }
                 res+= s;
+            }
         }
         return res;
     }
