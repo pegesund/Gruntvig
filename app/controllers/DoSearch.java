@@ -162,22 +162,15 @@ public class DoSearch extends Application {
             boolean skip= false;
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
-            int start = lookforStart;
-            stop = lookforEnd;
-            while (stop < str.length() && ((stop - lookforEnd) < len)) {
-                stop++;
-            }
+            stop= Math.max( lookforEnd+len, str.length() );
             while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
                 stop++;
             }
             // del kun ved hele ord
-            while (start > 0 && ((lookforStart - start) < len)) {
-                start--;
-            }
+            int start= Math.min( lookforStart-len, 0 );
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
-            String proximity= "";
             if( prox>0 ) {
                 int proxEnd= lookforStart;
                 String[] W= lookfor.split("\\|");
@@ -191,7 +184,7 @@ public class DoSearch extends Application {
                 }
                 start= lookforStart;
                 stop= proxEnd;
-                proximity= str.substring( start, stop ).toLowerCase();
+                String proximity= str.substring( start, stop ).toLowerCase();
                 System.out.println( proximity );
                 for( int i=0; i<W.length; i++ ) {
                     if( !proximity.matches(".*\\b" + W[i] + "\\b.*") ) {
@@ -202,8 +195,7 @@ public class DoSearch extends Application {
                 }
             }
             if( !skip ) {
-                String s= ( prox>0 ) ? replaceAll(proximity, match, " <span class='lookedfor'> $1 </span> ")
-                                     : replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
+                String s= replaceAll(str.substring(start, stop), match, " <span class='lookedfor'> $1 </span> ");
                 if (start != 0) {
                     s = "..." + s;
                 }
