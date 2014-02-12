@@ -33,6 +33,54 @@
   }
 </script-->
 <script type="text/javascript"> // <!--
+  function QueryString(key) {
+    var value = null;
+    for (var i=0;i<QueryString.keys.length;i++) {
+      if (QueryString.keys[i]==key) {
+        value = QueryString.values[i];
+        break;
+      }
+    }
+    return value;
+  }
+
+  function QueryString_Parse() {
+    var query = window.location.search.substring(1);
+    var pairs = query.split("&");
+    for (var i=0;i<pairs.length;i++) {
+      var pos = pairs[i].indexOf('=');
+      if (pos >= 0) {
+        var argname = pairs[i].substring(0,pos);
+        var value = pairs[i].substring(pos+1);
+        QueryString.keys[QueryString.keys.length] = argname;
+        QueryString.values[QueryString.values.length] = value;
+      }
+    }
+  }
+
+  QueryString.keys = new Array();
+  QueryString.values = new Array();
+
+  QueryString_Parse();
+  
+  $(document).ready(function() { // sample query: ?grundtvig=jatak&kommentar=jatak&words=sogn+falster&bool=0&prox=10&lucene=sogn+AND+falster
+    var grundtvigQS= QueryString("grundtvig"),
+        kommentarQS= QueryString("kommentar"),
+        wordsQS= QueryString("words"),
+        boolQS= QueryString("bool"),
+        proxQS= QueryString("prox"),
+        luceneQS= QueryString("lucene"),
+        luceneElem= document.getElementById( "luceneString" ),
+        proxNoElem= document.getElementById( "proxNo" ),
+        proxRadioElem= document.getElementById( "proxRadio" );
+alert( wordsQS+","+boolQS+","+proxQS+","+luceneQS );
+alert( proxNoElem );
+    if( proxQS ) {
+        proxNoElem.value= proxQS;
+        proxRadioElem.checked= "checked"
+    }
+  });
+  
   function buildQPS( words ) {
     var lucene= document.getElementById( "luceneString" ),
         prox= document.getElementById( "proxNo" ),
@@ -54,7 +102,7 @@
         }
       }
     lucene.value= words.value.replace(/^ *| *$/g,quoteVal).replace(/ +/g,boolVal).replace(/(~[0-9.]*)?$/g,putProx);
-  }
+  }  
   //-->
 </script>
 
@@ -97,7 +145,7 @@
 		  </div-->
 		  <div>
 		    <h5>Søgeord</h5>
-		    <input name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
+		    <input name="words" class="clearSearch" type="text" value="${lookfor ? lookfor.replace(' AND ',' ').replace(' OR ',' ').replace('\u0022','').replaceAll('~[0-9]*','')  : 'Søgeord'}" onchange="buildQPS(this)"/>
 		    <span class="vejl"><a onclick="return blank(this.href,'vejl')" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
 		    <br/>
 		    <h5>Søg efter:</h5>
@@ -123,15 +171,16 @@
           </div>
 		    
 		  <div>
-                    <input id="luceneString" name="lucene" class="clearSearch qps" type="hidden" size="40" value="${lookfor}"/>
-		    <!--span class="vejl">Læs mere om <a onclick="return blank(this.href,'vejl')" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span-->
+                      <input id="luceneString" name="lucene" type="hidden" value="${lookfor ?: '.ingenting.'}"/>
+                    <!--input id="luceneString" name="lucene" class="clearSearch qps" type="text" size="40" value="Lucene QPS"/>
+		    <span class="vejl">Læs mere om <a onclick="return blank(this.href,'vejl')" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span-->
 		  </div>
 		</form>	      
 	  </div>
             
 <div class="container" id="search_results">
 
-<h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
+    <h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
 
 <h2><b>Resultater hos Grundtvig:</b></h2>
 
