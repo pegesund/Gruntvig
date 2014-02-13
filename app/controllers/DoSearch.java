@@ -150,7 +150,7 @@ public class DoSearch extends Application {
         else
             lookfor = lookfor.replace(" ","|");
         System.out.println("Teaser for: " + lookfor );
-        System.out.println("prox=" + prox );
+        System.out.println("prox= " + prox );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         String match= "\\b(" + lookfor + ")\\b";
@@ -164,16 +164,21 @@ public class DoSearch extends Application {
         while( matcher.find(stop) ) {
             boolean skip= false;
             lookforStart = matcher.start();
+            int start= Math.max( lookforStart-len, 0 );
+            if( start < /*previous*/ stop) {
+                start= stop;
+            }
+            else {
+              while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
+                start--;
+              }
+            }
             int lookforEnd = lookforStart + lookfor.length();
             stop= Math.min( lookforEnd+len, str.length() );
             while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
                 stop++;
             }
             // del kun ved hele ord
-            int start= Math.max( lookforStart-len, 0 );
-            while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
-                start--;
-            }
             if( prox>0 ) {
                 int proxEnd= lookforStart;
                 String[] W= lookfor.split("\\|");
