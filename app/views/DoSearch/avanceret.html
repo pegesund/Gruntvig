@@ -1,6 +1,6 @@
 #{extends 'main.html' /}
 #{ header /}
-<!-- KK 2014-02-07 -->
+<!-- KK 2014-02-13 -->
 
 <style type="text/css">
   .choice {background-color: #f8f8f8;
@@ -57,27 +57,40 @@
       }
     }
   }
-
-  QueryString.keys = new Array();
-  QueryString.values = new Array();
-
-  QueryString_Parse();
   
-  $(document).ready(function() { // sample query: ?grundtvig=jatak&kommentar=jatak&words=sogn+falster&bool=0&prox=10&lucene=sogn+AND+falster
-    var grundtvigQS= QueryString("grundtvig"),
-        kommentarQS= QueryString("kommentar"),
-        wordsQS= QueryString("words"),
-        boolQS= QueryString("bool"),
-        proxQS= QueryString("prox"),
-        luceneQS= QueryString("lucene"),
-        luceneElem= document.getElementById( "luceneString" ),
-        proxNoElem= document.getElementById( "proxNo" ),
-        proxRadioElem= document.getElementById( "proxRadio" );
-alert( wordsQS+","+boolQS+","+proxQS+","+luceneQS );
-alert( proxNoElem );
-    if( proxQS ) {
+  $(document).ready(function() { 
+    // Reetabler søgefelter udfra url-query
+    // fx: ?grundtvig=jatak&kommentar=jatak&words=sogn+falster&bool=0&prox=10&lucene=sogn+AND+falster
+    QueryString.keys = new Array();  
+    QueryString.values = new Array();
+    QueryString_Parse();
+    var wordsQS= QueryString("words");
+//alert( wordsQS+","+boolQS+","+proxQS+","+luceneQS );
+//alert( proxNoElem );
+    if( wordsQS ) { //en søgestreng findes, dvs. siden er kaldt som resultat af en søgning, ikke fra menuen
+      var grundtvigQS= QueryString("grundtvig"),
+          kommentarQS= QueryString("kommentar"),
+          boolQS= QueryString("bool"),
+          proxQS= QueryString("prox"),
+          wordsElem= document.getElementById( "wordsString" );
+      wordsElem.value= decodeURI( wordsQS.replace(/\+/g," ") );
+      if( !grundtvigQS ) {
+        var grundtvigElem= document.getElementById( "grundtvigChk" );
+        grundtvigElem.checked= false;
+      }
+      if( !kommentarQS ) {
+        var kommentarElem= document.getElementById( "kommentarChk" );
+        kommentarElem.checked= false;
+      }
+      if( boolQS ) {
+        var radioElem= document.getElementById( "radio"+boolQS );
+        radioElem.checked= true;
+      }
+      if( proxQS ) {
+        var proxNoElem= document.getElementById( "proxNo" );
         proxNoElem.value= proxQS;
-        proxRadioElem.checked= "checked"
+      }
+      buildQPS( wordsElem );
     }
   });
   
@@ -132,8 +145,8 @@ alert( proxNoElem );
 		<form name="advForm" action="avanceret" class="advSearch">
 		  <div>
 		    <h5>Søgekategori</h5>
-		    <span class="choice">Grundtvig<input type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
-		    <span class="choice">Kommentar<input type="checkbox" name="kommentar" value="jatak" checked="checked"/></span>
+                    <span class="choice">Grundtvig<input id="grundtvigChk" type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
+		    <span class="choice">Kommentar<input id="kommentarChk" type="checkbox" name="kommentar" value="jatak" checked="checked"/></span>
 		  </div>
 		  <!--div>
 		    <h5>Genre</h5>
@@ -145,15 +158,15 @@ alert( proxNoElem );
 		  </div-->
 		  <div>
 		    <h5>Søgeord</h5>
-		    <input name="words" class="clearSearch" type="text" value="${lookfor ? lookfor.replace(' AND ',' ').replace(' OR ',' ').replace('\u0022','').replaceAll('~[0-9]*','')  : 'Søgeord'}" onchange="buildQPS(this)"/>
-		    <span class="vejl"><a onclick="return blank(this.href,'vejl')" href="vejledning.html">Jokertegn</a>, * og ? kan anvendes</span>
+                    <input id="wordsString" name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
+		    <span class="vejl">Jokertegn, * og ? kan anvendes</span>
 		    <br/>
 		    <h5>Søg efter:</h5>
-		    <span class="choice">Alle ord<input type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
-		    <span class="choice">Nogle ord<input type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
-		    <span class="choice">Den nøjagtige sætning<input type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
+                    <span class="choice">Alle ord<input id="radio0" type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
+		    <span class="choice">Nogle ord<input id="radio1" type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
+		    <span class="choice">Den nøjagtige sætning<input id="radio2" type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
 		    <br/>
-                    <span class="choice">Alle ord med maks. <input id="proxNo" class="clearSearch" type="text" size="2" name="prox" value="10" onchange="proxRadio.checked=true;buildQPS(words)"/> ord imellem<input id="proxRadio" type="radio" name="bool" value="3" onchange="buildQPS(words)"/></span>
+                    <span class="choice">Alle ord med maks. <input id="proxNo" class="clearSearch" type="text" size="2" name="prox" value="10" onchange="radio3.checked=true;buildQPS(words)"/> ord imellem<input id="radio3" type="radio" name="bool" value="3" onchange="buildQPS(words)"/></span>
                     <br/>
                     <span class="vejl">Relevant ved flere søgeord</span>
 		    <!--Søg i:
@@ -171,19 +184,19 @@ alert( proxNoElem );
           </div>
 		    
 		  <div>
-                      <input id="luceneString" name="lucene" type="hidden" value="${lookfor ?: '.ingenting.'}"/>
+                    <input id="luceneString" name="lucene" type="hidden" value=".ingenting."/>
                     <!--input id="luceneString" name="lucene" class="clearSearch qps" type="text" size="40" value="Lucene QPS"/>
 		    <span class="vejl">Læs mere om <a onclick="return blank(this.href,'vejl')" href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">QPS</a> og avanceret søgning</span-->
 		  </div>
 		</form>	      
-	  </div>
+	  </div>            
             
+#{if lookfor}
 <div class="container" id="search_results">
+<h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
 
-    <h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat(er)</h1>
-
+#{if cat.contains("grundtvig")}
 <h2><b>Resultater hos Grundtvig:</b></h2>
-
 #{list chapters, as:'chapter'}
 <div class="treff">
     <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}">
@@ -192,7 +205,9 @@ alert( proxNoElem );
     <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
 </div>
 #{/list}
+#{/if}
 
+#{if cat.contains("kommentar")}
 <h2><b>Resultater i kommentarer:</b></h2>
 
 #{list renderAssets, as:'asset'}
@@ -201,6 +216,8 @@ alert( proxNoElem );
     <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
 </div>
 #{/list}
+#{/if}
+#{/if}
 
 </div>
 
