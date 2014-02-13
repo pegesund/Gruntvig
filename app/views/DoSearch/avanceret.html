@@ -205,12 +205,15 @@
     <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
 </div>
 #{/list}
+#{if renderGrundtvigAssets}
+<h3>Varianter</h3>
 #{list renderGrundtvigAssets, as:'asset'}
 <div class="treff">
 <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
     <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
 </div>
 #{/list}
+#{/if}
 #{/if}
 
 #{if cat.contains("kommentar")}
