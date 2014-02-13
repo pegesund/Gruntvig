@@ -29,15 +29,22 @@ public class DoSearch extends Application {
      */
     /* KK 2014-02-13 */    
     public static void avanceret() { 
-        System.out.println("Advanced search");
-        String lookfor = Application.params.get("lookfor");
-        String lucene = Application.params.get("lucene");
-        String grundtvig = Application.params.get("grundtvig");
-        String kommentar = Application.params.get("kommentar");
-        String cat= "";
-        List<Chapter> chapters= null;
-        int chaptersSize= 0;
-        ArrayList<Asset> renderAssets = new ArrayList<Asset>();
+      System.out.println("Advanced search");
+      String lookfor = Application.params.get("lookfor");
+      String lucene = Application.params.get("lucene");
+      String grundtvig = Application.params.get("grundtvig");
+      String kommentar = Application.params.get("kommentar");
+      String cat= "";
+      List<Chapter> chapters= null;
+      int chaptersSize= 0;
+      ArrayList<Asset> renderAssets = new ArrayList<Asset>();
+      Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
+      List<Asset> assets = qAsset.fetch();
+      List<Asset> allAssets = Asset.findAll();
+      for (Asset asset : assets) {
+        System.out.println("Asset file match: " + asset.fileName);
+      }
+          
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
 
@@ -46,18 +53,23 @@ public class DoSearch extends Application {
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
           chapters = qChapter.fetch();
           chaptersSize= chapters.size();
-        }
+          System.out.println("Chapters found: " + chapters.size());
+          for (Asset asset: assets) {
+            if ( asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ) {
+                try {
+                    long _id = asset.getCorrespondingRootId();
+                    renderAssets.add(asset);
+                } catch (Exception _e) {
+                    
+                }
+            }
+          }
+         }
 
         if( kommentar!=null ) { // Søg i kommentarfiler (assets)
           cat+= "kommentar";
-          Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
-          List<Asset> assets = qAsset.fetch();
-          List<Asset> allAssets = Asset.findAll();
-          for (Asset asset : assets) {
-            System.out.println("Asset file match: " + asset.fileName);
-          }
           for (Asset asset: assets) {
-            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) /*||  asset.type.equals(Asset.rootType)*/) {
+            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderAssets.add(asset);
