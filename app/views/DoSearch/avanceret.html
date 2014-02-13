@@ -205,12 +205,18 @@
     <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
 </div>
 #{/list}
+#{list renderGrundtvigAssets, as:'asset'}
+<div class="treff">
+<h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
+    <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+</div>
+#{/list}
 #{/if}
 
 #{if cat.contains("kommentar")}
 <h2><b>Resultater i kommentarer:</b></h2>
 
-#{list renderAssets, as:'asset'}
+#{list renderCommentAssets, as:'asset'}
 <div class="treff">
 <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
     <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
