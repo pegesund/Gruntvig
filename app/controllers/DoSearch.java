@@ -27,13 +27,14 @@ public class DoSearch extends Application {
     /**
      * Advanced Search
      */
-    /* KK 2014-02-12 */    
+    /* KK 2014-02-13 */    
     public static void avanceret() { 
         System.out.println("Advanced search");
         String lookfor = Application.params.get("lookfor");
         String lucene = Application.params.get("lucene");
         String grundtvig = Application.params.get("grundtvig");
         String kommentar = Application.params.get("kommentar");
+        String cat= "";
         List<Chapter> chapters= null;
         int chaptersSize= 0;
         ArrayList<Asset> renderAssets = new ArrayList<Asset>();
@@ -41,12 +42,14 @@ public class DoSearch extends Application {
         System.out.println("Searching for qps: " + lucene);
 
         if( grundtvig!=null ) { // Søg i Grundtvigteksternes kapitler (chapters)
+          cat+= "grundtvig";
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
           chapters = qChapter.fetch();
           chaptersSize= chapters.size();
         }
 
         if( kommentar!=null ) { // Søg i kommentarfiler (assets)
+          cat+= "kommentar";
           Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
           List<Asset> assets = qAsset.fetch();
           List<Asset> allAssets = Asset.findAll();
@@ -68,7 +71,7 @@ public class DoSearch extends Application {
         int totalHits = renderAssets.size() + chaptersSize;
         System.out.println("Total hits: " + totalHits);
         lookfor= lucene;
-        render(renderAssets, chapters, lookfor, totalHits);
+        render(renderAssets, chapters, lookfor, totalHits, cat);
       }
       else
         render();
@@ -146,8 +149,8 @@ public class DoSearch extends Application {
             lookfor = lookfor.replace("\"","");
         else
             lookfor = lookfor.replace(" ","|");
-        System.out.println("Look for: " + lookfor );
-        System.out.println( prox );
+        System.out.println("Teaser for: " + lookfor );
+        System.out.println("prox=" + prox );
         int lookforStart;
         //Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
         String match= "\\b(" + lookfor + ")\\b";
@@ -185,13 +188,13 @@ public class DoSearch extends Application {
                 start= lookforStart;
                 stop= proxEnd;
                 String proximity= str.substring( start, stop ).toLowerCase();
-                System.out.println( proximity );
+                //System.out.println( proximity );
                 for( int i=0; i<W.length; i++ ) {
                     if( !proximity.matches(".*\\b" + W[i] + "\\b.*") ) {
                         skip= true;
                         break;
                     }
-                    System.out.println( W[i] + (skip?" skipped":" found") );
+                    //System.out.println( W[i] + (skip?" skipped":" found") );
                 }
             }
             if( !skip ) {
