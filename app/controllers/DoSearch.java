@@ -37,7 +37,8 @@ public class DoSearch extends Application {
       String cat= "";
       List<Chapter> chapters= null;
       int chaptersSize= 0;
-      ArrayList<Asset> renderAssets = new ArrayList<Asset>();
+      ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
+      ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
       Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
       List<Asset> assets = qAsset.fetch();
       List<Asset> allAssets = Asset.findAll();
@@ -58,7 +59,7 @@ public class DoSearch extends Application {
             if ( asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
-                    renderAssets.add(asset);
+                    renderGrundtvigAssets.add(asset);
                 } catch (Exception _e) {
                     
                 }
@@ -72,7 +73,7 @@ public class DoSearch extends Application {
             if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
-                    renderAssets.add(asset);
+                    renderCommentAssets.add(asset);
                 } catch (Exception _e) {
                     
                 }
@@ -80,10 +81,10 @@ public class DoSearch extends Application {
           }
         }
 
-        int totalHits = renderAssets.size() + chaptersSize;
+        int totalHits = renderGrundtvigAssets.size() + renderCommentAssets.size() + chaptersSize;
         System.out.println("Total hits: " + totalHits);
         lookfor= lucene;
-        render(renderAssets, chapters, lookfor, totalHits, cat);
+        render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat);
       }
       else
         render();
