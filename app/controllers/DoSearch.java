@@ -132,7 +132,7 @@ public class DoSearch extends Application {
      * Vis kontekst for proximity søgning (afsluttende med ~tal)
      * KK 2014-02-12 */
     private static String createTeaser(String str, String lookforOrig, int len) {
-        String lookfor = lookforOrig.toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
+        String lookfor = lookforOrig.replaceAll(" (AND|&&|OR|\\|\\||NOT|\\+|-) "," ").toLowerCase().replace("*","\\p{L}*").replace("?","\\p{L}");
         int prox= 0;
         if( lookfor.contains("\"") && lookfor.contains("~") ) {
             int n= lookfor.indexOf("~")+1;
@@ -162,12 +162,12 @@ public class DoSearch extends Application {
             boolean skip= false;
             lookforStart = matcher.start();
             int lookforEnd = lookforStart + lookfor.length();
-            stop= Math.max( lookforEnd+len, str.length() );
+            stop= Math.min( lookforEnd+len, str.length() );
             while (stop < str.length() && !str.substring(stop, stop + 1).equals(" ")) {
                 stop++;
             }
             // del kun ved hele ord
-            int start= Math.min( lookforStart-len, 0 );
+            int start= Math.max( lookforStart-len, 0 );
             while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
                 start--;
             }
