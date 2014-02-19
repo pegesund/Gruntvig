@@ -32,7 +32,7 @@
         node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
-
+    nodes = nodes.sort().reverse();
     $(nodes).each( function(index) {
     $('#' + value).after(nodes.pop());
     });
