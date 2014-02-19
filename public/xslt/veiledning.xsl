@@ -77,6 +77,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="tei:hi[@rend='bold']"> 
+        <span style="font-weight: bold">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:table"> 
         <table style="font-size: 16px">
             <xsl:apply-templates/>
@@ -107,8 +113,8 @@
 
     <xsl:include href="popups.xsl"/>
 
-    <xsl:template match="tei:div">
-        <div class="{@rend}">
+    <xsl:template match="tei:div[@rend='treff']">
+        <div class="{@rend}" style="background-color:white;padding:2px">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
