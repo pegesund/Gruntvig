@@ -70,7 +70,7 @@ public class DoSearch extends Application {
         if( kommentar!=null ) { // Søg i kommentarfiler (assets)
           cat+= "kommentar";
           for (Asset asset: assets) {
-            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) ) {
+            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.veiledningType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderCommentAssets.add(asset);
