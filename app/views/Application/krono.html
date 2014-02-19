@@ -29,7 +29,7 @@
     }
     var name = $(this).find('span.name').text(),
         url= $(this).find('span.url').text(),
-        node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+        node = '<!--year sj--><tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
     nodes = nodes.sort().reverse();
