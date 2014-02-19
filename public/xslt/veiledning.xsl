@@ -107,5 +107,10 @@
 
     <xsl:include href="popups.xsl"/>
 
+    <xsl:template match="tei:div">
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
 
 </xsl:stylesheet>
