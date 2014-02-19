@@ -134,7 +134,7 @@
 			<li class="header">Værktøj</li>
                         <li><a href="../tidslinje">Tidslinje</a></li>
                         <li><a href="/kort">Kort</a></li>
-                        <li><a href="./avanceret">Avanceret søgning</a></li>
+                        <li><a class="selected" href="./avanceret">Avanceret søgning</a></li>
                         <li><a href="./tools">Flere værktøjer</a></li>
 		</ul>
 
@@ -164,7 +164,7 @@
 		    <h5>Søg efter:</h5>
                     <span class="choice">Alle ord<input id="radio0" type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
 		    <span class="choice">Nogle ord<input id="radio1" type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
-		    <span class="choice">Den nøjagtige sætning<input id="radio2" type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
+		    <span class="choice">Den nøjagtige ordlyd<input id="radio2" type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
 		    <br/>
                     <span class="choice">Alle ord med maks. <input id="proxNo" class="clearSearch" type="text" size="2" name="prox" value="10" onchange="radio3.checked=true;buildQPS(words)"/> ord imellem<input id="radio3" type="radio" name="bool" value="3" onchange="buildQPS(words)"/></span>
                     <br/>
@@ -193,7 +193,17 @@
             
 #{if lookfor}
 <div class="container" id="search_results">
-<h1>Søgning efter <b>${lookfor}</b> gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
+#{set W= lookfor.split(/ /) /}
+<h1>Søgning efter
+#{list W, as: 'wd' }
+  #{if wd=="AND" || wd=="OR"}
+    ${wd=="AND" ? "og" : "el." }
+  #{/if}
+  #{else}
+    <b>${wd}</b>
+  #{/else}
+#{/list}
+gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
 
 #{if cat.contains("grundtvig")}
 <h2><b>Resultater hos Grundtvig:</b></h2>
