@@ -329,12 +329,12 @@
                         <xsl:apply-templates/>
                     </div>
                 </xsl:when>
-                <xsl:when test="@type='main'">
+                <xsl:when test="@type='first'">
                     <div class="titlePageMain">
                         <xsl:apply-templates/>
                     </div>
                 </xsl:when>
-                <xsl:when test="@type='part'">
+                <xsl:when test="@type='second'">
                     <div class="titlePagePart">
                         <xsl:apply-templates/>
                     </div>
