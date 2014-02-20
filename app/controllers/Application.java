@@ -26,7 +26,7 @@ public class Application extends Controller {
             renderArgs.put("sortedAssets", sillySortedAssets);            
         } catch (Exception e) {
             renderArgs.put("sortedAssets", Asset.find("type = ? order by name", "root").fetch());
-            System.out.println("Probably empty db or filenames without year");
+            System.out.println("Probably empty db or filenames without year, assets not sorted");
         }
     }
 
