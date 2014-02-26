@@ -193,9 +193,9 @@ a.returnTop
         background: #222 url(../img/gradient.png) repeat-x 0 -100px; 
         }
 
-#linkAvanceretSog a:link
+a.linkAvanceretSog:link
         {
-        color: red;    
+        color: red;
         }
 /* search END KSR */
 
