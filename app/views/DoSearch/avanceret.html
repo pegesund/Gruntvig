@@ -1,19 +1,58 @@
 #{extends 'main.html' /}
 #{ header /}
+
 <!-- KK 2014-02-13 -->
 
 <style type="text/css">
-  .choice {background-color: #f8f8f8;
-           border: thin solid silver;
-           padding: 5px 0px 0px 1px;
-           line-height: 150%;}
+    
+.choice
+        {
+         /*background-color: #f8f8f8;
+         border: thin solid silver;*/
+         font-size: 16px;
+         margin: 0px 0px 6px 0px;
+         /*padding: 5px 10px 8px 3px;*/
+         line-height: 150%;
+        }
+        
   /*#proxNo {font-size: 100%;}*/
-  .qps {background-color: aliceblue;
+  
+  .qps 
+        {
+        background-color: aliceblue;
         color: red;
-        /*float: none;*/}
-  .advSearch input {float: none;}
-  .vejl {color: orange;}
+        /*float: none;*/
+        }
+        
+  .advSearch input 
+        {
+        float: none;
+        }
+        
+  .vejl 
+        {
+        color: orange
+        }
+        
+input[type=text]
+        {
+        border: 5px solid white;
+        -webkit-box-shadow: 
+            inset 0 0 8px  rgba(0,0,0,0.1),
+                  0 0 16px rgba(0,0,0,0.1);
+        -moz-box-shadow: 
+            inset 0 0 8px  rgba(0,0,0,0.1),
+                  0 0 16px rgba(0,0,0,0.1);
+        box-shadow: 
+            inset 0 0 8px  rgba(0,0,0,0.1),
+                  0 0 16px rgba(0,0,0,0.1);
+        padding: 15px;
+        background: rgba(255,255,255,0.5);
+        margin: 0 0 10px 0;
+    }
+  
 </style>
+
 <!--script type="text/javascript"> //May be used for genres
   function chkall( my ) {
     if( my.checked ) 
@@ -120,32 +159,30 @@
 </script>
 
 <div id="main">
-
-	<div class="container" id="underside_innhold">
-
-		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; Værktøj &raquo; Avanceret søgning</div>
-                <a id="search_vejledning" href="../vejledning/search_vej" target="_blank">Vejledning til søgning</a>
-		</div>
+    
+    <div class="container" id="underside_innhold">
+        
+        <div id="submenu">
+            <div id="breadcrumbs"><a href="#">Forside</a> &raquo; Værktøj &raquo; Avanceret søgning</div>
+            <a id="search_vejledning" href="../vejledning/search_vej" target="_blank">Vejledning til søgning</a>
+        </div>
 
 	<div class="kolonne1">
-
-		<ul id="kolonne1_meny">
-			<li class="header">Værktøj</li>
-                        <li><a href="../tidslinje">Tidslinje</a></li>
-                        <li><a href="/kort">Kort</a></li>
-                        <li><a class="selected" href="./avanceret">Avanceret søgning</a></li>
-                        <li><a href="./tools">Flere værktøjer</a></li>
-		</ul>
-
-	</div>
+            <ul id="kolonne1_meny">
+                <li class="header">Værktøj</li>
+                <li><a href="../tidslinje">Tidslinje</a></li>
+                <li><a href="/kort">Kort</a></li>
+                <li><a class="selected" href="./avanceret">Avanceret søgning</a></li>
+                <li><a href="./tools">Flere værktøjer</a></li>
+            </ul>
+        </div>
 
 	<div class="kolonne2" id="intro_tekst">
 	  <div>
-		<form name="advForm" action="avanceret" class="advSearch">
-		  <div>
-		    <h5>Søgekategori</h5>
-                    <span class="choice">Grundtvig<input id="grundtvigChk" type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
+              <form name="advForm" action="avanceret" class="advSearch">
+                  <div>
+		    <h4>Søgekategorier</h4>
+                    <span class="choice">Grundtvig<input id="grundtvigChk" class="hat" type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
 		    <span class="choice">Kommentar<input id="kommentarChk" type="checkbox" name="kommentar" value="jatak" checked="checked"/></span>
 		  </div>
 		  <!--div>
