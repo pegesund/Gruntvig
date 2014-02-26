@@ -140,7 +140,12 @@ a.returnTop
         text-align:right;
         }
 
-#header_small #sok #avansert_sok{ margin: 0px 0px 6px 0; display:block; opacity:0;}
+#header_small #sok #avansert_sok
+        { 
+        margin: 0px 0px 12px 0; 
+        display:block; 
+        opacity:0;
+        }
 
 #header_small #sok #avansert_sok a:link, #header_small #sok #avansert_sok a:visited
         { 
