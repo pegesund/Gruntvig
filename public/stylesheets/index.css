@@ -193,7 +193,7 @@ a.returnTop
         background: #222 url(../img/gradient.png) repeat-x 0 -100px; 
         }
 
-a.linkAvanceretSog:link
+.linkAvanceretSog
         {
         width: 150px;
         }
