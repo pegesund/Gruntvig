@@ -138,6 +138,7 @@ a.returnTop
         float:right; 
         margin: 4px 0px 0 0; 
         text-align:right;
+        width: 10em;
         }
 
 #header_small #sok #avansert_sok
@@ -145,7 +146,6 @@ a.returnTop
         margin: 0px 0px 6px 0; 
         display:block; 
         opacity:0;
-        color: red;
         }
 
 #header_small #sok #avansert_sok a:link, #header_small #sok #avansert_sok a:visited
