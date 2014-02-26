@@ -131,28 +131,73 @@ a.returnTop
 #header_small #logo {width:140px; height: 47px; float:left; margin: 17px 80px 0 0;}
 #header_small #menu {float:left; margin: 16px 0px 0 0; width:480px; }
 
-#header_small #sok {float:right; margin: 4px 0px 0 0; text-align:right;}
+/* search START KSR */
+
+#header_small #sok 
+        {
+        float:right; 
+        margin: 4px 0px 0 0; 
+        text-align:right;
+        }
+
 #header_small #sok #avansert_sok{ margin: 0px 0px 6px 0; display:block; opacity:0;}
-#header_small #sok #avansert_sok a:link, #header_small #sok #avansert_sok a:visited{ color:#ddd; font-size: 13px; text-decoration:none;}
-#header_small #sok #avansert_sok a:hover { color:#fff; text-decoration:underline;}
-#header_small #sok input {width:180px; padding:10px 6px 10px 37px; color: #aaa; border:none; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px; margin-right: 4px; background: url(../img/search_bg.png) no-repeat 0 0;}
-#header_small #sok input[type="submit"] {
 
-  margin: 1px 0px 0 0;
-  padding:7px 0px;
-  border-radius:5px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  border:0px solid #000;
-  width:40px;
-  height: 34px;
-  color:#fff;
-  text-shadow: 0px -1px 0px #666;
-  background: #666 url(../img/gradient.png) repeat-x 0 -100px;
-}
+#header_small #sok #avansert_sok a:link, #header_small #sok #avansert_sok a:visited
+        { 
+        color:#ddd; 
+        font-size: 13px;
+        text-decoration:none;
+        }
+        
+#header_small #sok #avansert_sok a:hover 
+        { 
+        color:#fff; 
+        text-decoration:underline;
+        }
 
-#header_small #sok input[type="submit"]:hover {  background: #999 url(../img/gradient.png) repeat-x 0 -100px; }
-#header_small #sok input[type="submit"]:active {  background: #222 url(../img/gradient.png) repeat-x 0 -100px; }
+#header_small #sok input 
+        {
+        width:180px; 
+        padding:10px 6px 10px 37px; 
+        color: #aaa; 
+        border:none; 
+        border-radius: 4px; 
+        -moz-border-radius:4px; 
+        -webkit-border-radius:4px; 
+        margin-right: 4px; 
+        background: url(../img/search_bg.png) no-repeat 0 0;
+        }
+        
+#header_small #sok input[type="submit"] 
+        {
+        margin: 1px 0px 0 0;
+        padding:7px 0px;
+        border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border:0px solid #000;
+        width:40px;
+        height: 34px;
+        color:#fff;
+        text-shadow: 0px -1px 0px #666;
+        background: #666 url(../img/gradient.png) repeat-x 0 -100px;
+        }
+
+#header_small #sok input[type="submit"]:hover 
+        {  
+        background: #999 url(../img/gradient.png) repeat-x 0 -100px; 
+        }
+        
+#header_small #sok input[type="submit"]:active 
+        {  
+        background: #222 url(../img/gradient.png) repeat-x 0 -100px; 
+        }
+
+.link_avnaceretSog
+        {
+        color: aquamarine;    
+        }
+/* search END KSR */
 
 /* Submenu */
 
