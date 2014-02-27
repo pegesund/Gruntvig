@@ -164,7 +164,7 @@ a.returnTop
 #header_small #sok #sok_2
         {
         float: left; 
-        margin: 4px 0px 0px -20px; 
+        margin: 6px 0px 0px -20px; 
         text-align: right;
         width: 45%;
         color:red;
@@ -698,26 +698,26 @@ ul#nav li.with_dropdown:first-child ul li
 }
 
 /* level 2 list */
-#nav ul {
+
+#nav ul 
+        {
 	display: none;
 	margin: 0;
 	z-index:10;
 	padding: 0px 0 0 0;
 	width: 185px;
 	position: absolute;
-	top: 33px;
-        
+	top: 33px;        
 	left: 0;
 	background: #ddd url(../img/gradient.png) repeat-x 0 0;
-	border: solid 0px #b4b4b4;
-	
-	
+	border: solid 0px #b4b4b4;	
 	-webkit-border-top-left-radius: 0px;
 	-moz-border-radius-topleft: 0px;
 	-webkit-box-shadow: 0 2px 3px rgba(0,0,0, .3);
 	-moz-box-shadow: 0 2px 3px rgba(0,0,0, .3);
 	box-shadow: 0 2px 3px rgba(0,0,0, .3);
-}
+        }
+
 #nav ul li {
 	float: none;
 	margin: 0 0 0 0;
