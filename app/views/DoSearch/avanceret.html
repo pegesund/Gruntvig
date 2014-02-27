@@ -36,19 +36,22 @@
         
 input[type=text]
         {
-        border: 5px solid white;
-        -webkit-box-shadow: 
-            inset 0 0 8px  rgba(0,0,0,0.1),
-                  0 0 16px rgba(0,0,0,0.1);
-        -moz-box-shadow: 
-            inset 0 0 8px  rgba(0,0,0,0.1),
-                  0 0 16px rgba(0,0,0,0.1);
-        box-shadow: 
-            inset 0 0 8px  rgba(0,0,0,0.1),
-                  0 0 16px rgba(0,0,0,0.1);
-        padding: 15px;
-        background: rgba(255,255,255,0.5);
-        margin: 0 0 10px 0;
+        /*border: 1px solid black;
+        -webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 3px;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0, .3);
+	box-shadow: 0 2px 3px rgba(0,0,0, .3);*/
+        border: 1px solid #808080;
+        background-clip: padding-box;
+        border-radius: 3px 3px 3px 3px;
+        margin: 0px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -moz-background-clip: padding-box;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        -webkit-background-clip: padding-box;
+        padding: 2px;
+                
     }
   
 </style>
@@ -184,28 +187,30 @@ input[type=text]
 		    <h4>Søgekategorier</h4>
                     <span class="choice">Grundtvig<input id="grundtvigChk" class="hat" type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
 		    <span class="choice">Kommentar<input id="kommentarChk" type="checkbox" name="kommentar" value="jatak" checked="checked"/></span>
-		  </div>
-		  <!--div>
-		    <h5>Genre</h5>
+		  
+                    <!--
+		    <h4>Genre</h4>
 		    <span class="choice">Alle<input type="checkbox" name="genre" value="0" checked="checked" onclick="chkall(this)"/></span>
 		    <span class="choice">Salmer<input type="checkbox" name="genre" value="1" checked="checked" onclick="unchkall(this)"/></span>
-		    <span class="choice">Bragesnak<input type="checkbox" name="genre" value="2" checked="checked" onclick="unchkall(this)"/></span>
-		    <span class="choice">Sure opstød<input type="checkbox" name="genre" value="3" checked="checked" onclick="unchkall(this)"/></span>
-		    <span class="choice">Andet<input type="checkbox" name="genre" value="4" checked="checked" onclick="unchkall(this)"/></span>
-		  </div-->
+		    <span class="choice">Digte<input type="checkbox" name="genre" value="2" checked="checked" onclick="unchkall(this)"/></span>
+		    <span class="choice">Polemik<input type="checkbox" name="genre" value="3" checked="checked" onclick="unchkall(this)"/></span>
+		    <span class="choice">Mytologi<input type="checkbox" name="genre" value="4" checked="checked" onclick="unchkall(this)"/></span>
+		    <span class="choice">Teologi<input type="checkbox" name="genre" value="5" checked="checked" onclick="unchkall(this)"/></span>
+                  </div>
+                  -->
 		  <div>
-		    <h5>Søgeord</h5>
+		    <h4>Søgeord</h4>
                     <input id="wordsString" name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
-		    <span class="vejl">Jokertegn, * og ? kan anvendes</span>
+		    <!--<span class="vejl">Jokertegn, * og ? kan anvendes</span>-->
 		    <br/>
-		    <h5>Søg efter:</h5>
-                    <span class="choice">Alle ord<input id="radio0" type="radio" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
-		    <span class="choice">Nogle ord<input id="radio1" type="radio" name="bool" value="1" onchange="buildQPS(words)"/></span>
-		    <span class="choice">Den nøjagtige ordlyd<input id="radio2" type="radio" name="bool" value="2" onchange="buildQPS(words)"/></span>
+		    <h4>Søg efter:</h4>
+                    <span class="choice">Alle ord<input id="radio0" type="checkbox" name="bool" value="0" checked="checked" onchange="buildQPS(words)"/></span> 
+		    <span class="choice">Nogle ord<input id="radio1" type="checkbox" name="bool" value="1" onchange="buildQPS(words)"/></span>
+		    <span class="choice">Den nøjagtige ordlyd<input id="radio2" type="checkbox" name="bool" value="2" onchange="buildQPS(words)"/></span>
 		    <br/>
                     <span class="choice">Alle ord med maks. <input id="proxNo" class="clearSearch" type="text" size="2" name="prox" value="10" onchange="radio3.checked=true;buildQPS(words)"/> ord imellem<input id="radio3" type="radio" name="bool" value="3" onchange="buildQPS(words)"/></span>
                     <br/>
-                    <span class="vejl">Relevant ved flere søgeord</span>
+                    <!--<span class="vejl">Relevant ved flere søgeord</span>-->
 		    <!--Søg i:
 		    <span class="choice">Hele værker<input type="radio" name="chp" value="yes"/></span> 
 		    <span class="choice">Kapitler<input type="radio" name="chp" value="no" checked="checked"/></span>
