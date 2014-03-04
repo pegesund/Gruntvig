@@ -309,47 +309,29 @@
     
     <!-- titelblad START -->
     
-    <xsl:template match="TEI:front[@rend]">
-        <div class="frontChapter">
-            <xsl:if test="@rend">   
-                <xsl:attribute name="name">
-                    <xsl:value-of select="@rend"/>
-               </xsl:attribute> 
-            </xsl:if>
-            <xsl:apply-templates/>
-        </div>               
-    </xsl:template>    
-    
-    <xsl:template match="TEI:titlePage[@type]">
-        <div class="titlePage">
-            <xsl:choose>
-                <xsl:when test="@type='dustTitlePage'">
-                    <div class="dustTitlePaget">
-                        <br/><br/><br/><br/><br/>
-                        <xsl:apply-templates/>
-                    </div>
-                </xsl:when>
-                <xsl:when test="@type='first'">
-                    <div class="titlePageMain">
-                        <xsl:apply-templates/>
-                    </div>
-                </xsl:when>
-                <xsl:when test="@type='second'">
-                    <div class="titlePagePart">
-                        <xsl:apply-templates/>
-                    </div>
-                </xsl:when>
-            </xsl:choose>
-        </div>
+    <xsl:template match="TEI:titlePage">
+        <xsl:choose>
+            <xsl:when test="@type='dustTitlePage'">
+                <div class="dustTitlePaget">
+                    <br/><br/><br/><br/><br/>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='first'">
+                <div class="titlePageFirst">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='second'">
+                <div class="titlePageSecond">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:titlePart">
         <xsl:choose>
-            <xsl:when test="@type='dustTitlePage'">
-                <div class="dustTitlePage">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
             <xsl:when test="@type='main'">
                 <div class="titlePartMain">
                     <xsl:apply-templates/>
