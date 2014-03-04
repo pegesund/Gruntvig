@@ -577,7 +577,7 @@
     
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
         <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
                 <span class="seg">
                     <xsl:attribute name="id">
                         <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
@@ -597,7 +597,7 @@
     
     <xsl:template match="TEI:seg[@type='comStart' and @n]">
         <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
                 <span class="segStart">
                     <xsl:attribute name="id">
                         <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
@@ -618,7 +618,7 @@
     
     <xsl:template match="TEI:seg[@type='comEnd' and @n]">
         <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='com']">
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
                 <span class="segEnd">
                     <xsl:attribute name="id">
                         <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
@@ -698,9 +698,9 @@
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <!--<a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">-->
+        <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
-        <!--</a>-->
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
