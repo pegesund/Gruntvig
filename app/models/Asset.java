@@ -158,12 +158,23 @@ public class Asset extends GenericModel {
 
     /**
      * The txt-file should have a corresponding intro-file
+     * get file name from teiHeader (KK 2014-03-05)
      * @return id of intro-file asset
      * 
      */
-    public String getCorrespondingIntro() {
-        System.out.println("Looking for rootname: " + rootName);
-        Asset intro = Asset.find("rootName = ? and type = ?", rootName, Asset.introType).first();
+    public String getCorrespondingIntro() { //<note type="intro" target="1804_28_intro.xml">
+        String rN= rootName;
+        Pattern p= Pattern.compile( "<note [^>]*type=[\"']intro[\"'][^>]*>" );
+        Matcher m= p.matcher( xml );
+        if( m.find() ) {
+            p= Pattern.compile( "target=[\"']([^\"]*)[\"']" );
+            m= p.matcher( m.group(0) );
+            if( m.find() )
+                rN= getRootName( m.group(1).trim(), Asset.introType );
+        }
+
+        System.out.println("Looking for intro rootname: " + rN);
+        Asset intro = Asset.find("rootName = ? and type = ?", rN, Asset.introType).first();
         return (intro != null ? intro.html : "");
     }
 
