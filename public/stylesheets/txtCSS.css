@@ -208,6 +208,9 @@
 
 /* head end */
 
+/*
+
+
 #tekst_innhold .initial
         {
         font-style: normal;
@@ -303,6 +306,93 @@
 #tekst_innhold .l_fourthIndent
         {
         text-indent: 6em;
+        text-align: justify;
+        }
+
+#tekst_innhold .l_varRefrain
+        {
+        text-indent: -1em;
+        }
+        
+        */
+        
+#tekst_innhold .l_noIndent, #tekst_innhold .l_center, #tekst_innhold .l_hangingIndent, #tekst_innhold .l_right, #tekst_innhold .l_firstIndent
+        {
+        width: 20em;
+        }
+
+#tekst_innhold .l_noIndent
+        {
+        text-align: left;
+        }
+        
+#tekst_innhold .l_center
+        {
+        text-align: center;
+        }
+
+#tekst_innhold .l_hangingIndent
+        {
+        text-align: justify;
+        text-indent: -1em;
+        padding-left: 1em;
+        }
+        
+#tekst_innhold .l_right
+        {
+        text-align: right;
+        }
+
+#tekst_innhold .l_firstIndent
+        {
+        text-indent: 1em;
+        text-align: justify;
+        }
+        
+#tekst_innhold .l_firstIndentRight
+        {
+        margin-right: 1em;
+        text-align: right;
+        }
+
+#tekst_innhold .l_interRefrain
+        {
+        text-indent: 2em;
+        text-align: justify;
+        }
+        
+#tekst_innhold .l_refrain
+        {
+        margin-left: -1em;
+        }
+
+#tekst_innhold .l_secondIndent
+        {
+        text-indent: 2em;
+        text-align: justify;
+        }
+
+#tekst_innhold .l_secondIndentRight
+        {
+        margin-right: 2em;
+        text-align: right;
+        }
+
+#tekst_innhold .l_thirdIndent
+        {
+        text-indent: 3em;
+        text-align: justify;
+        }
+
+#tekst_innhold .l_thirdIndentRight
+        {
+        margin-right: 3em;
+        text-align: right;
+        }
+
+#tekst_innhold .l_fourthIndent
+        {
+        text-indent: 4em;
         text-align: justify;
         }
 

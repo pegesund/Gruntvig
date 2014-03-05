@@ -1,3 +1,6 @@
+test-data
+
+
 ER-DIAGRAM
 
 A completely er-diagram lies in the folder "output".

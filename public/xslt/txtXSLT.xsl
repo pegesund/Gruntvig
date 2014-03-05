@@ -41,31 +41,39 @@
                     <xsl:apply-templates select="//TEI:edition"/>
                     <xsl:text>)</xsl:text>
                 </div>
-                
-                <div class="kolofon">
+                    
+                    <div class="kolofon">
                         <xsl:text>Tekstkilder</xsl:text>                        
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
-                                    <table>
+                                    <table class="listWit">
                                         <tr>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
+                                                <xsl:value-of select="@xml:id"/>
                                             </td>
                                             <td class="source">
-                                                <!--<xsl:choose>
-                                                    <xsl:when test="@rend='A' or @rend='B' or @n">
+                                                <xsl:choose>
+                                                    <xsl:when test="@xml:id='A' or @xml:id='B'">
                                                         <xsl:apply-templates select="."/>
-                                                        <xsl:text> (SJ:</xsl:text>
+                                                        <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text>
                                                     </xsl:when>
-                                                    <xsl:otherwise>-->
+                                                    <xsl:otherwise>
                                                         <xsl:apply-templates select="."/>
-                                                    <!--</xsl:otherwise>
-                                                </xsl:choose>-->
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
                                             </td>
                                         </tr>
+                                        <!--
+                                        <tr>
+                                            <td class="SJ">Steen Johansen</td>
+                                            <td class="SJnumber">
+                                                <xsl:text></xsl:text><xsl:apply-templates select="//TEI:publicationStmt/TEI:idno"/><xsl:text></xsl:text>
+                                            </td>
+                                        </tr>
+                                        -->
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -78,7 +86,7 @@
                                     <div class="table">
                                         <table>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
+                                                <xsl:value-of select="@xml:id"/>
                                             </td>
                                             <td class="source">
                                                 <xsl:apply-templates select="."/>
@@ -87,7 +95,7 @@
                                     </div>
                                 </xsl:for-each>
                             </xsl:if>
-                        </tr>
+                        </tr>                        
                     </div>
                     
                     <div class="kolofon">
@@ -410,15 +418,26 @@
     
     <!-- titelblad END -->
     
+    <!-- lg og l START -->
+    
     <xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
                 <td class="lgNumber">
                     <xsl:value-of select="@n"/>
                 </td>
-                <td class="lg">
-                    <xsl:apply-templates/>
-                </td>
+                <xsl:choose>
+                    <xsl:when test="@rend">
+                        <td class="{@rend}">
+                            <xsl:apply-templates/>
+                        </td>
+                    </xsl:when>
+                    <xsl:when test="not(@rend)">
+                        <td class="lg_noIndent">
+                            <xsl:apply-templates/>
+                        </td>
+                    </xsl:when>
+                </xsl:choose>
             </tr>
         </table>
     </xsl:template>
@@ -428,6 +447,11 @@
             <xsl:when test="@rend='blank'">
                 <br/>
             </xsl:when>
+            <xsl:when test="not(@rend)">
+                <div class="l_noIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
             <xsl:otherwise>
                 <div class="l_{@rend}">
                     <xsl:apply-templates/>
@@ -435,6 +459,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <!-- lg og l END -->
     
     <xsl:template match="TEI:head">        
         <div class="head{@rend}">
@@ -534,7 +560,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number level="any" from="TEI:text" count="TEI:note[@type='footnote']"/>
         </xsl:variable>
         <a id="retur{$id}" href="#note{$id}" class="footMarker">
             <span>
@@ -545,7 +571,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number level="any" from="TEI:text" count="TEI:note[@type='footnote']"/>
         </xsl:variable>
         <a id="note{$id}" href="#retur{$id}" class="footMarker">
             <span>
@@ -555,6 +581,13 @@
         <span class="footnote">
             <xsl:apply-templates/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:div">
+        <div>
+            <xsl:apply-templates/>
+        </div>
+        <xsl:call-template name="footnote"/>
     </xsl:template>
     
     
