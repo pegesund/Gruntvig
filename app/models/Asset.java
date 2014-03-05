@@ -60,6 +60,8 @@ public class Asset extends GenericModel {
     @Lob
     public String name;
     @Lob
+    public String altName;
+    @Lob
     public String fileName;
     public int variant;
     public int pictureNumber = 0;
@@ -107,10 +109,11 @@ public class Asset extends GenericModel {
         System.out.println("Rootname: " + rootName);
     }
 
-    public Asset(String name, String fileName, String html, String xml, String comment, int variant, String type, String ref) {
+    public Asset(String name, String altName, String fileName, String html, String xml, String comment, int variant, String type, String ref) {
         System.out.println("***** Constructing new asset, type is: " + type);
         this.variant = variant;
         this.name = name;
+        this.altName = altName;
         this.html = html;
         this.xml = xml;
         this.importDate = new java.util.Date();
@@ -158,12 +161,23 @@ public class Asset extends GenericModel {
 
     /**
      * The txt-file should have a corresponding intro-file
+     * get file name from teiHeader (KK 2014-03-05)
      * @return id of intro-file asset
      * 
      */
-    public String getCorrespondingIntro() {
-        System.out.println("Looking for rootname: " + rootName);
-        Asset intro = Asset.find("rootName = ? and type = ?", rootName, Asset.introType).first();
+    public String getCorrespondingIntro() { //<note type="intro" target="1804_28_intro.xml">
+        String rN= rootName;
+        Pattern p= Pattern.compile( "<note [^>]*type=[\"']intro[\"'][^>]*>" );
+        Matcher m= p.matcher( xml );
+        if( m.find() ) {
+            p= Pattern.compile( "target=[\"']([^\"]*)[\"']" );
+            m= p.matcher( m.group(0) );
+            if( m.find() )
+                rN= getRootName( m.group(1).trim(), Asset.introType );
+        }
+
+        System.out.println("Looking for intro rootname: " + rN);
+        Asset intro = Asset.find("rootName = ? and type = ?", rN, Asset.introType).first();
         return (intro != null ? intro.html : "");
     }
 
@@ -451,6 +465,7 @@ public class Asset extends GenericModel {
         else
             name= preName + epub.getName();
         System.out.println( "hdrName: " + name );
+        String altName= getXmlElem( xml, "title", "rend", "altForm" );
 
         Asset asset;
         System.out.println("Filename: " + epub.getName());
@@ -458,6 +473,7 @@ public class Asset extends GenericModel {
             System.out.println("--- Updating asset with name: " + epub.getName());
             asset = Asset.find("filename", epub.getName()).first();
             if (!name.trim().equalsIgnoreCase(epub.getName().trim())) asset.name = name;
+            asset.altName= altName;
             asset.html = html;
             asset.comment = comment;
             asset.variant = variant;
@@ -468,7 +484,7 @@ public class Asset extends GenericModel {
             asset.rootName = getRootName(epub.getName(), asset.type);
             asset.xml = xml;
         } else {
-            asset = new Asset(name, epub.getName(), html, xml, comment, variant, type, references);
+            asset = new Asset(name, altName, epub.getName(), html, xml, comment, variant, type, references);
         }
         asset.save();
         System.out.println("Root-name: " + asset.rootName);
