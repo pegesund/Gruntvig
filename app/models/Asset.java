@@ -300,7 +300,7 @@ public class Asset extends GenericModel {
      * Convert xml hexadecimal char entities to unicode string
      * 
      */
-    /* KK 2014-03-05 */
+    /* KK 2014-03-05 xx */
     private static String ent2str( String ent ) {
         Pattern p= Pattern.compile( "&#x([0-9A-Fa-f]+);" );
         Matcher m= p.matcher( ent );
