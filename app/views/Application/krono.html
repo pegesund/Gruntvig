@@ -12,7 +12,7 @@
     
     $(document).ready(function() {
     
-//test: don't hide    $('div.root').hide();
+    $('div.root').hide();
     
     interval = ['180','181','182','183','184','185','186','187','188','189']
     
@@ -33,7 +33,7 @@
 //        alert(node);
     nodes.push(node);
     });
-//test: don't sort    nodes = nodes.sort();
+//    nodes = nodes.sort();
     $(nodes).each( function(index) {
     $('#' + value).after(nodes.pop());
     });
@@ -89,6 +89,7 @@
      <div class="work">
        <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
        <span class="name">${asset.name}</span>
+       (<span class="altName">${asset.altName}</span>)
        <span class="rootName">${asset.rootName}</span>
      </div>
     #{/list}
