@@ -34,7 +34,7 @@ import play.modules.search.Indexed;
  *
  * This class holds all xml-files
  * Variants of originals are held in variant-counter, original is number 0
- * Name of xml-file is preserved as given when uploaded
+ * Name of xml-file as given when uploaded is overridden by the title in the teiHeader (KK 2014-03-05)
  * Name of assets should be on type
  *
  * Enunmeration of asset-type is kept in string due to db-restrinctions on jpa-enums
@@ -281,6 +281,34 @@ public class Asset extends GenericModel {
         Helpers.copyfile(epub.getAbsolutePath(), newFile.getAbsolutePath());
         return newFile.getAbsolutePath();
     }
+
+    /**
+     * Get the content of <tag attrName="attrValue"> in xml
+     * 
+     */
+    /* KK 2014-03-05 */
+    private static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
+        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>(.*)</" + tag + "\\s*>" );
+        Matcher m= p.matcher( xml );
+        if( m.find() )
+            return m.group(1).trim();
+        else
+            return null;
+    }
+    
+    /**
+     * Convert xml hexadecimal char entities to unicode string
+     * 
+     */
+    /* KK 2014-03-05 xx */
+    private static String ent2str( String ent ) {
+        Pattern p= Pattern.compile( "&#x([0-9A-Fa-f]+);" );
+        Matcher m= p.matcher( ent );
+        while( m.find() ){
+            ent= ent.replaceFirst( m.group(0), String.format("%c",Integer.parseInt(m.group(1),16)) );
+        }
+        return ent;
+    }
     
     /**
      * 
@@ -359,6 +387,7 @@ public class Asset extends GenericModel {
         System.out.println("Copied file: " + copiedFile);
         
         String html = "";
+        String preName= "";
         
         // consider a hash :-)
         if (type.equals(Asset.bibliografi)) {
@@ -373,14 +402,18 @@ public class Asset extends GenericModel {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "persXSLT.xsl");
         } else if (type.equals(Asset.commentType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "comXSLT.xsl"));
+            preName= "Punktkomm. til ";
         } else if (type.equals(Asset.introType)) {
             html = fixHtml(Asset.xmlToHtmlIntro(copiedFile));
+            preName= "Indl. til ";
         } else if (type.equals(Asset.variantType)) {
             html = fixHtml(Asset.xmlToHtmlVariant(copiedFile));
+            preName= "Variant til ";
         } else if (type.equals(Asset.rootType)) {
             html = fixHtml(Asset.xmlToHtml(copiedFile));
         } else if (type.equals(Asset.manusType)) {
             html = Asset.xmlToHtmlManus(copiedFile);
+            preName= "Ms. til ";
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
         } else if (type.equals(Asset.bibleType)) {
@@ -389,6 +422,7 @@ public class Asset extends GenericModel {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "varListXSLT.xsl");
         } else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
+            preName= "Tekstred. til ";
         } else if (type.equals(Asset.varListType)) {
             html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");
         } else if (type.equals(Asset.bookinventory)) {
@@ -411,6 +445,12 @@ public class Asset extends GenericModel {
 
         // String refs = Helpers.getReferencesFromXml(xml, epub.getName().replaceFirst("", html));
         String references = "";
+        String teiHeaderTitle= getXmlElem( xml, "title", "rend", "shortForm" );
+        if( teiHeaderTitle!=null )
+            name= preName + ent2str( teiHeaderTitle );
+        else
+            name= preName + epub.getName();
+        System.out.println( "hdrName: " + name );
 
         Asset asset;
         System.out.println("Filename: " + epub.getName());
