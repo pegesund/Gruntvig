@@ -89,8 +89,8 @@
      <div class="work">
        <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
        <span class="name">${asset.name}</span>
-       (<span class="altName">${asset.altName}</span>)
        <span class="rootName">${asset.rootName}</span>
+       <span class="altName">${Asset.getXmlElem( "Here we go", "title", "rend", "altForm" )}</span>       
      </div>
     #{/list}
   </div>
