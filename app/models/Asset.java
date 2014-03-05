@@ -295,15 +295,18 @@ public class Asset extends GenericModel {
         else
             return null;
     }
-
+    
+    /**
+     * Convert xml hexadecimal char entities to unicode string
+     * 
+     */
+    /* KK 2014-03-05 */
     private static String ent2str( String ent ) {
         Pattern p= Pattern.compile( "&#x([0-9A-Fa-f]+);" );
         Matcher m= p.matcher( ent );
         while( m.find() ){
             ent= ent.replaceFirst( m.group(0), String.format("%c",Integer.parseInt(m.group(1),16)) );
-//System.out.println( "m.g0:"+m.group(0) + "m.g1:"+m.group(1) + "parseInt:"+String.format("%c",Integer.parseInt(m.group(1),16)) );
         }
-//System.out.println( "p:" + p.toString() );
         return ent;
     }
     
@@ -447,8 +450,6 @@ public class Asset extends GenericModel {
             name= preName + ent2str( teiHeaderTitle );
         else
             name= preName + epub.getName();
-//        System.out.printf( "Test: %c\n", 230 ); /*E6 el. æ*/
-//        System.out.println( "ø: " + ent2str("&#x00F8;") );
         System.out.println( "hdrName: " + name );
 
         Asset asset;
