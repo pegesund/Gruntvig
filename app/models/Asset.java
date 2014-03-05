@@ -288,7 +288,7 @@ public class Asset extends GenericModel {
      */
     /* KK 2014-03-05 */
     private static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
-        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "[\"']" + attrValue + "[\"']\\s*>([^<]*)</" + tag + "\\s*>" );
+        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>\\s*([^<]*)\\s*</" + tag + "\\s*>" );
         Matcher m= p.matcher( xml );
         if( m.find() )
             return m.group(1);
