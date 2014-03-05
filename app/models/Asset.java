@@ -34,7 +34,7 @@ import play.modules.search.Indexed;
  *
  * This class holds all xml-files
  * Variants of originals are held in variant-counter, original is number 0
- * Name of xml-file is preserved as given when uploaded
+ * Name of xml-file as given when uploaded is overridden by the title in the teiHeader (KK 2014-03-05)
  * Name of assets should be on type
  *
  * Enunmeration of asset-type is kept in string due to db-restrinctions on jpa-enums
@@ -281,6 +281,20 @@ public class Asset extends GenericModel {
         Helpers.copyfile(epub.getAbsolutePath(), newFile.getAbsolutePath());
         return newFile.getAbsolutePath();
     }
+
+    /**
+     * Get the content of <tag attrName="attrValue"> in xml
+     * 
+     */
+    /* KK 2014-03-05 */
+    private static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
+        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "[\"']" + attrValue + "[\"']\\s*>([^<]*)</" + tag + "\\s*>" );
+        Matcher m= p.matcher( xml );
+        if( m.find() )
+            return m.group(1);
+        else
+            return null;
+    }
     
     /**
      * 
@@ -411,6 +425,11 @@ public class Asset extends GenericModel {
 
         // String refs = Helpers.getReferencesFromXml(xml, epub.getName().replaceFirst("", html));
         String references = "";
+        String teiHeaderTitle= getXmlElem( xml, "title", "rend", "shortForm" );
+        if( teiHeaderTitle!=null )
+            name= teiHeaderTitle;
+        else
+            name= epub.getName();
 
         Asset asset;
         System.out.println("Filename: " + epub.getName());
