@@ -410,15 +410,26 @@
     
     <!-- titelblad END -->
     
+    <!-- lg og l START -->
+    
     <xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
                 <td class="lgNumber">
                     <xsl:value-of select="@n"/>
                 </td>
-                <td class="lg">
-                    <xsl:apply-templates/>
-                </td>
+                <xsl:choose>
+                    <xsl:when test="@rend">
+                        <td class="{@rend}">
+                            <xsl:apply-templates/>
+                        </td>
+                    </xsl:when>
+                    <xsl:when test="not(@rend)">
+                        <td class="lg_noIndent">
+                            <xsl:apply-templates/>
+                        </td>
+                    </xsl:when>
+                </xsl:choose>
             </tr>
         </table>
     </xsl:template>
@@ -428,6 +439,11 @@
             <xsl:when test="@rend='blank'">
                 <br/>
             </xsl:when>
+            <xsl:when test="not(@rend)">
+                <div class="l_noIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
             <xsl:otherwise>
                 <div class="l_{@rend}">
                     <xsl:apply-templates/>
@@ -435,6 +451,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <!-- lg og l END -->
     
     <xsl:template match="TEI:head">        
         <div class="head{@rend}">
