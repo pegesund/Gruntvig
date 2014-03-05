@@ -29,7 +29,7 @@
                                 &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
-                                N.F.X. Grundtvig
+                                N.F.S. Grundtvig
                                 [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
                             </xsl:when>
                         </xsl:choose>
