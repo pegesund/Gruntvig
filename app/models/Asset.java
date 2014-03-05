@@ -301,7 +301,7 @@ public class Asset extends GenericModel {
      * 
      */
     /* KK 2014-03-05 */
-    private static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
+    public static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
         Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>(.*)</" + tag + "\\s*>" );
         Matcher m= p.matcher( xml );
         if( m.find() )
@@ -466,6 +466,8 @@ public class Asset extends GenericModel {
             name= preName + epub.getName();
         System.out.println( "hdrName: " + name );
         String altName= getXmlElem( xml, "title", "rend", "altForm" );
+        if( altName!=null )
+            System.out.println( "altName: " + altName );
 
         Asset asset;
         System.out.println("Filename: " + epub.getName());
