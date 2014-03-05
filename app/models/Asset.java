@@ -288,12 +288,23 @@ public class Asset extends GenericModel {
      */
     /* KK 2014-03-05 */
     private static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
-        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>\\s*([^<]*)\\s*</" + tag + "\\s*>" );
+        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>(.*)</" + tag + "\\s*>" );
         Matcher m= p.matcher( xml );
         if( m.find() )
-            return m.group(1);
+            return m.group(1).trim();
         else
             return null;
+    }
+
+    private static String ent2str( String ent ) {
+        Pattern p= Pattern.compile( "&#x([0-9A-Fa-f]+);" );
+        Matcher m= p.matcher( ent );
+        while( m.find() ){
+            ent= ent.replaceFirst( m.group(0), String.format("%c",Integer.parseInt(m.group(1),16)) );
+//System.out.println( "m.g0:"+m.group(0) + "m.g1:"+m.group(1) + "parseInt:"+String.format("%c",Integer.parseInt(m.group(1),16)) );
+        }
+//System.out.println( "p:" + p.toString() );
+        return ent;
     }
     
     /**
@@ -373,6 +384,7 @@ public class Asset extends GenericModel {
         System.out.println("Copied file: " + copiedFile);
         
         String html = "";
+        String preName= "";
         
         // consider a hash :-)
         if (type.equals(Asset.bibliografi)) {
@@ -387,14 +399,18 @@ public class Asset extends GenericModel {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "persXSLT.xsl");
         } else if (type.equals(Asset.commentType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "comXSLT.xsl"));
+            preName= "Punktkomm. til ";
         } else if (type.equals(Asset.introType)) {
             html = fixHtml(Asset.xmlToHtmlIntro(copiedFile));
+            preName= "Indl. til ";
         } else if (type.equals(Asset.variantType)) {
             html = fixHtml(Asset.xmlToHtmlVariant(copiedFile));
+            preName= "Variant til ";
         } else if (type.equals(Asset.rootType)) {
             html = fixHtml(Asset.xmlToHtml(copiedFile));
         } else if (type.equals(Asset.manusType)) {
             html = Asset.xmlToHtmlManus(copiedFile);
+            preName= "Ms. til ";
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
         } else if (type.equals(Asset.bibleType)) {
@@ -403,6 +419,7 @@ public class Asset extends GenericModel {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "varListXSLT.xsl");
         } else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
+            preName= "Tekstred. til ";
         } else if (type.equals(Asset.varListType)) {
             html = Asset.xmlRefToHtml(copiedFile, "varListXSLT.xsl");
         } else if (type.equals(Asset.bookinventory)) {
@@ -427,9 +444,12 @@ public class Asset extends GenericModel {
         String references = "";
         String teiHeaderTitle= getXmlElem( xml, "title", "rend", "shortForm" );
         if( teiHeaderTitle!=null )
-            name= teiHeaderTitle;
+            name= preName + ent2str( teiHeaderTitle );
         else
-            name= epub.getName();
+            name= preName + epub.getName();
+//        System.out.printf( "Test: %c\n", 230 ); /*E6 el. æ*/
+//        System.out.println( "ø: " + ent2str("&#x00F8;") );
+        System.out.println( "hdrName: " + name );
 
         Asset asset;
         System.out.println("Filename: " + epub.getName());
