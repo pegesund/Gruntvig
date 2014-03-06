@@ -267,9 +267,10 @@ gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
     #{if renderGrundtvigAssets}
         <h3>Varianter</h3>
         #{list renderGrundtvigAssets, as:'asset'}
+            #{set hash= "#\u007b\"0\":1,\"k\":0\u007d" /}
             <div class="treff">
             <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
-                <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+                <p class="treff2">${asset.getTeaser(lookfor).raw()}</p>
             </div>
         #{/list}
     #{/if}
@@ -279,10 +280,19 @@ gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
     <h2><b>Resultater i kommentarer:</b></h2>
 
     #{list renderCommentAssets, as:'asset'}
-    <div class="treff">
-    <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
-        <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
-    </div>
+        #{if asset.type==asset.txrType }
+            #{set hash= "#\u007b\"0\":3,\"k\":0\u007d" /}
+        #{/if}
+        #{elseif asset.type==asset.commentType }
+            #{set hash= "#\u007b\"0\":4,\"k\":0\u007d" /}
+        #{/elseif}
+        #{else}
+            #{set hash= "" /}
+        #{/else}
+        <div class="treff">
+        <h4><a href="tekstvisning/${asset.correspondingRootId}/0${hash}">${asset.name}</a></h4>
+            <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+        </div>
     #{/list}
 #{/if}
 #{/if}
