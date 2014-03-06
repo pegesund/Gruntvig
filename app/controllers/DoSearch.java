@@ -35,9 +35,10 @@ public class DoSearch extends Application {
       String kommentar = Application.params.get("kommentar");
       String cat= "";
 
-      if( lucene==null ) { // Simple search from header
+      if( lucene==null ) { // Simple search from header or no search
           String words = Application.params.get("words");
-          lucene= words.replaceAll( "\\s+", " AND " );
+          if( words!=null ) lucene= words.replaceAll( "\\s+", " AND " );
+          /*otherwise no search*/
           grundtvig= kommentar= "jatak";
       }
           
