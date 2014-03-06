@@ -13,17 +13,17 @@
 
         $('div.root').hide();
 
-        interval = ['180','181','182','183','184','185','186','187','188','189']
+        interval = ['180','181','182','183','184','185','186','187','188','189'];
 
         $.each(interval, function(index, value) { 
             var nodes = [];
             $('div.work').each(function(index2) {
                 var rootName= $(this).find('span.rootName').text(),
-                    splitName= rootName.split( "_" )
+                    splitName= rootName.split( "_" ),
                     year= splitName[0],
                     sj= splitName[1];
                 if( year.substr(0,3)!=value ) {
-                  return true
+                  return true;
                 }
                 var name = $(this).find('span.name').text(),
                     altName = $(this).find('span.altName').text(),
