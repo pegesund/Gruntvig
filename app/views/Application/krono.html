@@ -2,13 +2,12 @@
   Kronologisk værkoversigt
   Grundtvigs værker
   KK 2013-09-18
+  Inkl. alternativ titel, KK 2014-03-06
 -->
 #{extends 'main.html' /}
 #{ header /}
 
 <script type="text/javascript">
-    
-    
     
     $(document).ready(function() {
     
@@ -23,15 +22,14 @@
         splitName= rootName.split( "_" )
         year= splitName[0],
         sj= splitName[1];
-//  alert( index + "," + index2 + "," + rootName + "," + year.substr(0,3) + "," + value );
     if( year.substr(0,3)!=value ) {
       return true
     }
-    var altName= $(this).find('span.altName').text(),
-        name = $(this).find('span.name').text() + (altName=="")?(""):(" ("+altName+")"),
+    var name = $(this).find('span.name').text(),
+        altName = $(this).find('span.altName').text(),
+        altNameForm= altName ? '<br/>('+altName+')' : '',
         url= $(this).find('span.url').text(),
-        node = '<!--' + year + ' ' + sj +'--><tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
-//        alert(node);
+        node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a>' + altNameForm + '</td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
     nodes.push(node);
     });
 //    nodes = nodes.sort();
