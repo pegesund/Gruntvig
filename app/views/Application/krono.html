@@ -10,36 +10,33 @@
 <script type="text/javascript">
     
     $(document).ready(function() {
-    
-    $('div.root').hide();
-    
-    interval = ['180','181','182','183','184','185','186','187','188','189']
-    
-    $.each(interval, function(index, value) { 
-    var nodes = [];
-    $('div.work').each(function(index2) {
-    var rootName= $(this).find('span.rootName').text(),
-        splitName= rootName.split( "_" )
-        year= splitName[0],
-        sj= splitName[1];
-    if( year.substr(0,3)!=value ) {
-      return true
-    }
-    var name = $(this).find('span.name').text(),
-        altName = $(this).find('span.altName').text(),
-        altNameForm= altName ? '<br/>('+altName+')' : '',
-        url= $(this).find('span.url').text(),
-        node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a>' + altNameForm + '</td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
-    nodes.push(node);
-    });
-//    nodes = nodes.sort();
-    $(nodes).each( function(index) {
-    $('#' + value).after(nodes.pop());
-    });
-    }); 
-    
-    
-    
+
+        $('div.root').hide();
+
+        interval = ['180','181','182','183','184','185','186','187','188','189']
+
+        $.each(interval, function(index, value) { 
+            var nodes = [];
+            $('div.work').each(function(index2) {
+                var rootName= $(this).find('span.rootName').text(),
+                    splitName= rootName.split( "_" )
+                    year= splitName[0],
+                    sj= splitName[1];
+                if( year.substr(0,3)!=value ) {
+                  return true
+                }
+                var name = $(this).find('span.name').text(),
+                    altName = $(this).find('span.altName').text(),
+                    altNameForm= altName ? '<br/>('+altName+')' : '',
+                    url= $(this).find('span.url').text(),
+                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a>' + altNameForm + '</td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+                nodes.push(node);
+            });
+            //nodes = nodes.sort();
+            $(nodes).each( function(index) {
+                $('#' + value).after(nodes.pop());
+            });
+        }); 
     });
     
     
