@@ -27,7 +27,7 @@ public class DoSearch extends Application {
     /**
      * Advanced Search
      */
-    /* KK 2014-02-13 */    
+    /* KK 2014-02-13, 2014-03-06 */    
     public static void avanceret() { 
       System.out.println("Advanced search");
       String lookfor = Application.params.get("lookfor");
@@ -35,6 +35,12 @@ public class DoSearch extends Application {
       String grundtvig = Application.params.get("grundtvig");
       String kommentar = Application.params.get("kommentar");
       String cat= "";
+
+      if( lookfor!=null ) { // Simple search from header
+          lucene= lookfor.replaceAll( "\\s+", " AND " );
+          grundtvig= kommentar= "jatak";
+      }
+          
       List<Chapter> chapters= null;
       int chaptersSize= 0;
       ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
