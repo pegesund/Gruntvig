@@ -254,35 +254,36 @@ input[type=text]
 gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
 
 #{if cat.contains("grundtvig")}
-<h2><b>Resultater hos Grundtvig:</b></h2>
-#{list chapters, as:'chapter'}
-<div class="treff">
-    <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}#{\"0\":0,\"k\":${chapter.num}}">
-        ${chapter.asset.name}
-    </a></h4>
-    <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
-</div>
-#{/list}
-#{if renderGrundtvigAssets}
-<h3>Varianter</h3>
-#{list renderGrundtvigAssets, as:'asset'}
-<div class="treff">
-<h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
-    <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
-</div>
-#{/list}
-#{/if}
+    <h2><b>Resultater hos Grundtvig:</b></h2>
+    #{list chapters, as:'chapter'}
+        #{set hash= "#\u007b\"0\":0,\"k\":" + chapter.num + "\u007d" /}  
+        <div class="treff">
+            <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}${hash}">
+                ${chapter.asset.name}
+            </a></h4>
+            <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
+        </div>
+    #{/list}
+    #{if renderGrundtvigAssets}
+        <h3>Varianter</h3>
+        #{list renderGrundtvigAssets, as:'asset'}
+            <div class="treff">
+            <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
+                <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+            </div>
+        #{/list}
+    #{/if}
 #{/if}
 
 #{if cat.contains("kommentar")}
-<h2><b>Resultater i kommentarer:</b></h2>
+    <h2><b>Resultater i kommentarer:</b></h2>
 
-#{list renderCommentAssets, as:'asset'}
-<div class="treff">
-<h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
-    <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
-</div>
-#{/list}
+    #{list renderCommentAssets, as:'asset'}
+    <div class="treff">
+    <h4><a href="tekstvisning/${asset.correspondingRootId}/0">${asset.name}</a></h4>
+        <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
+    </div>
+    #{/list}
 #{/if}
 #{/if}
 
