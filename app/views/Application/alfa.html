@@ -10,62 +10,36 @@
 <script type="text/javascript">
     
     $(document).ready(function() {
-    
-    $('div.root').hide();
-    
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-    
-    $.each(alphabet, function(index, value) { 
-    var nodes = [];
-    $('div.work').each(function(index2) {
-    var name = $(this).find('span.name').text(),
-    uri= $(this).find('span.uri').text(),
-    rootName= $(this).find('span.rootName').text(),
-    splitName= rootName.split( "_" );
-    // alert("Adding: " + name);
-    firstLetter = name.charAt(0).toLowerCase();; 
-    if(firstLetter == value){ 
-    $(this).hide();
-    //                                year = $(this).find('.row span.year').text() + ', '; 
-    //                                if( year == ', ') { year = '';};
-    //                                var addName = $(this).find('.row span.addName').not($('span span')).text();
-    //                                nation = $(this).find('.row span.nation').text();
-    //                                about = $(this).find('.row span.encyk').text();
-    //                                if ($(this).find(".altName").length > 0) {
-    //                                    var gotoName = $(this).find(".gotoName").html();
-    //                                    node = '<tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + "</tr";
-    //                                } else { 
-    //                                    var id = $(this).attr("id");
-    node = '\<!--' + name.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
-    
-    //                                }
-    //                                $(this).attr("id", "");
-    nodes.push(node);
-    }
-    });
-    nodes = nodes.sort().reverse();
-    $(nodes).each( function(index, value2) {
-    $('#' + value.toUpperCase()).after(value2);
-    });
-    }); 
-    
-    
-    // later: remove duplicate code with mythvisning.html
-    //                $("tbody").find("a[href]").click(function(e) {
-    //                    e.preventDefault();
-    //                    // alert("Scrolling to: " + $(this).attr("href"));
-    //                    var scrolltarget = $($(this).attr("href"));
-    //                    $.scrollTo(scrolltarget, 500);
-    //                    
-    //               }); 
-    
-    // get current location and scrolldown to this if exists
-    var loc = String(document.location);
-    var idx = loc.indexOf('#');
-    var href = (idx > 0) ? loc.substring(idx + 1) : "";
-    if (href) $.scrollTo("#" + href, 500);              
-    
-    
+
+        $('div.root').hide();
+
+        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+
+        $.each(alphabet, function(index, value) { 
+            var nodes = [];
+            $('div.work').each(function(index2) {
+                var name = $(this).find('span.name').text(),
+                uri= $(this).find('span.uri').text(),
+                rootName= $(this).find('span.rootName').text(),
+                splitName= rootName.split( "_" );
+                // alert("Adding: " + name);
+                firstLetter = name.charAt(0).toLowerCase();; 
+                if(firstLetter == value){ 
+                    $(this).hide();
+                    node = '\<!--' + name.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+                    nodes.push(node);
+                }
+            });
+            nodes = nodes.sort().reverse();
+            $(nodes).each( function(index, value2) {
+                $('#' + value.toUpperCase()).after(value2);
+            });
+        }); 
+
+        var loc = String(document.location);
+        var idx = loc.indexOf('#');
+        var href = (idx > 0) ? loc.substring(idx + 1) : "";
+        if (href) $.scrollTo("#" + href, 500);              
     });
     
     
@@ -134,7 +108,12 @@
                 
                 <div class="root">
                     #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-                    <div class="work"><span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span><span class="name">${asset.name}</span><span class="rootName">${asset.rootName}</span></div>
+                    <div class="work">
+                        <span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
+                        <span class="name">${asset.name}</span>
+                        <span class="rootName">${asset.rootName}</span>
+                        <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+                    </div>
                     #{/list}
                 </div>
                 
