@@ -3,6 +3,7 @@
     (efter 'personvisning.html')
   Grundtvigs værker
   KK 2013-09-18
+  Inkl. alternativ titel, KK 2014-03-06
 -->
 #{extends 'main.html' /}
 #{ header /}
@@ -21,13 +22,21 @@
                 var name = $(this).find('span.name').text(),
                 uri= $(this).find('span.uri').text(),
                 rootName= $(this).find('span.rootName').text(),
+                altName= $(this).find('span.altName').text(),
                 splitName= rootName.split( "_" );
                 // alert("Adding: " + name);
-                firstLetter = name.charAt(0).toLowerCase();; 
+                var firstLetter = name.charAt(0).toLowerCase();
                 if(firstLetter == value){ 
                     $(this).hide();
                     node = '\<!--' + name.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
                     nodes.push(node);
+                }
+                if( altName ) {
+                    firstLetter = altName.charAt(0).toLowerCase();
+                    if(firstLetter == value){
+                        node = '\<!--' + altName.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">(' + altName + ')</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+                        nodes.push(node);
+                    }                    
                 }
             });
             nodes = nodes.sort().reverse();
