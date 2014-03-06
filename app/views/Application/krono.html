@@ -27,7 +27,8 @@
     if( year.substr(0,3)!=value ) {
       return true
     }
-    var name = $(this).find('span.name').text(),
+    var altName= $(this).find('span.altName').text(),
+        name = $(this).find('span.name').text() + (altName=="")?(""):(" ("+altName+")"),
         url= $(this).find('span.url').text(),
         node = '<!--' + year + ' ' + sj +'--><tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
 //        alert(node);
@@ -90,7 +91,7 @@
        <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
        <span class="name">${asset.name}</span>
        <span class="rootName">${asset.rootName}</span>
-       <span class="altName">@{asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+       <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
      </div>
     #{/list}
   </div>
