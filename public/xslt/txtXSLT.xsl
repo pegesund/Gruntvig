@@ -321,7 +321,7 @@
         <xsl:choose>
             <xsl:when test="@type='dustTitlePage'">
                 <div class="dustTitlePaget">
-                    <br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
