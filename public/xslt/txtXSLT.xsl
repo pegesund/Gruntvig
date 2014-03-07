@@ -736,11 +736,27 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!--
+    <xsl:template match="TEI:rs[@type='myth']">
         <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
-    
+    -->
     <!--
     <xsl:template match="TEI:rs[@type='title']">
         <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
