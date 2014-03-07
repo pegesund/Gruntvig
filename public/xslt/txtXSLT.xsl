@@ -47,23 +47,23 @@
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
-                                    <table>
+                                    <table class="listWit">
                                         <tr>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
+                                                <xsl:value-of select="@xml:id"/>
                                             </td>
                                             <td class="source">
-                                                <!--<xsl:choose>
-                                                    <xsl:when test="@rend='A' or @rend='B' or @n">
+                                                <xsl:choose>
+                                                    <xsl:when test="@xml:id='A' or @xml:id='B'">
                                                         <xsl:apply-templates select="."/>
-                                                        <xsl:text> (SJ:</xsl:text>
+                                                        <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text>
                                                     </xsl:when>
-                                                    <xsl:otherwise>-->
+                                                    <xsl:otherwise>
                                                         <xsl:apply-templates select="."/>
-                                                    <!--</xsl:otherwise>
-                                                </xsl:choose>-->
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
                                             </td>
                                         </tr>
                                     </table>
