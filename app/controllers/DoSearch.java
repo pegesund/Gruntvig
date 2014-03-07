@@ -27,14 +27,21 @@ public class DoSearch extends Application {
     /**
      * Advanced Search
      */
-    /* KK 2014-02-13 */    
+    /* KK 2014-02-13, 2014-03-06 */    
     public static void avanceret() { 
       System.out.println("Advanced search");
-      String lookfor = Application.params.get("lookfor");
       String lucene = Application.params.get("lucene");
       String grundtvig = Application.params.get("grundtvig");
       String kommentar = Application.params.get("kommentar");
       String cat= "";
+
+      if( lucene==null ) { // Simple search from header or no search
+          String words = Application.params.get("words");
+          if( words!=null ) lucene= words.replaceAll( "\\s+", " AND " );
+          /*otherwise no search*/
+          grundtvig= kommentar= "jatak";
+      }
+          
       List<Chapter> chapters= null;
       int chaptersSize= 0;
       ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
@@ -83,7 +90,7 @@ public class DoSearch extends Application {
 
         int totalHits = renderGrundtvigAssets.size() + renderCommentAssets.size() + chaptersSize;
         System.out.println("Total hits: " + totalHits);
-        lookfor= lucene;
+        String lookfor= lucene;
         render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat);
       }
       else
