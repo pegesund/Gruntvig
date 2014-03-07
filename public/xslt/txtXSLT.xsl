@@ -41,8 +41,8 @@
                     <xsl:apply-templates select="//TEI:edition"/>
                     <xsl:text>)</xsl:text>
                 </div>
-                
-                <div class="kolofon">
+                    
+                    <div class="kolofon">
                         <xsl:text>Tekstkilder</xsl:text>                        
                         <tr>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
@@ -66,6 +66,14 @@
                                                 </xsl:choose>
                                             </td>
                                         </tr>
+                                        <!--
+                                        <tr>
+                                            <td class="SJ">Steen Johansen</td>
+                                            <td class="SJnumber">
+                                                <xsl:text></xsl:text><xsl:apply-templates select="//TEI:publicationStmt/TEI:idno"/><xsl:text></xsl:text>
+                                            </td>
+                                        </tr>
+                                        -->
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -78,7 +86,7 @@
                                     <div class="table">
                                         <table>
                                             <td class="sigel">
-                                                <xsl:value-of select="@rend"/>
+                                                <xsl:value-of select="@xml:id"/>
                                             </td>
                                             <td class="source">
                                                 <xsl:apply-templates select="."/>
@@ -87,7 +95,7 @@
                                     </div>
                                 </xsl:for-each>
                             </xsl:if>
-                        </tr>
+                        </tr>                        
                     </div>
                     
                     <div class="kolofon">
