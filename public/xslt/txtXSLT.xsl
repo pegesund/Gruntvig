@@ -775,12 +775,6 @@
         </xsl:choose>
     </xsl:template>
     
-    <!-- <xsl:when test="@rend='allusion'">
-                    <span title="allusion til {@key}">
-                        <xsl:apply-templates/>
-                    </span>
-                </xsl:when> -->
-    
     <xsl:template match="TEI:rs[@type='myth']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
