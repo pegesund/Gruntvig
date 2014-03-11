@@ -187,7 +187,8 @@ public class TextReference extends GenericModel {
             for (int i = 0; i < nodes.getLength(); i++) {
                 Node n = nodes.item(i);
                 String ref = n.getAttributes().getNamedItem("key").getNodeValue();
-                String html = "<div class='bibleref'>" + ref + "</div>";
+                String rend = n.getAttributes().getNamedItem("rend").getNodeValue();
+                String html = "<div class='bibleref'>" + rend + ref + "</div>";
                 TextReference textRef = new TextReference(ref, -1, html, asset.type, asset.fileName);
                 textRef.save();
             }
