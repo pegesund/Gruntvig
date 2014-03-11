@@ -47,7 +47,6 @@
           '<div id="cluetip-outer">',
             '<h3 id="cluetip-title"></h3>',
             '<div id="cluetip-inner"></div>',
-            '<div id="cluetip-inner"></div>',
           '</div>',
           '<div id="cluetip-extra"></div>',
           '<div id="cluetip-arrows" class="cluetip-arrows"></div>',
