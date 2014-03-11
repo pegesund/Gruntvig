@@ -47,6 +47,7 @@
           '<div id="cluetip-outer">',
             '<h3 id="cluetip-title"></h3>',
             '<div id="cluetip-inner"></div>',
+            '<div id="cluetip-inner"></div>',
           '</div>',
           '<div id="cluetip-extra"></div>',
           '<div id="cluetip-arrows" class="cluetip-arrows"></div>',
@@ -55,7 +56,6 @@
         
         $cluetip = $('#cluetip').css({position: 'absolute'});
         $cluetipOuter = $('#cluetip-outer').css({position: 'relative', zIndex: cluezIndex});
-        $cluetipInner = $('#cluetip-inner');
         $cluetipInner = $('#cluetip-inner');
         $cluetipTitle = $('#cluetip-title');        
         $cluetipArrows = $('#cluetip-arrows');
