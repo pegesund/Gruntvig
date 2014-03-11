@@ -328,6 +328,7 @@
                     <xsl:for-each select="TEI:item">
                         <li class="ordered">
                             <xsl:apply-templates/>
+                            <xsl:text>.</xsl:text>
                         </li>
                     </xsl:for-each>
                 </ul>
