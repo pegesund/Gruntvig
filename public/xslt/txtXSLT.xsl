@@ -734,7 +734,7 @@
         <xsl:choose>
             <xsl:when test="@rend='allusion'">
                 <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-                    <xsl:apply-templates/>HAT
+                    <xsl:apply-templates/>
                 </a>
             </xsl:when>
             <xsl:when test="@rend='reference'">
