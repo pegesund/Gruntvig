@@ -20,7 +20,6 @@
     </div>
   </xsl:template>
   
-  <!--  
   <xsl:template match="TEI:div">
       <div id="{@xml:id}" class="book">
         <span id="plusb{@xml:id}" class="plusBook" onclick="showhide(this,'verse{@xml:id}')">+</span>
@@ -31,28 +30,9 @@
         </span>        
       </div>
   </xsl:template>
-  -->
-
-  <xsl:template match="TEI:div">
-      <div id="{@xml:id}" class="book">
-      <table>
-          <tr>
-              <td style="background-color: red">
-                  <span id="plusb{@xml:id}" class="plusBook" onclick="showhide(this,'verse{@xml:id}')">+</span>
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="translate(@xml:id,'_',' ')"/>
-                  <span id="verse{@xml:id}" class="verse">
-                      <xsl:apply-templates select="TEI:rs[1]"/>
-                  </span>
-              </td>
-          </tr>
-      </table>
-                
-      </div>
-  </xsl:template>
 
   <xsl:template match="TEI:rs">
-    <td>
+    <div>
     <span id="plusv{@key}" class="plusVerse" onclick="showhide(this,'occ{translate(@key,' ','_')}')">+</span>
     <xsl:text> </xsl:text>
     <xsl:value-of select="@key"/>
@@ -62,7 +42,7 @@
         <xsl:call-template name="occ"/>
       </xsl:for-each>
     </table>
-    </td>
+    </div>
     <xsl:apply-templates select="following-sibling::TEI:rs[@key!=current()/@key][1]"/>
   </xsl:template>
   
