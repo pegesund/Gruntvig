@@ -717,6 +717,7 @@
         <xsl:text>.</xsl:text>
     </xsl:template>
     
+    
     <xsl:template match="TEI:persName">
         <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
@@ -730,10 +731,21 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
-        <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="@rend='allusion'">
+                <xsl:text>HAT</xsl:text>
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
+    
+    <!-- <xsl:when test="@rend='allusion'">
+                    <span title="allusion til {@key}">
+                        <xsl:apply-templates/>
+                    </span>
+                </xsl:when> -->
     
     <xsl:template match="TEI:rs[@type='myth']">
         <xsl:choose>
