@@ -52,7 +52,7 @@
   </xsl:template>
 
   <xsl:template match="TEI:rs">
-    <div>
+    <td>
     <span id="plusv{@key}" class="plusVerse" onclick="showhide(this,'occ{translate(@key,' ','_')}')">+</span>
     <xsl:text> </xsl:text>
     <xsl:value-of select="@key"/>
@@ -62,7 +62,7 @@
         <xsl:call-template name="occ"/>
       </xsl:for-each>
     </table>
-    </div>
+    </td>
     <xsl:apply-templates select="following-sibling::TEI:rs[@key!=current()/@key][1]"/>
   </xsl:template>
   
