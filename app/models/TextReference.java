@@ -188,7 +188,7 @@ public class TextReference extends GenericModel {
                 Node n = nodes.item(i);
                 String rend = n.getAttributes().getNamedItem("rend").getNodeValue();
                 String html = "<div class='bibleref'>" + rend + "</div>";
-                TextReference textRef = new TextReference(ref, -1, html, asset.type, asset.fileName);
+                TextReference textRef = new TextReference(rend, -1, html, asset.type, asset.fileName);
                 textRef.save();
             }
             System.out.println("Number of bible refs: " + TextReference.find("type = ?", asset.type).fetch().size());
