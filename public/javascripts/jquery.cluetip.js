@@ -56,6 +56,7 @@
         $cluetip = $('#cluetip').css({position: 'absolute'});
         $cluetipOuter = $('#cluetip-outer').css({position: 'relative', zIndex: cluezIndex});
         $cluetipInner = $('#cluetip-inner');
+        $cluetipInner = $('#cluetip-inner');
         $cluetipTitle = $('#cluetip-title');        
         $cluetipArrows = $('#cluetip-arrows');
         $cluetipWait = $('<div id="cluetip-waitimage"></div>')
