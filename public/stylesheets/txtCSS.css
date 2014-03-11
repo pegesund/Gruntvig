@@ -431,7 +431,10 @@
 
 #tekst_innhold table.lg
         {
-        padding: 0.5em;    
+        font-size: 70%;
+        margin-left: -2em;
+        padding: 0.5em;
+        width: 100%;
         }
         
 #tekst_innhold td.lgNumber
@@ -672,7 +675,7 @@
 #tekst_innhold .epigraph
         {
         font-size: 80%;
-        margin: 2em;
+        margin: 1em;
         text-align: center;
         }
 
