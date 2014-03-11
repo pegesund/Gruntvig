@@ -733,8 +733,7 @@
     <xsl:template match="TEI:rs[@type='bible']">
         <xsl:choose>
             <xsl:when test="@rend='allusion'">
-                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-                    <xsl:apply-templates select="@rend"/>
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}" rel="ajax/getReference/{@rend}">
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
