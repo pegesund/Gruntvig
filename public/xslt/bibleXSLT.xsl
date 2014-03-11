@@ -37,12 +37,14 @@
       <div id="{@xml:id}" class="book">
       <table>
           <tr>
-              <td><span id="plusb{@xml:id}" class="plusBook" onclick="showhide(this,'verse{@xml:id}')">+</span>
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="translate(@xml:id,'_',' ')"/>
-        <span id="verse{@xml:id}" class="verse">
-          <xsl:apply-templates select="TEI:rs[1]"/>          
-        </span></td>
+              <td style="border: 1px thin black">
+                  <span id="plusb{@xml:id}" class="plusBook" onclick="showhide(this,'verse{@xml:id}')">+</span>
+                  <xsl:text> </xsl:text>
+                  <xsl:value-of select="translate(@xml:id,'_',' ')"/>
+                  <span id="verse{@xml:id}" class="verse">
+                      <xsl:apply-templates select="TEI:rs[1]"/>
+                  </span>
+              </td>
           </tr>
       </table>
                 
