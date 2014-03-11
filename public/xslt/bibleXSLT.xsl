@@ -37,7 +37,7 @@
       <div id="{@xml:id}" class="book">
       <table>
           <tr>
-              <td style="border: 1px thin black">
+              <td style="background-color: red">
                   <span id="plusb{@xml:id}" class="plusBook" onclick="showhide(this,'verse{@xml:id}')">+</span>
                   <xsl:text> </xsl:text>
                   <xsl:value-of select="translate(@xml:id,'_',' ')"/>
