@@ -733,7 +733,41 @@
     <xsl:template match="TEI:rs[@type='bible']">
         <xsl:choose>
             <xsl:when test="@rend='allusion'">
-                <xsl:text>HAT</xsl:text>
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='reference'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='eg'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='quote'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='allusion1787'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='reference1787'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='eg1787'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='quote1787'">
                 <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
                     <xsl:apply-templates/>
                 </a>
