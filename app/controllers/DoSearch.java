@@ -63,7 +63,7 @@ public class DoSearch extends Application {
           chaptersSize= chapters.size();
           System.out.println("Chapters found: " + chapters.size());
           for (Asset asset: assets) {
-            if ( asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ) {
+            if( (asset.type.equals(Asset.variantType) && nonEmpty(asset)) || asset.type.equals(Asset.manusType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderGrundtvigAssets.add(asset);
@@ -102,11 +102,20 @@ public class DoSearch extends Application {
         render();
     }
     
+    private static boolean nonEmpty( Asset var ) {
+        Pattern p= Pattern.compile( "type\\s*=\\s*[\"'](minusVar|unknownVar)[\"']" );
+        Matcher m= p.matcher( var.xml );
+        if( m.find() )
+            return false;
+        else
+            return true;
+    }
+    
     /**
      * 
      * Search
      * Look in intro, variants, manus and txt-files (chapters).
-     * 
+     * Now obsolete, 2014-03-13
      */
     public static void doSearch() {
         String lookfor = Application.params.get("lookfor");
@@ -126,7 +135,7 @@ public class DoSearch extends Application {
 
         ArrayList<Asset> renderAssets = new ArrayList<Asset>();
         for (Asset asset: assets) {
-            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType)) {
+            if( asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderAssets.add(asset);
