@@ -253,7 +253,7 @@
         window.SimileAjax_onLoad = loadMe;
         
         var url = useLocalResources ?
-            "../public/simile/ajax/2.2.1/simile-ajax-api.js?bundle=true" :
+            "../public/simile/ajax/2.2.1/simile-ajax-api.js?bundle=false" :
             "../public/simile/ajax/2.2.1/simile-ajax-api.js";
         if (typeof Timeline_ajax_url == "string") {
            url = Timeline_ajax_url;
