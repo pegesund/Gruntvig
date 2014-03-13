@@ -129,8 +129,8 @@ var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
 Timeline.loadXML("../public/tidslinje/unpub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 
-//    $i = 0;
-//    $('.timeline-event-label').each(function() {
+    $i = 0;
+    $('.timeline-event-label').each(function() {
    
 //        // gj?r verkene kursiv
 //        if($(this).css('color') == 'rgb(155, 132, 24)') {
