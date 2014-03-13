@@ -1431,54 +1431,72 @@ h1.subtitle { margin-left: 0px !important; }
     width: 975px;
 }
 
- .timeline-event-bubble-time {
-     margin-top:10px; font-size: 14px; color: #ccc;
- }
-	   .timeline-band-0 .timeline-ether-bg {
-			background-color:#fff;
-		}
-		.timeline-band-1 .timeline-ether-bg {
-			background-color:#eee;
-		}
+/* timeline START */
+
+ .timeline-event-bubble-time
+        {
+        margin-top:10px;
+        font-size: 14px; 
+        color: #ccc;
+        }
+        
+ .timeline-band-0 .timeline-ether-bg 
+        {
+        background-color:#fff;
+        }
 		
-		.timeline-event-tape {
-			background-color:#999;
-		}
+.timeline-band-1 .timeline-ether-bg 
+        {
+        background-color:#eee;
+        }
+		
+.timeline-event-tape 
+        {
+        background-color:#999;
+        }
                 
-                .timeline-event-label {
-                        font-size: 16px;
-		}
-		.timeline-event-label:hover {
-			text-decoration: underline;
-		}
+.timeline-event-label 
+        {
+        font-size: 16px;
+        }
+		
+.timeline-event-label:hover 
+        {
+        text-decoration: underline;
+        }
 
-		.timeline-small-event-icon {
-			background-color:#D2691E;
-                        
+.timeline-small-event-icon 
+        {
+	background-color:#D2691E;
+        }
+                
+.timeline-event-icon img 
+        {
+        display: none;
+        }
 
-		}
-                .timeline-event-icon img {
-                    display:none;
+.timeline-event-icon 
+        {
+        background: url('../img/tidslinje_ikon.png') center center no-repeat;
+        width:10px;
+        height:10px;
+        }
 
-                }
+.timeline-event-bubble-body 
+        {
+	font-family: "Georgia", sans-serif; color: #555; font-size: 14px; line-height: 16px;
+	}
+                
+.timeline-event-bubble-title 
+        {
+	border-bottom: 2px solid #bbb;
+	font-weight:bold;
+	margin-bottom:0.5em;
+	padding-bottom: 0.5em;
+        font-size: 16px;
+	}
 
-                .timeline-event-icon {
-                    background: url('../img/tidslinje_ikon.png') center center no-repeat;
-                    width:10px;
-                    height:10px;
-                }
-
-		.timeline-event-bubble-body {
-			font-family: arial, myriad pro, sans-serif; color: #555; font-size: 14px; line-height: 16px;
-		}
-		.timeline-event-bubble-title {
-		border-bottom: 2px solid #bbb;
-		font-weight:bold;
-		margin-bottom:0.5em;
-		padding-bottom: 0.5em;
-                font-size: 16px;
-		}
-
+/* timeline END */                
 
 /* Søkesiden */
 
