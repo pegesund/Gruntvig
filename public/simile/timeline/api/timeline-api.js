@@ -253,8 +253,8 @@
         window.SimileAjax_onLoad = loadMe;
         
         var url = useLocalResources ?
-            "../public/simile/ajax/api/simile-ajax-api.js?bundle=false" :
-            "../public/simile/ajax/2.2.1/simile-ajax-api.js";
+            "http://127.0.0.1:9999/ajax/api/simile-ajax-api.js?bundle=false" :
+            "http://static.simile.mit.edu/ajax/api-2.2.0/simile-ajax-api.js";
         if (typeof Timeline_ajax_url == "string") {
            url = Timeline_ajax_url;
         }
