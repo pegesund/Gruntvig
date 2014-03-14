@@ -892,5 +892,61 @@
     </xsl:template>
     
     <!-- skilletegn END -->
+    
+    <!-- drama START -->
+    
+    <xsl:template match="TEI:note[@type='drama']">
+        <xsl:choose>
+            <xsl:when test="@rendition='set' and @rend">
+                <div class="{@rendition}_{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='cast']/TEI:row">
+        <tr class="cast">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='cast']/TEI:head">
+        <div style="fornt-size: 150%; margin: 1em 0 1em 0; text-align: center">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='cast']/TEI:row/TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="cast" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="cast" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="cast">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:span">
+        <xsl:choose>
+            <xsl:when test="@rend='2rows'">
+                <span style="font-size:300%">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- drama END -->
 
 </xsl:stylesheet>
