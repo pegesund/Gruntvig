@@ -12,7 +12,7 @@
         #{else}
         	<h1>Oops, an error occured</h1>
 			<p>
-				This exception has been logged with id <strong>${exception.id}</strong>.
+				This exception has been logged with id <strong>${exception.id}</strong>, ${exception.getMessage()}.
 			</p>
         #{/else}
     </body>
