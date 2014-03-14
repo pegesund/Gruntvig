@@ -42,19 +42,19 @@ public class DoSearch extends Application {
           grundtvig= kommentar= "jatak";
       }
           
-      List<Chapter> chapters= null;
-      int chaptersSize= 0;
-      ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
-      ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
-      Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
-      List<Asset> assets = qAsset.fetch();
-      List<Asset> allAssets = Asset.findAll();
-      for (Asset asset : assets) {
-        System.out.println("Asset file match: " + asset.fileName);
-      }
-          
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
+
+        List<Chapter> chapters= null;
+        int chaptersSize= 0;
+        ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
+        ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
+        Query qAsset = Search.search("htmlAsText:(" + lucene + ")", Asset.class);
+        List<Asset> assets = qAsset.fetch();
+//        List<Asset> allAssets = Asset.findAll(); // not used
+        for (Asset asset : assets) {
+          System.out.println("Asset file match: " + asset.fileName);
+        }
 
         if( grundtvig!=null ) { // Søg i Grundtvigteksternes kapitler (chapters)
           cat+= "grundtvig";
