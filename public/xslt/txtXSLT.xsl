@@ -807,38 +807,71 @@
     
     <!-- table START -->
     
-    <xsl:template match="TEI:table[@type='index']">        
-        <table class="index">
+    <xsl:template match="TEI:table">        
+        <table class="{@type}">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
     
-    <xsl:template match="TEI:row">
-        <tr class="row">
+    <xsl:template match="TEI:table[@type='index']/TEI:row">
+        <tr class="index">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
+    <xsl:template match="TEI:table[@type='plain']/TEI:row">
+        <tr class="plain">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='synopsis']/TEI:row">
+        <tr class="synopsis">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='subscription']/TEI:row">
+        <tr class="subscription">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <!--
     <xsl:template match="TEI:row[@type='head']/TEI:cell">        
         <td class="cell">
             <xsl:apply-templates/>
         </td>
     </xsl:template>
+    -->
     
-    <xsl:template match="TEI:cell"> 
+    <xsl:template match="TEI:cell">
         <xsl:choose>
-            <xsl:when test="@corresp">                
-                <td class="cell">
-                    <xsl:apply-templates/>
+            <xsl:when test="@corresp">
+                <td class="{@rend}">
+                    <!--<a class="index" href="#{@taget}">-->
+                        <xsl:apply-templates/>
+                    <!--</a>-->
                 </td>
             </xsl:when>
-            <xsl:when test="'@corresp' and '@cols'">                
-                <td class="cell" colspan="{@cols}">
+            <xsl:when test="@cols">
+                <td class="{@rend}" colspan="{@cols}">
+                    <!--<a class="index" href="#{@target}">-->
+                        <xsl:apply-templates/>
+                    <!--</a>-->
+                </td>
+            </xsl:when>
+            <xsl:when test="@n">
+                <td>
+                    <span class="number">
+                        <xsl:value-of select="@n"/>
+                        &#x2003;
+                    </span>
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="cell">
+                <td class="{@rend}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:otherwise>
