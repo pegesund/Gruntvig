@@ -939,7 +939,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:table[@type='cast']/TEI:row">
-        <tr class="cast">
+        <tr class="hat">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
