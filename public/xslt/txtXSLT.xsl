@@ -953,17 +953,17 @@
     <xsl:template match="TEI:table[@type='cast']/TEI:row/TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="cast" rowspan="{@rows}">
+                <td class="{@rend}" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="cast" colspan="{@cols}">
+                <td class="{@rend}" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="cast">
+                <td class="{@rend}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:otherwise>
