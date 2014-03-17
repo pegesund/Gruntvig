@@ -945,7 +945,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:table[@type='cast']/TEI:head">
-        <div style="fornt-size: 150%; margin: 1em 0 1em 0; text-align: center">
+        <div class="cast">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
