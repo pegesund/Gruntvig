@@ -738,7 +738,7 @@
         {
         empty-cells: show;
         font-size: 100%;
-        width: 80%;
+        width: 100%;
         }
 
 #tekst_innhold div.cast
@@ -750,25 +750,27 @@
 
 #tekst_innhold table.cast, #tekst_innhold tr.row.cast, #tekst_innhold td.role, #tekst_innhold td.abb, #tekst_innhold td.roleDesc
         {
-        border: 1px solid black;
+        border: 0px solid black;
         }
 
-#tekst_innhold td.figure
+#tekst_innhold td.role, #tekst_innhold td.abb, #tekst_innhold td.roleDesc
         {
-        vertical-align: top;
-        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+        }
+
+#tekst_innhold td.role
+        {
+        width: auto;
         }
 
 #tekst_innhold td.abb
         {
-        vertical-align: middle;
         width: 5%;
         }
 
-#tekst_innhold td.desc
+#tekst_innhold td.descRole
         {
-        text-align: left;
-        vertical-align: top;
         width: 55%;
         }
 
