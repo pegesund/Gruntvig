@@ -1,5 +1,5 @@
-
 #{extends 'main_tekstvisning.html' /}
+#{set subPageTitle: asset.name /}
 #{ header /}
 
 
@@ -102,7 +102,7 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
                                                     #{/list}
 						</select>
 						</span>
-					<span class="next"next></span>
+					<span class="next" title="Næste kapitel"></span>
 				</div>
 
 			</div>

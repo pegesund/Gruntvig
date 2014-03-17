@@ -1,4 +1,5 @@
 #{extends 'main.html' /}
+#{set subPageTitle:'Vejledning' /}
 #{ header /}
 
 <script>
@@ -7,11 +8,13 @@
 
     // load vejledning content
 
-    var vejledning = "${vejledningSomSkalVises}";
+    var vejledning = "${vejledningSomSkalVises}",
+        crump_txt= $("a#" + vejledning).clone().contents();
 
     // add selected to menu
     $("a").removeClass('selected');
     $("a#" + vejledning).addClass('selected');
+    $("span#actual").after(crump_txt);
          
          var veiledningUrl = "ajax/getVeiledning/" + vejledning;
          $.ajax({
@@ -44,7 +47,7 @@
 	<div class="container" id="underside_innhold">
 
 		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; Vejledning</div>
+                    <div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="/vejledning/om_udgaven_vej">Vejledning</a> &raquo; <span id="actual"></span></div>
 
 		</div>
 
@@ -54,19 +57,19 @@
 		<ul id="kolonne1_meny">
 
 			<li class="header">Vejledning</li>
-                        <li><a id="om_udgaven_vej" href="/vejledning/om_udgaven_vej">Vejledning</a></li>
+                        <li><a id="om_udgaven_vej" href="/vejledning/om_udgaven_vej">Om udgaven</a></li>
                         
                         <li><a id="indhold_vej" href="/vejledning/indhold_vej">Udgavens indhold</a></li>
-                        <li><a id="txtnoter_vej" href="/vejledning/tknoter_vej">Vejledning til tekstkritiske noter</a></li>
+                        <li><a id="tknoter_vej" href="/vejledning/tknoter_vej">Vejledning til tekstkritiske noter</a></li>
                         <li><a id="varapp_vej" href="/vejledning/varapp_vej">Vejledning til variantapparat</a></li>
                         <li><a id="ms_vej" href="/vejledning/ms_vej">Vejledning til manuskriptvisning</a></li>
                         <li><a id="timeline_vej" href="/vejledning/timeline_vej">Vejledning til tidslinje</a></li>
                         <li><a id="pers_vej" href="/vejledning/pers_vej">Vejledning til personregister</a></li>
                         <li><a id="bibel_vej" href="/vejledning/bibel_vej">Vejledning til bibelregister</a></li>
                         <li><a id="myth_vej" href="/vejledning/myth_vej">Vejledning til mytologisk register</a></li>   
-                        <li><a id="1805_vej" href="/vejledning/metrik_vej">Vejledning til metriske oplysninger</a></li>        
-                        <li><a id="bog_vej" href="/vejledning/1805_vej">Vejledning til Bogfortegnelse 1805</a></li>
-                        <li><a id="trans_vej" href="/vejledning/transskription_vej">Vejledning til transskription</a></li>
+                        <li><a id="metrik_vej" href="/vejledning/metrik_vej">Vejledning til metriske oplysninger</a></li>        
+                        <li><a id="1805_vej" href="/vejledning/1805_vej">Vejledning til Bogfortegnelse 1805</a></li>
+                        <li><a id="transskription_vej" href="/vejledning/transskription_vej">Vejledning til transskription</a></li>
                         <li><a id="search_vej" href="/vejledning/search_vej">Vejledning til søgning</a></li>
                         <li class="last"><a href="mailto:mail@grundtvigsvaerker.dk">Kontakt</a></li>
 		</ul>

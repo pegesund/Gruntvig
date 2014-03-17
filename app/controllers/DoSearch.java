@@ -42,19 +42,19 @@ public class DoSearch extends Application {
           grundtvig= kommentar= "jatak";
       }
           
-      List<Chapter> chapters= null;
-      int chaptersSize= 0;
-      ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
-      ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
-      Query qAsset = Search.search("htmlAsText:" + lucene, Asset.class);
-      List<Asset> assets = qAsset.fetch();
-      List<Asset> allAssets = Asset.findAll();
-      for (Asset asset : assets) {
-        System.out.println("Asset file match: " + asset.fileName);
-      }
-          
       if( lucene!=null ) {
         System.out.println("Searching for qps: " + lucene);
+
+        List<Chapter> chapters= null;
+        int chaptersSize= 0;
+        ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
+        ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
+        Query qAsset = Search.search("htmlAsText:(" + lucene + ")", Asset.class);
+        List<Asset> assets = qAsset.fetch();
+//        List<Asset> allAssets = Asset.findAll(); // not used
+        for (Asset asset : assets) {
+          System.out.println("Asset file match: " + asset.fileName);
+        }
 
         if( grundtvig!=null ) { // Søg i Grundtvigteksternes kapitler (chapters)
           cat+= "grundtvig";
@@ -63,7 +63,7 @@ public class DoSearch extends Application {
           chaptersSize= chapters.size();
           System.out.println("Chapters found: " + chapters.size());
           for (Asset asset: assets) {
-            if ( asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ) {
+            if( (asset.type.equals(Asset.variantType) && nonEmpty(asset)) || asset.type.equals(Asset.manusType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderGrundtvigAssets.add(asset);
@@ -102,11 +102,20 @@ public class DoSearch extends Application {
         render();
     }
     
+    private static boolean nonEmpty( Asset var ) {
+        Pattern p= Pattern.compile( "type\\s*=\\s*[\"'](minusVar|unknownVar)[\"']" );
+        Matcher m= p.matcher( var.xml );
+        if( m.find() )
+            return false;
+        else
+            return true;
+    }
+    
     /**
      * 
      * Search
      * Look in intro, variants, manus and txt-files (chapters).
-     * 
+     * Now obsolete, 2014-03-13
      */
     public static void doSearch() {
         String lookfor = Application.params.get("lookfor");
@@ -126,7 +135,7 @@ public class DoSearch extends Application {
 
         ArrayList<Asset> renderAssets = new ArrayList<Asset>();
         for (Asset asset: assets) {
-            if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType)) {
+            if( asset.type.equals(Asset.introType) || asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType) ||  asset.type.equals(Asset.rootType) ) {
                 try {
                     long _id = asset.getCorrespondingRootId();
                     renderAssets.add(asset);
