@@ -314,7 +314,7 @@
         text-indent: -1em;
         }
         
-        */
+
         
 #tekst_innhold .l_noIndent, #tekst_innhold .l_center, #tekst_innhold .l_hangingIndent, #tekst_innhold .l_right, #tekst_innhold .l_firstIndent
         {
@@ -734,16 +734,42 @@
         text-align: right;
         }
 
-#tekst_innhold table.cast, #tekst_innhold tr.row.cast, #tekst_innhold td.cast
-        {
-        border: 0px solid black;
-        }
-
-#tekst_innhold table.cast, #tekst_innhold tr.row
+#tekst_innhold table.cast
         {
         empty-cells: show;
         font-size: 100%;
-        width: 75%;
+        width: 80%;
+        }
+
+#tekst_innhold div.cast
+        {
+        font-size: 120%;
+        margin: 1em 0em 1em 0em;
+        text-align: center;
+        }
+
+#tekst_innhold table.cast, #tekst_innhold tr.row.cast, #tekst_innhold td.role, #tekst_innhold td.abb, #tekst_innhold td.roleDesc
+        {
+        border: 1px solid black;
+        }
+
+#tekst_innhold td.figure
+        {
+        vertical-align: top;
+        width: 30%;
+        }
+
+#tekst_innhold td.abb
+        {
+        vertical-align: middle;
+        width: 5%;
+        }
+
+#tekst_innhold td.desc
+        {
+        text-align: left;
+        vertical-align: top;
+        width: 55%;
         }
 
 /* drama END */
