@@ -174,10 +174,13 @@ public class DoSearch extends Application {
             prox= (m==n+1)?0:Integer.parseInt(lookfor.substring(n,m-1));
             lookfor = lookfor.replace(" ","|").replaceAll("~[0-9.]*","").replace("\"","");
         }
-        else if( lookfor.contains("\"") )
+        else if( lookfor.contains("\"") ) {
             lookfor = lookfor.replace("\"","");
-        else
+            lookfor = lookfor.replace(" ","\\P{L}+");
+        }
+        else {
             lookfor = lookfor.replace(" ","|");
+        }
         System.out.println("Teaser for: " + lookfor );
         System.out.println("prox= " + prox );
         int lookforStart;
