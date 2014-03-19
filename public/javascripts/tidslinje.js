@@ -129,19 +129,6 @@ var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
 Timeline.loadXML("../public/tidslinje/unpub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 
-    $i = 0;
-    $('.timeline-event-label').each(function() {
-   
-//        // gj?r verkene kursiv
-//        if($(this).css('color') == 'rgb(155, 132, 24)') {
-//            $i++; alert($i);
-//            $(this).css('font-style', 'italic');
-//            $(this).width($(this).width() * 1.2);
-//
-//        }
-
-    });
-
 });
 
 Timeline.loadXML("../public/tidslinje/life.xml", function(xml, url) {
