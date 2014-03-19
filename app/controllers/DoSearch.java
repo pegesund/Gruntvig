@@ -43,6 +43,7 @@ public class DoSearch extends Application {
       }
           
       if( lucene!=null ) {
+        lucene= lucene.replaceAll("[!()+,.;:]","");
         System.out.println("Searching for qps: " + lucene);
 
         List<Chapter> chapters= null;
