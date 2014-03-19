@@ -131,11 +131,11 @@ Timeline.loadXML("../public/tidslinje/unpub.xml", function(xml, url) {
 
 });
 
-Timeline.loadXML("../public/tidslinje/life.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/pub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
-Timeline.loadXML("../public/tidslinje/pub.xml", function(xml, url) {
+Timeline.loadXML("../public/tidslinje/life.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
