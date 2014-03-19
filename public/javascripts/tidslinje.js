@@ -64,7 +64,7 @@ var eventSource = new Timeline.DefaultEventSource();
 // The default theme is defined in
 // http://simile-widgets.googlecode.com/svn/timeline/tags/latest/src/webapp/api/scripts/themes.js
 var theme = Timeline.ClassicTheme.create(); // create the theme
-theme.event.bubble.width = 200;   // modify it
+theme.event.bubble.width = 300;   // modify it
 theme.event.bubble.height = 300;
 theme.event.track.height = 25;
 theme.event.track.gap = 2;
@@ -89,7 +89,7 @@ Timeline.createHotZoneBandInfo({
     ],
     eventSource:    eventSource,
     date:           "Jan 01 1850 00:00:00 GMT",
-    width:          "87%",
+    width:          "60%",
     intervalUnit:   Timeline.DateTime.CENTURY,
     theme:          theme, // Apply the theme
     layout:         'original',
@@ -100,7 +100,7 @@ Timeline.createBandInfo({
     overview:	true,
     eventSource:    eventSource,
     date:           "Jan 01 1780 00:00:00 GMT",
-    width:          "13%",
+    width:          "40%",
     intervalUnit:   Timeline.DateTime.DECADE,
     theme:          theme, // Apply the theme
     layout:         'original',
