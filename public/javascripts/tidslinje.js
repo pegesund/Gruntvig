@@ -64,7 +64,7 @@ var eventSource = new Timeline.DefaultEventSource();
 // The default theme is defined in
 // http://simile-widgets.googlecode.com/svn/timeline/tags/latest/src/webapp/api/scripts/themes.js
 var theme = Timeline.ClassicTheme.create(); // create the theme
-theme.event.bubble.width = 300;   // modify it
+theme.event.bubble.width = 200;   // modify it
 theme.event.bubble.height = 300;
 theme.event.track.height = 25;
 theme.event.track.gap = 2;
@@ -129,13 +129,26 @@ var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
 Timeline.loadXML("../public/tidslinje/unpub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 
-});
+    $i = 0;
+    $('.timeline-event-label').each(function() {
+   
+//        // gj?r verkene kursiv
+//        if($(this).css('color') == 'rgb(155, 132, 24)') {
+//            $i++; alert($i);
+//            $(this).css('font-style', 'italic');
+//            $(this).width($(this).width() * 1.2);
+//
+//        }
 
-Timeline.loadXML("../public/tidslinje/pub.xml", function(xml, url) {
-    eventSource.loadXML(xml, url);
+    });
+
 });
 
 Timeline.loadXML("../public/tidslinje/life.xml", function(xml, url) {
+    eventSource.loadXML(xml, url);
+});
+
+Timeline.loadXML("../public/tidslinje/pub.xml", function(xml, url) {
     eventSource.loadXML(xml, url);
 });
 
