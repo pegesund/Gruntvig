@@ -121,7 +121,7 @@ input[type=text]
           boolQS= QueryString("bool"),
           proxQS= QueryString("prox"),
           wordsElem= document.getElementById( "wordsString" );
-      wordsElem.value= decodeURI( wordsQS.replace(/\+/g," ").replace(/%3F/g,"?").replace(/%../g,"") );
+      wordsElem.value= decodeURI( wordsQS.replace(/\+/g," ").replace(/%3F/g,"?") ).replace(/%../g,"");
       if( !grundtvigQS ) {
         var grundtvigElem= document.getElementById( "grundtvigChk" );
         grundtvigElem.checked= false;
