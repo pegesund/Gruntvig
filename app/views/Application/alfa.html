@@ -34,7 +34,7 @@
                 if( altName ) {
                     firstLetter = altName.charAt(0).toLowerCase();
                     if(firstLetter == value){
-                        node = '\<!--' + altName.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">(' + altName + ')</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+                        node = '\<!--' + altName.toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + altName + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
                         nodes.push(node);
                     }                    
                 }
