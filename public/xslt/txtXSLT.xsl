@@ -630,7 +630,7 @@
                         <xsl:text>_</xsl:text>
                         <xsl:value-of select="@n"/>
                     </xsl:attribute>
-                    &#x25BA;HAT
+                    &#x25BA;
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
