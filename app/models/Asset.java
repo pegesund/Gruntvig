@@ -245,12 +245,15 @@ public class Asset extends GenericModel {
         return asset;
     }
 
-    public static Asset uploadEpiText(String name, String comment, File file) {
+    
+    public static void uploadIBinary(String name, String comment, File file) {
         String fileName = file.getName();
         String filePath = play.Play.applicationPath.getAbsolutePath() + File.separator + "public" + File.separator + "images" + File.separator + fileName;
-        Helpers.copyfile(file.getAbsolutePath(), filePath); 
-        return null;
+        Helpers.copyfile(file.getAbsolutePath(), filePath);
+        return;
     }
+    
+    
     
     /**
      * 
@@ -260,7 +263,7 @@ public class Asset extends GenericModel {
      * Asset with type Asset.imageType is created
      * 
      */
-    public static Asset uploadImage(String name, String comment, File file) {
+    public static Asset uploadFax(String name, String comment, File file) {
         String fileName = file.getName();
         fileName = fileName.replaceFirst("_fax", "_").replaceFirst("_0+", "_");
         Asset asset;

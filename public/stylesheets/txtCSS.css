@@ -773,5 +773,19 @@
         {
         width: 55%;
         }
+        
+#tekst_innhold .image_head
+{
+    font-weight:bold;
+    padding-top: 30px;
+    padding-bottom: 7px;
+}
+
+#tekst_innhold .image_desc
+{
+    font-style:italic;
+    padding-bottom: 15px; 
+}
+
 
 /* drama END */

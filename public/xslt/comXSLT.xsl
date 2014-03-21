@@ -192,6 +192,7 @@ function blank(target, loc, x, y) {
    <xsl:template match="TEI:note[@xml:id]">
        <div class="note" id="{@xml:id}">
            <xsl:apply-templates select="TEI:p"/>
+           <a href="" class="greenarrow_comments"> →</a>
        </div>
    </xsl:template>
    
@@ -306,6 +307,12 @@ function blank(target, loc, x, y) {
             <xsl:value-of select="substring(@n, 1,4)"/>
             <xsl:text>).</xsl:text>
         </li>
+    </xsl:template>
+    
+    
+    <xsl:template name="getFileNameOfXML">      
+      <xsl:variable name="tokenized"><xsl:value-of select="tokenize(base-uri(), '/')[last()]"/></xsl:variable>
+      <xsl:value-of select="$tokenized"/>
     </xsl:template>
     
 </xsl:stylesheet>

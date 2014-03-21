@@ -888,10 +888,27 @@
     
     <xsl:template match="TEI:figure">
         <div class="{@type}">
-            <hr align="center" width="50%"/>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    
+    <xsl:template match="TEI:figure/TEI:head">
+        <div class="image_head">
+            <xsl:value-of select="text()"/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:figure/TEI:figDesc">
+        <div class="image_desc">
+            <xsl:value-of select="text()"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="TEI:figure/TEI:graphic">
+        <img src="img/{@url}"/>
+    </xsl:template>
+      
     
     <xsl:template match="TEI:fw">
         <xsl:choose>
