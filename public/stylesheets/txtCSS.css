@@ -775,17 +775,37 @@
         }
         
 #tekst_innhold .image_head
-{
+    {
     font-weight:bold;
     padding-top: 30px;
     padding-bottom: 7px;
-}
+    }
 
 #tekst_innhold .image_desc
-{
+    {
     font-style:italic;
     padding-bottom: 15px; 
-}
+    }
 
 
 /* drama END */
+
+/* figure/illustationer START 
+
+#tekst_innhold .imageMyth
+    {
+    border: 1px solid black;
+    
+    width: inherit;
+    }*/
+
+#tekst_innhold img.imageMyth
+    {
+    border: 1px solid black;
+    margin: 1em 0em 1em -2em;
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+    }
+
+/* figure/illustationer END */
