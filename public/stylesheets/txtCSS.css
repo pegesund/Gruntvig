@@ -790,14 +790,7 @@
 
 /* drama END */
 
-/* figure/illustationer START 
-
-#tekst_innhold .imageMyth
-    {
-    border: 1px solid black;
-    
-    width: inherit;
-    }*/
+/* figure/illustationer START */
 
 #tekst_innhold img.imageMyth
     {
