@@ -544,16 +544,20 @@
         </div>
     </xsl:template>     
 
-    <xsl:template match="TEI:body/TEI:div">        
+    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
+                    <xsl:for-each select="ancestor::TEI:div">
+                        <xsl:text>&#x2003;</xsl:text>
+                    </xsl:for-each>
                     <xsl:value-of select="@type"/>
                </xsl:attribute> 
             </xsl:if>
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="node()[local-name()!='div']"/>
             <xsl:call-template name="footnote"/>
         </div>
+        <xsl:apply-templates select="TEI:div"/>
     </xsl:template>
     
     <!-- footnote template fra linj 698 -->
