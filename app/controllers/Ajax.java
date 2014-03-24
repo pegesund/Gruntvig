@@ -42,19 +42,27 @@ public class Ajax extends Application {
     }
 
     public static void getReference(String fileName, String textId) {
-        System.out.println("Serving popup: " + TextReference.getReference(fileName + "_" + textId));
-        Controller.renderHtml(TextReference.getReference(fileName + "_" + textId));
+        String content = "";
+        if (Application.params._contains("content")) {
+            content = Application.params.get("content");
+        } else {
+            content = TextReference.getReference(fileName + "_" + textId);
+        }
+        System.out.println("Serving popup: " + content);
+        Controller.renderHtml(content);
     }
 
     public static void getRef(String textId) {
+        String content="";
         textId = textId.replaceAll("%20", " ");
-        TextReference ref = TextReference.find("textId = ?", textId).first();
-        if (ref != null) {
-            System.out.println("Showing ref: " + ref.showName);
-            Controller.renderHtml(ref.showName);
-        } else {
-            Controller.renderHtml("");
+        if (Application.params._contains("content")) {
+            content = Application.params.get("content");
+        } else 
+        {
+           TextReference ref = TextReference.find("textId = ?", textId).first();
+           if (ref != null) content = ref.showName;
         }
+        Controller.renderHtml(content);
     }
 
 
