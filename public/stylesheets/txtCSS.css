@@ -210,7 +210,6 @@
         font-weight: bold;
         }
 
-
 #tekst_innhold .initial
         {
         font-style: normal;
@@ -222,7 +221,12 @@
         font-style: italic;
         }
 
-#tekst_innhold .spaced, #tekst_innhold .schwab
+#tekst_innhold .spaced
+        {
+        font-style: italic;
+        }
+
+#tekst_innhold .schwab
         {
         font-style: italic;
         }
