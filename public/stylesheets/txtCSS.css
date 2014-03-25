@@ -84,6 +84,12 @@
         font-weight: bold;
         }
 
+#tekst_innhold .spaced
+        {
+        color: red;
+        font-style: italic;
+        }
+
 #tekst_innhold .center
         {
         text-align: center;
