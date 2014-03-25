@@ -223,6 +223,7 @@
 
 #tekst_innhold .spaced
         {
+        color: red;
         font-style: italic;
         }
 
