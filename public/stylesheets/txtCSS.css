@@ -79,17 +79,6 @@
 
 /* kolofonblad end */
 
-#tekst_innhold .bold
-        {
-        font-weight: bold;
-        }
-
-#tekst_innhold .spaced
-        {
-        color: red;
-        font-style: italic;
-        }
-
 #tekst_innhold .center
         {
         text-align: center;
@@ -214,6 +203,13 @@
 
 /* head end */
 
+/* hi rend START */
+
+#tekst_innhold .bold
+        {
+        font-weight: bold;
+        }
+
 
 #tekst_innhold .initial
         {
@@ -241,6 +237,8 @@
         text-transform: uppercase;
         }
 
+/* hi rend END*/
+        
 /* indrykning lyrik START*/
         
 #tekst_innhold .l_center
