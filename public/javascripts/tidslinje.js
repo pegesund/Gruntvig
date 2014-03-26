@@ -89,7 +89,7 @@ Timeline.createHotZoneBandInfo({
     ],
     eventSource:    eventSource,
     date:           "Jan 01 1850 00:00:00 GMT",
-    width:          "87%",
+    width:          "60%",
     intervalUnit:   Timeline.DateTime.CENTURY,
     theme:          theme, // Apply the theme
     layout:         'original',
@@ -100,7 +100,7 @@ Timeline.createBandInfo({
     overview:	true,
     eventSource:    eventSource,
     date:           "Jan 01 1780 00:00:00 GMT",
-    width:          "13%",
+    width:          "40%",
     intervalUnit:   Timeline.DateTime.DECADE,
     theme:          theme, // Apply the theme
     layout:         'original',

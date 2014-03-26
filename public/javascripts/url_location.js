@@ -29,12 +29,12 @@ var makeContinousUrl = function(oldHash) {
     var newHash = {};
     if (typeof oldHash["k"] !== 'undefined') newHash["k"] = oldHash["k"]; 
     for (i=0; i<20; i++) {
-        if (typeof oldHash[i + ""] !== 'undefined') { 
+        if (typeof oldHash[i + ""] !== 'undefined') {
             newHash[j + ""] = oldHash[i + ""];
-            if (typeof oldHash["v"] !== 'undefined') newHash["v" + j] = oldHash["v" + i];
-            if (typeof oldHash["x"] !== 'undefined') newHash["x" + j] = oldHash["x" + i];
+            if (typeof oldHash["v" + i] !== 'undefined') newHash["v" + j] = oldHash["v" + i];
+            if (typeof oldHash["x" + i] !== 'undefined') newHash["x" + j] = oldHash["x" + i];
             
-            if (typeof oldHash["f"] !== 'undefined') newHash["f" + j] = oldHash["f" + i];
+            if (typeof oldHash["f" + i] !== 'undefined') newHash["f" + j] = oldHash["f" + i];
             j++;
         }
     }

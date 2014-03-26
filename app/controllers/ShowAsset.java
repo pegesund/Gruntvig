@@ -30,6 +30,7 @@ public class ShowAsset extends Application {
         System.out.println("All chapters: " + Chapter.findAll().size());
         System.out.println("Chapters: " + chapters.size());
         System.out.println("Found chapter: " + chapter.num);
+        System.out.println("Number of pictures: " + asset.getNumberOfPictures());
         render(asset, chapter, chapters, variants, manus);
     }
 

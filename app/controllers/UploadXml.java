@@ -68,11 +68,15 @@ public class UploadXml extends Application {
             if (fileName.contains("_medium") || fileName.contains("_low")) {
                 Asset.uploadCountryImage(fileName, comment, theFile);
             } else {
-                Asset.uploadImage(filesname, comment, theFile);
+                if (fileName.contains("_fax")) {
+                    Asset.uploadFax(filesname, comment, theFile);
+                } else {
+                    Asset.uploadIBinary(fileName, comment, theFile);
+                }
             }
         } else 
         if (fileName.endsWith(".pdf")) {
-            Asset.uploadEpiText(fileName, comment, theFile);
+            Asset.uploadIBinary(fileName, comment, theFile);
         } else {
             asset = Asset.uploadXmlFile(filesname, comment, theFile);
         }

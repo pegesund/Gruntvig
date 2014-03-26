@@ -58,9 +58,13 @@ public class DoSearch extends Application {
         }
 
         if( grundtvig!=null ) { // Søg i Grundtvigteksternes kapitler (chapters)
+          System.out.println("Searhing for chapters");
+
           cat+= "grundtvig";
           Query qChapter = Search.search("htmlAsText:(" + lucene + ")", Chapter.class);
+          System.out.println("Search is done");
           chapters = qChapter.fetch();
+          System.out.println("Fetching: " + chapters);
           chaptersSize= chapters.size();
           System.out.println("Chapters found: " + chapters.size());
           for (Asset asset: assets) {
@@ -76,7 +80,9 @@ public class DoSearch extends Application {
          }
 
         if( kommentar!=null ) { // Søg i kommentarfiler (assets)
-          cat+= "kommentar";
+        System.out.println("Searhing for comments");        
+        
+            cat+= "kommentar";
           for (Asset asset: assets) {
             if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.veiledningType) ) {
                 try {
