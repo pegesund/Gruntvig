@@ -422,12 +422,12 @@ public class Asset extends GenericModel {
             preName= "Indl. til ";
         } else if (type.equals(Asset.variantType)) {
             html = fixHtml(Asset.xmlToHtmlVariant(copiedFile));
-            preName= "Variant til ";
+            //preName= "Var. til "; use shortForm
         } else if (type.equals(Asset.rootType)) {
             html = fixHtml(Asset.xmlToHtml(copiedFile));
         } else if (type.equals(Asset.manusType)) {
             html = Asset.xmlToHtmlManus(copiedFile);
-            preName= "Ms. til ";
+            //preName= "Ms. til "; use shortForm
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
         } else if (type.equals(Asset.bibleType)) {
