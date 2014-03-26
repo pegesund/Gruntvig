@@ -175,7 +175,7 @@ addNewReader = function(num) {
         var parentId = $(this).closest("div.ui-tabs").attr("id");
         var tabNumber = parseInt(parentId.substring(3));
         var index = $(this)[0].selectedIndex;
-        if (index > 0) {
+        if (index >= 0) {
             uriChangeVariant(tabNumber, index);
         }
         var theUrl = "ajax/getVariantByName/" + $(this).val();
@@ -242,7 +242,6 @@ addNewReader = function(num) {
     }
       
     $("#tab" + num +' .variantsAsDropDown').trigger('change');
-    $("#tab" + num +' .manusAsDropDown').trigger('change');
 
     // vis hovedtekst select når variant-fanen åpnes, sjekk evt. jøgens gamle sjekk inn hvis problemer
     $('.variant_tab').click(function() {
