@@ -268,7 +268,7 @@ gav i alt ${totalHits} resultat${totalHits==1 ? "" : "er"}</h1>
     #{if renderGrundtvigAssets}
         <h3>Varianter</h3>
         #{list renderGrundtvigAssets, as:'asset'}
-            #{set hash= "#\u007b\"0\":1,\"k\":0,\"v0\":" + (asset.fileName.contains("1826_433A_") ? asset.variant+2 : asset.variant) + "\u007d" /}
+            #{set hash= "#\u007b\"0\":1,\"k\":0,\"v0\":" + (asset.fileName.contains("1826_433A_") ? asset.variant+(asset.type==asset.manusType?-1:2) : asset.variant) + "\u007d" /}
             <div class="treff">
             <h4><a href="tekstvisning/${asset.correspondingRootId}/0${hash}">${asset.name}</a></h4>
                 <p class="treff2">${asset.getTeaser(lookfor).raw()}</p>

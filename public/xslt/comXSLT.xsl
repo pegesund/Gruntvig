@@ -195,7 +195,7 @@ function blank(target, loc, x, y) {
    <xsl:template match="TEI:note[@xml:id]">
        <div class="note" id="{@xml:id}">
            <xsl:apply-templates select="TEI:p"/>
-           <a href="" class="greenarrow_comments"> →</a>
+           <!--<a href="" class="greenarrow_comments"> →</a>-->
        </div>
    </xsl:template>
    

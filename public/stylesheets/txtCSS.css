@@ -79,11 +79,6 @@
 
 /* kolofonblad end */
 
-#tekst_innhold .bold
-        {
-        font-weight: bold;
-        }
-
 #tekst_innhold .center
         {
         text-align: center;
@@ -188,7 +183,7 @@
 
 #tekst_innhold .head3
         {
-        font-size: 172%;
+        font-size: 173%;
         }
 
 #tekst_innhold .head4
@@ -208,8 +203,12 @@
 
 /* head end */
 
-/*
+/* hi rend START */
 
+#tekst_innhold .bold
+        {
+        font-weight: bold;
+        }
 
 #tekst_innhold .initial
         {
@@ -222,7 +221,12 @@
         font-style: italic;
         }
 
-#tekst_innhold .spaced, #tekst_innhold .schwab
+#tekst_innhold .spaced
+        {
+        font-style: italic;
+        }
+
+#tekst_innhold .schwab
         {
         font-style: italic;
         }
@@ -237,6 +241,8 @@
         text-transform: uppercase;
         }
 
+/* hi rend END*/
+        
 /* indrykning lyrik START*/
         
 #tekst_innhold .l_center
