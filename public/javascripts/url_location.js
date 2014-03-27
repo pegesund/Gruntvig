@@ -29,15 +29,18 @@ var makeContinousUrl = function(oldHash) {
     var newHash = {};
     if (typeof oldHash["k"] !== 'undefined') newHash["k"] = oldHash["k"]; 
     for (i=0; i<20; i++) {
+        if (typeof oldHash["x" + i] !== 'undefined') {
+            newHash["x" + j] = oldHash["x" + i];
+            j++;
+            continue;
+        }     
         if (typeof oldHash[i + ""] !== 'undefined') {
             newHash[j + ""] = oldHash[i + ""];
             if (typeof oldHash["v" + i] !== 'undefined') newHash["v" + j] = oldHash["v" + i];
-            if (typeof oldHash["x" + i] !== 'undefined') newHash["x" + j] = oldHash["x" + i];
-            
             if (typeof oldHash["f" + i] !== 'undefined') newHash["f" + j] = oldHash["f" + i];
             j++;
         }
-    }
+    }    
     return newHash;
 };
 
@@ -109,10 +112,9 @@ var startupUri = function() {
     if (oldHash["k"]) {
         theUrl["k"] = oldHash["k"];
     }
-    var num = 1;
+    // var num = 1;
     var i;
     for (i=0; i<20; i++) {
-        var j = num - 1;
         var options = {};
         if ((oldHash[i] != undefined) || (oldHash["x" + i] != undefined)) {
             options["open_tab"] = oldHash[i];
@@ -138,8 +140,7 @@ var startupUri = function() {
                 continue;
             }
             if (i != 0) addReaderColumn(options);
-            num++;
-        }
+        }        
     }
     window.location.hash = JSON.stringify(theUrl);
 };
