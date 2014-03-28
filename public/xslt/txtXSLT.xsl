@@ -518,7 +518,7 @@
     
     <xsl:template name="footnote">
         <xsl:if test=".//TEI:note[@type='footnote']">
-            <hr class="footLine"/>            
+            <hr class="footLine"/>
             <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
         </xsl:if>
     </xsl:template>
@@ -564,7 +564,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
         <a id="retur{$id}" href="#note{$id}" class="footMarker">
             <span>
@@ -575,7 +575,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
         <a id="note{$id}" href="#retur{$id}" class="footMarker">
             <span>
