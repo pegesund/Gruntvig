@@ -462,24 +462,24 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:head">
+    <xsl:template match="TEI:head"> 
         <xsl:choose>
             <xsl:when test="@rend and not(@xml:id)">
                 <div class="head{@rend}">
-                    <xsl:appay-yemplates/>
+                    <xsl:apply-templates/>
                 </div>
             </xsl:when>
             <xsl:when test="@rend and @xml:id">
                 <div class="head{@rend}" id="{@xml:id}">
-                    <xsl:appay-yemplates/>
+                    <xsl:apply-templates/>
                 </div>
             </xsl:when>
+            <xsl:otherwise>
+                <div>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
         </xsl:choose>
-        <xsl:otherwise>
-            <div>
-                <xsl:apply-templates/>
-            </div>
-        </xsl:otherwise>
     </xsl:template>
     
     <xsl:template match="TEI:app">
