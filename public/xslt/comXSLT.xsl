@@ -114,9 +114,12 @@ function blank(target, loc, x, y) {
                     <!--</a>-->
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <!--<a hrel="{@target}" class="docOut txrmenu">-->
-                       <xsl:apply-templates/>
-                    <!--</a>-->
+                    <span class="docout">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>           
+                        <xsl:apply-templates/>         
+                    </span>
                 </xsl:when>
                 <xsl:when test="@type='image'">
                     <!--<a href="{@target}">-->

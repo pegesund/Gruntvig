@@ -199,7 +199,6 @@ addNewReader = function(num) {
             keepOldScrollPosition(options);
         }
     });
-
        
     $.ajax({
         url: kommentarUrl,
@@ -302,7 +301,7 @@ addSimpleReader = function(options, showName, url) {
     var num = readerNum;
     uriAddForeignTab(readerNum, url);
     var newReader = '<span class="tabReader"><div id="tab' + num + '" class="foreign"> <ul> <li class="selected"><a href="#foreign' + num + '"><span>' + showName + '</span></a></li>  <li id="lukk_kolonne_knapp_li"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></li> </ul> ';
-    newReader += '<div class="text-resizeable" id="foreign' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
+    newReader += '<div class="text-resizeable" id="foreign' + num + '"> <div class="text-resizeable innledningContent txr kommentar"><p><img src="public/images/wait.gif"></p></div></div>';
     newReader += '<div class="empty_tab" id="skjul' + num + '"></div>';
     newReader += '</div></span>';
     $("#hovedtekst_select").html(hovedtekstSelect);
@@ -317,11 +316,17 @@ addSimpleReader = function(options, showName, url) {
     $.ajax({
         url: "ajax/getManusByName/"  + url,
         success: function(data) {
-            var simpleContent = $("#foreign" + num);
+            var simpleContent = $("#foreign" + num).children().first();
             simpleContent.html(data);
             addMouseHandlers(url);
             fixTabMenues();
             keepOldScrollPosition(options);
+            if (options["scrollToInNewWindows"] != undefined) {
+                var sto = $("#" + options["scrollToInNewWindows"]);
+                var scrollElement = sto.closest(".innledningContent").parent();
+                scrollElement.scrollTo(sto);
+                scrollElement.scrollTo("-=30px", 700);
+            }
         }
     });
     
