@@ -557,7 +557,7 @@
             <xsl:apply-templates select="node()[local-name()!='div']"/>
             <xsl:call-template name="footnote"/>
         </div>
-        <xsl:apply-templates select="TEI:div"/>
+        <xsl:apply-templates select="TEI:iv"/>
     </xsl:template>
     
     <!-- footnote template fra linj 698 -->
