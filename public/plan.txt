@@ -6,7 +6,7 @@ Ny og bedre plan!
         
 
         
-/* drama START */
+/* drama START HAT */
 
 #tekst_innhold .set_center, #tekst_innhold .set_firstIndent, #tekst_innhold .set_noIndent, #tekst_innhold .set_right
         {
