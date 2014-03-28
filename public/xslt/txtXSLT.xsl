@@ -525,7 +525,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:body"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:body"/>
         </xsl:variable>
         <a id="retur{$id}" href="#note{$id}" class="footnote">
             <xsl:value-of select="$id"/>
@@ -534,7 +534,7 @@
     
     <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:body"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:body"/>
         </xsl:variable>
         <a id="note{$id}" href="#retur{$id}" class="footnote">
             <xsl:value-of select="$id"/>
