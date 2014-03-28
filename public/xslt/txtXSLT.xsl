@@ -462,10 +462,24 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:head">        
-        <div class="head{@rend}">
-            <xsl:apply-templates/>
-        </div>
+    <xsl:template match="TEI:head">
+        <xsl:choose>
+            <xsl:when test="@rend and not(@xml:id)">
+                <div class="head{@rend}">
+                    <xsl:appay-yemplates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend and @xml:id">
+                <div class="head{@rend}" id="{@xml:id}">
+                    <xsl:appay-yemplates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+        <xsl:otherwise>
+            <div>
+                <xsl:apply-templates/>
+            </div>
+        </xsl:otherwise>
     </xsl:template>
     
     <xsl:template match="TEI:app">
@@ -820,6 +834,14 @@
     <xsl:template match="TEI:table[@type='index']/TEI:row">
         <tr class="index">
             <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">
+        <tr class="index">
+            <a class="index" href="#{../@corresp}">
+                <xsl:apply-templates/>
+            </a>            
         </tr>
     </xsl:template>
     
