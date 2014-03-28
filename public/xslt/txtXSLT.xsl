@@ -81,7 +81,7 @@
                         
                         <tr>
                             <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
-                                <xsl:text>Andre udgaver</xsl:text>
+                                <xsl:text>Andre HAT udgaver</xsl:text>
                                 <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
                                     <div class="table">
                                         <table>
@@ -560,7 +560,7 @@
         <xsl:apply-templates select="TEI:div"/>
     </xsl:template>
     
-    <!-- footnote template fra linj 698 
+    <!-- footnote template fra linj 698 -->
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
@@ -586,7 +586,6 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    -->
     
     
     <!-- <xsl:call-template name="footnote"/> -->
@@ -842,28 +841,28 @@
         </tr>
     </xsl:template>
     
-    <!--
+    <!-- udkommeneter aht table index; tjek konsekvenser
+    
     <xsl:template match="TEI:row[@type='head']/TEI:cell">        
         <td class="cell">
             <xsl:apply-templates/>
         </td>
     </xsl:template>
-    -->
-    
+        
     <xsl:template match="TEI:cell">
         <xsl:choose>
             <xsl:when test="@corresp">
                 <td class="{@rend}">
-                    <!--<a class="index" href="#{@taget}">-->
+                    <a class="index" href="#{@taget}">
                         <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
                 <td class="{@rend}" colspan="{@cols}">
-                    <!--<a class="index" href="#{@target}">-->
+                    <a class="index" href="#{@target}">
                         <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </td>
             </xsl:when>
             <xsl:when test="@n">
@@ -882,6 +881,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    -->
     
     <!-- table END -->
     
