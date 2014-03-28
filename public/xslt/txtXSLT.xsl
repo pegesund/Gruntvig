@@ -560,7 +560,7 @@
         <xsl:apply-templates select="TEI:div"/>
     </xsl:template>
     
-    <!-- footnote template fra linj 698 -->
+    <!-- footnote template fra linj 698 
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
@@ -573,7 +573,7 @@
         </a>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='footHATnote']" mode="foot">
+    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
@@ -585,7 +585,7 @@
         <span class="footnote">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
+    </xsl:template>-->
     
     
     <!-- <xsl:call-template name="footnote"/> -->
