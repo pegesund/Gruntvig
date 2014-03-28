@@ -573,7 +573,7 @@
         </a>
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='footnote']" mode="foot">
+    <xsl:template match="TEI:note[@type='footHATnote']" mode="foot">
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
