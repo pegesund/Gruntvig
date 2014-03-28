@@ -81,7 +81,7 @@
                         
                         <tr>
                             <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
-                                <xsl:text>Andre HAT udgaver</xsl:text>
+                                <xsl:text>Andre udgaver</xsl:text>
                                 <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
                                     <div class="table">
                                         <table>
