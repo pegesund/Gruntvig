@@ -97,6 +97,8 @@
         margin: 2em 2em 2em 2em;
         }
 
+/* p indent START */
+        
 #tekst_innhold .firstIndent
         {
         color: black;
@@ -120,7 +122,15 @@
         margin-right: 2em;
         text-align: right;
         }
+        
+#tekst_innhold .secondIndentRight
+        {        
+        margin-right: 4em;
+        text-align: right;
+        }
 
+/* indent p END */
+        
 #tekst_innhold .footnote
         {
         font-size: 80%;
