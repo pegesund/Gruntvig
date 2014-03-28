@@ -201,6 +201,11 @@
         font-size: 298%;
         }
 
+#tekst_innhold .headlg
+        {
+        text-align: center;
+        }
+
 /* head end */
 
 /* hi rend START */
