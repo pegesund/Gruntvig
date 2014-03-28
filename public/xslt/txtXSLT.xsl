@@ -585,7 +585,8 @@
         <span class="footnote">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>-->
+    </xsl:template>
+    -->
     
     
     <!-- <xsl:call-template name="footnote"/> -->
