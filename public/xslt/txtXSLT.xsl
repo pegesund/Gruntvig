@@ -557,8 +557,8 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>     
-
-    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
+<!--
+    <xsl:template match="TEI:body//TEI:div"> Allow div in div, KK 2014-03-19 
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -572,7 +572,7 @@
             <xsl:call-template name="footnote"/>
         </div>
         <xsl:apply-templates select="TEI:div"/>
-    </xsl:template>
+    </xsl:template>-->
     
     <!-- footnote template fra linj 698 -->
     
