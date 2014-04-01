@@ -298,6 +298,26 @@
                         </xsl:if>                        
                     </div>
                     
+                    <div class="kolofon">
+                        <xsl:if test="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:text>For hjælp til tekstredegørelse takkes </xsl:text> 
+                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                                <xsl:apply-templates select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='contributor'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                            <xsl:call-template name="delimiterFullStop"/>
+                        </xsl:if>                        
+                    </div>
+                    
                     <div class="copyright">
                         <xsl:text>Copyright: </xsl:text><i><xsl:text>Grundtvigs Værker</xsl:text></i>
                     </div>
