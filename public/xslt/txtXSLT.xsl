@@ -864,7 +864,7 @@
     
     <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">        
         <td class="index">
-            <a class="index" href="#{../@corresp}">
+            <a class="index" href="#{../@corresp}/{TEI:head[xml:id=current()/@corresp]}">
                 <xsl:apply-templates/>
             </a>
         </td>
