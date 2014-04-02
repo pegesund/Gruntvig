@@ -862,9 +862,14 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">        
+    <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">
+        <xsl:variable name="chp-id">
+            <xsl:for-each select="//TEI:div[TEI:head[@xml:id=current()/../@corresp]]"> <!-- should be 1 at most -->
+                <xsl:number level="any"/>
+            </xsl:for-each>
+        </xsl:variable>
         <td class="index">
-            <a class="index" href="#{../@corresp}/{TEI:head[xml:id=current()/@corresp]}">
+            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="Kap.nr.{$chp-id}+{count(//TEI:titlePage)}">
                 <xsl:apply-templates/>
             </a>
         </td>
