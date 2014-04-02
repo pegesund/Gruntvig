@@ -869,7 +869,7 @@
             </xsl:for-each>
         </xsl:variable>
         <td class="index">
-            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="Kap.nr.{$chp-id}+{count(//TEI:titlePage)}">
+            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}">
                 <xsl:apply-templates/>
             </a>
         </td>
