@@ -550,13 +550,6 @@
     
     <!-- footnote STRAT -->
     
-    <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
-            <hr class="footLine"/>
-            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
-        </xsl:if>
-    </xsl:template>
-    
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:body"/>
@@ -576,7 +569,14 @@
         <div class="footnote">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>     
+    </xsl:template>
+    
+    <xsl:template name="footnote">
+        <xsl:if test="*[local-name()!='div']//TEI:note[@type='footnote']">
+            <hr class="footLine"/>
+            <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
+        </xsl:if>
+    </xsl:template>
 
     <xsl:template match="TEI:body//TEI:div"> <!-- Allow div in div, KK 2014-03-19 -->
         <div class="chapter">
