@@ -33,8 +33,6 @@ GET     /kort                                   Application.kort
 GET     /krono                                  Application.krono
 GET     /alfa                                   Application.alfa
 GET     /biblio/{fileName}                      ShowAsset.biblio
-GET     /getXmlElem/{xml}/{tag}/{attrName}/{attrValue}       Asset.getXmlElem
-
 
 GET     /ajax/getKommentar/{assetId}                          Ajax.getKommentar
 GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
