@@ -63,6 +63,7 @@ public class DoSearch extends Application {
             SolrServer server = Helpers.getSolrServer();
             SolrQuery query = new SolrQuery();
             query.setQuery("text:" + lucene + " AND type:asset");
+            System.out.println("Query1: " + query.getQuery());
             query.setRows(20);
             try {
                 QueryResponse rsp = server.query(query);
@@ -86,6 +87,7 @@ public class DoSearch extends Application {
                 cat += "grundtvig";
                 query = new SolrQuery();
                 query.setQuery("text:" + lucene + " AND type:chapter");
+                System.out.println("Query2: " + query.getQuery());
                 query.setRows(20);
                 try {
                     QueryResponse rsp = server.query(query);
