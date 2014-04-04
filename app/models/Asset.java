@@ -25,8 +25,9 @@ import net.sf.saxon.s9api.Serializer;
 import net.sf.saxon.s9api.XsltCompiler;
 import net.sf.saxon.s9api.XsltExecutable;
 import net.sf.saxon.s9api.XsltTransformer;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.common.SolrInputDocument;
 import play.db.jpa.JPABase;
-import play.modules.search.Field;
 import play.modules.search.Indexed;
 
 /**
@@ -52,7 +53,6 @@ public class Asset extends GenericModel {
     public String xml;
     @Lob
     public String html;
-    @Field
     @Lob
     public String htmlAsText;
     @Lob
@@ -130,9 +130,36 @@ public class Asset extends GenericModel {
     public <T extends JPABase> T save() {
         System.out.println("Hey - I am saved");
         htmlAsText = Helpers.stripHtml(html);
-        return super.save();
+        T t = super.save();
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            SolrInputDocument doc1 = new SolrInputDocument();
+            doc1.addField("id", "asset_" + id);
+            doc1.addField("text", htmlAsText);
+            doc1.addField("type", "asset");
+            doc1.addField("pgid", id);
+            server.add(doc1);
+            server.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return t;
     }
+        
 
+    @Override
+    public <T extends JPABase> T delete() {
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            server.deleteById("asset_" + id);
+            server.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return super.delete();
+    }
+    
+    
     /**
      * create teaser for search-list
      * 

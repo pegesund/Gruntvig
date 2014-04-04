@@ -37,6 +37,8 @@ import net.sf.saxon.s9api.Serializer;
 import net.sf.saxon.s9api.XsltCompiler;
 import net.sf.saxon.s9api.XsltExecutable;
 import net.sf.saxon.s9api.XsltTransformer;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.jsoup.Jsoup;
 
 /**
@@ -47,6 +49,9 @@ import org.jsoup.Jsoup;
  * 
  */
 public class Helpers {
+    
+    
+    static SolrServer server;
 
     /**
      * Slurp in a file and return as String
@@ -263,5 +268,13 @@ public class Helpers {
 
         return str.substring(start, stop);
     }
-
+    
+    public static synchronized SolrServer getSolrServer() {
+        if (server == null) {
+            String url = "http://localhost:8983/solr/gv";
+            server = new HttpSolrServer( url );
+        }
+        return server;
+    }
+    
 }

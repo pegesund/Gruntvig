@@ -9,6 +9,7 @@ import helpers.Helpers;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import play.db.jpa.GenericModel;
@@ -22,18 +23,18 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.common.SolrInputDocument;
 import play.db.jpa.JPABase;
-import play.modules.search.Field;
 import play.modules.search.Indexed;
 
 /**
  *
- * 
- * Root-texts are dividet into Chapters
- * Starts counting from 0
- * Keeps a version of text to index as well as precompiled html
- * 
- * 
+ *
+ * Root-texts are dividet into Chapters Starts counting from 0 Keeps a version
+ * of text to index as well as precompiled html
+ *
+ *
  */
 @Indexed
 @Entity
@@ -47,7 +48,6 @@ public class Chapter extends GenericModel {
     public String name;
     @Lob
     public String html;
-    @Field
     @Lob
     public String htmlAsText;
     @Required
@@ -62,52 +62,75 @@ public class Chapter extends GenericModel {
         this.html = html;
     }
 
-    
     /**
-     * Override of save function in JPA
-     * Currently all div-tags with empty class-defs are deleted
-     * 
+     * Override of save function in JPA Currently all div-tags with empty
+     * class-defs are deleted
+     *
      */
     @Override
     public <T extends JPABase> T save() {
         this.htmlAsText = Helpers.stripHtml(html);
         // remove empty div's
         html = html.replaceAll("<div class='[^']+'/>", "").replaceAll("<div class=\"[^\"]+\"/>", "");
-        return super.save();
+        T t = super.save();
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            SolrInputDocument doc1 = new SolrInputDocument();
+            doc1.addField("id", "chapter_" + id);
+            doc1.addField("text", htmlAsText);
+            doc1.addField("type", "chapter");
+            doc1.addField("pgid", id);            
+            server.add(doc1);
+            server.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return t;
     }
-
     
+    @Override
+    public <T extends JPABase> T delete() {
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            server.deleteById("chapter_" + id);
+            server.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return super.delete();
+    }
+  
+    
+
     /**
      * Create text-teaser where lookfor is highlightet
-     * 
+     *
      * @return teser as html
      */
     public String getTeaser(String lookfor) {
         return DoSearch.createTeaser(htmlAsText, lookfor);
     }
 
-
-    
     /**
-     * When a new Asset is imported all old chapters connected to this assed are deleted
+     * When a new Asset is imported all old chapters connected to this assed are
+     * deleted
      */
     private static void deleteOldChapters(Asset asset) {
         // System.out.println("**** Chapters on this asset: " + TextReference.find("asset", asset).fetch().size());
         for (Object o : Chapter.all().fetch()) {
             Chapter c = (Chapter) o;
-            System.out.println("Chapter id: " + c.asset);
+            // System.out.println("Chapter id: " + c.asset);
         }
-        Query query = TextReference.em().createQuery("delete from Chapter c where c.asset = :asset");
-        query.setParameter("asset", asset);
-        int deleted = query.executeUpdate();
-        System.out.println("Deleted " + deleted + " old chapters");
-        System.out.println("Asset id: " + asset.id);
+        List<Chapter> oldChapters = Chapter.find("asset = ?", asset).fetch();
+        for (Chapter c: oldChapters) {
+            c.delete();
+        }
+        System.out.println("Deleted " + oldChapters.size() + " old chapters" + " assetid: " + asset.id);
     }
 
-    
     /**
      * Helper function only: Translates a html-dom-tree to a String
-     * 
+     *
      * @return html-string without xml-declaration
      */
     private static String nodeToString(Node node) {
@@ -123,9 +146,10 @@ public class Chapter extends GenericModel {
     }
 
     /**
-     * Divide a xml-file into chapters, chapters are divided by div-tags, attribute name is name of chapter
-     * Fixme: use xpath selector. Should work with current library which should be the latest
-     * 
+     * Divide a xml-file into chapters, chapters are divided by div-tags,
+     * attribute name is name of chapter Fixme: use xpath selector. Should work
+     * with current library which should be the latest
+     *
      */
     public static void createChaptersFromAsset(Asset asset) {
         System.out.println("Creating chapters from asset: " + asset.fileName + " , id: " + asset.id);
@@ -138,7 +162,7 @@ public class Chapter extends GenericModel {
             Document doc = builder.parse(in);
 
             XPath xpath = XPathFactory.newInstance().newXPath();
-            
+
             // xpath does not seem to work, picking up every top-level divs?! Check later if probs.
             XPathExpression expr = xpath.compile("//div[@class='frontChapter']|//div[@class='chapter']|//div[@class='kolofonBlad']|//div[@class='titlePage' and not(ancestor::div[@class='frontChapter'])]");
 
@@ -153,16 +177,18 @@ public class Chapter extends GenericModel {
                     // System.out.println("Chapter node: " + Helpers.nodeToString(node));
                     // System.out.println("---------------------------------------------------");
                     String name = "- afsnit mangler titel - " + (i + 0);
-                    if (i == 0) name = "[Kolofon]";
+                    if (i == 0) {
+                        name = "[Kolofon]";
+                    }
                     if (node.getAttributes().getNamedItem("name") != null) {
                         name = node.getAttributes().getNamedItem("name").getNodeValue();
                         System.out.println("Chapter id found: " + name);
-                    }                    
-                    
+                    }
+
                     if (node.getAttributes().getNamedItem("rend") != null) {
                         name = node.getAttributes().getNamedItem("rend").getNodeValue();
                         System.out.println("Chapter id found: " + name);
-                    }                    
+                    }
                     Chapter chapter = new Chapter(name, i, asset, nodeToString(node));
                     chapter.save();
                     // System.out.println("Chapter: " + i + nodeToString(node));

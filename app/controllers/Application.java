@@ -1,9 +1,16 @@
 package controllers;
 
+import helpers.Helpers;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import models.Asset;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.common.SolrInputDocument;
 import play.mvc.*;
 
 /**
@@ -89,4 +96,35 @@ public class Application extends Controller {
     }
 
 
+    public static void testSolr() {
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            SolrInputDocument doc1 = new SolrInputDocument();
+            doc1.addField( "id", "idx" );
+            doc1.addField( "text", "Petters hemmelige tekst" );
+            doc1.addField( "comment", "Petters hemmelige comment" );
+            doc1.addField( "type", "testtype");
+            server.add(doc1);
+            server.commit();
+            Application.renderText("Document added: server: " + server);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Application.renderText("Problems with solr, look in log");    
+        }
+    }
+    
+    
+    // deletes all from solr: run http://localhost:9000/Application/clearSolr
+    public static void clearSolr() {
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            server.deleteByQuery("id:*"); 
+            server.commit();
+            Application.renderText("Solr-data cleared: " + server);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Application.renderText("Problems with solr, look in log");    
+        }        
+    }
+    
 }
