@@ -17,11 +17,11 @@ function showhide( plus, id ) {
     }
   }
 
-// Visning af tekst i separat vindue, KK 2013-11-21
-function blank(target, loc, x, y) {
+// Visning af tekst i separat vindue, KK 2014-04-03
+function blank(target, loc, target, x, y) {
     if ( !x) { x= "685"; }
     if ( !y) { y= screen.availHeight-100; }
-    var w= window.open(target,loc,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=yes,titlebar=no,location=yes",true);
+    var w= window.open(loc,target,"width="+x+",height="+y+",resizable=yes,scrollbars=yes,status=no,menubar=yes,titlebar=no,location=yes",true);
     w.focus();
     return false;
     }

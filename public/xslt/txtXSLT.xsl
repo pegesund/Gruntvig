@@ -38,7 +38,7 @@
                 <div class="kolofon">
                     <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
                     <xsl:text>version </xsl:text>
-                    <xsl:apply-templates select="//TEI:edition"/>
+                    <xsl:apply-templates select="//TEI:idno[@type='content']"/>
                     <xsl:text>)</xsl:text>
                 </div>
                     
@@ -298,6 +298,26 @@
                         </xsl:if>                        
                     </div>
                     
+                    <div class="kolofon">
+                        <xsl:if test="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:text>For hjælp til tekstredegørelse takkes </xsl:text> 
+                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                                <xsl:apply-templates select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='contributor'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                            <xsl:call-template name="delimiterFullStop"/>
+                        </xsl:if>                        
+                    </div>
+                    
                     <div class="copyright">
                         <xsl:text>Copyright: </xsl:text><i><xsl:text>Grundtvigs Værker</xsl:text></i>
                     </div>
@@ -530,13 +550,6 @@
     
     <!-- footnote STRAT -->
     
-    <xsl:template name="footnote">
-        <xsl:if test=".//TEI:note[@type='footnote']">
-            <hr class="footLine"/>
-            <xsl:apply-templates select=".//TEI:note[@type='footnote']" mode="foot"/>
-        </xsl:if>
-    </xsl:template>
-    
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:body"/>
@@ -556,9 +569,16 @@
         <div class="footnote">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>     
+    </xsl:template>
+    
+    <xsl:template name="footnote">
+        <xsl:if test="*[local-name()!='div']//TEI:note[@type='footnote']">
+            <hr class="footLine"/>
+            <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
+        </xsl:if>
+    </xsl:template>
 
-    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
+    <xsl:template match="TEI:body//TEI:div"> <!-- Allow div in div, KK 2014-03-19 -->
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -750,6 +770,11 @@
     
     <xsl:template match="TEI:rs[@type='bible']">
         <xsl:choose>
+            <xsl:when test="@rend='normForm'">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
             <xsl:when test="@rend='allusion'">
                 <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content=allusion til {@key}">
                     <xsl:apply-templates/>
@@ -837,9 +862,14 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">        
+    <xsl:template match="TEI:table[@type='index']/TEI:row/TEI:cell">
+        <xsl:variable name="chp-id">
+            <xsl:for-each select="//TEI:div[TEI:head[@xml:id=current()/../@corresp]]"> <!-- should be 1 at most -->
+                <xsl:number level="any"/>
+            </xsl:for-each>
+        </xsl:variable>
         <td class="index">
-            <a class="index" href="#{../@corresp}">
+            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
                 <xsl:apply-templates/>
             </a>
         </td>
