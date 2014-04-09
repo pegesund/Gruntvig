@@ -150,6 +150,7 @@
                         <xsl:if test="//TEI:note[@type='noCom']">
                             <xsl:text>Punktkommentarerne er under udarbejdelse</xsl:text>
                         </xsl:if>
+                        <xsl:if test="//TEI:note[@type='minusCom']"/>
                     </div>
                     
                     <div class="kolofon">
