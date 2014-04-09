@@ -493,23 +493,24 @@ a.index
 
 a:link.index
         {
-        color:#FF0000;
-        }    /* unvisited link */
+        color: #000000; /* unvisited link */
+        text-decoration: none;
+        }    
         
 a:visited.index
         {
-        color:#00FF00;
-        } /* visited link */
+        color: #000000; /* visited link */
+        } 
         
 a:hover.index
         {
-        color:#FF00FF;
-        }   /* mouse over link */
+        color: #4DBC4D; /* mouse over link */
+        }   
         
 a:active.index
         {
-        color:#0000FF;
-        }  /* selected link */
+        color: #0000FF; /* selected link */
+        }  
 
 table.index, tr.row
         {
@@ -549,15 +550,15 @@ td.center
         text-align: center;
         }
 
-td.cell:first-child
+td.index:first-child
         {
         border: 0px solid black;
         empty-cells: show;
         text-align: left;
-        width: 80%;
+        width: 25%;
         }
 
-td.cell:last-child
+td.index:last-child
         {
         border: 0px solid black;
         empty-cells: show;
@@ -721,6 +722,37 @@ td.cell:last-child
         {
         font-size: 80%;
         margin: 1em;
+        text-align: center;
+        }
+
+#tekst_innhold .epigraph > #tekst_innhold .lg
+        {
+        margin: 7.5em;
+        line-height: inherit;
+        }
+
+#tekst_innhold .epigraph > #tekst_innhold div.right
+        {
+        margin: 7.5em;
+        line-height: inherit;
+        }
+
+#tekst_innhold .epigraph > #tekst_innhold div.firstIndentRight
+        {
+        margin: 5em;
+        line-height: inherit;
+        }
+
+#tekst_innhold .epigraph > #tekst_innhold div.secondIndentRight
+        {
+        margin: 2.5em;
+        line-height: inherit;
+        }
+
+#tekst_innhold .epigraph > #tekst_innhold div.center
+        {
+            color: red;
+        line-height: inherit;
         text-align: center;
         }
 

@@ -391,6 +391,12 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="TEI:div1[@type='illustrator']">
+        <div class="{@type}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:byline">
         <div class="byline">
             <xsl:apply-templates/>
@@ -738,6 +744,17 @@
             </span>
     </xsl:template>
     
+    <xsl:template match="TEI:pb[@type='epiText']">
+        <a class="pdf"
+           href="{concat(substring-before(concat(@facs,'.'),'.'),'.pdf')}#page={@n}"
+           onclick="return blank('epi',this.href)">
+            <span class="size">
+                <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>       
+    </xsl:template>
+    
         
     <xsl:template match="TEI:seg/TEI:pb">
             <span class="size">
@@ -982,11 +999,28 @@
     <!-- illustationer START -->
     
     <xsl:template match="TEI:figure">
-        <div class="{@type}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
+        <xsl:choose>
+            <xsl:when test="@type='imageMyth'">
+                <div class="imageMyth">
+                    <div class="imageMythHead">
+                        <xsl:apply-templates select="TEI:head"/>
+                    </div>
+                    <div>
+                        <img src="{TEI:graphic/@url}" alt="Sorry!"/>
+                    </div>
+                    <div class="imageMythFigDisc">
+                        <xsl:apply-templates select="TEI:figDesc"/>
+                    </div>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='longLine'">
+                <hr align="center" width="40%"/>
+            </xsl:when>
+            <xsl:when test="@type='shortLine'">
+                <hr align="center" width="25%"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>    
     
     <xsl:template match="TEI:figure/TEI:head">
         <div class="image_head">
