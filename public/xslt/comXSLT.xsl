@@ -22,198 +22,59 @@
     <xsl:template match="TEI:TEI">
         <div class="theComments">
                 
-            <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='minusCom']">
-                        <div class="head">
-                            <xsl:text>GV forsyner ikke dette værk med verbalkommentarer.</xsl:text>
-                        </div>
-                    </xsl:when>
-                    <xsl:when test="//TEI:note[@type='noCom']">
-                        <div class="head">
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                <div><xsl:text>Punktkommentarer til</xsl:text></div>
-                                <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]"/></i>
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                                <xsl:text>er under udarbejdelse</xsl:text>
-                            </xsl:if>
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">                        
-                                <div>
-                                    <xsl:text>Punktkommentarer til</xsl:text>
-                                </div>
-                                &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]"/>&#x201D;
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                                <xsl:text>er under udarbejdelse</xsl:text>
-                            </xsl:if>
-                        </div>
-                        <div class="head">
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                                <div><xsl:text>Punktkommentarer til</xsl:text></div>
-                                [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/></i>]
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                                <xsl:text>er under udarbejdelse</xsl:text>
-                            </xsl:if>
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">                        
-                                <div>
-                                    <xsl:text>Punktkommentarer til</xsl:text>
-                                </div>
-                                [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']"/>&#x201D;]
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                                <xsl:text>er under udarbejdelse</xsl:text>
-                            </xsl:if>
-                        </div>
-                    </xsl:when>
-                    <xsl:when test="//TEI:note[@type='com']">
-                        <div class="head">
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                <div><xsl:text>Punktkommentarer til</xsl:text></div>
-                                <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]"/></i>
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                            </xsl:if>
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">                        
-                                <div>
-                                    <xsl:text>Punktkommentarer til</xsl:text>
-                                </div>
-                                &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]"/>&#x201D;
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                            </xsl:if>
-                        </div>
-                        <div class="head">
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                                <div><xsl:text>Punktkommentarer til</xsl:text></div>
-                                [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']"/></i>]
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                            </xsl:if>                    
-                            <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">                        
-                                <div>
-                                    <xsl:text>Punktkommentarer til</xsl:text>
-                                </div>
-                                [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']"/>&#x201D;]
-                                <div class="author">
-                                    <xsl:text>ved </xsl:text>
-                                    <xsl:for-each select="//TEI:author">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="following-sibling::TEI:author">
-                                            <xsl:choose>
-                                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
-                                                    <xsl:text>, </xsl:text>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:text> og </xsl:text>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </div>
-                            </xsl:if>
-                        </div>
-                        <xsl:apply-templates select="TEI:text"/>
+            <div class="head about">
+                <div>Punktkommentarer til</div>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
+                        <i>
+                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                        </i>
                     </xsl:when>
                 </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
+                        [<i>
+                            <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/>
+                        </i>]
+                    </xsl:when>
+                </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:when>
+                </xsl:choose>
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
+                        [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
+                    </xsl:when>
+                </xsl:choose>
+                <div class="author">
+                    <xsl:text>ved </xsl:text>
+                    <xsl:for-each select="//TEI:author">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="following-sibling::TEI:author">
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author[position()!=last()]">
+                                    <xsl:text>, </xsl:text>
+                                </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:text> og </xsl:text>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                        </xsl:if>
+                    </xsl:for-each>
+                </div>
+            </div>
+            <xsl:choose>
+                 <xsl:when test="//TEI:note[@type='noCom']">
+                     <div class="head about">
+                        <xsl:text>er under udarbejdelse</xsl:text>
+                    </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="TEI:text"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </div>
         
     </xsl:template>
