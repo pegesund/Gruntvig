@@ -774,32 +774,15 @@
     
     
     <xsl:template match="TEI:persName">
-        <xsl:choose>
-            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPersName']">
-                <span>
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-                    <xsl:apply-templates/>
-                </a>
-            </xsl:otherwise>
-        </xsl:choose>
+        <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a>
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <xsl:choose>
-            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPlaceName']">
-                <span>
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-                    <xsl:apply-templates/>
-                </a>
-            </xsl:otherwise>
+        <!--<a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">-->
+            <xsl:apply-templates/>
+        <!--</a>-->
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
