@@ -386,10 +386,12 @@
                         <xsl:apply-templates/>         
                     </span>
                 </xsl:when>
-                <xsl:when test="@type='epiText'">
-                    <a class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
+                 <xsl:when test="@type='epiText'">
+                    <a class="pdf"
+                       href="{concat(substring-before(concat(@target,'.'),'.'),'.pdf')}#page={@n}"
+                       onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
-                    </a>
+                    </a>       
                 </xsl:when>
             </xsl:choose>   
     </xsl:template>

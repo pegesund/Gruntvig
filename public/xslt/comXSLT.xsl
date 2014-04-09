@@ -110,21 +110,17 @@
                     <!--</a>-->
                 </xsl:when>
                 <xsl:when test="@type='web'">
-                    <xsl:text>&lt;</xsl:text>
                     <a href="http://{.}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
-                    <xsl:text>&gt;</xsl:text>
                 </xsl:when>
-                <xsl:when test="@type='epiText'">
-                    <a style="background-image: url(../img/pdficon_small.png);
-             padding-left: 20px;
-             background-repeat: no-repeat;
-             background-position: left center;" class="pdf" href="../img/{concat(substring-before(@target,'.jpg'),'.pdf')}" onclick="return blank('epi',this.href)">
+                 <xsl:when test="@type='epiText'">
+                    <a class="pdf"
+                       href="{concat(substring-before(concat(@target,'.'),'.'),'.pdf')}#page={@n}"
+                       onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
-                    </a>
+                    </a>       
                 </xsl:when>
-
             </xsl:choose>   
     </xsl:template>
     
@@ -244,7 +240,6 @@
             <xsl:apply-templates/>
         </a>
     </xsl:template>
-    
     
     <xsl:template match="TEI:rs[@type='title']">
         <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
