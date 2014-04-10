@@ -747,8 +747,8 @@
     
     <xsl:template match="TEI:pb[@type='epiText']">
         <a class="pdf"
-           href="{concat(substring-before(concat(@facs,'.'),'.'),'.pdf')}#page={@n}"
-           onclick="return blank('epi',this.href)">
+            href="img/{@facs}"
+            onclick="return blank('epi',this.href)">
             <span class="size">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
