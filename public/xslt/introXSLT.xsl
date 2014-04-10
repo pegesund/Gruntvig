@@ -14,7 +14,7 @@
     
     
     <xsl:template match="TEI:TEI"> 
-        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 -->
+        <!-- Midlertidig visning af epitekst, se <ref type="epiText">, KK 2013-09-26 
 
         <style>
 .pdf        {background-image: url(../img/pdficon_small.png);
@@ -22,7 +22,7 @@
              background-repeat: no-repeat;
              background-position: left center;}
         </style>
-               
+        -->
         <div class="mainIntro">
             <div class="head">
                 <div>
@@ -388,8 +388,8 @@
                 </xsl:when>
                  <xsl:when test="@type='epiText'">
                     <a class="pdf"
-                       href="{concat(substring-before(concat(@target,'.'),'.'),'.pdf')}#page={@n}"
-                       onclick="return blank('epi',this.href)">
+                        href="img/{@target}"
+                        onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>       
                 </xsl:when>
