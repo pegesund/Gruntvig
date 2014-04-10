@@ -320,11 +320,9 @@
     
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
-            <xsl:text>&lt;</xsl:text>
             <a href="{.}">                
                 <xsl:apply-templates/>                
             </a>
-            <xsl:text>&gt;</xsl:text>
             <xsl:text> (</xsl:text>
             <xsl:number value="substring(@n, 9,2)" format="1"/>
             <xsl:text>. </xsl:text>
