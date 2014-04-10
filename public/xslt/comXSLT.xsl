@@ -119,8 +119,7 @@
                     <xsl:otherwise>
                         <xsl:apply-templates select="TEI:text"/>
                     </xsl:otherwise>
-                </xsl:choose>
-            
+                </xsl:choose>            
         </div>
         
     </xsl:template>
