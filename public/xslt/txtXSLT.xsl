@@ -1030,7 +1030,7 @@
                         <xsl:apply-templates select="TEI:head"/>
                     </div>
                     <div>
-                        <img src="{TEI:graphic/@url}" alt="Sorry!"/>
+                        <img src="img/{TEI:graphic/@url}" width="10%" alt="Sorry!"/>
                     </div>
                     <div class="imageMythFigDisc">
                         <xsl:apply-templates select="TEI:figDesc"/>
