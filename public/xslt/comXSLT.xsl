@@ -257,8 +257,8 @@
                 </xsl:when>
                  <xsl:when test="@type='epiText'">
                     <a class="pdf"
-                       href="{concat(substring-before(concat(@target,'.'),'.'),'.pdf')}#page={@n}"
-                       onclick="return blank('epi',this.href)">
+                        href="img/{@target}"
+                        onclick="return blank('epi',this.href)">
                         <xsl:apply-templates/>
                     </a>       
                 </xsl:when>
