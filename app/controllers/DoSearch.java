@@ -30,6 +30,21 @@ import play.modules.search.Search;
  *
  */
 public class DoSearch extends Application {
+    
+    
+    public static int PAGESIZE = 5;
+    
+    private static String composeOr(String[] str) {
+        String akk="(";
+        int i = 0;
+        for (String s: str) {
+            i++;
+            akk += " type:" + s;
+            if (i < str.length) akk += " OR ";
+        }
+        akk += " )";
+        return akk;
+    }
 
     /**
      * Advanced Search
@@ -37,9 +52,15 @@ public class DoSearch extends Application {
     /* KK 2014-02-13, 2014-03-06 */
     public static void avanceret() {
         System.out.println("Advanced search");
-        String lucene = Application.params.get("lucene");
-        String grundtvig = Application.params.get("grundtvig");
-        String kommentar = Application.params.get("kommentar");
+        String lucene = params.get("lucene");
+        String grundtvig = params.get("grundtvig");
+        String kommentar = params.get("kommentar");
+        int page = 0;
+        long totalAll = 0;
+        int pageSize = PAGESIZE;
+        if (params._contains("start")) {
+            page = Integer.parseInt(params.get("start"));
+        }
         String cat = "";
 
         if (lucene == null) { // Simple search from header or no search
@@ -51,26 +72,50 @@ public class DoSearch extends Application {
             grundtvig = kommentar = "jatak";
         }
 
+       
         if (lucene != null) {
             lucene = lucene.replaceAll("[!()+,.;:]", "");
             System.out.println("Searching for qps: " + lucene);
-
             List<Chapter> chapters = new ArrayList<Chapter>();
-            int chaptersSize = 0;
             ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
             ArrayList<Asset> renderCommentAssets = new ArrayList<Asset>();
-            ArrayList<Asset> assets = new ArrayList<Asset>();
             SolrServer server = Helpers.getSolrServer();
             SolrQuery query = new SolrQuery();
-            query.setQuery("text:" + lucene + " AND type:asset");
-            System.out.println("Query1: " + query.getQuery());
-            query.setRows(20);
+            String q = "text:" + lucene;
+            String types[] = {};
+            if (grundtvig != null && kommentar == null) {
+                types = new String[] {Asset.variantType, Asset.manusType};
+            }
+            if (grundtvig == null && kommentar != null) {
+                types = new String[] {Asset.introType, Asset.txrType, Asset.commentType, Asset.veiledningType};                
+            }
+            if (grundtvig != null && kommentar != null) {
+                types = new String[] {Asset.introType, Asset.txrType, Asset.commentType, Asset.veiledningType, Asset.variantType, Asset.manusType}; 
+            }
+            query.setQuery(q + " AND " + composeOr(types));
+            System.out.println("Query: " + query.getQuery());
+            query.setStart(page);
+            query.setRows(pageSize);
             try {
                 QueryResponse rsp = server.query(query);
                 SolrDocumentList docs = rsp.getResults();
+                totalAll = docs.getNumFound();
                 for (SolrDocument doc : docs) {
-                    Asset a = Asset.findById(Long.parseLong(doc.getFieldValue("pgid").toString()));
-                    assets.add(a);
+                    System.out.println("Found type: " + doc.getFirstValue("type"));
+                    long id = Long.parseLong(doc.getFieldValue("pgid").toString());
+                    String type = doc.getFieldValue("type").toString();
+                    if (grundtvig != null && type.equals("chapter")) {
+                        Chapter c = Chapter.findById(id);
+                        chapters.add(c);
+                    } else {                   
+                        Asset asset = Asset.findById(id);
+                        if (grundtvig != null && (asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType))) {
+                            renderGrundtvigAssets.add(asset);
+                        } else
+                        if (kommentar != null && (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.veiledningType))) {
+                            renderCommentAssets.add(asset);
+                        }                        
+                    }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -78,65 +123,13 @@ public class DoSearch extends Application {
                 return;
             }
 
-            for (Asset asset : assets) {
-                System.out.println("Asset file match: " + asset.fileName);
-            }
-
-            if (grundtvig != null) { // Søg i Grundtvigteksternes kapitler (chapters)
-                System.out.println("Searhing for chapters");
-                cat += "grundtvig";
-                query = new SolrQuery();
-                query.setQuery("text:" + lucene + " AND type:chapter");
-                System.out.println("Query2: " + query.getQuery());
-                query.setRows(20);
-                try {
-                    QueryResponse rsp = server.query(query);
-                    SolrDocumentList docs = rsp.getResults();
-                    for (SolrDocument doc : docs) {
-                        System.out.println("--- Looking for pgid: " + doc.getFieldValue("pgid"));
-                        Chapter c = Chapter.findById(Long.parseLong(doc.getFieldValue("pgid").toString()));
-                        System.out.println("Chapter-num: " + c.num);
-                        chapters.add(c);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    render();
-                    return;
-                }
-                chaptersSize = chapters.size();                
-                // add only relevant types, consider move to query
-                System.out.println("Chapters found: " + chaptersSize);
-                for (Asset asset : assets) {
-                    if ((asset.type.equals(Asset.variantType) && nonEmpty(asset)) || asset.type.equals(Asset.manusType)) {
-                        try {
-                            long _id = asset.getCorrespondingRootId();
-                            renderGrundtvigAssets.add(asset);
-                        } catch (Exception _e) {
-                        }
-                    }
-                }
-            }
-
-            if (kommentar != null) { // Søg i kommentarfiler (assets)
-                System.out.println("Searhing for comments");
-                cat += "kommentar";
-                for (Asset asset : assets) {
-                    System.out.println("-- scanning commment: " + asset.fileName + "  type: " + asset.type);
-                    if (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.veiledningType)) {
-                        try {
-                            long _id = asset.getCorrespondingRootId();
-                            renderCommentAssets.add(asset);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-
-            int totalHits = renderGrundtvigAssets.size() + renderCommentAssets.size() + chaptersSize;
+            if (grundtvig != null) cat += "grundtvig";
+            if (kommentar != null) cat += "kommentar";              
+            int totalHits = renderGrundtvigAssets.size() + renderCommentAssets.size() + chapters.size();
             System.out.println("Total hits: " + totalHits);
+            System.out.println("Total all: " + totalAll);
             String lookfor = lucene;
-            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat);
+            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat, totalAll);
         } else {
             render();
         }
@@ -146,15 +139,6 @@ public class DoSearch extends Application {
         render();
     }
 
-    private static boolean nonEmpty(Asset var) {
-        Pattern p = Pattern.compile("type\\s*=\\s*[\"'](minusVar|unknownVar)[\"']");
-        Matcher m = p.matcher(var.xml);
-        if (m.find()) {
-            return false;
-        } else {
-            return true;
-        }
-    }
 
     /**
      *
@@ -232,7 +216,7 @@ public class DoSearch extends Application {
         Pattern findWordsPattern = Pattern.compile(match, Pattern.CASE_INSENSITIVE);
         Matcher matcher = findWordsPattern.matcher(str);
         //if (matcher.find()) {
-        //   lookforStart = matcher.start();
+        //   lookforStart = matcher.page();
         //} else return "";
         String res = "";
         int stop = 0;
@@ -301,10 +285,10 @@ public class DoSearch extends Application {
      Pattern findWordsPattern = Pattern.compile("(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", Pattern.CASE_INSENSITIVE);
      Matcher matcher = findWordsPattern.matcher(str);
      if (matcher.find()) {
-     lookforStart = matcher.start();
+     lookforStart = matcher.page();
      } else return "";
      int lookforEnd = lookforStart + lookfor.length();
-     int start = lookforStart;
+     int page = lookforStart;
      int stop = lookforEnd;
      while (stop < str.length() && ((stop - lookforEnd) < len)) {
      stop++;
@@ -315,17 +299,17 @@ public class DoSearch extends Application {
      }
 
      // del kun ved hele ord
-     while (start > 0 && ((lookforStart - start) < len)) {
-     start--;
+     while (page > 0 && ((lookforStart - page) < len)) {
+     page--;
      }
 
-     while (start > 0 && !str.substring(start, start + 1).equals(" ")) {
-     start--;
+     while (page > 0 && !str.substring(page, page + 1).equals(" ")) {
+     page--;
      }
 
-     String s = replaceAll(str.substring(start, stop), "(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
+     String s = replaceAll(str.substring(page, stop), "(\\s" + lookfor + "|^" + lookfor +")" +"[ ,;!.]", " <span class='lookedfor'> $1 </span> ");
 
-     if (start != 0) {
+     if (page != 0) {
      s = "..." + s;
      }
      if (stop != str.length()) {

@@ -127,4 +127,21 @@ public class Application extends Controller {
         }        
     }
     
+    
+    public static void solrAll() {
+        try {
+            SolrServer server = Helpers.getSolrServer();
+            server.deleteByQuery("id:*"); 
+            server.commit();
+            List<Asset> all = Asset.findAll();
+            for (Asset a: all) {
+                a.index();
+            }
+            Application.renderText("Done with reindex: " + server);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Application.renderText("Problems with solr, look in log");                
+        }       
+    }
+    
 }

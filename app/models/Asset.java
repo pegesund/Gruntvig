@@ -123,6 +123,45 @@ public class Asset extends GenericModel {
     }
 
     
+        
+   private static boolean nonEmpty(Asset var) {
+        Pattern p = Pattern.compile("type\\s*=\\s*[\"'](minusVar|unknownVar)[\"']");
+        Matcher m = p.matcher(var.xml);
+        if (m.find()) {
+            return false;
+        } else {
+            return true;
+        }
+   }
+    
+/**
+ * 
+ * Save element to solr
+ * 
+ */   
+    public void index() {
+        boolean doIndex = true;
+        // add rules where not to index
+        if (type.equals(variantType) && doIndex && !nonEmpty(this)) {
+            doIndex = false;
+        }
+        if (doIndex) {
+            try {
+                SolrServer server = Helpers.getSolrServer();
+                SolrInputDocument doc1 = new SolrInputDocument();
+                doc1.addField("id", "asset_" + id);
+                doc1.addField("text", htmlAsText);
+                doc1.addField("type", type);
+                doc1.addField("pgid", id);
+                server.add(doc1);
+                server.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+   
+   
     /**
      * Always make html searchable as text before saving
      */
@@ -131,18 +170,7 @@ public class Asset extends GenericModel {
         System.out.println("Hey - I am saved");
         htmlAsText = Helpers.stripHtml(html);
         T t = super.save();
-        try {
-            SolrServer server = Helpers.getSolrServer();
-            SolrInputDocument doc1 = new SolrInputDocument();
-            doc1.addField("id", "asset_" + id);
-            doc1.addField("text", htmlAsText);
-            doc1.addField("type", "asset");
-            doc1.addField("pgid", id);
-            server.add(doc1);
-            server.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        index();
         return t;
     }
         
