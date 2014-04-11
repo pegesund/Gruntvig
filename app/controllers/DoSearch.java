@@ -55,11 +55,11 @@ public class DoSearch extends Application {
         String lucene = params.get("lucene");
         String grundtvig = params.get("grundtvig");
         String kommentar = params.get("kommentar");
-        int page = 0;
+        int page = 1;
         long totalAll = 0;
         int pageSize = PAGESIZE;
-        if (params._contains("start")) {
-            page = Integer.parseInt(params.get("start"));
+        if (params._contains("page")) {
+            page = Integer.parseInt(params.get("page"));
         }
         String cat = "";
 
@@ -94,7 +94,7 @@ public class DoSearch extends Application {
             }
             query.setQuery(q + " AND " + composeOr(types));
             System.out.println("Query: " + query.getQuery());
-            query.setStart(page);
+            query.setStart((page -1) * pageSize);
             query.setRows(pageSize);
             try {
                 QueryResponse rsp = server.query(query);
@@ -129,7 +129,8 @@ public class DoSearch extends Application {
             System.out.println("Total hits: " + totalHits);
             System.out.println("Total all: " + totalAll);
             String lookfor = lucene;
-            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat, totalAll);
+            int totalPages = (int) Math.ceil((double)totalAll / (double)pageSize);
+            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat, totalAll, pageSize, totalPages, page);
         } else {
             render();
         }
@@ -148,9 +149,6 @@ public class DoSearch extends Application {
     public static void doSearch() {
         String lookfor = Application.params.get("lookfor");
         System.out.println("Searching for: " + lookfor);
-
-
-
         Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
         System.out.println("Chapters found: " + chapters.size());
