@@ -205,10 +205,16 @@ public class Asset extends GenericModel {
      * @return database-id
      * 
      */
-    public long getCorrespondingRootId() {
+    public Long getCorrespondingRootId() {
+        Long res = null;
         System.out.println("Getting root for: " + this.fileName);
-        Asset root = Asset.find("rootName = ? and type = ?", rootName, Asset.rootType).first();
-        return root.id;
+        try {
+            Asset root = Asset.find("rootName = ? and type = ?", rootName, Asset.rootType).first();
+            res = root.id;
+        } catch(Exception e) {
+            System.err.println("Could not find root-class of file: " + this.fileName);
+        }
+        return res;
     }
 
     /**

@@ -94,7 +94,9 @@ public class DoSearch extends Application {
             }
             query.setQuery(q + " AND " + composeOr(types));
             System.out.println("Query: " + query.getQuery());
-            query.setStart((page -1) * pageSize);
+            int start = (page - 1) * pageSize;
+            System.out.println("Setting start-pos to: " + start);
+            query.setStart(start);
             query.setRows(pageSize);
             try {
                 QueryResponse rsp = server.query(query);
