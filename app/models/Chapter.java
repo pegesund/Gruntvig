@@ -62,17 +62,8 @@ public class Chapter extends GenericModel {
         this.html = html;
     }
 
-    /**
-     * Override of save function in JPA Currently all div-tags with empty
-     * class-defs are deleted
-     *
-     */
-    @Override
-    public <T extends JPABase> T save() {
+    public void index() {
         this.htmlAsText = Helpers.stripHtml(html);
-        // remove empty div's
-        html = html.replaceAll("<div class='[^']+'/>", "").replaceAll("<div class=\"[^\"]+\"/>", "");
-        T t = super.save();
         try {
             SolrServer server = Helpers.getSolrServer();
             SolrInputDocument doc1 = new SolrInputDocument();
@@ -84,7 +75,20 @@ public class Chapter extends GenericModel {
             server.commit();
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }        
+    }
+    
+    /**
+     * Override of save function in JPA Currently all div-tags with empty
+     * class-defs are deleted
+     *
+     */
+    @Override
+    public <T extends JPABase> T save() {
+        // remove empty div's
+        html = html.replaceAll("<div class='[^']+'/>", "").replaceAll("<div class=\"[^\"]+\"/>", "");
+        T t = super.save();
+        index();
         return t;
     }
     

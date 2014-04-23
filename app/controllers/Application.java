@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.Asset;
+import models.Chapter;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrInputDocument;
@@ -137,11 +138,14 @@ public class Application extends Controller {
             for (Asset a: all) {
                 a.index();
             }
+            List<Chapter> allChapters = Chapter.findAll();
+            for (Chapter c: allChapters) {
+                c.index();
+            }
             Application.renderText("Done with reindex: " + server);
         } catch (Exception e) {
             e.printStackTrace();
             Application.renderText("Problems with solr, look in log");                
         }       
-    }
-    
+    }    
 }
