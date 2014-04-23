@@ -55,6 +55,7 @@ public class DoSearch extends Application {
         String lucene = params.get("lucene");
         String grundtvig = params.get("grundtvig");
         String kommentar = params.get("kommentar");
+        String realWords = params.get("words");
         int page = 1;
         long totalAll = 0;
         int pageSize = PAGESIZE;
@@ -63,7 +64,7 @@ public class DoSearch extends Application {
         }
         String cat = "";
 
-        if (lucene == null) { // Simple search from header or no search
+        if (lucene == null || lucene.contains(".ingenting")) { // Simple search from header or no search
             String words = Application.params.get("words");
             if (words != null) {
                 lucene = words.replaceAll("\\s+", " AND ");
@@ -72,9 +73,11 @@ public class DoSearch extends Application {
             grundtvig = kommentar = "jatak";
         }
 
-       
         if (lucene != null) {
             lucene = lucene.replaceAll("[!()+,.;:]", "");
+            if (lucene.contains("OR")) {
+                lucene = "(" + lucene + ")";
+            }            
             System.out.println("Searching for qps: " + lucene);
             List<Chapter> chapters = new ArrayList<Chapter>();
             ArrayList<Asset> renderGrundtvigAssets = new ArrayList<Asset>();
