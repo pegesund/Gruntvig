@@ -276,7 +276,7 @@ gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
         #{set hash= "#\u007b\"0\":0,\"k\":" + chapter.num + "\u007d" /}  
         <div class="treff">
             <h4><a href="tekstvisning/${chapter.asset.correspondingRootId}/${chapter.num}${hash}">
-                ${chapter.asset.name}
+                ${chapter.asset.name}&nbsp;-&nbsp;${chapter.namePlain}
             </a></h4>
             <p class="treff2">${chapter.getTeaser(lookfor).raw()}</p>
         </div>

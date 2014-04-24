@@ -153,6 +153,9 @@ public class Asset extends GenericModel {
                 doc1.addField("text", htmlAsText);
                 doc1.addField("type", type);
                 doc1.addField("pgid", id);
+                long sj = DoSearch.extractSj(this.fileName);
+                doc1.addField("sj", sj);
+                if (sj == 0) return;
                 server.add(doc1);
                 server.commit();
             } catch (Exception e) {
