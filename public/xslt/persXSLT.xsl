@@ -42,7 +42,7 @@
     </xsl:template>
    -->
    
-   <xsl:template match="tei:row">
+   <xsl:template match="tei:row[((starts-with(@corresp, '2013-09-0')) and not(@n='874') and not(@n='353A')) or ((starts-with(@corresp, '2013-09-1')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2013-10')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2013-11')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2013-12')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2014-01')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2014-02')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2014-03')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2014-04')) and not(@n='874') and not(@n='353A')) or ((contains(@corresp, '2014-05')) and not(@n='874') and not(@n='353A'))]">
         <div class="person refdiv">
              <xsl:attribute name="id">
                  <xsl:value-of select="@xml:id"/>
