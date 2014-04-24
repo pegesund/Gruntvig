@@ -87,13 +87,13 @@ public class DoSearch extends Application {
             String q = "text:" + lucene;
             String types[] = {};
             if (grundtvig != null && kommentar == null) {
-                types = new String[] {Asset.variantType, Asset.manusType};
+                types = new String[] {Asset.variantType, Asset.manusType, "chapter"};
             }
             if (grundtvig == null && kommentar != null) {
                 types = new String[] {Asset.introType, Asset.txrType, Asset.commentType, Asset.veiledningType};                
             }
             if (grundtvig != null && kommentar != null) {
-                types = new String[] {Asset.introType, Asset.txrType, Asset.commentType, Asset.veiledningType, Asset.variantType, Asset.manusType}; 
+                types = new String[] {Asset.introType, Asset.txrType, Asset.commentType, Asset.veiledningType, Asset.variantType, Asset.manusType, "chapter"}; 
             }
             query.setQuery(q + " AND " + composeOr(types));
             System.out.println("Query: " + query.getQuery());
