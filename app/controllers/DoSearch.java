@@ -333,15 +333,19 @@ public class DoSearch extends Application {
     
     static public Long extractSj(String str) {
         String res = "";
-        Pattern pattern = Pattern.compile("\\d+_(\\d+)");
-        Matcher matcher = pattern.matcher(str);
-        if (matcher.find()) {
-            System.out.println("Js is: " + matcher.group(1));
-            res = matcher.group(1);
-        } else  {
-           res = "";
-        }       
-        return Long.parseLong(res);
+        try {
+            Pattern pattern = Pattern.compile("\\d+_(\\d+)");
+            Matcher matcher = pattern.matcher(str);
+            if (matcher.find()) {
+                System.out.println("Js is: " + matcher.group(1));
+                res = matcher.group(1);
+            } else  {
+               res = "";
+            }       
+            return Long.parseLong(res);
+        } catch (Exception e) {
+            return 0L;
+        }
     }
     
     
