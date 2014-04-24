@@ -63,14 +63,14 @@ public class Chapter extends GenericModel {
     }
 
     public void index() {
-        this.htmlAsText = Helpers.stripHtml(html);
         try {
             SolrServer server = Helpers.getSolrServer();
             SolrInputDocument doc1 = new SolrInputDocument();
             doc1.addField("id", "chapter_" + id);
             doc1.addField("text", htmlAsText);
             doc1.addField("type", "chapter");
-            doc1.addField("pgid", id);            
+            doc1.addField("pgid", id);
+            doc1.addField("sj", DoSearch.extractSj(this.asset.fileName));
             server.add(doc1);
             server.commit();
         } catch (Exception e) {
@@ -87,6 +87,7 @@ public class Chapter extends GenericModel {
     public <T extends JPABase> T save() {
         // remove empty div's
         html = html.replaceAll("<div class='[^']+'/>", "").replaceAll("<div class=\"[^\"]+\"/>", "");
+        this.htmlAsText = Helpers.stripHtml(html);
         T t = super.save();
         index();
         return t;
@@ -104,7 +105,11 @@ public class Chapter extends GenericModel {
         return super.delete();
     }
   
-    
+    public String getNamePlain() {
+        if ((int)name.charAt(0) == 8195) {
+            return name.substring(1);
+        } else return name;
+    }
 
     /**
      * Create text-teaser where lookfor is highlightet

@@ -127,6 +127,7 @@
    <field name="comment" type="text_general" indexed="true" stored="true" multiValued="true"/>
    <field name="type" type="text_general" indexed="true" stored="true" multiValued="false"/>
    <field name="pgid" type="text_general" indexed="true" stored="true" multiValued="false"/>
+   <field name="sj" type="long" indexed="true" stored="true" multiValued="false"/>
    
  </fields>
 

@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import models.Asset;
 import models.Chapter;
 import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.SolrQuery.SortClause;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
@@ -101,6 +102,7 @@ public class DoSearch extends Application {
             System.out.println("Setting start-pos to: " + start);
             query.setStart(start);
             query.setRows(pageSize);
+            query.setSort(new SortClause("sj", SolrQuery.ORDER.asc));
             try {
                 QueryResponse rsp = server.query(query);
                 SolrDocumentList docs = rsp.getResults();
@@ -328,4 +330,19 @@ public class DoSearch extends Application {
         string = myPattern.matcher(string).replaceAll(replaceWith);
         return string;
     }
+    
+    static public Long extractSj(String str) {
+        String res = "";
+        Pattern pattern = Pattern.compile("\\d+_(\\d+)");
+        Matcher matcher = pattern.matcher(str);
+        if (matcher.find()) {
+            System.out.println("Js is: " + matcher.group(1));
+            res = matcher.group(1);
+        } else  {
+           res = "";
+        }       
+        return Long.parseLong(res);
+    }
+    
+    
 }
