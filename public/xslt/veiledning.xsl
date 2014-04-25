@@ -84,7 +84,7 @@
     </xsl:template>
     
     <xsl:template match="tei:hi[@rend='size-1']"> 
-        <span style="font-size: 90%">
+        <span style="font-size: 80%">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
