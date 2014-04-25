@@ -37,10 +37,10 @@
         {
         color: gray;
         }
-
         
         
 /* kolofonblad start */
+
 
 #tekst_innhold .kolofonBlad
         {
@@ -59,6 +59,7 @@
         
 #tekst_innhold table, #tekst_innhold td    
         {
+            
         padding-right: 0.5em;
         padding-left: 0em;
         }
@@ -77,12 +78,12 @@
         width: 30em;
         }
 
-/* kolofonblad end */
+/* kolofonblad end 
 
 #tekst_innhold .center
         {
         text-align: center;
-        }
+        }*/
 
 #tekst_innhold .editionPhilologist
         {
@@ -621,7 +622,7 @@ td.index:last-child
 #tekst_innhold .romanType
         {
         font-family: arial;
-        font-size: 80%;
+        font-size: 90%;
         }
 
 #tekst_innhold .secondIndent
@@ -721,39 +722,41 @@ td.index:last-child
 #tekst_innhold .epigraph
         {
         font-size: 80%;
-        margin: 1em;
+        }
+
+#tekst_innhold .lg
+        {
+        line-height: inherit;
+        }
+
+#tekst_innhold div.right
+        {
+        margin-left: -1em 7.5em 0em 0em;
+        line-height: inherit;
+        }
+
+#tekst_innhold div.firstIndentRight
+        {
+        margin: -1em 5em 0em 0em;
+        line-height: inherit;
+        }
+
+#tekst_innhold div.secondIndentRight
+        {
+        margin: -1em 2.5em 0em 0em;
+        line-height: inherit;
+        }
+
+#tekst_innhold div.center
+        {
+        margin: -1em 0em 0em 0em;
         text-align: center;
         }
-
-#tekst_innhold .epigraph > #tekst_innhold .lg
+         
+#tekst_innhold div1.illustrator
         {
-        margin: 7.5em;
-        line-height: inherit;
-        }
-
-#tekst_innhold .epigraph > #tekst_innhold div.right
-        {
-        margin: 7.5em;
-        line-height: inherit;
-        }
-
-#tekst_innhold .epigraph > #tekst_innhold div.firstIndentRight
-        {
-        margin: 5em;
-        line-height: inherit;
-        }
-
-#tekst_innhold .epigraph > #tekst_innhold div.secondIndentRight
-        {
-        margin: 2.5em;
-        line-height: inherit;
-        }
-
-#tekst_innhold .epigraph > #tekst_innhold div.center
-        {
-            color: red;
-        line-height: inherit;
-        text-align: center;
+        font-size: 80%;
+        line-height: 100%;
         }
 
 /* titlePage END */
@@ -777,7 +780,7 @@ td.index:last-child
         font-style: italic;
         width: 50px;
         display: block;
-        float: left; 
+        float: left;
         }
         
 /* drama START */
