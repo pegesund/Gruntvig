@@ -271,7 +271,6 @@ input[type=text]
 gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
 
 #{if cat.contains("grundtvig")}
-    <h2><b>Resultater hos Grundtvig:</b></h2>
     #{list chapters, as:'chapter'}
         #{set hash= "#\u007b\"0\":0,\"k\":" + chapter.num + "\u007d" /}  
         <div class="treff">
@@ -294,7 +293,6 @@ gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
 #{/if}
 
 #{if cat.contains("kommentar") && renderCommentAssets.size() > 0 }
-    <h2><b>Resultater i kommentarer:</b></h2>
 
     #{list renderCommentAssets, as:'asset'}
         #{if asset.type==asset.txrType }
