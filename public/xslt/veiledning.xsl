@@ -83,6 +83,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="tei:hi[@rend='size-1']"> 
+        <span style="font-size: 90%">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="tei:table"> 
         <table style="font-size: 16px">
             <xsl:apply-templates/>
