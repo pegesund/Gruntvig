@@ -19,8 +19,10 @@
         </div>
         
     </xsl:template>
+    
+    <xsl:template match="TEI:row"/>
        
-    <xsl:template match="TEI:row">
+    <xsl:template match="TEI:row[@n='28' or @n='29' or @n='34' or @n='52' or @n='61' or @n='63' or @n='65' or @n='67' or @n='68' or @n='73' or @n='76' or @n='80' or @n='81' or @n='82' or @n='83' or @n='84' or @n='85' or @n='86' or @n='87' or @n='88' or @n='89' or @n='93A' or @n='94' or @n='96' or @n='97' or @n='99A' or @n='105' or @n='106' or @n='107' or @n='108' or @n='109' or @n='111' or @n='113' or @n='115' or @n='116' or @n='117' or @n='118' or @n='121' or @n='122' or @n='123' or @n='125' or @n='169A' or @n='130' or @n='131' or @n='132' or @n='133' or @n='134' or @n='136' or @n='137' or @n='139A' or @n='140A' or @n='141' or @n='143' or @n='144' or @n='147' or @n='148A' or @n='149' or @n='157' or @n='193A' or @n='227A' or @n='255' or @n='281' or @n='308' or @n='329' or @n='330' or @n='331' or @n='332' or @n='342' or @n='397' or @n='413A' or @n='415' or @n='416' or @n='417' or @n='421A' or @n='433A' or @n='436A' or @n='487A' or @n='563' or @n='573' or @n='580' or @n='593' or @n='603' or @n='617' or @n='624a' or @n='680' or @n='741' or @n='891' or @n='898' or @n='896A' or @n='1155' or @n='1403']">
         <div class="row myth" id="{@xml:id}">
             <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
             <xsl:if test="TEI:cell[@rend='orthography']">
