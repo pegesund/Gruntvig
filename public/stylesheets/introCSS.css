@@ -1,7 +1,30 @@
 /* KSR: 
 2012.04.11: minus kursiv readMore plus
 2011.03.30: 
-*/
+*//* table START */
+
+.innledningContent table.source
+        {
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 0em;
+        vertical-align: top;
+        width: 100%;
+        }
+
+.innledningContent td:first-child
+        {
+        width: 10%;
+        }
+        
+.innledningContent table.source, .innledningContent td:first-child, .innledningContent tr, .innledningContent td
+        {
+        border: 1px solid black;        
+        }
+        
+/* table END*/
 
 .innledningContent {
     line-height: 1.5em;

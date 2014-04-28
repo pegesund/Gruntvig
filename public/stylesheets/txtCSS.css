@@ -232,6 +232,12 @@
         font-size: 120%;
         }
 
+#tekst_innhold .initialSpaced
+        {
+        font-style: italic;
+        font-size: 120%;
+        }
+
 #tekst_innhold .italic
         {
         font-style: italic;
