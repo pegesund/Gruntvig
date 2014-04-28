@@ -336,21 +336,21 @@
     </xsl:template>
     
     <xsl:template match="TEI:table">        
-        <div class="table">
+        <table>
             <xsl:apply-templates/>
-        </div>
+        </table>
     </xsl:template>
     
     <xsl:template match="TEI:row">        
-        <div class="row">
+        <tr>
             <xsl:apply-templates/>
-        </div>
+        </tr>
     </xsl:template>
     
     <xsl:template match="TEI:cell">        
-        <span class="cell">
+        <td>
             <xsl:apply-templates/>
-        </span>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
