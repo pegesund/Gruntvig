@@ -54,7 +54,7 @@
             </xsl:when>
             <xsl:when test="@rend='shortLine'">
                 <div class="shortLine">
-                    <hr align="center" width="8%"/>
+                    <hr align="center" width="9%"/>
                 </div>
             </xsl:when>
         </xsl:choose>
