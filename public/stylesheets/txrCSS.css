@@ -484,3 +484,11 @@ a.docIn:hover
         display: block;
         float: left; 
         }
+
+.pdf
+    {
+    background-image: url(../img/pdficon_small.png);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    }

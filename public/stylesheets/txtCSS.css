@@ -886,4 +886,12 @@ td.index:last-child
     width: 100%;
     }
 
+.pdf
+    {
+    background-image: url(../img/pdficon_small.png);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    }
+
 /* figure/illustationer END */
