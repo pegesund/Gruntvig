@@ -28,8 +28,10 @@
             <xsl:if test="TEI:cell[@rend='orthography']">
                 <div>
                     <i>Staves også: </i>
-                    <xsl:apply-templates select="TEI:cell[@rend='orthography']"/>
-                    <xsl:call-template name="delimiter"/>
+                    <xsl:for-each select="TEI:cell[@rend='orthography']">
+                        <xsl:apply-templates select="."/>
+                        <!--x<xsl:call-template name="delimiter"/>y-->
+                    </xsl:for-each>
                 </div>
             </xsl:if>
             <xsl:choose>
@@ -94,10 +96,10 @@
     <xsl:template name="delimiter">
         <xsl:choose>
             <xsl:when test="position()=1"> </xsl:when>
-            <xsl:when test="position()=1 and position()=last">.</xsl:when>
-            <xsl:when test="position()=last()">.</xsl:when>
+            <xsl:when test="position()=1 and position()=last">. </xsl:when>
+            <xsl:when test="position()=last()">. </xsl:when>
             <xsl:when test="position()=last()-1"> eller </xsl:when>
-            <xsl:otherwise>.</xsl:otherwise>
+            <xsl:otherwise>, </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
