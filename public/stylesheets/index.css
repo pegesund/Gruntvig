@@ -43,7 +43,7 @@ div.title1
 
 div.title2
         {
-        font-size: 24px;
+        font-size: 36px;
         }
 
 .longLine
@@ -58,7 +58,7 @@ div.title2
 
 .signer
         {
-        font-size: 17px;
+        font-size: 16px;
         margin: 1em 0em 1em 0em;
         text-align: right
         }
