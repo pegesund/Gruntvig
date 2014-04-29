@@ -54,7 +54,7 @@
                                             </td>
                                             <td class="source">
                                                 <xsl:choose>
-                                                    <xsl:when test="@xml:id='A' or @xml:id='B'">
+                                                    <xsl:when test="@xml:id='A'">
                                                         <xsl:apply-templates select="."/>
                                                         <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
