@@ -6,7 +6,8 @@
     exclude-result-prefixes="#all"
     >
 
-<!-- KSR: 2011.11.03 -->
+<!-- KSR: 2011.11.03
+     KK:  2014-04-29 -->
 
 
 
@@ -30,19 +31,20 @@
                     <i>Staves også: </i>
                     <xsl:for-each select="TEI:cell[@rend='orthography']">
                         <xsl:apply-templates select="."/>
-                        <!--x<xsl:call-template name="delimiter"/>y-->
+                        <!--xsl:call-template name="delimiter"/-->
                     </xsl:for-each>
+                    <xsl:text>.</xsl:text>
                 </div>
             </xsl:if>
             <xsl:choose>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
-                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
+                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='epithet']/text()"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
-                    </xsl:for-each>                    
+                    </xsl:for-each>
                 </xsl:when>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
@@ -95,11 +97,9 @@
     
     <xsl:template name="delimiter">
         <xsl:choose>
-            <xsl:when test="position()=1"> </xsl:when>
-            <xsl:when test="position()=1 and position()=last">. </xsl:when>
-            <xsl:when test="position()=last()">. </xsl:when>
-            <xsl:when test="position()=last()-1"> eller </xsl:when>
-            <xsl:otherwise>, </xsl:otherwise>
+            <xsl:when test="position()=last()"><xsl:text>.</xsl:text></xsl:when>
+            <xsl:when test="position()=last()-1"><xsl:text> eller </xsl:text></xsl:when>
+            <xsl:otherwise><xsl:text>, </xsl:text></xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
@@ -146,7 +146,7 @@
     
     <xsl:template name="delimiterKomma">
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
-            <xsl:text>,</xsl:text>
+            <xsl:text>, </xsl:text>
         </xsl:if>
     </xsl:template>
     
