@@ -34,6 +34,7 @@ div.title1, div.title2
         {
         margin: 1em 0em 1em 0em;
         text-align: center;
+        text-transform: uppercase;
         }
         
 div.title1
