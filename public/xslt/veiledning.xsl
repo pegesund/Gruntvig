@@ -26,12 +26,46 @@
     </xsl:template>
 
     <xsl:template match="tei:head">
-        <h2 style="font-size: 24px">
-            <xsl:apply-templates/>
-        </h2>
+        <xsl:choose>
+            <xsl:when test="@type='title1'">
+                <div class="title1">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type='title2'">
+                <div class="title2">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="not(@type)">
+                <div>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
-
-
+    
+    <xsl:template match="tei:graphic">
+        <xsl:choose>
+            <xsl:when test="@rend='longLine'">
+                <div class="longLine">
+                    <hr align="center" width="16%"/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='shortLine'">
+                <div class="shortLine">
+                    <hr align="center" width="8%"/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:signer">
+        <div class="signer">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="tei:text">
         <xsl:apply-templates/>
     </xsl:template>
