@@ -47,6 +47,12 @@ div.title2
         font-size: 36px;
         }
 
+div.headFront
+        {
+        font-size: 24px;
+        text-align: left;
+        }
+
 .longLine
         {
         margin: 2em 0em 2em 0em;
