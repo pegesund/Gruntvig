@@ -38,7 +38,7 @@
                 </div>
             </xsl:when>
             <xsl:when test="not(@type)">
-                <div>
+                <div class="headFront">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
