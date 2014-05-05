@@ -140,6 +140,16 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:otherwise>
+                <td>
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:item">
+        <xsl:choose>            
             <xsl:when test="@corresp">
                 <ol class="simple">
                     <li>
@@ -149,11 +159,6 @@
                     </li>
                 </ol>
             </xsl:when>
-            <xsl:otherwise>
-                <td>
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
