@@ -5,7 +5,7 @@
 <!-- 
 
 KK 2014-02-13
-KSR 2014-02-26 og 27
+KSR 2014-02-26 og 27f
 KK 2014-03-06
 -->
 
@@ -107,6 +107,7 @@ input[type=text]
   }
   
   
+  #{if !first}
   function addPaginator() {
         var totalHits = ${totalHits};
         if (totalHits == 0) return;
@@ -120,6 +121,7 @@ input[type=text]
             });
         });
   }
+  #{/if}
   
   $(document).ready(function() { 
     // Reetabler søgefelter udfra url-query
@@ -154,8 +156,10 @@ input[type=text]
         proxNoElem.value= proxQS;
       }
       buildQPS( wordsElem );
+      #{if !first}
+        addPaginator();
+      #{/if}
     }
-    addPaginator();
   });
   
   function buildQPS( words ) {
