@@ -7,7 +7,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0"
     exclude-result-prefixes="#all"
->
+    >
 
 <!-- 
     Kim Steen Ravn:
@@ -20,10 +20,23 @@
     <xsl:include href="popups.xsl"/>
 
     <xsl:template match="TEI:TEI">
+      <xsl:choose>
+       <xsl:when test="//TEI:note[@type='minusCom']">
+           <div class="theComments">
+               <div class="head about">
+                   <div class="minusCom">
+                       <xsl:text>GV forsyner ikke dette værk med verbalkommentarer.</xsl:text>
+                   </div>
+                   
+               </div>
+           </div>   
+       </xsl:when>
+       <xsl:otherwise>
         <div class="theComments">
-                
+            
             <div class="head about">
-                    <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
+                
+                <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
                         <div><xsl:text>Punktkommentarer til</xsl:text></div>
                         <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]"/></i>
                         <div class="author">
@@ -42,7 +55,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </div>
-                    </xsl:if>                    
+                    </xsl:if>
                     <xsl:if test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">                        
                         <div>
                             <xsl:text>Punktkommentarer til</xsl:text>
@@ -119,9 +132,10 @@
                     <xsl:otherwise>
                         <xsl:apply-templates select="TEI:text"/>
                     </xsl:otherwise>
-                </xsl:choose>            
+                </xsl:choose>
         </div>
-        
+       </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
     
     <!--

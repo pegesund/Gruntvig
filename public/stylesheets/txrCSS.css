@@ -374,6 +374,17 @@ a.docIn:hover
         width: 30em;
         }
 
+.mainTxr table.msDesc
+        {
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 30em;
+        }
+
 .mainTxr table.textualCriticism
         {
         font-size: 14px;
@@ -395,16 +406,37 @@ a.docIn:hover
         {
         width: 20%;
         }
-        
-.mainTxr table, .mainTxr table.msDesc, .mainTxr table.textualCriticism .mainTxr tr, .mainTxr td
+
+.mainTxr table.msDesc td:first-child
         {
-        border: 1px solid black;        
+        background-color: red;
+        width: 20%;
+        }
+        
+.mainTxr table.msDesc, .mainTxr table.textualCriticism .mainTxr tr, .mainTxr td
+        {
+        border: 1px solid black;
         }
 
 .mainTxr tr:first-child
         {
         background-color: #DDDDDD;
         font-weight: bold;
+        }
+
+.mainTxr td:first-child
+        {
+        width: 15%;
+        }
+
+.mainTxr td:last-child
+        {
+        width: 60%;
+        }
+
+.mainTxr td
+        {
+        width: 20%;
         }
 
 .mainTxr tr
@@ -452,3 +484,11 @@ a.docIn:hover
         display: block;
         float: left; 
         }
+
+.pdf
+    {
+    background-image: url(../img/pdficon_small.png);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    }

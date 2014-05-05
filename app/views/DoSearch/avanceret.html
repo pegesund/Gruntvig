@@ -285,7 +285,6 @@ gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
         </div>
     #{/list}
     #{if renderGrundtvigAssets}
-        <h3>Varianter</h3>
         #{list renderGrundtvigAssets, as:'asset'}
             #{set hash= "#\u007b\"0\":1,\"k\":0,\"v0\":" + (asset.fileName.contains("1826_433A_") ? asset.variant+(asset.type==asset.manusType?-1:2) : asset.variant) + "\u007d" /}
             <div class="treff">

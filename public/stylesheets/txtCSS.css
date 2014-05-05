@@ -232,6 +232,12 @@
         font-size: 120%;
         }
 
+#tekst_innhold .initialSpaced
+        {
+        font-style: italic;
+        font-size: 120%;
+        }
+
 #tekst_innhold .italic
         {
         font-style: italic;
@@ -787,11 +793,10 @@ td.index:last-child
 
 #tekst_innhold .set_center, #tekst_innhold .set_firstIndent, #tekst_innhold .set_noIndent, #tekst_innhold .set_right
         {
-        font-size: 80%;
+        font-size: 101%;
         line-height: 125%;
         margin: 1em 0em 1em 0em;
-        width: 50%;
-        color: red
+        width: 100%;
         }
         
 #tekst_innhold .set_center
@@ -879,6 +884,14 @@ td.index:last-child
     height: 100%;
     padding: 5px;
     width: 100%;
+    }
+
+.pdf
+    {
+    background-image: url(../img/pdficon_small.png);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
     }
 
 /* figure/illustationer END */

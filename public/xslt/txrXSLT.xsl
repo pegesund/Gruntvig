@@ -366,7 +366,7 @@
         </ul>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero']">
+    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero' or @type='textualCriticismSupp']">
         <xsl:choose>
             <xsl:when test="@type='textualCriticismPluralis'">                
                 <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
@@ -407,6 +407,43 @@
             </xsl:when>
             <xsl:when test="@type='textualCriticismSingularis'">                
                 <xsl:text>Der er foretaget følgende tekstrettelse (se vejledning til de tekstkritiske noter):</xsl:text>
+                <table class="textualCriticism">
+                    <tr bgcolor="lightgray">
+                        <td>Side</td>
+                        <td>Note</td>
+                    </tr>
+                    <xsl:for-each select="document(//TEI:note[@type='txt']/@target)//TEI:app">
+                        <tr>
+                            <td align="right">
+                                <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
+                                &#x2003;
+                            </td>
+                            <td align="left">
+                                <xsl:apply-templates select="TEI:lem"/>
+                                <xsl:text>] </xsl:text>
+                                <xsl:if test="TEI:lem/@wit!='A'">
+                                    <i>
+                                        <xsl:value-of select="TEI:lem/@wit"/>
+                                        <xsl:text>, </xsl:text>
+                                    </i>                                    
+                                </xsl:if>
+                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[@type='add']">
+                                    <xsl:apply-templates select="TEI:rdg[@type='add']"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:note[@type='add']">
+                                    <xsl:text> </xsl:text>
+                                    <i>
+                                        <xsl:apply-templates select="TEI:note[@type='add']"/>
+                                    </i>
+                                </xsl:if>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </xsl:when>
+            <xsl:when test="@type='textualCriticismSupp'">                
+                <xsl:text>Der er ikke foretaget tekstrettelser, men følgende kritiske forhold er identificeret i teksten (se vejledning til de tekstkritiske noter):</xsl:text>
                 <table class="textualCriticism">
                     <tr bgcolor="lightgray">
                         <td>Side</td>
