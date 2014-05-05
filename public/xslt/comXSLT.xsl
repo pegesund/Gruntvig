@@ -151,12 +151,12 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>              
                 <xsl:when test="@type='docIn'">
-                    <!--<a hrel="{@id}" class="docIn txrmenu">-->
+                    <a hrel="{@id}" class="docIn txrmenu">
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <span class="docout">
+                    <span class="docOut" href="{@target}">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           
