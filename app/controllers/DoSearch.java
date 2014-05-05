@@ -137,9 +137,11 @@ public class DoSearch extends Application {
             System.out.println("Total all: " + totalAll);
             String lookfor = lucene;
             int totalPages = (int) Math.ceil((double)totalAll / (double)pageSize);
-            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat, totalAll, pageSize, totalPages, page);
+            boolean first = false;
+            render(renderGrundtvigAssets, chapters, lookfor, totalHits, renderCommentAssets, cat, totalAll, pageSize, totalPages, page, first);
         } else {
-            render();
+            boolean first = true;
+            render(first);
         }
     }
 
