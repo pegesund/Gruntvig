@@ -62,7 +62,7 @@
             <xsl:apply-templates select="following-sibling::TEI:cell[@rend='explanation']"/>
             <xsl:apply-templates select="following-sibling::TEI:cell[@rend='facts']"/>
           </div>
-            <xsl:apply-templates select="document('placeH.xml')//TEI:placeName[@key=current()/parent::TEI:row/@xml:id]"/>
+            <!--<xsl:apply-templates select="document('placeH.xml')//TEI:placeName[@key=current()/parent::TEI:row/@xml:id]"/>-->
             <xsl:if test="not($copy)">
                 <xsl:apply-templates select="//TEI:row[@synch=current()/parent::TEI:row/@xml:id]/TEI:cell[@rend='name']">
                     <xsl:with-param name="copy" select="'yes'"/>
@@ -112,7 +112,7 @@
 
     <xsl:template match="@synch">
         <xsl:text> (</xsl:text>
-        <a href="#{.}">
+        <a href="steder#{.}">
             <xsl:value-of select="//TEI:row[@xml:id=current()]/TEI:cell[@rend='name']"/>
         </a>
         <xsl:text>)</xsl:text>
