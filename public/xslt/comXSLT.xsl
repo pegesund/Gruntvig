@@ -243,7 +243,8 @@
            <xsl:choose>
                <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
                    <span class="app">
-                       <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
+                       <!--  onclick="showhide(this,'more{../@xml:id}')" slette af span for at undgå dob.klik på readMore -->
+                       <span id="plus{../@xml:id}" class="plus"> Læs mere</span>
                        <div id="more{../@xml:id}" class="appInvisible">
                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
                        </div>
