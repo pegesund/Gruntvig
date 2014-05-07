@@ -508,7 +508,8 @@
             <xsl:if test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
                 <span class="app">
                     <xsl:text> </xsl:text>
-                    <span class="plus" onclick="showhide(this,'more{generate-id()}')">Læs mere +</span>
+                    <!--  onclick="showhide(this,'more{generate-id()}')" slette af span for at undgå dob.klik på readMore-->
+                    <span class="plus">Læs mere</span>
                     <div id="more{generate-id()}" class="appInvisible">
                         <div class="readMore">
                             <xsl:apply-templates select="following-sibling::TEI:note[local-name()='note' and @type='readMore' and position()=1]/node()"/>
