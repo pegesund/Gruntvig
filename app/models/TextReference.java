@@ -161,6 +161,7 @@ public class TextReference extends GenericModel {
         TextReference.delete("type = ?", asset.type);
         try {
             Document doc = Helpers.stringToNode(asset.html);
+            
             List<Node> refs = Helpers.getChildrenOfType(doc, "div");
             System.out.println("Number of possible refs: " + refs.size());
             for (Node ref : refs) {
