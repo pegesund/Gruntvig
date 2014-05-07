@@ -1429,18 +1429,25 @@ border: 1px solid #ddd;
 
 span.pagebreak {display:none;}
 a.myth {text-decoration:none;}
-.commentNote {  padding: 15px; background: #FAFAFA; }
+.commentNote {  padding: 16px; background: #FAFAFA; }
+
+/* seg og noSeg START */
 
 .seg
         {
-        color: #4DBC4D; cursor: help; text-decoration:none;
+        color: #4DBC4D;
+        cursor: help;
+        text-decoration: none;
         }
 
 .noSeg 
         {
-        cursor: help; text-decoration:none;
+        cursor: help;
+        text-decoration: none;
         }
 
+/* seg og noSeg END */
+        
 /* pers- og placeName START */
 
 .persName, .placeName
