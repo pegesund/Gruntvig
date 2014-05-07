@@ -13,6 +13,10 @@
                 <xsl:apply-templates select="TEI:text"/>
     </xsl:template>
     
+    <xsl:template match="TEI:text/TEI:p">
+        
+    </xsl:template>
+    
     <xsl:template match="TEI:table">
         <div class="table">
             <xsl:apply-templates select="TEI:row/TEI:cell[@rend='name' or @rend='altNameDia' or @rend='altNameSyn']">
