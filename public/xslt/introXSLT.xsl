@@ -277,11 +277,9 @@
     <xsl:template match="TEI:item[@n]">
         <ul>
             <li class="litList">
-                <xsl:text>&lt;</xsl:text>
                 <a href="{@target}">
                     <xsl:apply-templates/>
                 </a>
-                <xsl:text>&gt;</xsl:text>
                 <xsl:text> (</xsl:text>
                 <xsl:number value="substring(@n, 9,2)" format="1"/>
                 <xsl:text>. </xsl:text>
@@ -356,11 +354,9 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>
                 <xsl:when test="@type='web'">
-                    <xsl:text>&lt;</xsl:text>
                     <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
-                    <xsl:text>&gt;</xsl:text>
                 </xsl:when>
                 <xsl:when test="@type='image'">
                     <!--<a href="{@target}">-->

@@ -151,12 +151,12 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>              
                 <xsl:when test="@type='docIn'">
-                    <!--<a hrel="{@id}" class="docIn txrmenu">-->
+                    <a hrel="{@id}" class="docIn txrmenu">
                        <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <span class="docout">
+                    <span class="docOut" href="{@target}">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           
@@ -169,7 +169,7 @@
                     <!--</a>-->
                 </xsl:when>
                 <xsl:when test="@type='web'">
-                    <a href="http://{.}" target="_blank">
+                    <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
@@ -243,7 +243,8 @@
            <xsl:choose>
                <xsl:when test="following-sibling::*[local-name()='note' and @type='readMore' and position()=1]">
                    <span class="app">
-                       <span id="plus{../@xml:id}" class="plus" onclick="showhide(this,'more{../@xml:id}')"> Læs mere +</span>
+                       <!--  onclick="showhide(this,'more{../@xml:id}')" slette af span for at undgå dob.klik på readMore -->
+                       <span id="plus{../@xml:id}" class="plus"> Læs mere</span>
                        <div id="more{../@xml:id}" class="appInvisible">
                            <xsl:apply-templates select="following-sibling::TEI:note[@type='readMore']"/>
                        </div>

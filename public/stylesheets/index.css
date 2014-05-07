@@ -1648,10 +1648,11 @@ h1.subtitle { margin-left: 0px !important; }
  
  div.placeContent .explanation { visibility: visible }
 
- .docout 
- {
-     color: blue;
- }
+ .docOut 
+        {
+        color: blue;
+        cursor: pointer;
+        }
  
  .docIn {
      color: blue;
