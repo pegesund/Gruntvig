@@ -1431,7 +1431,20 @@ span.pagebreak {display:none;}
 a.myth {text-decoration:none;}
 .commentNote {  padding: 15px; background: #FAFAFA; }
 .seg, .noSeg { color: #4DBC4D; cursor: help; text-decoration:none; }
-.persName, .placeName {text-decoration:none;} .persName:hover, .placeName:hover {text-decoration:none;}
+
+/* pers- og placeName START */
+
+.persName, .placeName
+        {
+        text-decoration: none;
+        }
+
+.persName:hover, .placeName:hover
+        {
+        text-decoration:none;
+        }
+
+/* pers- og placeName END */
 
 /* Fix for ie extra margin left */
 

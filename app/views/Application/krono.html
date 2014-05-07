@@ -3,8 +3,9 @@
   Grundtvigs værker
   KK 2013-09-18
   Inkl. alternativ titel, KK 2014-03-06
+  KSR 2014.05.06: link fra altTitle til tekst
 -->
-#{extends 'main.html' /}
+#{ extends 'main.html' /}
 #{ header /}
 
 <script type="text/javascript">
@@ -27,10 +28,11 @@
                 }
                 var name = $(this).find('span.name').text(),
                     altName = $(this).find('span.altName').text(),
-                    //altNameForm= altName ? '<br/>('+altName+')' : '', //parenthesis
-                    altNameForm= altName ? '<br/>'+altName : '',
+                    //altNameForm= altName ? '<br/>('+altName+')' : '', parenthesis
                     url= $(this).find('span.url').text(),
-                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a>' + altNameForm + '</td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+                    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '';
+                    url= $(this).find('span.url').text(),
+                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' +  altNameForm ;
                 nodes.push(node);
             });
             //nodes = nodes.sort();
