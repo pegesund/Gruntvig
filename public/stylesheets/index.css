@@ -1430,7 +1430,16 @@ border: 1px solid #ddd;
 span.pagebreak {display:none;}
 a.myth {text-decoration:none;}
 .commentNote {  padding: 15px; background: #FAFAFA; }
-.seg, .noSeg { color: #4DBC4D; cursor: help; text-decoration:none; }
+
+.seg
+        {
+        color: #4DBC4D; cursor: help; text-decoration:none;
+        }
+
+.noSeg 
+        {
+        color: black; cursor: help; text-decoration:none;
+        }
 
 /* pers- og placeName START */
 
