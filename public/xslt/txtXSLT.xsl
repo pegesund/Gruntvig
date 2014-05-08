@@ -827,7 +827,7 @@
                 </a>
             </xsl:when>
             <xsl:when test="@rend='eg'">
-                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content=jf. fx {@key}">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content=jf. f.eks. {@key}">
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
