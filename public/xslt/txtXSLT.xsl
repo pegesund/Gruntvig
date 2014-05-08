@@ -640,7 +640,7 @@
     
     <!-- footnote END -->
     
-    <xsl:template match="TEI:hi">
+    <xsl:template match="TEI:hi">        
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
