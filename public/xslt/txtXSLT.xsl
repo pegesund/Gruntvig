@@ -755,7 +755,6 @@
             </span>
         </a>       
     </xsl:template>
-    
         
     <xsl:template match="TEI:seg/TEI:pb">
             <span class="size">
@@ -764,7 +763,6 @@
             </span>
     </xsl:template>
     
-    
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
     </xsl:template>
@@ -772,8 +770,7 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-    
-    
+        
     <xsl:template match="TEI:persName">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPersName']">
@@ -827,7 +824,7 @@
                 </a>
             </xsl:when>
             <xsl:when test="@rend='eg'">
-                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content=jf. f.eks. {@key}">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content=jf. fx {@key}">
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
