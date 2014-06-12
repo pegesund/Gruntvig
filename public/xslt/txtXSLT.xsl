@@ -55,25 +55,37 @@
                                             <td class="source">
                                                 <xsl:choose>
                                                     <xsl:when test="@xml:id='A'">
-                                                        <xsl:apply-templates select="."/>
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
                                                         <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
-                                                        <xsl:text>)</xsl:text>
+                                                        <xsl:text>)</xsl:text> 
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='B'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                        <xsl:text> (SJ: </xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text> 
                                                     </xsl:when>
                                                     <xsl:otherwise>
-                                                        <xsl:apply-templates select="."/>
+                                                        <span style="color:red">
+                                                            <xsl:text>TEKSTKILDE MANGLER!!!</xsl:text>
+                                                        </span>
                                                     </xsl:otherwise>
                                                 </xsl:choose>
                                             </td>
                                         </tr>
-                                        <!--
-                                        <tr>
-                                            <td class="SJ">Steen Johansen</td>
-                                            <td class="SJnumber">
-                                                <xsl:text></xsl:text><xsl:apply-templates select="//TEI:publicationStmt/TEI:idno"/><xsl:text></xsl:text>
-                                            </td>
-                                        </tr>
-                                        -->
                                     </table>
                                 </div>
                             </xsl:for-each>
@@ -84,18 +96,27 @@
                                 <xsl:text>Andre udgaver</xsl:text>
                                 <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
                                     <div class="table">
-                                        <table>
-                                            <td class="sigel">
-                                                <xsl:value-of select="@xml:id"/>
-                                            </td>
-                                            <td class="source">
-                                                <xsl:apply-templates select="."/>
-                                            </td>
+                                        <table class="witList">
+                                            <tr>
+                                                <td class="sigel">
+                                                    <xsl:value-of select="@xml:id"/>
+                                                </td>
+                                                <td class="source">
+                                                    <span class="desc">
+                                                        <xsl:apply-templates select="TEI:desc"/>
+                                                        <xsl:text> </xsl:text>
+                                                    </span>
+                                                    <span class="vol">
+                                                        <xsl:apply-templates select="TEI:num"/>
+                                                    </span>
+                                                </td>
+                                            </tr>
                                         </table>
                                     </div>
                                 </xsl:for-each>
                             </xsl:if>
-                        </tr>                        
+                        </tr>
+                                              
                     </div>
                     
                     <div class="kolofon">
@@ -1238,5 +1259,25 @@
     </xsl:template>
     
     <!-- drama END -->
+    
+    <!-- back START -->  
+    
+    <xsl:template match="TEI:back//TEI:div"> <!-- Allow div in div, KK 2014-03-19 -->
+        <div class="chapter">
+            <xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:for-each select="ancestor::TEI:div">
+                        <xsl:text>&#x2003;</xsl:text>
+                    </xsl:for-each>
+                    <xsl:value-of select="@type"/>
+               </xsl:attribute> 
+            </xsl:if>
+            <xsl:apply-templates select="node()[local-name()!='div']"/>
+            <xsl:call-template name="footnote"/>
+        </div>
+        <xsl:apply-templates select="TEI:div"/>
+    </xsl:template>
+    
+    <!-- back END -->
 
 </xsl:stylesheet>
