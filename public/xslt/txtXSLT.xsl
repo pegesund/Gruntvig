@@ -1262,7 +1262,7 @@
     
     <!-- back START -->  
     
-    <xsl:template match="TEI:back//TEI:div"> <!-- Allow div in div, KK 2014-03-19 -->
+    <xsl:template match="TEI:back//TEI:div"> <!-- div i div i back, KSR 2014.06.12 -->
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -1276,6 +1276,38 @@
             <xsl:call-template name="footnote"/>
         </div>
         <xsl:apply-templates select="TEI:div"/>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table">        
+        <table class="{@xml:id}">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@xml:id='corrigenda']/TEI:row">
+        <tr class="corrigenda">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@xml:id='corrigenda']/TEI:row/TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="{@rend}" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="{@rend}" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="corrigenda">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <!-- back END -->
