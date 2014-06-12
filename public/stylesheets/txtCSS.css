@@ -64,6 +64,16 @@
         padding-left: 0em;
         }
 
+#tekst_innhold .desc
+        {
+        font-style: italic;        
+        }
+
+#tekst_innhold .num, #tekst_innhold .vol
+        {
+        font-style: normal;
+        }
+
 #tekst_innhold td.sigel
         {
         font-style: italic;
@@ -895,3 +905,35 @@ td.index:last-child
     }
 
 /* figure/illustationer END */
+
+
+/* back START */
+
+#tekst_innhold table.corrigenda
+        {
+        border: 0Spx solid black;
+        margin-top: 2em;
+        padding-right: 0.5em;
+        padding-left: 0em;
+        }
+
+#tekst_innhold td.corrigenda:nth-child(1)
+        {
+        text-align: right;
+        width: 10%;
+        }
+
+#tekst_innhold td.corrigenda:nth-child(2)
+        {
+        text-align: right;
+        width: 10%;
+        }
+
+#tekst_innhold td.corrigenda:last-child
+        {
+        padding-left: 0.5em;
+        text-align: left;
+        width: 75%;
+        }
+
+/* back END */
