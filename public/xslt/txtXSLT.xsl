@@ -43,8 +43,7 @@
                 </div>
                     
                     <div class="kolofon">
-                        <xsl:text>Tekstkilder</xsl:text>                        
-                        <tr>
+                        <xsl:text>Tekstkilder</xsl:text>  
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table class="listWit">
@@ -89,9 +88,8 @@
                                     </table>
                                 </div>
                             </xsl:for-each>
-                        </tr>
-                        
-                        <tr>
+                            
+                            
                             <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
                                 <xsl:text>Andre udgaver</xsl:text>
                                 <xsl:for-each select="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
@@ -115,8 +113,6 @@
                                     </div>
                                 </xsl:for-each>
                             </xsl:if>
-                        </tr>
-                                              
                     </div>
                     
                     <div class="kolofon">
