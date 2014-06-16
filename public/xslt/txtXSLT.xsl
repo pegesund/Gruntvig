@@ -567,7 +567,7 @@
                         <xsl:text>; </xsl:text>
                     </xsl:when>
                 </xsl:choose>
-                <!-- kan korges ned til: 
+                <!-- kan koges ned til: 
                     <xsl:when test="following-sibling::TEI:rdg">
                     <xsl:text>; </xsl:text>
                     </xsl:when>
@@ -605,8 +605,38 @@
             <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
+        <div class="chapter">
+            <!--xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:for-each select="ancestor::TEI:div">
+                        <xsl:text>&#x2003;</xsl:text>
+                    </xsl:for-each>
+                    <xsl:value-of select="@type"/>
+                </xsl:attribute> 
+          </xsl:if-->
+            <div>
+                <xsl:if test="//TEI:note[@type='marginNote']">
+                    <xsl:attribute name="class">mainColumn</xsl:attribute>
+                </xsl:if>
+                <!-- otherwise superfluous div -->
+                <xsl:apply-templates select="node()[local-name()!='div']"/>
+                <xsl:call-template name="footnote"/>
+            </div>
+        </div>
+        <xsl:apply-templates select="TEI:div"/>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='marginNote']">
+        <div class="marginNote">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <!--
 
-    <xsl:template match="TEI:body//TEI:div"> <!-- Allow div in div, KK 2014-03-19 -->
+    <xsl:template match="TEI:body//TEI:div">
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -621,6 +651,8 @@
         </div>
         <xsl:apply-templates select="TEI:div"/>
     </xsl:template>
+    
+    -->
     
     <!-- footnote template fra linj 698 -->
     
