@@ -148,6 +148,31 @@
         margin: 1em 0em 1em 2em;
         }
 
+/* marginNote START */
+                 
+#tekst_innhold .chapter
+        {
+        margin: 0px 34px;
+        }
+
+#tekst_innhold .mainColumn
+        {
+        padding-right: 16px;
+        }
+
+#tekst_innhold .marginNote
+        {
+        font-size: 80%;
+        margin: 0px -50px 0 10px;
+        text-indent: 0;
+        text-align: left;
+        width: 40px;
+        float: right;
+        }
+
+/* marginNote END*/
+
+
 #tekst_innhold .footLine
         {
         color: blue;
