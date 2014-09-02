@@ -1,7 +1,8 @@
-11:25:54,624 INFO  ~ Starting /home/pe/gruntvig/play/gruntvig
-11:25:54,626 INFO  ~ Module search is available (/home/pe/kf/play/play-1.1/modules/search-head)
-11:25:55,416 WARN  ~ You're running Play! in DEV mode
-11:25:55,576 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-11:27:10,621 INFO  ~ Connected to jdbc:hsqldb:file:/home/pe/gruntvig/play/gruntvig/db/db
-11:27:11,607 INFO  ~ Application 'gruntvig' is now started !
-11:27:12,381 INFO  ~ Rebuild index finished
+CompilerOracle: exclude jregex/Pretokenizer.next
+Listening for transport dt_socket at address: 8000
+15:20:49,671 INFO  ~ Starting /home/ksr/NetBeansProjects/Gruntvig
+15:20:50,248 WARN  ~ You're running Play! in DEV mode
+15:20:50,435 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+15:21:54,761 WARN  ~ The path for a staticDir route must end with / (GET /doc -> staticDir:javadoc)
+15:21:59,327 INFO  ~ Connected to jdbc:h2:/home/ksr/NetBeansProjects/Gruntvig/db/h2/play;MODE=MYSQL
+15:22:00,422 INFO  ~ Application 'gruntvig' is now started !

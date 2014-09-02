@@ -28,7 +28,6 @@ import net.sf.saxon.s9api.XsltTransformer;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import play.db.jpa.JPABase;
-import play.modules.search.Indexed;
 
 /**
  *
@@ -41,7 +40,6 @@ import play.modules.search.Indexed;
  * Enunmeration of asset-type is kept in string due to db-restrinctions on jpa-enums
  *
  */
-@Indexed
 @Entity
 public class Asset extends GenericModel {
 

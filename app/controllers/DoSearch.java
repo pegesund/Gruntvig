@@ -19,8 +19,6 @@ import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
-import play.modules.search.Query;
-import play.modules.search.Search;
 
 /**
  *
@@ -156,7 +154,7 @@ public class DoSearch extends Application {
      * obsolete, 2014-03-13
      */
     public static void doSearch() {
-        String lookfor = Application.params.get("lookfor");
+        /*String lookfor = Application.params.get("lookfor");
         System.out.println("Searching for: " + lookfor);
         Query qChapter = Search.search("htmlAsText:" + lookfor, Chapter.class);
         List<Chapter> chapters = qChapter.fetch();
@@ -184,6 +182,7 @@ public class DoSearch extends Application {
         int totalHits = renderAssets.size() + chapters.size();
         System.out.println("Total hits: " + renderAssets.size());
         render(renderAssets, chapters, lookfor, totalHits);
+*/
     }
 
     public static String createTeaser(String str, String lookfor) {

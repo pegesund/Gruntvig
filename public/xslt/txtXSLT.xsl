@@ -17,7 +17,7 @@
                 <div class="kolofonTitle">
                         <xsl:choose>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                HAT SKO N.F.S. Grundtvig
+                                N.F.S. Grundtvig
                                 <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
@@ -688,46 +688,6 @@
     </xsl:template>
     
     <!-- footnote END -->
-    
-    <!-- endNote Start -->
-    
-    <xsl:template name="endNote">
-        <xsl:if test="//TEI:note[@type='endNote']">
-            <xsl:apply-templates select="//TEI:note[@type='endNote']" mode="end"/>
-        </xsl:if>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note[@type='endNote']">
-        <xsl:variable name="id">
-            <xsl:value-of select="@n"/>
-            <!--<xsl:number count="TEI:note[@type='endNote']" level="any" from="TEI:body"/>-->
-        </xsl:variable>
-        <a id="endNote{$id}" href="#endNote{$id}" class="endNote">
-            <xsl:value-of select="$id"/>
-        </a>
-    </xsl:template>
-    
-    <xsl:template match="TEI:note[@type='endNote']" mode="end">
-        <xsl:variable name="id">
-            <xsl:value-of select="@n"/>
-            <!--<xsl:number count="TEI:note[@type='endNote']" level="any" from="TEI:body"/>-->
-        </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}" class="endNote">
-            <xsl:value-of select="$id"/>
-        </a>
-        <div class="endNote">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:divGen[@type='endNote']">
-        <div class="chapter">
-            <!--<xsl:apply-templates/>-->
-            <xsl:call-template name="endNote"/>
-        </div>
-    </xsl:template>
-    
-    <!-- endNote END -->
     
     <xsl:template match="TEI:hi">        
         <span class="{@rend}">

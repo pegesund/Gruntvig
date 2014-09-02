@@ -26,7 +26,6 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import play.db.jpa.JPABase;
-import play.modules.search.Indexed;
 
 /**
  *
@@ -36,7 +35,6 @@ import play.modules.search.Indexed;
  *
  *
  */
-@Indexed
 @Entity
 public class Chapter extends GenericModel {
 
