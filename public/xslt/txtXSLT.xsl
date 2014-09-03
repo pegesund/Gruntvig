@@ -5,6 +5,8 @@
     version="1.0"
     >
 
+   
+    
 <!-- KSR: 2011.09.26 -->
 
     <xsl:include href="popups.xsl"/>
@@ -43,7 +45,7 @@
                 </div>
                     
                     <div class="kolofon">
-                        <xsl:text>Tekstkilder</xsl:text>  
+                        <xsl:text>Tekstkilder</xsl:text>
                             <xsl:for-each select="//TEI:listWit[@xml:id='emendation']/TEI:witness">
                                 <div class="table">
                                     <table class="listWit">
@@ -76,6 +78,135 @@
                                                         <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text> 
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='C'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                        <xsl:text> (SJ: </xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text> 
+                                                    </xsl:when>
+                                                    <xsl:when test="not(@xml:id)">
+                                                        <span class="descList">
+                                                            <xsl:apply-templates/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='R'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='K'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='r'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='k'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='D&amp;U'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='Gskv'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='GSV'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='PS'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <xsl:for-each select="TEI:num">
+                                                            <xsl:value-of select="."/>
+                                                            <xsl:if test="following-sibling::TEI:num">
+                                                                <xsl:choose>
+                                                                    <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                        <xsl:text>, </xsl:text>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:text> og </xsl:text>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:if>
+                                                        </xsl:for-each>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='US'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <xsl:for-each select="TEI:num">
+                                                            <xsl:value-of select="."/>
+                                                            <xsl:if test="following-sibling::TEI:num">
+                                                                <xsl:choose>
+                                                                    <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                        <xsl:text>, </xsl:text>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:text> og </xsl:text>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:if>
+                                                        </xsl:for-each>
+                                                    </xsl:when>
+                                                    <xsl:when test="@xml:id='VU'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <xsl:for-each select="TEI:num">
+                                                            <xsl:value-of select="."/>
+                                                            <xsl:if test="following-sibling::TEI:num">
+                                                                <xsl:choose>
+                                                                    <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                        <xsl:text>, </xsl:text>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:text> og </xsl:text>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:if>
+                                                        </xsl:for-each>
                                                     </xsl:when>
                                                     <xsl:otherwise>
                                                         <span style="color:red">
@@ -604,15 +735,15 @@
     
     <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
         <div class="chapter">
-            <!--xsl:if test="@type">   
+            <xsl:if test="@type">   
                 <xsl:attribute name="name">
                     <xsl:for-each select="ancestor::TEI:div">
                         <xsl:text>&#x2003;</xsl:text>
                     </xsl:for-each>
                     <xsl:value-of select="@type"/>
                 </xsl:attribute> 
-          </xsl:if-->
-            <div>
+          </xsl:if>
+            <div class="chapter">
                 <xsl:if test="//TEI:note[@type='marginNote']">
                     <xsl:attribute name="class">mainColumn</xsl:attribute>
                 </xsl:if>
@@ -1057,13 +1188,13 @@
     </xsl:template>
     -->
     
-    <!-- table START -->
+    <!-- table START 
     
     <xsl:template match="TEI:table">        
         <table class="{@type}">
             <xsl:apply-templates/>
         </table>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="TEI:table[@type='index']/TEI:row">
         <tr class="index">
@@ -1085,8 +1216,52 @@
         
     </xsl:template>
     
+    <xsl:template match="TEI:table">
+        <table class="{@type}">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
     <xsl:template match="TEI:table[@type='plain']/TEI:row">
         <tr class="plain">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:table[@type='synopsis']">
+        <table class="synopsis">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='synopsis']/TEI:row">
+        <tr class="synopsis">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='synopsis']/TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="synopsis" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="synopsis" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="synopsis">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template-->
+    
+    <xsl:template match="TEI:table[@type='subscription']/TEI:row">
+        <tr class="subscription">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
@@ -1097,54 +1272,45 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@type='subscription']/TEI:row">
-        <tr class="subscription">
-            <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <!--
-    <xsl:template match="TEI:row[@type='head']/TEI:cell">        
-        <td class="cell">
-            <xsl:apply-templates/>
-        </td>
-    </xsl:template>
-   
-    
-    <xsl:template match="TEI:cell">
+    <xsl:template match="TEI:table[@type='subscription']//TEI:cell">
         <xsl:choose>
-            <xsl:when test="@corresp">
-                <td class="{@rend}">
-                    <a class="index">
-                        <xsl:apply-templates/>
-                    </a>
+            <xsl:when test="@rows">
+                <td class="subscription" rowspan="{@rows}">
+                    <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="{@rend}" colspan="{@cols}">
-                    <a class="index" href="#{@target}">
-                        <xsl:apply-templates/>
-                    </a>
-                </td>
-            </xsl:when>
-            <xsl:when test="@n">
-                <td>
-                    <span class="number">
-                        <xsl:value-of select="@n"/>
-                        &#x2003;
-                    </span>
+                <td class="subscription" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="{@rend}">
+                <td class="subscription">
                     <xsl:apply-templates/>
                 </td>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-     -->
+    <xsl:template match="TEI:table[@type='synopsis']//TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="synopsis" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="synopsis" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="synopsis">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
     <!-- table END -->
     
