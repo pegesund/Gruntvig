@@ -69,6 +69,12 @@
         font-style: italic;        
         }
 
+#tekst_innhold .descList
+        {
+        font-style: italic;
+        margin-left: -1.5em;
+        }
+
 #tekst_innhold .num, #tekst_innhold .vol
         {
         font-style: normal;
@@ -610,6 +616,62 @@ td.index:last-child
 
 /* table index END */
 
+/* table type subscription START */
+
+#tekst_innhold table.subscription
+        {
+        border-collapse: collapse;
+        empty-cells: show;
+        font-size: 100%;
+        margin: 2em 0em 0em 0em;
+        width: 100%;
+        }
+
+#tekst_innhold table.subscription, #tekst_innhold tr.subscription, #tekst_innhold td.subscription
+        {
+        border: 1px solid black;        
+        text-align: center;
+        padding: 10px;
+        }
+
+#tekst_innhold tr.subscription
+        {
+        font-size: 14px;
+        line-height: 100%;
+        }
+
+#tekst_innhold tr.subscription:nth-child(3) > td.subscription
+        {
+        height: 40em;
+        }
+
+#tekst_innhold td.subscription
+        {
+        margin-left: -2em;
+        }
+
+/* table type subscription END */
+
+/* table synopsis START */
+
+#tekst_innhold table.synopsis
+        {
+        border-collapse: collapse;
+        empty-cells: show;
+        font-size: 100%;
+        margin: 2em 0em 0em 0em;
+        width: 100%;
+        }
+
+#tekst_innhold table.synopsis, #tekst_innhold tr.synopsis, #tekst_innhold td.synopsis
+        {
+        border: 0px solid black;
+        text-align: left;
+        padding: 2px;
+        }
+
+/* table synopsis END */
+        
 #tekst_innhold .motto
         {
         font-size: 80%;
@@ -920,6 +982,11 @@ td.index:last-child
     padding: 5px;
     width: 100%;
     }
+    
+.pdf        {background-image: url(../img/pdficon_small.png);
+             padding-left: 20px;
+             background-repeat: no-repeat;
+             background-position: left center;}
 
 .pdf
     {
