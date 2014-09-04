@@ -153,6 +153,11 @@
         font-size: 80%;
         margin: 1em 0em 1em 2em;
         }
+        
+a.endNote
+        {
+        color: red;
+        }
 
 /* marginNote START */
                  
@@ -665,6 +670,7 @@ td.index:last-child
 
 #tekst_innhold table.synopsis, #tekst_innhold tr.synopsis, #tekst_innhold td.synopsis
         {
+        border-collapse: collapse;
         border: 0px solid black;
         text-align: left;
         padding: 2px;
