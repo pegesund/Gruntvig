@@ -19,7 +19,7 @@
                 <div class="kolofonTitle">
                         <xsl:choose>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                N.F.S. Grundtvig
+                                X.F.S. Grundtvig
                                 <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
                             </xsl:when>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
