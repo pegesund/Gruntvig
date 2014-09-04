@@ -1,8 +1,34 @@
 CompilerOracle: exclude jregex/Pretokenizer.next
 Listening for transport dt_socket at address: 8000
-15:20:49,671 INFO  ~ Starting /home/ksr/NetBeansProjects/Gruntvig
-15:20:50,248 WARN  ~ You're running Play! in DEV mode
-15:20:50,435 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-15:21:54,761 WARN  ~ The path for a staticDir route must end with / (GET /doc -> staticDir:javadoc)
-15:21:59,327 INFO  ~ Connected to jdbc:h2:/home/ksr/NetBeansProjects/Gruntvig/db/h2/play;MODE=MYSQL
-15:22:00,422 INFO  ~ Application 'gruntvig' is now started !
+10:39:12,486 INFO  ~ Starting /home/ksr/NetBeansProjects/Gruntvig
+10:39:13,100 WARN  ~ You're running Play! in DEV mode
+10:39:13,162 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+10:39:30,561 WARN  ~ The path for a staticDir route must end with / (GET /doc -> staticDir:javadoc)
+10:39:33,253 INFO  ~ Connected to jdbc:h2:/home/ksr/NetBeansProjects/Gruntvig/db/h2/play;MODE=MYSQL
+10:39:34,206 INFO  ~ Application 'gruntvig' is now started !
+Starting upload of: null
+10:39:35,280 ERROR ~ 
+
+@6jdci4np3
+Internal Server Error (500) for request GET /uploadxml/uploadfile
+
+Execution exception (In /app/controllers/UploadXml.java around line 42)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UploadXml.uploadFile(UploadXml.java:42)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Starting upload of: testxxx
+Epub name: 1804_28_txt.xml
+No variant found
+File: /home/ksr/NetBeansProjects/Gruntvig/tmp/uploads/1409733643470_0000000000/epub/1804_28_txt.xml
+File-type: root
+/home/ksr/NetBeansProjects/Gruntvig/public/xml/1804_28_txt.xml (Ingen sådan fil eller filkatalog) in the specified directory.
