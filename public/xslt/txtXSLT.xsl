@@ -743,7 +743,7 @@
                     <xsl:value-of select="@type"/>
                 </xsl:attribute> 
           </xsl:if>
-            <div class="chapter">
+            <div>
                 <xsl:if test="//TEI:note[@type='marginNote']">
                     <xsl:attribute name="class">mainColumn</xsl:attribute>
                 </xsl:if>
@@ -1213,8 +1213,43 @@
                 <xsl:apply-templates/>
             </a>
         </td>
-        
     </xsl:template>
+    
+    <xsl:template match="TEI:ref[@type='endNote']">
+        <xsl:variable name="id" select="@n"/>
+        <a id="retur{$id}" href="#note{$id}" class="endNote">
+            <xsl:value-of select="$id"/>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='endNote']">
+        <xsl:variable name="id" select="@n"/>
+        <a id="note{$id}" href="#retur{$id}" class="endNote">
+            <xsl:value-of select="@n"/>
+        </a>               
+        <div>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:ref[@type='endNote']">
+        <a class="endNote">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="TEI:ref[@type='endNote']">
+        <xsl:variable name="chp-id">
+            <xsl:for-each select="//TEI:div[TEI:note[@n=current()/../@n]]">
+                <xsl:number level="any"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <td class="index">
+            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
+                <xsl:apply-templates/>
+            </a>
+        </td>
+    </xsl:template-->
     
     <xsl:template match="TEI:table">
         <table class="{@type}">
