@@ -347,21 +347,44 @@
     </xsl:template>
     
     <xsl:template match="TEI:table">        
-        <table>
+        <table class="{@rend}">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
     
     <xsl:template match="TEI:row">        
-        <tr>
-            <xsl:apply-templates/>
-        </tr>
+        <xsl:choose>
+            <xsl:when test="@rend">
+                <tr class="{@rend}">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:otherwise>
+                <tr>
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:cell">        
-        <td>
-            <xsl:apply-templates/>
-        </td>
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td>
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
