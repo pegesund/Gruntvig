@@ -37,7 +37,19 @@
                 </div>
                 <div class="author">
                     <xsl:text>ved </xsl:text>
-                    <xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author"/>
+                    <xsl:for-each select="//TEI:author">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="following-sibling::TEI:author">
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::TEI:author[position()!=last()]">
+                                    <xsl:text>, </xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text> og </xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:if>
+                    </xsl:for-each>
                 </div>
                 </div>
                 <xsl:choose>
