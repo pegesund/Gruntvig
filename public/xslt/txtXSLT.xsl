@@ -889,15 +889,15 @@
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
-        <div class="{@rend}">
+        <p class="{@rend}">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend='hangingIndent']">        
-        <div class="hangingIndent">
+        <p class="hangingIndent">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
