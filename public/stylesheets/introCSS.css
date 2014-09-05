@@ -1,9 +1,8 @@
-/* KSR: 
-2012.04.11: minus kursiv readMore plus
-2011.03.30: 
-*//* table START */
+/* KSR for Grundtvigs Værker */
 
-.innledningContent table.source
+/* table START */
+
+.innledningContent table.msDesc, .innledningContent table.textualCriticism, .innledningContent table.printDesc, .innledningContent table.contentDesc, .innledningContent table.source
         {
         font-size: 14px;
         line-height: 150%;
@@ -112,6 +111,7 @@
 
 .innledningContent .center
         {
+        color: blue;
         text-align: center;
         }
 
