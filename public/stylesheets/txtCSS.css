@@ -217,6 +217,12 @@ a.endNote
 
 /* head start */
 
+#tekst_innhold p.center
+        {
+        text-align: center;
+        margin: 2em 0em 2em 0em;
+        }
+
 #tekst_innhold .head0, .head1, .head2, .head3, .head4, .head5, .head6   
         {
         text-align: center;
@@ -743,6 +749,11 @@ td.index:last-child
 #tekst_innhold .size-1
         {
          font-size: 80%;
+        }
+
+#tekst_innhold .spaceOne, #tekst_innhold .spaceTow
+        {
+        text-align: justify;
         }
 
 #tekst_innhold .spaceOne
