@@ -355,11 +355,39 @@ a.docIn:hover
         {
         line-height: 300%;
         }
-
+/*
 .mainTxr .quote, .unQuote
         {
         margin: 1em 0em 1em 0em
         }
+*/
+
+/* p rend quote START */
+        
+.mainTxr .quote, .mainTxr .quoteFirst, .mainTxr .quoteCenter, .mainTxr .unQuote
+        {
+        font-size: 90%;
+        line-height: 150%;
+        margin: 1em 2em 1em 2em;
+        }
+        
+.mainTxr .quote
+        {
+        text-indent: 0em;
+        }
+        
+.mainTxr .quoteFirst
+        {
+        text-indent: 2em;
+        }
+        
+.mainTxr .quoteCenter
+        {
+        text-align: center;
+        }
+        
+        
+/* p rend quote END */
 
 /* table START */
 
