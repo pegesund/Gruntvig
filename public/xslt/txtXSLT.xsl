@@ -13,8 +13,7 @@
 
     <xsl:template match="TEI:TEI">
         
-        <meta name="description" content="Læs nyheder og seneste nyt fra Danmark og udlandet. Mest læste nyheder, politik, sport, business, kultur og vejret - Berlingske." />
-
+       
         <div class="rootText">
                 <div class="kolofonBlad">
                     
