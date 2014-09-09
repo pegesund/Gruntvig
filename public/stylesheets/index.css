@@ -150,7 +150,7 @@ td.sjNummer
         }
 
 td.returnTop 
-        {
+        {it 
         border: 0px solid blue;
         text-align: right;
         width: 1%;
