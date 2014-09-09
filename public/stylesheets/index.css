@@ -150,7 +150,7 @@ td.sjNummer
         }
 
 td.returnTop 
-        {it 
+        {
         border: 0px solid blue;
         text-align: right;
         width: 1%;
@@ -1604,13 +1604,44 @@ h1.subtitle { margin-left: 0px !important; }
 
 /* Veiledninger START */
 
-#veiledning_tekst ol, #veiledning_tekst ul, #intro_tekst ol, #intro_tekst ul {
-    font-size: 1.6em;
-    line-height: 1.6em;
-    list-style: none outside none;
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
+#intro_tekst ol, #intro_tekst ul
+        {
+        font-size: 1.6em;
+        line-height: 1.6em;
+        list-style: none outside none;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        }
+
+#veiledning_tekst ol.decimal
+        {
+        font-size: 16px;
+        line-height: 1.6em;
+        list-style-type: decimal;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        }
+
+#veiledning_tekst ul.simple
+        {
+        font-size: 16px;
+        line-height: 1.6em;
+        list-style-type: disc;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        }
+
+#veiledning_tekst tabel, #veiledning_tekst tr, #veiledning_tekst td
+    {
+    border: 0px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    }
+
+#veiledning_tekst td:nth-child(1)
+    {
+    width: 10%;
+    }
 
 #veiledning_tekst ul, #intro_tekst ul {
     list-style: square inside none;
@@ -1620,10 +1651,12 @@ h1.subtitle { margin-left: 0px !important; }
     list-style: decimal inside none;
 }
 
-#veiledning_tekst p, #intro_tekst p {
-    line-height: 1.3em;
-    margin: 15px 0;
-}
+#veiledning_tekst p, #intro_tekst p
+        {
+        font-size: 16px;
+        line-height: 1.3em;
+        margin: 15px 0;
+        }
 
 #veiledning_tekst h2, #intro_tekst h2 {
  font-size: 1.8em;
