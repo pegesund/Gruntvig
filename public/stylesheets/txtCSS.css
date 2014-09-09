@@ -116,16 +116,16 @@
 
 /* p indent START */
         
-#tekst_innhold div.firstIndent
+#tekst_innhold p.firstIndent
         {
         color: black;
         margin: 0em;
         line-height: 1.5em;
-        text-indent: 2em;
+        text-indent: 1em;
         text-align: justify;
         }
 
-#tekst_innhold div.noIndent
+#tekst_innhold p.noIndent
         {
         color: black;
         margin: 0em;
@@ -134,13 +134,13 @@
         text-align: justify;
         }
 
-#tekst_innhold div.firstIndentRight
+#tekst_innhold p.firstIndentRight
         {
         margin-right: 2em;
         text-align: right;
         }
         
-#tekst_innhold div.secondIndentRight
+#tekst_innhold p.secondIndentRight
         {        
         margin-right: 4em;
         text-align: right;
@@ -157,6 +157,8 @@
 a.endNote
         {
         color: red;
+        font-size: 80%;
+        text-decoration: none;
         }
 
 /* marginNote START */
