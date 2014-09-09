@@ -12,6 +12,8 @@
     <xsl:include href="popups.xsl"/>
 
     <xsl:template match="TEI:TEI">
+        
+        <meta name="description" content="Læs nyheder og seneste nyt fra Danmark og udlandet. Mest læste nyheder, politik, sport, business, kultur og vejret - Berlingske." />
 
         <div class="rootText">
                 <div class="kolofonBlad">
@@ -889,15 +891,15 @@
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
-        <div class="{@rend}">
+        <p class="{@rend}">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend='hangingIndent']">        
-        <div class="hangingIndent">
+        <p class="hangingIndent">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
@@ -1217,17 +1219,17 @@
     
     <xsl:template match="TEI:ref[@type='endNote']">
         <xsl:variable name="id" select="@n"/>
-        <a id="retur{$id}" href="#note{$id}" class="endNote">
+        <a id="endNoteRetur{$id}" href="#endNote{$id}" class="endNote" title="slutnote">
             <xsl:value-of select="$id"/>
         </a>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='endNote']">
         <xsl:variable name="id" select="@n"/>
-        <a id="note{$id}" href="#retur{$id}" class="endNote">
+        <a id="#endNote{$id}" href="endNoteRetur{$id}" class="endNote" title="slutnote">
             <xsl:value-of select="@n"/>
-        </a>               
-        <div>
+        </a>
+        <div class="endNote">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
