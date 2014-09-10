@@ -686,11 +686,11 @@ td.index:last-child
 
 /* table synopsis END */
         
-#tekst_innhold .motto
+#tekst_innhold div.motto
         {
         font-size: 80%;
-        line-height: 110%;
-        margin: 1em 0em 1em 0em;
+        line-height: 100%;
+        margin: 3em;
         }
 
 #tekst_innhold .pageNumber
