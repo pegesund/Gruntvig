@@ -1613,29 +1613,30 @@ h1.subtitle { margin-left: 0px !important; }
         margin-top: 5px;
         }
 
-#veiledning_tekst ol.decimal
+#veiledning_tekst ol.decimal, #veiledning_tekst ul.simple
         {
         font-size: 16px;
         line-height: 1.6em;
-        list-style-type: decimal;
+        list-style-position: outside;
         margin-bottom: 10px;
-        margin-top: 5px;
+        margin: 2em;
+        }
+
+#veiledning_tekst ol.decimal
+        {
+        list-style-type: decimal;
         }
 
 #veiledning_tekst ul.simple
         {
-        font-size: 16px;
-        line-height: 1.6em;
         list-style-type: disc;
-        margin-bottom: 10px;
-        margin-top: 5px;
         }
 
 #veiledning_tekst tabel, #veiledning_tekst tr, #veiledning_tekst td
     {
-    border: 0px solid black;
+    border: 1px solid black;
     border-collapse: collapse;
-    padding: 5px;
+    padding: 10px;
     }
 
 #veiledning_tekst td:nth-child(1)
@@ -1651,7 +1652,14 @@ h1.subtitle { margin-left: 0px !important; }
     list-style: decimal inside none;
 }
 
-#veiledning_tekst p, #intro_tekst p
+#veiledning_tekst p
+        {
+        font-size: 16px;
+        line-height: 1.3em;
+        margin: 15px 0;
+        }
+
+#intro_tekst p
         {
         font-size: 16px;
         line-height: 1.3em;
