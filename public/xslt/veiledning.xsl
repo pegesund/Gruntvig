@@ -71,6 +71,7 @@
     </xsl:template>
 
     <xsl:template match="TEI:p">
+            <!--xsl:number count="TEI:p" level="any" from="TEI:body"/-->
         <p class="veiledning">
             <xsl:apply-templates/>
         </p>
