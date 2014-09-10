@@ -611,6 +611,16 @@
     
     <!-- titelblad END -->
     
+    <!-- motto START -->
+    
+    <xsl:template match="TEI:div1[@type='motto']">        
+        <div class="motto">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <!-- motto END -->
+    
     <xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
