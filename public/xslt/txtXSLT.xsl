@@ -1168,28 +1168,35 @@
     
     <!-- bibleStart and bibleEnd END -->
     
-    <xsl:template match="TEI:rs[@type='myth']">
+    <xsl:template match="TEI:rs[@type='myth' or @type='mythStart' or @type='mythEnd']">
         <xsl:choose>
-            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
-                <span>
+            <xsl:when test="//TEI:noteStmt/TEI:note[@type='noMyth']">
+                <span class="noMyth">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
-            <xsl:otherwise>
+            <xsl:when test="@type='mythStart'">
                 <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    &#x25BA;
                     <xsl:apply-templates/>
                 </a>
+            </xsl:when>
+            <xsl:when test="@type='mythEnd'">
+                <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    &#x25C4;
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="rs_myth">
+                    <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                        <xsl:apply-templates/>
+                    </a>
+                </span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-    <!--
-    <xsl:template match="TEI:rs[@type='myth']">
-        <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-    -->
     <!--
     <xsl:template match="TEI:rs[@type='title']">
         <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
