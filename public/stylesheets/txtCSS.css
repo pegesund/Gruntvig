@@ -196,7 +196,7 @@ a.endNote
 
 #tekst_innhold .engraver
         {
-        font-size: 60%;
+        font-size: 80%;
         margin: 2em 0em 2em 0em;
         text-align: center;
         }
@@ -753,17 +753,17 @@ td.index:last-child
          font-size: 80%;
         }
 
-#tekst_innhold .spaceOne, #tekst_innhold .spaceTow
+#tekst_innhold p.spaceOne, #tekst_innhold p.spaceTow
         {
         text-align: justify;
         }
 
-#tekst_innhold .spaceOne
+#tekst_innhold p.spaceOne
         {
         line-height: 200%;
         }
         
-#tekst_innhold .spaceTwo
+#tekst_innhold p.spaceTwo
         {
         line-height: 300%;
         }
