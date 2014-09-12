@@ -495,7 +495,7 @@ public class Asset extends GenericModel {
         } else if (type.equals(Asset.bibleType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "bibleXSLT.xsl");
         } else if (type.equals(Asset.registranten)) {
-            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "varListXSLT.xsl");
+            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "regListXSLT.xsl");
         } else if (type.equals(Asset.txrType)) {
             html = fixHtml(Asset.xmlRefToHtml(copiedFile, "txrXSLT.xsl"));
             preName= "Tekstred. til ";
