@@ -21,41 +21,27 @@
             </head>
             <body>
                 
-                <div class="head">
-                    <xsl:apply-templates select="//TEI:title"/>
-                </div>
+                <!--<xsl:apply-templates select="TEI:text"/>-->
                 
-                <xsl:apply-templates select="TEI:text"/>
                 
+                <xsl:for-each select="//TEI:list">
+                    <xsl:sort select="TEI:head"/>
+                    <div class="regList">
+                        <xsl:value-of select="TEI:head"/>
+                    </div>
+                    <ul>
+                        <xsl:for-each select="TEI:item">
+                            <a href="{@corresp}" target="_blank" class="reg">
+                                <li class="simple">
+                                    <xsl:apply-templates/>
+                                </li>
+                            </a>
+                        </xsl:for-each>
+                    </ul>
+                </xsl:for-each>
             </body>
         </html>
         
-    </xsl:template>   
-    
-    <xsl:template match="TEI:table">
-        <table>
-            <xsl:apply-templates/>
-        </table>
-    </xsl:template>
-    
-    <xsl:template match="TEI:head">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>     
-    </xsl:template>
-    
-    <xsl:template match="TEI:row">
-        <tr class="row">
-            <xsl:apply-templates/>
-        </tr>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell">
-        <td class="simple">
-            <a href="{@corresp}" target="_blank" class="reg">
-                <xsl:apply-templates/>
-            </a>
-        </td>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
