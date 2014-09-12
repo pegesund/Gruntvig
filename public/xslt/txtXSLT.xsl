@@ -540,6 +540,12 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="TEI:figure[@type='engraver']">
+        <div class="engraver">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:div1[@type]">
         <div1 class="{@type}">
             <xsl:apply-templates/>
