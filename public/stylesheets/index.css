@@ -27,11 +27,21 @@ html {
 
 }
 
+/* regList START */
+
 div.regList
         {
         font-size: 18px;
         margin: 1em 0em 1em 0em;
         }
+        
+span.raised
+        {
+        font-size: 80%;
+        vertical-align: top;
+        }
+
+/* regList END */
 
 /*frontpage START */
 
