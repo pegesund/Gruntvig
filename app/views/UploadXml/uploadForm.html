@@ -8,18 +8,22 @@
     
     <br/>
     
-<p>Udfyld skemaet</p>
-
-<form id="ny_xml_fil_form" action="@{UploadXml.uploadFile()}" method="POST" enctype="multipart/form-data">
-    <label>1. Navn</label><br/>
-    <input type="text" name="filesname" /> <br/>
-    <label>2. Kommentar (valgfrit) </label><br/>
-    <input type="text" name="comment" /> <br/>
-
-    <label>3. Vælg fil</label><br/>
-    <input type="file" name="epub" /> <br/>
+    <p>Udfyld skemaet</p>
     
-    <input type="submit" value="Upload fil" />
-</form>
-<p>#{a @Admin.listXmlFiles()}&laquo; Tilbake#{/a}</p>
+    <form id="ny_xml_fil_form" action="@{UploadXml.uploadFile()}" method="POST" enctype="multipart/form-data">
+        <label>1. Navn</label><br/>
+        <input type="text" name="filesname" />
+        <br/>
+        <label>2. Kommentar (valgfrit) </label>
+        <br/>
+        <input type="text" name="comment" /> 
+        <br/>
+        <label>3. Vælg fil</label>
+        <br/>
+        <input type="file" name="epub" /> 
+        <br/>        
+        <input type="submit" value="Upload fil" />
+    </form>
+    
+    <p>#{a @Admin.listXmlFiles()}&laquo; Tilbake#{/a}</p>
 </div>
