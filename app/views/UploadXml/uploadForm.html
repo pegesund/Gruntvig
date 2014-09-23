@@ -4,15 +4,15 @@
     <h4 class="admin">GV &raquo; Administrasjon &raquo;</h4>
     <h2 class="admin">Last opp ny fil</h2>
 <br/>
-<p>Vennligst fyll inn skjemaet</p>
+<p>Udfyld skemaet</p>
 
 <form id="ny_xml_fil_form" action="@{UploadXml.uploadFile()}" method="POST" enctype="multipart/form-data">
     <label>1. Navn</label><br/>
     <input type="text" name="filesname" /> <br/>
-    <label>2. Kommentar (valgfritt) </label><br/>
+    <label>2. Kommentar (valgfrit) </label><br/>
     <input type="text" name="comment" /> <br/>
 
-    <label>3. Velg fil</label><br/>
+    <label>3. Vælg fil</label><br/>
     <input type="file" name="epub" /> <br/>
     
     <input type="submit" value="Last opp fil" />
