@@ -993,10 +993,10 @@ td.index:last-child
 
 /* figure/illustationer START */
 
-#tekst_innhold img.imageMyth
+#tekst_innhold div.imageMyth
     {
-    border: 1px solid black;
-    margin: 1em 0em 1em 0em;
+    border: 0px solid black;
+    margin: 1em 0em 2em 0em;
     height: 100%;
     padding: 5px;
     width: 100%;
