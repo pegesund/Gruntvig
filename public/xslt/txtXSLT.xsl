@@ -167,10 +167,6 @@
                                                             <xsl:apply-templates select="TEI:desc"/>
                                                             <xsl:text>, </xsl:text>
                                                         </span>
-                                                        <span class="desc">
-                                                            <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
-                                                        </span>
                                                         <xsl:for-each select="TEI:num">
                                                             <xsl:value-of select="."/>
                                                             <xsl:if test="following-sibling::TEI:num">
@@ -186,10 +182,6 @@
                                                         </xsl:for-each>
                                                     </xsl:when>
                                                     <xsl:when test="@xml:id='VU'">
-                                                        <span class="desc">
-                                                            <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
-                                                        </span>
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
                                                             <xsl:text>, </xsl:text>
@@ -236,7 +228,19 @@
                                                         <xsl:text> </xsl:text>
                                                     </span>
                                                     <span class="vol">
-                                                        <xsl:apply-templates select="TEI:num"/>
+                                                        <xsl:for-each select="TEI:num">
+                                                            <xsl:value-of select="."/>
+                                                            <xsl:if test="following-sibling::TEI:num">
+                                                                <xsl:choose>
+                                                                    <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                        <xsl:text>, </xsl:text>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:text> og </xsl:text>
+                                                                    </xsl:otherwise>
+                                                                </xsl:choose>
+                                                            </xsl:if>
+                                                        </xsl:for-each>
                                                     </span>
                                                 </td>
                                             </tr>
