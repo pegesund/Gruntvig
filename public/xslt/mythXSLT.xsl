@@ -43,6 +43,15 @@
                 </div>
             </xsl:if>
             <xsl:choose>
+                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
+                    <i><xsl:text>Latinsk form: </xsl:text></i>
+                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
+                        <span>
+                            <xsl:apply-templates select="./TEI:cell[@rend='saxo']/text()"/>
+                            <xsl:call-template name="fullStop"/>
+                        </span>
+                    </xsl:for-each> 
+                </xsl:when>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                     <i><xsl:text>Kaldes også: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
@@ -59,22 +68,13 @@
                             <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
-                    </xsl:for-each>                    
+                    </xsl:for-each>
                 </xsl:when>
                 <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
                     <i><xsl:text>I romersk mytologi: </xsl:text></i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
                         <span>
                             <xsl:apply-templates select="./TEI:cell[@rend='latin']/text()"/>
-                            <xsl:call-template name="fullStop"/>
-                        </span>
-                    </xsl:for-each> 
-                </xsl:when>
-                <xsl:when test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
-                    <i><xsl:text>Latinsk form: </xsl:text></i>
-                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id]">
-                        <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='saxo']/text()"/>
                             <xsl:call-template name="fullStop"/>
                         </span>
                     </xsl:for-each> 
@@ -108,9 +108,9 @@
             <xsl:otherwise><xsl:text>, </xsl:text></xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-
     
-    <xsl:template match="TEI:cell[@rend='normForm']">
+    
+    <xsl:template match="TEI:cell[@rend='normForm' or @rend='patronym']">
         <div class="{@rend}">
             <xsl:variable name="theId" select="../@xml:id"/>
             <a href="myter#{$theId}">
