@@ -482,6 +482,12 @@
             </div>
     </xsl:template>
     
+    <xsl:template match="TEI:body[@style='romanType']">
+        <div style="font-family: sans-serif">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:lb">        
         <br>
             <xsl:apply-templates/>
