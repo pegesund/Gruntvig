@@ -482,12 +482,6 @@
             </div>
     </xsl:template>
     
-    <xsl:template match="TEI:body[@style='romanType']">
-        <div style="font-family: sans-serif">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
     <xsl:template match="TEI:lb">        
         <br>
             <xsl:apply-templates/>
@@ -1265,25 +1259,6 @@
         </div>
     </xsl:template>
     
-    <!--xsl:template match="TEI:ref[@type='endNote']">
-        <a class="endNote">
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-    
-    <xsl:template match="TEI:ref[@type='endNote']">
-        <xsl:variable name="chp-id">
-            <xsl:for-each select="//TEI:div[TEI:note[@n=current()/../@n]]">
-                <xsl:number level="any"/>
-            </xsl:for-each>
-        </xsl:variable>
-        <td class="index">
-            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
-                <xsl:apply-templates/>
-            </a>
-        </td>
-    </xsl:template-->
-    
     <xsl:template match="TEI:table">
         <table class="{@type}">
             <xsl:apply-templates/>
@@ -1522,7 +1497,16 @@
     
     <!-- drama END -->
     
-    <!-- back START -->  
+    <!-- back START 
+    
+    
+    <xsl:template match="TEI:body[@style='romanType']">
+        <div style="font-family: sans-serif">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    -->  
     
     <xsl:template match="TEI:back//TEI:div"> <!-- div i div i back, KSR 2014.06.12 -->
         <div class="chapter">
