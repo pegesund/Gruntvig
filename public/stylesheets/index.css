@@ -15,7 +15,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-style: inherit;
 	font-size: 100%;
 	font-family: inherit;
-	vertical-align: baseline;
+	vertical-align: baseline;        
+        
 }
 /* remember to define focus styles! */
 :focus {
@@ -181,7 +182,12 @@ a.returnTop
         
 /* Main structure 978px*/
 
-.container {width:1100px; margin: 0 auto; }
+.container
+        {
+        width:1100px; 
+        margin: 0 auto; 
+        }
+
 #header {width:100%; height: 160px; background: #2c2c2c url(../img/bg_header.png) no-repeat 0 0; }
 #header_small {width:100%; height: 79px; background: transparent url(../img/bg_header.png) no-repeat 0 0;}
 #main {padding: 1px 0 0 0; height: 400px; background:url("../img/hvit_fade.png") repeat-x scroll 0 0 transparent; }
@@ -396,7 +402,7 @@ a.returnTop
 
 
 
-/* Hovedtekst START */
+/* Hovedtekst START 387 */
 
 #tekst_innhold
         {
@@ -426,7 +432,21 @@ a.returnTop
 /* Hovedtekst END */
 
 /* Høyre kolonne */
-#høyre_innhold{ float:left; width:405px; height:642px; background: #f4f4f4; border: 1px solid #e2e2e2; border-top:0px; overflow:auto; padding:15px 25px 12px 25px; font-size: 1.4em; font-family: arial, myriad-pro, sans-serif; color: #444; line-height: 1.5em; }
+#høyre_innhold
+        {
+        float:left; 
+        width:405px; 
+        height:642px; 
+        background: #f4f4f4; 
+        border: 1px solid #e2e2e2; 
+        border-top:0px; 
+        overflow:auto; 
+        padding:15px 25px 12px 25px; 
+        font-size: 1.4em; 
+        font-family: arial, myriad-pro, sans-serif; 
+        color: #444; 
+        line-height: 1.5em; 
+        }
 #høyre_innhold h2 {font-family: arial, myriad-pro, sans-serif; font-size: 1.4em; margin: 15px 0 4px 0;} /* Undertittel */
 #høyre_innhold h3 {font-family: arial, myriad-pro, sans-serif; font-size: 1.2em; margin: 16px 0 4px 0; line-height:1em;} /* Underundertittel */
 
@@ -948,12 +968,69 @@ html[xmlns] #nav {
 
 	#underside_innhold {min-height:600px;}
 	#underside_innhold .kolonne1 {float:left; width:225px; margin:5px 26px 0 0; min-height:600px;}
-	#underside_innhold .kolonne2 {float:left; width:475px;  margin:5px 26px 0 0; min-height:600px;}
+	#underside_innhold .kolonne2 {float:left; width:275px;  margin:5px 26px 0 0; min-height:600px;}
 	#underside_innhold .kolonne3 {display:none; float:right; width:223px; background:#fff; margin:5px 0px 0 0; min-height:200px; border:1px solid #eee;}
+        
 
+        
 	/* Kolonne 1 (meny) */
+        
+/* box right START  */
 
-	#kolonne1_meny {margin:0px 0; font-size:1.6em;}
+#underside_innhold .kolonne_right 
+        {
+        float: right; 
+        width: 225px; 
+        margin: 5px 0px 0 0; 
+        min-height: 200px; 
+        border: 0px solid black;
+        }
+
+#kolonne1_meny li.right
+        { 
+        color:#666; 
+        font-family: georgia, garamond, serif; 
+        padding: 11px 15px 10px 15px; 
+        background: #ddd; 
+        width: 195px; 
+        font-size:0.9em; 
+        margin-top:20px;
+        -webkit-border-top-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        border-radius-topleft: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        border-radius-topright: 5px;
+        text-shadow: 0px 1px 0 #eee;
+	} 
+        
+#kolonne1_meny li.images
+        { 
+        color: #666; 
+        font-family: georgia, garamond, serif; 
+        padding: 11px 15px 10px 15px; 
+        background: #fff; 
+        width: 194px;
+        text-transform:uppercase; 
+        font-size:0.9em; 
+        margin-top:20px;        
+        text-shadow: 0px 1px 0 #eee;
+        margin-top:0px;
+	}   
+
+#kolonne1_meny
+        {
+        margin: 0px 0; 
+        font-size: 1.6em;
+        }
+        
+/* box right End !!!! */   
+
+#kolonne1_meny
+        {
+        margin: 0px 0; 
+        font-size: 1.6em;
+        }
         
 #kolonne1_meny li
         {
@@ -965,11 +1042,13 @@ html[xmlns] #nav {
         font-size:1.00em;
         }
         
-	#kolonne1_meny li ul {margin:0px 0 0 0px;}
+#kolonne1_meny li ul {margin:0px 0 0 0px;}
 
-	#kolonne1_meny li ul li { border-top: 1px solid #fff; border-bottom: 1px solid #ddd; font-size:0.95em;}
-	#kolonne1_meny li ul li:first-child { border-top:0;}
-	#kolonne1_meny li ul li:last-child { border-bottom:0;}
+#kolonne1_meny li ul li { border-top: 1px solid #fff; border-bottom: 1px solid #ddd; font-size:0.95em;}
+
+#kolonne1_meny li ul li:first-child { border-top:0;}
+
+#kolonne1_meny li ul li:last-child { border-bottom:0;}
 
 #kolonne1_meny li.header
         { 
@@ -1006,8 +1085,7 @@ html[xmlns] #nav {
         width: 191px;
         text-transform:uppercase; 
         font-size:0.9em; 
-        margin-top:20px;
-        
+        margin-top:20px;        
         text-shadow: 0px 1px 0 #eee;
         margin-top:0px;
 	}
@@ -1311,8 +1389,9 @@ span.pbA, span.pbMs
 
 #liste table 
     {
-    float:left;
-    border-collapse:collapse;
+    empty-cells: show;
+    float: left;
+    border-collapse: collapse;
     }
     
 #liste tr 
@@ -1341,12 +1420,15 @@ span.pbA, span.pbMs
     }
 
 #liste .navn
-        {
+        {        
         width: 200px;
-        font-size: 1.1em;
+        font-size: 16px;
         }
         
-#liste .definisjon {width: 410px;}
+#liste .definisjon
+    {
+    width: 410px;
+    }
 
 /*#liste .definisjon a {font-size:0.9em;padding-left: 2px; }*/
 
