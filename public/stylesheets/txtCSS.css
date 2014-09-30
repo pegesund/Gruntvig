@@ -116,7 +116,7 @@
 
 /* p indent START */
         
-#tekst_innhold p.firstIndent
+#tekst_innhold div.firstIndent
         {
         color: black;
         margin: 0em;
@@ -125,7 +125,7 @@
         text-align: justify;
         }
 
-#tekst_innhold p.noIndent
+#tekst_innhold div.noIndent
         {
         color: black;
         margin: 0em;
@@ -134,13 +134,13 @@
         text-align: justify;
         }
 
-#tekst_innhold p.firstIndentRight
+#tekst_innhold div.firstIndentRight
         {
         margin-right: 2em;
         text-align: right;
         }
         
-#tekst_innhold p.secondIndentRight
+#tekst_innhold div.secondIndentRight
         {        
         margin-right: 4em;
         text-align: right;
@@ -176,7 +176,7 @@ a.endNote
 #tekst_innhold .marginNote
         {
         font-size: 80%;
-        margin: 0px -50px 0 10px;
+        margin: 0px -70px 0 10px;
         text-indent: 0;
         text-align: left;
         width: 40px;
@@ -219,7 +219,7 @@ a.endNote
 
 /* head start */
 
-#tekst_innhold p.center
+#tekst_innhold div.center
         {
         text-align: center;
         margin: 2em 0em 2em 0em;
@@ -753,17 +753,17 @@ td.index:last-child
          font-size: 80%;
         }
 
-#tekst_innhold p.spaceOne, #tekst_innhold p.spaceTow
+#tekst_innhold div.spaceOne, #tekst_innhold div.spaceTow
         {
         text-align: justify;
         }
 
-#tekst_innhold p.spaceOne
+#tekst_innhold div.spaceOne
         {
         line-height: 200%;
         }
         
-#tekst_innhold p.spaceTwo
+#tekst_innhold div.spaceTwo
         {
         line-height: 300%;
         }
