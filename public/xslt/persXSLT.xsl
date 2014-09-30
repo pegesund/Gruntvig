@@ -56,11 +56,10 @@
             <xsl:apply-templates select="tei:cell[@rend='name']"/>
         </div>
         <xsl:apply-templates select="tei:cell[@rend='altName']"/>
-    </xsl:template>
+    </xsl:template>    
     
     <xsl:template match="tei:note[@type='firstName']">
-        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original' and @type!='patronym' and @type='!
-metronym']"/>
+        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original']"/><!--  and @type!='patronym' and @type!='metronym' -->
     </xsl:template>
     
     <xsl:template match="tei:note[@type='lastName']">
@@ -153,6 +152,11 @@ metronym']"/>
                 <xsl:text>, </xsl:text>
             </xsl:if>
             <xsl:if test="@type='patronym'">
+                <xsl:text> egl. </xsl:text>
+                <xsl:apply-templates/>
+                <xsl:text>, </xsl:text>
+            </xsl:if>
+            <xsl:if test="@type='metronym'">
                 <xsl:text> egl. </xsl:text>
                 <xsl:apply-templates/>
                 <xsl:text>, </xsl:text>
