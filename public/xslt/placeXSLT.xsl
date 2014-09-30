@@ -88,6 +88,7 @@
     <xsl:template match="TEI:cell[@rend='altNameSyn']" mode="comma-sep">
       <xsl:if test="position()=1"> (</xsl:if>
       <xsl:apply-templates/>
+        <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
       <xsl:choose>
           <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')]">
             <xsl:text>, </xsl:text>
