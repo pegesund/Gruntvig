@@ -19,9 +19,30 @@ div.fact {
     padding-left: 10px;
 }
 
-.placelook #liste .navn {
-    width: 300px;
-}
+#liste table
+        {
+        border: 0px solid black;
+        empty-cells: show;
+        float: left;
+        border-collapse: collapse;
+        width: 60em;
+        }
+
+td.navn
+        {
+        border: 0px solid black;
+        paddin-left: 1em;
+        }
+        
+.explanation
+        {
+        border: 0px solid red;
+        color: gray;
+        margin-left: 1em;
+        text-align: left;
+        width: 40em;
+        padding-left: 10px;
+        }
 
 .placelook a {
     color: blue;
@@ -30,7 +51,8 @@ div.fact {
         
 .placeName
         {
-        color: blue
+        color: #4DBC4C;
+        font-size: 16px;
         }
         
 .altNameSyn
@@ -48,9 +70,7 @@ div.fact {
         color: gray;
         }
         
-.explanation
-        {
-        color: gray;
-        width: 400px;
-        padding-left: 10px;
-        }
+#liste .definisjon
+    {
+    width: 40em;
+    }
