@@ -31,7 +31,7 @@
             <xsl:if test="TEI:cell[@rend='orthography']">
                 <div>
                     <i>
-                        <xsl:text>Staves også:</xsl:text>
+                        <xsl:text>Staves også: </xsl:text>
                     </i>
                     <xsl:for-each select="TEI:cell[@rend='orthography']">
                         <xsl:apply-templates select="."/>
