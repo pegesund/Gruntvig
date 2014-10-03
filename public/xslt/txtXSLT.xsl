@@ -909,15 +909,15 @@
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
-        <div class="{@rend}">
+        <p class="{@rend}">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend='hangingIndent']">        
-        <div class="hangingIndent">
+        <p class="hangingIndent">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
@@ -1236,23 +1236,30 @@
             </xsl:for-each>
         </xsl:variable>
         <td class="index">
-            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
-                <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
                 <xsl:apply-templates/>
             </a>
         </td>
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type='endNote']">
-        <xsl:variable name="id" select="@n"/>
-        <a id="endNoteRetur{$id}" href="#endNote{$id}" class="endNote" title="slutnote">
-            <xsl:value-of select="$id"/>
-        </a>
+      <xsl:variable name="chp-id">
+        <xsl:for-each select="//TEI:div[.//TEI:note[@type='endNote' and @n=current()/@n]]"> <!-- should be 1 at most -->
+          <xsl:number level="any"/>
+        </xsl:for-each>
+      </xsl:variable>
+      <a id="endNoteRetur{@n}" class="endNote" href="#endNote{@n}" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="slutnote">
+        <xsl:value-of select="@n"/>
+      </a>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='endNote']">
-        <xsl:variable name="id" select="@n"/>
-        <a id="#endNote{$id}" href="endNoteRetur{$id}" class="endNote" title="slutnote">
+      <xsl:variable name="chp-id">
+        <xsl:for-each select="//TEI:div[.//TEI:ref[@type='endNote' and @n=current()/@n]]"> <!-- should be 1 at most -->
+          <xsl:number level="any"/>
+        </xsl:for-each>
+      </xsl:variable>
+      <a id="endNote{@n}" class="endNote" href="#endNoteRetur{@n}" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="tilbage">
             <xsl:value-of select="@n"/>
         </a>
         <div class="endNote">
