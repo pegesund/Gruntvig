@@ -909,15 +909,15 @@
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
-        <p class="{@rend}">
+        <div class="{@rend}">
             <xsl:apply-templates/>
-        </p>
+        </div>
     </xsl:template>
     
     <xsl:template match="TEI:p[@rend='hangingIndent']">        
-        <p class="hangingIndent">
+        <div class="hangingIndent">
             <xsl:apply-templates/>
-        </p>
+        </div>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
@@ -1248,7 +1248,7 @@
           <xsl:number level="any"/>
         </xsl:for-each>
       </xsl:variable>
-      <a id="endNoteRetur{@n}" class="endNote" href="#endNote{@n}" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="slutnote">
+      <a id="endNoteRetur{@n}" class="endNoteRef" chp="{$chp-id+count(//TEI:front[@rend])}" target="endNote{@n}" title="slutnote">
         <xsl:value-of select="@n"/>
       </a>
     </xsl:template>
@@ -1259,9 +1259,12 @@
           <xsl:number level="any"/>
         </xsl:for-each>
       </xsl:variable>
-      <a id="endNote{@n}" class="endNote" href="#endNoteRetur{@n}" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="tilbage">
+      <a id="endNote{@n}" class="endNoteRef" chp="{$chp-id+count(//TEI:front[@rend])}" target="endNoteRetur{@n}" title="tilbage">
+        <xsl:value-of select="@n"/>
+      </a>
+      <!--a id="endNote{@n}" class="endNote" href="#endNoteRetur{@n}" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)" title="tilbage">
             <xsl:value-of select="@n"/>
-        </a>
+        </a-->
         <div class="endNote">
             <xsl:apply-templates/>
         </div>
