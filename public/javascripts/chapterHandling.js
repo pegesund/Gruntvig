@@ -53,11 +53,12 @@ var gotoChapter = function(text, chapter) {
             chapterContent.html(data);
             $("#tekst_innhold .chapter").hide();
             fixFootnotes();
-            $("#tekst_innhold .chapter").fadeIn(3000, function() {
+            $("#tekst_innhold .chapter").fadeIn(2000, function() {
                 
                 });
             addTooltip($('.persName, .placeName, .myth, .rs_bible'));
             addCommentListener();
+            addEndNoteListener();
             fixPageNumbersToFaks();
         }
     }); 
