@@ -58,15 +58,15 @@
         }
         
 #tekst_innhold table, #tekst_innhold td    
-        {
-            
+        {            
         padding-right: 0.5em;
         padding-left: 0em;
         }
 
 #tekst_innhold .desc
         {
-        font-style: italic;        
+        font-style: italic;
+        font-size: 16px;
         }
 
 #tekst_innhold .descList
