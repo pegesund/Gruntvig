@@ -13,20 +13,29 @@
                 //$('div.person').hide();
                 $('div.root').hide();
                 
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-                
-                $.each(alphabet, function(index, value) { 
-                      
-                      // alert(index + ': ' + value);  
-                       
-                        nodes = [];
-                        $('div.row').not("div.row > div.row").each(function(index2) {
-                    
-                            name = $.trim($(this).find('span.placeAltName,span.placeName').first().text());
-                            firstLetter = name.charAt(0).toLowerCase(); 
-                           // alert(firstLetter);
-                            
-                            if(firstLetter == value){
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
+                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+                      if( a.search(/[\u0080-\uffff]/) >= 0 ) {
+                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"th").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                      }
+                      else {
+                          return a.toLowerCase();
+                          }
+                }
+                
+                $.each(alphabet, function(index, value) { 
+                      
+                      // alert(index + ': ' + value);  
+                       
+                        nodes = [];
+                        $('div.row').not("div.row > div.row").each(function(index2) {
+                    
+                            name = $.trim($(this).find('span.placeAltName,span.placeName').first().text());
+                            firstLetter = normAlfa( name.charAt(0) ); 
+                            //alert(firstLetter);
+                            //if( name.search(/me/) > 0 ) alert( firstLetter + firstLetter.toLowerCase() + normAlfa(firstLetter) + firstLetter.charCodeAt(0) + " " + name );
+                            
+                            if(firstLetter == normAlfa(value) ){
                             
                                 $(this).hide();
 
