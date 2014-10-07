@@ -17,6 +17,7 @@ $(document).ready(function() {
     if (getCurrentHash(window.location.hash)["f0"]) theUrl["f0"] = getCurrentHash(window.location.hash)["f0"];
     addNewReader(0, options);
     addCommentListener();
+    addEndNoteListener();
     resize_window();
 
     $( "#slider" ).slider({
