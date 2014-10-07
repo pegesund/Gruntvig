@@ -276,37 +276,75 @@
         </div>
     </xsl:template>
     
-    <!--
+    
     <xsl:template match="TEI:persName">
-        <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPersName']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:placeName">
-        <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPlaceName']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
-        <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='myth']">
-        <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='title']">
-        <a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+        <span>
             <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-    -->
+        </span>
+        <!--a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a-->
+    </xsl:template>    
     
     <xsl:template match="TEI:div[@type='litList' or @type='webList']">
         <div class="litList">
