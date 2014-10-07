@@ -51,7 +51,14 @@
                                     <table class="listWit">
                                         <tr>
                                             <td class="sigel">
-                                                <xsl:value-of select="@xml:id"/>
+                                                <xsl:choose>
+                                                    <xsl:when test="@xml:id='DU'">
+                                                        <xsl:text>D&amp;U</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="@xml:id"/>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>                                                
                                             </td>
                                             <td class="source">
                                                 <xsl:choose>
@@ -116,7 +123,7 @@
                                                             <xsl:apply-templates select="TEI:desc"/>
                                                         </span>
                                                     </xsl:when>
-                                                    <xsl:when test="@xml:id='D&amp;U'">
+                                                    <xsl:when test="@xml:id='DU'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
                                                             <xsl:text>, </xsl:text>
@@ -922,7 +929,7 @@
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
-            <span class="size">
+            <span class="pbSize">
             <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
@@ -931,7 +938,7 @@
     
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
-            <span class="size">
+            <span class="pbSize">
             <xsl:text>|</xsl:text>
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
             </span>
@@ -939,7 +946,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-            <span class="size">
+            <span class="pbSize">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
@@ -1215,13 +1222,13 @@
     </xsl:template>
     -->
     
-    <!-- table START 
+    <!-- table START -->
     
-    <xsl:template match="TEI:table">        
-        <table class="{@type}">
+    <xsl:template match="TEI:table[@type='cast']">        
+        <table class="cast">
             <xsl:apply-templates/>
         </table>
-    </xsl:template>-->
+    </xsl:template>
     
     <xsl:template match="TEI:table[@type='index']/TEI:row">
         <tr class="index">
