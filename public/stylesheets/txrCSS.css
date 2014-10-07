@@ -430,6 +430,11 @@ a.docIn:hover
         font-weight: bold;
         }
 
+.mainTxr table.textualCriticism td
+        {
+        padding: 3px;
+        }
+
 .mainTxr table.textualCriticism td:first-child
         {
         width: 20%;
