@@ -83,23 +83,28 @@ var addCommentListener = function() {
 
 // add scroll to comment
 
-var addEndNoteListener = function() { // KK 2014.10.06
-    $('.endNoteRef').each(function(index) {
-        var elem = $(this);
-        elem.click(function() {
-            var target = $("#"+elem.attr("target"));
-            
-            currentChapter= elem.attr("chp");
-            gotoChapter(currentTextId,currentChapter);
+var addEndNoteListener = function() { // KK 2014.10.07
+    $('.endNoteRef').each(function(index) {
+        var elem = $(this);
+        elem.click(function() {
+            var target = $("#"+elem.attr("target"));
+            
+            currentChapter= elem.attr("chp");
+            gotoChapter(currentTextId,currentChapter);
 
-            // scroll to target comment
-//            $("#tekst_innhold").scrollTo(target);
-//            $("#tekst_innhold").scrollTo("-=30px", 700);
-//
-//                        target.effect("highlight", {}, 5000); 
-        });
+            // delay scroll to target endnote at least as much as fadein in chapterhandling
+            window.setTimeout( "delayedScroll('" + elem.attr("target") + "')", 2000 );
+        });
 
-    });
+    });
+}
+
+function delayedScroll(t) { // KK 2014.10.07
+            var target = $("#"+t);           
+            // scroll to target endnote
+            $("#tekst_innhold").scrollTo(target);
+            $("#tekst_innhold").scrollTo("-=30px", 700);
+            target.effect("highlight", {}, 5000);     
 }
 
 
