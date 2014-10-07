@@ -154,11 +154,13 @@
         margin: 1em 0em 1em 2em;
         }
         
-a.endNote
+a.endNoteRef
         {
         color: red;
+        cursor: pointer;
         font-size: 80%;
         text-decoration: none;
+        vertical-align: super;
         }
 
 /* marginNote START */
@@ -175,7 +177,7 @@ a.endNote
 
 #tekst_innhold .marginNote
         {
-        font-size: 80%;
+        font-size: 56%;
         margin: 0px -70px 0 10px;
         text-indent: 0;
         text-align: left;
@@ -222,7 +224,7 @@ a.endNote
 #tekst_innhold div.center
         {
         text-align: center;
-        margin: 2em 0em 2em 0em;
+        margin: 2em 0em 0em 0em;
         }
 
 #tekst_innhold .head0, .head1, .head2, .head3, .head4, .head5, .head6   
@@ -520,6 +522,7 @@ a.endNote
         {
         font-size: 70%;
         margin-left: -2em;
+        margin-top: 0em;
         padding: 0.5em;
         width: 100%;
         }
@@ -701,7 +704,7 @@ td.index:last-child
         margin: 4em 4em 4em 4em;
         }
 
-#tekst_innhold .size
+#tekst_innhold span.pbSize
         {
         font-size: 70%;
         }
@@ -748,9 +751,14 @@ td.index:last-child
         text-align: justify;
         }
 
-#tekst_innhold .size-1
+#tekst_innhold .size-2
         {
          font-size: 80%;
+        }
+
+#tekst_innhold .size-1
+        {
+         font-size: 90%;
         }
 
 #tekst_innhold div.spaceOne, #tekst_innhold div.spaceTow
@@ -909,7 +917,7 @@ td.index:last-child
 
 #tekst_innhold .set_center, #tekst_innhold .set_firstIndent, #tekst_innhold .set_noIndent, #tekst_innhold .set_right
         {
-        font-size: 101%;
+        font-size: 100%;
         line-height: 125%;
         margin: 1em 0em 1em 0em;
         width: 100%;
@@ -958,6 +966,8 @@ td.index:last-child
         {
         text-align: left;
         vertical-align: middle;
+        padding-top: 10px;
+        padding-bottom: 10px;
         }
 
 #tekst_innhold td.role
@@ -976,17 +986,17 @@ td.index:last-child
         }
         
 #tekst_innhold .image_head
-    {
-    font-weight:bold;
-    padding-top: 30px;
-    padding-bottom: 7px;
-    }
+        {
+        font-weight:bold;
+        padding-top: 30px;
+        padding-bottom: 7px;
+        }
 
 #tekst_innhold .image_desc
-    {
-    font-style:italic;
-    padding-bottom: 15px; 
-    }
+        {
+        font-style:italic;
+        padding-bottom: 15px; 
+        }
 
 
 /* drama END */
@@ -994,13 +1004,13 @@ td.index:last-child
 /* figure/illustationer START */
 
 #tekst_innhold div.imageMyth
-    {
-    border: 0px solid black;
-    margin: 1em 0em 2em 0em;
-    height: 100%;
-    padding: 5px;
-    width: 100%;
-    }
+        {
+        border: 0px solid black;
+        margin: 1em 0em 2em 0em;
+        height: 100%;
+        padding: 5px;
+        width: 100%;
+        }
     
 .pdf        {background-image: url(../img/pdficon_small.png);
              padding-left: 20px;
