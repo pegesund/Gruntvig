@@ -10,38 +10,46 @@
                 $('div.myth').hide();
                 $('div.root').hide();
                 
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-                
-                $.each(alphabet, function(index, value) { 
-                      
-                      // alert(index + ': ' + value);  
-                       
-                        nodes = [];
-                        $('div.myth').each(function(index2) {
-                    
-                            name = $(this).find('div.normForm').text();
-                                firstLetter = name.charAt(0).toLowerCase();
-                                if(firstLetter == value){ 
-                                $(this).hide();
-                                    content = $(this).html();
-                                    internal_anchor = $(this).attr("id");
-                                    node = '<!-- ' + name.toLowerCase() + "-->"; // hack to keep nodes sorted :-)
-                                    node += '<tr><td class="navn"><a href="../myter#" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-                                    nodes.push(node);
-                                }
-                            $(this).children('.epithet').each( function(index3) {
-                                content = $(this).text();
-                                name = $(this).text();
-                                content = '';
-                                internal_link = $(this).find("a").attr("href").substr(6);
-                                firstLetter2 = name.charAt(0).toLowerCase();
-                                if(firstLetter2 == value){ 
-                                    node = '<!-- ' + name.toLowerCase() + "-->";
-                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-                                    nodes.push(node);
-                                } 
-                            });
-                        });
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
+                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+                      if( a.search(/[\u0080-\uffff]/) >= 0 ) {
+                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"th").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                      }
+                      else {
+                          return a.toLowerCase();
+                          }
+                };
+                
+                $.each(alphabet, function(index, value) { 
+                      
+                      // alert(index + ': ' + value);  
+                       
+                        nodes = [];
+                        $('div.myth').each(function(index2) {
+                    
+                            name = $(this).find('div.normForm').text();
+                                firstLetter = normAlfa( name.charAt(0) );
+                                if(firstLetter == normAlfa(value)){ 
+                                $(this).hide();
+                                    content = $(this).html();
+                                    internal_anchor = $(this).attr("id");
+                                    node = "<!-- " + normAlfa(name) + "-->"; // hack to keep nodes sorted :-)
+                                    node += '<tr><td class="navn"><a href="../myter#" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    nodes.push(node);
+                                }
+                            $(this).children('.epithet').each( function(index3) {
+                                content = $(this).text();
+                                name = $(this).text();
+                                content = '';
+                                internal_link = $(this).find("a").attr("href").substr(6);
+                                firstLetter2 = normAlfa( name.charAt(0) );
+                                if(firstLetter2 == normAlfa(value)){ 
+                                    node = '<!-- ' + normAlfa(name) + "-->";
+                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                    nodes.push(node);
+                                } 
+                            });
+                        });
                         
                         
                         
