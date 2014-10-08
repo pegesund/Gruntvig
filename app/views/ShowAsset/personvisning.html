@@ -13,54 +13,45 @@
                 $('div.person').hide();
                 $('div.root').hide();
                 
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-                
-                $.each(alphabet, function(index, value) { 
-                        var nodes = [];
-                        $('div.person').each(function(index2) {
-                            name = $(this).find('span.name').text();
-                            // alert("Adding: " + name);
-                            firstLetter = name.charAt(0).toLowerCase();; 
-                            if(firstLetter == value){ 
-                                $(this).hide();
-                                year = $(this).find('.row span.year').text() + ', '; 
-                                if( year == ', ') { year = '';};
-                                var addName = $(this).find('.row span.addName').not($('span span')).text();
-                                nation = $(this).find('.row span.nation').text();
-                                about = $(this).find('.row span.encyk').text();
-                                if ($(this).find(".altName").length > 0) {
-                                    var gotoName = $(this).find(".gotoName").html();
-                                    node = '<!--' + name.toLowerCase() + '--><tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
-                                } else { 
-                                    var id = $(this).attr("id");
-                                    node = '<!--' + name.toLowerCase() + '--><tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
-                                }
-                                $(this).attr("id", "");
-                                nodes.push(node);
-                            }
-                        });
-                        nodes = nodes.sort().reverse();
-                        $(nodes).each( function(index, value2) {
-                        $('#' + value.toUpperCase()).after(value2);
-                        });
-                }); 
-                
-                
-                // later: remove duplicate code with mythvisning.html
-                $("tbody").find("a[href]").click(function(e) {
-                    e.preventDefault();
-                    // alert("Scrolling to: " + $(this).attr("href"));
-                    var scrolltarget = $($(this).attr("href"));
-                    $.scrollTo(scrolltarget, 500);
-                    
-               }); 
-               
-                // get current location and scrolldown to this if exists
-                var loc = String(document.location);
-                var idx = loc.indexOf('#');
-                var href = (idx > 0) ? loc.substring(idx + 1) : "";
-                if (href) $.scrollTo("#" + href, 500);              
-
+                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
+                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+                      if( a.search(/[\u0080-\uffff]/) >= 0 ) {
+                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"th").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                      }
+                      else {
+                          return a.toLowerCase();
+                          }
+                }
+                
+                $.each(alphabet, function(index, value) { 
+                        var nodes = [];
+                        $('div.person').each(function(index2) {
+                            name = $(this).find('span.name').text();
+                            // alert("Adding: " + name);
+                            firstLetter = normAlfa(name.charAt(0));
+                            if(firstLetter == normAlfa(value)){ 
+                                $(this).hide();
+                                year = $(this).find('.row span.year').text() + ', '; 
+                                if( year == ', ') { year = '';};
+                                var addName = $(this).find('.row span.addName').not($('span span')).text();
+                                nation = $(this).find('.row span.nation').text();
+                                about = $(this).find('.row span.encyk').text();
+                                if ($(this).find(".altName").length > 0) {
+                                    var gotoName = $(this).find(".gotoName").html();
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
+                                } else { 
+                                    var id = $(this).attr("id");
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
+                                }
+                                $(this).attr("id", "");
+                                nodes.push(node);
+                            }
+                        });
+                        nodes = nodes.sort().reverse();
+                        $(nodes).each( function(index, value2) {
+                        $('#' + value.toUpperCase()).after(value2);
+                        });
+                });
 
 		});
 
