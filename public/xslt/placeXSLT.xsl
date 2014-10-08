@@ -7,7 +7,8 @@
     <xsl:strip-space elements="*"/>
     
     <!-- 2012.06.20: Karsten Kynde & Kim Steen Ravn
-         2012.07.03: Karsten Kynde og Niels Holger Berg -->
+         2012.07.03: Karsten Kynde og Niels Holger Berg
+         2014.10.08: Karsten Kynde -->
 
     <xsl:template match="TEI:TEI">        
                 <xsl:apply-templates select="TEI:text"/>
@@ -30,7 +31,7 @@
     <xsl:template match="TEI:table">
         <div class="table">
             <xsl:apply-templates select="TEI:row[@n]/TEI:cell[@rend='name' or @rend='altNameDia' or @rend='altNameSyn']">
-                <xsl:sort select="translate(., 'æøåÆØÅ ', '{|}{|}')"/>
+                <xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/>
             </xsl:apply-templates>
         </div>
     </xsl:template>
@@ -78,7 +79,7 @@
             <xsl:if test="not($copy)">
                 <xsl:apply-templates select="//TEI:row[@synch=current()/parent::TEI:row/@xml:id]/TEI:cell[@rend='name']">
                     <xsl:with-param name="copy" select="'yes'"/>
-                    <xsl:sort select="translate(., 'æøåÆØÅ ', '{|}{|}')"/>
+                    <xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/>
                 </xsl:apply-templates>
             </xsl:if> 
         </div>
