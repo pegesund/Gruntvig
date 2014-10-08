@@ -1387,12 +1387,29 @@ span.pbA, span.pbMs
 
 #liste { float:left; width: 100%; font-size: 1.6em; margin-top:10px; line-height:1.2em;} /* Selve listen */
 
+#liste table.krono, #liste table.alfa, #liste table.pers
+    {
+    border-collapse: collapse; 
+    empty-cells: show;
+    float: left;       
+    width: 585px;
+    }
+
+/*#liste table.place
+    {
+    border: 0px solid blue;
+    border-collapse: collapse; 
+    float: left;       
+    empty-cells: show;
+    }
+
 #liste table 
     {
     empty-cells: show;
     float: left;
     border-collapse: collapse;
-    }
+    width: 585px;
+    }*/
     
 #liste tr 
     {
@@ -1410,6 +1427,7 @@ span.pbA, span.pbMs
     border-bottom: 1px solid #bbb;
     margin-top:8px;
     padding: 10px 0 5px 0;
+    width: 585px;
     }
 
 #liste td
