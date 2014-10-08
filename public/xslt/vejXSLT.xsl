@@ -66,7 +66,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:table"> 
-        <table>
+        <table class="guideLine">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
