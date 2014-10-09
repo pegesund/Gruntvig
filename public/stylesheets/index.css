@@ -100,10 +100,18 @@ ol, ul {
 	list-style: none;
 }
 /* tables still need 'cellspacing="0"' in the markup */
+
+table.guideLine
+        {
+	border-collapse: collapse;
+	border-spacing: 0;
+        }
+
 table {
 	border-collapse: separate;
 	border-spacing: 0;
 }
+
 caption, th, td {
 	text-align: left;
 	font-weight: normal;
@@ -975,7 +983,7 @@ html[xmlns] #nav {
         
 	/* Kolonne 1 (meny) */
         
-/* box right START  
+/* box right START  */
 
 #underside_innhold .kolonne_right 
         {
@@ -1024,7 +1032,7 @@ html[xmlns] #nav {
         font-size: 1.6em;
         }
         
- box right End !!!! */   
+ /* box right End !!!! */   
 
 #kolonne1_meny
         {
@@ -1144,7 +1152,7 @@ li.kolofon
 
 	/* Kolonne 1 (hovedinnhold) */
 
-	#underside_innhold .kolonne2 p {line-height: 1.2em; margin: 0px 0 10px 0;}
+	#underside_innhold .kolonne2 p {margin: 0px 0 10px 20px; font-size: 155%; line-height: 150%}
 
 	/* Kolonne 3 (relatert) */
 
