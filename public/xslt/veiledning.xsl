@@ -124,6 +124,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:hi[@rend='size2']"> 
+        <span style="font-size: 125%; line-height: 150%">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:table"> 
         <table class="guideLine">
             <xsl:apply-templates/>
