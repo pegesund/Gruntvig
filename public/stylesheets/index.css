@@ -1545,7 +1545,18 @@ border: 1px solid #ddd;
 
 
 span.pagebreak {display:none;}
-a.myth {text-decoration:none;}
+
+a.myth
+        {
+        cursor: default;
+        text-decoration:none;
+        }
+
+span.placeName
+        {
+        color: black;
+        }
+        
 .commentNote {  padding: 15px; background: #FAFAFA; }
 
 /* seg og noSeg START */
