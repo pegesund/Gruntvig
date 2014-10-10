@@ -16,7 +16,7 @@
     
     <TEI>
       <teiHeader>
-        <title>Bibelregister</title>
+        <title>Bibelstedsregister</title>
         <fileDesc>
           <titleStmt>
             <author>xxx</author>

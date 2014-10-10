@@ -1152,7 +1152,29 @@ li.kolofon
 
 	/* Kolonne 1 (hovedinnhold) */
 
-	#underside_innhold .kolonne2 p {margin: 0px 0 10px 20px; font-size: 155%; line-height: 150%}
+#underside_innhold .kolonne2 p 
+        {
+        margin: 0px 0 10px 20px;
+        font-size: 155%;
+        line-height: 150%
+        }
+
+#underside_innhold .kolonne2 div.headIndex 
+        {
+        border: 0px solid black;
+        margin: 0em 0em 1em 2.5em;
+        font-size: 340%;
+        }
+
+#underside_innhold .kolonne2 p.veiledning 
+        {
+        border: 0px solid black;
+        margin: 1em 1em 1em 1em;
+        font-size: 140%;
+        line-height: 130%;
+        text-align: justify;
+        width: 39.5em;
+        }
 
 	/* Kolonne 3 (relatert) */
 
