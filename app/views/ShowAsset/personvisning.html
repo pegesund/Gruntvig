@@ -38,10 +38,10 @@
                                 about = $(this).find('.row span.encyk').text();
                                 if ($(this).find(".altName").length > 0) {
                                     var gotoName = $(this).find(".gotoName").html();
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
                                 } else { 
                                     var id = $(this).attr("id");
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
                                 }
                                 $(this).attr("id", "");
                                 nodes.push(node);
