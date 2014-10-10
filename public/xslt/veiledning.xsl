@@ -37,6 +37,11 @@
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
+            <xsl:when test="@type='index'">
+                <div class="headIndex">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
             <xsl:when test="not(@type)">
                 <div class="headFront">
                     <xsl:apply-templates/>
