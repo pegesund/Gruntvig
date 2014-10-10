@@ -53,11 +53,11 @@ td.navn
     font-size: 75%    
 }
         
-/*.placeName
+span.placeName
         {
         color: #4DBC4C;
         font-size: 16px;
-        }*/
+        }
         
 .altNameSyn
         {
