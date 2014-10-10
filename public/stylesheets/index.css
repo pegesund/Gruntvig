@@ -1556,20 +1556,20 @@ span.pagebreak {display:none;}
 
 /* links registre START */
 
-a.myth
+a.mythRef
         {
         cursor: default;
         text-decoration: none;
         }
 
-a.persName
+a.persNameRef
         {
         color: black;
         cursor: default;
         text-decoration: none;
         }
 
-span.placeName
+span.placeNameRef
         {
         color: black;
         }
