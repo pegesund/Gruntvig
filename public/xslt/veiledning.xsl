@@ -165,7 +165,18 @@
                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
+                <xsl:when test="@type='guideLines'">
+                    <a href="{@target}">
+                       <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
             </xsl:choose>   
+    </xsl:template>
+    
+    <xsl:template match="TEI:a[@type='web']">
+        <a href="{@target}">
+            <xsl:apply-templates/>
+        </a>
     </xsl:template>
 
     <xsl:include href="popups.xsl"/>
