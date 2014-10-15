@@ -1668,11 +1668,14 @@ h1.subtitle { margin-left: 0px !important; }
 /* Tidslinje */
 
 #tidslinje_container { float:left; width:100%; height: 700px; }
-#my-timeline {
+
+#my-timeline
+    {
     height: 600px;
     margin: 0 auto;
     width: 975px;
-}
+    z-index: -1;
+    }
 
 /* timeline START */
 
