@@ -22,8 +22,8 @@
  
  .kommentar .author
         {
-        font-size: 65%;
-        margin: 0em 0em 0em 0em;
+        font-size: 14px;
+        margin: 1em 0em 0em 0em;
         text-align: center;
         line-height: 1.6em;
         }
