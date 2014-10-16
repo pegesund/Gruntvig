@@ -204,9 +204,9 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <!--<a href="{@target}">-->
+                    <!--a href="{@target}" target="_blank"-->
                         <xsl:apply-templates/>
-                    <!--</a>-->
+                    <!--/a-->
                 </xsl:when>
                 <xsl:when test="@select">                    
                     <a href="#http://{.}">
