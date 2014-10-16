@@ -26,12 +26,14 @@ KSR: 2011.09.26: hi-element
         {
         text-decoration: none;
         color: #000000;
+        cursor: pointer;
         }
        
 
 .mainTxr a.toc:hover
         {
         color: #006633;
+        cursor: pointer;
         }
         
 .mainTxr .author
@@ -134,16 +136,15 @@ a.docIn:hover
 
 /* docIn END */
         
- .toc a
+.toc a
         {
         color: #4DBC4D;
+        cursor: pointer;
         }
         
 .toc a:hover
         {
         color: #4DBC4D;
-        text-decoration: underline;
-        cursor: pointer;
         }
         
 .mainTxr .head
@@ -152,6 +153,7 @@ a.docIn:hover
         text-align: center;
         margin: 1em 0em 1em 0em;
         line-height: 1.2em;
+        cursor: pointer;
         }
 
 .mainTxr .div .head
@@ -159,6 +161,7 @@ a.docIn:hover
         font-size: 144%;
         text-align: center;
         margin: 1em 0em 1em 0em;
+        cursor: pointer;
         }
 
 .mainTxr .div .div .head
@@ -166,6 +169,7 @@ a.docIn:hover
         font-size: 120%;
         text-align: center;
         margin: 2em 0em 1em 0em;
+        cursor: pointer;
         }
 
 /* indhold hyperlink end */
