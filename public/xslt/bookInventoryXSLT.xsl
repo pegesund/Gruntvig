@@ -62,7 +62,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:row">
-        <tr class="row">
+        <tr class="row" id="{@xml:id}">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
