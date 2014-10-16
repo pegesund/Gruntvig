@@ -371,7 +371,7 @@
             <xsl:when test="@type='textualCriticismPluralis'">                
                 <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
-                    <tr>
+                    <tr class="">
                         <td>Side</td>
                         <td>Note</td>
                     </tr>
@@ -522,11 +522,6 @@
     
     <xsl:template match="TEI:table[@rend]">
         <xsl:choose>
-            <xsl:when test="not(rend)">
-                <table>
-                    <xsl:apply-templates/>
-                </table>
-            </xsl:when>
             <xsl:when test="@rend">
                 <table class="{@rend}">
                     <xsl:apply-templates/>
@@ -535,16 +530,64 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:row">        
-        <tr class="tr">
-            <xsl:apply-templates/>
-        </tr>
+    <xsl:template match="TEI:row">
+        <xsl:choose>
+            <xsl:when test="..//parent::TEI:table[@rend='contentDesc']">
+                <tr class="contentDesc">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='msDesc']">
+                <tr class="msDesc">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='printDesc']">
+                <tr class="printDesc">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='textualCriticism']">
+                <tr class="textualCriticism">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:otherwise>
+                <tr class="tr">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:cell">        
-        <td class="td">
-            <xsl:apply-templates/>
-        </td>
+    <xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="..//ancestor::TEI:table[@rend='printDesc']">
+                <td class="printDesc">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="..//ancestor::TEI:table[@rend='msDesc']">
+                <td class="msDesc">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="..//ancestor::TEI:table[@rend='contentDesc']">
+                <td class="contentDesc">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="..//ancestor::TEI:table[@rend='textualCriticism']">
+                <td class="textualCriticism">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="td">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
     <xsl:template match="TEI:persName">
