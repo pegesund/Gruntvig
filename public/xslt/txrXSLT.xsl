@@ -123,7 +123,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:head">
-        <a class="toc txrmenu">
+        <a class="toc txrmenu" title="til toppen">
             <xsl:attribute name="id">
                 <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txr.xml$', '$1')" />
                 <xsl:text>_txr_</xsl:text>
@@ -136,7 +136,7 @@
                 <xsl:text>txr_</xsl:text>
                 <xsl:value-of select="@xml:id"/>
             </xsl:attribute>
-            <a hrel="#retur" class="toc txrmenu">
+            <a hrel="#retur" class="toc txrmenu" title="til toppen">
                 <xsl:number level="multiple" count="TEI:div"/>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates/>
