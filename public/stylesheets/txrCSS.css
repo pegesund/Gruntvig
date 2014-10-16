@@ -386,36 +386,101 @@ a.docIn:hover
         text-align: center;
         }
         
-        
 /* p rend quote END */
 
 /* table START */
 
-.mainTxr table.msDesc, .mainTxr table.printDesc, .mainTxr table.contentDesc
+/* table msDesc START */
+
+.mainTxr table.msDesc, .mainTxr tr.msDesc, .mainTxr td.msDesc
         {
-        font-size: 14px;
-        line-height: 150%;
+        border: 1px solid black;
         border-collapse: collapse;
-        empty-cells: show;
-        margin: 2em 0em 2em 1em;
-        vertical-align: top;
-        width: 30em;
         }
 
 .mainTxr table.msDesc
         {
+        border: 1px solid black;
         font-size: 14px;
         line-height: 150%;
         border-collapse: collapse;
         empty-cells: show;
         margin: 2em 0em 2em 1em;
         vertical-align: top;
-        width: 30em;
+        width: 27.5em;
+        }
+
+.mainTxr table.msDesc tr:nth-child(1)
+        {
+        background-color: #DDDDDD;
+        }
+
+.mainTxr table.msDesc td:nth-child(1)
+        {
+        width:10%;
+        }
+
+.mainTxr table.msDesc td:nth-child(2)
+        {
+        width:10%;
+        }
+
+.mainTxr table.msDesc td:nth-child(3)
+        {
+        width:70%;
+        }
+        
+/* table msDesc END */
+        
+/* table contentDesc START */
+
+.mainTxr table.contentDesc, .mainTxr tr.contentDesc, .mainTxr td.contentDesc
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+.mainTxr table.contentDesc
+        {
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 27.5em;
+        }
+
+.mainTxr table.contentDesc tr:nth-child(1)
+        {
+        background-color: #DDDDDD;
+        font-weight: bold;
+        margin: 1em;
+        vertical-align: top;
+        }
+
+.mainTxr table.contentDesc td:nth-child(1)
+        {
+        width: 4em;
+        }
+
+.mainTxr table.contentDesc td:nth-child(2)
+        {
+        width: 23em;
+        }
+        
+/* table contentDesc END */
+        
+/* table textualCriticism START */
+
+.mainTxr table.textualCriticism, .mainTxr tr, .mainTxr td
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
         }
 
 .mainTxr table.textualCriticism
         {
-        font-size: 14px;
         line-height: 150%;
         border-collapse: collapse;
         empty-cells: show;
@@ -424,76 +489,64 @@ a.docIn:hover
         width: 100%;
         }
 
-.mainTxr table.textualCriticism tr:first-child
-        {
-        background-color: #DDDDDD;
-        font-weight: bold;
-        }
-
 .mainTxr table.textualCriticism td
         {
         padding: 3px;
         }
 
-.mainTxr table.textualCriticism td:first-child
-        {
-        width: 20%;
-        }
-
-.mainTxr table.msDesc td:first-child
-        {
-        background-color: red;
-        width: 20%;
-        }
-        
-.mainTxr table.msDesc, .mainTxr table.textualCriticism .mainTxr tr, .mainTxr td
-        {
-        border: 1px solid black;
-        }
-
-.mainTxr tr:first-child
+.mainTxr table.textualCriticism tr:nth-child(1)
         {
         background-color: #DDDDDD;
         font-weight: bold;
         }
 
-.mainTxr td:first-child
+.mainTxr table.textualCriticism td:first-child:nth-child(1)
         {
-        width: 35%;
+        width: 10%;
         }
 
-.mainTxr td:last-child
+.mainTxr table.textualCriticism td:first-child:nth-child(2)
         {
-        width: 60%;
-        }
-
-.mainTxr td
-        {
-        width: 20%;
-        }
-
-.mainTxr tr
-        {
-        margin: 1em;
-        vertical-align: top;
+        width: 70%;
         }
         
-/* table END*/
+/* table textualCriticism END */
+        
+/* table printDesc START */
 
-/* element table start 
-
-
-
-.mainTxr table, tr, td
+.mainTxr table.printDesc, .mainTxr tr.printDesc, .mainTxr td.printDesc
         {
         border: 1px solid black;
-        padding: 5px;
+        border-collapse: collapse;
+        }
+
+.mainTxr table.printDesc
+        {
+        font-size: 14px;
+        line-height: 150%;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 27em;
+        }
+
+.mainTxr tr.printDesc:nth-child(1)
+        {
+        background-color: #DDDDDD;
+        font-weight: bold;
+        }
+
+.mainTxr td.printDesc:nth-child(1)
+        {
+        width: 4em;
+        }
+
+.mainTxr td.printDesc:nth-child(2)
+        {
+        width: 23em;
         }
         
-.mainTxr td
-        {
-        width: auto
-        }
+ /*table printDesc END */
 
 /* element table end */
 
