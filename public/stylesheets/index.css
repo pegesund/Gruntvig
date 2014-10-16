@@ -1896,6 +1896,8 @@ h1.subtitle { margin-left: 0px !important; }
         cursor: pointer;
         }
  
- .docIn {
-     color: blue;
- }
+ .docIn
+        {
+        color: blue;
+        cursor: pointer;
+        }
