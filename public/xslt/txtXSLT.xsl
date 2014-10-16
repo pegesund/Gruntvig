@@ -126,7 +126,7 @@
                                                     <xsl:when test="@xml:id='DU'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <span class="num">
                                                             <xsl:apply-templates select="TEI:num"/>
@@ -135,7 +135,7 @@
                                                     <xsl:when test="@xml:id='Gskv'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <span class="num">
                                                             <xsl:apply-templates select="TEI:num"/>
@@ -144,7 +144,7 @@
                                                     <xsl:when test="@xml:id='GSV'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <span class="num">
                                                             <xsl:apply-templates select="TEI:num"/>
@@ -153,7 +153,7 @@
                                                     <xsl:when test="@xml:id='PS'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <xsl:for-each select="TEI:num">
                                                             <xsl:value-of select="."/>
@@ -172,7 +172,7 @@
                                                     <xsl:when test="@xml:id='US'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <xsl:for-each select="TEI:num">
                                                             <xsl:value-of select="."/>
@@ -191,7 +191,7 @@
                                                     <xsl:when test="@xml:id='VU'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
-                                                            <xsl:text>, </xsl:text>
+                                                            <xsl:text> </xsl:text>
                                                         </span>
                                                         <xsl:for-each select="TEI:num">
                                                             <xsl:value-of select="."/>
