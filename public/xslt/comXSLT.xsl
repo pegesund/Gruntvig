@@ -156,12 +156,12 @@
                     </a>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <span class="docOut" href="{@target}">
+                    <a class="docOut" href="#{@target}">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           
                         <xsl:apply-templates/>         
-                    </span>
+                    </a>
                 </xsl:when>
                 <xsl:when test="@type='image'">
                     <!--<a href="{@target}">-->
@@ -373,7 +373,7 @@
     
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
-            <a href="{.}">                
+            <a href="{@target}" target="_blank">                
                 <xsl:apply-templates/>                
             </a>
             <xsl:text> (</xsl:text>
