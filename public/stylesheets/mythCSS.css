@@ -3,21 +3,24 @@
 
 .hideroot div.root { display:none; }
 
-.myth a:link {
+.myth a.myth:link
+        {
         text-decoration: none;
         color: gray;
         }
         
-.myth a:visited {
+.myth a.myth:visited {
         text-decoration: none;
         }
         
-.myth a:hover {
+.myth a.myth:hover
+        {
         text-decoration: none;
         color: green;
         }
         
-.myth a:active {
+.myth a.myth:active
+        {
         text-decoration: none;
         }
         
@@ -28,31 +31,33 @@
         
 .myth
         {
+        colro: black;
+        cursor: default;
         margin: 2em 0 2em 0;
         text-decoration: none;
         }
 
 .myth .normForm
         {
-		font-weight: bold;
+	font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
 .myth .epithet
         {
-		font-weight: bold;
+	font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
 .myth .latin
         {
-		font-weight: bold;
+	font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
 .myth .pseudoEpithet
         {
-		font-weight: bold;
+	font-weight: bold;
         margin: 0.5em 0em 0.5em 0em;
         }
 
