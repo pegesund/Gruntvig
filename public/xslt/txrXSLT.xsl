@@ -193,6 +193,11 @@
                         <xsl:apply-templates/>
                     </a>
                 </xsl:when>
+                <xsl:when test="@type='litListWeb'">
+                    <a href="{@target}" target="_blank">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
                 <xsl:when test="@type='web' and @target">
                     <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
@@ -352,7 +357,7 @@
     <xsl:template match="TEI:item[@n]">
         <ul>
             <li class="ordered">
-                <a href="{.}">
+                <a href="{@target}" target="_blank">
                     <xsl:apply-templates/>
                 </a>
                 <xsl:text> (</xsl:text>
