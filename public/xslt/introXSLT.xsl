@@ -31,7 +31,7 @@
                 <div>
                     <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
                        <div>
-                            <xsl:call-template name="typeTitle"/>
+                           <xsl:call-template name="rendTitle"/>
                        </div>
                    </xsl:for-each>
                 </div>
@@ -72,6 +72,28 @@
     
     <xsl:template name="rendTitle">
         <xsl:choose>
+            <xsl:when test="@rend='main' and not(@type)">
+                <i><xsl:apply-templates/></i>
+            </xsl:when>
+            <xsl:when test="@rend='main' and @type='supp'">
+                [<i><xsl:apply-templates/></i>]
+            </xsl:when>
+            <xsl:when test="@rend='part' and not(@type)">
+                &#x201C;<xsl:apply-templates/>&#x201D;
+            </xsl:when>
+            <xsl:when test="@rend='part' and @type='supp'">
+                [&#x201C;<xsl:apply-templates/>&#x201D;]
+            </xsl:when>
+        </xsl:choose>
+        <xsl:call-template name="delimiter"/>
+    </xsl:template>
+    
+    <!--
+        
+    mellemrum ved supp.tegn; 2014.10.20
+        
+    <xsl:template name="rendTitle">
+        <xsl:choose>
             <xsl:when test="@rend='main'">
                 <i><xsl:apply-templates/></i>
             </xsl:when>
@@ -95,6 +117,8 @@
         </xsl:choose>
         <xsl:call-template name="delimiter"/>
     </xsl:template>
+    
+    -->
     
     <xsl:template name="delimiter">
         <xsl:choose>
@@ -352,10 +376,20 @@
         </table>
     </xsl:template>
     
-    <xsl:template match="TEI:row">        
+    <xsl:template match="TEI:row">
         <xsl:choose>
-            <xsl:when test="@rend">
-                <tr class="{@rend}">
+            <xsl:when test="..//parent::TEI:table[@rend='source']">
+                <tr class="source">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='year']">
+                <tr class="year">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='synopsis']">
+                <tr class="synopsis">
                     <xsl:apply-templates/>
                 </tr>
             </xsl:when>
@@ -365,6 +399,46 @@
                 </tr>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row">        
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <tr rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <tr colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
+            <xsl:otherwise>
+                <tr>
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="..//ancestor::TEI:table[@rend='source']">
+                <td class="source">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="..//ancestor::TEI:table[@rend='year']">
+                <td class="year">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="..//ancestor::TEI:table[@rend='synopsis']">
+                <td class="synopsis">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+        </xsl:choose>        
     </xsl:template>
     
     <xsl:template match="TEI:cell">        
@@ -385,6 +459,45 @@
                 </td>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='bible']">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='myth']">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="myth rs_myth" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:rs[@type='title']">
+        <a class="rs_title">
+            <xsl:apply-templates/>
+        </a>
+        <!--a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+            <xsl:apply-templates/>
+        </a-->
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
@@ -411,7 +524,7 @@
                     </span>
                 </xsl:when>                
                 <xsl:when test="@type='docOut'">
-                    <span class="docout">
+                    <span class="docOut">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           
