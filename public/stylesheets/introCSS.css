@@ -1,6 +1,6 @@
 /* KSR for Grundtvigs Værker */
 
-/* table START */
+/* table START 
 
 .innledningContent table.msDesc, .innledningContent table.textualCriticism, .innledningContent table.printDesc, .innledningContent table.contentDesc, .innledningContent table.source
         {
@@ -23,7 +23,43 @@
         border: 1px solid black;        
         }
         
-/* table END*/
+ table END*/
+
+.innledningContent table.source
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        empty-cells: show;
+        font-size: 14px;
+        line-height: 150%;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 27.5em;
+        }
+
+.innledningContent table.source tr:nth-child(1)
+        {
+        background-color: #DDDDDD;
+        }
+
+.innledningContent table.source td
+        {
+        padding: 3px;
+        }
+
+.innledningContent table.source td:nth-child(1)
+        {
+        width:40%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+.innledningContent table.source td:nth-child(2)
+        {
+        width:40%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
 
 .innledningContent {
     line-height: 1.5em;
@@ -112,7 +148,6 @@
 
 .innledningContent .center
         {
-        color: blue;
         text-align: center;
         }
 
