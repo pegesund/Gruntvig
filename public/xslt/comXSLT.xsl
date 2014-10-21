@@ -168,6 +168,11 @@
                         <xsl:apply-templates/>
                     <!--</a>-->
                 </xsl:when>
+                <xsl:when test="@type='litListWeb'">
+                    <a href="{@target}" target="_blank">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
                 <xsl:when test="@type='web'">
                     <a href="{@target}" target="_blank">
                         <xsl:apply-templates/>
