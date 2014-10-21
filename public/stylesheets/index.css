@@ -364,18 +364,43 @@ a.returnTop
 
 /* Tekstvisning */
 
-#hovedtekst {width:455px;height:700px; float:left; background:#fff; margin: 0px 0px 0 0; border:1px solid #D6D6D6; -moz-box-shadow: 0px 0px 6px #ddd; -webkit-box-shadow: 0px 0px 6px #ddd; box-shadow: 0px 0px 6px #ddd;}
+#hovedtekst
+        {  
+        background:#fff; 
+        border:1px solid #D6D6D6; 
+        box-shadow: 0px 0px 6px #ddd;
+        float:left;
+        height:700px; 
+        margin: 0px 0px 0 0; 
+        -moz-box-shadow: 0px 0px 6px #ddd; 
+        -webkit-box-shadow: 0px 0px 6px #ddd;
+        width:555px;
+        }
 
 	/* Navigasjonsmeny */
-	#hovedtekst .nav_meny {width:455px; height:35px; background:#fff; border-bottom:1px solid #D6D6D6; }
+        
+#hovedtekst .nav_meny
+        {
+        width:555px;
+        height:35px;
+        background:#fff; 
+        border-bottom:1px solid #D6D6D6;
+        }
 
 	#hovedtekst .nav_meny .previous {display:block; float:left; height:35px; width:35px; border-right:1px solid #D6D6D6; background: transparent url(../img/toppmeny_arrow_left.png) no-repeat 6px 7px; }
 
 	#hovedtekst .nav_meny .next {display:block; float:right; height:35px; width:35px; border-left:1px solid #D6D6D6; background: transparent url(../img/toppmeny_arrow_right.png) no-repeat 6px 7px; }
 
 	#hovedtekst .nav_meny .chapter {display:block; float:left; height:35px; width:332px; margin: 0 0px; }
-		#hovedtekst .nav_meny .chapter select{ font-size: 16px; margin: 5px 0 0 8px; width: 368px;}
-		#hovedtekst .nav_meny .chapter option{ padding:1px;}
+
+#hovedtekst .nav_meny .chapter select
+        {
+        font-size: 16px; 
+        margin: 5px 0 0 8px; 
+        width: 468px;
+        }
+		
+#hovedtekst .nav_meny .chapter option{ padding:1px;}
 
 		/* fiks for chrome, flytter select litt lenger ned */
 		@media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -414,7 +439,7 @@ a.returnTop
 
 #tekst_innhold
         {
-        width: 387px;
+        width: 487px;
         font-size: 16px;
         height: 580px;
         background: #fff;
