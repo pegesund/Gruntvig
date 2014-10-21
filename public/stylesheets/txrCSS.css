@@ -414,10 +414,12 @@ a.docIn:hover
         width: 27.5em;
         }
 
+/*
 .mainTxr table.msDesc tr:nth-child(1)
         {
         background-color: #DDDDDD;
         }
+*/
 
 .mainTxr table.msDesc td:nth-child(1)
         {
@@ -455,6 +457,7 @@ a.docIn:hover
         width: 27.5em;
         }
 
+/*
 .mainTxr table.contentDesc tr:nth-child(1)
         {
         background-color: #DDDDDD;
@@ -462,6 +465,7 @@ a.docIn:hover
         margin: 1em;
         vertical-align: top;
         }
+*/
 
 .mainTxr table.contentDesc td:nth-child(1)
         {
@@ -498,11 +502,13 @@ a.docIn:hover
         padding: 3px;
         }
 
+/*
 .mainTxr table.textualCriticism tr:nth-child(1)
         {
         background-color: #DDDDDD;
         font-weight: bold;
         }
+*/
 
 .mainTxr table.textualCriticism td:first-child:nth-child(1)
         {
@@ -534,11 +540,13 @@ a.docIn:hover
         width: 27em;
         }
 
+/*
 .mainTxr tr.printDesc:nth-child(1)
         {
         background-color: #DDDDDD;
         font-weight: bold;
         }
+*/
 
 .mainTxr td.printDesc:nth-child(1)
         {
