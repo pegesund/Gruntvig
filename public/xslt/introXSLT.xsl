@@ -508,9 +508,9 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <!--<a href="{@target}">-->
+                    <a href="img/{@target}">
                         <xsl:apply-templates/>
-                    <!--</a>-->
+                    </a>
                 </xsl:when>                                
                 <xsl:when test="@type='docIn'">
                     <span class="docIn">
