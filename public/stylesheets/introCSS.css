@@ -49,14 +49,14 @@
 
 .innledningContent table.source td:nth-child(1)
         {
-        width:40%;
+        width: 15%;
         border: 1px solid black;
         border-collapse: collapse;
         }
 
 .innledningContent table.source td:nth-child(2)
         {
-        width:40%;
+        width:75%;
         border: 1px solid black;
         border-collapse: collapse;
         }
