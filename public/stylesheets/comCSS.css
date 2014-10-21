@@ -120,11 +120,23 @@ div.appInvisible
 
 .kommentar a.docIn
         {
-        text-decoration: underline;
-        color: #000000;
+        text-decoration: none;
+        color: #4DBC4D;
         }
 
 .kommentar a.docIn:hover
+        {
+        color: #006633;
+        cursor: pointer;
+        }
+
+.kommentar a.rs_bible
+        {
+        text-decoration: none;
+        color: #4DBC4D;
+        }
+
+.kommentar a.rs_bible:hover
         {
         color: #006633;
         cursor: pointer;
