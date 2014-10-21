@@ -10,14 +10,14 @@
        <span style="color:red"> OBS: Filnavn er ikke (år)_(SJ)_...xml</span>
     #{/if}
 </p>
-    <div id="hovedtekst" style="overflow: auto; width:475px; margin-right: 30px;">
+    <div id="hovedtekst" style="overflow: auto; width:575px; margin-right: 30px;">
         <div id="tekst_innhold" style="overflow: visible;">
         ${asset.html.raw()}
         </div> 
     </div>
 
-<p><a href="uploadxml/uploadForm">Last opp ny fil &raquo;</a></p>
-<p> #{a @Admin.listXmlFiles()}&laquo; Tilbake til listen#{/a}</p>
+<p><a href="uploadxml/uploadForm">Upload ny fil &raquo;</a></p>
+<p> #{a @Admin.listXmlFiles()}&laquo; Tilbage til listen#{/a}</p>
 
 <br/>
 
