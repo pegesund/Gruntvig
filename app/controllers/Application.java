@@ -43,14 +43,14 @@ public class Application extends Controller {
         String[] S= fileName.split( "_" );
         String year= S[0],
                sj= S[1],
-               sjSub=S[2],
                litra= "",
+               sjSub=S[2],
                res;
         if( sj.matches("[0-9]*[^0-9]+") ) {
           litra= sj.substring( sj.length()-1 );
           sj= sj.substring( 0, sj.length()-1 );
         }
-        res= String.format( "%4s%4s%s%2s", year, sj, sjSub, litra ); /*KK 2014-01-08 sjSub er en dårlig ide*/
+        res= String.format( "%4s%4s%s%2s", year, sj, litra, sjSub ); /*KK 2014-01-08 sjSub er en dårlig ide*/
         //System.out.println( ">"+res );
         return res;
     }
