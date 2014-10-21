@@ -522,7 +522,25 @@
                         </xsl:attribute>
                     <xsl:apply-templates/>
                     </span>
-                </xsl:when>                
+                </xsl:when>
+                <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
+                    <span name="bookinvent" class="docOut">                            
+                        <xsl:apply-templates/>         
+                    </span>
+                </xsl:when>
+                <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
+                    <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+                <!--
+                    quick fix for docOut
+                <xsl:when test="@type='docOut' and @target='bookInventory1805.xml'">
+                    <span name="bookinvent" class="docOut">                            
+                        <xsl:apply-templates/>         
+                    </span>
+                </xsl:when>
+                quick fix for docOut til bookInevnt.1805
                 <xsl:when test="@type='docOut'">
                     <span class="docOut">
                         <xsl:attribute name="name">
@@ -531,6 +549,7 @@
                         <xsl:apply-templates/>         
                     </span>
                 </xsl:when>
+                -->
                  <xsl:when test="@type='epiText'">
                     <a class="pdf"
                         href="img/{@target}"
