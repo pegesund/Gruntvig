@@ -60,11 +60,11 @@
                         <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
                         <xsl:apply-templates select="TEI:text"/>
                     </xsl:when>
-                    <xsl:otherwise>
+                    <xsl:when test="//TEI:note[@type='noIntro']">
                         <div class="head">
                             <xsl:text>er under udarbejdelse</xsl:text>
                         </div>
-                    </xsl:otherwise>
+                    </xsl:when>
                 </xsl:choose>
         </div>
         
@@ -492,9 +492,9 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='title']">
-        <a class="rs_title">
+        <!--a class="rs_title"-->
             <xsl:apply-templates/>
-        </a>
+        <!--/a-->
         <!--a class="rs_title" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
         </a-->
