@@ -917,6 +917,7 @@ ul#nav li.with_dropdown:first-child ul li
 }
 #nav {
 	display: inline-block;
+        z-index: 1;
 }
 html[xmlns] #nav {
 	display: block;
