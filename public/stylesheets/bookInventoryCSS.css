@@ -11,13 +11,13 @@
 #bookinventory div.main
         {
         font-size: 144%;
-        text-indent: 1em;
+        text-indent: 0em;
         }
 
 #bookinventory div.part
         {
         font-size: 120%;
-        text-indent: 1em;
+        text-indent: 0em;
         }
 
 #bookinventory span.rasied
@@ -46,36 +46,51 @@
         font-size: 100%;
         text-align: left;
         }
+    
+#liste tr 
+    {
+    border-top: 0px solid #eee;
+    padding: 0;
+    float: left;
+    width: 100%;
+    text-align: left;
+    }
+
+#bookinventory table, #bookinventory tr, #bookinventory td
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-top: 0.25em;
+        }
+
+#bookinventory tr, #bookinventory td
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 1em;
+        }
 
 #bookinventory table
         {
-        margin: 1em;
-        border: 1px solid black;
-        border-collapse: collapse;
-        vertical-align: middle;
-        table-layout: fixed;
+        empty-cells: show;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        width: 100%;
         }
 
-#bookinventory tr
+#bookinventory tr.row
         {
-        margin: 1em;
-        border: 1px solid black;
-        vertical-align: middle;
-        table-layout: fixed;
+        width: 50em;
         }
-
-#bookinventory td
-        {
-        margin: 1em;
-        border: 1px solid black;
-        vertical-align: middle;
-        table-layout: fixed;
-        }
-        
         
 #bookinventory td.nr
         {
         width: 10em
+        }
+
+#bookinventory td
+        {
+        padding: 3px;
         }
 
 #bookinventory td.authorNorm
@@ -90,7 +105,7 @@
         color: green;
         }
 
-#bookinventory td.translatorNorm
+#bookinventory td.authorNorm
         {
         width: 10em;
         color: green;
