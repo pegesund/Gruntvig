@@ -727,6 +727,7 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
 	text-shadow: 0 1px 1px rgba(0,0,0, .3);
+        z-index: 2;
         }
 
 #nav a.a_with_dropdown
@@ -917,7 +918,6 @@ ul#nav li.with_dropdown:first-child ul li
 }
 #nav {
 	display: inline-block;
-        z-index: 1;
 }
 html[xmlns] #nav {
 	display: block;
