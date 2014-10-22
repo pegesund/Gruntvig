@@ -727,6 +727,8 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
 	text-shadow: 0 1px 1px rgba(0,0,0, .3);
+        
+        position: relative;
         z-index: 2;
         }
 
