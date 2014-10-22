@@ -216,7 +216,8 @@ a.returnTop
         {
         float:left;
         margin: 16px 0px 0 0; 
-        width:480px; 
+        width:480px;
+        z-index: -1;
         }
 
 /* search START KSR */
