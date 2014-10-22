@@ -638,6 +638,20 @@
     
     <!-- motto END -->
     
+    <xsl:template match="TEI:char">
+        <xsl:choose>
+            <xsl:when test="@rend='space1'">
+                &#x2003;
+            </xsl:when>
+            <xsl:when test="@rend='space2'">
+                &#x2003;&#x2003;
+            </xsl:when>
+            <xsl:when test="@rend='space3'">
+                &#x2003;&#x2003;&#x2003;
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
