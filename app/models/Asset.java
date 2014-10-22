@@ -226,7 +226,7 @@ public class Asset extends GenericModel {
      */
     public String getCorrespondingIntro() { //<note type="intro" target="1804_28_intro.xml">
         String rN= rootName;
-        Pattern p= Pattern.compile( "<note [^>]*type=[\"']intro[\"'][^>]*>" );
+        Pattern p= Pattern.compile( "<note [^>]*type=[\"'](intro|noIntro)[\"'][^>]*>" );
         Matcher m= p.matcher( xml );
         if( m.find() ) {
             p= Pattern.compile( "target=[\"']([^\"]*)[\"']" );
