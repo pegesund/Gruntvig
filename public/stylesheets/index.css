@@ -419,7 +419,11 @@ a.returnTop
 
 	#hovedtekst #bunnmeny { border-top:1px solid #D6D6D6;   }
 	#hovedtekst #bunnmeny .chapter {width:344px; border:0; }
-	#hovedtekst #bunnmeny .chapter select {width:369px;  }
+
+#hovedtekst #bunnmeny .chapter select
+        {
+        width: 469px;
+        }
 
 	/* fade over toppen av hovedteksten */
 	#hovedtekst_toppfade {display:none; width:438px; position: fixed; height: 35px; background: transparent url(../img/tekst_toppfade.png) repeat-x 0px 0px;}
@@ -727,9 +731,6 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
 	text-shadow: 0 1px 1px rgba(0,0,0, .3);
-        
-        position: relative;
-        z-index: 2;
         }
 
 #nav a.a_with_dropdown
