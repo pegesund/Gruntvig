@@ -2,7 +2,7 @@
 
 #bookinventory .bookInventory
         {
-        font-size: 172%;
+        font-size: 36px;
         text-align: center;
         font-weight: bold;
         margin: 1.5em
@@ -10,13 +10,14 @@
 
 #bookinventory div.main
         {
-        font-size: 144%;
+        font-size: 24px;
         text-indent: 0em;
         }
 
 #bookinventory div.part
         {
-        font-size: 120%;
+        font-size: 18px;
+        margin-top: 1em;
         text-indent: 0em;
         }
 
@@ -27,7 +28,7 @@
 
 #bookinventory div.kbSignatur
         {
-        font-size: 120%;
+        font-size: 18px;
         text-align: center;
         font-weight: normal;
         margin: 0.5em
@@ -35,7 +36,7 @@
 
 #bookinventory .frontPage
         {
-        font-size: 144%;
+        font-size: 24px;
         text-align: center;
         line-height: 100%;
         margin: 1em;
@@ -46,36 +47,37 @@
         font-size: 100%;
         text-align: left;
         }
-    
-#liste tr 
-    {
-    border-top: 0px solid #eee;
-    padding: 0;
-    float: left;
-    width: 100%;
-    text-align: left;
-    }
 
-#bookinventory table, #bookinventory tr, #bookinventory td
+#bookInventory tr 
         {
-        border: 1px solid black;
-        border-collapse: collapse;
-        margin-top: 0.25em;
-        }
-
-#bookinventory tr, #bookinventory td
-        {
-        border: 1px solid black;
-        border-collapse: collapse;
-        margin: 1em;
+        padding: 3px;
+        float: left;
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
         }
 
 #bookinventory table
         {
+        border: 1px solid black;
+        border-right: 0px solid black;
+        border-collapse: collapse;
+        margin-top: 0.25em;
         empty-cells: show;
         margin-bottom: 2em;
         margin-top: 2em;
         width: 100%;
+        }
+
+#bookinventory tr
+        {
+        border-bottom: 0px solid black;
+        border-right: 1px solid black;
+        }
+
+#bookinventory td
+        {
+        border: 1px solid black;
         }
 
 #bookinventory tr.row
