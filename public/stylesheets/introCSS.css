@@ -37,12 +37,11 @@
         width: 27.5em;
         }
 
-/*
-.innledningContent table.source tr:nth-child(1)
+.innledningContent tr.center > .innledningContent table.source td
         {
-        background-color: #DDDDDD;
+        color: red;
+        text-align: center;
         }
-*/
 
 .innledningContent table.source td
         {
@@ -98,11 +97,23 @@
 
 .innledningContent a.docIn
         {
-        text-decoration: underline;
-        color: #000000;
+        text-decoration: none;
+        color: #4DBC4D;
         }
 
 .innledningContent a.docIn:hover
+        {
+        color: #006633;
+        cursor: pointer;
+        }
+
+.innledningContent a.docOut
+        {
+        text-decoration: none;
+        color: #4DBC4D;
+        }
+
+.innledningContent a.docOut:hover
         {
         color: #006633;
         cursor: pointer;
@@ -147,12 +158,12 @@
         {
         margin: 0em 3em 0em 3em;
         }
-
+/*
 .innledningContent .center
         {
         text-align: center;
         }
-
+*/
 .innledningContent .div
         {
         text-align: justify;
