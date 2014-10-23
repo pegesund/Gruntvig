@@ -37,7 +37,7 @@
         width: 27.5em;
         }
 
-.innledningContent tr.center > .innledningContent table.source td
+.innledningContent tr.center
         {
         color: red;
         text-align: center;
@@ -158,12 +158,12 @@
         {
         margin: 0em 3em 0em 3em;
         }
-/*
-.innledningContent .center
+
+.innledningContent td.center
         {
         text-align: center;
         }
-*/
+
 .innledningContent .div
         {
         text-align: justify;
