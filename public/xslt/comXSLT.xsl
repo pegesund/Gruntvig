@@ -151,12 +151,25 @@
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>              
                 <xsl:when test="@type='docIn'">
-                    <a hrel="{@id}" class="docIn txrmenu">
-                       <xsl:apply-templates/>
+                    <span class="docIn">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>
+                    <xsl:apply-templates/>
+                    </span>
+                </xsl:when>
+                <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
+                    <span name="bookinvent" class="docOut">                            
+                        <xsl:apply-templates/>         
+                    </span>
+                </xsl:when>
+                <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
+                    <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
+                        <xsl:apply-templates/>
                     </a>
-                </xsl:when>                
+                </xsl:when>              
                 <xsl:when test="@type='docOut'">
-                    <a class="docOut" href="#{@target}">
+                    <a class="docOut">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           

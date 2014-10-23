@@ -383,6 +383,11 @@
                     <xsl:apply-templates/>
                 </tr>
             </xsl:when>
+            <xsl:when test="..//parent::TEI:table[@rend='source']">
+                <tr class="sourceCenter">
+                    <xsl:apply-templates/>
+                </tr>
+            </xsl:when>
             <xsl:when test="..//parent::TEI:table[@rend='year']">
                 <tr class="year">
                     <xsl:apply-templates/>
@@ -390,26 +395,6 @@
             </xsl:when>
             <xsl:when test="..//parent::TEI:table[@rend='synopsis']">
                 <tr class="synopsis">
-                    <xsl:apply-templates/>
-                </tr>
-            </xsl:when>
-            <xsl:otherwise>
-                <tr>
-                    <xsl:apply-templates/>
-                </tr>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="TEI:row">        
-        <xsl:choose>
-            <xsl:when test="@rows">
-                <tr rowspan="{@rows}">
-                    <xsl:apply-templates/>
-                </tr>
-            </xsl:when>
-            <xsl:when test="@cols">
-                <tr colspan="{@cols}">
                     <xsl:apply-templates/>
                 </tr>
             </xsl:when>
@@ -511,7 +496,12 @@
                     <a href="img/{@target}">
                         <xsl:apply-templates/>
                     </a>
-                </xsl:when>                                
+                </xsl:when>
+                <xsl:when test="@type='litListWeb'">
+                    <a href="{@target}" target="_blank">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
                 <xsl:when test="@type='docIn'">
                     <span class="docIn">
                         <xsl:attribute name="name">
@@ -531,6 +521,14 @@
                 <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
                     <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
                         <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+                <xsl:when test="@type='docOut' and starts-with(@target, '18')">
+                    <a class="docOut">
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="@target"/>
+                        </xsl:attribute>           
+                        <xsl:apply-templates/>         
                     </a>
                 </xsl:when>
                 <!--
