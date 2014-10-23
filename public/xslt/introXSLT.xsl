@@ -383,11 +383,6 @@
                     <xsl:apply-templates/>
                 </tr>
             </xsl:when>
-            <xsl:when test="..//parent::TEI:table[@rend='source']">
-                <tr class="sourceCenter">
-                    <xsl:apply-templates/>
-                </tr>
-            </xsl:when>
             <xsl:when test="..//parent::TEI:table[@rend='year']">
                 <tr class="year">
                     <xsl:apply-templates/>
@@ -406,7 +401,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:cell">
+    <xsl:template match="TEI:cell[not(@rend or @cols or @rows)]">
         <xsl:choose>
             <xsl:when test="..//ancestor::TEI:table[@rend='source']">
                 <td class="source">
@@ -433,8 +428,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="@cols">
+            <xsl:when test="@cols and @rend=not(@rend)">
                 <td colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols and @rend='center'">
+                <td colspan="{@cols}" class="center">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
