@@ -929,7 +929,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent')]">      
+    <xsl:template match="TEI:p[not(contains(@rend, 'space')) and not(@rend='hangingIndent')]">      
         <div class="{@rend}">
             <xsl:apply-templates/>
         </div>
@@ -939,6 +939,21 @@
         <div class="hangingIndent">
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[(contains(@rend, 'space'))]">
+        <xsl:choose>
+            <xsl:when test="@rend='center spaceOne'">
+                <div class="centerSpaceOne">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='center spaceTwo'">
+                <div class="centerSpaceOne">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
