@@ -766,12 +766,18 @@ td.index:last-child
         text-align: justify;
         }
 
-#tekst_innhold div.spaceOne
+#tekst_innhold div.centerSpaceOne, #tekst_innhold div.centerSpaceTow
+        {
+        margin: 2em 0em 2em 0em;
+        text-align: center;
+        }
+
+#tekst_innhold div.spaceOne, #tekst_innhold div.centerSpaceOne
         {
         line-height: 200%;
         }
         
-#tekst_innhold div.spaceTwo
+#tekst_innhold div.spaceTwo, #tekst_innhold div.centerSpaceTwo
         {
         line-height: 300%;
         }
