@@ -184,9 +184,45 @@
             </a>
         </span>
     </xsl:template>
-    -->    
+    --> 
+    
+    <xsl:template name="stripNull">
+        <xsl:param name="n"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($n,'0')">
+                <xsl:call-template name="stripNull">
+                    <xsl:with-param name="n" select="substring-after($n,'0')"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$n"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb">
+        <xsl:variable name="newTarget">
+            <xsl:value-of select="substring-before(@target,'fax')"/>
+            <xsl:call-template name="stripNull">
+                <xsl:with-param name="n" select="substring-after(@target,'fax')"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="@type='image'">
+                <a href="img/{$newTarget}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
+        <xsl:variable name="newTarget">
+            <xsl:value-of select="substring-before(@target,'fax')"/>
+            <xsl:call-template name="stripNull">
+                <xsl:with-param name="n" select="substring-after(@target,'fax')"/>
+            </xsl:call-template>
+        </xsl:variable>
             <xsl:choose>
                 <xsl:when test="@type='biblDesc'">
                     <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
@@ -204,9 +240,9 @@
                     </a>
                 </xsl:when>
                 <xsl:when test="@type='image'">
-                    <!--a href="{@target}" target="_blank"-->
+                    <a href="img/{$newTarget}">
                         <xsl:apply-templates/>
-                    <!--/a-->
+                    </a>
                 </xsl:when>
                 <xsl:when test="@select">                    
                     <a href="#http://{.}">
@@ -371,9 +407,9 @@
         </ul>
     </xsl:template>
     
-    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismZero' or @type='textualCriticismSupp']">
+    <xsl:template match="TEI:list[@type='textualCriticismPluralis' or @type='textualCriticismSingularis' or @type='textualCriticismSupp' or @type='textualCriticismZero']">
         <xsl:choose>
-            <xsl:when test="@type='textualCriticismPluralis'">                
+            <xsl:when test="@type='textualCriticismPluralis'">
                 <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
                     <tr class="">
@@ -410,8 +446,8 @@
                     </xsl:for-each>
                 </table>
             </xsl:when>
-            <xsl:when test="@type='textualCriticismSingularis'">                
-                <xsl:text>Der er foretaget følgende tekstrettelse (se vejledning til de tekstkritiske noter):</xsl:text>
+            <xsl:when test="@type='textualCriticismSingularis'">
+                <span><xsl:text>Der er foretaget følgende tekstrettelse</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
                     <tr bgcolor="lightgray">
                         <td>Side</td>
@@ -447,8 +483,8 @@
                     </xsl:for-each>
                 </table>
             </xsl:when>
-            <xsl:when test="@type='textualCriticismSupp'">                
-                <xsl:text>Der er ikke foretaget tekstrettelser, men følgende kritiske forhold er identificeret i teksten (se vejledning til de tekstkritiske noter):</xsl:text>
+            <xsl:when test="@type='textualCriticismSupp'">
+                <span><xsl:text>Der er ikke foretaget tekstrettelser, men følgende kritiske forhold er identificeret i teksten</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
                     <tr bgcolor="lightgray">
                         <td>Side</td>

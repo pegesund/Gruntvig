@@ -146,59 +146,95 @@
             </a>
         </span>
     </xsl:template>
-    -->
+    --> 
+    
+    <xsl:template name="stripNull">
+        <xsl:param name="n"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($n,'0')">
+                <xsl:call-template name="stripNull">
+                    <xsl:with-param name="n" select="substring-after($n,'0')"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$n"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb">
+        <xsl:variable name="newTarget">
+            <xsl:value-of select="substring-before(@target,'fax')"/>
+            <xsl:call-template name="stripNull">
+                <xsl:with-param name="n" select="substring-after(@target,'fax')"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="@type='image'">
+                <a href="img/{$newTarget}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
     
     <xsl:template match="TEI:ref[@type]">
-            <xsl:choose>              
-                <xsl:when test="@type='docIn'">
-                    <span class="docIn">
-                        <xsl:attribute name="name">
-                            <xsl:value-of select="@target"/>
-                        </xsl:attribute>
+        <xsl:variable name="newTarget">
+            <xsl:value-of select="substring-before(@target,'fax')"/>
+            <xsl:call-template name="stripNull">
+                <xsl:with-param name="n" select="substring-after(@target,'fax')"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:choose>              
+            <xsl:when test="@type='docIn'">
+                <span class="docIn">
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="@target"/>
+                    </xsl:attribute>
+                <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
+                <span name="bookinvent" class="docOut">                            
+                    <xsl:apply-templates/>         
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
+                <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
                     <xsl:apply-templates/>
-                    </span>
-                </xsl:when>
-                <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
-                    <span name="bookinvent" class="docOut">                            
-                        <xsl:apply-templates/>         
-                    </span>
-                </xsl:when>
-                <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
-                    <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>              
-                <xsl:when test="@type='docOut'">
-                    <a class="docOut">
-                        <xsl:attribute name="name">
-                            <xsl:value-of select="@target"/>
-                        </xsl:attribute>           
-                        <xsl:apply-templates/>         
-                    </a>
-                </xsl:when>
-                <xsl:when test="@type='image'">
-                    <!--<a href="{@target}">-->
-                        <xsl:apply-templates/>
-                    <!--</a>-->
-                </xsl:when>
-                <xsl:when test="@type='litListWeb'">
-                    <a href="{@target}" target="_blank">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                <xsl:when test="@type='web'">
-                    <a href="{@target}" target="_blank">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                 <xsl:when test="@type='epiText'">
-                    <a class="pdf"
-                        href="img/{@target}"
-                        onclick="return blank('epi',this.href)">
-                        <xsl:apply-templates/>
-                    </a>       
-                </xsl:when>
-            </xsl:choose>   
+                </a>
+            </xsl:when>              
+            <xsl:when test="@type='docOut'">
+                <a class="docOut">
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="@target"/>
+                    </xsl:attribute>           
+                    <xsl:apply-templates/>         
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='image'">
+                <a href="img/{$newTarget}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='litListWeb'">
+                <a href="{@target}" target="_blank">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='web'">
+                <a href="{@target}" target="_blank">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='epiText'">
+                <a class="pdf"
+                    href="img/{@target}"
+                    onclick="return blank('epi',this.href)">
+                    <xsl:apply-templates/>
+                </a>       
+            </xsl:when>
+        </xsl:choose>   
     </xsl:template>
     
     <xsl:template match="TEI:editor">
