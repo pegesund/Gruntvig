@@ -68,7 +68,7 @@
             </xsl:if>
             <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
                 <div>
-                    <i><xsl:text>Kaldes også: </xsl:text>
+                    <i><xsl:text>Benævnes også: </xsl:text>
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
                         <span>
