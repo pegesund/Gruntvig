@@ -299,32 +299,47 @@ KSR: 2012.12.03
 
 /* table START */
 
-.biblio.tabel, .biblio table.msDesc, .biblio table.textualCriticism, .biblio table.printDesc, .biblio table.contentDesc
+#biblDesc
+        {
+        border-top: 1px solid #eee;
+        font-size: 16px;
+        float: left;
+        text-align: left;
+        }
+
+.biblio table.printDesc, .biblio tr.printDesc, .biblio td.printDesc
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+        }
+
+.biblio table.printDesc
         {
         font-size: 14px;
         line-height: 150%;
-        border-collapse: collapse;
         empty-cells: show;
         margin: 2em 0em 2em 1em;
         vertical-align: top;
         width: 38em;
         }
-        
-.biblio table.msDesc, .biblio table.textualCriticism tr, td
-        {
-        border: 0px solid black;        
-        }
 
-.biblio tr:first-child
+.biblio tr.printDesc:first-child
         {
         background-color: #DDDDDD;
         font-weight: bold;
         }
 
-.biblio tr
+.biblio td.printDesc:nth(1)
         {
-        margin: 1em;
-        vertical-align: top;
+        color: red;
+        width: 5em;
+        }
+
+.biblio td.printDesc:nth(2)
+        {
+        color: blue;
+        width: 25em;
         }
         
 /* table END*/
