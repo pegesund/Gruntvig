@@ -274,31 +274,46 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@rend]">
+    <xsl:template match="TEI:table">
+        <table class="{@rend}">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row">
         <xsl:choose>
-            <xsl:when test="not(rend)">
-                <table>
+            <xsl:when test="..//parent::TEI:table[@rend='printDesc']">
+                <tr class="printDesc">
                     <xsl:apply-templates/>
-                </table>
+                </tr>
             </xsl:when>
-            <xsl:when test="@rend">
-                <table class="{@rend}">
+            <xsl:otherwise>
+                <tr class="tr">
                     <xsl:apply-templates/>
-                </table>
-            </xsl:when>
+                </tr>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:row">        
-        <tr class="tr">
-            <xsl:apply-templates/>
-        </tr>
+    <xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="..//ancestor::TEI:table[@rend='printDesc']">
+                <td class="printDesc">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="td">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
-    <xsl:template match="TEI:cell">        
-        <td class="td">
+    <xsl:template match="TEI:p">        
+        <p class="{@rend}">
             <xsl:apply-templates/>
-        </td>
+        </p>
     </xsl:template>
     
     <!-- til brugs for txtEditCSS-css START -->
