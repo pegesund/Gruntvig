@@ -715,6 +715,7 @@
                 </xsl:if>
                 <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
                 <xsl:if test="*[@type='add']">
+                    <xsl:text> </xsl:text>
                     <xsl:apply-templates select="*[@type='add']"/>                                     
                 </xsl:if>
             </span>
