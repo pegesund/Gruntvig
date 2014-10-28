@@ -152,14 +152,10 @@
                 <xsl:text>, </xsl:text>
             </xsl:if>
             <xsl:if test="@type='patronym'">
-                <xsl:text> egl. </xsl:text>
                 <xsl:apply-templates/>
-                <xsl:text>, </xsl:text>
             </xsl:if>
             <xsl:if test="@type='metronym'">
-                <xsl:text> egl. </xsl:text>
                 <xsl:apply-templates/>
-                <xsl:text>, </xsl:text>
             </xsl:if>
         </span>
     </xsl:template>
