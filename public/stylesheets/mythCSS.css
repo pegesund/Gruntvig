@@ -9,14 +9,14 @@
         color: gray;
         }
         
-.myth a.myth:visited {
+.myth a.myth:visited
+        {
         text-decoration: none;
         }
         
 .myth a.myth:hover
         {
         text-decoration: none;
-        color: green;
         }
         
 .myth a.myth:active
