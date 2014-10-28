@@ -257,6 +257,7 @@ a.docIn:hover
 
 .mainTxr .decimal
         {
+        alignment-adjust: left;
         list-style-type: decimal;
         margin: 1em;
         }
