@@ -250,6 +250,19 @@ a.docIn:hover
 
 /* list start */
 
+.mainTxr .litList,
+.mainTxr .decimal,
+.mainTxr .upperAlpha,
+.mainTxr .lowerAlpha,
+.mainTxr .upperRoman,
+.mainTxr .lowerRoman,
+.mainTxr .simple,
+.mainTxr .subSimple,
+.mainTxr .ordered
+        {
+        text-align: left;
+        }
+
 .mainTxr .litList
         {
         list-style: circle;
@@ -257,7 +270,6 @@ a.docIn:hover
 
 .mainTxr .decimal
         {
-        alignment-adjust: left;
         list-style-type: decimal;
         margin: 1em;
         }

@@ -314,52 +314,52 @@
         <xsl:if test="@type='lowerAlpha' or @type='subLowerAlpha'">
             <ul class="lowerAlpha">
                 <xsl:for-each select="TEI:item">
-                    <li class="lowerAlpha">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='lowerRoman' or @type='subLowerRoman'">
-            <ul>
+            <ul class="lowerRoman">
                 <xsl:for-each select="TEI:item">
-                    <li class="lowerRoman">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='ordered' or @type='subOrdered'">
-            <ul>
+            <ul class="ordered">
                 <xsl:for-each select="TEI:item">
-                    <li class="ordered">
+                    <li>
                         <xsl:apply-templates/>
                     </li>
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='simple' or @type='subSimple'">
-            <ul>
+            <ul class="simple">
                 <xsl:for-each select="TEI:item">
-                    <li class="simple">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='upperAlpha' or @type='subUpperAlpha'">
-            <ul>
+            <ul class="upperAlpha">
                 <xsl:for-each select="TEI:item">
-                    <li class="upperAlpha">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='upperRoman' or @type='subUpperRoman'">
-            <ul>
+            <ul class="upperRoman">
                 <xsl:for-each select="TEI:item">
-                    <li class="upperRoman">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
