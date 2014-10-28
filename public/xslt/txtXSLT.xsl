@@ -415,6 +415,12 @@
                     </div>
                     
                     <div class="kolofon">
+                        <xsl:if test="//TEI:note[@type='noBible' or @type='noMyth' or @type='noPersName' or @type='noPlaceName']">
+                            <xsl:text>Opmærkning til registrene er under udarbejdelse.</xsl:text>                            
+                        </xsl:if>
+                    </div>
+                    
+                    <div class="kolofon">
                         <xsl:text>XML ved Kim Steen Ravn</xsl:text>
                     </div>
                     
