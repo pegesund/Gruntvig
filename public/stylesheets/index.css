@@ -1348,7 +1348,7 @@ span.pbA, span.pbMs
         {
          background: none repeat scroll 0 0 #FAFAFA;
          border: 1px solid #e5e5e5; border-right:none; border-left:none;
-         height: 72px; width:555px;
+         height: 72px; width:655px;
          margin: 15px 0 10px 0;
          padding: 10px 14px 10px 19px;
          -moz-border-radius: 3px 3px 3px 3px; 
@@ -1643,7 +1643,6 @@ span.placeNameRef
 
 .noSeg 
         {
-        cursor: help;
         text-decoration: none;
         }
 
