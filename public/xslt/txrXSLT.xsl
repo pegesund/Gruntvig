@@ -303,16 +303,16 @@
     
     <xsl:template match="TEI:list">
         <xsl:if test="@type='decimal'">
-            <ul>
+            <ul class="decimal">
                 <xsl:for-each select="TEI:item">
-                    <li class="decimal">
+                    <li>
                         <xsl:apply-templates/>
                     </li>                
                 </xsl:for-each>
             </ul>
         </xsl:if>
         <xsl:if test="@type='lowerAlpha' or @type='subLowerAlpha'">
-            <ul>
+            <ul class="lowerAlpha">
                 <xsl:for-each select="TEI:item">
                     <li class="lowerAlpha">
                         <xsl:apply-templates/>
