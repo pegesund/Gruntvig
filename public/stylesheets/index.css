@@ -1537,9 +1537,12 @@ span.pbA, span.pbMs
     z-index: 10;
 }
 
-    #settings:link, #settings:visited  { text-decoration: none;}
+#span.settings
+        {
+        text-decoration: none;
+        }
 
-#settings_inner
+#span.settings_inner
     {background: url("../img/arrow.png") no-repeat scroll 160px -3px transparent;
     display: block;
     float: right;
