@@ -261,12 +261,12 @@
                     </span>
                 </xsl:when>                   
                 <xsl:when test="@type='docOut'">
-                    <span class="docout">
+                    <a class="docOut">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
                         </xsl:attribute>           
                         <xsl:apply-templates/>         
-                    </span>
+                    </a>
                 </xsl:when>
                  <xsl:when test="@type='epiText'">
                     <a class="pdf"
