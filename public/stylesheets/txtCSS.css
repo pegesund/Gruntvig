@@ -124,6 +124,13 @@
         text-indent: 1em;
         text-align: justify;
         }
+        
+#tekst_innhold div.quote
+        {
+        font-size: 16px;
+        margin: 1em 2em 1em 2em;
+        text-align: justify;
+        }
 
 #tekst_innhold div.noIndent
         {
