@@ -136,22 +136,46 @@
     </xsl:template>
     
     <xsl:template match="TEI:table"> 
-        <table class="guideLine">
+        <table class="guideLines">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
     
     <xsl:template match="TEI:row">        
-        <tr>
+        <tr class="guideLines">
             <xsl:apply-templates/>
         </tr>
     </xsl:template>
     
-    <xsl:template match="TEI:cell">        
-        <td style="font-size: 16px">
-            <xsl:apply-templates/>
-        </td>
+    <xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@cols">
+                <td class="guideLines" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="guideLines">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
+    
+    <!--xsl:template match="TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@cols">
+                <td colspan="{@cols}" style="font-size: 16px">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td style="font-size: 16px">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template-->
     
     <xsl:template match="TEI:ref[@type]">
             <xsl:choose>

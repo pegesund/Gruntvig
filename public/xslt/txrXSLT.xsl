@@ -412,7 +412,7 @@
             <xsl:when test="@type='textualCriticismPluralis'">
                 <span><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
-                    <tr class="">
+                    <tr>
                         <td>Side</td>
                         <td>Note</td>
                     </tr>
@@ -449,7 +449,7 @@
             <xsl:when test="@type='textualCriticismSingularis'">
                 <span><xsl:text>Der er foretaget følgende tekstrettelse</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
-                    <tr bgcolor="lightgray">
+                    <tr>
                         <td>Side</td>
                         <td>Note</td>
                     </tr>
@@ -486,7 +486,7 @@
             <xsl:when test="@type='textualCriticismSupp'">
                 <span><xsl:text>Der er ikke foretaget tekstrettelser, men følgende kritiske forhold er identificeret i teksten</xsl:text> (<a class="txrmenu" href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</span>
                 <table class="textualCriticism">
-                    <tr bgcolor="lightgray">
+                    <tr>
                         <td>Side</td>
                         <td>Note</td>
                     </tr>
