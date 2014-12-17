@@ -1,19 +1,17 @@
 #{extends 'main.html' /}
 #{set subPageTitle:'Mytologisk register' /}
 #{ header /}
+
 <script type="text/javascript">
-
 	
-
-		$(document).ready(function() {
-                           
-                $('div.myth').hide();
-                $('div.root').hide();
-                
-                alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
-                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
-                      if( a.search(/[\u0080-\uffff]/) >= 0 ) {
-                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"t").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+	$(document).ready(function() {
+	
+	$('div.myth').hide();
+	$('div.root').hide();
+	alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
+	function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+		if( a.search(/[\u0080-\uffff]/) >= 0 ) {
+		return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"t").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
                       }
                       else {
                           return a.toLowerCase();
@@ -31,26 +29,41 @@
                                 firstLetter = normAlfa( name.charAt(0) );
                                 if(firstLetter == normAlfa(value)){ 
                                 $(this).hide();
-                                    content = $(this).html();
-                                    internal_anchor = $(this).attr("id");
-                                    node = "<!-- " + normAlfa(name) + "-->"; // hack to keep nodes sorted :-)
-                                    node += '<tr><td class="navn"><a class="myth" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-                                    nodes.push(node);
+
+
+                                 content = $(this).html();
+                                 internal_anchor = $(this).attr("id");
+                                 node = "<!-- " + normAlfa(name) + "-->"; // hack to keep nodes sorted :-)
+                                 node += '<tr><td class="navn"><a class="myth" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                 nodes.push(node);
+
+
                                 }
                             $(this).children('.epithet').each( function(index3) {
-                                content = $(this).text();
+                                content = $(this).next('.popUp').text();
                                 name = $(this).text();
-                                content = '';
+
+                                //popUpContent = $(this).('.popUp').text();
+                                
                                 internal_link = $(this).find("a").attr("href").substr(6);
                                 firstLetter2 = normAlfa( name.charAt(0) );
                                 if(firstLetter2 == normAlfa(value)){ 
-                                    node = '<!-- ' + normAlfa(name) + "-->";
-	                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
-	                                    nodes.push(node);
-	                                } 
+                                node = '<!-- ' + normAlfa(name) + "-->";
+	                        node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+	                        nodes.push(node);
+        
+
+//                                content = '';
+//                                internal_link = $(this).find("a").attr("href").substr(6);
+//                                firstLetter2 = normAlfa( name.charAt(0) );
+//                                if(firstLetter2 == normAlfa(value)){ 
+//                                    node = '<!-- ' + normAlfa(name) + "-->";
+//	                            node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+//	                            nodes.push(node);
+	                         } 
 	                            });
 	                            $(this).children('.latin').each( function(index4) {
-	                                content = $(this).text();
+	                                content = $(this).next('.popUp').text();
 	                                name = $(this).text();
 	                                content = '';
 	                                internal_link = $(this).find("a").attr("href").substr(6);
@@ -62,7 +75,7 @@
 	                                } 
 	                            });
 	                            $(this).children('.pseudoEpithet').each( function(index4) {
-	                                content = $(this).text();
+	                                content = $(this).next('.popUp').text();
 	                                name = $(this).text();
 	                                content = '';
 	                                internal_link = $(this).find("a").attr("href").substr(6);
@@ -74,7 +87,7 @@
 	                                } 
 	                            });
 	                            $(this).children('.saxo').each( function(index5) {
-	                                content = $(this).text();
+	                                content = $(this).next('.popUp').text();
 	                                name = $(this).text();
 	                                content = '';
 	                                internal_link = $(this).find("a").attr("href").substr(6);
