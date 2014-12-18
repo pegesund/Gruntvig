@@ -1679,6 +1679,11 @@ span.placeNameRef
         
 /* pers- og placeName START */
 
+span.bold
+        {
+        font-weight: bold;
+        }
+
 .persName, .placeName
         {
         text-decoration: none;
