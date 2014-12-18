@@ -26,7 +26,7 @@
                 $.each(alphabet, function(index, value) { 
                         var nodes = [];
                         $('div.person').each(function(index2) {
-                            name = $(this).find('span.name').html();
+                            name = $(this).find('span.name').text();
                             // alert("Adding: " + name);
                             firstLetter = normAlfa(name.charAt(0));
                             if(firstLetter == normAlfa(value)){ 
