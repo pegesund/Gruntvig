@@ -239,10 +239,6 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@rend='facts']">
-        <div class="fact">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
+    <xsl:template match="TEI:cell[@rend='facts']"/>
 
 </xsl:stylesheet>
