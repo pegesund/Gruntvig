@@ -785,7 +785,7 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19--> 
+    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19-->
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -953,7 +953,10 @@
     </xsl:template>
     
     <xsl:template match="TEI:p[(contains(@rend, 'space'))]">
-        <xsl:choose>
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+        <!--xsl:choose>
             <xsl:when test="@rend='center spaceOne'">
                 <div class="centerSpaceOne">
                     <xsl:apply-templates/>
@@ -964,10 +967,37 @@
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
-        </xsl:choose>
+        </xsl:choose-->
     </xsl:template>
 
-    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]"> 
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
+        <span id="{generate-id()}" class="appInvisible">
+            <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </a>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
+            <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
+            <span id="{generate-id()}" class="appInvisible">
+                <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                    <xsl:text>[</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                    <xsl:text>]</xsl:text>
+                </a>
+            </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:pb[@type='edition']">
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="{@ed}">|</span>
+        <span id="{generate-id()}" class="appInvisible">
+            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+        </span>
+    </xsl:template>
+
+    <!--xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="pbSize">
             <xsl:text>|</xsl:text>
@@ -1008,7 +1038,7 @@
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
