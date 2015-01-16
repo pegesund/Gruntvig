@@ -58,7 +58,7 @@
                     <xsl:apply-templates/>
                     <!--xsl:call-template name="afterComma"></xsl:call-template-->
                     
-                    <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
+                    <!--<xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>-->
                 </span>
                 <xsl:call-template name="comma-sep-list">
                     <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
