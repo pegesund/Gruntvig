@@ -5,7 +5,7 @@ Kim Steen Ravn
 
 */
 
-div.fact {
+div.facts {
     visibility: hidden;
 }
 
@@ -14,7 +14,7 @@ div.fact {
     display: inline-block;
 }
 
-.placelook .fact {
+.placelook .facts {
     width: 400px;
     padding-left: 10px;
 }
