@@ -1956,7 +1956,7 @@ h1.subtitle { margin-left: 0px !important; }
     
  /* popup for places */
 
- span.placeHeader { visibility: hidden; }
+ span.placeHeader { visibility: visible; }
  
  span.placeHeader .placeName 
         { 
