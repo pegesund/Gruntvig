@@ -24,18 +24,72 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
 <div id="main">
 
 	<div class="container">
-
-		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="krono">Værker</a> &raquo; ${asset.name}</div>
-		<!-- <div id="select_view">
-			<form action="">
-				<input type="radio" name="visning" id="lesevisning" value="1" disabled/><label for="lesevisning">Lesevisning</label>
-				<input type="radio" name="visning" id="filologisk_visning" value="2" checked /><label for="filologisk_visning">Filologisk visning</label>
-			</form>
-		</div>!-->
-               
+            
+            <div id="submenu">
+            
+            <!-- test setting teknisk opdatering 2014.12.01 START -->
+                    
+                    <div id="breadcrumbs">
+                        
+                        <a href="#">Forside</a> &raquo; <a href="krono">Værker</a> &raquo; ${asset.name}
+                        
+                        <div id="select_view">
+                            
+                            <!--p>Tekstkritik</p>
+                            
+                            <input type="checkbox">
+                                <label>Tekstrettelser</label>
+                            </input>
+                            
+                            <input type="checkbox">
+                                <label>Supplernde noter</label>
+                            </input>
+                            
+                            <p>Registre</p>
+                            
+                            <input type="checkbox">
+                                <label>Personnavne</label>
+                            </input>
+                            
+                            <input type="checkbox">
+                                <label>Stednavne</label>
+                            </input>
+                            
+                            <input type="checkbox">
+                                <label>Mytologi</label>
+                            </input>
+                            
+                            <input type="checkbox">
+                                <label>Bibelsteder</label>
+                            </input>
+                            
+                            <button onclick="window.open('{$printWork}','{$newWindow}')">Udskriv teksten</button-->
+                            
+                            <!--form action="">
+                                <input type="radio" name="visning" id="filologisk_visning" value="2" checked /><label for="filologisk_visning">Tilpas visning</label>
+                            </form-->
+                        </div>
+                    
+                    </div>
+                    
+            
+            <!-- test setting 2014.12.01 END -->
+                    
+                <!--
+                visning version 1.5:
                 
-               
+		<div id="breadcrumbs">
+                    <a href="#">Forside</a> &raquo; <a href="krono">Værker</a> &raquo; ${asset.name}
+                </div>
+                    
+                <div id="select_view">
+                    <form action="">
+                        <input type="radio" name="visning" id="lesevisning" value="1" disabled/><label for="lesevisning">Lesevisning</label>
+                        <input type="radio" name="visning" id="filologisk_visning" value="2" checked /><label for="filologisk_visning">Filologisk visning</label>
+                    </form>
+		</div>
+                -->
+                
                 <span id="settings">Tekststørrelse & font</span>
 
                     <div id="settings_dropdown">
@@ -76,6 +130,21 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
 
 
 			<div id="hovedtekst">
+                            
+                            <script type="text/javascript">
+                                
+                                function showhidePb( id ) { 
+  var elem= document.getElementById( id );
+  if ( !elem ) { alert( 'no block to split' ); }
+  if ( elem.style.display=='inline' ) {
+    elem.style.display= 'none';
+    }
+  else {
+    elem.style.display= 'inline';
+    }
+  }
+                                
+                            </script>
 				<div id="toppmeny" class="nav_meny">
 					<span class="previous" title="Forrige kapitel"></span>
 					<span class="chapter">

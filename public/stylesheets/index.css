@@ -1958,8 +1958,15 @@ h1.subtitle { margin-left: 0px !important; }
 
  span.placeHeader { visibility: hidden; }
  
- span.placeHeader .placeName { 
-     visibility: visible;
+ span.placeHeader .placeName 
+        { 
+        visibility: visible;
+        color: #4DBC4D;
+        padding-bottom: 30px;
+        }
+ 
+ span.placeHeader .placeNameX { 
+     visibility: hidden;
      color: blue;
      padding: 15px;
      padding-bottom: 30px;
@@ -1972,7 +1979,7 @@ h1.subtitle { margin-left: 0px !important; }
  
  div.placeContent { visibility: hidden; }
  
- div.placeContent .explanation { visibility: visible }
+ div.placeContent .explanation { visibility: hidden }
 
  .docOut 
         {
