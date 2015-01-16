@@ -103,12 +103,15 @@
         <img src="/img/{@select}" alt="" width="100%"/>
     </xsl:template>
     
-    <xsl:template match="TEI:ref[@type='image']">
-        <div>
-            <a href="/viskort/{@next}">
-                <img src="/img/{@target}" alt="" height="100"/>
+    <xsl:template match="TEI:ref[@type='docOut']">
+        <xsl:choose>
+            <a class="docOut">
+                <xsl:attribute name="name">
+                    <xsl:value-of select="@target"/>
+                </xsl:attribute>
+                <xsl:apply-templates/>
             </a>
-        </div>
+        </xsl:choose>   
     </xsl:template>
     
     <!-- landkort END -->
