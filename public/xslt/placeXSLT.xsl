@@ -56,7 +56,7 @@
             <span class="placeHeader">
                 <span class="placeName">
                     <xsl:apply-templates/>
-                    <xsl:call-template name="afterComma"></xsl:call-template>
+                    <!--xsl:call-template name="afterComma"></xsl:call-template-->
                     
                     <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
                 </span>
@@ -70,8 +70,10 @@
                 </xsl:if>
                 <xsl:apply-templates select="following-sibling::TEI:cell[@rend='specify']"/>
                 <xsl:apply-templates select="parent::TEI:row/@select"/>
-            </span>            
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='explanation']"/>
+            </span>
+            <div class="placeContent">
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='explanation']"/>
+            </div>
         </div>
     </xsl:template>
 
