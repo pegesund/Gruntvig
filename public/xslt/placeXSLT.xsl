@@ -39,52 +39,41 @@
     <xsl:template match="TEI:head">
     </xsl:template>
 
-    <xsl:template match="TEI:del[@rend='afterComma']"/>
+    <!--<xsl:template match="TEI:del[@rend='afterComma']"/>
     
     <xsl:template match="TEI:del[@rend='afterComma']" mode="afterComma">
-
         <xsl:text>, </xsl:text>
         <xsl:apply-templates/>
-
     </xsl:template>
+    -->
     
     <xsl:template match="TEI:cell[@rend='name']">
         <xsl:param name="copy"/>
-        <div class="row">
-          <xsl:if test="not($copy)">
-                <xsl:attribute name="id"><xsl:value-of select="parent::TEI:row/@xml:id"/></xsl:attribute>
-          </xsl:if>
-          
-          <span class="placeHeader">
-            <span class="placeName">
-                <xsl:apply-templates/>
-                <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
-            </span>
-            <xsl:call-template name="comma-sep-list">
-                <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
-            </xsl:call-template>
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameSyn']" mode="comma-sep"/>
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameDia']" mode="comma-sep"/>
-            <xsl:if test="not($copy or parent::TEI:row/@rend='noSynch')">
-                <xsl:apply-templates select="parent::TEI:row/@synch"/>
-            </xsl:if>
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='specify']"/>
-            <xsl:apply-templates select="parent::TEI:row/@select"/>
-         </span>
-          <div class="placeContent">
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='explanation']"/>
-            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='facts']"/>
-          </div>
-            <!--<xsl:apply-templates select="document('placeH.xml')//TEI:placeName[@key=current()/parent::TEI:row/@xml:id]"/>-->
+        <div class="row">            
             <xsl:if test="not($copy)">
-                <xsl:apply-templates select="//TEI:row[@synch=current()/parent::TEI:row/@xml:id]/TEI:cell[@rend='name']">
-                    <xsl:with-param name="copy" select="'yes'"/>
-                    <xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/>
-                </xsl:apply-templates>
-            </xsl:if> 
+                <xsl:attribute name="id"><xsl:value-of select="parent::TEI:row/@xml:id"/></xsl:attribute>
+            </xsl:if>
+            <span class="placeHeader">
+                <span class="placeName">
+                    <xsl:apply-templates/>
+                    <xsl:call-template name="afterComma"></xsl:call-template>
+                    
+                    <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
+                </span>
+                <xsl:call-template name="comma-sep-list">
+                    <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameSyn']" mode="comma-sep"/>
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameDia']" mode="comma-sep"/>
+                <xsl:if test="not($copy or parent::TEI:row/@rend='noSynch')">
+                    <xsl:apply-templates select="parent::TEI:row/@synch"/>
+                </xsl:if>
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='specify']"/>
+                <xsl:apply-templates select="parent::TEI:row/@select"/>
+            </span>            
+            <xsl:apply-templates select="following-sibling::TEI:cell[@rend='explanation']"/>
         </div>
     </xsl:template>
-
 
     <xsl:template match="TEI:cell[@rend='altNameSyn']" mode="comma-sep">
       <xsl:if test="position()=1"> (</xsl:if>
@@ -225,6 +214,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <a href="steder#{parent::TEI:row/@xml:id}">
+                    
                     <xsl:value-of select="preceding-sibling::TEI:cell[@rend='name']"/>
                 </a>
                 <xsl:text></xsl:text><!-- slettet parentes; altNameSyn skal tilpasses -->
@@ -240,5 +230,16 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='facts']"/>
+
+<xsl:template name="afterComma">
+    <xsl:text>, </xsl:text>
+    <xsl:apply-templates select="TEI:del[@rend='afterComma']"/>
+    
+
+       
+        
+    
+    
+</xsl:template>
 
 </xsl:stylesheet>
