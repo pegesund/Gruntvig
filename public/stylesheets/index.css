@@ -333,7 +333,7 @@ a.returnTop
 #select_view
         {
         float: right;
-        height: 100px;
+        height: 0px;
         margin-top: 10px;
         text-align: left;  
         width: 500px; 
