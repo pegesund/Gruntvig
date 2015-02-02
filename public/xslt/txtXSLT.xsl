@@ -997,7 +997,7 @@
         </span>
     </xsl:template>
 
-    <!--xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
+    <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="pbSize">
             <xsl:text>|</xsl:text>
@@ -1038,7 +1038,7 @@
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
-    </xsl:template-->
+    </xsl:template>
     
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
