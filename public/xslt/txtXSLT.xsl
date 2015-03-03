@@ -1027,7 +1027,7 @@
         <a class="pdf"
             href="img/{@facs}"
             onclick="return blank('epi',this.href)">
-            <span class="size">
+            <span class="pb{@ed}">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
