@@ -90,10 +90,39 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
 		</div>
                 -->
                 
-                <span id="settings">Tekststørrelse & font</span>
+                <span id="settings">Visning</span>
 
                     <div id="settings_dropdown">
-                        <span id="settings_inner">Tekststørrelse & font</span>
+                        <!-- *************************************************************** -->
+                        <!-- Checkboxes for pagenumbers and optional highlighting of various elements KK 2015-02-26 -->
+                        
+                        <span id="settings_inner">Visning</span>
+                        <br/><br/>
+                        <h4>Vis sidetal i:</h4>
+                        <div id="pBoxDiv">
+                            <!-- 
+                                here will appear boxes like this:-
+                                <div>
+                                <input checked="" class="setInput" id="showHidePagA" type="checkbox">A
+                                </div> 
+                            -->
+                        </div>
+                        <br/>
+                        <h4>Vis:</h4>
+                        <div id="showBoxDiv">
+                            <!-- 
+                                here will appear boxes like this:-
+                                <div>
+                                <input checked="" class="setInput" id="showHidelem" type="checkbox">Tekstkritik</div>
+                                </div> 
+                            -->
+                        </div>
+                        <br/>
+                        <button id="showAll" class="show">Vælg alt</button>
+                        <button id="showNot" class="show">Slet alt</button>
+                        
+                        <!-- *************************************************************** -->
+                        <!--span id="settings_inner">Tekststørrelse & font</span-->
                         
                         <br/>
                         <br/>
@@ -103,7 +132,7 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
                         <div id="slider"></div>
                         <span id="big_A">A</span>
                         
-                        <span id="amount" ></span>
+                        <span id="amount"></span>
                         
                         <br/>
                         <br/>
@@ -121,6 +150,15 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
                         <label id="font_verdana_label" for="font_verdana">Moderne</label>
                         
                         <br>
+                            
+                            <!-- *************************************************************** -->
+                            <!-- Save button for explicit use of cooies, KK 2015-02-26 -->
+                            
+                            <br/>
+                            <button id="saveCookie" class="show">Gem i cookie</button>
+                            <div style="font-size:50%;margin:5px"><a href="disclaimer.htm">(hvad er en cookie?)</a></div>
+                            
+                            <!-- *************************************************************** -->
 
                     </div>
 
