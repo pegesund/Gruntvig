@@ -1034,12 +1034,12 @@
         </a>       
     </xsl:template>
         
-    <xsl:template match="TEI:seg/TEI:pb">
+    <!--xsl:template match="TEI:seg/TEI:pb">
             <span class="size">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
