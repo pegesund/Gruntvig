@@ -60,6 +60,25 @@ var gotoChapter = function(text, chapter) {
             addCommentListener();
             addEndNoteListener();
             fixPageNumbersToFaks();
+
+            // add checkboxes for choosing pagenumbering, see tekstvisning.js
+            var edFound= [];
+            $("span[class^='pb']").each( function(){
+              var ed= this.className.substring(2);
+              if( !(ed in edFound) ) {
+                mkPBox( ed );
+                edFound[ed]= true ;
+              }
+            });
+        
+            // add checkboxes for other tings
+            mkShowBox( "lem",       "Tekstkritik", {"color": "#4DBC4D"} );
+            mkShowBox( "seg",       "Kommentarer", {"color": "#4DBC4D"}, true );
+            mkShowBox( "persName",  "Personnavne", {"color": "#4DBC4D"} );
+            mkShowBox( "myth",      "Mytologi",    {"color": "#4DBC4D"}, true );
+            mkShowBox( "bible",     "Bibelsteder", {"color": "#4DBC4D"}, true );
+            mkShowBox( "placeName", "Stednavne",   {"color": "#4DBC4D"} );
+            loadCookie();
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");
