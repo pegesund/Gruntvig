@@ -1034,15 +1034,11 @@
         </a>       
     </xsl:template>
         
-    <xsl:template match="TEI:seg/TEI:pb">
-        <xsl:choose>
-            <xsl:when test="@type='epiText' and @ed='Rønning'">
-                <span class="pb{@ed}">
-                    <xsl:text>|</xsl:text>
-                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-                </span>
-            </xsl:when>
-        </xsl:choose>
+    <xsl:template match="TEI:seg/TEI:pb[@type='epiText' and @ed='Rønning']">
+            <span class="pb{@ed}">
+                <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
     </xsl:template>
     
     <xsl:template name="delimiterComma">
