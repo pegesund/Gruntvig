@@ -1553,15 +1553,17 @@ span.pbA, span.pbMs
 
 /* Font size selector */
 
-#settings {
-    background: url("../img/arrow.png") no-repeat scroll 153px -3px transparent;
-    display: block;
-    float: right;
-    margin-top: -5px;
-    padding: 5px 15px 5px 8px;
-    width: 148px;
-    z-index: 10;
-}
+#settings
+        {
+        background: url("../img/arrow.png") no-repeat scroll 153px -3px transparent;
+        color: #4DBC4D;
+        display: block;
+        float: right;
+        margin-top: -5px;
+        padding: 5px 15px 5px 8px;
+        width: 148px;
+        z-index: 10;
+        }
 
 #span.settings
         {
@@ -1569,15 +1571,16 @@ span.pbA, span.pbMs
         }
 
 #span.settings_inner
-    {background: url("../img/arrow.png") no-repeat scroll 160px -3px transparent;
-    display: block;
-    float: right;
-    color: #444;
-    text-decoration: none;
-    padding: 5px 15px;
-    width: 141px;
-    z-index: 10;
-}
+        {
+        background: url("../img/arrow.png") no-repeat scroll 160px -3px transparent;
+        display: block;
+        float: right;
+        color: #444;
+        text-decoration: none;
+        padding: 5px 15px;
+        width: 141px;
+        z-index: 10;
+        }
 
 #settings_dropdown {
     -moz-border-radius: 8px 8px;
@@ -1585,7 +1588,7 @@ span.pbA, span.pbMs
     border-radius: 8px 8px;
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #DDDDDD;
-    border-top:0;
+    border-top: 0;
     -moz-box-shadow: 0 0 10px #aaa;
     -webkit-box-shadow: 0 0 10px #aaa;
     box-shadow: 0 0 10px #aaa;
