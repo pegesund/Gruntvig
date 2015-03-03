@@ -9,12 +9,14 @@
   float: right;
   position: relative;
 }
+
 #cluetip-waitimage {
   width: 32px;
   height: 32px;
   position: absolute;
   background-image: url(images/wait.gif);
 }
+
 .cluetip-arrows {
   display: none;
   position: absolute;
