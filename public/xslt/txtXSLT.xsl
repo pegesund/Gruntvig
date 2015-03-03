@@ -1023,7 +1023,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:pb[@type='epiText' and not(@ed)]">
+    <xsl:template match="TEI:pb[@type='epiText']">
         <a class="pdf"
             href="img/{@facs}"
             onclick="return blank('epi',this.href)">
@@ -1034,8 +1034,8 @@
         </a>       
     </xsl:template>
         
-    <xsl:template match="TEI:seg/TEI:pb[@type='epiText' and @ed='Rønning']">
-            <span class="pb{@ed}">
+    <xsl:template match="TEI:seg/TEI:pb">
+            <span class="size">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
