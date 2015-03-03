@@ -1024,14 +1024,14 @@
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='epiText']">
-        <a class="pdf"
-            href="img/{@facs}"
-            onclick="return blank('epi',this.href)">
-            <span class="pb{@ed}">
+        <span class="pb{@ed}">
+            <a class="pdf"
+                href="img/{@facs}"
+                onclick="return blank('epi',this.href)">                
                 <xsl:text>|</xsl:text>
-                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-        </a>       
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>                
+            </a>
+        </span>       
     </xsl:template>
         
     <!--xsl:template match="TEI:seg/TEI:pb">
