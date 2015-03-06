@@ -906,7 +906,7 @@ td.index:last-child
 
 /* rs START */
 
-#tekst_innhold a.rs_bible
+#tekst_innhold a.bible
         {
         text-decoration: none;
         }
