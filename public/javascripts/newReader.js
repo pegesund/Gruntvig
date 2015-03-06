@@ -274,7 +274,7 @@ addNewReader = function(num) {
  * 
  */
 var addMouseHandlers = function(fileName) {
-    addTooltip($('.persName, .placeName, .myth, .rs_bible'));
+    addTooltip($('.persName, .placeName, .myth, .bible'));
     if (fileName.match(/getComment/) || fileName.match(/_com/)) {
         $(".plusComment").unbind("click").click(function() {    
             $(this).next().slideToggle("slow"); 
