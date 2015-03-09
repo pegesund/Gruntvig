@@ -760,14 +760,15 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 #nav a.a_with_dropdown
         {
-	padding:9px 30px 8px 20px;
+	    padding:9px 30px 8px 20px;
         z-index: 1;
         }
         
-#nav a:hover {
-	background: #000;
-	color: #fff;
-}
+/*#nav a:hover
+        {
+	    background: #000;
+	    color: #fff;
+        }*/
 
 /* main level link hover */
 
@@ -947,6 +948,7 @@ ul#nav li.with_dropdown:first-child ul li
 }
 #nav {
 	display: inline-block;
+	
 }
 html[xmlns] #nav {
 	display: block;
