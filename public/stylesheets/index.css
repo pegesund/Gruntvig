@@ -778,27 +778,29 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 }
 
-#nav .current a, #nav li.with_dropdown:hover > a {
-	border-radius-bottomright: 0px;
-	border-radius-bottomleft: 0px;
-	-webkit-border-bottom-right-radius: 0px;
-	-webkit-border-bottom-left-radius: 0px;
-	border-radius-bottomright: 0px;
-	border-radius-bottomleft: 0px;
-	border:none;
-    z-index: 1;
-}
+#nav .current a, #nav li.with_dropdown:hover > a
+        {
+       	border-radius-bottomright: 0px;
+       	border-radius-bottomleft: 0px;
+       	-webkit-border-bottom-right-radius: 0px;
+       	-webkit-border-bottom-left-radius: 0px;
+       	border-radius-bottomright: 0px;
+       	border-radius-bottomleft: 0px;
+       	border:none;
+       	z-index: 1;
+       }
 
-#nav .current a, #nav li.with_dropdown:hover > a {
-	border-radius-bottomright: 0px;
-	border-radius-bottomleft: 0px;
-	-webkit-border-bottom-right-radius: 0px;
-	-webkit-border-bottom-left-radius: 0px;
-	border-radius-bottomright: 0px;
-	border-radius-bottomleft: 0px;
-	border:none;
-
-}
+#nav .current a, #nav li.with_dropdown:hover > a
+        {
+       	border-radius-bottomright: 0px;
+       	border-radius-bottomleft: 0px;
+       	-webkit-border-bottom-right-radius: 0px;
+       	-webkit-border-bottom-left-radius: 0px;
+       	border-radius-bottomright: 0px;
+       	border-radius-bottomleft: 0px;
+       	border:none;
+       	z-index: 1;
+       }
 
 ul#nav li:first-child ul {
 	width: 185px;
@@ -808,7 +810,8 @@ ul#nav li.with_dropdown:first-child ul li
         {
 	width: 185px;
         float: left;
-        }
+       	z-index: 1;
+       }
 
 #nav li:hover > a {
 	background:#fff;
