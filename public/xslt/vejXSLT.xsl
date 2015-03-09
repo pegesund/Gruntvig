@@ -194,6 +194,13 @@
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
+            <xsl:when test="@type='image'">
+                <div>
+                    <a href="/viskort/{@next}">
+                        <img src="/img/{@target}" alt="" height="100%"/>
+                    </a>
+                </div>
+            </xsl:when>
         </xsl:choose>   
     </xsl:template>
     
