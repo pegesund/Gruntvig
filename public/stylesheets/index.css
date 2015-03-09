@@ -760,8 +760,8 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 #nav a.a_with_dropdown
         {
-	padding:9px 30px 8px 20px;
-        z-index: 1;
+        padding:9px 30px 8px 20px;
+        /*z-index: 1;*/
         }
         
 #nav a:hover {
@@ -1555,13 +1555,13 @@ span.pbA, span.pbMs
 
 #settings
         {
-        background: url("../img/arrow.png") no-repeat scroll 153px -3px transparent;
+        /*background: url("../img/arro.png") no-repeat scroll 153px -3px transparent;*/
         color: #4DBC4D;
         display: block;
         float: right;
         margin-top: -5px;
         padding: 5px 15px 5px 8px;
-        width: 148px;
+        width: 130px;
         z-index: 10;
         }
 
