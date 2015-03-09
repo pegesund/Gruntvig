@@ -62,6 +62,11 @@
                     <hr align="center" width="9%"/>
                 </div>
             </xsl:when>
+            <xsl:when test="@select">
+                <div>
+                    <img src="/img/{@select}" alt="" height="100%"/>
+                </div>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     
