@@ -93,11 +93,42 @@
                         <xsl:call-template name="delimiterKomma"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> eller </xsl:text>                        
+                        <xsl:text> eller </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@rend='normForm']">
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:addName[@type='patronym']">
+        <span style="color: red">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@rend='popUp' or @rend='encyc']">
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
+        <div class="{@rend}">
+            <xsl:variable name="sameAs" select="../@sameAs"/>
+            <xsl:apply-templates/>
+            <span class="sameAs">
+                <a href="#{$sameAs}">
+                    <xsl:text> > </xsl:text>                    
+                    <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
+                </a>
+            </span>
+        </div>
     </xsl:template>
     
     <xsl:template name="delimiter">
@@ -114,50 +145,44 @@
         </xsl:choose>
     </xsl:template>
     
+    <!--xsl:template name="delimiter">
+        <xsl:choose>
+            <xsl:when test="position()=1">
+                <xsl:text> </xsl:text>
+            </xsl:when>
+            <xsl:when test="position()=1 and position()=last">
+                <xsl:text>.</xsl:text>
+            </xsl:when>
+            <xsl:when test="position()=last()">
+                <xsl:text>.</xsl:text>
+            </xsl:when>
+            <xsl:when test="position()=last()-1">
+                <xsl:text> eller </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>.</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template-->
     
-    <xsl:template match="TEI:cell[@rend='normForm' or @rend='patronym']">
-        <div class="{@rend}">
-            <xsl:variable name="theId" select="../@xml:id"/>
-            <a href="myter#{$theId}">
-                <xsl:apply-templates/>
-            </a>    
-        </div>
-    </xsl:template>
-    
-    
-    <xsl:template match="TEI:cell[@rend='popUp' or @rend='encyc']">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
-        <div class="{@rend} popUp">
-            <xsl:variable name="sameAs" select="../@sameAs"/>
-            <xsl:apply-templates/>
-            <span class="sameAs">
-                    <xsl:if test="@rend='latin' or @rend='saxo'">
-                        <xsl:text>, latinsk navn for </xsl:text>
-                    </xsl:if>   
-                    <xsl:if test="@rend='epithet' or @rend='pseudoEpithet'">
-                        <xsl:text>, andet navn for </xsl:text>
-                    </xsl:if>   
-                    <a href="myter#{$sameAs}">
-                        <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
-                    </a>
-            </span>
-        </div>
+    <xsl:template name="delimiterKomma">
+        <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>    
+    </xsl:template>
     
-    <xsl:template name="delimiterKomma">
-        <xsl:if test="following-sibling::TEI:cell[@rend='orthography']">
-            <xsl:text>, </xsl:text>
+    <xsl:template name="fullStop">
+        <xsl:if test="following-sibling::TEI:cell[@rend='orthography'][position()=last()]">
+            <xsl:text>.</xsl:text>
+        </xsl:if>
+        <xsl:if test="TEI:cell[@rend='latin' or @rend='saxo'][position()=last()]">
+            <xsl:text>.</xsl:text>
         </xsl:if>
     </xsl:template>
 
