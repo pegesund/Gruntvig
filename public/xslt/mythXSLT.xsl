@@ -38,7 +38,7 @@
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='saxo']/text()"/>
+                            <xsl:value-of select="./TEI:cell[@rend='saxo']"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>
@@ -51,7 +51,7 @@
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='epithet']/text()"/>
+                            <xsl:value-of select="./TEI:cell[@rend='epithet']"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>
@@ -63,7 +63,7 @@
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='pseudoEpithet']/text()"/>
+                            <xsl:value-of select="./TEI:cell[@rend='pseudoEpithet']"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>
@@ -75,7 +75,7 @@
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
                         <span>
-                            <xsl:apply-templates select="./TEI:cell[@rend='latin']/text()"/>
+                            <xsl:value-of select="./TEI:cell[@rend='latin']"/>
                             <xsl:call-template name="delimiter"/>
                         </span>
                     </xsl:for-each>
