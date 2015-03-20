@@ -102,9 +102,15 @@
     
     <xsl:template name="delimiter">
         <xsl:choose>
-            <xsl:when test="position()=last()"><xsl:text>.</xsl:text></xsl:when>
-            <xsl:when test="position()=last()-1"><xsl:text> eller </xsl:text></xsl:when>
-            <xsl:otherwise><xsl:text>, </xsl:text></xsl:otherwise>
+            <xsl:when test="position()=last()">
+                <xsl:text>.</xsl:text>
+            </xsl:when>
+            <xsl:when test="position()=last()-1">
+                <xsl:text> eller </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>, </xsl:text>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
