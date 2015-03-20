@@ -106,12 +106,6 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:addName[@type='patronym']">
-        <span style="color: red">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
     <xsl:template match="TEI:cell[@rend='popUp' or @rend='encyc']">
         <div class="{@rend}">
             <xsl:apply-templates/>
