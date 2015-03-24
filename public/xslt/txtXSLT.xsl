@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-    xmlns:TEI="http://www.tei-c.org/ns/1.0" 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    version="1.0"
-    >
-
-   
-    
-<!-- KSR: 2011.09.26 -->
-<!-- KK:  2015.02.26, milestone classes for myth and bible -->
+<xsl:stylesheet xmlns:TEI="http://www.tei-c.org/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
     <xsl:include href="popups.xsl"/>
 
@@ -17,7 +8,7 @@
         <div class="rootText">
                 <div class="kolofonBlad">
                     
-                <div class="kolofonTitle">
+                    <div class="kolofonTitle">
                         <xsl:choose>
                             <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
                                 N.F.S. Grundtvig
@@ -1330,7 +1321,13 @@
         <xsl:value-of select="@n"/>
       </a>
     </xsl:template>
-    
+
+    <xsl:template match="TEI:ref[@type='imgText']">
+        <a  href="img/{@target}" onclick="return blank('img',this.href)">
+            <xsl:apply-templates/>
+        </a>       
+    </xsl:template>
+
     <xsl:template match="TEI:note[@type='endNote']">
       <xsl:variable name="chp-id">
         <xsl:for-each select="//TEI:div[.//TEI:ref[@type='endNote' and @n=current()/@n]]"> <!-- should be 1 at most -->
