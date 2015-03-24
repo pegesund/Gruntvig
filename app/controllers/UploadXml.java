@@ -75,7 +75,7 @@ public class UploadXml extends Application {
                 }
             }
         } else 
-        if (fileName.endsWith(".pdf")) {
+        if (fileName.endsWith(".pdf") || fileName.endsWith("_img.htm") ) {
             Asset.uploadIBinary(fileName, comment, theFile);
         } else {
             asset = Asset.uploadXmlFile(filesname, comment, theFile);
