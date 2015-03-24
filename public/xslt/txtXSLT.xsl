@@ -1323,7 +1323,7 @@
     </xsl:template>
 
     <xsl:template match="TEI:ref[@type='imgText']">
-        <a  href="img/{@target}" onclick="return blank('img',this.href)">
+        <a  href="public/images/{@target}" onclick="return blank('img',this.href)">
             <xsl:apply-templates/>
         </a>       
     </xsl:template>
