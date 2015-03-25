@@ -227,7 +227,7 @@
     
     <xsl:template match="TEI:ref[@type='video']">
         <div>
-            <iframe class="video" src="{@target}"/>
+            <iframe class="video" src="{@target}" allowfullscreen=""/>
         </div>
     </xsl:template>
     
