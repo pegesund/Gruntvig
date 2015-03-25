@@ -210,5 +210,13 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <!-- video START -->
+    
+    <xsl:template match="TEI:ref[@type='video']">
+        <iframe class="video" src="{@target}"/>
+    </xsl:template>
+    
+    <!-- video END -->
 
 </xsl:stylesheet>
