@@ -471,7 +471,7 @@ public class Asset extends GenericModel {
         } else if (type.equals(Asset.mapVej) || type.equals(Asset.mapXml)) {
           html =  Asset.xmlRefToHtml(epub.getAbsolutePath(), "vejXSLT.xsl"); 
         } else if (type.equals(Asset.veiledningType)) {
-          html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "veiledning.xsl"));
+          html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "vejXSLT.xsl"));
         } else if (type.equals(Asset.placeType)) {
             html = fixHtml(Asset.xmlRefToHtml(epub.getAbsolutePath(), "placeXSLT.xsl"));
         } else if (type.equals(Asset.personType)) {
