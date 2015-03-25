@@ -74,8 +74,8 @@ var addCommentListener = function() {
 
             // scroll to target comment
             $(".kommentar").scrollTo(target);
-            $(".kommentar").scrollTo("-=30px", 700);
-            target.effect("highlight", {}, 5000);
+            $(".kommentar").scrollTo("-=30px", 5000);
+            target.effect("highlight", {color: "red"}, 5000);
         });
 
     });
