@@ -1,5 +1,5 @@
 sec/* Meyer reset */
-html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -760,7 +760,6 @@ ul #lukk_kolonne_knapp_li { float:right; width: 25px; height: 29px; background: 
 
 #nav a.a_with_dropdown
         {
-        display: block;
 	    padding:9px 30px 8px 20px;
         z-index: 1;
         }
@@ -802,24 +801,27 @@ ul#nav li.with_dropdown:first-child ul li
         }
 
 #nav li:hover > a {
-	background:#fff;
+	background: #fff;
 	color: #2c2c2c;
 	text-shadow: 0 0px 0px rgba(0,0,0, 0);
 }
 
-#nav li.with_dropdown:hover > a {
-	background: #fff url("../img/arrow.png") top right no-repeat;
-}
+#nav li.with_dropdown:hover > a
+        {
+	    /*background: #fff url("../img/arrow.png") top right no-repeat;*/
+	    background: #fff url("../img/arrow.png") top right no-repeat;
+        }
 
 /* sub levels link hover */
-#nav ul li:hover a, #nav li:hover li a {
-	background: none;
-	border: none;
-	color: #666;
+#nav ul li:hover a, #nav li:hover li a
+        {
+       	background: none;
+       	border: none;
+       	color: #666;
+       	-webkit-box-shadow: none;
+       	-moz-box-shadow: none;
+        }
 
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-}
 #nav ul a:hover {
 	background: #4dbc4d url(../img/gradient.png) repeat-x 0 -100px !important; /* #213657 */
 	color: #fff !important;
@@ -2032,3 +2034,15 @@ h1.subtitle { margin-left: 0px !important; }
         color: blue;
         cursor: pointer;
         }
+        
+/* video START */
+        
+iframe.video
+        {
+        border: 1px solid black;
+        height: 410px;
+        margin: 2.5em 0 0 0;
+        width: 690px;
+        }
+
+/* video END */
