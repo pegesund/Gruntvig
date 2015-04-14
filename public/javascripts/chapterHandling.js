@@ -79,6 +79,9 @@ var gotoChapter = function(text, chapter) {
             mkShowBox( "bible",     "Bibelsteder", {"color": "#4DBC4D"}, true );
             mkShowBox( "placeName", "Stednavne",   {"color": "#4DBC4D"} );
             loadCookie();
+            
+            // highlight search results
+            hlSearch();
         }
     }); 
     $('.chapterSelector').val(currentChapter + "");
