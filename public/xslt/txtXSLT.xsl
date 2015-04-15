@@ -393,7 +393,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:if>
-                        <!-- 
+                        <!-- udkom. 2015.04.15 
                         <xsl:choose>
                             <xsl:when test="//TEI:note[@type='noVar']">
                                 <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
