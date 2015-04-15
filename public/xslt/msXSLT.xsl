@@ -317,9 +317,94 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <!--<pb type="ms" facs="1826_433A_fax001.jpg" n="1" rend="supp" />-->
 
-    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
-        <!-- <xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/> -->
+    <xsl:template match="tei:pb[@type='ms' and not(@rend='supp')]"> 
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="ms.">|</span>
+        <span id="{generate-id()}" class="appInvisible">
+            <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </a>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
+            <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="ms.">|</span>
+            <span id="{generate-id()}" class="appInvisible">
+                <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                    <xsl:text>[</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                    <xsl:text>]</xsl:text>
+                </a>
+            </span>
+    </xsl:template>
+
+    <xsl:template match="tei:pb[@type='text' and not(@rend='supp')]"> 
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
+        <span id="{generate-id()}" class="appInvisible">
+            <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </a>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:pb[@type='text' and @rend='supp']">
+            <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
+            <span id="{generate-id()}" class="appInvisible">
+                <a href="{@facs}" class="app" title="fax" id="{@facs}">
+                    <xsl:text>[</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                    <xsl:text>]</xsl:text>
+                </a>
+            </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:pb[@type='edition']">
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="{@ed}">|</span>
+        <span id="{generate-id()}" class="appInvisible">
+            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:pb[@type='text' and not(@rend='supp') and not(parent::tei:seg)]"> 
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}">
+            <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>        
+    </xsl:template>
+    
+    <xsl:template match="tei:pb[@type='ms' and @rend='supp']">
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}">
+            <xsl:text>|</xsl:text>
+                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+            </span>
+        </a>  
+    </xsl:template>
+
+    <xsl:template match="tei:pb[@type='ms' and not(@rend='supp') and not(parent::tei:seg)]"> 
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}">
+            <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>        
+    </xsl:template>
+    
+    <xsl:template match="tei:pb[@type='text' and @rend='supp']">
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}">
+            <xsl:text>|</xsl:text>
+                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+            </span>
+        </a>  
+    </xsl:template>
+
+    <!-- xsl:template match="tei:pb[@type='text' and not(@rend='supp')]">        |
+        <<xsl:value-of select="concat('xxx/', substring-before(@facs, '_'), '_', substring-before(substring-after(@facs, '_'), '_'), '/', @facs)"/>
         <a href="{@facs}">            
             <span class="pbA">
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
@@ -353,7 +438,7 @@
                 <xsl:value-of select="@type"/>:<xsl:value-of select="@n"/>
             </span> 
         </a>        
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
