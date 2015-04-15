@@ -393,6 +393,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:if>
+                        <!-- 
                         <xsl:choose>
                             <xsl:when test="//TEI:note[@type='noVar']">
                                 <xsl:text>Varianter er endnu ikke etableret.</xsl:text>
@@ -404,6 +405,7 @@
                                 <xsl:text>Der kendes ikke varianter til dette værk.</xsl:text>
                             </xsl:when>
                         </xsl:choose>
+                        -->
                     </div>
                     
                     <div class="kolofon">
@@ -777,6 +779,8 @@
         </xsl:if>
     </xsl:template>
     
+    <!--xsl:template match="TEI:body[@type='TS']//TEI:div"/-->
+    
     <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19-->
         <div class="chapter">
             <xsl:if test="@type">   
@@ -786,7 +790,7 @@
                     </xsl:for-each>
                     <xsl:value-of select="@type"/>
                 </xsl:attribute> 
-          </xsl:if>
+            </xsl:if>
             <div>
                 <xsl:if test="//TEI:note[@type='marginNote']">
                     <xsl:attribute name="class">mainColumn</xsl:attribute>
@@ -1323,7 +1327,7 @@
     </xsl:template>
 
     <xsl:template match="TEI:ref[@type='imgText']">
-        <a  href="public/images/{@target}" onclick="return blank('img',this.href)">
+        <a  href="public/images/{@target}" onclick="return blank('txt',this.href)">
             <xsl:apply-templates/>
         </a>       
     </xsl:template>
