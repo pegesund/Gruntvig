@@ -75,7 +75,7 @@ var addCommentListener = function() {
             // scroll to target comment
             $(".kommentar").scrollTo(target);
             $(".kommentar").scrollTo("-=30px", 0);
-            target.effect("highlight", {color: "#e1e1e1"}, 10000);            
+            target.effect("highlight", {color: "#E1E1E1"}, 5000);
         });
 
     });
@@ -131,10 +131,11 @@ var addDocOutListener = function() {
             return;
         }
         var link = docOutTodocInLink(target);
-        var scrollToInNewWindow = link[0] + "_" + link[1] + "_" + link[2];
+       var scrollToInNewWindow = link[0] + "_" + (link[1]=="com"?"":(link[1] + "_")) + link[2];
+          // punktkommentarers id = fx scrollTarget_1813_208_com569
         options["scrollToInNewWindows"] = scrollToInNewWindow;
         possibleExistingForeignId = $("#" + scrollToInNewWindow);
-        if (rootFile == link[0] || possibleExistingForeignId.length > 0) {
+        if (link[0].indexOf(rootFile) !== -1  || possibleExistingForeignId.length > 0) {
             var openTab = 0;
             switch (link[1]) {
                 case "intro":
