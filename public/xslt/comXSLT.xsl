@@ -177,7 +177,7 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template match="TEI:ref[@type]">
         <xsl:variable name="newTarget">
             <xsl:value-of select="substring-before(@target,'fax')"/>
@@ -185,15 +185,29 @@
                 <xsl:with-param name="n" select="substring-after(@target,'fax')"/>
             </xsl:call-template>
         </xsl:variable>
-        <xsl:choose>              
+        <xsl:choose>
+            
             <xsl:when test="@type='docIn'">
                 <span class="docIn">
                     <xsl:attribute name="name">
+                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_com.xml$', 'scrollTarget_$1')" />
+                        <xsl:text>_</xsl:text>
+                        <xsl:text>com.xml</xsl:text>
                         <xsl:value-of select="@target"/>
                     </xsl:attribute>
-                <xsl:apply-templates/>
+                    <xsl:apply-templates/>
                 </span>
             </xsl:when>
+            
+            <!--xsl:when test="@type='docIn'">
+                <span class="docIn">
+                    <a hrel="{@id}" class="docIn txrmenu"/>
+                    <a href="{@xml:id}" class="docIn txrmenu">
+                        <xsl:apply-templates/>
+                     </a>
+                </span>
+            </xsl:when-->
+            
             <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
                 <span name="bookinvent" class="docOut">                            
                     <xsl:apply-templates/>         
@@ -283,7 +297,7 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-
+   
    <xsl:template match="TEI:note[@xml:id]">
        <div class="note" id="{@xml:id}">
            <xsl:apply-templates select="TEI:p"/>
