@@ -705,10 +705,19 @@
             </span>
             <span class="appInvisible">
                 <xsl:text>] </xsl:text>
-                <xsl:if test="TEI:lem/@wit!='A'">
+                <xsl:if test="TEI:lem/@wit!='A' and @wit!='DU'">
                     <span class="wit">
                         <i>
                             <xsl:value-of select="TEI:lem/@wit"/>
+                            <xsl:text>, </xsl:text>
+                        </i>
+                    </span>
+                </xsl:if>
+                <xsl:if test="TEI:lem/@wit='DU'">
+                    <span class="wit">
+                        <i>
+                            <xsl:value-of select="TEI:lem"/>
+                            <xsl:text>D&amp;U</xsl:text>
                             <xsl:text>, </xsl:text>
                         </i>
                     </span>
