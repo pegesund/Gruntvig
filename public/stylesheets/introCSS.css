@@ -429,3 +429,13 @@
         background-repeat: no-repeat;
         background-position: left center;
         }
+        
+/* rs bible START */
+
+a:link.rs_bible
+        {
+        color: #4dbc4d;
+        text-decoration: none;
+        }
+
+/* rs bible END*/
