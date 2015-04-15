@@ -432,10 +432,16 @@
         
 /* rs bible START */
 
-a:link.rs_bible
+.innledningContent a.rs_bible
         {
-        color: #4dbc4d;
         text-decoration: none;
+        color: #4DBC4D;
+        }
+
+.innledningContent a.rs_bible:hover
+        {
+        color: #006633;
+        cursor: pointer;
         }
 
 /* rs bible END*/
