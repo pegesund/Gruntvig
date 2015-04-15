@@ -454,7 +454,7 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                <a class="rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}" style="cursor: help">
                     <xsl:apply-templates/>
                 </a>
             </xsl:otherwise>
