@@ -726,7 +726,7 @@ td.index:last-child
         font-weight: bold;
         }
 
-#tekst_innhold .pbA, .pb
+#tekst_innhold .pbA, .pbGskv, .pbGSV, .pbPS, .pbSS, .pbSV, .pbVU, .pbUS
         {
         font-size: 80%;
         color: #008000;
