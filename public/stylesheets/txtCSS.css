@@ -913,6 +913,7 @@ td.index:last-child
 
 #tekst_innhold a.bible, #tekst_innhold a.bibleStart, #tekst_innhold a.bibleEnd
         {
+        color: #000000;
         text-decoration: none;
         }
 
