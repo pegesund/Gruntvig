@@ -34,7 +34,7 @@ function mkPBox( ed ) {
   });
 }
 
-function mkShowBox( type, label, css, milestoneStartEnd ) {
+function mkShowBox ( type, label, css, milestoneStartEnd ) {
 /*
  * Make a check box for som elements to highlight
  *  String type: class name of element to show 
