@@ -214,7 +214,9 @@
     <!-- video START -->
     
     <xsl:template match="TEI:ref[@type='video']">
-        <iframe class="video" src="{@target}"/>
+        <div style="margin: 5em; height: 1000px">
+            <iframe src="{@target}"/>
+        </div>
     </xsl:template>
     
     <!-- video END -->
