@@ -1142,6 +1142,11 @@
     
     <xsl:template match="TEI:rs[@type='bible' and @subtype='bibleStart']">
         <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
             <xsl:when test="@rend='normForm'">                
                 <a class="bibleStart" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key}">
                     &#x25BA;
@@ -1201,6 +1206,11 @@
     
     <xsl:template match="TEI:rs[@type='bible' and @subtype='bibleEnd']">
         <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
             <xsl:when test="@rend='normForm'">                
                 <a class="bibleEnd" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key}">
                     <xsl:apply-templates/>
@@ -1262,7 +1272,7 @@
     
     <xsl:template match="TEI:rs[@type='myth' or @type='mythStart' or @type='mythEnd']">
         <xsl:choose>
-            <xsl:when test="//TEI:noteStmt/TEI:note[@type='noMyth']">
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
                 <span class="noMyth">
                     <xsl:apply-templates/>
                 </span>
