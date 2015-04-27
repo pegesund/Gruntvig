@@ -915,6 +915,7 @@ td.index:last-child
         {
         color: #000000;
         text-decoration: none;
+        cursor: help;
         }
 
 /* rs END*/
