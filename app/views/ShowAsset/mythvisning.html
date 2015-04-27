@@ -1,7 +1,6 @@
 #{extends 'main.html' /}
 #{set subPageTitle:'Mytologisk register' /}
 #{ header /}
-
 <script type="text/javascript">
 	
 	$(document).ready(function() {
@@ -61,7 +60,7 @@
 	                         } 
 	                            });
 	                            $(this).children('.latin').each( function(index4) {
-	                                content = $(this).next('.popUp').text();
+	                                content = $(this).text();
 	                                name = $(this).text();
 	                                content = '';
 	                                internal_link = $(this).find("a").attr("href").substr(6);
