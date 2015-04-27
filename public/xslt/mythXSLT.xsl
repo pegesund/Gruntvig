@@ -113,12 +113,17 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']">
-        <div class="{@rend}">
+        <div class="{@rend} popUp">
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <a href="#{$sameAs}">
-                    <xsl:text> > </xsl:text>                    
+                    <xsl:if test="@rend='latin' or @rend='saxo'">
+                        <xsl:text>, latinsk navn for </xsl:text>
+                    </xsl:if>   
+                    <xsl:if test="@rend='epithet' or @rend='pseudoEpithet'">
+                        <xsl:text>, andet navn for </xsl:text>
+                    </xsl:if>   
+                    <a href="myter#{$sameAs}">
                     <xsl:apply-templates select="//TEI:row[@xml:id=$sameAs]/TEI:cell[@rend='normForm']/text()"/>
                 </a>
             </span>
