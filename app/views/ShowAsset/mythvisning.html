@@ -34,7 +34,7 @@
                                  content = $(this).html();
                                  internal_anchor = $(this).attr("id");
                                  node = "<!-- " + normAlfa(name) + "-->"; // hack to keep nodes sorted :-)
-                                 node += '<tr><td class="navn"><a class="myth" id="X' + internal_anchor + '">' + name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+                                 node += '<tr><td class="navn"><span class="myth" id="X' + internal_anchor + '">' + name + '</span></td><td class="definisjon">' + content + '</td></tr>';
                                  nodes.push(node);
 
 
