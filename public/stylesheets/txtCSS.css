@@ -909,16 +909,23 @@ td.index:last-child
 
 /* titlePage END */
 
-/* rs START */
+/* rs START 
 
 #tekst_innhold a.bible, #tekst_innhold a.bibleStart, #tekst_innhold a.bibleEnd
         {
         color: #000000;
         text-decoration: none;
         cursor: help;
-        }
+        }*/
 
 /* rs END*/
+
+#tekst_innhold a:link.bible
+        {
+        color: #4DBC4D;
+        text-decoration: none;
+        cursor: help;
+        }*
 
 #tekst_innhold .witness
         {
