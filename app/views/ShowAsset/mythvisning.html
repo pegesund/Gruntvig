@@ -29,8 +29,6 @@
                                 firstLetter = normAlfa( name.charAt(0) );
                                 if(firstLetter == normAlfa(value)){ 
                                 $(this).hide();
-
-
                                  content = $(this).html();
                                  internal_anchor = $(this).attr("id");
                                  node = "<!-- " + normAlfa(name) + "-->"; // hack to keep nodes sorted :-)
@@ -49,7 +47,7 @@
                                 firstLetter2 = normAlfa( name.charAt(0) );
                                 if(firstLetter2 == normAlfa(value)){ 
                                 node = '<!-- ' + normAlfa(name) + "-->";
-	                        node += '<tr><td class="navn"><a href="../myter#" name="myth' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+	                        node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 	                        nodes.push(node);
         
 
@@ -70,7 +68,7 @@
 	                                firstLetter2 = normAlfa( name.charAt(0) );
 	                                if(firstLetter2 == normAlfa(value)){ 
 	                                    node = '<!-- ' + normAlfa(name) + "-->";
-	                                    node += '<tr><td class="navn"><a href="../myter#" name="myth' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+	                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 	                                    nodes.push(node);
 	                                } 
 	                            });
@@ -82,7 +80,7 @@
 	                                firstLetter2 = normAlfa( name.charAt(0) );
 	                                if(firstLetter2 == normAlfa(value)){ 
 	                                    node = '<!-- ' + normAlfa(name) + "-->";
-	                                    node += '<tr><td class="navn"><a href="../myter#" name="myth' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+	                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 	                                    nodes.push(node);
 	                                } 
 	                            });
@@ -94,7 +92,7 @@
 	                                firstLetter2 = normAlfa( name.charAt(0) );
 	                                if(firstLetter2 == normAlfa(value)){ 
 	                                    node = '<!-- ' + normAlfa(name) + "-->";
-	                                    node += '<tr><td class="navn"><a href="../myter#" name="myth' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
+	                                    node += '<tr><td class="navn"><a href="../myter#" name="' + internal_link + '">'+ name + '</a></td><td class="definisjon">' + content + '</td></tr>';
 	                                    nodes.push(node);
 	                                } 
 	                            });
