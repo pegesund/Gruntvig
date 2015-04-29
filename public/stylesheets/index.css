@@ -555,6 +555,11 @@ a.returnTop
         line-height: 1.7em;
         text-align: justify;
         }
+        
+.ui-widget-content a 
+        {
+        color: #4DBC4D/*{fcContent}*/; 
+        }
 
 .ui-tabs .ui-tabs-nav li a { float:left; font-size:13px; padding:9px 8px; text-decoration:none; color:#fff;}
 .ui-tabs .ui-tabs-nav li a:hover { color:#444;}
