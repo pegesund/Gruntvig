@@ -482,11 +482,23 @@
                         <xsl:text>Copyright: </xsl:text><i><xsl:text>Grundtvigs Værker</xsl:text></i>
                     </div>
                     
+                    <xsl:call-template name="noChapter"/>
+                    
                 </div>
                 
                 <xsl:apply-templates select="TEI:text"/>
                 
             </div>
+    </xsl:template>
+    
+    <xsl:template name="noChapter">
+        <xsl:if test="//TEI:body[@xml:id]">
+            <div style="margin: 0.5em">
+                <div><a href="http://www.xn--grundtvigsvrker-7lb.dk/tekstvisning/6535/0#&amp;007B;&quot;0&quot;:0,&quot;k&quot;:0}}" target="_blank" style="text-decoration: none">Klik her, i stedet for rullegardinet, for at se <i>Tidens Ström</i></a>. Dette værk vises i et nyt vindue.</div>
+                
+                <div>Udgaven af dette værk anvender Image Markup Tool, som er frigivet under Mozilla Public License, version 1.1. Se <a href="https://www.mozilla.org/MPL/1.1/" target="_blank" style="text-decoration: none">https://www.mozilla.org/MPL/1.1/</a></div>
+            </div>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="TEI:lb">        
