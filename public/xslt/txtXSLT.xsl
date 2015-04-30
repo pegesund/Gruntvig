@@ -790,7 +790,7 @@
     
     <!--xsl:template match="TEI:body[@type='TS']//TEI:div"/-->
     
-    <xsl:template match="TEI:body//TEI:div"> <!--Allow div in div, KK 2014-03-19-->
+    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div"> <!--Allow div in div, KK 2014-03-19-->
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
