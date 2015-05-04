@@ -494,7 +494,7 @@
     <xsl:template name="noChapter">
         <xsl:if test="//TEI:body[@xml:id]">
             <div style="margin: 0.5em">
-                <div><a href="http://www.xn--grundtvigsvrker-7lb.dk/tekstvisning/6536/0#{{&quot;0&quot;:0,&quot;v0&quot;:0,&quot;k&quot;:0}}" target="_blank" style="text-decoration: none">Klik her for at se <i>Tidens Ström</i></a>. Dette værk vises i et nyt vindue.</div>
+                <div><a href="public/images/1829_481A_img.html" target="_blank" style="text-decoration: none">Klik her for at se <i>Tidens Ström</i></a>. Dette værk vises i et nyt vindue.</div>
                 
                 <div>Udgaven af dette værk anvender Image Markup Tool, som er frigivet under Mozilla Public License, version 1.1. Se <a href="https://www.mozilla.org/MPL/1.1/" target="_blank" style="text-decoration: none">https://www.mozilla.org/MPL/1.1/</a></div>
             </div>
