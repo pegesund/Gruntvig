@@ -717,7 +717,7 @@
             </span>
             <span class="appInvisible">
                 <xsl:text>] </xsl:text>
-                <xsl:if test="TEI:lem/@wit!='A' and @wit!='DU'">
+                <xsl:if test="TEI:lem/@wit!='A' or @wit!='DU'">
                     <span class="wit">
                         <i>
                             <xsl:value-of select="TEI:lem/@wit"/>
