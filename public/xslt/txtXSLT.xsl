@@ -687,7 +687,7 @@
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
-            <xsl:when test="@rend='interRefrain' and @rendition">
+            <xsl:when test="@rend='refrain' or @rend='interRefrain' or @rend='varRefrain' and @rendition">
                 <div class="l_{@rendition}">
                     <xsl:apply-templates/>
                 </div>
