@@ -5,6 +5,20 @@
         {
         background: #FFFF40;        
         }
+        
+/* list START */
+
+li.decimal
+        {
+        list-style-type: decimal;
+        }
+        
+li.ordered
+        {
+        list-style-type: circle;
+        }
+
+/* list END */
 
 /* fodnoter START */
 
