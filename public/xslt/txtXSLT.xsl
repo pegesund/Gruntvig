@@ -1678,5 +1678,30 @@
     </xsl:template>
     
     <!-- back END -->
+    
+    <!-- list START -->
+    
+    <xsl:template match="TEI:list">
+        <xsl:if test="@type='decimal'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="decimal">
+                        <xsl:apply-templates/>
+                    </li>
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+        <xsl:if test="@type='ordered'">
+            <ul>
+                <xsl:for-each select="TEI:item">
+                    <li class="ordered">
+                        <xsl:apply-templates/>
+                    </li>
+                </xsl:for-each>
+            </ul>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- list END -->
 
 </xsl:stylesheet>
