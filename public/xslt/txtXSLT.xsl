@@ -682,6 +682,16 @@
             <xsl:when test="@rend='blank'">
                 <br/>
             </xsl:when>
+            <xsl:when test="not(@rend)">
+                <div class="l_noIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='interRefrain' and @rendition">
+                <div class="l_{@rendition}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
             <xsl:otherwise>
                 <div class="l_{@rend}">
                     <xsl:apply-templates/>
