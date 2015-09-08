@@ -7,7 +7,7 @@
 KK  2014-02-13
 KSR 2014-02-26 og 27f
 KK  2014-03-06
-KK  2015-03-27
+KK  2015-09-08
 -->
 
 <style type="text/css">
@@ -110,7 +110,7 @@ input[type=text]
   
   #{if !first}
   function addPaginator() {
-        var totalHits = ${totalHits};
+        var totalHits = 0${totalHits};
         if (totalHits == 0) return;
         $(function() {
             $("#paginator").pagination({
@@ -275,7 +275,7 @@ input[type=text]
 #{/list}
 gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
 
-#{set kwQuery= "?keywords=" + lookfor.replaceAll( / +(AND|OR)?/, "+") /}
+#{set kwQuery= "?keywords=" + lookfor.replaceAll( / +(AND|OR)? */, "+") /}
 
 #{if cat.contains("grundtvig")}
     #{list chapters, as:'chapter'}
@@ -311,11 +311,11 @@ gav i alt ${totalAll} resultat${totalAll == 1 ? "" : "er"}</h1>
             #{set hash= "" /}
         #{/else}
         <div class="treff">
-        <h4><a href="tekstvisning/${asset.correspondingRootId}/0${kwQuery}${hash}">${asset.name}</a></h4>
+            <h4><a href="tekstvisning/${asset.correspondingRootId}/0${kwQuery}${hash}">${asset.name}</a></h4>
             <p class="treff2"">${asset.getTeaser(lookfor).raw()}</p>
         </div>
-    #{/list}
-#{/if}
+        #{/list}
+    #{/if}
 #{/if}
 
 <div id="paginator">
