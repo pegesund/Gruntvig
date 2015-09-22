@@ -510,7 +510,9 @@
         <xsl:choose>
             <xsl:when test="//TEI:titleStmt/TEI:editor[@xml:id='LCH']">
                 L.C. Hagen (udg.)
-                &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+                <i>
+                    <xsl:apply-templates select="//TEI:title[@rend='main']"/>
+                </i>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
