@@ -10,24 +10,14 @@
                     
                     <div class="kolofonTitle">
                         <xsl:choose>
-                            <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                                N.F.S. Grundtvig
-                                <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
+                            <xsl:when test="//TEI:titleStmt/TEI:author">
+                                <xsl:call-template name="author"/>
                             </xsl:when>
-                            <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                                N.F.S. Grundtvig
-                                [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>]
-                            </xsl:when>
-                            <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
-                                N.F.S. Grundtvig
-                                &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                            </xsl:when>
-                            <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
-                                N.F.S. Grundtvig
-                                [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
+                            <xsl:when test="//TEI:titleStmt/TEI:editor[@role='editor']">
+                                <xsl:call-template name="editor"/>
                             </xsl:when>
                         </xsl:choose>
-                </div>
+                    </div>
                 
                 <div class="kolofon">
                     <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
@@ -491,6 +481,40 @@
             </div>
     </xsl:template>
     
+    <xsl:template name="author">
+        <xsl:choose>
+            <xsl:when test="//TEI:titleStmt/TEI:author">
+                <xsl:choose>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
+                        N.F.S. Grundtvig
+                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
+                    </xsl:when>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
+                        N.F.S. Grundtvig
+                        [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>]
+                    </xsl:when>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
+                        N.F.S. Grundtvig
+                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:when>
+                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
+                        N.F.S. Grundtvig
+                        [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="editor">
+        <xsl:choose>
+            <xsl:when test="//TEI:titleStmt/TEI:editor[@xml:id='LCH']">
+                L.C. Hagen (udg.)
+                &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template name="noChapter">
         <xsl:if test="//TEI:body[@xml:id]">
             <div style="margin: 0.5em">
@@ -804,11 +828,23 @@
     </xsl:template>
     
     <xsl:template name="footnote">
+        <xsl:choose>
+            <xsl:when test="*[local-name()!='div']//TEI:note[@type='footnote' and @rendition]">
+                <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
+            </xsl:when>
+            <xsl:when test="*[local-name()!='div']//TEI:note[@type='footnote' and not(@rendition)]">
+                <hr class="footLine"/>
+                <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
+            </xsl:when>
+        </xsl:choose>        
+    </xsl:template>
+    
+    <!--xsl:template name="footnote">
         <xsl:if test="*[local-name()!='div']//TEI:note[@type='footnote']">
             <hr class="footLine"/>
             <xsl:apply-templates select="*[local-name()!='div']//TEI:note[@type='footnote']" mode="foot"/>
         </xsl:if>
-    </xsl:template>
+    </xsl:template-->
     
     <!--xsl:template match="TEI:body[@type='TS']//TEI:div"/-->
     
@@ -1519,6 +1555,56 @@
                 </div>
             </xsl:when>
             <xsl:when test="@type='shortLine'">
+                <div class="shortLine">
+                    <hr align="center" width="8%"/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+      
+    
+    <xsl:template match="TEI:graphic">
+        <xsl:choose>
+            <xsl:when test="@style='blank'">
+                <br/>
+            </xsl:when>
+            <xsl:when test="@style='asterisk'">
+                <div class="asterisk">
+                    <xsl:text>&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='asterisk2'">
+                <div class="asterisk3">
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='asterisk3'">
+                <div class="asterisk3">
+                    <xsl:text>&#x002A;</xsl:text>
+                    <br/>
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='asteriskUp'">
+                <div class="asteriskUp">
+                    <xsl:text>&#x002A;</xsl:text>
+                    <br/>
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='asteriskDown'">
+                <div class="asteriskDown">
+                    <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
+                    <br/>
+                    <xsl:text>&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='longLine'">
+                <div class="longLine">
+                    <hr align="center" width="16%"/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='shortLine'">
                 <div class="shortLine">
                     <hr align="center" width="8%"/>
                 </div>
