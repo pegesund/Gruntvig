@@ -26,7 +26,9 @@ li.ordered
         {
         font-size: 80%;
         text-decoration: none;
-        vertical-align: super;
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
         }
 
 /* fodnoter END */
@@ -182,11 +184,13 @@ li.ordered
         
 a.endNoteRef
         {
-        color: red;
+        color: green;
         cursor: pointer;
         font-size: 80%;
         text-decoration: none;
-        vertical-align: super;
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
         }
 
 /* marginNote START */
@@ -245,12 +249,31 @@ a.endNoteRef
         padding-left: 1em;
         }
 
+/* grapic START */
+
+#tekst_innhold .asteriskDown, #tekst_innhold .asteriskUp
+        {
+        text-align: center;
+        }
+
+#tekst_innhold .asteriskDown
+        {
+        margin: 1em 0em 0em 0em;
+        }
+
+#tekst_innhold .asteriskUp
+        {
+        margin: 1em 0em 0em 1em;
+        }
+
+/* grapic END */
+        
 /* head start */
 
 #tekst_innhold div.center
         {
         text-align: center;
-        margin: 2em 0em 0em 0em;
+        margin: 0em 0em 0em 0em;
         }
 
 #tekst_innhold .head0, .head1, .head2, .head3, .head4, .head5, .head6   
@@ -308,6 +331,12 @@ a.endNoteRef
         font-weight: bold;
         }
 
+#tekst_innhold .spaced > .initial
+        {
+        font-style: italic;
+        font-size: 120%;
+        }
+
 #tekst_innhold .initial
         {
         font-style: normal;
@@ -337,7 +366,7 @@ a.endNoteRef
 
 #tekst_innhold .schwab
         {
-        font-style: italic;
+        font-weight: bold;
         }
 
 #tekst_innhold .justify
@@ -433,7 +462,7 @@ a.endNoteRef
         
 #tekst_innhold .l_noIndent, #tekst_innhold .l_center, #tekst_innhold .l_hangingIndent, #tekst_innhold .l_right, #tekst_innhold .l_firstIndent
         {
-        width: 20em;
+        width: 25em;
         }
 
 #tekst_innhold .l_noIndent
@@ -549,7 +578,7 @@ a.endNoteRef
         font-size: 70%;
         margin-left: -2em;
         margin-top: 0em;
-        padding: 0.5em;
+        margin: 1em 0em 1em 0em;
         width: 100%;
         }
         
@@ -1073,29 +1102,51 @@ td.index:last-child
 
 #tekst_innhold table.corrigenda
         {
-        border: 0Spx solid black;
+        border: 0px solid black;
         margin-top: 2em;
         padding-right: 0.5em;
         padding-left: 0em;
         }
 
+#tekst_innhold td.corrigenda
+        {
+        border: 0px solid black;
+        }
+
 #tekst_innhold td.corrigenda:nth-child(1)
         {
-        text-align: right;
-        width: 10%;
+        text-align: left;
+        width: 8%;
         }
 
 #tekst_innhold td.corrigenda:nth-child(2)
         {
         text-align: right;
-        width: 10%;
+        width: 8%;
         }
 
-#tekst_innhold td.corrigenda:last-child
+#tekst_innhold td.corrigenda:nth-child(3)
+        {
+        text-align: left;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda:nth-child(4)
+        {
+        text-align: right;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda:nth-child(5)
+        {
+        text-align: left;
+        width: 60%;
+        }
+
+/*#tekst_innhold td.corrigenda:last-child
         {
         padding-left: 0.5em;
-        text-align: left;
-        width: 75%;
-        }
+        text-align: right;
+        }*/
 
 /* back END */
