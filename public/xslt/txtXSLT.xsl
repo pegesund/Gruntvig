@@ -544,6 +544,17 @@
             </xsl:if>
             <xsl:apply-templates/>
         </div>               
+    </xsl:template> 
+    
+    <xsl:template match="TEI:front[not(@rend)]/TEI:div[@type]">
+        <div class="frontChapter">
+            <xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:value-of select="@type"/>
+               </xsl:attribute> 
+            </xsl:if>
+            <xsl:apply-templates/>
+        </div>               
     </xsl:template>    
     
     <xsl:template match="TEI:titlePage[@type]">
