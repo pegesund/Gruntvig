@@ -44,13 +44,12 @@ public class Application extends Controller {
         String year= S[0],
                sj= S[1],
                litra= "",
-               sjSub=S[2],
                res;
         if( sj.matches("[0-9]*[^0-9]+") ) {
           litra= sj.substring( sj.length()-1 );
           sj= sj.substring( 0, sj.length()-1 );
         }
-        res= String.format( "%4s%4s%s%2s", year, sj, litra, sjSub ); /*KK 2014-10-08 sjSub er en dårlig ide*/
+        res= String.format( "%4s%4s%s", year, sj, litra );
         //System.out.println( ">"+res );
         return res;
     }
@@ -88,6 +87,10 @@ public class Application extends Controller {
     }
 
     public static void alfa() {
+        render();
+    }
+
+    public static void genre() {
         render();
     }
 
