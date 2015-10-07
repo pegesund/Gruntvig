@@ -1,82 +1,413 @@
 <!--
-  Kronologisk værkoversigt
+  Genremæssig værkoversigt
   Grundtvigs værker
-  KK 2013-09-18
-  Inkl. alternativ titel, KK 2014-03-06
-  KSR 2014.05.06: link fra altTitle til tekst
+  KK 2015-10-06
 -->
 #{ extends 'main.html' /}
 #{ header /}
 
 <script type="text/javascript">
-    
-    $(document).ready(function() {
-
+  var works= [],
+      keyRefCnt= [0,0,0,0,0,0,0,0,0,0,
+                  0,0,0,0,0,0,0,0,0,0,
+                  0,0,0,0,0,0,0,0,0,0,
+                  0,0,0,0,0,0,0,0,0,0,
+                  0,0,0,0,0,0,0,0,0,0]; // max 50 emneord
+  $(document).ready(function() {
         $('div.root').hide();
-
-        genre = ['samler','prosa','lyrik','polemik','rimbreve','gaader'];
-
-        $.each(genre, function(index, value) { 
-            var nodes = [];
-            $('div.work').each(function(index2) {
-                var rootName= $(this).find('span.rootName').text(),
-                    splitName= rootName.split( "_" ),
-                    year= splitName[0],
-                    sj= splitName[1];
-                if( year.substr(0,3)!=value ) {
-                  return true;
-                }
-                var name = $(this).find('span.name').text(),
-                    altName = $(this).find('span.altName').text(),
-                    //altNameForm= altName ? '<br/>('+altName+')' : '', parenthesis
-                    url= $(this).find('span.url').text(),
-                    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '';
-                    url= $(this).find('span.url').text(),
-                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' +  altNameForm ;
-                nodes.push(node);
-            });
-            //nodes = nodes.sort();
-            $(nodes).each( function(index) {
-                $('#' + value).after(nodes.pop());
-            });
-        }); 
-    });
-    
-    
+        $('div.work').each( function() {
+            var genresTxt= $(this).find('span.genre').text(),
+                keywordsTxt= $(this).find('span.keywords').text(),
+                rootName= $(this).find('span.rootName').text(),
+                splitName= rootName.split( "_" ),
+                year= splitName[0],
+                sj= splitName[1],
+                name = $(this).find('span.name').text(),
+                altName = $(this).find('span.altName').text(),
+                url= $(this).find('span.url').text(),
+                preHtml= '<tr class="workOnList"><td class="shortForm"><a href="' + url + '">',
+                postHtml= '</a> <div class="genKeyPopUp">Genre: ' + genresTxt.replace(/#/g,", ") + '<br/>Emneord: ' + keywordsTxt.replace(/#/g,", ") + '</div></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>',
+                node = preHtml + name + postHtml,
+                altNameForm= altName ? preHtml + altName + postHtml : '',
+                curWork= {
+                  genres: "#"+genresTxt+"#",
+                  keywords: "#"+keywordsTxt+"#",
+                  genresSelected: "#",
+                  keywordsSelected: "#"+keywordsTxt+"#"
+                };
+            $('#listTail').before( node );
+            curWork.row= document.getElementById("listTail").previousElementSibling;
+            works.push( curWork );
+            if( altName ) {
+                var altCurWork= {
+                  genres: curWork.genres,
+                  keywords: curWork.keywords,
+                  genresSelected: curWork.genresSelected,
+                  keywordsSelected: curWork.keywordsSelected
+                };
+              $('#listTail').before( altNameForm );
+              altCurWork.row= document.getElementById("listTail").previousElementSibling;
+              works.push( altCurWork );
+            }
+        });
+    }
+  );
+  // -->    
 </script>
-
-
 
 <div id="main">
 
 	<div class="container" id="underside_innhold">
+	  <style type="text/css">
+      .workOnList {
+        display: none;
+      }
+      .shortForm:hover .genKeyPopUp {
+        visibility: visible;
+      }
+      .genKeyPopUp {
+        visibility: hidden;
+        position: absolute;
+        width: 200px;
+        background-color: #fafafa;
+        border: thin ridge silver;
+        margin: 10px 30px;
+        padding: 10px;
+        font: 10px Verdana, sans-serif;
+      }
+      #genreValg {
+        background-color: #fafafa;
+        padding: 10px 20px 10px 20px;
+        border: thin ridge silver;
+      }
+      #genreValg, #emneValg {
+        background-color: #fafafa;
+        margin: 1px;
+        padding: 10px;
+        font-family: Verdana, sans-serif;
+        border: thin ridge silver;
+        line-height: 1.9em;
+      }
+      .genreBox {
+        font: 15px Verdana, sans-serif;
+        width: 200px;
+        line-height: 1.4em;
+      }
+      .saerligForm {
+        font-size: 11px;
+        line-height: 1.8em;
+      }
+      .emneBox {
+        display: none;
+      }
+      .sortIcon {
+        color: orange;
+        cursor: pointer;
+        visibility: hidden;
+      }
+      #listHead .shortForm, #listHead .definisjon, #listHead .sjNummer {
+        cursor: pointer;
+      }
+    </style>
+	  <script type="text/javascript"> // <!--
+      function chk( thisInput, genOrKey ) {
+        conseq( thisInput, genOrKey );
+      }
+      function conseq( thisInput, genOrKey ) { // konsekvenstjekker særlige formers input
+        var childInputs= thisInput.parentNode.getElementsByTagName( "input" );
+        for( i= 0; i < childInputs.length; i++ ) { // check child nodes consequently
+          childInputs[i].checked= thisInput.checked;
+          if( thisInput.checked ) {
+            addList( childInputs[i].name, genOrKey );
+          }
+          else {
+            remList( thisInput, childInputs[i].name, genOrKey );
+          }
+        }
+      }
+      function addList( val, genOrKey ) { // add all items with genres or keywords containing val to list
+        for( var i= 0; i<works.length; i++ ) {
+          if( works[i][genOrKey].indexOf("#"+val+"#")>=0 && works[i][genOrKey+"Selected"].indexOf("#"+val+"#")<0 ) {
+            var noGenresSelected= works[i].genresSelected.length == 1;
+            works[i][genOrKey+"Selected"]+= val+"#" ;
+            if( noGenresSelected ) {
+              // turn on keywords in list
+              if( genOrKey=="genres" ) { // for genres selected
+              var keywordsList= document.getElementById( "emneValg" ),
+                  keyInputs= keywordsList.getElementsByTagName( "input" );
+                for( var j= 0; j < keyInputs.length; j++ ) {
+                  if( works[i].keywords.indexOf("#"+keyInputs[j].name+"#") >= 0 ) {
+                    keyInputs[j].parentNode.style.display= "block";
+                    keyInputs[j].parentNode.style.color= "black";
+                    keyRefCnt[j]++;
+                  }
+                }
+              }
+            }
+            if( works[i].genresSelected.length > 1 && works[i].keywordsSelected.length > 1 && works[i].row.style.color!="black" ) { //
+              works[i].row.style.display= "block";
+              works[i].row.style.color= "black";
+            }
+          }
+        }
+      }
+      function remList( thisInput, val, genOrKey ) { // remove all items with genres or keywords containing val from list
+        for( var i= 0; i<works.length; i++ ) {
+          if( works[i][genOrKey+"Selected"].indexOf("#"+val+"#")>=0 ) {
+            var selected= works[i][genOrKey+"Selected"];
+            selected= selected.replace( RegExp("#"+val+"#","g"), "#" );
+            if( genOrKey=="genres" && thisInput.parentNode.className!="genreBox" ) {
+              var p= thisInput.parentNode.parentNode;
+              while( p ) { // remove any higher order genres as well
+                var hiOrdName= p.getElementsByTagName("input")[0].name;
+                if( works[i][genOrKey+"Selected"].indexOf("#"+hiOrdName+"#")>=0 ) {
+                  selected= selected.replace( "#"+hiOrdName+"#", "#" );
+                }
+                if( p.className=="genreBox" ) break;
+                p= p.parentNode;
+              }
+            }
+            works[i][genOrKey+"Selected"]= selected;
+            var noGenresSelected= works[i].genresSelected.length == 1;
+            if( noGenresSelected ) {
+              // turn off keywords in list
+              if( genOrKey=="genres" ) { // for genres not selected
+                var keywordsList= document.getElementById( "emneValg" ),
+                    keyInputs= keywordsList.getElementsByTagName( "input" );
+                for( var j= 0; j < keyInputs.length; j++ ) {
+                  if( works[i].keywords.indexOf("#"+keyInputs[j].name+"#") >= 0 ) {
+                    keyRefCnt[j]--;
+                    if( keyRefCnt[j]==0 ) {
+                      keyInputs[j].parentNode.style.color= "yellow";
+                      keyInputs[j].parentNode.style.display= "none";
+                    }
+                  }
+                }
+              }
+            }
+            if( (noGenresSelected || works[i].keywordsSelected.length == 1 ) && works[i].row.style.color!="yellow" ) { 
+              works[i].row.style.display= "none";
+              works[i].row.style.color= "yellow";
+            }
+          }
+        }
+      }
+      function sortList( thisSort, col ) {
+        var sortArray= [];
+        $('#listHead').children('td').each( function() {
+          this.innerHTML= this.innerHTML.replace("▲","");
+        })
+        $('.workOnList').each( function() {
+          var item= new Object,
+              sj= $(this).find('td.sjNummer').text(); // SJ is always secondary sort criteria
+          if( "0"<=sj.substr(-1,1) && sj.substr(-1,1)<="9" ) {
+            sj+= " ";
+          }
+          for( var i= sj.length; i<5; i++ ) {
+            sj= "0" + sj;
+          }
+          item.sortKey= $(this).find('td.'+col).text() + sj;
+          item.row= $(this);
+          sortArray.push( item );
+        });
+        sortArray.sort( function(a,b){
+          if( a.sortKey.toLowerCase() < b.sortKey.toLowerCase() ) return -1;
+          if( a.sortKey.toLowerCase() > b.sortKey.toLowerCase() ) return 1;
+          return 0;
+        });
+        for( var i= 0; i<sortArray.length; i++ ) {
+          $('#listTail').before( sortArray[i].row );
+        }
+        thisSort.innerHTML+= "▲"; // = &#x25B2; 
+      }
+      // -->
+    </script>
 
 		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Genre</div>
-
+		  <div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Genre oversigt</div>
 		</div>
             
-            <div class="kolonne1">
+    <div class="kolonne1">
+      <ul id="kolonne1_meny">
+        <li class="header">Værker</li>
+        <li><a href="/krono">Kronologisk</a></li>
+        <li><a href="/alfa">Alfabetisk</a></li>
+        <li><a class="selected last" href="/genre">Genrer</a></li>
+      </ul>
+      &nbsp;
+      <h4>Emneord</h4>
+      <div id="emneValg">
+         <input type="checkbox" name="alleEmner" onclick="chk(this,'keywords')" checked="checked"/> Alle emner
 
-		<ul id="kolonne1_meny">
-                    <li class="header">Værker</li>
-                    <li><a href="/krono">Kronologisk</a></li>
-                    <li><a href="/alfa">Alfabetisk</a></li>
-                    <li class="last"><a class="selected" href="/genre">Genre</a></li>
-                </ul>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="bibelhistorie"/> Bibelhistorie</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="bryllup"/> Bryllup</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="Danmark"/> Danmark</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="dødsfald"/> Dødsfald</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="dåb"/> Dåb</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="faste"/> Faste</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="fejder"/> Fejder</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="filologi"/> Filologi</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="filosofi"/> Filosofi</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="folket"/> Folket</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="foreninger"/> Foreninger</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="forfatning"/> Forfatning</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="fødselsdag"/> Fødselsdag</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="græsk"/> Græsk</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="historie"/> Historie</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="jubilæer"/> Jubilæer</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="jul"/> Jul</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="kirkehistorie"/> Kirkehistorie</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="kirkemøder"/> Kirkemøder</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="kongehuset"/> Kongehuset</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="krig"/> Krig</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="kristendom"/> Kristendom</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="latin"/> Latin</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="lejligheder"/> Lejligheder</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="litteratur"/> Litteratur</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="mytologi"/> Mytologi</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="norrønt"/> Norrønt</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="oldengelsk"/> Oldengelsk</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="pinse"/> Pinse</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="polemik"/> Polemik</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="politik"/> Politik</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="påske"/> Påske</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="rigsdagen m.v."/> Rigsdagen m.v.</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="sagaer"/> Sagaer</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="selvbiografi"/> Selvbiografi</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="skolen"/> Skolen</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="teologi"/> Teologi</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="trinitatis"/> Trinitatis</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="tysk"/> Tysk</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="ældre dansk"/> Ældre dansk</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="åndelige"/> Åndelige</div>
+         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="året"/> Året</div>
+      </div>
+    </div>
+
+	<div id="kolonne1_bred"><h1>Værker</h1>
+
+    <input id="alt" type="checkbox" name="alt" onclick="chk(this,'genres')"/> <span style="font: 12px Verdana">Alle genrer</span>
+    <table id="genreValg">
+      <tr valign="top">
+        <td class="genreBox">
+          <input type="checkbox" onclick="chk(this,'genres')" id="lyrik" name="lyrik"/> LYRIK
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="digte"/> &nbsp; Digte
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="dialoger"/> &nbsp; &nbsp; Dialoger
             </div>
-
-	<div id="kolonne1_bred"><h1>Genre</h1>
-            
-            <div id="tidsInterval">
-                <a href="../genre#salmer">Salmer</a>                
-                <a href="../genre#prosa">Prosa</a>
-                <a href="../genre#lyrik">Lyrik</a>
-                <a href="../genre#polemik">Polemik</a>
-                <a href="../genre#rimbreve">Rimbreve</a>
-                <a href="../genre#gaader">Gåder</a>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="digtkredse"/> &nbsp; &nbsp; Digtkredse
             </div>
-
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="digtsamlinger"/> &nbsp; &nbsp; Digtsamlinger
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="langdigte"/> &nbsp; &nbsp; Langdigte
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="lejlighedsdigte"/> &nbsp; &nbsp; Lejlighedsdigte
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="rimkrøniker"/> &nbsp; &nbsp; Rimkrøniker
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="rolledigte"/> &nbsp; &nbsp; Rolledigte
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="tilegnelsesdigte"/> &nbsp; &nbsp; Tilegnelsesdigte
+            </div>
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="salmer"/> &nbsp; Salmer
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="salmesamlinger"/> &nbsp; &nbsp; Salmesamlinger
+            </div>
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="sange"/> &nbsp; Sange
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="oversat lyrik"/> &nbsp; Oversat lyrik
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="rimbreve "/> &nbsp; Rimbreve
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="viser"/> &nbsp; Viser
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="folkevisepasticher"/> &nbsp; &nbsp; Folkevisepasticher
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="folkeviser"/> &nbsp; &nbsp; Folkeviser
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="selskabsviser"/> &nbsp; &nbsp; Selskabsviser
+            </div>
+          </div>
+        </td>
+        <td class="genreBox">
+          <input type="checkbox" onclick="chk(this,'genres')" id="prosa" name="prosa"/> PROSA
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="afhandlinger"/> &nbsp; Afhandlinger
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="anmeldelser"/> &nbsp; Anmeldelser
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="artikler"/> &nbsp; Artikler
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="dagbladsnotitser"/> &nbsp; Dagbladsnotitser
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="foredrag"/> &nbsp; Foredrag
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="foredragsrækker"/> &nbsp; &nbsp; Foredragsrækker
+            </div>
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="lærebøger"/> &nbsp; Lærebøger
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="oversat prosa"/> &nbsp; Oversat prosa
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="pamfletter"/> &nbsp; Pamfletter
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="prædikener"/> &nbsp; Prædikener
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="prædikensamlinger"/> &nbsp; &nbsp; Prædikensamlinger
+            </div>
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="subskriptionsindbydelser"/> &nbsp; Subskriptionsindbydelser
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="taler"/> &nbsp; Taler
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="tekster på andre sprog"/> &nbsp; Tekster på andre sprog
+          </div>
+        </td>
+        <td class="genreBox">
+          <input type="checkbox" onclick="chk(this,'genres')" id="andet" name="andet"/> ANDET
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="dramaer"/> &nbsp; Dramaer
+          </div>
+          <div class="saerligForm">
+            <input type="checkbox" onclick="chk(this,'genres')" name="sammensatte "/> &nbsp; Sammensatte
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="nytårsgaver"/> &nbsp; &nbsp; Nytårsgaver
+            </div>
+            <div class="saerligForm">
+              <input type="checkbox" onclick="chk(this,'genres')" name="tidsskrifter"/> &nbsp; &nbsp; Tidsskrifter
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
                 
 <!--Her bygges en kronologisk oversigt-->
 
@@ -86,46 +417,23 @@
        <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
        <span class="name">${asset.name}</span>
        <span class="rootName">${asset.rootName}</span>
-       <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+       <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>
+       <span class="genre">${asset.getXmlTerms( asset.xml, "classCode" )}</span>
+       <span class="keywords">${asset.getXmlTerms( asset.xml, "keywords" )}</span>
      </div>
     #{/list}
   </div>
 
             <div id="liste" class="hideroot">
-                
                 <table>
-                    <tr>
-                        <td class="shortForm">Titel</td>
-                        <td class="definisjon">År</td>
-                        <td class="sjNummer">SJ</td>
+                    <tr id="listHead">
+                        <td id="initSort" class="shortForm" onclick="sortList(this,'shortForm')" title="Sorter alfabetisk">Titel </td>
+                        <td class="definisjon" onclick="sortList(this,'definisjon')" title="Sorter kronologisk">År ▲</td>
+                        <td class="sjNummer" onclick="sortList(this)" title="Sorter efter nummer">SJ </td>
                     </tr>
-                    <tr class="bottom_border" id="salmer">
-                        <td class="shortForm"><h4>Salmer</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="prosa">
-                        <td class="shortForm"><h4>Prosa</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="lyrik">
-                        <td class="shortForm"><h4>Lyrik</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="polemik">
-                        <td class="shortForm"><h4>Polemik</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="rimbreve">
-                        <td class="shortForm"><h4>Rimbreve</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
-                    <tr class="bottom_border" id="gaader">
-                        <td class="shortForm"><h4>Gåder</h4></td>
-                        <td class="returnTop"><a class="returnTop" href="../genre#" title="til toppen">&#x25B2;</a></td>
-                    </tr>
+                    <tr id="listTail"><td></td></tr>
                 </table>
             </div>
         </div>
         </div>
 </div>
-
