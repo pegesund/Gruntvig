@@ -371,6 +371,28 @@ public class Asset extends GenericModel {
         else
             return null;
     }
+
+    /**
+     * Get the content of <term>s in <outerElem> in xml, delimited by "#"
+     * 
+     */
+    /* KK 2015-10-07 */
+    public static String getXmlTerms( String xml, String outerElem ) {
+        Pattern p= Pattern.compile( "<" + outerElem + "[^>]*>(.*)</" + outerElem + "\\s*>", Pattern.DOTALL );
+        Matcher m= p.matcher( xml );
+        if( m.find() ) {
+            //System.out.println( outerElem + " found: " + m.group(1) );
+            String result= "";
+            p= Pattern.compile( "<term[^>]*>([^<]*)</term\\s*>" );
+            m= p.matcher( m.group(1) );
+            while( m.find() )
+              result+= ( result.equals("")?"":"#" ) + m.group(1).trim();
+            return result;
+        }
+        else {
+            return null;
+        }
+    }
     
     /**
      * Convert xml hexadecimal char entities to unicode string
