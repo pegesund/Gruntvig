@@ -362,14 +362,28 @@ public class Asset extends GenericModel {
      * Get the content of <tag attrName="attrValue"> in xml
      * 
      */
-    /* KK 2014-03-05 */
+    /* KK 2014-03-05, 2015-10-08*/
     public static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
-        Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>(.*)</" + tag + "\\s*>" );
+        Pattern p= Pattern.compile( "<" + tag + "\\s+[^>]*" + attrName + "\\s*=\\s*[\"']" + attrValue + "[\"'][^>]*>(.*)</" + tag + "\\s*>" );
         Matcher m= p.matcher( xml );
         if( m.find() )
             return m.group(1).trim() + ( m.find(m.end()) ? " m.fl." : "" );
         else
             return null;
+    }
+
+    /**
+     * Get the value of attrName in <tag> in xml
+     * 
+     */
+    /* KK 2015-10-08*/
+    static String getXmlAttrValue( String xml, String tag, String attrName ) {
+        Pattern p= Pattern.compile( "<" + tag + "\\s+[^>]*" + attrName + "\\s*=\\s*[\"']([^\"']*)[\"'][^>]*>" );
+        Matcher m= p.matcher( xml );
+        if( m.find() )
+            return m.group(1).trim();
+        else
+            return "";
     }
 
     /**
@@ -554,9 +568,15 @@ public class Asset extends GenericModel {
 
         // String refs = Helpers.getReferencesFromXml(xml, epub.getName().replaceFirst("", html));
         String references = "";
+        String prevQual= getXmlAttrValue( xml, "title", "prev" ),
+               nextQual= getXmlAttrValue( xml, "title", "next" );
         String teiHeaderTitle= getXmlElem( xml, "title", "rend", "shortForm" );
+        if( prevQual!="" )
+            prevQual= "[" + prevQual + "] ";
+        if( nextQual!="" )
+            nextQual= " [" + nextQual + "]";
         if( teiHeaderTitle!=null )
-            name= preName + ent2str( teiHeaderTitle );
+            name= preName + prevQual + ent2str( teiHeaderTitle ) + nextQual;
         else
             name= preName + epub.getName();
         System.out.println( "hdrName: " + name );
