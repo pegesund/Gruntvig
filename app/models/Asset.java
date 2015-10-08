@@ -367,7 +367,7 @@ public class Asset extends GenericModel {
         Pattern p= Pattern.compile( "<" + tag + "\\s+" + attrName + "=[\"']" + attrValue + "[\"']\\s*>(.*)</" + tag + "\\s*>" );
         Matcher m= p.matcher( xml );
         if( m.find() )
-            return m.group(1).trim() + "X" + ( m.find(m.end()) ? " m.fl." : "" );
+            return m.group(1).trim() + ( m.find(m.end()) ? " m.fl." : "" );
         else
             return null;
     }
