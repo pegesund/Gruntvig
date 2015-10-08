@@ -1475,7 +1475,15 @@ span.pbA, span.pbms
 
 #liste { float:left; width: 100%; font-size: 1.6em; margin-top:10px; line-height:1.2em;} /* Selve listen */
 
-#liste table.krono, #liste table.alfa, #liste table.pers
+#liste table.krono, #liste table.alfa
+    {
+    border-collapse: collapse; 
+    empty-cells: show;
+    float: left;       
+    width: 585px;
+    }
+
+#liste table.pers
     {
     border-collapse: collapse; 
     empty-cells: show;
