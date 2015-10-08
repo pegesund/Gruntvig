@@ -376,10 +376,18 @@ public class Asset extends GenericModel {
      * Get the content of <term>s in <outerElem> in xml, delimited by "#"
      * 
      */
-    /* KK 2015-10-07 */
+    /* KK 2015-10-08 */
     public static String getXmlTerms( String xml, String outerElem ) {
+        String firstTextClass= "";
+        int t1= xml.indexOf("<textClass>"), t2= xml.indexOf("</textClass>");
+        if( t1>=0 && t2>=0 ) {
+            firstTextClass= xml.substring( t1, t2 );
+             // the first textClass WITHOUT attributes
+        }
+        //else
+        //    System.out.println( "No textClass, "+ t1 + "," + t2 );            
         Pattern p= Pattern.compile( "<" + outerElem + "[^>]*>(.*)</" + outerElem + "\\s*>", Pattern.DOTALL );
-        Matcher m= p.matcher( xml );
+        Matcher m= p.matcher( firstTextClass );
         if( m.find() ) {
             //System.out.println( outerElem + " found: " + m.group(1) );
             String result= "";
@@ -387,10 +395,13 @@ public class Asset extends GenericModel {
             m= p.matcher( m.group(1) );
             while( m.find() )
               result+= ( result.equals("")?"":"#" ) + m.group(1).trim();
-            return result;
+            if( result.equals("") )
+                return "ingen";
+            else
+                return result;
         }
         else {
-            return null;
+            return "ingen";
         }
     }
     
