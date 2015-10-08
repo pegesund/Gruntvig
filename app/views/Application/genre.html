@@ -206,7 +206,7 @@
           for( var i= sj.length; i<5; i++ ) {
             sj= "0" + sj;
           }
-          item.sortKey= $(this).find('td.'+col).text() + sj;
+          item.sortKey= $(this).find('td.'+col).text().replace(/\s*\[[^\]]*\]\s*/g,"") + sj;
           item.row= $(this);
           sortArray.push( item );
         });
