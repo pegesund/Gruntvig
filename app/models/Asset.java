@@ -369,7 +369,7 @@ public class Asset extends GenericModel {
         if( m.find() )
             return m.group(1).trim() + ( m.find(m.end()) ? " m.fl." : "" );
         else
-            return null;
+            return "";
     }
 
     /**
