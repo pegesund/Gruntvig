@@ -483,25 +483,21 @@
     
     <xsl:template name="author">
         <xsl:choose>
-            <xsl:when test="//TEI:titleStmt/TEI:author">
-                <xsl:choose>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and not(@type='supp')]">
-                        N.F.S. Grundtvig
-                        <i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>
-                    </xsl:when>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main' and @type='supp']">
-                        N.F.S. Grundtvig
-                        [<i><xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='main']"/></i>]
-                    </xsl:when>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and not(@type='supp')]">
-                        N.F.S. Grundtvig
-                        &#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;
-                    </xsl:when>
-                    <xsl:when test="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part' and @type='supp']">
-                        N.F.S. Grundtvig
-                        [&#x201C;<xsl:apply-templates select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend='part']"/>&#x201D;]
-                    </xsl:when>
-                </xsl:choose>
+            <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and not(@prev)]">
+                N.F.S. Grundtvig
+                <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='main' and @rendition='supp']">
+                N.F.S. Grundtvig
+                [<i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>]
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
+                N.F.S. Grundtvig
+                <span><xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i></span>
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and @next and not(@prev)]">
+                N.F.S. Grundtvig
+                <span><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text></span>
             </xsl:when>
         </xsl:choose>
     </xsl:template>

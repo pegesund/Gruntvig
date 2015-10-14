@@ -72,20 +72,35 @@
     
     <xsl:template name="rendTitle">
         <xsl:choose>
-            <xsl:when test="@rend='main' and not(@type)">
+            <xsl:when test="@rend='main' and not(@rendition) and not(@next) and not(@prev)">
                 <i><xsl:apply-templates/></i>
             </xsl:when>
-            <xsl:when test="@rend='main' and @type='supp'">
-                [<i><xsl:apply-templates/></i>]
+            <xsl:when test="@rend='main' and @rendition='supp'">
+                <i><xsl:apply-templates/></i>
             </xsl:when>
-            <xsl:when test="@rend='part' and not(@type)">
+            <xsl:when test="@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
+                <xsl:text>[</xsl:text>Anmeldelse af<xsl:text>] </xsl:text><i><xsl:apply-templates/></i>
+            </xsl:when>
+            <xsl:when test="@rend='main' and not(@rendition) and @next and not(@prev)">
+                <i><xsl:apply-templates/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text>
+            </xsl:when>
+            
+            <xsl:when test="@rend='part' and not(@rendition) and not(@next) and not(@prev)">
                 &#x201C;<xsl:apply-templates/>&#x201D;
             </xsl:when>
-            <xsl:when test="@rend='part' and @type='supp'">
-                [&#x201C;<xsl:apply-templates/>&#x201D;]
+            <xsl:when test="@rend='part' and @rendition='supp'">
+                &#x201C;<xsl:apply-templates/>&#x201D;
             </xsl:when>
+            <xsl:when test="@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
+                &#x201C;<xsl:text>[</xsl:text>Anmeldelse af<xsl:text>] </xsl:text><xsl:apply-templates/>&#x201D;
+            </xsl:when>
+            <xsl:when test="@rend='part' and not(@rendition) and @next and not(@prev)">
+                &#x201C;<xsl:apply-templates/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
         </xsl:choose>
-        <xsl:call-template name="delimiter"/>
     </xsl:template>
     
     <!--
