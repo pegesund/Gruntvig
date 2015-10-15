@@ -572,6 +572,11 @@
                         <xsl:apply-templates/>
                     </div>
                 </xsl:when>
+                <xsl:when test="@type='dust'">
+                    <div class="titlePagePart">
+                        <xsl:apply-templates/>
+                    </div>
+                </xsl:when>
             </xsl:choose>
         </div>
     </xsl:template>
