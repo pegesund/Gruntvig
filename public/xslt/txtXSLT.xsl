@@ -18,13 +18,13 @@
                             </xsl:when>
                         </xsl:choose>
                     </div>
-                
-                <div class="kolofon">
-                    <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
-                    <xsl:text>version </xsl:text>
-                    <xsl:apply-templates select="//TEI:idno[@type='content']"/>
-                    <xsl:text>)</xsl:text>
-                </div>
+                    
+                    <div class="kolofon">
+                        <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
+                        <xsl:text>version </xsl:text>
+                        <xsl:apply-templates select="//TEI:idno[@type='content']"/>
+                        <xsl:text>)</xsl:text>
+                    </div>
                     
                     <div class="kolofon">
                         <xsl:text>Tekstkilder</xsl:text>
@@ -944,10 +944,24 @@
     
     <!-- footnote END -->
     
-    <xsl:template match="TEI:hi">        
-        <span class="{@rend}">
-            <xsl:apply-templates/>
-        </span>
+    <xsl:template match="TEI:body[@rendition='schwab']//TEI:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='schwab'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
@@ -1723,16 +1737,13 @@
     
     <!-- drama END -->
     
-    <!-- back START 
-    
+    <!-- back START -->
     
     <xsl:template match="TEI:body[@style='romanType']">
         <div style="font-family: sans-serif">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
-    -->  
     
     <xsl:template match="TEI:back//TEI:div"> <!-- div i div i back, KSR 2014.06.12 -->
         <div class="chapter">
