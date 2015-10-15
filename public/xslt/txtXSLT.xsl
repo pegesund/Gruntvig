@@ -783,9 +783,13 @@
                     </span>
                 </xsl:if>
                 <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
-                <xsl:if test="*[@type='add']">
+                <xsl:if test="*[@type='add' and not(@subtype)]">
                     <xsl:text> </xsl:text>
-                    <xsl:apply-templates select="*[@type='add']"/>
+                    <i><xsl:apply-templates select="*[@type='add']"/></i>
+                </xsl:if>
+                <xsl:if test="*[@type='add' and @subtype]">
+                    <xsl:text> </xsl:text>
+                    <i><xsl:apply-templates select="*[@type='add' and @subtype]"/></i>
                     <xsl:text> </xsl:text>
                     <i>
                         <xsl:value-of select="TEI:note/@subtype"/>
