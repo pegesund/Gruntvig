@@ -508,9 +508,16 @@
                 </xsl:for-each>
             </ul>
         </xsl:if>
-        <xsl:if test="@type='addendon' or @type='webList'">
+        <xsl:if test="@type='addendon'">
             <div class="litList">
                 <xsl:apply-templates/>
+            </div>
+        </xsl:if>
+        <xsl:if test="@target or @type='webList'">
+            <div class="litList">
+                <a href="{@target}" target="_blank">
+                    <xsl:apply-templates/>
+                </a>
             </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
