@@ -1208,53 +1208,98 @@ a:active.index
 
 /* back START */
 
+/* table corrigenda START */
+
 #tekst_innhold table.corrigenda
+        {
+        border: 0px solid black;
+        empty-cells: show;
+        margin-top: 2em;
+        padding-right: 0.5em;
+        padding-left: 0em;
+        width: 100%;
+        }
+
+#tekst_innhold tr.corrigenda
         {
         border: 0px solid black;
         margin-top: 2em;
         padding-right: 0.5em;
-        padding-left: 0em;
+        padding-left: 0.5em;
         }
 
-#tekst_innhold td.corrigenda
+/* table corrigenda31 START */
+
+#tekst_innhold td.corrigenda31:nth-child(1)
         {
         border: 0px solid black;
-        }
-
-#tekst_innhold td.corrigenda:nth-child(1)
-        {
         text-align: left;
-        width: 8%;
+        padding: 5px;
+        width: 15%;
         }
 
-#tekst_innhold td.corrigenda:nth-child(2)
+#tekst_innhold td.corrigenda31:nth-child(2)
         {
-        text-align: right;
-        width: 8%;
-        }
-
-#tekst_innhold td.corrigenda:nth-child(3)
-        {
+        border: 0px solid black;
         text-align: left;
-        width: 8%;
+        padding: 5px;
+        width: 15%;
         }
 
-#tekst_innhold td.corrigenda:nth-child(4)
+#tekst_innhold td.corrigenda31:nth-child(3)
         {
-        text-align: right;
-        width: 8%;
-        }
-
-#tekst_innhold td.corrigenda:nth-child(5)
-        {
+        border: 0px solid black;
         text-align: left;
-        width: 60%;
+        padding: 5px;
+        width: 70%;
         }
 
-/*#tekst_innhold td.corrigenda:last-child
+/* table corrigenda31 END */
+
+/* table corrigenda51 START */
+
+#tekst_innhold td.corrigenda51:nth-child(1)
         {
-        padding-left: 0.5em;
-        text-align: right;
-        }*/
+        border: 0px solid black;
+        text-align: left;
+        padding: 5px;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda51:nth-child(2)
+        {
+        border: 0px solid black;
+        text-align: left;
+        padding: 5px;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda51:nth-child(3)
+        {
+        border: 0px solid black;
+        text-align: left;
+        padding: 5px;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda51:nth-child(4)
+        {
+        border: 0px solid black;
+        text-align: left;
+        padding: 5px;
+        width: 8%;
+        }
+
+#tekst_innhold td.corrigenda51:nth-child(5)
+        {
+        border: 0px solid black;
+        text-align: left;
+        padding: 5px;
+        width: 65%;
+        }
+
+/* table corrigenda51 END */
+
+/* table corrigenda END */
 
 /* back END */
