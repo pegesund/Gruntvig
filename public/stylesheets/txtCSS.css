@@ -462,7 +462,7 @@ a.endNoteRef
         
 #tekst_innhold .l_noIndent, #tekst_innhold .l_center, #tekst_innhold .l_hangingIndent, #tekst_innhold .l_right, #tekst_innhold .l_firstIndent
         {
-        width: 25em;
+        width: 20em;
         }
 
 #tekst_innhold .l_noIndent
@@ -547,9 +547,58 @@ a.endNoteRef
 
 /* indrykning lyrik END*/
 
+/* to ord i samme linje START */
+
+#tekst_innhold table.wordBox
+        {
+        font-size: 70%;
+        margin-left: -2em;
+        margin-top: 0em;
+        margin: 2em 0em 2em 0em;
+        width: 100%;
+        }
+
+#tekst_innhold span.wordBox
+        {
+        margin: 0em 2em 2em 0em;
+        }
+
+#tekst_innhold span.wordContainer
+        {
+        margin:  2em 0.5em 0em 0em;
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        top: -30px;
+        }
+        
+#tekst_innhold span.top
+        {
+        color: red;
+        position: absolute;
+        top: 0px;
+        }
+
+#tekst_innhold span.down
+        {
+        position: absolute;
+        top: 15px;
+        }
+        
+#tekst_innhold span.down:after
+        {
+        content: "}";
+        margin-left: 6px;
+        font-size: 180%;
+        top: -5px;
+        position: relative;
+        }
+        
+/* to ord i samme linje END */
+
 #tekst_innhold .lgNumber
         {
-        font-size: 100%;
+        font-size: 80%;
         margin-left: 10px;
         }
 
@@ -629,63 +678,130 @@ a:hover.index
 a:active.index
         {
         color: #0000FF; /* selected link */
-        }  
+        }
 
-table.index, tr.row
+#tekst_innhold table.index
         {
-        border: 0px solid black;
+        border-collapse: collapse;
         empty-cells: show;
-        font-size: 90%;
+        font-size: 100%;
+        margin: 2em 0em 0em 0em;
         width: 100%;
         }
 
-td, td.right, td.left, td.center
+#tekst_innhold table.index, #tekst_innhold tr.index, #tekst_innhold td.index
         {
-        font-size: 90%;
-        }
-
-td.right
-        {
-        border: 0px solid black;
-        empty-cells: show;
-        font-size: inherit;
-        text-align: right;
-        }
-
-td.left
-        {
-        border: 0px solid black;
-        empty-cells: show;
-        font-size: inherit;
-        text-align: left;
-        }
-
-
-td.center
-        {
-        border: 0px solid black;
-        empty-cells: show;
-        font-size: inherit;
-        text-align: center;
-        }
-
-td.index:first-child
-        {
-        border: 0px solid black;
-        empty-cells: show;
-        text-align: left;
-        width: 25%;
-        }
-
-td.index:last-child
-        {
-        border: 0px solid black;
-        empty-cells: show;
-        text-align: right;
-        width: 20%;
+        border: 1px solid black;        
+        
+        padding: 10px;
         }
 
 /* table index END */
+
+/* table index rendition="21" START */
+
+#tekst_innhold tr.head > td.index32
+        {
+        border: 1px solid black;        
+        text-align: center;
+        padding: 10px;
+        }
+
+#tekst_innhold td.index21:nth-child(1)
+        {
+        color: red;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 60%;
+        }
+
+#tekst_innhold td.index21:nth-child(2)
+        {
+        color: blue;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 15%;
+        }
+
+/* table index rendition="21" END */
+
+/* table index rendition="32" START */
+
+#tekst_innhold tr.head > td.index32
+        {
+        border: 1px solid black;        
+        text-align: center;
+        padding: 10px;
+        }
+
+#tekst_innhold td.index32:nth-child(1)
+        {
+        color: red;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 15%;
+        }
+
+#tekst_innhold td.index32:nth-child(2)
+        {
+        color: blue;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 60%;
+        }
+
+#tekst_innhold td.index32:nth-child(3)
+        {
+        color: green;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 15%;
+        }
+
+/* table index rendition="32" END */
+
+/* table index rendition="33" START */
+
+#tekst_innhold tr.head > td.index33
+        {
+        border: 1px solid black;        
+        text-align: center;
+        padding: 10px;
+        }
+
+#tekst_innhold td.index33:nth-child(1)
+        {
+        color: red;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 15%;
+        }
+
+#tekst_innhold td.index33:nth-child(2)
+        {
+        color: blue;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 15%;
+        }
+
+#tekst_innhold td.index33:nth-child(3)
+        {
+        color: green;
+        border: 1px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 60%;
+        }
+
+/* table index rendition="33" END */
 
 /* table type subscription START */
 
