@@ -700,17 +700,16 @@ a:active.index
 
 /* table index rendition="21" START */
 
-#tekst_innhold tr.head > td.index32
+#tekst_innhold tr.head > td.index21
         {
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: center;
         padding: 10px;
         }
 
 #tekst_innhold td.index21:nth-child(1)
         {
-        color: red;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 60%;
@@ -718,8 +717,7 @@ a:active.index
 
 #tekst_innhold td.index21:nth-child(2)
         {
-        color: blue;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 15%;
@@ -731,15 +729,14 @@ a:active.index
 
 #tekst_innhold tr.head > td.index32
         {
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: center;
         padding: 10px;
         }
 
 #tekst_innhold td.index32:nth-child(1)
         {
-        color: red;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 15%;
@@ -747,8 +744,7 @@ a:active.index
 
 #tekst_innhold td.index32:nth-child(2)
         {
-        color: blue;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 60%;
@@ -756,8 +752,7 @@ a:active.index
 
 #tekst_innhold td.index32:nth-child(3)
         {
-        color: green;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 15%;
@@ -769,15 +764,14 @@ a:active.index
 
 #tekst_innhold tr.head > td.index33
         {
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: center;
         padding: 10px;
         }
 
 #tekst_innhold td.index33:nth-child(1)
         {
-        color: red;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 15%;
@@ -785,8 +779,7 @@ a:active.index
 
 #tekst_innhold td.index33:nth-child(2)
         {
-        color: blue;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 15%;
@@ -794,8 +787,7 @@ a:active.index
 
 #tekst_innhold td.index33:nth-child(3)
         {
-        color: green;
-        border: 1px solid black;        
+        border: 0px solid black;        
         text-align: left;
         padding: 10px;
         width: 60%;
