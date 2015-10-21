@@ -703,24 +703,24 @@ a:active.index
 
 /* table index END */
 
-/* table index rendition="21" START */
+/* table index rendition="22" START */
 
-#tekst_innhold tr.head > td.index21
+#tekst_innhold tr.head > td.index22
         {
         border: 0px solid black;        
         text-align: center;
         padding: 10px;
         }
 
-#tekst_innhold td.index21:nth-child(1)
+#tekst_innhold td.index22:nth-child(1)
         {
         border: 0px solid black;        
         text-align: left;
         padding: 10px;
-        width: 60%;
+        width: 85%;
         }
 
-#tekst_innhold td.index21:nth-child(2)
+#tekst_innhold td.index22:nth-child(2)
         {
         border: 0px solid black;        
         text-align: left;
@@ -728,7 +728,7 @@ a:active.index
         width: 15%;
         }
 
-/* table index rendition="21" END */
+/* table index rendition="22" END */
 
 /* table index rendition="32" START */
 
