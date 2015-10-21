@@ -1014,6 +1014,12 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="TEI:body[not(@rendition)]//TEI:hi">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
