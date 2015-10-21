@@ -1977,7 +1977,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <!-- corrigenda31 START -->
+    <!-- corrigenda33 START -->
     
     <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='33']//TEI:cell">
         <xsl:choose>
@@ -1999,9 +1999,33 @@
         </xsl:choose>
     </xsl:template>
     
-    <!-- corrigenda31 END -->
+    <!-- corrigenda33 END -->
     
-    <!-- corrigenda51 START -->
+    <!-- corrigenda44 START -->
+    
+    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='44']//TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="corrigenda44" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="corrigenda44" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="corrigenda44">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- corrigenda44 END -->
+    
+    <!-- corrigenda55 START -->
     
     <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='55']//TEI:cell">
         <xsl:choose>
@@ -2023,7 +2047,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <!-- corrigenda51 END -->
+    <!-- corrigenda55 END -->
     
     <!-- tabel corrigenda END -->
     
