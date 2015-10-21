@@ -1979,20 +1979,20 @@
     
     <!-- corrigenda31 START -->
     
-    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='31']//TEI:cell">
+    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='33']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="corrigenda31" rowspan="{@rows}">
+                <td class="corrigenda33" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="corrigenda31" colspan="{@cols}">
+                <td class="corrigenda33" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="corrigenda31">
+                <td class="corrigenda33">
                     <xsl:apply-templates/>
                 </td>
             </xsl:otherwise>
@@ -2003,20 +2003,20 @@
     
     <!-- corrigenda51 START -->
     
-    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='51']//TEI:cell">
+    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='55']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="corrigenda51" rowspan="{@rows}">
+                <td class="corrigenda55" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="corrigenda51" colspan="{@cols}">
+                <td class="corrigenda55" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="corrigenda51">
+                <td class="corrigenda55">
                     <xsl:apply-templates/>
                 </td>
             </xsl:otherwise>
