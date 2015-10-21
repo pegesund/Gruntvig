@@ -1471,10 +1471,10 @@
     
     <!-- index21 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='22']//TEI:cell">
+    <xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="index22" rowspan="{@rows}">
+                <td class="index21" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
@@ -1486,7 +1486,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='22']/TEI:row/TEI:cell">
+    <xsl:template match="TEI:table[@type='index' and @rendition='21']/TEI:row/TEI:cell">
         <xsl:variable name="chp-id">
             <xsl:for-each select="//TEI:div[TEI:head[@xml:id=current()/../@corresp]]"> <!-- should be 1 at most -->
                 <xsl:number level="any"/>
@@ -1494,17 +1494,17 @@
         </xsl:variable>
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="index22" rowspan="{@rows}">
+                <td class="index21" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="index22" colspan="{@cols}">
+                <td class="index21" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="index22">
+                <td class="index21">
                     <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
                         <xsl:apply-templates/>
                     </a>
