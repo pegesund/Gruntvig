@@ -2064,24 +2064,35 @@
     <!-- list START -->
     
     <xsl:template match="TEI:list">
-        <xsl:if test="@type='decimal'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="decimal">
-                        <xsl:apply-templates/>
-                    </li>
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
-        <xsl:if test="@type='ordered'">
-            <ul>
-                <xsl:for-each select="TEI:item">
-                    <li class="ordered">
-                        <xsl:apply-templates/>
-                    </li>
-                </xsl:for-each>
-            </ul>
-        </xsl:if>
+        <xsl:choose>
+            <xsl:when test="@type='decimal'">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="decimal">
+                            <xsl:apply-templates/>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+            <xsl:when test="@type='ordered'">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="ordered">
+                            <xsl:apply-templates/>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+            <xsl:when test="@type='simple'">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="ordered">
+                            <xsl:apply-templates/>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <!-- list END -->
