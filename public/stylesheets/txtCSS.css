@@ -17,6 +17,11 @@ li.ordered
         {
         list-style-type: circle;
         }
+        
+li.simple
+        {
+        list-style-type: none;
+        }
 
 /* list END */
 
