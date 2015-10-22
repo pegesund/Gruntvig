@@ -38,6 +38,8 @@ li.simple
 
 /* fodnoter END */
 
+/* tekstkritisk apparat START */
+
 #tekst_innhold a.app 
         {
         color: black;
@@ -64,6 +66,15 @@ li.simple
         color: gray;
         }
         
+span.rotate
+        {
+        display: inline-block;
+        -ms-transform: rotate(180deg);/*IE9*/
+        -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
+        transform: rotate(180deg);
+        }
+
+/* tekstkritisk apparat END */        
         
 /* kolofonblad start */
 
@@ -723,7 +734,7 @@ a:active.index
 #tekst_innhold td.index21:nth-child(2)
         {
         border: 0px solid black;        
-        text-align: left;
+        text-align: right;
         padding: 10px;
         width: 15%;
         }
@@ -758,7 +769,7 @@ a:active.index
 #tekst_innhold td.index32:nth-child(3)
         {
         border: 0px solid black;        
-        text-align: left;
+        text-align: right;
         padding: 10px;
         width: 15%;
         }
@@ -793,7 +804,7 @@ a:active.index
 #tekst_innhold td.index33:nth-child(3)
         {
         border: 0px solid black;        
-        text-align: left;
+        text-align: right;
         padding: 10px;
         width: 60%;
         }
