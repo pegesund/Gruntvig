@@ -1000,7 +1000,13 @@
     
     <!-- footnote END -->
     
-    <xsl:template match="TEI:body[@rendition='schwab']//TEI:hi">
+    <xsl:template match="TEI:hi">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!--xsl:template match="//TEI:body[@rendition='schwab']//TEI:hi">
         <xsl:choose>
             <xsl:when test="@rend='schwab'">
                 <span class="italic">
@@ -1012,15 +1018,20 @@
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
             <xsl:otherwise>
                 <span class="{@rend}">
                     <xsl:apply-templates/>
                 </span>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
-    <xsl:template match="TEI:body[not(@rendition)]//TEI:hi">
+    <xsl:template match="//TEI:body[not(@rendition='schwab')]//TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
