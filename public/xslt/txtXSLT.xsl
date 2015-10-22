@@ -481,6 +481,12 @@
             </div>
     </xsl:template>
     
+    <xsl:template match="TEI:g">
+        <span class="rotate">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template name="author">
         <xsl:choose>
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and not(@prev)]">
