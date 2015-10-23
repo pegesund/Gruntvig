@@ -495,6 +495,15 @@ a.docIn:hover
         
 /* table textualCriticism START */
 
+span.rotate
+        {
+        color: red;
+        display: inline-block;
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        }
+
 .mainTxr table.textualCriticism, .mainTxr tr, .mainTxr td
         {
         border: 1px solid black;
