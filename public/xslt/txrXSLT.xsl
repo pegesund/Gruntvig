@@ -591,7 +591,12 @@
                                         <xsl:text>, </xsl:text>
                                     </i>                                    
                                 </xsl:if>
-                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[not(@type) and not(child::TEI:g)]">
+                                    <xsl:apply-templates select="TEI:rdg"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
+                                    <xsl:call-template name="rotate"/>
+                                </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
                                 </xsl:if>
@@ -640,7 +645,12 @@
                                         <xsl:text>, </xsl:text>
                                     </i>                                    
                                 </xsl:if>
-                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[not(@type) and not(child::TEI:g)]">
+                                    <xsl:apply-templates select="TEI:rdg"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
+                                    <xsl:call-template name="rotate"/>
+                                </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
                                 </xsl:if>
@@ -687,7 +697,12 @@
                                         <xsl:text>, </xsl:text>
                                     </i>                                    
                                 </xsl:if>
-                                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                                <xsl:if test="TEI:rdg[not(@type) and not(child::TEI:g)]">
+                                    <xsl:apply-templates select="TEI:rdg"/>
+                                </xsl:if>
+                                <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
+                                    <xsl:call-template name="rotate"/>
+                                </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
                                 </xsl:if>
@@ -708,6 +723,14 @@
                 </div>
             </xsl:when>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="rotate">
+        <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
+            <span>
+                <xsl:apply-templates select="TEI:rdg"/>
+            </span>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
