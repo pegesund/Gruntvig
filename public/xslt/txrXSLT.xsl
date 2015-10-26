@@ -595,7 +595,7 @@
                                     <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
-                                    <xsl:call-template name="rotate"/>
+                                    <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
@@ -649,7 +649,7 @@
                                     <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
-                                    <xsl:call-template name="rotate"/>
+                                    <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
@@ -701,7 +701,7 @@
                                     <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
-                                    <xsl:call-template name="rotate"/>
+                                    <xsl:apply-templates select="TEI:rdg"/>
                                 </xsl:if>
                                 <xsl:if test="TEI:rdg[@type='add']">
                                     <xsl:apply-templates select="TEI:rdg[@type='add']"/>
@@ -725,12 +725,10 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template name="rotate">
-        <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
-            <span>
-                <xsl:apply-templates select="TEI:rdg"/>
-            </span>
-        </xsl:if>
+    <xsl:template match="TEI:g">
+        <span class="rotate">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
