@@ -497,7 +497,6 @@ a.docIn:hover
 
 span.rotate
         {
-        color: red;
         display: inline-block;
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
