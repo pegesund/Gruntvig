@@ -41,7 +41,7 @@
                                     node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
                                 } else { 
                                     var id = $(this).attr("id");
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '</td></tr>';
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
                                 }
                                 $(this).attr("id", "");
                                 nodes.push(node);
