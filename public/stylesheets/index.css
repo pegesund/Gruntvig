@@ -1546,6 +1546,49 @@ span.pbA, span.pbms
 
 /*#liste .definisjon a {font-size:0.9em;padding-left: 2px; }*/
 
+/*liste myth START */
+
+#listeMyth { float:left; width: 100%; font-size: 1.6em; margin-top:10px; line-height:1.2em;} /* Selve listen */
+
+#listeMyth tr 
+    {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+    text-align: left;
+    }
+
+#listeMyth tr.bottom_border 
+    {
+    border-top: 0px solid #eee; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bbb;
+    margin-top:8px;
+    padding: 10px 0 5px 0;
+    width: 665px;
+    }
+
+#listeMyth td
+    {
+    border-top: 0px solid #ddd;
+    margin: 0 0 0 0px;
+    padding: 0px 0;
+    }
+
+#listeMyth .navn
+        {        
+        width: 200px;
+        font-size: 16px;
+        }
+        
+#listeMyth .definisjon
+    {
+    width: 610px;
+    }
+    
+/*liste myth END*/
+
 /* Hjelpe-link */
 
 #hjelp_link {
@@ -1671,12 +1714,20 @@ div.checkBoxShow
 
 #small_A {float:left; display:block; padding:3px; margin: -3px 5px 0 0; color:#555;}
 
-#slider {float:left; width:128px; height:7px; margin-top:4px;
-background: -moz-linear-gradient(100% 100% 90deg, #e1e1e1, #f2f2f2);
-background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e1e1e1), to(#f2f2f2));
-border: 1px solid #ddd;
--moz-border-radius:4px 4px 4px 4px; -webkit-border-radius:4px 4px 4px 4px; border-radius:4px 4px 4px 4px;
-}
+#slider
+        {
+        float:left; 
+        width:128px; 
+        height:7px; 
+        margin-top:4px;
+        background: -moz-linear-gradient(100% 100% 90deg, #e1e1e1, #f2f2f2);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e1e1e1), to(#f2f2f2));
+        border: 1px solid #ddd;
+        -moz-border-radius:4px 4px 4px 4px; 
+        -webkit-border-radius:4px 4px 4px 4px; 
+        border-radius:4px 4px 4px 4px;
+        }
+        
 .ui-slider .ui-slider-handle {width:22px; height:22px; border:0px; top: -0.45em; background: url('../img/slider knapp.png') center center no-repeat; }
 .ui-slider .ui-slider-handle:focus {outline:none; }
 .ui-slider-range-min {background: #4d93bc; -moz-border-radius:4px 4px 4px 4px; border-radius:4px 4px 4px 4px; -webkit-border-radius:4px 4px 4px 4px; border-color: #4d93bc; }

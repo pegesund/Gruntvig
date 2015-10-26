@@ -72,6 +72,8 @@ span.rotate
         -ms-transform: rotate(180deg);/*IE9*/
         -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
         transform: rotate(180deg);
+        margin: 0 !important;
+        padding: 0 !important;        
         }
 
 /* tekstkritisk apparat END */        
@@ -1309,6 +1311,11 @@ a:active.index
 /* table corrigenda44 END */
 
 /* table corrigenda55 START */
+
+#tekst_innhold td.corrigenda55 > .spaced
+        {
+        font-style: italic;
+        }
 
 #tekst_innhold td.corrigenda55:nth-child(1)
         {
