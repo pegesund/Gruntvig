@@ -71,19 +71,22 @@ li.simple
 
 #tekst_innhold .rdg
         {
-        color: #0099CC;
         margin: 0 !important;
         padding: 0 !important;
         }
 
 #tekst_innhold span.rotate
         {
+        font-size: 100%;
         display: inline-block;
         -ms-transform: rotate(180deg);/*IE9*/
-        -webkit-transform: rotate(181deg);/*Chrome, Safari, Opera, Firefox*/
+        -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
         transform: rotate(180deg);
-        margin: 0 !important;
+        margin: 0em -1em 0em 0em !important;
         padding: 0 !important;
+        vertical-align: baseline;
+        position: relative;
+        
         }
 
 /* tekstkritisk apparat END */        
