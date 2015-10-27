@@ -83,10 +83,9 @@ li.simple
         -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
         transform: rotate(180deg);
         margin: 0em -1em 0em 0em !important;
-        padding: 0 !important;
+        padding: 0em 0em 0em 0em !important;
         vertical-align: baseline;
-        position: relative;
-        
+        position: relative;        
         }
 
 /* tekstkritisk apparat END */        
