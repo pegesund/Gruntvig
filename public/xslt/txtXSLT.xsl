@@ -484,7 +484,7 @@
     <xsl:template match="TEI:g">
         <span class="rotate">
             <xsl:apply-templates/>
-        </span>
+        </span>        
     </xsl:template>
     
     <xsl:template name="author">
@@ -847,7 +847,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:rdg">
-        <xsl:apply-templates/>
+        <span class="rdg"><xsl:apply-templates/></span>
         <span class="wit">                
             <xsl:text> </xsl:text>
             <i>
