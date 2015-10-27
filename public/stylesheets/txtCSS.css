@@ -47,9 +47,10 @@ li.simple
         }
 
 #tekst_innhold span.appInvisible
-         {
-         display: none;
-         }
+        {
+        font-size: 100%;
+        display: none;
+        }
 
 #tekst_innhold .app:hover 
          {
@@ -59,21 +60,30 @@ li.simple
 #tekst_innhold .app:hover .appInvisible
         {
         display: inline;
+        margin: 0 !important;
+        padding: 0 !important;
         }
 
 #tekst_innhold .lem
         {
         color: gray;
         }
-        
-span.rotate
+
+#tekst_innhold .rdg
+        {
+        color: #0099CC;
+        margin: 0 !important;
+        padding: 0 !important;
+        }
+
+#tekst_innhold span.rotate
         {
         display: inline-block;
         -ms-transform: rotate(180deg);/*IE9*/
-        -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
+        -webkit-transform: rotate(181deg);/*Chrome, Safari, Opera, Firefox*/
         transform: rotate(180deg);
         margin: 0 !important;
-        padding: 0 !important;        
+        padding: 0 !important;
         }
 
 /* tekstkritisk apparat END */        
