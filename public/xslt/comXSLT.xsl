@@ -243,26 +243,26 @@
                         <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='main' and @rendition='supp']">
-                        [<i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>]
+                        <i>[<xsl:apply-templates select="//TEI:title[@rend='main']"/>]</i>
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
-                        <span><xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i></span>
+                        <xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and @next and not(@prev)]">
-                        <span><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text></span>
+                        <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text>
                     </xsl:when>
                     
                     <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and not(@next) and not(@prev)]">
                         &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='part' and @rendition='supp']">
-                        [&#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;]
+                        &#x201C;[<xsl:apply-templates select="//TEI:title[@rend='part']"/>]&#x201D;
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and not(@next) and @prev='Anmeldelse af']">
-                        <span><xsl:text>[Anmdelselse af] </xsl:text>&#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;</span>
+                        <xsl:text>&#x201C;[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and @next and not(@prev)]">
-                        <span>&#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;</span>
+                        &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
                     </xsl:when>
                 </xsl:choose>
             </xsl:when>
