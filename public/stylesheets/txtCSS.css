@@ -22,6 +22,11 @@ li.simple
         {
         list-style-type: none;
         }
+        
+li.lowerAlpha
+        {
+        list-style-type: lower-alpha;
+        }
 
 /* list END */
 
