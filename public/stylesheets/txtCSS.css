@@ -8,10 +8,12 @@
         
 /* list START */
 
-li.decimal, li.ordered, li.simple, li.lowerAlpha
+ul      
         {
-        margin: 0em 0em 0em 2em
+        margin: 1em 0em 1em 2em
         }
+
+
 
 li.decimal
         {
