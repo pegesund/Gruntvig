@@ -8,6 +8,11 @@
         
 /* list START */
 
+li.decimal, li.ordered, li.simple, li.lowerAlpha
+        {
+        margin: 0em 0em 0em 2em
+        }
+
 li.decimal
         {
         list-style-type: decimal;
