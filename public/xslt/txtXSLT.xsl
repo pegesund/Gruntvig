@@ -487,8 +487,9 @@
         </span>        
     </xsl:template>
     
-    <xsl:template name="author">
+    <xsl:template name="author">        
         <xsl:choose>
+            <!-- main title -->
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and not(@prev)]">
                 N.F.S. Grundtvig
                 <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
@@ -504,6 +505,23 @@
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and @next and not(@prev)]">
                 N.F.S. Grundtvig
                 <span><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text></span>
+            </xsl:when>
+            <!-- part title -->
+            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and not(@prev)]">
+                N.F.S. Grundtvig
+                &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='part' and @rendition='supp']">
+                N.F.S. Grundtvig
+                &#x201C;[<xsl:apply-templates select="//TEI:title[@rend='part']"/>]&#x201D;
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">&#x201D;
+                N.F.S. Grundtvig
+                <xsl:text>&#x201C;[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and @next and not(@prev)]">
+                N.F.S. Grundtvig
+                &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
             </xsl:when>
         </xsl:choose>
     </xsl:template>
@@ -2134,6 +2152,15 @@
                 <ul>
                     <xsl:for-each select="TEI:item">
                         <li class="ordered">
+                            <xsl:apply-templates/>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+            <xsl:when test="@type='lowerAlpha'">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="lowerAlpha">
                             <xsl:apply-templates/>
                         </li>
                     </xsl:for-each>
