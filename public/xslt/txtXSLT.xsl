@@ -515,7 +515,7 @@
                 N.F.S. Grundtvig
                 &#x201C;[<xsl:apply-templates select="//TEI:title[@rend='part']"/>]&#x201D;
             </xsl:when>
-            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">&#x201D;
+            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
                 N.F.S. Grundtvig
                 <xsl:text>&#x201C;[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
             </xsl:when>
