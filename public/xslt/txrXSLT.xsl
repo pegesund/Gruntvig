@@ -614,7 +614,7 @@
                 </table>
             </xsl:when>
             <xsl:when test="@type='textualCriticismSingularis'">                
-                <div class="txtCrit"><xsl:text>Der er foretaget følgende tekstrettelser</xsl:text> (<a href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</div>
+                <div class="txtCrit"><xsl:text>Der er foretaget følgende tekstrettelse</xsl:text> (<a href="http://www.xn--grundtvigsvrker-7lb.dk/vejledning/tknoter_vej">se vejledning til de tekstkritiske noter</a>):</div>
                 <table class="textualCriticism">
                     <xsl:choose>
                         <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:pb[@type='text' and not(@subtype)]">
