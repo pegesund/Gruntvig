@@ -565,7 +565,7 @@
                     <xsl:choose>
                         <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:pb[@type='text' and not(@subtype)]">
                             <tr>
-                                <td>Sidetal</td>
+                                <td>Side</td>
                                 <td>Note</td>
                             </tr>
                         </xsl:when>
