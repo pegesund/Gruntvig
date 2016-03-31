@@ -819,6 +819,14 @@ a:active.index
         padding-left: 10px;
         }
 
+#tekst_innhold tr.head
+        {
+        border: 0px solid black;
+        font-size: 120%;
+        text-align: center;
+        padding: 10px;
+        }
+
 /* table index END */
 
 /* table index rendition="21" START */
@@ -860,7 +868,7 @@ a:active.index
 
 #tekst_innhold tr.head > td.index32
         {
-        border: 0px solid black;        
+        border: 0px solid black;
         text-align: center;
         padding: 10px;
         }
