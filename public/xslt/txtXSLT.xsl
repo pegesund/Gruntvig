@@ -1530,6 +1530,16 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="TEI:table[@type='index']//TEI:p">
+        <xsl:choose>
+            <xsl:when test="//TEI:p[@rend]">
+                <div class="{@rend}Index">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <!-- index21 START -->
     
     <xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
