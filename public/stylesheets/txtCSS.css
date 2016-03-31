@@ -393,6 +393,49 @@ a.endNoteRef
         font-size: 298%;
         }
 
+#tekst_innhold .head0hangingIndent, .head1hangingIndent, .head2hangingIndent, .head3hangingIndent, .head4hangingIndent, .head5hangingIndent, .head6hangingIndent   
+        {
+        margin: 2em 0em 2em 1em;
+        text-align: justify;
+        text-indent: -1em;
+        }
+
+#tekst_innhold .head0hangingIndent
+        {
+        font-size: 100%;
+        }
+
+#tekst_innhold .head1hangingIndent
+        {
+        font-size: 120%;
+        }
+
+#tekst_innhold .head2hangingIndent
+        {
+        font-size: 144%;
+        
+        }
+
+#tekst_innhold .head3hangingIndent
+        {
+        font-size: 173%;
+        }
+
+#tekst_innhold .head4hangingIndent
+        {
+        font-size: 207%;
+        }
+
+#tekst_innhold .head5hangingIndent
+        {
+        font-size: 248%;
+        }
+
+#tekst_innhold .head6hangingIndent
+        {
+        font-size: 298%;
+        }
+
 #tekst_innhold .headlg
         {
         text-align: center;
