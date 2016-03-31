@@ -18,7 +18,7 @@
         $('div.root').hide();
         $('div.work').each( function() {
             var genresTxt= $(this).find('span.genre').text(),
-                keywordsTxt= $(this).find('span.keywords').text(),
+            keywordsTxt= $(this).find('span.keywords').text(),                
                 rootName= $(this).find('span.rootName').text(),
                 splitName= rootName.split( "_" ),
                 year= splitName[0],
@@ -248,7 +248,7 @@
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="dåb"/> Dåb</div>
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="engelsk"/> Engelsk</div>
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="faste"/> Faste</div>
-         <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="fejder"/> Fejder</div>
+         <!--div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="fejder"/> Fejder</div-->
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="filologi"/> Filologi</div>
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="filosofi"/> Filosofi</div>
          <div class="emneBox"><input type="checkbox" onclick="chk(this,'keywords')" checked="checked" name="folket"/> Folket</div>
