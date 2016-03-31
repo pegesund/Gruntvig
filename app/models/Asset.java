@@ -91,7 +91,7 @@ public class Asset extends GenericModel {
     public static String mapVej = "mapVej";
     public static String mapXml = "mapXml";
     public static String bibliografi = "bibliografi";
-    public static String titleType = "title_rs"; /*added 2016-03-17 by KK*/
+    public static String titleType = "titleRef"; /*added 2016-03-17 by KK*/
 
     /**
      * Used by images
