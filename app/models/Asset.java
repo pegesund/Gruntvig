@@ -91,6 +91,7 @@ public class Asset extends GenericModel {
     public static String mapVej = "mapVej";
     public static String mapXml = "mapXml";
     public static String bibliografi = "bibliografi";
+    public static String titleType = "title_rs"; /*added 2016-03-17 by KK*/
 
     /**
      * Used by images
@@ -468,6 +469,8 @@ public class Asset extends GenericModel {
             type = Asset.personType;
         } else if (epub.getName().equals("myth.xml")) {
             type = Asset.mythType;
+        } else if (epub.getName().equals("title.xml")) {
+            type = Asset.titleType;
         } else if (epub.getName().replace(".xml", "").endsWith("_com")) {
             type = Asset.commentType;
         } else if (epub.getName().contains("intro")) {
@@ -539,6 +542,8 @@ public class Asset extends GenericModel {
             //preName= "Ms. til "; use shortForm
         } else if (type.equals(Asset.mythType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "mythXSLT.xsl");
+        } else if (type.equals(Asset.titleType)) {
+            html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "titleXSLT.xsl");
         } else if (type.equals(Asset.bibleType)) {
             html = Asset.xmlRefToHtml(epub.getAbsolutePath(), "bibleXSLT.xsl");
         } else if (type.equals(Asset.registranten)) {
