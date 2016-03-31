@@ -2149,7 +2149,7 @@
             <xsl:when test="@type='simple'">
                 <ul>
                     <xsl:for-each select="TEI:item">
-                        <li class="ordered">
+                        <li class="simple">
                             <xsl:apply-templates/>
                         </li>
                     </xsl:for-each>
@@ -2159,6 +2159,15 @@
                 <ul>
                     <xsl:for-each select="TEI:item">
                         <li class="lowerAlpha">
+                            <xsl:apply-templates/>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:when>
+            <xsl:when test="@type='noDot'">
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="noDot">
                             <xsl:apply-templates/>
                         </li>
                     </xsl:for-each>
