@@ -1575,7 +1575,7 @@
                 </td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="index21">
+                <td class="index21{@rend}">
                     <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
                         <xsl:apply-templates/>
                     </a>
