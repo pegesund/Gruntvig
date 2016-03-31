@@ -194,12 +194,40 @@ ul
         text-align: justify;
         }
         
+/* quote START */
+        
 #tekst_innhold div.quote
         {
         font-size: 16px;
         margin: 1em 2em 1em 2em;
         text-align: justify;
         }
+        
+#tekst_innhold div.quoteFirstIndent
+        {
+        font-size: 16px;
+        margin: 1em 2em 1em 2em;
+        text-indent: 2em;
+        text-align: justify;
+        }
+        
+#tekst_innhold div.quoteSecondIndent
+        {
+        font-size: 16px;
+        margin: 1em 2em 1em 2em;
+        text-indent: 4em;
+        text-align: justify;
+        }
+        
+#tekst_innhold div.quoteThirdIndent
+        {
+        font-size: 16px;
+        margin: 1em 2em 1em 2em;
+        text-indent: 6em;
+        text-align: justify;
+        }
+        
+/* quote END */
 
 #tekst_innhold div.noIndent
         {
