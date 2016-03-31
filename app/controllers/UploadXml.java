@@ -86,6 +86,7 @@ public class UploadXml extends Application {
             TextReference.uploadReferenceFileBible(asset);
         } else if (fileName.equals("myth.xml")
                 || fileName.equals("pers.xml")
+                || fileName.equals("title.xml")
                 ) {
             // System.out.println("--- Upload ref-file: " + asset.fileName);
             TextReference.uploadReferenceFile(asset);
