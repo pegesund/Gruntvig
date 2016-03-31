@@ -809,9 +809,14 @@ a:active.index
 
 #tekst_innhold table.index, #tekst_innhold tr.index, #tekst_innhold td.index
         {
-        border: 0px solid black;        
-        
+        border: 0px solid black;
         padding: 10px;
+        }
+
+#tekst_innhold .hangingIndentIndex
+        {
+        text-indent: -2em;
+        padding-left: 10px;
         }
 
 /* table index END */
