@@ -15,27 +15,27 @@ ul
 
 
 
-li.decimal
+#tekst_innhold li.decimal
         {
         list-style-type: decimal;
         }
         
-li.ordered
+#tekst_innhold li.ordered
         {
         list-style-type: circle;
         }
         
-li.simple
+#tekst_innhold li.simple
         {
         list-style-type: circle;
         }
         
-li.lowerAlpha
+#tekst_innhold li.lowerAlpha
         {
         list-style-type: lower-alpha;
         }
         
-li.noDot
+#tekst_innhold li.noDot
         {
         list-style-type: none;
         text-indent: -1em;
