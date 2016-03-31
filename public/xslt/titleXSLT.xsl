@@ -16,7 +16,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:row">
-        <div class="refdiv title_rs" id="{@xml:id}">
+        <div class="refdiv titleRef" id="{@xml:id}">
           <div class="row">
             <!--xsl:choose>
                 <xsl:when test="TEI:cell[@type='partTitle'] and not(TEI:cell[@type='shortForm'])">
