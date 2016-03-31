@@ -399,7 +399,7 @@
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:if test="//TEI:note[@type='noBible' or @type='noMyth' or @type='noPersName' or @type='noPlaceName']">
+                        <xsl:if test="//TEI:note[@type='noBible' or @type='noMyth' or @type='noPersName' or @type='noPlaceName' or @type='noTitle']">
                             <xsl:text>Opmærkning til registrene er under udarbejdelse.</xsl:text>                            
                         </xsl:if>
                     </div>
@@ -1472,9 +1472,18 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='title']">
-        <a class="title_rs" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-            <xsl:apply-templates/>
-        </a>
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noTitle']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="title_rs" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <!-- table START -->
