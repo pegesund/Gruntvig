@@ -824,44 +824,52 @@
     </xsl:template>
     
     <xsl:template match="TEI:app">
-        <span class="app" href="#">
-            <span class="lem">
-                <xsl:apply-templates select="TEI:lem"/>
-            </span>
-            <span class="appInvisible">
-                <xsl:text>] </xsl:text>
-                <xsl:if test="TEI:lem/@wit!='A' or @wit!='DU'">
-                    <span class="wit">
-                        <i>
-                            <xsl:value-of select="TEI:lem/@wit"/>
-                            <xsl:text>, </xsl:text>
-                        </i>
+        <xsl:choose>
+            <xsl:when test="@select='yes'">
+                <span class="app" href="#">
+                    <span class="lem">
+                        <xsl:apply-templates select="TEI:lem"/>
                     </span>
-                </xsl:if>
-                <xsl:if test="TEI:lem/@wit='DU'">
-                    <span class="wit">
-                        <i>
-                            <xsl:value-of select="TEI:lem"/>
-                            <xsl:text>D&amp;U</xsl:text>
-                            <xsl:text>, </xsl:text>
-                        </i>
+                    <span class="appInvisible">
+                        <xsl:text>] </xsl:text>
+                        <xsl:if test="TEI:lem/@wit!='A' or @wit!='DU'">
+                            <span class="wit">
+                                <i>
+                                    <xsl:value-of select="TEI:lem/@wit"/>
+                                    <xsl:text>, </xsl:text>
+                                </i>
+                            </span>
+                        </xsl:if>
+                        <xsl:if test="TEI:lem/@wit='DU'">
+                            <span class="wit">
+                                <i>
+                                    <xsl:value-of select="TEI:lem"/>
+                                    <xsl:text>D&amp;U</xsl:text>
+                                    <xsl:text>, </xsl:text>
+                                </i>
+                            </span>
+                        </xsl:if>
+                        <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
+                        <xsl:if test="*[@type='add' and not(@subtype)]">
+                            <xsl:text> </xsl:text>
+                            <i><xsl:apply-templates select="*[@type='add']"/></i>
+                        </xsl:if>
+                        <xsl:if test="*[@type='add' and @subtype]">
+                            <xsl:text> </xsl:text>
+                            <i><xsl:apply-templates select="*[@type='add' and @subtype]"/></i>
+                            <xsl:text> </xsl:text>
+                            <i>
+                                <xsl:value-of select="TEI:note/@subtype"/>
+                            </i>
+                        </xsl:if>
                     </span>
-                </xsl:if>
-                <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
-                <xsl:if test="*[@type='add' and not(@subtype)]">
-                    <xsl:text> </xsl:text>
-                    <i><xsl:apply-templates select="*[@type='add']"/></i>
-                </xsl:if>
-                <xsl:if test="*[@type='add' and @subtype]">
-                    <xsl:text> </xsl:text>
-                    <i><xsl:apply-templates select="*[@type='add' and @subtype]"/></i>
-                    <xsl:text> </xsl:text>
-                    <i>
-                        <xsl:value-of select="TEI:note/@subtype"/>
-                    </i>
-                </xsl:if>
-            </span>
-       </span>
+                </span>
+            </xsl:when>
+            <xsl:when test="@select='no'">
+                <xsl:value-of select="TEI:rdg/text()"/>
+            </xsl:when>
+        </xsl:choose>
+        
     </xsl:template>
     
     <xsl:template match="TEI:rdg">
