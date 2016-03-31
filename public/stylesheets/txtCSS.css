@@ -830,6 +830,14 @@ a:active.index
         padding: 10px;
         }
 
+#tekst_innhold td.index21hangingIndent
+        {
+        border: 0px solid black;
+        padding: 0px 15px 0px 15px;
+        text-align: justify;
+        text-indent: -2em;
+        }
+
 #tekst_innhold td.index21:nth-child(1)
         {
         border: 0px solid black;        
