@@ -56,7 +56,7 @@ var gotoChapter = function(text, chapter) {
             $("#tekst_innhold .chapter").fadeIn(2000, function() {
                 
                 });
-            addTooltip($('.persName, .placeName, .myth, .mythStart, .mythEnd, .bible, .bibleStart, .bibleEnd, .title_rs'));
+            addTooltip($('.persName, .placeName, .myth, .mythStart, .mythEnd, .bible, .bibleStart, .bibleEnd, .titleRef'));
             addCommentListener();
             addEndNoteListener();
             fixPageNumbersToFaks();
@@ -78,7 +78,7 @@ var gotoChapter = function(text, chapter) {
             mkShowBox( "myth",      "Mytologi",    {"color": "#4DBC4D"}, true );
             mkShowBox( "bible",     "Bibelsteder", {"color": "#4DBC4D"}, true );
             mkShowBox( "placeName", "Stednavne",   {"color": "#4DBC4D"} );
-            mkShowBox( "title_rs",  "Titler",      {"color": "#4DBC4D"} );
+            mkShowBox( "titleRef",  "Titler",      {"color": "#4DBC4D"} );
             loadCookie();
             
             // highlight search results
