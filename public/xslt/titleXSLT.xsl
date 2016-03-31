@@ -8,28 +8,6 @@
         KSR: 2016.03.17: til redaktion af basen
         KK, KSR: 2016.03.30: til netversionen
     -->
-    
-    <!--<xsl:template match="TEI:TEI">
-        
-        <html>
-            <head>
-                <link rel="stylesheet" type="text/css" href="titleEdit.css"/>
-                <title><xsl:apply-templates select="TEI:teiHeader/TEI:title"/></title>
-            </head>
-            <body>
-                <xsl:text>
-                    
-                </xsl:text>
-                <xsl:value-of select="TEI:TEI/TEI:text/TEI:head"/>
-                <!-\-p>
-                    <xsl:text>Højeste xml:id: </xsl:text>
-                    <xsl:apply-templates mode="count" select="(//@xml:id)[1]"/>
-                </p-\->
-                <xsl:apply-templates select="TEI:text"/>
-            </body>
-        </html>
-        
-    </xsl:template>-->
 
     <xsl:template match="TEI:TEI">
         <div>
@@ -37,86 +15,9 @@
         </div>
     </xsl:template>
     
-<!--    <xsl:template mode="count" match="@xml:id">
-        <xsl:choose>
-            <xsl:when test="following::*/@xml:id">
-                <xsl:variable name="this" select="translate(.,'abcdefghijklmnopqrstuvwxyz','')"/>
-                <xsl:variable name="other">
-                    <xsl:apply-templates mode="count" select="(following::*/@xml:id)[1]"/>
-                </xsl:variable>
-                <xsl:choose>
-                    <xsl:when test="$this&gt;$other">
-                        <xsl:value-of select="$this"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="$other"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-                0
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <!-\- sortering på titel-id, værdien i xml:id -\->
-    
-    <!-\-<xsl:template match="@* | node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-    </xsl:template>-\->
-    
-    <xsl:template match="TEI:table">
-        <xsl:copy>
-            <xsl:apply-templates select="TEI:row">
-                <xsl:sort select="substring-after(@xml:id, 'title')" data-type="number"/>
-            </xsl:apply-templates>
-        </xsl:copy>
-    </xsl:template>
-    
-    <!-\-xsl:template match="TEI:table">
-        <div class="table">
-            <xsl:apply-templates>
-                <xsl:sort select="TEI:cell/TEI:note[@type='lastName']"/>
-                <xsl:sort select="TEI:cell/TEI:note[@type='firstName']"/>
-            </xsl:apply-templates>
-        </div>
-    </xsl:template-\->    
-    
-    <!-\-<xsl:template match="TEI:table">
-        <div class="table">
-            <xsl:apply-templates>
-                <xsl:sort select="TEI:row[@xml:id]"/>                
-            </xsl:apply-templates>
-        </div>
-    </xsl:template>
-    
-     sortering på efternavn, fornavn 
-    
-    <xsl:template match="TEI:table">
-        <div class="table">
-            <xsl:apply-templates>
-                <xsl:sort select="TEI:cell[@type='mainAuthor']/TEI:note[@type='lastName']"/>
-                <xsl:sort select="TEI:cell[@type='mainAuthor']/TEI:note[@type='firstName']"/>
-            </xsl:apply-templates>
-        </div>
-    </xsl:template>-\->
-    
-    <xsl:template match="TEI:head">
-        <div class="head">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
--->    
     <xsl:template match="TEI:row">
         <div class="refdiv title_rs" id="{@xml:id}">
           <div class="row">
-            <div class="xmlid">
-                <xsl:value-of select="@xml:id"/>
-                <xsl:text> : </xsl:text>
-                <xsl:value-of select="@type"/>
-            </div>
             <!--xsl:choose>
                 <xsl:when test="TEI:cell[@type='partTitle'] and not(TEI:cell[@type='shortForm'])">
                     <span class="partTitle">
@@ -152,20 +53,11 @@
     
     <xsl:template match="TEI:cell[@type='mainAuthor']">
         <span class="mainAuthor">
-            <xsl:if test="TEI:note[@type='lastName']">
-                <span>
-                    <xsl:text>[</xsl:text>
-                    <xsl:value-of select="@type"/>
-                    <xsl:text>] </xsl:text>
-                </span>
-                <b>
-                    <xsl:apply-templates select="TEI:note[@type='lastName']"/>
-                    <xsl:text>, </xsl:text>
-                </b>
-            </xsl:if>
-            <b>
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-            </b>
+            <xsl:if test="TEI:note[@type='lastName']"> 
+                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+                <xsl:text>, </xsl:text>                
+            </xsl:if>            
+            <xsl:apply-templates select="TEI:note[@type='firstName']"/>            
             <xsl:if test="following-sibling::TEI:cell[@type='mainAuthor']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@type='mainAuthor'][position()!=last()]">
@@ -182,28 +74,19 @@
                         <xsl:text>, </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> &amp; </xsl:text>
-                        <b>
-                            <xsl:value-of select="//TEI:cell[@type='coAuthor']"/>
-                        </b>
+                        <xsl:text> &amp; </xsl:text>                        
+                        <xsl:value-of select="//TEI:cell[@type='coAuthor']"/>                        
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='editorOnly']">
-        <span class="editor">
-            <span>
-                <xsl:text>[</xsl:text>
-                <xsl:value-of select="@type"/>
-                <xsl:text>] </xsl:text>
-            </span>
-            <b>
-                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
-                <xsl:text>, </xsl:text>
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-            </b>
+    <xsl:template match="TEI:cell[@type='editor']">
+        <span class="editor"> 
+            <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="TEI:note[@type='firstName']"/>            
             <xsl:if test="following-sibling::TEI:cell[@type='editor']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@type='editor'][position()!=last()]">
@@ -217,18 +100,18 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='editor']">
+    <xsl:template match="TEI:cell[@type='editorOnly']">
         <span class="editor">
-            <span>
-                <xsl:text>[</xsl:text>
-                <xsl:value-of select="@type"/>
-                <xsl:text>] </xsl:text>
-            </span>
-            <b>
-                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
-                <xsl:text>, </xsl:text>
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-            </b>
+            <xsl:choose>
+                <xsl:when test="child::TEI:note[@type='firstName']">
+                    <xsl:apply-templates select="TEI:note[@type='firstName']"/>
+                </xsl:when>
+                <xsl:when test="child::TEI:note[@type='firstName' and @type='lastName']">
+                    <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+                    <xsl:text>, </xsl:text>
+                    <xsl:apply-templates select="TEI:note[@type='firstName']"/>
+                </xsl:when>
+            </xsl:choose>            
             <xsl:if test="following-sibling::TEI:cell[@type='editor']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@type='editor'][position()!=last()]">
@@ -244,16 +127,9 @@
     
     <xsl:template match="TEI:cell[@type='translatorOnly']">
         <span class="editor">
-            <span>
-                <xsl:text>[</xsl:text>
-                <xsl:value-of select="@type"/>
-                <xsl:text>] </xsl:text>
-            </span>
-            <b>
-                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
-                <xsl:text>, </xsl:text>
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-            </b>
+            <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+            <xsl:text>, </xsl:text>
+            <xsl:apply-templates select="TEI:note[@type='firstName']"/>
             <xsl:if test="following-sibling::TEI:cell[@type='editor']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@type='editor'][position()!=last()]">
@@ -289,25 +165,7 @@
         </span>
     </xsl:template>
     
-    <!--xsl:template match="TEI:cell[@type='partTitle']">
-        <span class="partTitle">
-            <xsl:text>&#x201C;</xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text>&#x201D;</xsl:text>
-            <xsl:if test="following-sibling::TEI:cell[@type='shortForm']">
-                <xsl:text> [kortform: </xsl:text>
-                <xsl:value-of select="following-sibling::TEI:cell[@type='shortForm']/."/>
-                <xsl:text>]</xsl:text>
-            </xsl:if>
-        </span>
-        <xsl:text> i </xsl:text>
-        <span style="font-style: italic">
-            <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
-            <xsl:text>,</xsl:text>
-        </span>
-    </xsl:template-->
-    
-    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle']"/>
+    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition']"/>
     
     <xsl:template match="TEI:cell[@type='volume']">
         <span>
