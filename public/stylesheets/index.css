@@ -1751,6 +1751,12 @@ a.mythRef
         text-decoration: none;
         }
 
+a.titleRef
+        {
+        cursor: default;
+        text-decoration: none;
+        }
+
 a.persNameRef
         {
         color: black;
