@@ -27,12 +27,18 @@ li.ordered
         
 li.simple
         {
-        list-style-type: none;
+        list-style-type: circle;
         }
         
 li.lowerAlpha
         {
         list-style-type: lower-alpha;
+        }
+        
+li.noDot
+        {
+        list-style-type: none;
+        text-indent: -1em;
         }
 
 /* list END */
