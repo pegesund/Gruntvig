@@ -805,8 +805,13 @@
     
     <xsl:template match="TEI:head"> 
         <xsl:choose>
-            <xsl:when test="@rend and not(@xml:id)">
+            <xsl:when test="@rend and not(@rendition) and not(@xml:id)">
                 <div class="head{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend and @rendition and not(@xml:id)">
+                <div class="head{@rend}{@rendition}">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
