@@ -147,8 +147,8 @@
     
     <xsl:template match="TEI:cell[@type='mainTitle']">
         <span class="mainTitle">
-            <xsl:apply-templates/>
-            <xsl:call-template name="delimiterKomma"/>
+            <i><xsl:apply-templates/></i>
+            <xsl:call-template name="delimiterPunktum"/>
         </span>
     </xsl:template>
     
