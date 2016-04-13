@@ -428,13 +428,19 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-   
-   <xsl:template match="TEI:note[@xml:id]">
-       <div class="note" id="{@xml:id}">
-           <xsl:apply-templates select="TEI:p"/>
-           <!--<a href="" class="greenarrow_comments"> →</a>-->
-       </div>
-   </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='aboutLit']">
+        <div class="aboutLit">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@xml:id]">
+        <div class="note" id="{@xml:id}">
+            <xsl:apply-templates select="TEI:p"/>
+            <!--<a href="" class="greenarrow_comments"> →</a>-->
+        </div>
+    </xsl:template>
    
    <xsl:template match="TEI:note[@xml:id]/TEI:p">
        <div class="p">
