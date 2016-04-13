@@ -288,6 +288,11 @@
         text-align: justify;
         }
 
+.innledningContent li
+        {
+        font-size: 90%;
+        }
+
 .innledningContent .litList, .innledningContent .webList
         {
         font-size: 12px;
