@@ -158,6 +158,13 @@
             <xsl:apply-templates/>
             <xsl:text>&#x201D;</xsl:text>
         </span>
+        <xsl:choose>
+            <xsl:when test="following-sibling::TEI:cell[@type='translatedTitle']">
+                <xsl:text> (da. </xsl:text>
+                <xsl:value-of select="//TEI:cell[@type='translatedTitle']"/>
+                <xsl:text>)</xsl:text>
+            </xsl:when>
+        </xsl:choose>
         <xsl:text> i </xsl:text>
         <span style="font-style: italic">
             <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
