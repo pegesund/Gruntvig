@@ -495,7 +495,7 @@ a.docIn:hover
         
 /* table textualCriticism START */
 
-.mainTxr span.rotateHAT
+.mainTxr span.rotate
         {
         display: inline-block;
         -ms-transform: rotate(180deg);
