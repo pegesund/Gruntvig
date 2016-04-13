@@ -64,7 +64,7 @@
                         <xsl:text>, </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> &amp; H </xsl:text>
+                        <xsl:text> &amp; </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
