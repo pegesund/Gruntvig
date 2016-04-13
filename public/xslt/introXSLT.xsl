@@ -538,6 +538,11 @@
             </xsl:call-template>
         </xsl:variable>
         <xsl:choose>
+            <xsl:when test="@type='biblDesc'">
+                <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
             <xsl:when test="@type='web'">
                 <a href="{@target}" target="_blank">
                     <xsl:apply-templates/>
