@@ -614,7 +614,7 @@
                                 </tr>
                             </xsl:when>
                             <xsl:when test="@select='disc'">
-                                <tr style="background-color: #B3CCFF">
+                                <tr>
                                     <td>
                                         <xsl:value-of select="preceding::TEI:pb[@type='text'][1]/@n"/>
                                         &#x2003;
