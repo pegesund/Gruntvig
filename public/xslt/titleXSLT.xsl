@@ -103,12 +103,12 @@
     <xsl:template match="TEI:cell[@type='editorOnly']">
         <span class="editor">
             <xsl:choose>
-                <xsl:when test="child::TEI:note[@type='firstName']">
-                    <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-                </xsl:when>
-                <xsl:when test="child::TEI:note[@type='firstName' and @type='lastName']">
+                <xsl:when test="child::TEI:note[@type='firstName' or @type='lastName']">
                     <xsl:apply-templates select="TEI:note[@type='lastName']"/>
                     <xsl:text>, </xsl:text>
+                    <xsl:apply-templates select="TEI:note[@type='firstName']"/>
+                </xsl:when>
+                <xsl:when test="child::TEI:note[@type='firstName' and not(@type='lastName')]">
                     <xsl:apply-templates select="TEI:note[@type='firstName']"/>
                 </xsl:when>
             </xsl:choose>            
@@ -132,7 +132,7 @@
             <xsl:apply-templates select="TEI:note[@type='firstName']"/>
             <xsl:if test="following-sibling::TEI:cell[@type='editor']">
                 <xsl:choose>
-                    <xsl:when test="following-sibling::TEI:cell[@type='editor'][position()!=last()]">
+                    <xsl:when test="following-sibling::TEI:cell[@type='translatorOnly'][position()!=last()]">
                         <xsl:text>, </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
@@ -168,7 +168,7 @@
         <xsl:text> i </xsl:text>
         <span style="font-style: italic">
             <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
-            <xsl:text>.</xsl:text>
+            <xsl:call-template name="delimiterKomma"/>
         </span>
     </xsl:template>
     
@@ -176,7 +176,7 @@
     
     <xsl:template match="TEI:cell[@type='volume']">
         <span>
-            <xsl:text>bind </xsl:text>
+            <xsl:text>Bind </xsl:text>
             <xsl:apply-templates/>
             <xsl:text>:</xsl:text>
         </span>
@@ -192,7 +192,7 @@
         <span>
             <xsl:text> [første linje: </xsl:text>
             <xsl:apply-templates/>
-            <xsl:text>]</xsl:text>
+            <xsl:text>].</xsl:text>
         </span>
     </xsl:template>
     
