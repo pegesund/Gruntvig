@@ -1764,6 +1764,11 @@ a.persNameRef
         text-decoration: none;
         }
 
+span.volumeTitle
+        {
+        font-style: italic;
+        }
+        
 span.placeNameRef
         {
         color: black;
