@@ -51,13 +51,46 @@
     
     -->
     
-    <xsl:template match="TEI:cell[@type='mainAuthor']">
+    <xsl:template match="TEI:cell[@type='mainAuthor' and not(@rend='anon')]">
         <span class="mainAuthor">
             <xsl:if test="TEI:note[@type='lastName']"> 
                 <xsl:apply-templates select="TEI:note[@type='lastName']"/>
                 <xsl:text>, </xsl:text>                
             </xsl:if>            
             <xsl:apply-templates select="TEI:note[@type='firstName']"/>            
+            <xsl:if test="following-sibling::TEI:cell[@type='mainAuthor']">
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:cell[@type='mainAuthor'][position()!=last()]">
+                        <xsl:text>, </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text> &amp; H </xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+            <xsl:if test="following-sibling::TEI:cell[@type='coAuthor']">
+                <xsl:choose>
+                    <xsl:when test="following-sibling::TEI:cell[@type='coAuthor'][position()!=last()]">
+                        <xsl:text>, </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text> &amp; </xsl:text>                        
+                        <xsl:value-of select="//TEI:cell[@type='coAuthor']"/>                        
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='mainAuthor' and @rend='anon']">
+        <span class="mainAuthor">
+            <xsl:text>[</xsl:text>
+            <xsl:if test="TEI:note[@type='lastName']"> 
+                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+                <xsl:text>, </xsl:text>                
+            </xsl:if>            
+            <xsl:apply-templates select="TEI:note[@type='firstName']"/>
+            <xsl:text>]</xsl:text>
             <xsl:if test="following-sibling::TEI:cell[@type='mainAuthor']">
                 <xsl:choose>
                     <xsl:when test="following-sibling::TEI:cell[@type='mainAuthor'][position()!=last()]">
@@ -103,7 +136,7 @@
     <xsl:template match="TEI:cell[@type='editorOnly']">
         <span class="editor">
             <xsl:choose>
-                <xsl:when test="child::TEI:note[@type='firstName' or @type='lastName']">
+                <xsl:when test="child::TEI:note[@type='lastName']">
                     <xsl:apply-templates select="TEI:note[@type='lastName']"/>
                     <xsl:text>, </xsl:text>
                     <xsl:apply-templates select="TEI:note[@type='firstName']"/>
@@ -167,7 +200,7 @@
         </xsl:choose>
         <xsl:text> i </xsl:text>
         <span style="font-style: italic">
-            <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
+            <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle' or @type='partTitle']"/>
             <xsl:call-template name="delimiterKomma"/>
         </span>
     </xsl:template>
@@ -183,7 +216,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='volumeTitle']">
-        <span>
+        <span class="volumeTitle">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
