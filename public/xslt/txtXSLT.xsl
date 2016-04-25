@@ -1492,9 +1492,9 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                <!--a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}"-->
                     <xsl:apply-templates/>
-                </a>
+                <!--/a-->
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
