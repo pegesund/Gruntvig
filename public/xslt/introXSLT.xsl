@@ -26,7 +26,7 @@
         <div class="mainIntro">
             <div class="head">
                 <div>
-                    <xsl:text>Indledning til </xsl:text>
+                    <xsl:text>Indledning til</xsl:text>
                 </div>
                 <div>
                     <xsl:for-each select="TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:title[@rend!='shortForm']">
