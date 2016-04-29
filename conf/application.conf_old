@@ -24,7 +24,7 @@ application.secret=QdzNif762geVhRMgvz4KteIjd59NRbJa7DlYmjKKVoLZcEJgcRdmBzgzDdN6v
 #
 # Keep the next line as is to help the play script to manage modules.
 # ---- MODULES ----
-# module.search=${play.path}/modules/search-head
+module.search=${play.path}/modules/search-head
 
 # i18n
 # ~~~~~
@@ -62,7 +62,6 @@ date.format=yyyy-MM-dd
 #
 # Java source level => 1.5, 1.6 or 1.7 (experimental)
 # java.source=1.5
-jvm.memory=-Xmx2g
 
 # Log level
 # ~~~~~
@@ -205,5 +204,8 @@ mail.smtp=mock
 %test.jpa.ddl=create-drop
 %test.mail.smtp=mock
 
+module.search=${play.path}/modules/search-head
+play.search.path=/var/tmp/lucene
+play.search.reindex=true
 
-play.baseurl=http://prometheus.statsbiblioteket.dk
+play.baseurl=http://localhost:9000
