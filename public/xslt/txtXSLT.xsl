@@ -1253,21 +1253,6 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:placeName">
-        <xsl:choose>
-            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPlaceName']">
-                <span>
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
-                    <xsl:apply-templates/>
-                </a>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
     <xsl:template match="TEI:rs[@type='bible' and not(@subtype)]">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
@@ -1455,6 +1440,21 @@
     
     <!-- bibleStart and bibleEnd END -->
     
+    <xsl:template match="TEI:placeName">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPlaceName']">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a class="placeName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:rs[@type='myth' or @type='mythStart' or @type='mythEnd']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noMyth']">
@@ -1492,9 +1492,9 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <!--a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}"-->
+                <a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
                     <xsl:apply-templates/>
-                <!--/a-->
+                </a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>

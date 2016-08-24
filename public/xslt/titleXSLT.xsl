@@ -185,6 +185,14 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@type='firstLine']">
+        <span>
+            <xsl:text> [første linje: </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>].</xsl:text>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:cell[@type='partTitle']">
         <span class="partTitle">
             <xsl:text>&#x201C;</xsl:text>
@@ -197,6 +205,11 @@
                 <xsl:value-of select="//TEI:cell[@type='translatedTitle']"/>
                 <xsl:text>)</xsl:text>
             </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='firstLine']">
+                <xsl:text> [første linje: </xsl:text>
+                <xsl:value-of select="//TEI:cell[@type='firstLine']"/>
+                <xsl:text>]</xsl:text>
+            </xsl:when>
         </xsl:choose>
         <xsl:text> i </xsl:text>
         <span style="font-style: italic">
@@ -205,11 +218,11 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition']"/>
+    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition' or @type='firstLine']"/>
     
     <xsl:template match="TEI:cell[@type='volume']">
         <span>
-            <xsl:text>Bind </xsl:text>
+            <xsl:text>bind </xsl:text>
             <xsl:apply-templates/>
             <xsl:text>:</xsl:text>
         </span>
@@ -218,14 +231,6 @@
     <xsl:template match="TEI:cell[@type='volumeTitle']">
         <span class="volumeTitle">
             <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@type='firstLine']">
-        <span>
-            <xsl:text> [første linje: </xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text>].</xsl:text>
         </span>
     </xsl:template>
     
@@ -254,7 +259,7 @@
     
     <xsl:template match="TEI:cell[@type='numberOfVolumes']">
         <span>
-            <xsl:text>bd. </xsl:text>
+            <xsl:text>bind </xsl:text>
             <xsl:apply-templates/>
             <xsl:call-template name="delimiterPunktum"/>
         </span>
@@ -278,7 +283,15 @@
         <span class="pubYear">
             <xsl:text>(</xsl:text>
             <xsl:apply-templates/>
-            <xsl:text>)</xsl:text>
+            <xsl:text>).</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='firstEdition']">
+        <span class="firstEdition">
+            <xsl:text>[</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>].</xsl:text>
         </span>
     </xsl:template>
     
