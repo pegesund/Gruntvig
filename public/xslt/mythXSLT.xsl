@@ -7,7 +7,8 @@
     >
 
 <!-- KSR: 2011.11.03
-     KK:  2014-04-29 -->
+     KK:  2014-04-29 
+     KK:  2016-09-15 Introduction of read-more in pop-ups -->
     
     <xsl:template match="TEI:TEI">
         <div>
@@ -19,69 +20,106 @@
        
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
-            <xsl:apply-templates select="TEI:cell[@rend!='orthography']"/>
-            <xsl:if test="TEI:cell[@rend='orthography']">
-                <div>
-                    <i>
-                        <xsl:text>Staves også: </xsl:text>
-                    </i>
-                    <xsl:for-each select="TEI:cell[@rend='orthography']">
-                        <xsl:apply-templates select="."/>
+          <xsl:apply-templates select="TEI:cell[1]"/> <!-- indgang: normForm, epithet, e.lign. standardpost -->
+          <xsl:apply-templates select="TEI:cell[@rend='popUp']"/>    <!-- immediately displayed pop-up text -->
+          <xsl:choose>
+            <xsl:when test="not(TEI:cell[@rend='normForm'])"> <!-- referencepost -->
+              <xsl:call-template name="orthography"/>
+            </xsl:when>
+        <xsl:otherwise>
+          <!-- standardpost -->
+          <xsl:if
+            test="TEI:cell[@rend='encyc' or @rend='orthography'] or //TEI:row[@sameAs=current()/@xml:id]">
+            <!-- if there is anything more to show -->
+            <div class="app"> <!-- cmp. comXSLT.xsl line 450-456 -->
+              <span class="redaMore" onclick="$(this).next().slideToggle('slow')">
+                Læs mere</span>
+              <!-- not to be displayed in myth base -->
+              <!-- @onclick is bound statically here as this popUp-text is not generated when $(".plus")...click() is called from newReader.js (line 27) -->
+              <div class="appInvisible">
+                <!-- to become displayed in pop-up -->
+                <xsl:if test="TEI:cell[@rend='encyc']">
+                    <xsl:for-each select="TEI:cell[@rend='encyc']">
+                        <div>
+                            <xsl:value-of select="."/>
+                        </div>
                     </xsl:for-each>
-                    <xsl:text>.</xsl:text>
-                </div>
-            </xsl:if>
-            <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
-                <div>
+                </xsl:if>
+                <xsl:call-template name="orthography"/>
+                <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
+                  <div>
                     <i>
-                        <xsl:text>Latinsk form: </xsl:text>
+                      <xsl:text>Latinsk form: </xsl:text>
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
-                        <span>
-                            <xsl:value-of select="./TEI:cell[@rend='saxo']"/>
-                            <xsl:call-template name="delimiter"/>
-                        </span>
+                      <span>
+                        <xsl:value-of select="./TEI:cell[@rend='saxo']"/>
+                        <xsl:call-template name="delimiter"/>
+                      </span>
                     </xsl:for-each>
-                </div> 
-            </xsl:if>
-            <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
-                <div>
+                  </div>
+                </xsl:if>
+                <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
+                  <div>
                     <i>
-                        <xsl:text>Kaldes også: </xsl:text>
+                      <xsl:text>Kaldes også: </xsl:text>
                     </i>
                     <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
-                        <span>
-                            <xsl:value-of select="./TEI:cell[@rend='epithet']"/>
-                            <xsl:call-template name="delimiter"/>
-                        </span>
+                      <span>
+                        <xsl:value-of select="./TEI:cell[@rend='epithet']"/>
+                        <xsl:call-template name="delimiter"/>
+                      </span>
                     </xsl:for-each>
-                </div>
-            </xsl:if>
-            <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
-                <div>
-                    <i><xsl:text>Benævnes også: </xsl:text>
+                  </div>
+                </xsl:if>
+                <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
+                  <div>
+                    <i>
+                      <xsl:text>Benævnes også: </xsl:text>
                     </i>
-                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
-                        <span>
-                            <xsl:value-of select="./TEI:cell[@rend='pseudoEpithet']"/>
-                            <xsl:call-template name="delimiter"/>
-                        </span>
+                    <xsl:for-each
+                      select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
+                      <span>
+                        <xsl:value-of select="./TEI:cell[@rend='pseudoEpithet']"/>
+                        <xsl:call-template name="delimiter"/>
+                      </span>
                     </xsl:for-each>
-                </div>
-            </xsl:if>
-            <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                <div>
-                    <i><xsl:text>I romersk mytologi: </xsl:text>
+                  </div>
+                </xsl:if>
+                <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                  <div>
+                    <i>
+                      <xsl:text>I romersk mytologi: </xsl:text>
                     </i>
-                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                        <span>
-                            <xsl:value-of select="./TEI:cell[@rend='latin']"/>
-                            <xsl:call-template name="delimiter"/>
-                        </span>
+                    <xsl:for-each
+                      select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                      <span>
+                        <xsl:value-of select="./TEI:cell[@rend='latin']"/>
+                        <xsl:call-template name="delimiter"/>
+                      </span>
                     </xsl:for-each>
-                </div> 
-            </xsl:if>
+                  </div>
+                </xsl:if>
+              </div>
+            </div>
+          </xsl:if>
+        </xsl:otherwise>
+          </xsl:choose>
         </div>
+    </xsl:template>
+    
+    <xsl:template name="orthography">
+        <xsl:if test="TEI:cell[@rend='orthography']">
+            <div>
+                <i>
+                    <xsl:text>Staves også: </xsl:text>
+                </i>
+                <xsl:for-each select="TEI:cell[@rend='orthography']">
+                    <xsl:apply-templates select="."/>
+                </xsl:for-each>
+                <xsl:text>.</xsl:text>
+            </div>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='orthography']">
