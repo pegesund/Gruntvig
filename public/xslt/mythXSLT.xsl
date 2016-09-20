@@ -39,13 +39,6 @@
               <div class="appInvisible">
                 <!-- to become displayed in pop-up -->                
                 <xsl:apply-templates select="TEI:cell[@rend='encyc']"/>
-                <!--xsl:if test="TEI:cell[@rend='encyc']">
-                    <xsl:for-each select="TEI:cell[@rend='encyc']">
-                        <div>
-                            <xsl:value-of select="."/>
-                        </div>
-                    </xsl:for-each>
-                </xsl:if-->
                 <xsl:call-template name="orthography"/>
                 <xsl:if test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
                   <div>
