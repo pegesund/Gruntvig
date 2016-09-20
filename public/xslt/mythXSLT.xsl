@@ -33,7 +33,7 @@
             <!-- if there is anything more to show -->
             <div class="app"> <!-- cmp. comXSLT.xsl line 450-456 -->
               <span class="redaMore" onclick="$(this).next().slideToggle('slow')">
-                Læs endnu mere</span>
+                Læs mere</span>
               <!-- not to be displayed in myth base -->
               <!-- @onclick is bound statically here as this popUp-text is not generated when $(".plus")...click() is called from newReader.js (line 27) -->
               <div class="appInvisible">
