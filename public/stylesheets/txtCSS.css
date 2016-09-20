@@ -1033,7 +1033,7 @@ a:active.index
 #tekst_innhold .raised
         {
         font-size: 80%;
-        vertical-align: top;
+        vertical-align: super;
         }
 
 #tekst_innhold .right
@@ -1467,7 +1467,7 @@ a:active.index
         border: 0px solid black;
         text-align: left;
         padding: 5px;
-        width: 8%;
+        width: 16%;
         }
 
 #tekst_innhold td.corrigenda55:nth-child(5)
