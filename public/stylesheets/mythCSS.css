@@ -1,5 +1,6 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
+/* KK: 2016-09-15 Introduction of read-more in pop-ups */
 
 .hideroot div.root { display:none; }
 
@@ -64,13 +65,21 @@
 .myth .popUp
         {
         margin: 0.5em 0em 0.5em 0em;
-        visibility: visible;
         }
-        
-div#cluetip-inner .myth {
-        visibility: hidden;
-}
 
+.myth .readMore, div#cluetip-inner .appInvisible
+        {
+        display: none;
+        }
+
+div#cluetip-inner .readMore, .myth .appInvisible
+        {
+        display: block;
+        }
+
+div#cluetip-inner .normForm {
+        display: none; /*the following cluetip will "always" start with the normal name form, KK 2016-09-12*/
+}
 
 .myth .orthography
         {
