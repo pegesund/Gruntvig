@@ -64,7 +64,7 @@
                         <xsl:text>, </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> &amp; H </xsl:text>
+                        <xsl:text> &amp; </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
@@ -97,7 +97,7 @@
                         <xsl:text>, </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text> &amp; H </xsl:text>
+                        <xsl:text> &amp; </xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:if>
@@ -198,6 +198,11 @@
             <xsl:text>&#x201C;</xsl:text>
             <xsl:apply-templates/>
             <xsl:text>&#x201D;</xsl:text>
+            <xsl:if test="@ident">
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="@ident"/>
+                <xsl:text>)</xsl:text>
+            </xsl:if>
         </span>
         <xsl:choose>
             <xsl:when test="following-sibling::TEI:cell[@type='translatedTitle']">
@@ -217,8 +222,6 @@
             <xsl:call-template name="delimiterKomma"/>
         </span>
     </xsl:template>
-    
-    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition' or @type='firstLine']"/>
     
     <xsl:template match="TEI:cell[@type='volume']">
         <span>
@@ -306,5 +309,7 @@
             <xsl:text>.</xsl:text>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition' or @type='firstLine']"/>
     
 </xsl:stylesheet>
