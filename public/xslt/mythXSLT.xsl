@@ -77,8 +77,7 @@
                     <i>
                       <xsl:text>Benævnes også: </xsl:text>
                     </i>
-                    <xsl:for-each
-                      select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
+                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='pseudoEpithet']]">
                       <span>
                         <xsl:value-of select="./TEI:cell[@rend='pseudoEpithet']"/>
                         <xsl:call-template name="delimiter"/>
@@ -91,8 +90,7 @@
                     <i>
                       <xsl:text>I romersk mytologi: </xsl:text>
                     </i>
-                    <xsl:for-each
-                      select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                    <xsl:for-each select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
                       <span>
                         <xsl:value-of select="./TEI:cell[@rend='latin']"/>
                         <xsl:call-template name="delimiter"/>
