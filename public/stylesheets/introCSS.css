@@ -136,7 +136,7 @@
         text-align: left;
         }
         
-.innledningContent .author
+.innledningContent .author, .translator
         {
         font-size: 14px;
         margin: 1em 0em 0em 0em;

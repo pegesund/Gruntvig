@@ -1,6 +1,6 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
-/* KK: 2016-09-15 Introduction of read-more in pop-ups */
+/* KK: 2016-09-26 Introduction of read-more in pop-ups */
 
 .hideroot div.root { display:none; }
 
@@ -23,7 +23,7 @@
 .myth a.myth:active
         {
         text-decoration: none;
-        }it 
+        }
         
 .myth .sameAs
         {
@@ -32,7 +32,7 @@
         
 .myth
         {
-        colro: black;
+        color: black;
         cursor: default;
         margin: 2em 0 2em 0;
         text-decoration: none;
@@ -67,19 +67,22 @@
         margin: 0.5em 0em 0.5em 0em;
         }
 
-.myth .readMore, div#cluetip-inner .appInvisible
+/* the read-more-plus button causes the following text to be displayed; this facility is disabled in the myth register, KK 2016-09-26 */
+
+#listeMyth .readMore
         {
         display: none;
-        }
+        } 
 
-div#cluetip-inner .readMore, .myth .appInvisible
+#listeMyth .appInvisible
         {
         display: block;
         }
 
-div#cluetip-inner .normForm {
+div#cluetip-inner .normForm
+        {
         display: none; /*the following cluetip will "always" start with the normal name form, KK 2016-09-12*/
-}
+        }
 
 .myth .orthography
         {
