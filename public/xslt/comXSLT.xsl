@@ -576,6 +576,13 @@
         </li>
     </xsl:template>
     
+    <xsl:template match="TEI:list[@type='litList']/TEI:item[not(@n)]">
+        <li class="webList">
+            <xsl:apply-templates/>
+            <xsl:text>.</xsl:text>
+        </li>
+    </xsl:template>
+    
     <xsl:template match="TEI:item[@n]">
         <li class="liOrdered">
             <a href="{@target}" target="_blank">                
