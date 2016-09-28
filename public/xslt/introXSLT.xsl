@@ -52,20 +52,24 @@
                     </xsl:for-each>
                 </div>
                 <div class="translator">
-                    <xsl:text>oversat af </xsl:text>
-                    <xsl:for-each select="//TEI:editor[@role='translator']">
-                        <xsl:value-of select="."/>
-                        <xsl:if test="following-sibling::TEI:editor[@role='translator']">
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::TEI:editor[@role='translator'][position()!=last()]">
-                                    <xsl:text>, </xsl:text>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:text> og </xsl:text>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </xsl:if>
-                    </xsl:for-each>
+                    <xsl:choose>
+                        <xsl:when test="//TEI:editor[@role='translator']">
+                            <xsl:text>oversat af </xsl:text>
+                            <xsl:for-each select="//TEI:editor[@role='translator']">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='translator']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='translator'][position()!=last()]">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:when>
+                    </xsl:choose>
                 </div>
                 </div>
                 <xsl:choose>
