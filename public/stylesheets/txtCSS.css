@@ -488,6 +488,12 @@ a.endNoteRef
         font-weight: bold;
         }
 
+#tekst_innhold .size1
+        {
+        color: red;
+        font-weight: bold;
+        }
+
 #tekst_innhold .justify
         {
         text-align: justify;
