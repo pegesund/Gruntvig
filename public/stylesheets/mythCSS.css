@@ -1,6 +1,6 @@
 /* stylesheet til myth.xml */
 /* Kim Steen Ravn, 2011.04.26 */
-/* KK: 2016-09-26 Introduction of read-more in pop-ups */
+/* KK: 2016-09-29 Introduction of read-more in pop-ups */
 
 .hideroot div.root { display:none; }
 
@@ -69,12 +69,12 @@
 
 /* the read-more-plus button causes the following text to be displayed; this facility is disabled in the myth register, KK 2016-09-26 */
 
-#listeMyth .readMore
+#liste .readMore
         {
         display: none;
         } 
 
-#listeMyth .appInvisible
+#liste .appInvisible
         {
         display: block;
         }
