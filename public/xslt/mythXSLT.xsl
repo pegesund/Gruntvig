@@ -66,7 +66,7 @@
                   test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
                   <div>
                     <i>
-                      <xsl:text>Kaldes også: </xsl:text>
+                      <xsl:text>Kaldes ogs: </xsl:text>
                     </i>
                     <xsl:for-each
                       select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='epithet']]">
