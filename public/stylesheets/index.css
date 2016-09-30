@@ -1941,14 +1941,40 @@ h1.subtitle { margin-left: 0px !important; }
 
 /* Register */
 
-/* pers.xml START  */
+/* popUp-vindue START  */
 
-.refdiv {font-size: 1.0em; line-height: 1.2em; margin: 0 0 10px 0;  }
-.refdiv b {font-family: georgia, garamond, serif; font-size: 18px; line-height: 1.2em; margin: 0 0 10px 0; }
-.refdiv i {font-size: 0.9em; line-height: 1.2em; margin: 0 0 10px 0;
-}
+.refdiv
+        {
+        font-size: 1.0em;
+        line-height: 1.2em;
+        margin: 0 0 10px 0;
+        }
+        
+.refdiv b
+        {
+        font-family: georgia, garamond, serif;
+        font-size: 18px;
+        line-height: 1.2em;
+        margin: 0 0 10px 0;
+        }
+        
+.refdiv i
+        {
+        font-size: 0.9em;
+        line-height: 1.2em;
+        margin: 0 0 10px 0;
+        }
 
-/* pers.xml END */
+/* popUp-vindue END */
+
+/* popUp title START */
+
+span.mainTitle
+        {
+        font-style:italic
+        }
+
+/* popUp title END*/
 
 
 .myth_title b {font-family: georgia, garamond, serif; font-size: 18px; line-height: 1.2em; margin: 0 0 10px 0; }
