@@ -1968,10 +1968,16 @@ h1.subtitle { margin-left: 0px !important; }
 /* popUp-vindue END */
 
 /* popUp title START */
-
+        
 span.mainTitle
         {
-        font-style:italic
+        color: black;
+        font-style: italic;
+        }
+        
+span.partTitle, span.translatedTitle
+        {
+        color: black;
         }
 
 /* popUp title END*/
