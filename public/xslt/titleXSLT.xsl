@@ -51,8 +51,26 @@
             </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='editor']">
+    <xsl:template match="TEI:cell[@type='coAuthor']">
+        <span class="coAuthor">
+            <xsl:text>[coAuthor: </xsl:text>
+            <xsl:call-template name="listAuthor">
+                <xsl:with-param name="type" select="'coAuthor'"/>
+            </xsl:call-template>
+            <xsl:text>]</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='editor'][position()=1]">
         <xsl:text>udg. </xsl:text>
+        <span class="editor">            
+            <xsl:call-template name="listAuthor">
+                <xsl:with-param name="type" select="'editor'"/>
+            </xsl:call-template>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='editor'][position()!=1]">
         <span class="editor">            
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'editor'"/>
@@ -68,7 +86,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='mainAuthor' and not(@rend='anon')]">
+    <xsl:template match="TEI:cell[@type='mainAuthor']">
         <span class="mainAuthor">
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'mainAuthor'"/>
@@ -76,22 +94,22 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='mainAuthor' and @rend='anon']">
-        <span class="mainAuthor">
-            <xsl:text>[</xsl:text>
-            <xsl:call-template name="listAuthor">
-                <xsl:with-param name="type" select="'mainAuthor'"/>
-            </xsl:call-template>
-            <xsl:text>]</xsl:text>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@type='translator']">
+    <xsl:template match="TEI:cell[@type='translator'][position()=1]">
         <xsl:text>overs. </xsl:text>
+        <span class="translator">
+            <xsl:call-template name="listAuthor">
+                <xsl:with-param name="type" select="'translator'"/>
+            </xsl:call-template>
+            <xsl:text>.</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='translator'][position()!=1]">
         <span class="translator">            
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'translator'"/>
             </xsl:call-template>
+            <xsl:text>.</xsl:text>
         </span>
     </xsl:template>
     
@@ -103,20 +121,61 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='coAuthor']">
-        <span class="coAuthor">
-            <xsl:text>[coAuthor: </xsl:text>
-            <xsl:call-template name="listAuthor">
-                <xsl:with-param name="type" select="'coAuthor'"/>
-            </xsl:call-template>
-            <xsl:text>]</xsl:text>
+    <xsl:template match="TEI:cell[@type='mainTitle']">
+        <span class="mainTitle">
+            <xsl:apply-templates/>
+            <xsl:call-template name="mainTitle"/>
+            <xsl:call-template name="traditionalTitle"/>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='mainTitle']">
-        <span class="mainTitle">
-            <i><xsl:apply-templates/></i>
-            <xsl:call-template name="delimiterPunktum"/>
+    <xsl:template match="TEI:cell[@type='translatedTitle']">
+        <span class="translatedTitle">
+            <xsl:text>(da. </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>).</xsl:text>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='manuscript']">
+        <span class="manuscript">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template name="mainTitle">
+        <xsl:choose>
+            <xsl:when test="following-sibling::TEI:cell[@type='numberOfVolumes']">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='traditionalTitle']">
+                <xsl:text> </xsl:text>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='pubPlace']">
+                <xsl:text>. </xsl:text>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="traditionalTitle">
+        <xsl:if test="following-sibling::TEI:cell[@type='traditionalTitle']">
+            <span style="font-style: normal">
+                <xsl:text>(</xsl:text>
+                <xsl:value-of select="following-sibling::TEI:cell[@type='traditionalTitle']/@rend"/>
+            </span>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="following-sibling::TEI:cell[@type='traditionalTitle']"/>
+            <span style="font-style: normal">
+                <xsl:text>)</xsl:text>
+            </span>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='volume']">
+        <span>
+            <xsl:text>bind </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>:</xsl:text>
         </span>
     </xsl:template>
     
@@ -134,17 +193,25 @@
             </xsl:choose>
             <xsl:text> i </xsl:text>
             <span class="mainTitle">
-                <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle' or @type='partTitle']"/>
+                <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
                 <xsl:call-template name="delimiterPunktum"/>
+            </span>
+            <span class="partTitle">
+                <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='partTitle']"/>
+                <xsl:call-template name="delimiterPunktum"/>
+            </span>
+            <span class="translatedTitle">
+                <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='translatedTitle']"/>
+                <xsl:text>.</xsl:text>
             </span>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='volume']">
+    <xsl:template match="TEI:cell[@type='numberOfVolumes']">
         <span>
             <xsl:text>bind </xsl:text>
             <xsl:apply-templates/>
-            <xsl:text>:</xsl:text>
+            <xsl:text>, </xsl:text>
         </span>
     </xsl:template>
     
@@ -166,14 +233,6 @@
         <span>
             <xsl:apply-templates/>
             <xsl:call-template name="delimiterKomma"/>
-        </span>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@type='numberOfVolumes']">
-        <span>
-            <xsl:text>bind </xsl:text>
-            <xsl:apply-templates/>
-            <xsl:call-template name="delimiterPunktum"/>
         </span>
     </xsl:template>
     
@@ -267,6 +326,4 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='translatedTitle' or @type='condition' or @type='firstLine']"/>
-    
-</xsl:stylesheet>
+    <xsl:template match="TEI:cell[@type='shelf' or @type='box' or @type='owner' or @type='fax' or @type='shortForm' or @type='provenance' or @type='condition' or @type='firstLine' or @type='traditionalTitle']"/>
