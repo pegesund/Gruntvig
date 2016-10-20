@@ -31,11 +31,11 @@
                     </div>
                     <ul>
                         <xsl:for-each select="TEI:item">
-                            <a href="{@corresp}" target="_blank" class="reg">
+                            <!--a href="{@corresp}" target="_blank" class="reg"-->
                                 <li class="simple">
                                     <xsl:apply-templates/>
                                 </li>
-                            </a>
+                            <!--/a-->
                         </xsl:for-each>
                     </ul>
                 </xsl:for-each>
