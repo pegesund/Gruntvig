@@ -1759,7 +1759,7 @@
         </tr>
     </xsl:template>
     
-    <!--xsl:template match="TEI:table[@type='synopsis']">
+    <xsl:template match="TEI:table[@type='synopsis']">
         <table class="synopsis">
             <xsl:apply-templates/>
         </table>
@@ -1789,7 +1789,7 @@
                 </td>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template-->
+    </xsl:template>
     
     <xsl:template match="TEI:table[@type='subscription']/TEI:row">
         <tr class="subscription">
