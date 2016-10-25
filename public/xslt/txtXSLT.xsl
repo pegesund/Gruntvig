@@ -872,7 +872,7 @@
                 </span>
             </xsl:when>
             <xsl:when test="@select='no' or @select='disc'">
-                <xsl:value-of select="TEI:rdg/text()"/>
+                <xsl:value-of select="TEI:rdg"/>
             </xsl:when>
         </xsl:choose>
         
