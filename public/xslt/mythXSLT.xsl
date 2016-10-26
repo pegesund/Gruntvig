@@ -27,8 +27,8 @@
             test="TEI:cell[@rend='encyc' or @rend='orthography'] or //TEI:row[@sameAs=current()/@xml:id] or not(TEI:cell[@rend='normForm'])">
             <!-- if there is anything more to show -->
             <div class="app"> <!-- cmp. comXSLT.xsl line 450-456 -->
-              <span class="readMore" onclick="$(this).next().slideToggle('slow')">
-                Læs mere</span>
+              <a class="readMore" onclick="$(this).next().slideToggle('slow')">
+                Læs mere</a>
               <!-- not to be displayed in myth base -->
               <!-- @onclick is bound statically here as this popUp-text is not generated when $(".plus")...click() is called from newReader.js (line 27) -->
               <div class="appInvisible">
