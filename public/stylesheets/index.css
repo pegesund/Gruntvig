@@ -146,7 +146,8 @@ a:link, a:visited
         
 a:hover, a:active 
         {
-        color: #299629 /* #367092;*/
+        color: #299629; /* #367092;*/
+        cursor: pointer;
         }
 
 td, td.shortForm
