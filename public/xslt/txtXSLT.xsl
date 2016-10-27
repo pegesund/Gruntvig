@@ -952,7 +952,7 @@
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
                     <xsl:for-each select="ancestor::TEI:div">
-                        <xsl:text>&#x2003;</xsl:text>
+                        <xsl:text> &#x2003;</xsl:text>
                     </xsl:for-each>
                     <xsl:value-of select="@type"/>
                 </xsl:attribute> 
