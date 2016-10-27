@@ -531,11 +531,11 @@
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
-            <xsl:when test="@type='web'">
+            <!--xsl:when test="@type='web'">
                 <a href="{@target}" target="_blank">
                     <xsl:apply-templates/>
                 </a>
-            </xsl:when>
+            </xsl:when-->
             <xsl:when test="@type='image'">
                 <a href="img/{$newTarget}">
                     <xsl:apply-templates/>
@@ -600,6 +600,21 @@
                 </a>       
             </xsl:when>
         </xsl:choose>   
+    </xsl:template>
+    
+    <xsl:template match="TEI:ref[@type='web']">
+        <xsl:choose>
+            <xsl:when test="contains(@target, 'pubpub')">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="{@target}" target="_blank">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>
