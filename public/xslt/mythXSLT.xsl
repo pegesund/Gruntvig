@@ -14,7 +14,7 @@
     <xsl:template match="TEI:TEI">
         <div>
             <xsl:apply-templates select="//TEI:row">
-                <xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epithet'], TEI:cell[@rend='latin'], TEI:cell[@rend='pseudoEpithet']), 'æøåÆØÅ', '{|}{|}')"/>
+                <xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epithet'], TEI:cell[@rend='latin'], TEI:cell[@rend='greek'], TEI:cell[@rend='pseudoEpithet']), 'æøåÆØÅ', '{|}{|}')"/>
             </xsl:apply-templates>
         </div>
     </xsl:template>
@@ -92,21 +92,36 @@
                     </xsl:for-each>
                   </div>
                 </xsl:if>
-                <xsl:if
-                  test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                  <div>
-                    <i>
-                      <xsl:text>I romersk mytologi: </xsl:text>
-                    </i>
-                    <xsl:for-each
-                      select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
-                      <span>
-                        <xsl:value-of select="./TEI:cell[@rend='latin']"/>
-                        <xsl:call-template name="delimiter"/>
-                      </span>
-                    </xsl:for-each>
-                  </div>
-                </xsl:if>
+                    <xsl:if
+                        test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                        <div>
+                            <i>
+                                <xsl:text>I romersk mytologi: </xsl:text>
+                            </i>
+                            <xsl:for-each
+                                select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='latin']]">
+                                <span>
+                                    <xsl:value-of select="./TEI:cell[@rend='latin']"/>
+                                    <xsl:call-template name="delimiter"/>
+                                </span>
+                            </xsl:for-each>
+                        </div>
+                    </xsl:if>
+                    <xsl:if
+                        test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='greek']]">
+                        <div>
+                            <i>
+                                <xsl:text>I græsk mytologi: </xsl:text>
+                            </i>
+                            <xsl:for-each
+                                select="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='greek']]">
+                                <span>
+                                    <xsl:value-of select="./TEI:cell[@rend='greek']"/>
+                                    <xsl:call-template name="delimiter"/>
+                                </span>
+                            </xsl:for-each>
+                        </div>
+                    </xsl:if>
                 </xsl:otherwise>
               </xsl:choose>
               </div>
@@ -157,12 +172,12 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='pseudoEpithet' or @rend='saxo']"> <!-- referencepost -->
+    <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='greek' or @rend='pseudoEpithet' or @rend='saxo']"> <!-- referencepost -->
         <div class="{@rend} popUp">
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <xsl:if test="@rend='latin' or @rend='saxo'">
+                <xsl:if test="@rend='latin' or @rend='greek' or @rend='saxo'">
                     <xsl:text>, latinsk navn for </xsl:text>
                 </xsl:if>   
                 <xsl:if test="@rend='epithet' or @rend='pseudoEpithet'">
@@ -224,7 +239,7 @@
         <xsl:if test="following-sibling::TEI:cell[@rend='orthography'][position()=last()]">
             <xsl:text>.</xsl:text>
         </xsl:if>
-        <xsl:if test="TEI:cell[@rend='latin' or @rend='saxo'][position()=last()]">
+        <xsl:if test="TEI:cell[@rend='latin' or @rend='greek' or @rend='saxo'][position()=last()]">
             <xsl:text>.</xsl:text>
         </xsl:if>
     </xsl:template>
