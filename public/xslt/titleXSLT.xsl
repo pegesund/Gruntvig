@@ -138,9 +138,9 @@
         <span class="mainTitle">
             <xsl:apply-templates/>
             <xsl:call-template name="mainTitle"/>
-            <xsl:if test="following-sibling::TEI:cell[@type='shortForm'][position()=last()]">
+            <!--xsl:if test="following-sibling::TEI:cell[@type='shortForm'][position()=last()]">
                 <xsl:text>.</xsl:text>
-            </xsl:if>
+            </xsl:if-->
         </span>
         <xsl:if test="@ident">
             <xsl:text> (</xsl:text>
@@ -177,12 +177,21 @@
             <xsl:when test="following-sibling::TEI:cell[@type='numberOfVolumes' or @type='volume']">
                 <xsl:text>, </xsl:text>
             </xsl:when>
-            <xsl:when test="following-sibling::TEI:cell[@type='traditionalTitle']">
+            <xsl:when test="following-sibling::TEI:cell[@rend]">
+                <xsl:text> </xsl:text>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='pubYear']">
                 <xsl:text> </xsl:text>
             </xsl:when>
             <xsl:when test="following-sibling::TEI:cell[@type='pubPlace']">
                 <xsl:text>. </xsl:text>
             </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='firstLine']">
+                <xsl:text>. </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>.</xsl:text>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
@@ -259,6 +268,7 @@
             <span class="mainTitle">
                 <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='mainTitle']"/>
                 <xsl:call-template name="delimiterPunktum"/>
+                <!--xsl:call-template name="delimiterKomma"/-->
             </span>
             <span class="partTitle">
                 <xsl:value-of select="//TEI:row[@xml:id=current()/@key]//TEI:cell[@type='partTitle']"/>
@@ -409,6 +419,9 @@
             </xsl:when>
             <xsl:when test="following-sibling::TEI:cell[@rend or @type='traditionalTitle']">
                 <xsl:text>,</xsl:text>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='pubPlace']">
+                <xsl:text>.</xsl:text>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
