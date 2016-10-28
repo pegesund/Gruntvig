@@ -177,8 +177,11 @@
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
-                <xsl:if test="@rend='latin' or @rend='greek' or @rend='saxo'">
+                <xsl:if test="@rend='latin' or @rend='saxo'">
                     <xsl:text>, latinsk navn for </xsl:text>
+                </xsl:if>   
+                <xsl:if test="@rend='greek'">
+                    <xsl:text>, græsk navn for </xsl:text>
                 </xsl:if>   
                 <xsl:if test="@rend='epithet' or @rend='pseudoEpithet'">
                     <xsl:text>, andet navn for </xsl:text>
