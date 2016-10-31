@@ -147,7 +147,8 @@
             <xsl:value-of select="@ident"/>
             <xsl:text>)</xsl:text>
         </xsl:if>
-            <xsl:call-template name="traditionalTitle"/>
+        <xsl:call-template name="traditionalTitle"/>
+        <xsl:call-template name="translatedTitle"/>
         <xsl:choose>
             <xsl:when test="following-sibling::TEI:cell[@type='firstLine']">
                 <xsl:text> [første linje: </xsl:text>
@@ -203,6 +204,16 @@
             </span>
             <xsl:text> </xsl:text>
             <xsl:value-of select="following-sibling::TEI:cell[@type='traditionalTitle']"/>
+            <span style="font-style: normal">
+                <xsl:text>)</xsl:text>
+            </span>
+        </xsl:if>        
+    </xsl:template>
+    
+    <xsl:template name="translatedTitle">
+        <xsl:if test="following-sibling::TEI:cell[@type='translatedTitle']">
+                <xsl:text>(da. </xsl:text>
+            <xsl:value-of select="following-sibling::TEI:cell[@type='translatedTitle']"/>
             <span style="font-style: normal">
                 <xsl:text>)</xsl:text>
             </span>
