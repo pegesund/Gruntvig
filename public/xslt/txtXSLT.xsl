@@ -20,10 +20,52 @@
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:text>(</xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i>
-                        <xsl:text>version </xsl:text>
-                        <xsl:apply-templates select="//TEI:idno[@type='content']"/>
-                        <xsl:text>)</xsl:text>
+                        <xsl:text></xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i><xsl:text>version </xsl:text><xsl:value-of select="//TEI:idno[@type='content']"/><xsl:text></xsl:text>
+                    </div>
+                    <div class="kolofon">
+                        <xsl:choose>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='0.9'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. marts 2011</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.0'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. maj 2012</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.1'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. november 2012</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.2'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 2. maj 2013</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.3'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 24. september maj 2013</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.4'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2014</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.5'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 31. oktober 2014</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.6'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 4. maj 2015</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.7'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 30. november 2015</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.8'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 2. maj 2016</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.9'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 31. oktober 2016</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.10'">
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november2017</xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <span style="color: red">
+                                    <xsl:text>Versionsnummer for første version mangler</xsl:text>
+                                </span>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </div>
                     
                     <div class="kolofon">
