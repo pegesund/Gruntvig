@@ -27,6 +27,7 @@
                         var nodes = [];
                         $('div.person').each(function(index2) {
                             name = $(this).find('span.name').text();
+                            htmlName=  $(this).find('span.name').html();
                             // alert("Adding: " + name);
                             firstLetter = normAlfa(name.charAt(0));
                             if(firstLetter == normAlfa(value)){ 
@@ -41,7 +42,7 @@
                                     node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
                                 } else { 
                                     var id = $(this).attr("id");
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + name + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
+                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + htmlName + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
                                 }
                                 $(this).attr("id", "");
                                 nodes.push(node);
@@ -326,4 +327,3 @@
 
 	</div>
 </div>
-
