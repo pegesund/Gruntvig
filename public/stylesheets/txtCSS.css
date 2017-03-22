@@ -170,6 +170,35 @@ ul
         text-align: center;
         }*/
 
+/* proverb START  */
+
+#tekst_innhold .hangingIndentPro
+        {
+        line-height: 200%;
+        text-align: justify;
+        text-indent: -1em;
+        padding-left: 2em;
+        }
+
+#tekst_innhold table.proverb
+        {
+        font-size: inherit;
+        line-height: 200%;
+        }
+
+#tekst_innhold td.proverbNo
+        {
+        text-indent: -2.5em;
+        width: 2.5%;
+        }
+
+#tekst_innhold td.proverb
+        {
+        color: black;
+        }
+
+/* proverb END */
+
 #tekst_innhold .editionPhilologist
         {
         margin-left: 50px;
@@ -327,6 +356,17 @@ a.endNoteRef
 
 /* grapic START */
 
+#tekst_innhold .blank, #tekst_innhold .longLine, #tekst_innhold .shortLine, #tekst_innhold .cross
+        {
+        margin: 2em 0em 2em 0em;
+        }
+
+#tekst_innhold .cross
+        {
+        font-size: 150%;
+        text-align: center
+        }
+
 #tekst_innhold .asteriskDown, #tekst_innhold .asteriskUp
         {
         text-align: center;
@@ -476,6 +516,11 @@ a.endNoteRef
 #tekst_innhold .spaced
         {
         font-style: italic;
+        }
+
+#tekst_innhold .spacedSic
+        {
+        letter-spacing: 2px;
         }
 
 #tekst_innhold .lowered
@@ -1061,7 +1106,7 @@ a:active.index
 
 #tekst_innhold .raised
         {
-        font-size: 80%;
+        font-size: 70%;
         vertical-align: super;
         }
 
