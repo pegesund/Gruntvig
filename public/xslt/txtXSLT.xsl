@@ -34,10 +34,10 @@
                                 <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. november 2012</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.2'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 2. maj 2013</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2013</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.3'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 24. september maj 2013</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. oktober 2013</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.4'">
                                 <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2014</xsl:text>
@@ -49,22 +49,17 @@
                                 <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 4. maj 2015</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.7'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 30. november 2015</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. november 2015</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.8'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 2. maj 2016</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 29. april 2016</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.9'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 31. oktober 2016</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november 2016</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.10'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november2017</xsl:text>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <span style="color: red">
-                                    <xsl:text>Versionsnummer for første version mangler</xsl:text>
-                                </span>
-                            </xsl:otherwise>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2017</xsl:text>
+                            </xsl:when>                            
                         </xsl:choose>
                     </div>
                     
@@ -809,6 +804,19 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="TEI:lg[@rend='romanType']">
+        <table class="schwab">            
+            <tr valign="top">
+                <td class="lgNumber">
+                    <xsl:value-of select="@n"/>
+                </td>
+                <td class="lg">
+                    <span class="romanType"><xsl:apply-templates/></span>
+                </td>
+            </tr>
+        </table>
+    </xsl:template>
+    
     <xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
@@ -1082,6 +1090,12 @@
         </span>
     </xsl:template-->
     
+    <xsl:template match="TEI:front//TEI:hi[@rend]">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="//TEI:body[@rendition='schwab']//TEI:hi">
         <xsl:choose>
             <xsl:when test="@rend='schwab'">
@@ -1206,10 +1220,23 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:p[@rend='hangingIndent']">        
-        <div class="hangingIndent">
+    <xsl:template match="TEI:p[@rend='hangingIndentPro' and not(@n)]">        
+        <div class="hangingIndentPro">
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='hangingIndentPro' and @n]">
+        <table class="proverb">            
+            <tr valign="top">
+                <td class="proverbNo">
+                    <xsl:value-of select="@n"/>
+                </td>
+                <td class="proverb">
+                    <xsl:apply-templates/>
+                </td>
+            </tr>
+        </table>
     </xsl:template>
     
     <xsl:template match="TEI:p[(contains(@rend, 'space'))]">
@@ -1374,7 +1401,22 @@
                 <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key} (1787)">
                     <xsl:apply-templates/>
                 </a>
+            </xsl:when>            
+            <xsl:when test="@rend='referenceSeptuaginta'">
+                <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key} (Septuaginta)">
+                    <xsl:apply-templates/>
+                </a>
             </xsl:when>
+            <xsl:when test="@rend='quoteSeptuaginta'">
+                <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key} (Septuaginta)">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@rend='normFormSeptuaginta'">
+                <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key} (Septuaginta)">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>            
         </xsl:choose>
     </xsl:template>
     
@@ -1924,11 +1966,11 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-      
     
     <xsl:template match="TEI:graphic">
         <xsl:choose>
             <xsl:when test="@style='blank'">
+                <br/>
                 <br/>
             </xsl:when>
             <xsl:when test="@style='asterisk'">
@@ -1960,6 +2002,11 @@
                     <xsl:text>&#x002A;&#x2003;&#x002A;</xsl:text>
                     <br/>
                     <xsl:text>&#x002A;</xsl:text>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='cross'">
+                <div class="cross">
+                    <xsl:text>&#x271D;</xsl:text>
                 </div>
             </xsl:when>
             <xsl:when test="@style='longLine'">
@@ -2117,6 +2164,12 @@
                 </tr>
             </xsl:when>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@xml:id='corrigenda']/TEI:row/TEI:cell/TEI:hi">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <!-- corrigenda33 START -->
