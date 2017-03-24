@@ -1036,7 +1036,8 @@ html[xmlns] #nav {
 	#underside_innhold {min-height:600px;}
 	#underside_innhold .kolonne1 {float:left; width:225px; margin:5px 26px 0 0; min-height:600px;}
 	#underside_innhold .kolonne2 {float:left; width:475px;  margin:5px 26px 0 0; min-height:600px;}
-	#underside_innhold .kolonne3 {display:none; float:right; width:223px; background:#fff; margin:5px 0px 0 0; min-height:200px; border:1px solid #eee;}
+	
+        #underside_innhold .kolonne3{display:none; float:right; width:223px; background:#fff; margin:5px 0px 0 0; min-height:200px; border:1px solid #eee;}
         
 
         
@@ -1138,7 +1139,7 @@ html[xmlns] #nav {
         
 #kolonne1_meny li.header:first-child 
         {
-        margin-top:0px;
+        margin-top:100px;
         }
 
 /* kolofonboks på forsiden START */ 
