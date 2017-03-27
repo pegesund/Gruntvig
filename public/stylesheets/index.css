@@ -1139,7 +1139,7 @@ html[xmlns] #nav {
         
 #kolonne1_meny li.header:first-child 
         {
-        margin-top:100px;
+        margin-top: 0px;
         }
 
 /* kolofonboks på forsiden START */ 
