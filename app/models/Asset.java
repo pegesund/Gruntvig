@@ -363,9 +363,9 @@ public class Asset extends GenericModel {
      * Get the content of <tag attrName="attrValue"> in xml
      * 
      */
-    /* KK 2014-03-05, 2015-10-08*/
+    /* KK 2014-03-05, 2015-10-08, 2017-03-29 */
     public static String getXmlElem( String xml, String tag, String attrName, String attrValue ) {
-        Pattern p= Pattern.compile( "<" + tag + "\\s+[^>]*" + attrName + "\\s*=\\s*[\"']" + attrValue + "[\"'][^>]*>(.*)</" + tag + "\\s*>" );
+        Pattern p= Pattern.compile( "<" + tag + "\\s+[^>]*" + attrName + "\\s*=\\s*[\"']" + attrValue + "[\"'][^>]*>(.*?)</" + tag + "\\s*>", Pattern.DOTALL );
         Matcher m= p.matcher( xml );
         if( m.find() )
             return m.group(1).trim() + ( m.find(m.end()) ? " m.fl." : "" );
