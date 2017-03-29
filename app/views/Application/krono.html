@@ -5,6 +5,7 @@
   Inkl. alternativ titel, KK 2014-03-06
   KSR 2014.05.06: link fra altTitle til tekst
   KK 2015-10-06: inkl. genrer i kolonne1_meny
+  KK 2017-03-29 deltitler
 -->
 #{ extends 'main.html' /}
 #{ header /}
@@ -29,14 +30,26 @@
                 }
                 var name = $(this).find('span.name').text(),
                     altName = $(this).find('span.altName').text(),
-                    //altNameForm= altName ? '<br/>('+altName+')' : '', parenthesis
+                    partName= $(this).find('span.partName'),
                     url= $(this).find('span.url').text(),
-                    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '';
-                    url= $(this).find('span.url').text(),
-                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' +  altNameForm ;
+                    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '',
+                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' + altNameForm ;
                 nodes.push(node);
+                partName.html( partName.text() );
+                partName.find('desc').each( function() {
+                  var partUrl= url + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+                      partLabel= $(this).find('label').text(),
+                      partYear= $(this).find('date').text(),
+                      partSj= $(this).find('idno').text(),
+                      partNode= '<tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+                  nodes.push(partNode);
+                })
             });
-            //nodes = nodes.sort();
+            nodes = nodes.sort( function(a,b){
+              var aSort= a.replace( /^.*<td class="definisjon">/, '' ),
+                  bSort= b.replace( /^.*<td class="definisjon">/, '' );
+              return (aSort<bSort)?-1:1
+            }); // nodes sorted by rootname, repeat for part titles
             $(nodes).each( function(index) {
                 $('#' + value).after(nodes.pop());
             });
@@ -90,6 +103,7 @@
        <span class="name">${asset.name}</span>
        <span class="rootName">${asset.rootName}</span>
        <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+       <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "partForm" )}</span>       
      </div>
     #{/list}
   </div>

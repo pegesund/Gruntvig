@@ -3,6 +3,7 @@
   Grundtvigs værker
   KK 2015-10-06
   KK 2015-10-08: [kvalificerende tekst] skal ikke med i sortering
+  KK 2017-03-29 deltitler
 -->
 #{ extends 'main.html' /}
 #{ header /}
@@ -25,6 +26,7 @@
                 sj= splitName[1],
                 name = $(this).find('span.name').text(),
                 altName = $(this).find('span.altName').text(),
+                partName= $(this).find('span.partName'),
                 url= $(this).find('span.url').text(),
                 preHtml= '<tr class="workOnList"><td class="shortForm"><a href="' + url + '">',
                 postHtml= '</a> <div class="genKeyPopUp">Genre: ' + genresTxt.replace(/#/g,", ") + '<br/>Emneord: ' + keywordsTxt.replace(/#/g,", ") + '</div></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>',
@@ -50,6 +52,34 @@
               altCurWork.row= document.getElementById("listTail").previousElementSibling;
               works.push( altCurWork );
             }
+            //####################
+            partName.html( partName.text() );
+            partName.find('desc').each( function() {
+              var partUrl= url + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+                  partLabel= $(this).find('label').text(),
+                  partYear= $(this).find('date').text(),
+                  partSj= $(this).find('idno').text(),
+                  partGenresTxt="", partKeywordsTxt="";
+                  $(this).find('term[type="classCode"]').each( function(i,val) {
+                    partGenresTxt+= (partGenresTxt?"#":"") + $(this).text() });
+              if( !partGenresTxt ) partGenresTxt= genresTxt;
+                  $(this).find('term[type="keywords"]').each( function(i,val) {
+                    partKeywordsTxt+= (partKeywordsTxt?"#":"") + $(this).text() });
+              if( !partKeywordsTxt ) partKeywordsTxt= keywordsTxt;
+              var partPreHtml= '<tr class="workOnList"><td class="shortForm"><a href=\'' + partUrl + '\'>',
+                  partPostHtml= '</a> <div class="genKeyPopUp">Genre: ' + partGenresTxt.replace(/#/g,", ") + '<br/>Emneord: ' + partKeywordsTxt.replace(/#/g,", ") + '</div></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>',
+                  partNameForm= partPreHtml + partLabel + partPostHtml,
+                  partCurWork= {
+                    genres: "#"+partGenresTxt+"#",
+                    keywords: "#"+partKeywordsTxt+"#",
+                    genresSelected: "#",
+                    keywordsSelected: "#"+partKeywordsTxt+"#"
+                  };
+              $('#listTail').before( partNameForm );
+              partCurWork.row= document.getElementById("listTail").previousElementSibling;
+              works.push(partCurWork);
+            })
+            //####################
         });
     }
   );
@@ -426,6 +456,7 @@
        <span class="name">${asset.name}</span>
        <span class="rootName">${asset.rootName}</span>
        <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>
+       <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "partForm" )}</span>
        <span class="genre">${asset.getXmlTerms( asset.xml, "classCode" )}</span>
        <span class="keywords">${asset.getXmlTerms( asset.xml, "keywords" )}</span>
      </div>

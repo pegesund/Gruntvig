@@ -6,6 +6,7 @@
   Inkl. alternativ titel, KK 2014-03-06
   KK 2015-10-06: inkl. genrer i kolonne1_meny
   KK 2015-10-08: [kvalificerende tekst] skal ikke med i sortering
+  KK 2017-03-29 deltitler
 -->
 #{extends 'main.html' /}
 #{ header /}
@@ -25,20 +26,39 @@
                 uri= $(this).find('span.uri').text(),
                 rootName= $(this).find('span.rootName').text(),
                 altName= $(this).find('span.altName').text(),
-                splitName= rootName.split( "_" );
+                partName= $(this).find('span.partName'),
+                splitName= rootName.split( "_" ),
+                year= splitName[0],
+                sj= splitName[1];
                 var firstLetter = name.replace(/\s*\[[^\]]*\]\s*/g,"").charAt(0).toLowerCase();
                 if(firstLetter == value){ 
                     $(this).hide();
-                    node = '\<!--' + name.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+                    node = '\<!--' + name.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
                     nodes.push(node);
                 }
                 if( altName ) {
                     firstLetter = altName.charAt(0).toLowerCase();
                     if(firstLetter == value){
-                        node = '\<!--' + altName.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + altName + '</a></td><td class="definisjon">' + splitName[0] + '</td><td class="sjNummer">' + splitName[1] + '</td></tr>';
+                        node = '\<!--' + altName.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
                         nodes.push(node);
                     }                    
                 }
+                //##########################
+                //console.log(partName.text());
+                if( partName.text().indexOf("<") >= 0 )
+                  partName.html( partName.text() );
+                partName.find('desc').each( function() {
+                  var partLabel= $(this).find('label').text();
+
+                  firstLetter = partLabel.charAt(0).toLowerCase();
+                    if(firstLetter == value){
+                      var partUrl= uri + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+                          partYear= $(this).find('date').text(),
+                          partSj= $(this).find('idno').text(),
+                          partNode= '\<!--' + partLabel.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+                      nodes.push(partNode);
+                    }
+                })
             });
             nodes = nodes.sort().reverse();
             $(nodes).each( function(index, value2) {
@@ -70,7 +90,7 @@
                 <li class="header">Værker</li>
                 <li><a href="/krono">Kronologisk</a></li>
                 <li><a class="selected" href="/alfa">Alfabetisk</a></li>
-                <li class="last"><a class="selected" href="/genre">Genrer</a></li>
+                <li class="last"><a href="/genre">Genrer</a></li>
             </ul>
         </div>
         
@@ -121,7 +141,8 @@
                         <span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
                         <span class="name">${asset.name}</span>
                         <span class="rootName">${asset.rootName}</span>
-                        <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+                        <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>
+                        <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "partForm" )}</span>
                     </div>
                     #{/list}
                 </div>
