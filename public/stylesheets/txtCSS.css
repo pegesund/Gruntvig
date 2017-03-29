@@ -278,6 +278,12 @@ ul
         margin-right: 4em;
         text-align: right;
         }
+        
+#tekst_innhold div.thirdIndentRight
+        {        
+        margin-right: 8em;
+        text-align: right;
+        }
 
 /* indent p END */
         
