@@ -15,6 +15,12 @@ ul
 
 
 
+#tekst_innhold li.bogstaver
+        {
+        list-style-type: none;
+        }
+
+
 #tekst_innhold li.decimal
         {
         list-style-type: decimal;
