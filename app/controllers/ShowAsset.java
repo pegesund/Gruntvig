@@ -35,7 +35,7 @@ public class ShowAsset extends Application {
     }
 
     public static void biblio(String fileName) {
-        Asset asset = Asset.find("fileName = ?", fileName).first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (asset != null) {
             render(asset);
         } else ShowAsset.renderHtml("Filen er ikke funnet - den er antagelig ikke ferdigbehandlet!");        
@@ -47,7 +47,7 @@ public class ShowAsset extends Application {
      * 
      */
     public static void findAsset(String fileName) {
-        Asset asset = Asset.find("fileName = ?", fileName).first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (asset != null) {
             Asset rootAsset = Asset.findById(asset.getCorrespondingRootId());
             System.out.println("Showing asset: " + rootAsset.id);
@@ -70,38 +70,38 @@ public class ShowAsset extends Application {
     }
 
     public static void placevisning() {
-        Asset asset = Asset.find("fileName = ?", "place.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "place.xml").first();
         render(asset);
     }
 
     public static void chronovisning() {
-        Asset asset = Asset.find("fileName = ?", "chrono.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "chrono.xml").first();
         render(asset);
     }
 
     public static void personvisning() {
-        Asset asset = Asset.find("fileName = ?", "pers.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "pers.xml").first();
         render(asset);
     }
 
     public static void mythvisning() {
-        Asset asset = Asset.find("fileName = ?", "myth.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "myth.xml").first();
         render(asset);
     }
     
     public static void biblevisning() {
-        Asset asset = Asset.find("fileName = ?", "bible.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "bible.xml").first();
         render(asset);
     }
 
     public static void registrantenvisning() {
-        Asset asset = Asset.find("fileName = ?", "regList.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "regList.xml").first();
         render(asset);
     }
 
     
     public static void bookinventoryvisning() {
-        Asset asset = Asset.find("fileName = ?", "bookInventory1805.xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "bookInventory1805.xml").first();
         render(asset);
     }
 

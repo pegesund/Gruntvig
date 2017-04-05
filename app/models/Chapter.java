@@ -25,6 +25,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
+import org.hibernate.annotations.Type;
 import play.db.jpa.JPABase;
 
 /**
@@ -43,10 +44,13 @@ public class Chapter extends GenericModel {
     @GeneratedValue(generator = "chapter_id_seq_gen")
     public long id;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String name;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String html;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String htmlAsText;
     @Required
     @ManyToOne

@@ -114,12 +114,23 @@ public class DoSearch extends Application {
                         chapters.add(c);
                     } else {                   
                         Asset asset = Asset.findById(id);
-                        if (grundtvig != null && (asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType))) {
+                        /*if (grundtvig != null && (asset.type.equals(Asset.variantType) || asset.type.equals(Asset.manusType))) {
                             renderGrundtvigAssets.add(asset);
                         } else
                         if (kommentar != null && (asset.type.equals(Asset.introType) || asset.type.equals(Asset.txrType) || asset.type.equals(Asset.commentType) || asset.type.equals(Asset.veiledningType))) {
                             renderCommentAssets.add(asset);
-                        }                        
+                        }*/
+			if (grundtvig != null && (Asset.variantType.equals(asset.type) || Asset.manusType.equals(asset.type))) {
+                            renderGrundtvigAssets.add(asset);
+                        } else
+                        if (kommentar != null && (
+                                Asset.introType.equals(asset.type) || 
+                                Asset.txrType.equals(asset.type) || 
+                                Asset.commentType.equals(asset.type) || 
+                                Asset.veiledningType.equals(asset.type))) {
+                            renderCommentAssets.add(asset);
+                        }
+                        
                     }
                 }
             } catch (Exception e) {

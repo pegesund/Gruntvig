@@ -27,6 +27,7 @@ import net.sf.saxon.s9api.XsltExecutable;
 import net.sf.saxon.s9api.XsltTransformer;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
+import org.hibernate.annotations.Type;
 import play.db.jpa.JPABase;
 
 /**
@@ -44,20 +45,26 @@ import play.db.jpa.JPABase;
 public class Asset extends GenericModel {
 
     @Id
-    @SequenceGenerator(name = "asset_id_seq_gen", sequenceName = "asset_id_seq")
     @GeneratedValue(generator = "asset_id_seq_gen")
+    @SequenceGenerator(name = "asset_id_seq_gen", sequenceName = "asset_id_seq")
     public long id;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String xml;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String html;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String htmlAsText;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String comment;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String name;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String fileName;
     public int variant;
     public int pictureNumber = 0;
@@ -65,10 +72,13 @@ public class Asset extends GenericModel {
     @Temporal(TemporalType.TIMESTAMP)
     public java.util.Date importDate;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String rootName;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String type;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String refs;
     
     /* no enum-support in db, unfornately */
@@ -211,7 +221,7 @@ public class Asset extends GenericModel {
         Long res = null;
         System.out.println("Getting root for: " + this.fileName);
         try {
-            Asset root = Asset.find("rootName = ? and type = ?", rootName, Asset.rootType).first();
+            Asset root = Asset.find("rootName = :rootName and type = :type").setParameter("rootName", rootName).setParameter("type", Asset.rootType).first();
             res = root.id;
         } catch(Exception e) {
             System.err.println("Could not find root-class of file: " + this.fileName);
@@ -237,7 +247,7 @@ public class Asset extends GenericModel {
         }
 
         System.out.println("Looking for intro rootname: " + rN);
-        Asset intro = Asset.find("rootName = ? and type = ?", rN, Asset.introType).first();
+        Asset intro = Asset.find("rootName = :rootName and type = :type").setParameter("rootName", rN).setParameter("type", Asset.introType).first();
         return (intro != null ? intro.html : "");
     }
 
@@ -247,7 +257,7 @@ public class Asset extends GenericModel {
      * 
      */
     public String getCorrespondingTxr() {
-        Asset txr = Asset.find("rootName = ? and type = ?", rootName, Asset.txrType).first();
+        Asset txr = Asset.find("rootName = :rootName and type = :type").setParameter("rootName", rootName).setParameter("type", Asset.txrType).first();
         System.out.println("Txr is: " + txr);
         return (txr != null ? txr.html : "");
     }
@@ -259,7 +269,7 @@ public class Asset extends GenericModel {
      * 
      */
     public String getCorrespondingComment() {
-        Asset comment = Asset.find("fileName = ? and type = ?", rootName + "_com.xml", Asset.commentType).first();
+        Asset comment = Asset.find("fileName = :fileName and type = :type").setParameter("fileName", rootName + "_com.xml").setParameter("type", Asset.commentType).first();
         // System.out.println("Corresponding comment: " + intro.html);
         return (comment != null ? comment.html : "");
     }
@@ -330,8 +340,8 @@ public class Asset extends GenericModel {
         String fileName = file.getName();
         fileName = fileName.replaceFirst("_fax", "_").replaceFirst("_0+", "_");
         Asset asset;
-        if (Asset.find("fileName = ?", fileName).first() != null) {
-            asset = Asset.find("fileName = ?", fileName).first();
+        if (Asset.find("fileName = :fileName").setParameter("fileName", fileName).first() != null) {
+            asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
             asset.comment = comment;
             asset.name = name;
             asset.type = Asset.imageType;
@@ -743,7 +753,7 @@ public class Asset extends GenericModel {
     
     public int getNumberOfPictures() {
         System.out.println("**** Looking for rootName: " + rootName);
-        return Asset.find("rootName = ? and type = ?", rootName, Asset.imageType).fetch().size();
+        return Asset.find("rootName = :rootName and type = :type").setParameter("rootName", rootName).setParameter("type", Asset.imageType).fetch().size();
     }
 
     public String getFileNameWithoutXml() {

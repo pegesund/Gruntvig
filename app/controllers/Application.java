@@ -1,16 +1,12 @@
 package controllers;
 
 import helpers.Helpers;
-import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import models.Asset;
 import models.Chapter;
 import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.common.SolrInputDocument;
 import play.mvc.*;
 
@@ -28,12 +24,12 @@ public class Application extends Controller {
     @Before
     static void addAssetToTemplate() {
         try {
-            renderArgs.put("assets", Asset.find("type = ? order by name", "root").fetch());
-            List<Asset> sillySortedAssets = Asset.find("type = ? order by name", "root").fetch();
+            renderArgs.put("assets", Asset.find("type = :type order by name").setParameter("type", "root").fetch());
+            List<Asset> sillySortedAssets = Asset.find("type = :type order by name").setParameter("type", "root").fetch();
             Collections.sort(sillySortedAssets, new SillyComparator());
             renderArgs.put("sortedAssets", sillySortedAssets);            
         } catch (Exception e) {
-            renderArgs.put("sortedAssets", Asset.find("type = ? order by name", "root").fetch());
+            renderArgs.put("sortedAssets", Asset.find("type = :type order by name").setParameter("type", "root").fetch());
             System.out.println("Probably empty db or filenames without year, assets not sorted");
         }
     }
@@ -73,12 +69,12 @@ public class Application extends Controller {
     }
 
     public static void kort() {
-        Asset asset = Asset.find("fileName = ?", "map_vej.xml").first();
+        Asset asset = Asset.find("fileName = :file").setParameter("file", "map_vej.xml").first();
         render(asset);
     }
 
     public static void viskort(String fileName) {
-        Asset asset = Asset.find("fileName = ?", fileName).first();
+        Asset asset = Asset.find("fileName = :file").setParameter("file", fileName).first();
         render(asset);
     }
 

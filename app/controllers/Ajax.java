@@ -4,11 +4,9 @@
  */
 package controllers;
 
-import java.util.List;
 import models.Asset;
 import models.Chapter;
 import models.TextReference;
-import play.db.jpa.GenericModel;
 import play.mvc.Controller;
 
 /**
@@ -29,14 +27,14 @@ public class Ajax extends Application {
     }
 
     public static void getVariantByName(String fileName) {
-        Asset variant = Asset.find("fileName = ?", fileName).first();
+        Asset variant = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (variant == null) Controller.renderHtml("");
         Controller.renderHtml(variant.html);
     }
 
     public static void getManusByName(String fileName) {
         if (fileName == null) return;
-        Asset manus = Asset.find("fileName = ?", fileName).first();
+        Asset manus = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (manus == null) renderHtml("");
         Controller.renderHtml(manus.html);
     }
@@ -59,7 +57,7 @@ public class Ajax extends Application {
             content = Application.params.get("content");
         } else 
         {
-           TextReference ref = TextReference.find("textId = ?", textId).first();
+           TextReference ref = TextReference.find("textId = :textId").setParameter("textId", textId).first();
            if (ref != null) content = ref.showName;
         }
         Controller.renderHtml(content);
@@ -67,12 +65,12 @@ public class Ajax extends Application {
 
 
     public static void getIntro(long id) {
-        Asset asset = Asset.find("id = ?", id).first();
+        Asset asset = Asset.find("id = :id").setParameter("id", id).first();
         Controller.renderHtml(asset.getCorrespondingIntro());
     }
 
     public static void getComment(long id) {
-        Asset asset = Asset.find("id = ?", id).first();        
+        Asset asset = Asset.find("id = :id").setParameter("id", id).first();        
         Controller.renderHtml(asset.getCorrespondingComment());
     }
 
@@ -84,7 +82,7 @@ public class Ajax extends Application {
     }    
     
     public static void getVeiledning(String fileName) {
-        Asset asset = Asset.find("fileName = ?", fileName + ".xml").first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName + ".xml").first();
         if (asset == null) {
             Controller.renderHtml("");
         } else {
@@ -100,9 +98,9 @@ public class Ajax extends Application {
     
     public static void getNameFromFilename(String fileName) {
         String res = "Fra: " + fileName;
-        Asset asset = Asset.find("fileName = ?", fileName).first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (asset != null) {
-           Asset root = Asset.find("fileName = ?", asset.rootName + "_txt.xml").first();
+           Asset root = Asset.find("fileName = :fileName").setParameter("fileName", asset.rootName + "_txt.xml").first();
            if (root != null) res = "Fra: " + root.name;
         }         
         Controller.renderHtml(res);
@@ -110,7 +108,7 @@ public class Ajax extends Application {
     
     public static void getIdFromFilename(String fileName) {
         String res = "Not found";
-        Asset asset = Asset.find("fileName = ?", fileName).first();
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", fileName).first();
         if (asset != null) {
             res = Long.toString(asset.id);
         }

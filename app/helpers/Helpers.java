@@ -93,7 +93,7 @@ public class Helpers {
                     String ref = n.getAttributes().getNamedItem("type").getNodeValue();
                     if (!ref.equals("com")) {
                         String id = fileName.replaceFirst(".xml", "_") + ref;
-                        TextReference comment = TextReference.find("textId = ? and type = ?", id, Asset.commentType).first();
+                        TextReference comment = TextReference.find("textId = :textId and type = :type").setParameter("textId", id).setParameter("type", Asset.commentType).first();
                         System.out.println("id: " + id + " comment: " + comment.showName);
                         if (comment != null) {
                             refs.append(comment.showName);

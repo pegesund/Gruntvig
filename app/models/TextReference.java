@@ -5,18 +5,15 @@
 package models;
 
 import helpers.Helpers;
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.InputStream;
 import java.util.List;
 import javax.persistence.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
-import net.sf.saxon.lib.NamespaceConstant;
+import org.hibernate.annotations.Type;
 import play.db.jpa.GenericModel;
 
 import org.w3c.dom.Document;
@@ -36,13 +33,17 @@ public class TextReference extends GenericModel {
     @GeneratedValue(generator = "reference_id_seq_gen")
     public long id;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String textId;
     public long alternativTo;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String showName;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String type;
     @Lob
+    @Type(type = "org.hibernate.type.TextType")
     public String fileName;
 
     public TextReference(String textId, long alternativeTo, String showName, String type) {
