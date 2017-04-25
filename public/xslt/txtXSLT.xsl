@@ -72,7 +72,7 @@
                                             <td class="sigel">
                                                 <xsl:choose>
                                                     <xsl:when test="@xml:id='DU'">
-                                                        <xsl:text>D&amp;U</xsl:text>
+                                                        <xsl:text>D&amp;U,</xsl:text>
                                                     </xsl:when>
                                                     <xsl:otherwise>
                                                         <xsl:value-of select="@xml:id"/>
