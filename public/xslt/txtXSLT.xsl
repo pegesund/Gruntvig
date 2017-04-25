@@ -93,6 +93,18 @@
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text> 
                                                     </xsl:when>
+                                                    <xsl:when test="starts-with(a,a)">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:apply-templates select="TEI:num"/>
+                                                        </span>
+                                                        <xsl:text> (SJ: </xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text> 
+                                                    </xsl:when>
                                                     <xsl:when test="@xml:id='B'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
