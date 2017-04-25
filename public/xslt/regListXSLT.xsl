@@ -50,10 +50,4 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:g">
-        <span>
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    
 </xsl:stylesheet>
