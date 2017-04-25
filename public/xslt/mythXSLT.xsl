@@ -14,7 +14,8 @@
     <xsl:template match="TEI:TEI">
         <div>
             <xsl:apply-templates select="//TEI:row">
-                <xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epithet'], TEI:cell[@rend='latin'], TEI:cell[@rend='greek'], TEI:cell[@rend='pseudoEpithet']), 'æøåÆØÅ', '{|}{|}')"/>
+                <xsl:sort lang="da"/>
+                    <!--xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epithet'], TEI:cell[@rend='latin'], TEI:cell[@rend='greek'], TEI:cell[@rend='pseudoEpithet']), 'æøåÆØÅ', '{|}{|}')"/-->
             </xsl:apply-templates>
         </div>
     </xsl:template>

@@ -31,7 +31,8 @@
     <xsl:template match="TEI:table">
         <div class="table">
             <xsl:apply-templates select="TEI:row[@n]/TEI:cell[@rend='name' or @rend='altNameDia' or @rend='altNameSyn']">
-                <xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/>
+                <xsl:sort lang="da"/>
+                <!--xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/-->
             </xsl:apply-templates>
         </div>
     </xsl:template>
