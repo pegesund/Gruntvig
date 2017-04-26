@@ -36,7 +36,7 @@
                                 if( year == ', ') { year = '';};
                                 var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
-                                about = $(this).find('.row span.encyk').text();
+                                about = $(this).find('.row span.encyk').html();
                                 if ($(this).find(".altName").length > 0) {
                                     var gotoName = $(this).find(".gotoName").html();
                                     node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + '</a></td><td>' + gotoName + '</tr>';
