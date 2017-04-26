@@ -933,12 +933,35 @@
                     </span>
                 </span>
             </xsl:when>
-            <xsl:when test="@select='no' or @select='disc'">
-                <xsl:value-of select="TEI:rdg"/>
+            <xsl:when test="@select='no' and TEI:rdg/TEI:persName">
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:value-of select="TEI:rdg/TEI:persName"/>
+                </a>
             </xsl:when>
-        </xsl:choose>
-        
+            <xsl:when test="@select='disc' and TEI:rdg/TEI:persName">
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:value-of select="TEI:rdg/TEI:persName"/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@select='no' and not(TEI:rdg/TEI:persName)">
+                <xsl:value-of select="TEI:rdg"/>                
+            </xsl:when>
+            <xsl:when test="@select='disc' and not(TEI:rdg/TEI:persName)">
+                <xsl:value-of select="TEI:rdg"/>                
+            </xsl:when>
+        </xsl:choose>        
     </xsl:template>
+    
+    <!-- 
+    
+    
+            <xsl:when test="//TEI:app[@type='corrNote' and @select='no']/TEI:rdg/TEI:persName">
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+    
+    -->
     
     <xsl:template match="TEI:rdg">
         <span class="rdg">
@@ -1345,7 +1368,7 @@
     <xsl:template name="delimiterFullStop">
         <xsl:text>.</xsl:text>
     </xsl:template>
-        
+    
     <xsl:template match="TEI:persName">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPersName']">
@@ -1607,12 +1630,24 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:rs[@type='title']">
+    <xsl:template match="TEI:rs[@type='title' or @type='titleStart' or @type='titleEnd']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noTitle']">
                 <span>
                     <xsl:apply-templates/>
                 </span>
+            </xsl:when>
+            <xsl:when test="@type='titleStart'">
+                <a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    &#x25BA;
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='titleEnd'">
+                <a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>
+                    &#x25C4;
+                </a>
             </xsl:when>
             <xsl:otherwise>
                 <a class="titleRef" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
@@ -1697,6 +1732,11 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="following-sibling::TEI:seg">
+                <td class="index21" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td class="index21{@rend}">
                     <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">                        
@@ -1740,6 +1780,11 @@
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
+                <td class="index32" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:seg">
                 <td class="index32" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
@@ -1791,6 +1836,11 @@
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
+                <td class="index33" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:seg">
                 <td class="index33" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
