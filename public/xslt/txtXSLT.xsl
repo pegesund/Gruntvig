@@ -58,7 +58,7 @@
                                 <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november 2016</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.10'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2017</xsl:text>
+                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. maj 2017</xsl:text>
                             </xsl:when>                            
                         </xsl:choose>
                     </div>
@@ -72,7 +72,7 @@
                                             <td class="sigel">
                                                 <xsl:choose>
                                                     <xsl:when test="@xml:id='DU'">
-                                                        <xsl:text>D&amp;U,</xsl:text>
+                                                        <xsl:text>D&amp;U</xsl:text>
                                                     </xsl:when>
                                                     <xsl:otherwise>
                                                         <xsl:value-of select="@xml:id"/>
@@ -1226,47 +1226,46 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:p[not(contains(@rend, 'space')) and not(@rend='hangingIndent')]">      
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[@rend='hangingIndentPro' and not(@n)]">        
-        <div class="hangingIndentPro">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[@rend='hangingIndentPro' and @n]">
-        <table class="proverb">            
-            <tr valign="top">
-                <td class="proverbNo">
-                    <xsl:value-of select="@n"/>
-                </td>
-                <td class="proverb">
-                    <xsl:apply-templates/>
-                </td>
-            </tr>
-        </table>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[(contains(@rend, 'space'))]">
-        <div class="{@rend}">
-            <xsl:apply-templates/>
-        </div>
-        <!--xsl:choose>
-            <xsl:when test="@rend='center spaceOne'">
-                <div class="centerSpaceOne">
+    <xsl:template match="TEI:p">
+        <xsl:choose>
+            <xsl:when test="TEI:p[not(contains(@rend, 'space')) and not(@rend='hangingIndent')]">     
+                <div class="{@rend}">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
-            <xsl:when test="@rend='center spaceTwo'">
-                <div class="centerSpaceOne">
+            <xsl:when test="TEI:p[@rend='hangingIndentPro' and not(@n)]">
+                <div class="hangingIndentPro">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
-        </xsl:choose-->
+            <xsl:when test="TEI:p[@rend='hangingIndentPro' and @n]">
+                <table class="proverb">            
+                    <tr valign="top">
+                        <td class="proverbNo">
+                            <xsl:value-of select="@n"/>
+                        </td>
+                        <td class="proverb">
+                            <xsl:apply-templates/>
+                        </td>
+                    </tr>
+                </table>
+            </xsl:when>
+            <xsl:when test="TEI:p[(contains(@rend, 'space'))]">
+                <div class="{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="TEI:p[@rend='hangingIndent']">
+                <div class="hangingIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]"> 
