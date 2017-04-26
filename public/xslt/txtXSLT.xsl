@@ -919,8 +919,7 @@
                         <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
                         <xsl:if test="*[@type='add' and not(@subtype)]">
                             <xsl:text> </xsl:text>
-                            <!-- kursiv fjernet fra add -->
-                            <xsl:apply-templates select="*[@type='add']"/>
+                            <i><xsl:apply-templates select="*[@type='add']"/></i>
                         </xsl:if>
                         <xsl:if test="*[@type='add' and @subtype]">
                             <xsl:text> </xsl:text>
