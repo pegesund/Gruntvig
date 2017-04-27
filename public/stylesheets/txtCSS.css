@@ -553,7 +553,7 @@ a.endNoteRef
 
 #tekst_innhold .size1
         {
-        font-weight: bold;
+        font-size: 110%;
         }
 
 #tekst_innhold .justify
