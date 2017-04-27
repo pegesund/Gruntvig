@@ -451,6 +451,54 @@ a.docIn:hover
         }
         
 /* table msDesc END */
+
+/* table internVar START */
+
+.mainTxr table.internVar, .mainTxr tr.internVar, .mainTxr td.internVar
+        {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+        }
+
+.mainTxr table.internVar
+        {
+        border: 1px solid black;
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+        empty-cells: show;
+        margin: 2em 0em 2em 1em;
+        vertical-align: top;
+        width: 27.5em;
+        }
+        
+.mainTxr table.internVar td
+        {
+        padding: 3px;
+        }
+
+.mainTxr table.internVar td:nth-child(1)
+        {
+        width:14%;
+        }
+
+.mainTxr table.internVar td:nth-child(2)
+        {
+        width: 28%;
+        }
+
+.mainTxr table.internVar td:nth-child(3)
+        {
+        width: 28%;
+        }
+
+.mainTxr table.internVar td:nth-child(4)
+        {
+        width: 28%;
+        }
+        
+/* table internVar END */
         
 /* table contentDesc START */
 
