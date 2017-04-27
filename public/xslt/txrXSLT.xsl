@@ -604,10 +604,10 @@
                                             </i>                                    
                                         </xsl:if>
                                         <xsl:if test="TEI:rdg[not(@type) and not(child::TEI:g)]">
-                                            <xsl:apply-templates select="TEI:rdg"/>
+                                            <xsl:apply-templates select="TEI:rdg[not(@type) and not(child::TEI:g)]"/>
                                         </xsl:if>
                                         <xsl:if test="TEI:rdg[not(@type) and child::TEI:g]">
-                                            <xsl:apply-templates select="TEI:rdg"/>
+                                            <xsl:apply-templates select="TEI:rdg[not(@type) and child::TEI:g]"/>
                                         </xsl:if>
                                         <xsl:if test="TEI:rdg[@type='add']">
                                             <xsl:apply-templates select="TEI:rdg[@type='add']"/>
