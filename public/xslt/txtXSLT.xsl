@@ -93,8 +93,9 @@
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text> 
                                                     </xsl:when>
-                                                    <xsl:when test="starts-with(a,a)">
-                                                        <span class="desc">
+                                                    
+                                                    <xsl:when test="starts-with(a,a) and @n">
+                                                        <span class="desc2">
                                                             <xsl:apply-templates select="TEI:desc"/>
                                                             <xsl:text>, </xsl:text>
                                                         </span>
@@ -105,6 +106,7 @@
                                                         <xsl:apply-templates select="@n"/>
                                                         <xsl:text>)</xsl:text> 
                                                     </xsl:when>
+                                                    
                                                     <xsl:when test="@xml:id='B'">
                                                         <span class="desc">
                                                             <xsl:apply-templates select="TEI:desc"/>
@@ -238,11 +240,11 @@
                                                             </xsl:if>
                                                         </xsl:for-each>
                                                     </xsl:when>
-                                                    <xsl:otherwise>
-                                                        <span style="color:red">
-                                                            <xsl:text>TEKSTKILDE MANGLER!!!</xsl:text>
+                                                    <xsl:when test="not(@xml:id) and not(@n)">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
                                                         </span>
-                                                    </xsl:otherwise>
+                                                    </xsl:when>
                                                 </xsl:choose>
                                             </td>
                                         </tr>
