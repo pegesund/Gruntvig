@@ -1344,7 +1344,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:pb[@type='epiText']">
+    <!--xsl:template match="TEI:pb[@type='epiText']">
         <span class="pb{@ed}">
             <a class="pdf"
                 href="img/{@facs}"
@@ -1355,7 +1355,7 @@
         </span>       
     </xsl:template>
         
-    <!--xsl:template match="TEI:seg/TEI:pb">
+    <xsl:template match="TEI:seg/TEI:pb">
             <span class="size">
                 <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
