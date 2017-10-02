@@ -1250,7 +1250,32 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:p">
+    <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent') and not(@rend='hangingIndentPro')]">        
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='hangingIndentPro' and not(@n)]">        
+        <div class="hangingIndentPro">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='hangingIndentPro' and @n]">
+        <table class="proverb">
+            <tr valign="top">
+                <td class="proverbNo">
+                    <xsl:value-of select="@n"/>
+                </td>
+                <td class="proverb">
+                    <xsl:apply-templates/>
+                </td>
+            </tr>
+        </table>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:p">
         <xsl:choose>
             <xsl:when test="TEI:p[not(contains(@rend, 'space')) and not(@rend='hangingIndent')]">     
                 <div class="{@rend}">
@@ -1263,7 +1288,7 @@
                 </div>
             </xsl:when>
             <xsl:when test="TEI:p[@rend='hangingIndentPro' and @n]">
-                <table class="proverb">            
+                <table class="proverb">
                     <tr valign="top">
                         <td class="proverbNo">
                             <xsl:value-of select="@n"/>
@@ -1290,7 +1315,7 @@
                 </div>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]"> 
         <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
