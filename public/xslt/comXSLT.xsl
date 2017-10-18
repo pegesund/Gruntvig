@@ -285,6 +285,16 @@
     </xsl:template>
     --> 
     
+    <xsl:template match="TEI:figure">
+        <xsl:choose>
+            <xsl:when test="@type='shortLine'">
+                <div class="head about">
+                    <hr align="center" width="8%" margin="2em 0em 0em 2em"/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template name="stripNull">
         <xsl:param name="n"/>
         <xsl:choose>
@@ -606,7 +616,9 @@
     
     
     <xsl:template name="getFileNameOfXML">      
-      <xsl:variable name="tokenized"><xsl:value-of select="tokenize(base-uri(), '/')[last()]"/></xsl:variable>
+      <xsl:variable name="tokenized">
+          <xsl:value-of select="tokenize(base-uri(), '/')[last()]"/>
+      </xsl:variable>
       <xsl:value-of select="$tokenized"/>
     </xsl:template>
     
