@@ -99,7 +99,10 @@
                 <i><xsl:apply-templates/><xsl:call-template name="delimiter"/></i>
             </xsl:when>
             <xsl:when test="@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
-                <xsl:text>[</xsl:text>Anmeldelse af<xsl:text>] </xsl:text><i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
+                <xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
+            </xsl:when>
+            <xsl:when test="@rend='main' and not(@rendition) and not(@next) and @prev='Subskriptionsindbydelse til'">
+                <xsl:text>[Subskriptionsindbydelse til] </xsl:text><i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='main' and not(@rendition) and @next and not(@prev)">
                 <i><xsl:apply-templates/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text><xsl:call-template name="delimiter"/>
@@ -112,7 +115,10 @@
                 &#x201C;<xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
-                &#x201C;<xsl:text>[</xsl:text>Anmeldelse af<xsl:text>] </xsl:text><xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
+                &#x201C;<xsl:text>[Anmeldelse af] </xsl:text><xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
+            </xsl:when>
+            <xsl:when test="@rend='part' and not(@rendition) and not(@next) and @prev='Subskriptionsindbydelse til'">
+                &#x201C;<xsl:text>[Subskriptionsindbydelse til] </xsl:text><xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='part' and not(@rendition) and @next and not(@prev)">
                 &#x201C;<xsl:apply-templates/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;<xsl:call-template name="delimiter"/>
