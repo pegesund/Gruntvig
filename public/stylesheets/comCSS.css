@@ -33,6 +33,11 @@
         font-style: italic;
         }
 
+.kommentar .size1
+        {
+        font-size: 110%;
+        }
+
 .kommentar li.liOrdered
         {
         margin: 0.25em 0em 0.25em 0em;
