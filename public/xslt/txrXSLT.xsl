@@ -87,7 +87,7 @@
                         </xsl:for-each>
                     </div>
                 </xsl:if>
-                <xsl:if test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
+                <xsl:if test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and (@prev='Anmeldelse af' or @prev='Subskriptionsindbydelse til')]">
                     <div>
                         <xsl:text>Tekstredegørelse til</xsl:text>
                     </div>
@@ -175,7 +175,7 @@
                         </xsl:for-each>
                     </div>
                 </xsl:if>
-                <xsl:if test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
+                <xsl:if test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and (@prev='Anmeldelse af' or @prev='Subskriptionsindbydelse til')]">
                     <div>
                         <xsl:text>Tekstredegørelse til</xsl:text>
                     </div>
@@ -266,6 +266,9 @@
                     <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
                         <xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
                     </xsl:when>
+                    <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Subskriptionsindbydelse til']">
+                        <xsl:text>[Subskriptionsindbydelse til] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
+                    </xsl:when>
                     <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and @next and not(@prev)]">
                         <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text>
                     </xsl:when>
@@ -278,6 +281,9 @@
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and not(@next) and @prev='Anmeldelse af']">
                         <xsl:text>&#x201C;[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+                    </xsl:when>
+                    <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and not(@next) and @prev='Subskriptionsindbydelse til']">
+                        <xsl:text>&#x201C;[Subskriptionsindbydelse til] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
                     </xsl:when>
                     <xsl:when test="//TEI:title[@rend='part' and not(@rendition='supp') and @next and not(@prev)]">
                         &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
