@@ -580,7 +580,23 @@
                     </xsl:attribute>           
                     <xsl:apply-templates/>         
                 </a>
+            </xsl:when>            
+            <xsl:when test="@type='docOut' and contains(@target, '_vej.xml')">
+                <a href="vejledning/{@target}" class="docOut">
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="@target"/>
+                    </xsl:attribute>           
+                    <xsl:apply-templates/>         
+                </a>
             </xsl:when>
+            <xsl:when test="@type='epiText'">
+                <a class="pdf"
+                    href="img/{@target}"
+                    onclick="return blank('epi',this.href)">
+                    <xsl:apply-templates/>
+                </a>       
+            </xsl:when>
+        </xsl:choose>
                 <!--
                     quick fix for docOut
                 <xsl:when test="@type='docOut' and @target='bookInventory1805.xml'">
@@ -597,15 +613,7 @@
                         <xsl:apply-templates/>         
                     </span>
                 </xsl:when>
-                -->
-            <xsl:when test="@type='epiText'">
-                <a class="pdf"
-                    href="img/{@target}"
-                    onclick="return blank('epi',this.href)">
-                    <xsl:apply-templates/>
-                </a>       
-            </xsl:when>
-        </xsl:choose>   
+                -->   
     </xsl:template>
     
     <xsl:template match="TEI:ref[@type='web']">
