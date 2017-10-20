@@ -31,7 +31,7 @@
                     </div>
                     <ul>
                         <xsl:for-each select="TEI:item">
-                            <!--a href="{@corresp}" target="_blank" class="reg"-->
+                            <!--a href="img/{@corresp}" target="_blank" class="reg" onclick="return blank('vejledning',this.href)"-->
                                 <li class="simple">
                                     <xsl:apply-templates/>
                                 </li>
