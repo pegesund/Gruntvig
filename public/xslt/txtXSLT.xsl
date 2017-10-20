@@ -2149,10 +2149,36 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:table[@type='plain']">
+        <table class="plain">
+            <xsl:apply-templates/>
+        </table>
+    </xsl:template>
+    
     <xsl:template match="TEI:table[@type='plain']/TEI:row">
         <tr class="plain">
             <xsl:apply-templates/>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='plain']//TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="plain" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="plain" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td>
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
     <xsl:template match="TEI:table[@type='synopsis']">
