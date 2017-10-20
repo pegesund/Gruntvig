@@ -1058,6 +1058,28 @@ a:active.index
         }
 
 /* table synopsis END */
+
+/* table plain START */
+
+#tekst_innhold table.plain
+        {
+        border-collapse: collapse;
+        empty-cells: show;
+        font-size: 100%;
+        margin: 2em 0em 0em 0em;
+        width: 100%;
+        }
+
+#tekst_innhold table.plain, #tekst_innhold tr.plain, #tekst_innhold td.plain
+        {
+        border-collapse: collapse;
+        border: 0px solid black;
+        text-align: left;
+        padding: 2px;
+        width: 100%;
+        }
+
+/* table plain END */
         
 #tekst_innhold div.motto
         {
