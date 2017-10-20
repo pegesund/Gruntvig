@@ -88,6 +88,16 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@type='editor'][position()=1 and position()=last()]">
+        <span class="editor">
+            <xsl:text> udg. </xsl:text>
+            <xsl:value-of select="TEI:note[@type='firstName']"/>
+            <xsl:text> </xsl:text>
+            <xsl:apply-templates select="TEI:note[@type='lastName']"/>
+            <xsl:text>.</xsl:text>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:cell[@type='editorOnly']">
         <span class="editor">
             <xsl:call-template name="listAuthor">
@@ -108,7 +118,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='translator'][position()=1]">
-        <xsl:text>overs. </xsl:text>
+        <xsl:text> overs. </xsl:text>
         <span class="translator">
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'translator'"/>
@@ -131,6 +141,7 @@
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'translatorOnly'"/>
             </xsl:call-template>
+            <xsl:text> overs. </xsl:text>
         </span>
     </xsl:template>
     
@@ -151,7 +162,7 @@
         <xsl:call-template name="translatedTitle"/>
         <xsl:choose>
             <xsl:when test="following-sibling::TEI:cell[@type='firstLine']">
-                <xsl:text> [første linje: </xsl:text>
+                <xsl:text> [</xsl:text>
                 <xsl:value-of select="following-sibling::TEI:cell[@type='firstLine']"/>
                 <xsl:text>]</xsl:text>
             </xsl:when>
@@ -184,6 +195,12 @@
             <xsl:when test="following-sibling::TEI:cell[@type='pubYear']">
                 <xsl:text> </xsl:text>
             </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='translatedTitle']">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:cell[@type='translator']">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
             <xsl:when test="following-sibling::TEI:cell[@type='pubPlace']">
                 <xsl:text>. </xsl:text>
             </xsl:when>
@@ -212,7 +229,7 @@
     
     <xsl:template name="translatedTitle">
         <xsl:if test="following-sibling::TEI:cell[@type='translatedTitle']">
-                <xsl:text>(da. </xsl:text>
+                <xsl:text> (da. </xsl:text>
             <xsl:value-of select="following-sibling::TEI:cell[@type='translatedTitle']"/>
             <span style="font-style: normal">
                 <xsl:text>)</xsl:text>
@@ -265,12 +282,12 @@
             <!-- pro END -->
             <xsl:choose>
                 <xsl:when test="following-sibling::TEI:cell[@type='firstLine']">
-                    <xsl:text> [første linje: </xsl:text>
+                    <xsl:text> [</xsl:text>
                     <xsl:value-of select="following-sibling::TEI:cell[@type='firstLine']"/>
                     <xsl:text>]</xsl:text>
                 </xsl:when>
                 <xsl:when test="following-sibling::TEI:cell[@type='translatedTitle']">
-                    <xsl:text> (da. </xsl:text>
+                    <xsl:text>2 (da. </xsl:text>
                     <xsl:value-of select="following-sibling::TEI:cell[@type='translatedTitle']"/>
                     <xsl:text>)</xsl:text>
                 </xsl:when>
@@ -432,7 +449,7 @@
                 <xsl:text>,</xsl:text>
             </xsl:when>
             <xsl:when test="following-sibling::TEI:cell[@type='pubPlace']">
-                <xsl:text>.</xsl:text>
+                <xsl:text>, </xsl:text>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
