@@ -2168,8 +2168,18 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="@cols">
+            <xsl:when test="@cols and not(@rend)">
                 <td class="plain" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols and @rend='right'">
+                <td class="plainRight" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols and @rend='center'">
+                <td class="plainCenter" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
