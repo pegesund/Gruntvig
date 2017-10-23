@@ -14,7 +14,10 @@
              }
          });
   });
-  </script>
+  
+//  .mySlides{display:none;}
+  
+</script>
 
 <div id="main">
 
@@ -72,38 +75,70 @@
 	</div>
 
 	<div class="kolonne_right">
+		
+		<!--
+		
+		<div>
+			<img class="mySlides" src="img/grundtvig4.jpg" title="Kobberstik af E. Eckersberg efter tegning af C.W. Eckersberg, 1829" style="margin-left: -0.8em">
+			<img class="mySlides" src="img/grundtvig6.jpg" title="Constantin Hansen, 1847" style="margin-left: -0.1em"/>
+			<img class="mySlides" src="img/grundtvig5.jpg" title="C.F. Christensen, 1820, Frederiksborg Museum" style="margin-left: -0.1em"/>
+		</div>
+		
+		<script>
+			var myIndex=0;
+			carousel();
+			
+			function carousel() {
+				var i;
+				var x=document.getElementsByClassName("mySlides");
+				for (i=0; i < x.length; i++) {
+					x[i].style.display="none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex=1}
+				x[myIndex-1].style.display="block";
+				setTimeout(carousel, 4000);
+			}
+		</script>
+		
+		-->
             
 		<ul id="kolonne1_meny">
 			
-			<!-- version 1.8 -->
 			<li class="header">
+				<img src="img/grundtvig7.jpg" title="Adolph Lønborg, 1872" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex7.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Udsigt over Verdens-Krøniken fornemmelig i det Lutherske Tidsrum (1817)"/>
+			</li>			
+			<!--li class="header">
 				<img src="img/grundtvig6.jpg" title="Constantin Hansen, 1847" style="margin-left: -0.1em"/>
 			</li>			
 			<li class="header">
 				<img src="img/faxIndex6.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Danske Ordsprog og Mundheld (1845)"/>
-			</li>
+			</li-->
 			<!--li class="header">
-                            <img src="img/grundtvig5.jpg" title="C.F. Christensen, 1820, Frederiksborg Museum" style="margin-left: -0.1em"/>
+				<img src="img/grundtvig5.jpg" title="C.F. Christensen, 1820, Frederiksborg Museum" style="margin-left: -0.1em"/>
 			</li>			
 			<li class="header">
 				<img src="img/faxIndex5.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Bjowulfs Drape. Et Gothisk Helte-Digt fra forrige Aar-Tusinde af Angel-Saxisk paa Danske Riim (1820)"/>
 			</li>
                         
 			<li class="header">
-                            <img src="img/grundtvig4.jpg" title="Kobberstik af E. Eckersberg efter tegning af C.W. Eckersberg, 1829" style="margin-left: -0.8em">
+			    <img src="img/grundtvig4.jpg" title="Kobberstik af E. Eckersberg efter tegning af C.W. Eckersberg, 1829" style="margin-left: -0.8em">
 			</li>			
 			<li class="header">
 				<img src="img/faxIndex4.jpg" style="margin-left: 2.1em" title="Titelbladet til N.F.S. Grundtvig: Politiske Betragtninger med Blik paa Danmark og Holsteen (1831)">
 			</li-->	
 			
 			<!-- version 1.7 
-			<li class="header"><img src="img/grundtvig3.jpg" title="Litografi efter maleri af C.A. Jensen, 1831"></li>			
-			<li class="header"><img src="img/faxIndex3.jpg" style="margin-left: 1.5em" title="Titelbladet til N.F.S. Grundtvig: Haandbog i Verdens-Historien (1833)"></li>
+			    <li class="header"><img src="img/grundtvig3.jpg" title="Litografi efter maleri af C.A. Jensen, 1831"></li>			
+			    <li class="header"><img src="img/faxIndex3.jpg" style="margin-left: 1.5em" title="Titelbladet til N.F.S. Grundtvig: Haandbog i Verdens-Historien (1833)"></li>
 			-->
 			
 			<!-- version 1.6
-			<li class="header"><img src="img/grundtvig2.jpg" title="Fotografi optaget af Ad. Lønborg i Grundtvigs hjem på Store Tuborg, den 27. august 1872"></li>			
-			<li class="header"><img src="img/faxIndex2.jpg" style="margin-left: 1.15em" title="Titelbladet til N.F.S. Grundtvig: Idunna. En Nytaarsgave for 1811"></li>
+			    <li class="header"><img src="img/grundtvig2.jpg" title="Fotografi optaget af Ad. Lønborg i Grundtvigs hjem på Store Tuborg, den 27. august 1872"></li>			
+			    <li class="header"><img src="img/faxIndex2.jpg" style="margin-left: 1.15em" title="Titelbladet til N.F.S. Grundtvig: Idunna. En Nytaarsgave for 1811"></li>
 			-->
 		</ul>
 	
