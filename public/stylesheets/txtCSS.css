@@ -1079,6 +1079,24 @@ a:active.index
         width: 100%;
         }
 
+#tekst_innhold table.plain, #tekst_innhold tr.plain, #tekst_innhold td.plainCenter
+        {
+        border-collapse: collapse;
+        border: 0px solid black;
+        text-align: center;
+        padding: 2px;
+        width: 100%;
+        }
+
+#tekst_innhold table.plain, #tekst_innhold tr.plain, #tekst_innhold td.plainRight
+        {
+        border-collapse: collapse;
+        border: 0px solid black;
+        text-align: right;
+        padding: 2px;
+        width: 100%;
+        }
+
 /* table plain END */
         
 #tekst_innhold div.motto
