@@ -619,10 +619,12 @@
                     
                     <div class="kolofon">
                         <xsl:text>XML ved Kim Steen Ravn</xsl:text>
-                    </div><div class="kolofon">
+                    </div>
+                    
+                    <div class="kolofon">
                         <xsl:variable name="contributorCom">
-                            <xsl:if test="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
-                                <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:if test="//TEI:note[@type='com']">
+                                <xsl:for-each select="document(//TEI:note[@type='com']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
                                     <xsl:apply-templates select="."/>
                                     <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
                                         <xsl:choose>
@@ -635,11 +637,13 @@
                                         </xsl:choose>
                                     </xsl:if>
                                 </xsl:for-each>
+                                <!-- OBS hvis "com" findes uden contributor, er variblen blank -->
                             </xsl:if>
+                            <!-- eller hvis der ikke findes en note af typen "com" -->
                         </xsl:variable>
                         
                         <xsl:variable name="contributorIntro">
-                            <xsl:if test="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:if test="//TEI:note[@type='intro']">
                                 <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
                                     <xsl:apply-templates select="."/>
                                     <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
@@ -657,8 +661,8 @@
                         </xsl:variable>
                         
                         <xsl:variable name="contributorTxr">
-                            <xsl:if test="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
-                                <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                            <xsl:if test="//TEI:note[@type='txr']">
+                                <xsl:for-each select="document(//TEI:note[@type='txr']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
                                     <xsl:apply-templates select="."/>
                                     <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
                                         <xsl:choose>
@@ -675,43 +679,75 @@
                         </xsl:variable>
                         
                         <xsl:choose>
-                            <xsl:when test="$contributorCom=$contributorIntro and $contributorCom=$contributorTxr">
-                                <div>
-                                    <xsl:text>Tilsyn ved punktkommentarer, indledning og tekstredegørelse </xsl:text><xsl:value-of select="$contributorCom"/>
-                                </div>
-                            </xsl:when>   
-                            <xsl:when test="$contributorCom=$contributorIntro">
-                                <div>
-                                    <xsl:text>Tilsyn ved punktkommentarer og indledning </xsl:text><xsl:value-of select="$contributorCom"/>
-                                </div>
-                            </xsl:when>                            
-                            <xsl:when test="$contributorCom=$contributorTxr">
-                                <div>
-                                    <xsl:text>Tilsyn ved punktkommentarer og tekstredegørelse </xsl:text><xsl:value-of select="$contributorCom"/>
-                                </div>
-                                <div>
-                                    <xsl:text>Tilsyn ved tekstredegørelse </xsl:text><xsl:value-of select="$contributorTxr"/>
-                                </div>
-                            </xsl:when>
-                            <xsl:when test="$contributorIntro=$contributorTxr">
-                                <div>
-                                    <xsl:text>Tilsyn ved punktkommentarer </xsl:text><xsl:value-of select="$contributorCom"/>
-                                </div>
-                                <div>
-                                    <xsl:text>Tilsyn ved indledning og tekstredegørelse </xsl:text><xsl:value-of select="$contributorIntro"/>
-                                </div>
+                            <!-- 1 AAA -->
+                            <xsl:when test="($contributorCom=$contributorIntro) and ($contributorIntro=$contributorTxr)">
+                                <xsl:if test="$contributorCom!=''">
+                                    <div>
+                                        <xsl:text>Tilsyn ved punktkommentarer, indledning og tekstredegørelse </xsl:text><xsl:value-of select="$contributorCom"/>
+                                    </div>
+                                </xsl:if>
                             </xsl:when>
                             <xsl:otherwise>
-                                <div>
-                                    <xsl:text>Tilsyn ved punktkommentarer </xsl:text><xsl:value-of select="$contributorCom"/>
-                                </div>
-                                <div>
-                                    <xsl:text>Tilsyn ved indledning </xsl:text><xsl:value-of select="$contributorIntro"/>
-                                </div>
-                                <div>
-                                    <xsl:text>Tilsyn ved tekstredegørelse </xsl:text><xsl:value-of select="$contributorTxr"/>
-                                </div>
-                            </xsl:otherwise>
+                                <xsl:choose>
+                                    <!-- 7 AAB -->
+                                    <xsl:when test="$contributorCom=$contributorIntro">
+                                        <xsl:if test="$contributorCom!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved punktkommentarer og indledning </xsl:text><xsl:value-of select="$contributorCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$contributorTxr!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved tekstredegørelse </xsl:text><xsl:value-of select="$contributorTxr"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 8 ABA -->
+                                    <xsl:when test="$contributorCom=$contributorTxr">
+                                        <xsl:if test="$contributorCom!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved punktkommentarer og tekstredegørelse </xsl:text><xsl:value-of select="$contributorCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$contributorIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved indledning </xsl:text><xsl:value-of select="$contributorIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 9 ABB -->
+                                    <xsl:when test="$contributorIntro=$contributorTxr">
+                                        <xsl:if test="$contributorCom!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved punktkommentarer </xsl:text><xsl:value-of select="$contributorCom"/>
+                                            </div>                                            
+                                        </xsl:if>
+                                        <xsl:if test="$contributorIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved indledning og tekstredegørelse </xsl:text><xsl:value-of select="$contributorIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 13 ABC -->
+                                    <xsl:otherwise>
+                                        <xsl:if test="$contributorCom!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved punktkommentarer </xsl:text><xsl:value-of select="$contributorCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$contributorIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved indledning </xsl:text><xsl:value-of select="$contributorIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$contributorTxr!=''">
+                                            <div>
+                                                <xsl:text>Tilsyn ved tekstredegørelse </xsl:text><xsl:value-of select="$contributorTxr"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:otherwise>                            
                         </xsl:choose>
                         
                     </div>
