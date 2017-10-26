@@ -63,134 +63,96 @@
                         </xsl:choose>
                     </div>
                     
-                    <div class="kolofon">                        
+                    <div class="kolofon">
+                        
                         <xsl:variable name="addCom">
-                            <xsl:value-of select="//TEI:idno[@type='addCom']"/>
+                            <xsl:if test="//TEI:idno[@type='addCom']">
+                                <xsl:value-of select="//TEI:idno[@type='addCom']"/>
+                            </xsl:if>
                         </xsl:variable>
                         <xsl:variable name="addIntro">
-                            <xsl:value-of select="//TEI:idno[@type='addIntro']"/>
+                            <xsl:if test="//TEI:idno[@type='addIntro']">
+                                <xsl:value-of select="//TEI:idno[@type='addCom']"/>
+                            </xsl:if>
                         </xsl:variable>
                         <xsl:variable name="addTxr">
-                            <xsl:value-of select="//TEI:idno[@type='addTxr']"/>
+                            <xsl:if test="//TEI:idno[@type='addTxr']">
+                                <xsl:value-of select="//TEI:idno[@type='addTxr']"/>
+                            </xsl:if>
                         </xsl:variable>
-                        <xsl:if test="//TEI:idno[@type='addCom'] and //TEI:idno[@type='addIntro'] and //TEI:idno[@type='addTxr']">
-                            <xsl:choose>
-                                <xsl:when test="($addCom=$addIntro) and ($addIntro=$addTxr)">
+                        
+                        <xsl:choose>
+                            <!-- 1 AAA -->
+                            <xsl:when test="($addCom=$addIntro) and ($addIntro=$addTxr)">
+                                <xsl:if test="$addCom!=''">
                                     <div>
-                                        <xsl:text>Tilføjet punktkommentar, indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
+                                        <xsl:text>Tilføjet punktkommentarer, indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
                                     </div>
-                                </xsl:when>
-                                <xsl:when test="($addCom=$addIntro) and (not($addIntro=$addTxr))">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar og indledning i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="(not($addCom=$addIntro)) and ($addIntro=$addTxr)">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="($addCom=$addTxr) and (not($addIntro=$addTxr))">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="($addIntro=$addTxr) and (not($addCom=$addIntro))">
-                                    <div>
-                                        <xsl:text>Tilføjet indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
-                                    </div>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addCom']) and (not(//TEI:idno[@type='addIntro'] and //TEI:idno[@type='addTxr']))">
-                            <div>
-                                <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                            </div>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addIntro']) and (not(//TEI:idno[@type='addCom'] and //TEI:idno[@type='addTxr']))">
-                            <div>
-                                <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
-                            </div>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addTxr']) and (not(//TEI:idno[@type='addCom'] and //TEI:idno[@type='addTxr']))">
-                            <div>
-                                <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
-                            </div>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addCom'] and //TEI:idno[@type='addIntro']) and (not(//TEI:idno[@type='addTxr']))">
-                            <xsl:choose>
-                                <xsl:when test="$addCom=$addIntro">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar og indledning i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="not($addCom=$addIntro)">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addCom'] and //TEI:idno[@type='addTxr']) and (not(//TEI:idno[@type='addIntro']))">
-                            <xsl:choose>
-                                <xsl:when test="$addCom=$addTxr">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="not($addCom=$addTxr)">
-                                    <div>
-                                        <xsl:text>Tilføjet punktkommentar i version </xsl:text><xsl:value-of select="$addCom"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
-                                    </div>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:if>                        
-                        <xsl:if test="(//TEI:idno[@type='addIntro'] and //TEI:idno[@type='addTxr']) and (not(//TEI:idno[@type='addCom']))">
-                            <xsl:choose>
-                                <xsl:when test="$addIntro=$addTxr">
-                                    <div>
-                                        <xsl:text>Tilføjet indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                </xsl:when>
-                                <xsl:when test="not($addIntro=$addTxr)">
-                                    <div>
-                                        <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
-                                    </div>
-                                    <div>
-                                        <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
-                                    </div>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:choose>
+                                    <!-- 7 AAB -->
+                                    <xsl:when test="$addCom=$addIntro">
+                                        <xsl:if test="$addCom!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet punktkommentarer og indledning i version </xsl:text><xsl:value-of select="$addCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$addTxr!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 8 ABA -->
+                                    <xsl:when test="$addCom=$addTxr">
+                                        <xsl:if test="$addCom!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet punktkommentarer og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$addIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 9 ABB -->
+                                    <xsl:when test="$addIntro=$addTxr">
+                                        <xsl:if test="$addCom!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet punktkommentarer i version </xsl:text><xsl:value-of select="$addCom"/>
+                                            </div>                                            
+                                        </xsl:if>
+                                        <xsl:if test="$addIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:when>
+                                    <!-- 13 ABC -->
+                                    <xsl:otherwise>
+                                        <xsl:if test="$addCom!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet punktkommentarer i version </xsl:text><xsl:value-of select="$addCom"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$addIntro!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                            </div>
+                                        </xsl:if>
+                                        <xsl:if test="$addTxr!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
+                                            </div>
+                                        </xsl:if>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:otherwise>                            
+                        </xsl:choose>
+                        
                     </div>
                     
                     <div class="kolofon">
