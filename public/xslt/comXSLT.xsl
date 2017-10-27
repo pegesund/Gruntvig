@@ -536,7 +536,7 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a class="bible rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key}">
                     <xsl:apply-templates/>
                 </a>
             </xsl:otherwise>
