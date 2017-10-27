@@ -15,9 +15,10 @@
 
 .kommentar .head
         {
-        font-size: 120%;
-        margin-bottom: 2em;
         text-align: center;
+        margin: 1em 0em 1em 0em;
+        font-size: 150%;
+        line-height: 125%;
         }
  
  .kommentar .author

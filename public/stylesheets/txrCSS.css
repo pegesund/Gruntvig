@@ -149,11 +149,10 @@ a.docIn:hover
         
 .mainTxr .head
         {
-        font-size: 150%;
         text-align: center;
         margin: 1em 0em 1em 0em;
-        line-height: 1.2em;
-        cursor: pointer;
+        font-size: 150%;
+        line-height: 125%;
         }
 
 .mainTxr .div .head
