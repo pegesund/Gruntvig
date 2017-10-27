@@ -408,6 +408,9 @@
                             <xsl:if test="//TEI:note[@type='noCom']">
                                 <xsl:text> er under udarbejdelse</xsl:text>
                             </xsl:if>
+                            <xsl:if test="//TEI:note[@type='minusCom']">
+                                <xsl:text>minusCom</xsl:text>
+                            </xsl:if>
                         </xsl:variable>
                         
                         <!-- minusCom -->
@@ -527,6 +530,11 @@
                             <xsl:when test="($authorCom=$authorIntro and $authorIntro=$authorTxr) and ($editorCom=$editorIntro and $editorIntro=$editorTxr)">
                                 <div>
                                     <xsl:text>Punktkommentarer, indledning og tekstredegørelse</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                </div>
+                            </xsl:when>
+                            <xsl:when test="$authorCom='minusCom'">
+                                <div>
+                                    <xsl:text>Indledning og tekstredegørelse</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
                                 </div>
                             </xsl:when>
                             <xsl:otherwise>
