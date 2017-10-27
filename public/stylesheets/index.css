@@ -155,11 +155,17 @@ a:hover, a:active
         color: #299629; /* #367092;*/
         cursor: pointer;
         }
+        
+td, td.shortForm, td.definisjon, td.sjNummer 
+        {
+        color: #4DBC4D;
+        }
 
 td, td.shortForm
         {
         border: 0px solid red;
         width: 60%;
+        color: #4DBC4D;
         }
 
 td.definisjon 
