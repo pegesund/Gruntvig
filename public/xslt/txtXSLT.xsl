@@ -552,7 +552,7 @@
                                             <xsl:text>Punktkommentarer og tekstredegørelse</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Indledning</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorIntro"/>
+                                            <xsl:text>Indledning</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
                                         </div>
                                     </xsl:when>
                                     <xsl:when test="$authorIntro=$authorTxr and $editorIntro=$editorTxr">
