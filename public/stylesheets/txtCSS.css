@@ -111,9 +111,9 @@ ul
         -ms-transform: rotate(180deg);/*IE9*/
         -webkit-transform: rotate(180deg);/*Chrome, Safari, Opera, Firefox*/
         transform: rotate(180deg);
-        margin: 0em -1em 0em 0em !important;
+        margin: 0em 0em 0em 0em !important;
         padding: 0em 0em 0em 0em !important;
-        vertical-align: baseline;
+        vertical-align: sub;
         position: relative;        
         }
 
@@ -931,6 +931,49 @@ a:active.index
         }
 
 /* table index rendition="21" END */
+
+/* table index rendition="31" START */
+
+#tekst_innhold tr.head > td.index31
+        {
+        border: 0px solid black;        
+        text-align: center;
+        padding: 10px;
+        }
+
+#tekst_innhold td.index31hangingIndent
+        {
+        border: 0px solid black;
+        padding: 0px 15px 0px 15px;
+        text-align: justify;
+        text-indent: -2em;
+        }
+
+#tekst_innhold td.index31:nth-child(1)
+        {
+        border: 0px solid black;        
+        text-align: left;
+        padding: 10px;
+        width: 60%;
+        }
+
+#tekst_innhold td.index31:nth-child(2)
+        {
+        border: 0px solid black;        
+        text-align: right;
+        padding: 10px;
+        width: 15%;
+        }
+
+#tekst_innhold td.index31:nth-child(3)
+        {
+        border: 0px solid black;        
+        text-align: right;
+        padding: 10px;
+        width: 15%;
+        }
+
+/* table index rendition="31" END */
 
 /* table index rendition="32" START */
 
