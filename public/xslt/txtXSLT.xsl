@@ -19,47 +19,50 @@
                         </xsl:choose>
                     </div>
                     
-                    <div class="kolofon">
+                    <!--div class="kolofon">
                         <xsl:text></xsl:text><i><xsl:text>Grundtvigs Værker, </xsl:text></i><xsl:text>version </xsl:text><xsl:value-of select="//TEI:idno[@type='content']"/><xsl:text></xsl:text>
-                    </div>
+                    </div-->
                     <div class="kolofon">
                         <xsl:choose>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='0.9'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. marts 2011</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. marts 2011</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.0'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. maj 2012</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. maj 2012</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.1'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. november 2012</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 15. november 2012</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.2'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2013</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2013</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.3'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. oktober 2013</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. oktober 2013</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.4'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2014</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. maj 2014</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.5'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 31. oktober 2014</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 31. oktober 2014</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.6'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 4. maj 2015</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 4. maj 2015</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.7'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. november 2015</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. november 2015</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.8'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 29. april 2016</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 29. april 2016</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.9'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november 2016</xsl:text>
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november 2016</xsl:text>
                             </xsl:when>
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.10'">
-                                <xsl:text>Offentliggjort første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. maj 2017</xsl:text>
-                            </xsl:when>                            
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 3. maj 2017</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.11'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, 1. november 2017</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
@@ -70,14 +73,62 @@
                                 <xsl:value-of select="//TEI:idno[@type='addCom']"/>
                             </xsl:if>
                         </xsl:variable>
+                        
                         <xsl:variable name="addIntro">
                             <xsl:if test="//TEI:idno[@type='addIntro']">
-                                <xsl:value-of select="//TEI:idno[@type='addCom']"/>
+                                <xsl:value-of select="//TEI:idno[@type='addIntro']"/>
                             </xsl:if>
                         </xsl:variable>
+                        
                         <xsl:variable name="addTxr">
                             <xsl:if test="//TEI:idno[@type='addTxr']">
                                 <xsl:value-of select="//TEI:idno[@type='addTxr']"/>
+                            </xsl:if>                            
+                        </xsl:variable>
+                        
+                        <xsl:variable name="dateAddVersion">
+                            <xsl:if test="//TEI:idno[@type='addCom']">
+                                <xsl:choose>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='0.9'">
+                                        <xsl:text>, 3. marts 2011</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.0'">
+                                        <xsl:text>, 15. maj 2012</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.1'">
+                                        <xsl:text>, 15. november 2012</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.2'">
+                                        <xsl:text>, 1. maj 2013</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.3'">
+                                        <xsl:text>, 1. oktober 2013</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.4'">
+                                        <xsl:text>, 1. maj 2014</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.5'">
+                                        <xsl:text>, 31. oktober 2014</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.6'">
+                                        <xsl:text>, 4. maj 2015</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.7'">
+                                        <xsl:text>, 3. november 2015</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.8'">
+                                        <xsl:text>, 29. april 2016</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.9'">
+                                        <xsl:text>, 1. november 2016</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.10'">
+                                        <xsl:text>, 3. maj 2017</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.11'">
+                                        <xsl:text>, 1. november 2017</xsl:text>
+                                    </xsl:when>
+                                </xsl:choose>
                             </xsl:if>
                         </xsl:variable>
                         
@@ -87,6 +138,51 @@
                                 <xsl:if test="$addCom!=''">
                                     <div>
                                         <xsl:text>Tilføjet punktkommentarer, indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
+                                        <xsl:choose>
+                                            <xsl:when test="//TEI:idno[@type='addCom']">
+                                                <xsl:choose>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='0.9'">
+                                                        <xsl:text>, 3. marts 2011</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.0'">
+                                                        <xsl:text>, 15. maj 2012</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.1'">
+                                                        <xsl:text>, 15. november 2012</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.2'">
+                                                        <xsl:text>, 1. maj 2013</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.3'">
+                                                        <xsl:text>, 1. oktober 2013</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.4'">
+                                                        <xsl:text>, 1. maj 2014</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.5'">
+                                                        <xsl:text>, 31. oktober 2014</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.6'">
+                                                        <xsl:text>, 4. maj 2015</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.7'">
+                                                        <xsl:text>, 3. november 2015</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.8'">
+                                                        <xsl:text>, 29. april 2016</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.9'">
+                                                        <xsl:text>, 1. november 2016</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.10'">
+                                                        <xsl:text>, 3. maj 2017</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.11'">
+                                                        <xsl:text>, 1. november 2017</xsl:text>
+                                                    </xsl:when>
+                                                </xsl:choose>
+                                            </xsl:when>
+                                        </xsl:choose>
                                     </div>
                                 </xsl:if>
                             </xsl:when>
@@ -97,11 +193,13 @@
                                         <xsl:if test="$addCom!=''">
                                             <div>
                                                 <xsl:text>Tilføjet punktkommentarer og indledning i version </xsl:text><xsl:value-of select="$addCom"/>
+                                                <xsl:call-template name="dateAddCom"/>
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="$addTxr!=''">
                                             <div>
                                                 <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
+                                                <xsl:call-template name="dateAddTxr"/>
                                             </div>
                                         </xsl:if>
                                     </xsl:when>
@@ -110,11 +208,13 @@
                                         <xsl:if test="$addCom!=''">
                                             <div>
                                                 <xsl:text>Tilføjet punktkommentarer og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
+                                                <xsl:call-template name="dateAddCom"/>
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="$addIntro!=''">
                                             <div>
                                                 <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                                <xsl:call-template name="dateAddIntro"/>
                                             </div>
                                         </xsl:if>
                                     </xsl:when>
@@ -123,11 +223,13 @@
                                         <xsl:if test="$addCom!=''">
                                             <div>
                                                 <xsl:text>Tilføjet punktkommentarer i version </xsl:text><xsl:value-of select="$addCom"/>
+                                                <xsl:call-template name="dateAddCom"></xsl:call-template>
                                             </div>                                            
                                         </xsl:if>
                                         <xsl:if test="$addIntro!=''">
                                             <div>
                                                 <xsl:text>Tilføjet indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                                <xsl:call-template name="dateAddIntro"/>
                                             </div>
                                         </xsl:if>
                                     </xsl:when>
@@ -136,23 +238,25 @@
                                         <xsl:if test="$addCom!=''">
                                             <div>
                                                 <xsl:text>Tilføjet punktkommentarer i version </xsl:text><xsl:value-of select="$addCom"/>
+                                                <xsl:call-template name="dateAddCom"/>
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="$addIntro!=''">
                                             <div>
                                                 <xsl:text>Tilføjet indledning i version </xsl:text><xsl:value-of select="$addIntro"/>
+                                                <xsl:call-template name="dateAddIntro"/>
                                             </div>
                                         </xsl:if>
                                         <xsl:if test="$addTxr!=''">
                                             <div>
                                                 <xsl:text>Tilføjet tekstredegørelse i version </xsl:text><xsl:value-of select="$addTxr"/>
+                                                <xsl:call-template name="dateAddTxr"/>
                                             </div>
                                         </xsl:if>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </xsl:otherwise>                            
-                        </xsl:choose>
-                        
+                        </xsl:choose>                        
                     </div>
                     
                     <div class="kolofon">
@@ -390,7 +494,7 @@
                         
                         <xsl:variable name="authorCom">
                             <xsl:if test="//TEI:note[@type='com']">
-                                <xsl:text> er skrevet af </xsl:text>
+                                <xsl:text> skrevet af </xsl:text>
                                 <xsl:for-each select="document(//TEI:note[@type='com']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
                                     <xsl:apply-templates/>
                                     <xsl:if test="following-sibling::TEI:author">
@@ -440,7 +544,7 @@
                         
                         <xsl:variable name="authorIntro">
                             <xsl:if test="//TEI:note[@type='intro']">
-                                <xsl:text> er skrevet af </xsl:text>
+                                <xsl:text> skrevet af </xsl:text>
                                 <xsl:for-each select="document(//TEI:note[@type='intro']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
                                     <xsl:apply-templates/>
                                     <xsl:if test="following-sibling::TEI:author">
@@ -481,7 +585,7 @@
                         
                         <xsl:variable name="authorTxr">
                             <xsl:if test="//TEI:note[@type='txr']">
-                                <xsl:text> er skrevet af </xsl:text>
+                                <xsl:text> skrevet af </xsl:text>
                                 <xsl:for-each select="document(//TEI:note[@type='txr']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
                                     <xsl:apply-templates/>
                                     <xsl:if test="following-sibling::TEI:author">
@@ -744,7 +848,151 @@
     <xsl:template match="TEI:g">
         <span class="rotate">
             <xsl:apply-templates/>
-        </span>        
+        </span>
+    </xsl:template>
+    
+    <xsl:template name="dateAddCom">
+        <xsl:choose>
+            <xsl:when test="//TEI:idno[@type='addCom']">
+                <xsl:choose>
+                    <xsl:when test="//TEI:idno[@type='addCom']='0.9'">
+                        <xsl:text>, 3. marts 2011</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.0'">
+                        <xsl:text>, 15. maj 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.1'">
+                        <xsl:text>, 15. november 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.2'">
+                        <xsl:text>, 1. maj 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.3'">
+                        <xsl:text>, 1. oktober 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.4'">
+                        <xsl:text>, 1. maj 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.5'">
+                        <xsl:text>, 31. oktober 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.6'">
+                        <xsl:text>, 4. maj 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.7'">
+                        <xsl:text>, 3. november 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.8'">
+                        <xsl:text>, 29. april 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.9'">
+                        <xsl:text>, 1. november 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.10'">
+                        <xsl:text>, 3. maj 2017</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.11'">
+                        <xsl:text>, 1. november 2017</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="dateAddIntro">
+        <xsl:choose>
+            <xsl:when test="//TEI:idno[@type='addIntro']">
+                <xsl:choose>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='0.9'">
+                        <xsl:text>, 3. marts 2011</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.0'">
+                        <xsl:text>, 15. maj 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.1'">
+                        <xsl:text>, 15. november 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.2'">
+                        <xsl:text>, 1. maj 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.3'">
+                        <xsl:text>, 1. oktober 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.4'">
+                        <xsl:text>, 1. maj 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.5'">
+                        <xsl:text>, 31. oktober 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.6'">
+                        <xsl:text>, 4. maj 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.7'">
+                        <xsl:text>, 3. november 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.8'">
+                        <xsl:text>, 29. april 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.9'">
+                        <xsl:text>, 1. november 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.10'">
+                        <xsl:text>, 3. maj 2017</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.11'">
+                        <xsl:text>, 1. november 2017</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="dateAddTxr">
+        <xsl:choose>
+            <xsl:when test="//TEI:idno[@type='addTxr']">
+                <xsl:choose>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='0.9'">
+                        <xsl:text>, 3. marts 2011</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.0'">
+                        <xsl:text>, 15. maj 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.1'">
+                        <xsl:text>, 15. november 2012</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.2'">
+                        <xsl:text>, 1. maj 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.3'">
+                        <xsl:text>, 1. oktober 2013</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.4'">
+                        <xsl:text>, 1. maj 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.5'">
+                        <xsl:text>, 31. oktober 2014</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.6'">
+                        <xsl:text>, 4. maj 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.7'">
+                        <xsl:text>, 3. november 2015</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.8'">
+                        <xsl:text>, 29. april 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.9'">
+                        <xsl:text>, 1. november 2016</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.10'">
+                        <xsl:text>, 3. maj 2017</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.11'">
+                        <xsl:text>, 1. november 2017</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template name="author">        
@@ -2006,6 +2254,58 @@
     </xsl:template>
     
     <!-- index21 END -->
+    
+    <!-- index31 START -->
+    
+    <xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="index21" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="index22" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:table[@type='index' and @rendition='31']/TEI:row/TEI:cell">
+        <xsl:variable name="chp-id">
+            <xsl:for-each select="//TEI:div[TEI:head[@xml:id=current()/../@corresp]]"> <!-- should be 1 at most -->
+                <xsl:number level="any"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="index31" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="index31" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="following-sibling::TEI:seg">
+                <td class="index31" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="index31{@rend}">
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">                        
+                        <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+                        <xsl:apply-templates/>
+                    </a>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- index31 END -->
     
     <!-- index32 START -->
     
