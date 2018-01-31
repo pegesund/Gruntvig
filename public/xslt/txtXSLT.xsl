@@ -520,22 +520,20 @@
                         <!-- minusCom -->
                         
                         <xsl:variable name="editorCom">
-                            <xsl:if test="//TEI:note[@type='com']">
-                                <xsl:text>, redigeret af </xsl:text>
-                                <xsl:for-each select="document(//TEI:note[@type='com']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                                    <xsl:apply-templates/>
-                                    <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                        <xsl:choose>
-                                            <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                                <xsl:call-template name="delimiterComma"/>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:text> og </xsl:text>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
-                                    </xsl:if>
-                                </xsl:for-each>
-                            </xsl:if>
+                            <xsl:text>, redigeret af </xsl:text>
+                            <xsl:for-each select="document(//TEI:note[@type='com']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor1' or @role='editor3']">
+                                <xsl:apply-templates/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='editor1' or @role='editor3']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='editor1' or @role='editor3'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
                         </xsl:variable>
                         
                         <!-- com END -->
@@ -567,9 +565,9 @@
                         <xsl:variable name="editorIntro">
                             <xsl:if test="//TEI:note[@type='intro']">
                                 <xsl:text>, redigeret af </xsl:text>
-                                <xsl:for-each select="document(//TEI:note[@type='intro']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
+                                <xsl:for-each select="document(//TEI:note[@type='intro']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor1' or @role='editor3']">
                                     <xsl:apply-templates/>
-                                    <xsl:if test="following-sibling::TEI:editor[@role='editor']">
+                                    <xsl:if test="following-sibling::TEI:editor[@role='editor1' or @role='editor3']">
                                         <xsl:choose>
                                             <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
                                                 <xsl:call-template name="delimiterComma"/>
@@ -584,9 +582,8 @@
                         </xsl:variable>
                         
                         <xsl:variable name="authorTxr">
-                            <xsl:if test="//TEI:note[@type='txr']">
-                                <xsl:text> skrevet af </xsl:text>
-                                <xsl:for-each select="document(//TEI:note[@type='txr']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
+                            <xsl:if test="//TEI:note[@type='txr']">                                 
+                                <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:author">
                                     <xsl:apply-templates/>
                                     <xsl:if test="following-sibling::TEI:author">
                                         <xsl:choose>
@@ -599,29 +596,24 @@
                                         </xsl:choose>
                                     </xsl:if>
                                 </xsl:for-each>
-                            </xsl:if>
-                            <xsl:if test="//TEI:note[@type='noTxr']">
-                                <xsl:text> er under udarbejdelse</xsl:text>
-                            </xsl:if>
+                            </xsl:if>                            
                         </xsl:variable>
                         
                         <xsl:variable name="editorTxr">
-                            <xsl:if test="//TEI:note[@type='txr']">
-                                <xsl:text>, redigeret af </xsl:text>
-                                <xsl:for-each select="document(//TEI:note[@type='txr']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor']">
-                                    <xsl:apply-templates select="."/>
-                                    <xsl:if test="following-sibling::TEI:editor[@role='editor']">
-                                        <xsl:choose>
-                                            <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
-                                                <xsl:call-template name="delimiterComma"/>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:text> og </xsl:text>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
-                                    </xsl:if>
-                                </xsl:for-each>
-                            </xsl:if>
+                            <xsl:text>, redigeret af </xsl:text>
+                            <xsl:for-each select="document(//TEI:note[@type='txr']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor1' or @role='editor2']">
+                                <xsl:apply-templates select="."/>
+                                <xsl:if test="following-sibling::TEI:editor[@role='editor1' or @role='editor2']">
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::TEI:editor[@role='editor1' or @role='editor2'][position()!=last()]">
+                                            <xsl:call-template name="delimiterComma"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:text> og </xsl:text>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:if>
+                            </xsl:for-each>
                         </xsl:variable>
                         
                         <!-- txr END -->
@@ -631,51 +623,51 @@
                         <xsl:call-template name="editionPhilologist"/>
                         
                         <xsl:choose>
+                            <!-- 1 A:CIT E:CIT -->
                             <xsl:when test="($authorCom=$authorIntro and $authorIntro=$authorTxr) and ($editorCom=$editorIntro and $editorIntro=$editorTxr)">
                                 <div>
-                                    <xsl:text>Punktkommentarer, indledning og tekstredegørelse</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
-                                </div>
-                            </xsl:when>
-                            <xsl:when test="$authorCom='minusCom'">
-                                <div>
-                                    <xsl:text>Indledning og tekstredegørelse</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
+                                    <xsl:text>Punktkommentarer, indledning og tekstredegørelse er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                 </div>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:choose>
+                                    <!-- 2 A:CI E:CI -->
                                     <xsl:when test="$authorCom=$authorIntro and $editorCom=$editorIntro">
                                         <div>
-                                            <xsl:text>Punktkommentarer og indledning</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                            <xsl:text>Punktkommentarer og indledning er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Tekstredegørelse</xsl:text><xsl:value-of select="$authorTxr"/><xsl:value-of select="$editorTxr"/>
+                                            <xsl:text>Tekstredegørelse er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorTxr"/>
                                         </div>
                                     </xsl:when>
+                                    <!-- 3 A:CT E:CT -->
                                     <xsl:when test="$authorCom=$authorTxr and $editorCom=$editorTxr">
                                         <div>
-                                            <xsl:text>Punktkommentarer og tekstredegørelse</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                            <xsl:text>Punktkommentarer og tekstredegørelse er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Indledning</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
+                                            <xsl:text>Indledning er skrevet af </xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
                                         </div>
                                     </xsl:when>
+                                    <!-- 4 A:IT E:IT -->
                                     <xsl:when test="$authorIntro=$authorTxr and $editorIntro=$editorTxr">
                                         <div>
-                                            <xsl:text>Punktkommentarer</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                            <xsl:text>Punktkommentarer er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Indledning og tekstredegørelse</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
+                                            <xsl:text>Indledning og tekstredegørelse er skrevet af </xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
                                         </div>
                                     </xsl:when>
+                                    <!-- 5 C I T -->
                                     <xsl:otherwise>
                                         <div>
-                                            <xsl:text>Punktkommentarer</xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                            <xsl:text>Punktkommentarer er skrevet af </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Indledning</xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
+                                            <xsl:text>Indledning er skrevet af </xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
                                         </div>
                                         <div>
-                                            <xsl:text>Tekstredegørelse</xsl:text><xsl:value-of select="$authorTxr"/><xsl:value-of select="$editorTxr"/>
+                                            <xsl:text>Tekstredegørelse er skrevet af </xsl:text><xsl:value-of select="$authorTxr"/><xsl:value-of select="$editorTxr"/>
                                         </div>
                                     </xsl:otherwise>
                                 </xsl:choose>
@@ -692,17 +684,13 @@
                     </div>
                     
                     <div class="kolofon">
-                        <xsl:text>XML ved Kim Steen Ravn</xsl:text>
-                    </div>
-                    
-                    <div class="kolofon">
                         <xsl:variable name="contributorCom">
                             <xsl:if test="//TEI:note[@type='com']">
-                                <xsl:for-each select="document(//TEI:note[@type='com']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                                <xsl:for-each select="document(//TEI:note[@type='com']/@target,.)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor2']">
                                     <xsl:apply-templates select="."/>
-                                    <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
+                                    <xsl:if test="following-sibling::TEI:editor[@role='editor2']">
                                         <xsl:choose>
-                                            <xsl:when test="following-sibling::TEI:editor[@role='contributor'][position()!=last()]">
+                                            <xsl:when test="following-sibling::TEI:editor[@role='editor2'][position()!=last()]">
                                                 <xsl:call-template name="delimiterComma"/>
                                             </xsl:when>
                                             <xsl:otherwise>
@@ -718,11 +706,11 @@
                         
                         <xsl:variable name="contributorIntro">
                             <xsl:if test="//TEI:note[@type='intro']">
-                                <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='contributor']">
+                                <xsl:for-each select="document(//TEI:note[@type='intro']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:titleStmt/TEI:editor[@role='editor2']">
                                     <xsl:apply-templates select="."/>
-                                    <xsl:if test="following-sibling::TEI:editor[@role='contributor']">
+                                    <xsl:if test="following-sibling::TEI:editor[@role='editor2']">
                                         <xsl:choose>
-                                            <xsl:when test="following-sibling::TEI:editor[@role='contributor'][position()!=last()]">
+                                            <xsl:when test="following-sibling::TEI:editor[@role='editor2'][position()!=last()]">
                                                 <xsl:call-template name="delimiterComma"/>
                                             </xsl:when>
                                             <xsl:otherwise>
@@ -821,7 +809,7 @@
                                         </xsl:if>
                                     </xsl:otherwise>
                                 </xsl:choose>
-                            </xsl:otherwise>                            
+                            </xsl:otherwise>
                         </xsl:choose>
                         
                     </div>
@@ -830,6 +818,10 @@
                         <xsl:if test="//TEI:editor[@role='contributor']">
                             <xsl:text>I øvrigt takkes </xsl:text><xsl:value-of select="//TEI:editor[@role='contributor']"/>
                         </xsl:if>                        
+                    </div>
+                    
+                    <div class="kolofon">
+                        <xsl:text>XML ved Kim Steen Ravn</xsl:text>
                     </div>
                     
                     <div class="copyright">
@@ -1036,11 +1028,11 @@
     
     <xsl:template name="editionPhilologist">
         <xsl:text>Teksten er etableret af </xsl:text>
-        <xsl:for-each select="//TEI:editor[@role='editionPhilologist']">
+        <xsl:for-each select="//TEI:editor[@role='philologist']">
             <xsl:value-of select="."/>
-            <xsl:if test="following-sibling::TEI:editor[@role='editionPhilologist']">
+            <xsl:if test="following-sibling::TEI:editor[@role='philologist']">
                 <xsl:choose>
-                    <xsl:when test="following-sibling::TEI:editor[@role='editionPhilologist'][position()!=last()]">
+                    <xsl:when test="following-sibling::TEI:editor[@role='philologist'][position()!=last()]">
                         <xsl:call-template name="delimiterComma"/>
                     </xsl:when>
                     <xsl:otherwise>
