@@ -667,7 +667,14 @@
                                     <!-- 4 A:IT E:IT -->
                                     <xsl:when test="$authorIntro=$authorTxr and $editorIntro=$editorTxr">
                                         <div>
-                                            <xsl:text>Punktkommentarer er </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                            <xsl:choose>
+                                                <xsl:when test="//TEI:note[@type='minusCom']">
+                                                    <xsl:text>GV forsyner ikke dette værk med verbalkommentarer</xsl:text>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>Punktkommentarer er </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                         </div>
                                         <div>
                                             <xsl:text>Indledning og tekstredegørelse er </xsl:text><xsl:value-of select="$authorIntro"/><xsl:value-of select="$editorIntro"/>
