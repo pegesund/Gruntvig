@@ -2274,15 +2274,15 @@
     
     <!-- index31 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
+    <xsl:template match="TEI:table[@type='index' and @rendition='31']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
-                <td class="index21" rowspan="{@rows}">
+                <td class="index31" rowspan="{@rows}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
             <xsl:when test="@cols">
-                <td class="index22" colspan="{@cols}">
+                <td class="index31" colspan="{@cols}">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
