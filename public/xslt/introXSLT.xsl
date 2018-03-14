@@ -80,7 +80,7 @@
                         <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
                         <xsl:apply-templates select="TEI:text"/>
                     </xsl:when>
-                    <xsl:when test="//TEI:note[@type='noIntro']">
+                    <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:notesStmt/TEI:note[@type='noIntro']">
                         <div class="head">
                             <xsl:text>er under udarbejdelse</xsl:text>
                         </div>

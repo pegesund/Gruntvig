@@ -199,15 +199,13 @@
                 </xsl:if>
             </div>
             <xsl:choose>
-                <xsl:when test="//TEI:note[@type='txr']">
-                    <div class="content"><xsl:text>Indhold</xsl:text></div>
-                    <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
-                    <xsl:apply-templates select="TEI:text"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <div class="head">
+                <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:notesStmt/TEI:note[@type='noTxr']">
+                    <div class="head about">
                         <xsl:text>er under udarbejdelse</xsl:text>
                     </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="TEI:text"/>
                 </xsl:otherwise>
             </xsl:choose>
         </div>        

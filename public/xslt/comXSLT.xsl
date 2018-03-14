@@ -221,7 +221,7 @@
                 </xsl:if>
                 </div>
                 <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='noCom']">
+                    <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:notesStmt/TEI:note[@type='noCom']">
                         <div class="head about">
                             <xsl:text>er under udarbejdelse</xsl:text>
                         </div>
