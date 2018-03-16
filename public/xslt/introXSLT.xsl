@@ -73,13 +73,13 @@
                 </div>
                 </div>
                 <xsl:choose>
-                    <xsl:when test="//TEI:note[@type='intro']">
+                    <!--xsl:when test="//TEI:note[@type='intro']">
                         <div class="content">
                             <xsl:text>Indhold</xsl:text>
                         </div>
                         <xsl:apply-templates mode="toc" select="TEI:text/TEI:body/TEI:div"/>
                         <xsl:apply-templates select="TEI:text"/>
-                    </xsl:when>
+                    </xsl:when-->
                     <xsl:when test="document(//TEI:note[@type='txt']/@target)//TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:notesStmt/TEI:note[@type='noIntro']">
                         <div class="head">
                             <xsl:text>er under udarbejdelse</xsl:text>
