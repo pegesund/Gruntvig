@@ -176,6 +176,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:title[@rend='part' or @rend='main']/TEI:hi[@rend and @rendition]">
+        <span class="{@rendition}Title">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     
     <!-- added by pe 16/1, ændret 2012.09.20 KSR -->
     

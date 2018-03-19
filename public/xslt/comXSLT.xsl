@@ -422,6 +422,12 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="TEI:title[@rend='part' or @rend='main']/TEI:hi[@rend and @rendition]">
+        <span class="{@rendition}Title">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:note[@type='sic']">
         <span class="sic">
             <xsl:apply-templates/>

@@ -1617,7 +1617,19 @@
         </span>
     </xsl:template-->
     
+    <xsl:template match="TEI:title[@rend='part' or @rend='main']/TEI:hi[@rend and @rendition]">
+        <span class="{@rendition}Title">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
     <xsl:template match="TEI:front//TEI:hi[@rend]">
+        <span class="{@rend}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:body[not(@rendition)]//TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
@@ -1671,12 +1683,6 @@
                 </span>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="//TEI:body[not(@rendition)]//TEI:hi">
-        <span class="{@rend}">
-            <xsl:apply-templates/>
-        </span>
     </xsl:template>
     
     <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
