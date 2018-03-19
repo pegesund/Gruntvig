@@ -117,10 +117,29 @@ ul
         position: relative;        
         }
 
-/* tekstkritisk apparat END */        
-        
-/* kolofonblad start */
+/* tekstkritisk apparat END */
 
+/* title hi START */
+        
+.boldTitle
+        {
+        font-weight: bold;
+        }
+
+.italicTitle
+        {
+        font-style: italic
+        }
+        
+.raisedTitle
+        {
+        font-size: 70%;
+        vertical-align: super;
+        }
+
+/* title hi END */
+
+/* kolofonblad start */
 
 #tekst_innhold .kolofonBlad
         {
