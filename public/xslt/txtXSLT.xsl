@@ -1340,8 +1340,14 @@
             <xsl:when test="@rend='blank'">
                 <br/>
             </xsl:when>
-            <xsl:when test="not(@rend)">
+            <xsl:when test="not(@rend) and not(@n)">
                 <div class="l_noIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@n and not(@rend)">
+                <div style="margin-left: -2em">
+                    <span><xsl:value-of select="@n"/>&#x2003;</span>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
