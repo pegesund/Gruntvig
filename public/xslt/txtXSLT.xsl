@@ -1310,7 +1310,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:lg[@rend='romanType']">
-        <table class="schwab">            
+        <table class="lg">            
             <tr valign="top">
                 <td class="lgNumber">
                     <xsl:value-of select="@n"/>
