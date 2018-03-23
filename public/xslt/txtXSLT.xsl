@@ -1773,7 +1773,21 @@
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
-            
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
