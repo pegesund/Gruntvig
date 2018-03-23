@@ -704,7 +704,7 @@
                     
                     <div class="kolofon">
                         <xsl:if test="//TEI:note[@type='noBible' or @type='noMyth' or @type='noPersName' or @type='noPlaceName' or @type='noTitle']">
-                            <xsl:text>Opmærkning til registrene er under udarbejdelse.</xsl:text>                            
+                            <xsl:text>Opmærkning til registrene er under udarbejdelse </xsl:text>                            
                         </xsl:if>
                     </div>
                     
@@ -1641,6 +1641,31 @@
         </span>
     </xsl:template>
     
+    <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='bold'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="//TEI:body[@rendition='schwab']//TEI:hi">
         <xsl:choose>
             <xsl:when test="@rend='schwab'">
@@ -1688,6 +1713,67 @@
                     <xsl:apply-templates/>
                 </span>
             </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='bold'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:body//TEI:div[@rendition='schwab']//TEI:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='schwab'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:body//TEI:div[@rendition='size1']//TEI:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='size1'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            
         </xsl:choose>
     </xsl:template>
     
