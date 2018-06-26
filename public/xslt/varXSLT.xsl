@@ -3,8 +3,7 @@
     xmlns:TEI="http://www.tei-c.org/ns/1.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="1.0"
-    exclude-result-prefixes="#all"
-    >
+    exclude-result-prefixes="#all">
 
 <!-- KSR: 2011.09.26 -->
     <xsl:include href="popups.xsl"/>
@@ -35,15 +34,11 @@
                     <xsl:choose>
                          <xsl:when test="//TEI:note[@xml:id='thisFile' and @type='var']">
                              <div>
-                                 <xsl:text>Tekstkilde:</xsl:text>
+                                 <xsl:text>Tekstkilde: </xsl:text>
+                                 <xsl:for-each select="//TEI:witness[@xml:id]">
+                                     <xsl:apply-templates/>
+                                 </xsl:for-each>
                              </div>
-                             <ul class="source">
-                                 <xsl:for-each select="//TEI:witness[@rend]">
-                                    <li>
-                                        <xsl:apply-templates/>
-                                    </li>
-                                </xsl:for-each>
-                            </ul>
                         </xsl:when>
                         <xsl:otherwise/>
                     </xsl:choose>
@@ -233,7 +228,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:app[@type='ide' or @type='ort' or @type='int' or @type='sub']">
+    <xsl:template match="TEI:app[@id]">
         <span>
             <xsl:attribute name="class">
                 <xsl:choose>
