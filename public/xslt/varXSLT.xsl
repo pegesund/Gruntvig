@@ -65,9 +65,6 @@
                     </xsl:when>
                 </xsl:choose>
             </div>
-                <br/>    
-                
-                <xsl:apply-templates select="//TEI:note[@type='footnote']" mode="editor"/>
         </div>
         
     </xsl:template>
@@ -142,10 +139,10 @@
     
     <xsl:template match="TEI:note[@type='footnote']">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="retur{$id}" href="#note{$id}">
-            <span class="footMarker">
+        <a id="retur{$id}" href="#note{$id}" class="footMarker">
+            <span>
                 <xsl:value-of select="$id"/>
             </span>
         </a>
@@ -153,16 +150,16 @@
     
     <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
-            <xsl:number level="any" from="TEI:text"/>
+            <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}">
-            <span class="footMarker">
+        <a id="note{$id}" href="#retur{$id}" class="footMarker">
+            <span>
                 <xsl:value-of select="$id"/>
             </span>
         </a>
-        <div class="footnote">
+        <span class="footnote">
             <xsl:apply-templates/>
-        </div>
+        </span>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
