@@ -158,9 +158,13 @@ span.appInvisible
         width: 4em;
         }
         
-.variantMain .footnote
+.variantMain a.footMarker 
         {
-        margin: 1em
+        font-size: 80%;
+        text-decoration: none;
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
         }
 
 /* footnote end */
