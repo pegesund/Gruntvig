@@ -56,7 +56,7 @@ var fixMissingFirstTab = function() {
 var getCurrentHash = function(hash) {
     if (!hash) return "";
     if (!hash.length > 0) return "";
-    return JSON.parse(hash.substring(1), function (key, value) {
+    return JSON.parse(decodeURIComponent(hash.substring(1)), function (key, value) {
         var type;
         if (value && typeof value === 'object') {
             type = value.type;
