@@ -57,15 +57,15 @@
             <span class="placeHeader">
                 <span class="placeName">
                     <xsl:apply-templates/>
-                    <!--xsl:call-template name="afterComma"></xsl:call-template-->
+                    <xsl:call-template name="afterComma"></xsl:call-template>
                     
-                    <!--<xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>-->
+                    <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
                 </span>
                 <xsl:call-template name="comma-sep-list">
                     <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
                 </xsl:call-template>
-                <!--xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameSyn']" mode="comma-sep"/>
-                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameDia']" mode="comma-sep"/-->
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameSyn']" mode="comma-sep"/>
+                <xsl:apply-templates select="following-sibling::TEI:cell[@rend='altNameDia']" mode="comma-sep"/>
                 <xsl:if test="not($copy or parent::TEI:row/@rend='noSynch')">
                     <xsl:apply-templates select="parent::TEI:row/@synch"/>
                 </xsl:if>
