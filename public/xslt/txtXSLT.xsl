@@ -1636,6 +1636,22 @@
         <xsl:call-template name="footnote"/>
     </xsl:template>
     
+    <xsl:template match="TEI:back//TEI:div"> <!-- div i div i back, KSR 2014.06.12 -->
+        <div class="chapter">
+            <xsl:if test="@type">   
+                <xsl:attribute name="name">
+                    <xsl:for-each select="ancestor::TEI:div">
+                        <xsl:text>&#x2003;</xsl:text>
+                    </xsl:for-each>
+                    <xsl:value-of select="@type"/>
+                </xsl:attribute> 
+            </xsl:if>
+            <xsl:apply-templates select="node()[local-name()!='div']"/>
+            <xsl:call-template name="footnote"/>
+        </div>
+        <xsl:apply-templates select="TEI:div"/>
+    </xsl:template>
+    
     <!-- footnote END -->
     
     <!--xsl:template match="TEI:hi">
@@ -2934,22 +2950,6 @@
         <div style="font-family: sans-serif">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:back//TEI:div"> <!-- div i div i back, KSR 2014.06.12 -->
-        <div class="chapter">
-            <xsl:if test="@type">   
-                <xsl:attribute name="name">
-                    <xsl:for-each select="ancestor::TEI:div">
-                        <xsl:text>&#x2003;</xsl:text>
-                    </xsl:for-each>
-                    <xsl:value-of select="@type"/>
-               </xsl:attribute> 
-            </xsl:if>
-            <xsl:apply-templates select="node()[local-name()!='div']"/>
-            <xsl:call-template name="footnote"/>
-        </div>
-        <xsl:apply-templates select="TEI:div"/>
     </xsl:template>
     
     <!-- tabel corrigenda START -->
