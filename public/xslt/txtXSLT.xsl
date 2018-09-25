@@ -583,7 +583,7 @@
                                     <xsl:apply-templates/>
                                     <xsl:if test="following-sibling::TEI:editor[@role='editor1' or @role='editor3']">
                                         <xsl:choose>
-                                            <xsl:when test="following-sibling::TEI:editor[@role='editor'][position()!=last()]">
+                                            <xsl:when test="following-sibling::TEI:editor[@role='editor1' or @role='editor3'][position()!=last()]">
                                                 <xsl:call-template name="delimiterComma"/>
                                             </xsl:when>
                                             <xsl:otherwise>
