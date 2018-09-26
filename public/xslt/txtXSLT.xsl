@@ -266,6 +266,9 @@
                                 </xsl:choose>
                             </xsl:otherwise>                            
                         </xsl:choose>                        
+                        <div style="margin: 0.5em 0em 0em 0em">
+                            <xsl:call-template name="changeVersion"/>
+                        </div>                        
                     </div>
                     
                     <div class="kolofon">
@@ -1070,6 +1073,69 @@
                 &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
             </xsl:when>
         </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="changeVersion">
+        <xsl:choose>
+            <xsl:when test="//TEI:idno[@type='changeVersion']">
+                <xsl:text>Ændret i version </xsl:text>
+                <xsl:for-each select="//TEI:idno[@type='changeVersion']">
+                    <xsl:apply-templates/> 
+                    <xsl:if test="following-sibling::TEI:idno[@type='changeVersion']">
+                        <xsl:choose>
+                            <xsl:when test="following-sibling::TEI:idno[@type='changeVersion'][position()!=last()]">
+                                <xsl:call-template name="delimiterComma"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:text> og </xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:if>
+                </xsl:for-each>                
+            </xsl:when>
+        </xsl:choose>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.0'">
+            <xsl:text>, maj 2012</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.1'">
+            <xsl:text>, november 2012</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.2'">
+            <xsl:text>, maj 2013</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.3'">
+            <xsl:text>, oktober 2013</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.4'">
+            <xsl:text>, maj 2014</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.5'">
+            <xsl:text>, oktober 2014</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.6'">
+            <xsl:text>, maj 2015</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.7'">
+            <xsl:text>, november 2015</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.8'">
+            <xsl:text>, april 2016</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.9'">
+            <xsl:text>, november 2016</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.10'">
+            <xsl:text>, maj 2017</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.11'">
+            <xsl:text>, november 2017</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.12'">
+            <xsl:text>, april 2018</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.13'">
+            <xsl:text>, november 2018</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template name="philologist">
