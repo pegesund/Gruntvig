@@ -91,24 +91,46 @@
           </xsl:otherwise>
       </xsl:choose>
     </xsl:template>
-
+    
     <xsl:template match="TEI:cell[@rend='altNameDia']" mode="comma-sep">
-      <xsl:if test="position()=1">
-        <xsl:if test="not(preceding-sibling::TEI:cell[@rend='altNameSyn'])">
-          <xsl:text> (</xsl:text>
+        <xsl:if test="position()=1">
+            <xsl:if test="not(preceding-sibling::TEI:cell[@rend='altNameSyn'])">
+                <xsl:text> (</xsl:text>
+            </xsl:if>
+            <i>før </i>
         </xsl:if>
-        <i>før </i>
-      </xsl:if>
-      <xsl:apply-templates/>
-      <xsl:choose>
-          <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')]">
-            <xsl:text>, </xsl:text>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:text>)</xsl:text>
-          </xsl:otherwise>
-      </xsl:choose>
+        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')] and position()!=last()">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>)</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
+    
+    <!--
+        
+        TEST altNameDia:
+        
+        xsl:template match="TEI:cell[@rend='altNameDia']" mode="comma-sep">
+        <xsl:if test="position()=1">
+            <xsl:if test="not(preceding-sibling::TEI:cell[@rend='altNameSyn'])">
+                <xsl:text> (</xsl:text>
+            </xsl:if>
+            <i>før </i>
+        </xsl:if>
+        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')] and position()!=last()">
+                <xsl:text> og </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>)</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template-->
 
     <xsl:template match="TEI:cell[@rend='name']" mode="par">
       <xsl:text> (</xsl:text>
