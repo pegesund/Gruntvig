@@ -131,6 +131,8 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@rend='edit']"/>
+    
     <xsl:template name="orthography">
         <xsl:if test="TEI:cell[@rend='orthography']">
             <div>
