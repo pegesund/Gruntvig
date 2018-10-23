@@ -36,7 +36,7 @@
             </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="TEI:note[@type='firstName']"/>
-                    <xsl:text> 2</xsl:text>
+                    <xsl:text> </xsl:text>
                     <xsl:apply-templates select="TEI:note[@type='lastName']"/>
                 </xsl:otherwise>
             </xsl:choose>
@@ -64,7 +64,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="TEI:note[@type='firstName']"/>
-                <xsl:text> 2</xsl:text>
+                <xsl:text> </xsl:text>
                 <xsl:apply-templates select="TEI:note[@type='lastName']"/>
             </xsl:otherwise>
         </xsl:choose>
