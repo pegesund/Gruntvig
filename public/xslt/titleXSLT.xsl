@@ -46,37 +46,9 @@
             </xsl:when>
                 <xsl:when test="not(following-sibling::TEI:cell[@type=$type])"/>
                 <xsl:otherwise>
-                    <xsl:text>, 3</xsl:text>
+                    <xsl:text>, </xsl:text>
                 </xsl:otherwise>
             </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template name="listTranslator">
-        <xsl:param name="typeTrans"/>
-        <xsl:choose>
-            <xsl:when test="not(preceding-sibling::TEI:cell[@type=$typeTrans]) and count(child::TEI:note)=2">
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="TEI:note[@type='lastName']"/>
-            </xsl:when>            
-            <xsl:when test="not(preceding-sibling::TEI:cell[@type=$typeTrans]) and count(child::TEI:note)=1">
-                <xsl:apply-templates select="TEI:note[@type='firstName']"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="TEI:note[@type='firstName']"/>
-                <xsl:text> </xsl:text>
-                <xsl:apply-templates select="TEI:note[@type='lastName']"/>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:choose>
-            <xsl:when test="count(following-sibling::TEI:cell[@type=$typeTrans])=1">
-                <xsl:text> &amp; </xsl:text>
-            </xsl:when>
-            <xsl:when test="not(following-sibling::TEI:cell[@type=$typeTrans])"/>
-            <xsl:otherwise>
-                <xsl:text>, 3</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='coAuthor']">
@@ -108,7 +80,7 @@
     
     <xsl:template match="TEI:cell[@type='editor'][position()=last()]">
         <span class="editor">
-            <xsl:text> udg. </xsl:text>
+            <xsl:text> </xsl:text>
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'editor'"/>
             </xsl:call-template>
@@ -126,14 +98,12 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='editorOnly'][position()=last()]">
+    <xsl:template match="TEI:cell[@type='editorOnly']">
         <span class="editor">
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'editorOnly'"/>
             </xsl:call-template>
-            <!-- pro START -->
-            <xsl:text> udg. </xsl:text>
-            <!-- PRO END -->
+            <xsl:text> udg. HAT</xsl:text>
         </span>
     </xsl:template>
     
@@ -148,8 +118,8 @@
     <xsl:template match="TEI:cell[@type='translator'][position()=1]">
         <xsl:text> overs. </xsl:text>
         <span class="translator">
-            <xsl:call-template name="listTranslator">
-                <xsl:with-param name="typeTrans" select="'translator'"/>
+            <xsl:call-template name="listAuthor">
+                <xsl:with-param name="type" select="'translator'"/>
             </xsl:call-template>
             <xsl:text>.</xsl:text>
         </span>
@@ -157,8 +127,8 @@
     
     <xsl:template match="TEI:cell[@type='translator'][position()!=1]">
         <span class="translator">            
-            <xsl:call-template name="listTranslator">
-                <xsl:with-param name="typeTrans" select="'translator'"/>
+            <xsl:call-template name="listAuthor">
+                <xsl:with-param name="type" select="'translator'"/>
             </xsl:call-template>
             <xsl:text>.</xsl:text>
         </span>
