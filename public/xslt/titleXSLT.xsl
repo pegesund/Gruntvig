@@ -103,7 +103,7 @@
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'editorOnly'"/>
             </xsl:call-template>
-            <xsl:text> udg. HAT</xsl:text>
+            <xsl:text> udg. </xsl:text>
         </span>
     </xsl:template>
     
