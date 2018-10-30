@@ -1968,6 +1968,12 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:p[@rend='hangingIndent']">        
+        <div class="{@rend}">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="TEI:p[@rend='hangingIndentPro' and not(@n)]">        
         <div class="hangingIndentPro">
             <xsl:apply-templates/>
