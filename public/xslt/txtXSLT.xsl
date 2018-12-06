@@ -2665,6 +2665,16 @@
     
     <!-- table index END -->
     
+    <!-- ref table index START -->
+    
+    <xsl:template match="TEI:ref[@type='webIndex']">
+        <a href="{@target}" target="_blank">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <!-- ref table index END -->
+    
     <xsl:template match="TEI:ref[@type='endNote']">
       <xsl:variable name="chp-id">
         <xsl:for-each select="//TEI:div[.//TEI:note[@type='endNote' and @n=current()/@n]]"> <!-- should be 1 at most -->
