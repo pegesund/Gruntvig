@@ -285,7 +285,7 @@
                     <xsl:text>]</xsl:text>
                 </xsl:when>
                 <xsl:when test="following-sibling::TEI:cell[@type='translatedTitle']">
-                    <xsl:text>2 (da. </xsl:text>
+                    <xsl:text> (da. </xsl:text>
                     <xsl:value-of select="following-sibling::TEI:cell[@type='translatedTitle']"/>
                     <xsl:text>)</xsl:text>
                 </xsl:when>
