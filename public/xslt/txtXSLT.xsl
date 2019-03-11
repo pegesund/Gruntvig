@@ -3142,6 +3142,30 @@
     
     <!-- corrigenda55 END -->
     
+    <!-- corrigenda55 START -->
+    
+    <xsl:template match="TEI:table[@xml:id='corrigenda' and @rendition='66']//TEI:cell">
+        <xsl:choose>
+            <xsl:when test="@rows">
+                <td class="corrigenda66" rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@cols">
+                <td class="corrigenda66" colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="corrigenda66">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- corrigenda55 END -->
+    
     <!-- tabel corrigenda END -->
     
     <!--xsl:template match="TEI:table">        
