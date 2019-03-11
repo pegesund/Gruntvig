@@ -6,6 +6,7 @@
   KSR 2014.05.06: link fra altTitle til tekst
   KK 2015-10-06: inkl. genrer i kolonne1_meny
   KK 2017-03-29 deltitler
+  KK 2019-03-01 subnumbering of SJ 
 -->
 #{ extends 'main.html' /}
 #{ header /}
@@ -13,74 +14,85 @@
 <script type="text/javascript">
     
     $(document).ready(function() {
-
-        $('div.root').hide();
-
-        interval = ['180','181','182','183','184','185','186','187','188','189'];
-
-        $.each(interval, function(index, value) { 
-            var nodes = [];
-            $('div.work').each(function(index2) {
-                var rootName= $(this).find('span.rootName').text(),
-                    splitName= rootName.split( "_" ),
-                    year= splitName[0],
-                    sj= splitName[1];
-                if( year.substr(0,3)!=value ) {
-                  return true;
-                }
-                var name = $(this).find('span.name').text(),
-                    altName = $(this).find('span.altName').text(),
-                    partName= $(this).find('span.partName'),
-                    url= $(this).find('span.url').text(),
-                    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '',
-                    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' + altNameForm ;
-                nodes.push(node);
-                partName.html( partName.text() );
-                partName.find('desc').each( function() {
-                  var partUrl= url + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
-                      partLabel= $(this).find('label').text(),
-                      partYear= $(this).find('date').text(),
-                      partSj= $(this).find('idno').text(),
-                      partNode= '<tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
-                  nodes.push(partNode);
-                })
-            });
-            nodes = nodes.sort( function(a,b){
-              var aSort= a.replace( /^.*<td class="definisjon">/, '' ),
-                  bSort= b.replace( /^.*<td class="definisjon">/, '' );
-              return (aSort<bSort)?-1:1
-            }); // nodes sorted by rootname, repeat for part titles
-            $(nodes).each( function(index) {
-                $('#' + value).after(nodes.pop());
-            });
+    
+    $('div.root').hide();
+    
+    interval = ['180','181','182','183','184','185','186','187','188','189'];
+    
+    $.each(interval, function(index, value) { 
+    var nodes = [];
+    $('div.work').each(function(index2) {
+    var rootName= $(this).find('span.rootName').text(),
+    splitName= rootName.split( "_" ),
+    year= splitName[0],
+    sj= splitName[1],
+    // *******************************************************************************
+    sjA= sj.substr(-1), // subnumbering of SJ, KK 2019-03-01
+    sjSub= (splitName.length>2 ? splitName[2] : '' );
+    if( /\d/.test(sjA) ) // hvis sjA er et ciffer
+    sjA= "";
+    else
+    sj= sj.substr(0,sj.length-1); // fjern evt. A (virker også med B)
+    sj= "    ".concat(sj).substr( -4, 4 ); // forlæng med blanke til 4 tegn
+    if( sjSub) sjSub= "  ".concat(sjSub).substr( -2, 2 ); // forlæng med blanke til 2 tegn
+    sj= sj + (sjA ? sjA : "") + (sjSub ? "<!--" + sjSub + "-->" : "");
+    // ***********************************************************************************
+    if( year.substr(0,3)!=value ) {
+    return true;
+    }
+    var name = $(this).find('span.name').text(),
+    altName = $(this).find('span.altName').text(),
+    partName= $(this).find('span.partName'),
+    url= $(this).find('span.url').text(),
+    altNameForm= altName ? '<tr><td class="shortForm"><a href="' + url + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' : '',
+    node = '<tr><td class="shortForm"><a href="' + url + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>' + altNameForm ;
+    nodes.push(node);
+    partName.html( partName.text() );
+    partName.find('desc').each( function() {
+    var partUrl= url + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+    partLabel= $(this).find('label').text(),
+    partYear= $(this).find('date').text(),
+    partSj= $(this).find('idno').text(),
+    partNode= '<tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+        nodes.push(partNode);
+        })
+        });
+        nodes = nodes.sort( function(a,b){
+        var aSort= a.replace( /^.*<td class="definisjon">/, '' ),
+        bSort= b.replace( /^.*<td class="definisjon">/, '' );
+        return (aSort<bSort)?-1:1
+        }); // nodes sorted by rootname, repeat for part titles
+        $(nodes).each( function(index) {
+        $('#' + value).after(nodes.pop());
+        });
         }); 
-    });
-    
-    
+        });
+        
+        
 </script>
 
 
 
 <div id="main">
-
-	<div class="container" id="underside_innhold">
-
-		<div id="submenu">
-		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Kronologisk oversigt</div>
-
-		</div>
+    
+    <div class="container" id="underside_innhold">
+        
+        <div id="submenu">
+            <div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Kronologisk oversigt</div>
             
-            <div class="kolonne1">
-
-		<ul id="kolonne1_meny">
-                    <li class="header">Værker</li>
-                    <li><a class="selected" href="/krono">Kronologisk</a></li>
-                    <li><a href="/alfa">Alfabetisk</a></li>
-                    <li class="last"><a href="/genre">Genrer</a></li>
-                </ul>
-            </div>
-
-	<div id="kolonne1_bred"><h1>Værker</h1>
+        </div>
+        
+        <div class="kolonne1">
+            
+            <ul id="kolonne1_meny">
+                <li class="header">Værker</li>
+                <li><a class="selected" href="/krono">Kronologisk</a></li>
+                <li><a href="/alfa">Alfabetisk</a></li>
+                <li class="last"><a href="/genre">Genrer</a></li>
+            </ul>
+        </div>
+        
+        <div id="kolonne1_bred"><h1>Værker</h1>
             
             <div id="tidsInterval">
                 <a href="../krono#180">1800-1809</a>                
@@ -92,22 +104,22 @@
                 <a href="../krono#186">1860-1869</a>
                 <a href="../krono#187">1870-1872</a>
             </div>
-
-                
-<!--Her bygges en kronologisk oversigt-->
-
-  <div class="root">
-    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
-     <div class="work">
-       <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
-       <span class="name">${asset.name}</span>
-       <span class="rootName">${asset.rootName}</span>
-       <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
-       <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "partForm" )}</span>       
-     </div>
-    #{/list}
-  </div>
-
+            
+            
+            <!--Her bygges en kronologisk oversigt-->
+            
+            <div class="root">
+                #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+                <div class="work">
+                    <span class="url">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
+                    <span class="name">${asset.name}</span>
+                    <span class="rootName">${asset.rootName}</span>
+                    <span class="altName">${asset.getXmlElem( asset.xml, "title", "rend", "altForm" )}</span>       
+                    <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "partForm" )}</span>       
+                </div>
+                #{/list}
+            </div>
+            
             <div id="liste" class="hideroot">
                 
                 <table class="krono">
@@ -151,6 +163,5 @@
                 </table>
             </div>
         </div>
-        </div>
+    </div>
 </div>
-
