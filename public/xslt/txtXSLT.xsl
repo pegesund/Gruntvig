@@ -198,6 +198,9 @@
                                                     <xsl:when test="//TEI:idno[@type='addCom']='1.13'">
                                                         <xsl:text>, november 2018</xsl:text>
                                                     </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.14'">
+                                                        <xsl:text>, april 2019</xsl:text>
+                                                    </xsl:when>
                                                 </xsl:choose>
                                             </xsl:when>
                                         </xsl:choose>
