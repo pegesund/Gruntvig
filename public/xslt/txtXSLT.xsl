@@ -307,7 +307,19 @@
                                                             <xsl:text>, </xsl:text>
                                                         </span>
                                                         <span class="num">
-                                                            <xsl:apply-templates select="TEI:num"/>
+                                                            <xsl:for-each select="TEI:num">
+                                                                <xsl:value-of select="."/>
+                                                                <xsl:if test="following-sibling::TEI:num">
+                                                                    <xsl:choose>
+                                                                        <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                            <xsl:text>, </xsl:text>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                            <xsl:text> og </xsl:text>
+                                                                        </xsl:otherwise>
+                                                                    </xsl:choose>
+                                                                </xsl:if>
+                                                            </xsl:for-each>
                                                         </span>
                                                         <xsl:text> (SJ: </xsl:text>
                                                         <xsl:apply-templates select="@n"/>
@@ -935,6 +947,9 @@
                     <xsl:when test="//TEI:idno[@type='addCom']='1.13'">
                         <xsl:text>, november 2018</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.14'">
+                        <xsl:text>, april 2019</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -989,6 +1004,9 @@
                     <xsl:when test="//TEI:idno[@type='addIntro']='1.13'">
                         <xsl:text>, november 2018</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.14'">
+                        <xsl:text>, april 2019</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -1042,6 +1060,9 @@
                     </xsl:when>
                     <xsl:when test="//TEI:idno[@type='addTxr']='1.13'">
                         <xsl:text>, november 2018</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.14'">
+                        <xsl:text>, april 2019</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </xsl:when>
@@ -1147,6 +1168,9 @@
         </xsl:if>
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.13'">
             <xsl:text>, november 2018</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.14'">
+            <xsl:text>, april 2019</xsl:text>
         </xsl:if>
     </xsl:template>
     
@@ -1754,6 +1778,21 @@
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend]">
+        <xsl:choose>
+            <xsl:when test="@rend='italic'">
+                <span>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi">
