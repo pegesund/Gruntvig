@@ -23,6 +23,8 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@type='webEdition']"/>
+    
     <xsl:template name="listAuthor">
         <xsl:param name="type"/>
         <xsl:choose>
@@ -114,6 +116,14 @@
             </xsl:call-template>
         </span>
     </xsl:template>
+    
+    <xsl:variable name="firstName">
+        <xsl:apply-templates select="TEI:cell[@type='translator']/TEI:cell[@type='firstName']"/>
+    </xsl:variable>
+    
+    <xsl:variable name="lastName">
+        <xsl:apply-templates select="TEI:cell[@type='translator']/TEI:cell[@type='lastName']"/>
+    </xsl:variable>
     
     <xsl:template match="TEI:cell[@type='translator'][position()=1]">
         <xsl:text> overs. </xsl:text>
