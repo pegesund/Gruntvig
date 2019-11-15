@@ -1391,6 +1391,66 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="TEI:body[@rendition='bold']//TEI:hi[@rend]">
+        <xsl:choose>
+            <xsl:when test="@rend='bold'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:body[@rendition='schwab']//TEI:hi[@rend]">
+        <xsl:choose>
+            <xsl:when test="@rend='schwab'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:body[@rendition='size1']//TEI:hi[@rend]">
+        <xsl:choose>
+            <xsl:when test="@rend='size1'">
+                <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='spaced'">
+                <span class="bold">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{@rend}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     <!-- to ord i samme linje START -->
     
     <xsl:template match="TEI:span[@rend='wordBox']">
@@ -1974,8 +2034,7 @@
                         <xsl:text>_</xsl:text>
                         <xsl:value-of select="@n"/>
                     </xsl:attribute>
-                    &#x25BA;
-                    <xsl:apply-templates/>
+                    &#x25BA;<xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:otherwise>
@@ -1995,8 +2054,7 @@
                         <xsl:text>_</xsl:text>
                         <xsl:value-of select="@n"/>
                     </xsl:attribute>                                        
-                    &#x25C4;
-                    <xsl:apply-templates/>
+                    &#x25C4;<xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:otherwise>
@@ -2494,7 +2552,7 @@
     
     <!-- index21 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
+    <!--xsl:template match="TEI:table[@type='index' and @rendition='21']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
                 <td class="index21" rowspan="{@rows}">
@@ -2507,7 +2565,7 @@
                 </td>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:table[@type='index' and @rendition='21']/TEI:row/TEI:cell">
         <xsl:variable name="chp-id">
@@ -2531,10 +2589,14 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="position()&lt;2">
+                <td class="index21">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td class="index21{@rend}">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">                        
-                        <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -2546,7 +2608,7 @@
     
     <!-- index31 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='31']//TEI:cell">
+    <!--xsl:template match="TEI:table[@type='index' and @rendition='31']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
                 <td class="index31" rowspan="{@rows}">
@@ -2559,7 +2621,7 @@
                 </td>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:table[@type='index' and @rendition='31']/TEI:row/TEI:cell">
         <xsl:variable name="chp-id">
@@ -2583,10 +2645,14 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="position()&lt;2">
+                <td class="index31">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td class="index31{@rend}">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">                        
-                        <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -2598,7 +2664,7 @@
     
     <!-- index32 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='32']//TEI:cell">
+    <!--xsl:template match="TEI:table[@type='index' and @rendition='32']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
                 <td class="index32" rowspan="{@rows}">
@@ -2611,7 +2677,7 @@
                 </td>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:table[@type='index' and @rendition='32']/TEI:row/TEI:cell">
         <xsl:variable name="chp-id">
@@ -2635,9 +2701,14 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="position()&lt;6">
+                <td class="index32">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:otherwise>
                 <td class="index32">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -2649,7 +2720,7 @@
     
     <!-- index33 START -->
     
-    <xsl:template match="TEI:table[@type='index' and @rendition='33']//TEI:cell">
+    <!--xsl:template match="TEI:table[@type='index' and @rendition='33']//TEI:cell">
         <xsl:choose>
             <xsl:when test="@rows">
                 <td class="index33" rowspan="{@rows}">
@@ -2661,13 +2732,8 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <!--xsl:otherwise>
-                <td class="index">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:otherwise-->
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:table[@type='index' and @rendition='33']/TEI:row/TEI:cell">
         <xsl:variable name="chp-id">
@@ -2686,6 +2752,11 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            <xsl:when test="position()&gt;4">
+                <td class="index33">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
             <xsl:when test="following-sibling::TEI:seg">
                 <td class="index33" colspan="{@cols}">
                     <xsl:apply-templates/>
@@ -2699,11 +2770,6 @@
                 </td>
             </xsl:otherwise>
         </xsl:choose>
-        <!--<td class="index">
-            <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-\- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-\->
-                <xsl:apply-templates/>
-            </a>
-        </td>-->
     </xsl:template>
     
     <!-- index33 END -->
