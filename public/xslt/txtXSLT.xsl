@@ -72,6 +72,9 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.14'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, april 2019</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.15'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, december 2019</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
