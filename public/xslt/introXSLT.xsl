@@ -94,10 +94,10 @@
     <xsl:template name="rendTitle">
         <xsl:choose>
             <xsl:when test="@rend='main' and not(@rendition) and not(@next) and not(@prev)">
-                <i><xsl:apply-templates/><xsl:call-template name="delimiter"/></i>
+                <i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='main' and @rendition='supp'">
-                <i><xsl:apply-templates/><xsl:call-template name="delimiter"/></i>
+                <i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
                 <xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
