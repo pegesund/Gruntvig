@@ -318,7 +318,7 @@
                                                                             <xsl:text>, </xsl:text>
                                                                         </xsl:when>
                                                                         <xsl:otherwise>
-                                                                            <xsl:text> og </xsl:text>
+                                                                            <xsl:text>, og </xsl:text>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
                                                                 </xsl:if>
