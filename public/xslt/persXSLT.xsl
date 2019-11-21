@@ -93,10 +93,10 @@
                 <xsl:call-template name="name"/>
             </span>
             <span class="gotoName">
-                    <xsl:text> -&gt; </xsl:text>
+                    <xsl:text> &#x2003;&#8594;&#x2003; </xsl:text>
                     <a href="#{parent::tei:row/@xml:id}">
                         <xsl:for-each select="preceding-sibling::tei:cell[@rend='name']">                        
-                            <xsl:call-template name="name"/>                        
+                            <xsl:call-template name="name"/>
                         </xsl:for-each>                
                     </a>
                 </span>
@@ -120,7 +120,7 @@
     -->
     
      <xsl:template match="tei:addName">
-        <span class="addName">
+        <div class="addName">
             <xsl:if test="@type='birthName'">
                 <xsl:text> f. </xsl:text>
                 <xsl:apply-templates/>
@@ -157,7 +157,7 @@
             <xsl:if test="@type='metronym'">
                 <xsl:apply-templates/>
             </xsl:if>
-        </span>
+        </div>
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='year']">
