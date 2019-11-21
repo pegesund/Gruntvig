@@ -16,7 +16,7 @@
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
                 function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
                       if( a.search(/[\u0080-\uffff]/) >= 0 ) {
-                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/[íìïîı]/g,"i").replace(/[óòöô]/g,"o").replace(/[ş]/g,"s").replace(/[Țț]/g,"t").replace(/[Þþ]/g,"t").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[ş]/g,"s").replace(/[Țț]/g,"t").replace(/[Þþ]/g,"t").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
                       }
                       else {
                           return a.toLowerCase();
