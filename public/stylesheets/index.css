@@ -1551,7 +1551,13 @@ span.pbA, span.pbms
 
 #liste .navn
         {        
-        width: 200px;
+        width: 40%;
+        font-size: 16px;
+        }
+
+#liste .gotoName
+        {        
+        width: 40%;
         font-size: 16px;
         }
         
