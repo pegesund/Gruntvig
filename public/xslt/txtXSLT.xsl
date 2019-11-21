@@ -331,7 +331,14 @@
                                                     
                                                     <xsl:when test="starts-with(a,a) and @n">
                                                         <span class="desc2">
-                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:choose>
+                                                                <xsl:when test="TEI:desc/TEI:hi">
+                                                                    <i><xsl:apply-templates select="TEI:desc"/></i>
+                                                                </xsl:when>
+                                                                <xsl:otherwise>
+                                                                    <xsl:apply-templates select="TEI:desc"/>
+                                                                </xsl:otherwise>
+                                                            </xsl:choose>                                                            
                                                             <xsl:text>, </xsl:text>
                                                         </span>
                                                         <span class="num">
@@ -486,7 +493,7 @@
                                     </table>
                                 </div>
                             </xsl:for-each>
-                            
+                        
                             
                             <xsl:if test="//TEI:listWit[@xml:id='pageNumber']/TEI:witness">
                                 <xsl:text>Andre udgaver</xsl:text>
