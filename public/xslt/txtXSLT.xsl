@@ -1182,6 +1182,9 @@
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.14'">
             <xsl:text>, april 2019</xsl:text>
         </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.15'">
+            <xsl:text>, december 2019</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template name="philologist">
