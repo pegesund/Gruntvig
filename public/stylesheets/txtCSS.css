@@ -343,6 +343,12 @@ a.endNoteRef
         {
         margin: 0px 34px;
         }
+                 
+#tekst_innhold .chapterRomanType
+        {
+        margin: 0px 34px;
+        font-family: arial;
+        }
 
 #tekst_innhold .mainColumn
         {
@@ -550,6 +556,11 @@ a.endNoteRef
 #tekst_innhold .italic
         {
         font-style: italic;
+        }
+
+#tekst_innhold .plain
+        {
+        font-style: normal;
         }
 
 #tekst_innhold .spaced

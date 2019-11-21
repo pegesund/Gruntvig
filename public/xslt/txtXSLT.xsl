@@ -1726,7 +1726,9 @@
     
     <!--xsl:template match="TEI:body[@type='TS']//TEI:div"/-->
     
-    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div"> <!--Allow div in div, KK 2014-03-19-->
+    <!--Allow div in div, KK 2014-03-19-->
+    
+    <!--xsl:template match="TEI:body[not(@xml:id)]//TEI:div">
         <div class="chapter">
             <xsl:if test="@type">   
                 <xsl:attribute name="name">
@@ -1740,12 +1742,57 @@
                 <xsl:if test="//TEI:note[@type='marginNote']">
                     <xsl:attribute name="class">mainColumn</xsl:attribute>
                 </xsl:if>
-                <!-- otherwise superfluous div -->
                 <xsl:apply-templates select="node()[local-name()!='div']"/>
                 <xsl:call-template name="footnote"/>
             </div>
         </div>
         <xsl:apply-templates select="TEI:div"/>
+    </xsl:template-->
+    
+    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div">
+        <xsl:choose>
+            <xsl:when test="TEI:body[not(@xml:id) and @style='romanType']//TEI:div">
+                <div class="chapterRomanType">
+                    <xsl:if test="@type">   
+                        <xsl:attribute name="name">
+                            <xsl:for-each select="ancestor::TEI:div">
+                                <xsl:text> &#x2003;</xsl:text>
+                            </xsl:for-each>
+                            <xsl:value-of select="@type"/>
+                        </xsl:attribute> 
+                    </xsl:if>
+                    <div>
+                        <xsl:if test="//TEI:note[@type='marginNote']">
+                            <xsl:attribute name="class">mainColumn</xsl:attribute>
+                        </xsl:if>
+                        <xsl:apply-templates select="node()[local-name()!='div']"/>
+                        <xsl:call-template name="footnote"/>
+                    </div>
+                </div>
+                <xsl:apply-templates select="TEI:div"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="chapter">
+                    <xsl:if test="@type">   
+                        <xsl:attribute name="name">
+                            <xsl:for-each select="ancestor::TEI:div">
+                                <xsl:text> &#x2003;</xsl:text>
+                            </xsl:for-each>
+                            <xsl:value-of select="@type"/>
+                        </xsl:attribute> 
+                    </xsl:if>
+                    <div>
+                        <xsl:if test="//TEI:note[@type='marginNote']">
+                            <xsl:attribute name="class">mainColumn</xsl:attribute>
+                        </xsl:if>
+                        <!-- otherwise superfluous div -->
+                        <xsl:apply-templates select="node()[local-name()!='div']"/>
+                        <xsl:call-template name="footnote"/>
+                    </div>
+                </div>
+                <xsl:apply-templates select="TEI:div"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='marginNote']">
@@ -1829,11 +1876,11 @@
     
     <!-- footnote END -->
     
-    <!--xsl:template match="TEI:hi">
-        <span class="{@rend}">
+    <xsl:template match="TEI:hi[@rend='italic' and @rendition='plain']">
+        <span class="{@rendition}">
             <xsl:apply-templates/>
         </span>
-    </xsl:template-->
+    </xsl:template>
     
     <xsl:template match="TEI:title[@rend='part' or @rend='main']/TEI:hi[@rend and @rendition]">
         <span class="{@rendition}Title">
@@ -1841,19 +1888,19 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:front//TEI:hi[@rend]">
+    <xsl:template match="TEI:front//TEI:hi[@rend and not(@rendition)]">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="//TEI:body[not(@rendition)]//TEI:hi">
+    <xsl:template match="//TEI:body[not(@rendition)]//TEI:hi[@rend and not(@rendition)]">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend]">
+    <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='italic'">
                 <span>
@@ -1868,7 +1915,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi">
+    <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='bold'">
                 <span class="italic">
@@ -1893,7 +1940,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="//TEI:body[@rendition='schwab']//TEI:hi">
+    <xsl:template match="//TEI:body[@rendition='schwab']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='schwab'">
                 <span class="italic">
@@ -1918,7 +1965,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="//TEI:body[@rendition='size1']//TEI:hi">
+    <xsl:template match="//TEI:body[@rendition='size1']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='size1'">
                 <span class="italic">
@@ -1943,32 +1990,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="//TEI:body//TEI:div[@rendition='bold']//TEI:hi">
-        <xsl:choose>
-            <xsl:when test="@rend='bold'">
-                <span class="italic">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@rend='spaced'">
-                <span class="bold">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@rend='italic'">
-                <span class="bold">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="{@rend}">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="//TEI:body//TEI:div[@rendition='schwab']//TEI:hi">
+    <xsl:template match="//TEI:body//TEI:div[@rendition='schwab']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='schwab'">
                 <span class="italic">
@@ -1993,7 +2015,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="//TEI:body//TEI:div[@rendition='size1']//TEI:hi">
+    <xsl:template match="//TEI:body//TEI:div[@rendition='size1']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
             <xsl:when test="@rend='size1'">
                 <span class="italic">
