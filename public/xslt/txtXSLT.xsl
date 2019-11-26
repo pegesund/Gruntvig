@@ -2617,7 +2617,7 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="position()&lt;2">
+            <xsl:when test="position()&lt;4">
                 <td class="index21">
                     <xsl:apply-templates/>
                 </td>
@@ -2673,7 +2673,7 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="position()&lt;2">
+            <xsl:when test="position()&lt;6">
                 <td class="index31">
                     <xsl:apply-templates/>
                 </td>
