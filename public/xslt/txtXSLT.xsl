@@ -2053,9 +2053,7 @@
                 </span>                
             </xsl:when>
             <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
+                <span class="noSeg"><xsl:apply-templates/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -2073,9 +2071,7 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
+                <span class="noSeg"><xsl:apply-templates/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -2088,14 +2084,11 @@
                         <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
                         <xsl:text>_</xsl:text>
                         <xsl:value-of select="@n"/>
-                    </xsl:attribute>                                        
-                    &#x25C4;<xsl:apply-templates/>
+                    </xsl:attribute>&#x25C4;<xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <span class="noSeg">
-                    <xsl:apply-templates/>
-                </span>
+                <span class="noSeg"><xsl:apply-templates/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
