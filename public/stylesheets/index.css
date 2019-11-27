@@ -163,6 +163,12 @@ td, td.shortForm, td.definisjon, td.sjNummer
         }
 */
 
+a.rs_bible
+        {
+        color: black;
+        text-decoration: none;
+        }
+
 td, td.shortForm
         {
         border: 0px solid red;
