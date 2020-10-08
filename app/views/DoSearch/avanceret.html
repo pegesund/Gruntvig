@@ -16,7 +16,7 @@ KK  2015-09-08
         {
          /*background-color: #f8f8f8;
          border: thin solid silver;*/
-         font-size: 16px;
+         font-size: 16px; 
          margin: 0px 12px 0px 0px;
          /*padding: 5px 10px 8px 3px;*/
          line-height: 150%;
@@ -203,7 +203,7 @@ input[type=text]
                 <li><a href="../tidslinje">Tidslinje</a></li>
                 <li><a href="/kort">Kort</a></li>
                 <li><a class="selected" href="./avanceret">Avanceret søgning</a></li>
-                <li><a href="./tools">Flere værktøjer</a></li>
+                <!--li><a href="./tools">Flere værktøjer</a></li-->
             </ul>
         </div>
 
@@ -211,6 +211,16 @@ input[type=text]
 	  <div>
               <form name="advForm" action="avanceret" class="advSearch">
                   <div>
+                      
+                      <!--span class="choice">Søgemaskinen er midlertidigt ude af funktion. Links på resultatlisten ikke giver adgang til de pågældende tekststeder.</span>
+                      
+                      <br/><br/>
+                      
+                      <span class="choice">En løsning er på vej. I mellemtiden henvises brugeren til Clarin-DK, hvor der er oprettet et repositorium med det samlede 
+                            korpus af tekster – både dem, som indtil videre er udgivet i GV, og de resterende, som endnu kun findes i rå, ubehandlet form. 
+                            Materialet kan tilgås her: <a href="http://hdl.handle.net/20.500.12115/31">http://hdl.handle.net/20.500.12115/31</a></span>
+                      
+                      <br/-->
                       
 		    <h4>Søgekategorier</h4>
                     <span class="choice">Grundtvig<input id="grundtvigChk" type="checkbox" name="grundtvig" value="jatak" checked="checked"/></span>
@@ -226,6 +236,7 @@ input[type=text]
 		    <span class="choice">Teologi<input type="checkbox" name="genre" value="5" checked="checked" onclick="unchkall(this)"/></span>
                     -->
                     <div>
+                        
                         <h4>Søgeord</h4>
                         <input id="wordsString" name="words" class="clearSearch" type="text" value="Søgeord" onchange="buildQPS(this)"/>
                         <!--<span class="vejl">Jokertegn, * og ? kan anvendes</span>-->

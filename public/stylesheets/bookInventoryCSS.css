@@ -57,8 +57,9 @@
         font-size: 16px;
         }
 
-#bookinventory table
+#bookinventory table.invent
         {
+        table-layout: fixed;
         border: 1px solid black;
         border-right: 0px solid black;
         border-collapse: collapse;

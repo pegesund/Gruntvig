@@ -1612,9 +1612,13 @@
                             </span>
                         </xsl:if>
                         <xsl:apply-templates select="TEI:rdg[not(@type)]"/>
-                        <xsl:if test="*[@type='add' and not(@subtype)]">
+                        <xsl:if test="TEI:rdg[@type='add' and not(@subtype)]">
                             <xsl:text> </xsl:text>
-                            <xsl:apply-templates select="*[@type='add']"/>
+                            <xsl:apply-templates select="TEI:rdg[@type='add']"/>
+                        </xsl:if>
+                        <xsl:if test="TEI:note[@type='add' and not(@subtype)]">
+                            <xsl:text> </xsl:text>
+                            <i><xsl:apply-templates select="TEI:note[@type='add']"/></i>
                         </xsl:if>
                         <xsl:if test="*[@type='add' and @subtype]">
                             <xsl:text> </xsl:text>
@@ -2563,7 +2567,7 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:when test="position()&lt;4">
+            <xsl:when test="position()&lt;2">
                 <td class="index21">
                     <xsl:apply-templates/>
                 </td>

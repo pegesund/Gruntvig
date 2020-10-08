@@ -360,6 +360,11 @@
                     <xsl:apply-templates/>         
                 </span>
             </xsl:when>
+            <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1839.xml')">
+                <span name="bookinvent" class="docOut">                            
+                    <xsl:apply-templates/>         
+                </span>
+            </xsl:when>
             <xsl:when test="@type='docOut' and contains(@target, 'biblDesc.xml')">
                 <a href="biblio/{@target}" onclick="return blank('biblDesc',this.href)">
                     <xsl:apply-templates/>
@@ -535,6 +540,12 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
+        <span class="bible rs_bible">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:rs[@type='bible']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
                 <span>
@@ -542,12 +553,12 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a class="bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}?content={@key}">
+                <span class="bible rs_bible">
                     <xsl:apply-templates/>
-                </a>
+                </span>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:rs[@type='myth']">
         <xsl:choose>

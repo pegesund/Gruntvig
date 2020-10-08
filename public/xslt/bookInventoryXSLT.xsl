@@ -50,7 +50,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:table">
-        <table>
+        <table class="invent">
             <xsl:apply-templates/>
         </table>
     </xsl:template>

@@ -303,7 +303,14 @@
             </ul>
         </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
             <div class="litList">
-                <xsl:apply-templates/>
+                <ul>
+                    <xsl:for-each select="TEI:item">
+                        <li class="litList">
+                            <xsl:apply-templates/>
+                            <xsl:text>.</xsl:text>
+                        </li>
+                    </xsl:for-each>
+                </ul>
             </div>
         </xsl:if>
         <xsl:if test="@type='litList'">
@@ -463,6 +470,12 @@
     </xsl:template>
     
     <xsl:template match="TEI:rs[@type='bible']">
+        <span class="bible rs_bible">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:rs[@type='bible']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noBible']">
                 <span>
@@ -470,12 +483,12 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a class="bible rs_bible" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                <span class="bible rs_bible">
                     <xsl:apply-templates/>
-                </a>
+                </span>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template-->
     
     <xsl:template match="TEI:rs[@type='myth']">
         <xsl:choose>
@@ -571,6 +584,11 @@
                 </span>
             </xsl:when>
             <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1805.xml')">
+                <span name="bookinvent" class="docOut">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='docOut' and starts-with(@target, 'bookInventory1839.xml')">
                 <span name="bookinvent" class="docOut">
                     <xsl:apply-templates/>
                 </span>
