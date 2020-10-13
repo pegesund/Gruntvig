@@ -1345,10 +1345,30 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="TEI:pubPlace">        
-        <div class="pubPlace">
+    <xsl:template match="TEI:docEdition">
+        <div class="docEdition">
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="//TEI:pubPlace">
+        <xsl:choose>
+            <xsl:when test="//TEI:pubPlace[@rend='right']">                
+                <div class="right">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="//TEI:pubPlace[@rend='left']">                
+                <div class="left">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="pubPlaceHAT">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:docDate">
@@ -1373,9 +1393,28 @@
     </xsl:template>
     
     <xsl:template match="TEI:epigraph">
-        <div class="epigraph">
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="@rend='center'">
+                <div class="epigraphCenter">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='right'">
+                <div class="epigraphRight">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='left'">
+                <div class="epigraphLeft">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="epigraph">
+                    <xsl:apply-templates/>
+                </div>                
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
     <!-- titelblad END -->
@@ -2964,7 +3003,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:graphic">
+    <xsl:template match="TEI:graphic[not(@rend)]">
         <xsl:choose>
             <xsl:when test="@style='blank'">
                 <br/>
@@ -3014,6 +3053,21 @@
             <xsl:when test="@style='shortLine'">
                 <div class="shortLine">
                     <hr align="center" width="8%"/>
+                </div>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:graphic[@style and @rend]">
+        <xsl:choose>
+            <xsl:when test="@style='longLine' and @rend='firstIndentRight'">
+                <div class="firstIndentRight">
+                    <hr align="left" width="16%"/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='shortLine' and @rend='firstIndentRight'">
+                <div class="firstIndentRight">
+                    <hr align="left" width="8%"/>
                 </div>
             </xsl:when>
         </xsl:choose>
@@ -3112,6 +3166,11 @@
     <xsl:template match="TEI:span">
         <xsl:choose>
             <xsl:when test="@rend='2rows'">
+                <span style="font-size:300%">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='3rows'">
                 <span style="font-size:300%">
                     <xsl:apply-templates/>
                 </span>
