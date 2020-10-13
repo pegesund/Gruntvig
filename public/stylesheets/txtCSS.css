@@ -1284,11 +1284,13 @@ a:active.index
 #tekst_innhold div.spaceOne, #tekst_innhold div.centerSpaceOne
         {
         line-height: 200%;
+        text-align: center;
         }
         
 #tekst_innhold div.spaceTwo, #tekst_innhold div.centerSpaceTwo
         {
         line-height: 300%;
+        text-align: center;
         }
 
 /* titlePage START */
@@ -1363,12 +1365,55 @@ a:active.index
         margin: 2em 0em 2em 0em;
         text-align: center;
         }
+        
+#tekst_innhold .docEdition
+        {
+        font-size: 100%;
+        margin: 2em 0em 2em 0em;
+        text-align: center;
+        }
 
 #tekst_innhold .epigraph
         {
         font-size: 80%;
         }
 
+#tekst_innhold .epigraphCenter
+        {
+        text-align: center;
+        font-size: 80%;
+        }
+
+#tekst_innhold .epigraphRight
+        {
+        text-align: right;
+        font-size: 80%;
+        }
+
+#tekst_innhold .epigraphLeft
+        {
+        text-align: left;
+        font-size: 80%;
+        }
+
+#tekst_innhold div.pubPlace
+        {
+        text-align: center;
+        font-size: 80%;
+        }
+
+#tekst_innhold div.left
+        {
+        text-align: left;
+        font-size: 80%;
+        }
+
+#tekst_innhold div.right
+        {
+        text-align: left;
+        font-size: 80%;
+        }
+        
 #tekst_innhold .lg
         {
         line-height: inherit;
