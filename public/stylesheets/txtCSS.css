@@ -113,7 +113,7 @@ ul
         transform: rotate(180deg);
         margin: 0em 0em 0em 0em !important;
         padding: 0em 0em 0em 0em !important;
-        vertical-align: sub;
+        vertical-align: baseline;
         position: relative;        
         }
 

@@ -27,6 +27,7 @@ GET     /myter                                  ShowAsset.mythvisning
 GET     /bibel                                  ShowAsset.biblevisning
 GET     /reg                                    ShowAsset.registrantenvisning
 GET     /bookinvent                             ShowAsset.bookinventoryvisning
+GET     /bookinvent1839                         ShowAsset.bookinventoryvisning1839
 GET     /findAsset/{fileName}                   ShowAsset.findAsset
 GET     /viskort/{fileName}                     Application.viskort
 GET     /kort                                   Application.kort

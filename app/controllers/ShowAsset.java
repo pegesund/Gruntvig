@@ -105,5 +105,11 @@ public class ShowAsset extends Application {
         render(asset);
     }
 
+    
+    public static void bookinventoryvisning1839() {
+        Asset asset = Asset.find("fileName = :fileName").setParameter("fileName", "bookInventory1839.xml").first();
+        render(asset);
+    }
+
      
 }
