@@ -817,7 +817,14 @@ a.endNoteRef
 #tekst_innhold .lgNumber
         {
         font-size: 80%;
-        margin-left: 10px;
+        margin-left: -3em;
+        }
+
+#tekst_innhold .lNumber
+        {
+        color: gray;
+        font-size: 80%;
+        margin-left: -2em;
         }
 
 #tekst_innhold .left
@@ -851,7 +858,7 @@ a.endNoteRef
         
 #tekst_innhold td.lgNumber
         {
-        font-size: 80%;
+        font-size: 100%;
         color: gray;
         width: 10%;
         }
