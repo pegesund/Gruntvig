@@ -74,7 +74,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='title']">
-        <td class="nr">
+        <td class="titleNorm">
             <xsl:apply-templates/>
         </td>
     </xsl:template>
@@ -111,7 +111,13 @@
         </td>
     </xsl:template>
     
-    <!--START cell div type index-->
+    <!--START row / cell div type index-->
+    
+    <xsl:template match="TEI:cell[@type='headLine']">
+        <div class="headLine">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
     
     <xsl:template match="TEI:cell[@type='subject']">
         <td class="nr">
@@ -167,13 +173,25 @@
         </td>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@type='format']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
     <!--END cell div type index-->
     
     <!-- START note 1839 -->
     
-    <xsl:template match="TEI:note[@type='pageNumber']">
-        <td class="titleNorm">
-            <xsl:apply-templates/>
+    <xsl:template match="TEI:note[@type='pageNumber' and not(@rend='encapsulated')]">
+        <td style="color: green">
+            <xsl:text>[s.  </xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:note[@type='pageNumber' and @rend='encapsulated']">
+        <td style="color: blue">
+            <xsl:text>[s.  </xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
         </td>
     </xsl:template>
     
