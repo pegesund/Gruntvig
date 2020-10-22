@@ -79,6 +79,108 @@
         </td>
     </xsl:template>
     
+    <!-- START 1805 -->
+    
+    <xsl:template match="TEI:cell[@type='accessionNumber']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='author']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='place']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='year']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='supplement']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <!--START cell div type index-->
+    
+    <xsl:template match="TEI:cell[@type='subject']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='pageReference']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='folio']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='connector']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='quarto']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='octavo']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='subjectMargin']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='subjectHeader']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='pageContent']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <!--END cell div type index-->
+    
+    <!-- START note 1839 -->
+    
+    <xsl:template match="TEI:note[@type='pageNumber']">
+        <td class="titleNorm">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <!-- END note 1839 -->
+    
+    <!-- END 1839 -->
+    
     <xsl:template match="TEI:cell[@type='add']">
         <td class="nr">
             <xsl:if test="string-length()=0">
