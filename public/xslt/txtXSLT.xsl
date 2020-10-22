@@ -1529,6 +1529,18 @@
         </span>
     </xsl:template>
     
+    <!--xsl:template match="TEI:span[@rend='space']">
+        <span class="space">
+            &#x2003;&#x2003;&#x2003;
+        </span>
+    </xsl:template-->
+    
+    <xsl:template match="TEI:span[@type='editor']">
+        <span style="color: gray">
+            <xsl:text>[Skrevet af </xsl:text><xsl:apply-templates/><xsl:text>] </xsl:text>
+        </span>
+    </xsl:template>
+    
     <!-- to ord i samme linje END -->
     
     <xsl:template match="TEI:lg[@rend='wordBox']">
@@ -1558,16 +1570,38 @@
     </xsl:template>
     
     <xsl:template match="TEI:lg">
-        <table class="lg">            
-            <tr valign="top">
-                <td class="lgNumber">
-                    <xsl:value-of select="@n"/>
-                </td>
-                <td class="lg">
+        <table class="lg">
+            <xsl:for-each select="TEI:l">
+                <tr valign="top">
+                    <td class="lgNumber">
+                        <xsl:if test="position()=1"> <!-- strofenummer ud for første verselinje -->
+                            <xsl:value-of select="parent::TEI:lg/@n"/>
+                        </xsl:if>
+                        <!-- otherwise empty -->
+                    </td>
+                    <td>
+                        <xsl:if test="@n and not(@rend)"> <!-- hvis verset har nummer -->
+                            <span style="color: gray"><xsl:value-of select="@n"/></span>&#x2003; 
+                        </xsl:if>
+                        <!-- otherwise empty -->
+                    </td>
+                    <td class="lg">
+                        <xsl:apply-templates select="."/> <!-- TEI:l -->
+                    </td>
+                </tr>
+            </xsl:for-each>
+        </table>
+    </xsl:template>
+    
+    <xsl:template name="lNumber">
+        <xsl:choose>
+            <xsl:when test="TEI:l[@n and not(@rend)]">
+                <td>
+                    <span style="color: red"><xsl:value-of select="@n"/>&#x2003;</span>
                     <xsl:apply-templates/>
                 </td>
-            </tr>
-        </table>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:l">
@@ -1577,12 +1611,6 @@
             </xsl:when>
             <xsl:when test="not(@rend) and not(@n)">
                 <div class="l_noIndent">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:when test="@n and not(@rend)">
-                <div style="margin-left: -2em">
-                    <span><xsl:value-of select="@n"/>&#x2003;</span>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
