@@ -30,12 +30,19 @@
                         <xsl:value-of select="TEI:head"/>
                     </div>
                     <ul>
-                        <xsl:for-each select="TEI:item">
+                        <xsl:for-each select="TEI:item[(contains(@corresp, 'pdf'))]">
                             <a href="img/{@corresp}" target="_blank" class="reg" onclick="return blank('vejledning',this.href)">
                                 <li class="simple">
                                     <xsl:apply-templates/>
                                 </li>
                             </a>
+                        </xsl:for-each>
+                        <xsl:for-each select="TEI:item[(contains(@corresp, 'http'))]">
+                            
+                            <li class="simple">
+                                <xsl:apply-templates/>
+                            </li>
+                            
                         </xsl:for-each>
                     </ul>
                 </xsl:for-each>
