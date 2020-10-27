@@ -1,6 +1,11 @@
 /* txtCSS.css til styling af tekster */
 /* KSR: 2011.09.05 */
 
+span.uncertain
+        {
+        border-bottom: 1px dotted;
+        }
+
 .highlight
         {
         background: #FFFF40;        
