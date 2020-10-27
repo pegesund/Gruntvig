@@ -7,6 +7,7 @@
   KK 2015-10-06: inkl. genrer i kolonne1_meny
   KK 2015-10-08: [kvalificerende tekst] skal ikke med i sortering
   KK 2017-03-29 deltitler
+  KK 2020-10-27 alfabetisering, aa=å mv.
 -->
 #{extends 'main.html' /}
 #{ header /}
@@ -14,63 +15,105 @@
 <script type="text/javascript">
     
     $(document).ready(function() {
-
-        $('div.root').hide();
-
-        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
-
-        $.each(alphabet, function(index, value) { 
-            var nodes = [];
-            $('div.work').each(function(index2) {
-                var name = $(this).find('span.name').text(),
-                uri= $(this).find('span.uri').text(),
-                rootName= $(this).find('span.rootName').text(),
-                altName= $(this).find('span.altName').text(),
-                partName= $(this).find('span.partName'),
-                splitName= rootName.split( "_" ),
-                year= splitName[0],
-                sj= splitName[1];
-                var firstLetter = name.replace(/\s*\[[^\]]*\]\s*/g,"").charAt(0).toLowerCase();
-                if(firstLetter == value){ 
-                    $(this).hide();
-                    node = '\<!--' + name.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
-                    nodes.push(node);
-                }
-                if( altName ) {
-                    firstLetter = altName.charAt(0).toLowerCase();
-                    if(firstLetter == value){
-                        node = '\<!--' + altName.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href="' + uri + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
-                        nodes.push(node);
-                    }                    
-                }
-                //##########################
-                //console.log(partName.text());
-                if( partName.text().indexOf("<") >= 0 )
-                  partName.html( partName.text() );
-                partName.find('desc').each( function() {
-                  var partLabel= $(this).find('label').text();
-
-                  firstLetter = partLabel.charAt(0).toLowerCase();
-                    if(firstLetter == value){
-                      var partUrl= uri + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
-                          partYear= $(this).find('date').text(),
-                          partSj= $(this).find('idno').text(),
-                          partNode= '\<!--' + partLabel.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase() + '--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
-                      nodes.push(partNode);
-                    }
-                })
-            });
-            nodes = nodes.sort().reverse();
-            $(nodes).each( function(index, value2) {
-                $('#' + value.toUpperCase()).after(value2);
-            });
-        }); 
-
-        var loc = String(document.location);
-        var idx = loc.indexOf('#');
-        var href = (idx > 0) ? loc.substring(idx + 1) : "";
-        if (href) $.scrollTo("#" + href, 500);              
+    
+    $('div.root').hide();
+    
+    alphabet = ['0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+    
+    $.each(alphabet, function(index, value) { 
+    var nodes = [];
+    $('div.work').each(function(index2) {
+    var name = $(this).find('span.name').text(),
+    uri= $(this).find('span.uri').text(),
+    rootName= $(this).find('span.rootName').text(),
+    altName= $(this).find('span.altName').text(),
+    partName= $(this).find('span.partName'),
+    splitName= rootName.split( "_" ),
+    year= splitName[0],
+    sj= splitName[1];
+    if( startsWith(name,value) ){ 
+    $(this).hide();
+    node = '\<!--' + alphabetize( name ) + '--><tr><td class="shortForm"><a href="' + uri + '">' + name + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+    nodes.push(node);
+    }
+    if( altName ) {
+    if( startsWith(altName,value) ){
+    node = '\<!--' + alphabetize( altName ) + '--><tr><td class="shortForm"><a href="' + uri + '">' + altName + '</a></td><td class="definisjon">' + year + '</td><td class="sjNummer">' + sj + '</td></tr>';
+    nodes.push(node);
+    }                    
+    }
+    //##########################
+    //console.log(partName.text());
+    if( partName.text().indexOf("<") >= 0 )
+    partName.html( partName.text() );
+    partName.find('desc').each( function() {
+    var partLabel= $(this).find('label').text();
+    
+    if( startsWith(partLabel,value) ){
+    var partUrl= uri + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+    partYear= $(this).find('date').text(),
+    partSj= $(this).find('idno').text(),
+    partNode= '\<!--' + alphabetize( partLabel ) + '--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+    nodes.push(partNode);
+    }
+    })
     });
+    nodes = nodes.sort().reverse();
+    $(nodes).each( function(index, value2) {
+    $('#' + alphabetize(value)).after(value2);
+    });
+    }); 
+    
+    var loc = String(document.location);
+    var idx = loc.indexOf('#');
+    var href = (idx > 0) ? loc.substring(idx + 1) : "";
+    if (href) $.scrollTo("#" + href, 500);              
+    });
+    
+    function alphabetize( s ) {
+    var zeros= "00000000", //max leading zeros for numbers
+    a= s.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase(), a1, num= [];
+    //remove anything in brackets
+    if( /[0-9]/.test(a) ) {//numbers
+    a1= a.replace( /\d+/g, "¤" );
+    num= a.match( /\d+/g )
+    $(num).each( function(i,v) {
+    a1= a1.replace( "¤", zeros.substr(0,zeros.length-v.length)+v )
+    })
+    a= a1;
+    }
+    if( /[z-\uffff]/.test(a) ) {//diacritics, Danish national letters
+    a= a.replace(/z/g,"z0");
+    a= a.replace(/æ/g,"z1");
+    a= a.replace(/ø/g,"z2");
+    a= a.replace(/å/g,"z3");
+    a= a.replace(/ä/g,"z1");
+    a= a.replace(/ö/g,"z2");
+    a= a.replace(/ü/g,"y");
+    a= a.replace(/é/g,"e");
+    a= a.replace(/è/g,"e");
+    a= a.replace(/ê/g,"e");
+    a= a.replace(/á/g,"a");
+    a= a.replace(/à/g,"a");
+    a= a.replace(/œ/g,"oe");
+    a= a.replace(/ç/g,"c");
+    a= a.replace(/ð/g,"d");
+    a= a.replace(/þ/g,"th"); 
+    }
+    a= a.replace(/aa/g,"z3");
+    return a + ' ';
+    }
+    
+    function startsWith( a, b ){ // first letter of a starts with letter b with respect to alphabetization
+    var aa= alphabetize(a).charAt(0), ba= alphabetize(b).charAt(0); 
+    if( aa=="z" ) {
+    aa= alphabetize(a).substr(0,2);
+    if( ba=="z" ) {
+    ba= alphabetize(b).substr(0,2);
+    }
+    }
+    return aa==ba;
+    }
     
     
 </script>
@@ -100,35 +143,36 @@
             
             <div id="innholdsfortegnelse">
                 
-                <a href="../alfa#A">a</a>                
-                <a href="../alfa#B">b</a>
-                <a href="../alfa#C">c</a>
-                <a href="../alfa#D">d</a>
-                <a href="../alfa#E">e</a>
-                <a href="../alfa#F">f</a>
-                <a href="../alfa#G">g</a>
-                <a href="../alfa#H">h</a>
-                <a href="../alfa#I">i</a>
-                <a href="../alfa#J">j</a>
-                <a href="../alfa#K">k</a>
-                <a href="../alfa#L">l</a>
-                <a href="../alfa#M">m</a>
-                <a href="../alfa#N">n</a>
-                <a href="../alfa#O">o</a>
-                <a href="../alfa#P">p</a>
-                <a href="../alfa#Q">q</a>
-                <a href="../alfa#R">r</a>
-                <a href="../alfa#S">s</a>
-                <a href="../alfa#T">t</a>
-                <a href="../alfa#U">u</a>
-                <a href="../alfa#V">v</a>
-                <a href="../alfa#W">w</a>
-                <a href="../alfa#X">x</a>
-                <a href="../alfa#Y">y</a>
-                <a href="../alfa#Z">z</a>
-                <a href="../alfa#Æ">Æ</a>
-                <a href="../alfa#Ø">Ø</a>
-                <a href="../alfa#Å">Å</a>
+                <a href="../alfa#00000000">1</a>                
+                <a href="../alfa#a">a</a>                
+                <a href="../alfa#b">b</a>
+                <a href="../alfa#c">c</a>
+                <a href="../alfa#d">d</a>
+                <a href="../alfa#e">e</a>
+                <a href="../alfa#f">f</a>
+                <a href="../alfa#g">g</a>
+                <a href="../alfa#h">h</a>
+                <a href="../alfa#i">i</a>
+                <a href="../alfa#j">j</a>
+                <a href="../alfa#k">k</a>
+                <a href="../alfa#l">l</a>
+                <a href="../alfa#m">m</a>
+                <a href="../alfa#n">n</a>
+                <a href="../alfa#o">o</a>
+                <a href="../alfa#p">p</a>
+                <a href="../alfa#q">q</a>
+                <a href="../alfa#r">r</a>
+                <a href="../alfa#s">s</a>
+                <a href="../alfa#t">t</a>
+                <a href="../alfa#u">u</a>
+                <a href="../alfa#v">v</a>
+                <a href="../alfa#w">w</a>
+                <a href="../alfa#x">x</a>
+                <a href="../alfa#y">y</a>
+                <a href="../alfa#z0">z</a>
+                <a href="../alfa#z1">æ</a>
+                <a href="../alfa#z2">ø</a>
+                <a href="../alfa#z3" style="text-transform: none; width:38px;">Å/Aa</a>
             </div>
             
             <div id="liste" class="hideroot">
@@ -153,121 +197,126 @@
                         <td class="definisjon">År</td>
                         <td class="sjNummer" title="Steen Johansen">SJ</td>
                     </tr>
-
-                    <tr class="bottom_border" id="A">
+                    
+                    <tr class="bottom_border" id="00000000">
+                        <td class="shortForm"><h4>1</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    
+                    <tr class="bottom_border" id="a">
                         <td class="shortForm"><h4>A</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="B">
+                    <tr class="bottom_border" id="b">
                         <td class="shortForm"><h4>B</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="C">
+                    <tr class="bottom_border" id="c">
                         <td class="shortForm"><h4>C</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>    
-                    <tr class="bottom_border" id="D">
+                    <tr class="bottom_border" id="d">
                         <td class="shortForm"><h4>D</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="E">
+                    <tr class="bottom_border" id="e">
                         <td class="shortForm"><h4>E</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="F">
+                    <tr class="bottom_border" id="f">
                         <td class="shortForm"><h4>F</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="G">
+                    <tr class="bottom_border" id="g">
                         <td class="shortForm"><h4>G</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="H">
+                    <tr class="bottom_border" id="h">
                         <td class="shortForm"><h4>H</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="I">
+                    <tr class="bottom_border" id="i">
                         <td class="shortForm"><h4>I</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="J">
+                    <tr class="bottom_border" id="j">
                         <td class="shortForm"><h4>J</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="K">
+                    <tr class="bottom_border" id="k">
                         <td class="shortForm"><h4>K</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="L">
+                    <tr class="bottom_border" id="l">
                         <td class="shortForm"><h4>L</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="M">
+                    <tr class="bottom_border" id="m">
                         <td class="shortForm"><h4>M</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="N">
+                    <tr class="bottom_border" id="n">
                         <td class="shortForm"><h4>N</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="O">
+                    <tr class="bottom_border" id="o">
                         <td class="shortForm"><h4>O</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="P">
+                    <tr class="bottom_border" id="p">
                         <td class="shortForm"><h4>P</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Q">
+                    <tr class="bottom_border" id="q">
                         <td class="shortForm"><h4>Q</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="R">
+                    <tr class="bottom_border" id="r">
                         <td class="shortForm"><h4>R</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="S">
+                    <tr class="bottom_border" id="s">
                         <td class="shortForm"><h4>S</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="T">
+                    <tr class="bottom_border" id="t">
                         <td class="shortForm"><h4>T</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="U">
+                    <tr class="bottom_border" id="u">
                         <td class="shortForm"><h4>U</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="V">
+                    <tr class="bottom_border" id="v">
                         <td class="shortForm"><h4>V</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="W">
+                    <tr class="bottom_border" id="w">
                         <td class="shortForm"><h4>W</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="X">
+                    <tr class="bottom_border" id="x">
                         <td class="shortForm"><h4>X</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Y">
+                    <tr class="bottom_border" id="y">
                         <td class="shortForm"><h4>Y</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Z">
+                    <tr class="bottom_border" id="z0">
                         <td class="shortForm"><h4>Z</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Æ">
+                    <tr class="bottom_border" id="z1">
                         <td class="shortForm"><h4>Æ</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Ø">
+                    <tr class="bottom_border" id="z2">
                         <td class="shortForm"><h4>Ø</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
-                    <tr class="bottom_border" id="Å">
-                        <td class="shortForm"><h4>Å</h4></td>
+                    <tr class="bottom_border" id="z3">
+                        <td class="shortForm"><h4 style="text-transform: none">Å/Aa</h4></td>
                         <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
                     </tr>
                 </table>

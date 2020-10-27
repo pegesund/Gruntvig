@@ -4,6 +4,7 @@
   KK 2015-10-06
   KK 2015-10-08: [kvalificerende tekst] skal ikke med i sortering
   KK 2017-03-29 deltitler
+  KK 2020-10-27 alfabetisering, aa=å mv.
 -->
 #{ extends 'main.html' /}
 #{ header /}
@@ -226,7 +227,7 @@
       function sortList( thisSort, col ) {
         var sortArray= [];
         $('#listHead').children('td').each( function() {
-          this.innerHTML= this.innerHTML.replace("▲","");
+          this.innerHTML= this.innerHTML.replace("^","");
         })
         $('.workOnList').each( function() {
           var item= new Object,
@@ -237,7 +238,7 @@
           for( var i= sj.length; i<5; i++ ) {
             sj= "0" + sj;
           }
-          item.sortKey= $(this).find('td.'+col).text().replace(/\s*\[[^\]]*\]\s*/g,"") + sj;
+          item.sortKey= alphabetize( $(this).find('td.'+col).text() ) + sj;
           item.row= $(this);
           sortArray.push( item );
         });
@@ -249,7 +250,40 @@
         for( var i= 0; i<sortArray.length; i++ ) {
           $('#listTail').before( sortArray[i].row );
         }
-        thisSort.innerHTML+= "▲"; // = &#x25B2; 
+        thisSort.innerHTML+= "^"; // = &#x25B2; 
+      }
+      function alphabetize( s ) {
+        var zeros= "00000000", //max leading zeros for numbers
+            a= s.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase(), a1, num= [];
+               //remove anything in brackets
+        if( /[0-9]/.test(a) ) {//numbers
+          a1= a.replace( /\d+/g, "¤" );
+          num= a.match( /\d+/g )
+          $(num).each( function(i,v) {
+            a1= a1.replace( "¤", zeros.substr(0,zeros.length-v.length)+v )
+          })
+          a= a1;
+        }
+        if( /[z-\uffff]/.test(a) ) {//diacritics, Danish national letters
+          a= a.replace(/z/g,"z0");
+          a= a.replace(/æ/g,"z1");
+          a= a.replace(/ø/g,"z2");
+          a= a.replace(/å/g,"z3");
+          a= a.replace(/ä/g,"z1");
+          a= a.replace(/ö/g,"z2");
+          a= a.replace(/ü/g,"y");
+          a= a.replace(/é/g,"e");
+          a= a.replace(/è/g,"e");
+          a= a.replace(/ê/g,"e");
+          a= a.replace(/á/g,"a");
+          a= a.replace(/à/g,"a");
+          a= a.replace(/œ/g,"oe");
+          a= a.replace(/ç/g,"c");
+          a= a.replace(/ð/g,"d");
+          a= a.replace(/þ/g,"th"); 
+        }
+        a= a.replace(/aa/g,"z3");
+        return a + ' ';
       }
       // -->
     </script>
@@ -468,7 +502,7 @@
                 <table>
                     <tr id="listHead">
                         <td  class="shortForm" id="initSort" onclick="sortList(this,'shortForm')" title="Sorter alfabetisk">Titel </td>
-                        <td class="definisjon" onclick="sortList(this,'definisjon')" title="Sorter kronologisk">År </td>
+                      <td class="definisjon" onclick="sortList(this,'definisjon')" title="Sorter kronologisk">År </td>
                         <td class="sjNummer" onclick="sortList(this)" title="Sorter efter nummer">SJ </td>
                     </tr>
                     <tr id="listTail"><td></td></tr>
