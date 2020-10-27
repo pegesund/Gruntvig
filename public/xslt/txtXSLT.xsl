@@ -902,6 +902,17 @@
             </div>
     </xsl:template>
     
+    <xsl:template match="TEI:del">
+        <xsl:choose>
+            <xsl:when test="@type='deleted'">
+                <span title="Oprindelig slettet"><xsl:text>&#x2329;</xsl:text><xsl:apply-templates/><xsl:text>&#x232A;</xsl:text></span>
+            </xsl:when>
+            <xsl:when test="@type='uncertain'">
+                <span class="uncertain" title="Usikker læsning"><xsl:apply-templates/></span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:g">
         <span class="rotate">
             <xsl:apply-templates/>
@@ -1529,11 +1540,11 @@
         </span>
     </xsl:template>
     
-    <!--xsl:template match="TEI:span[@rend='space']">
+    <xsl:template match="TEI:span[@rend='space']">
         <span class="space">
             &#x2003;&#x2003;&#x2003;
         </span>
-    </xsl:template-->
+    </xsl:template>
     
     <xsl:template match="TEI:span[@type='editor']">
         <span style="color: gray">
