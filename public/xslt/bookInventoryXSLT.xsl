@@ -34,7 +34,7 @@
             <xsl:when test="@type='pdf'">
                 <a href="img/{@corresp}" target="_blank" onclick="return blank('vejledning',this.href)">
                     <div>
-                        <xsl:apply-templates/>
+                        <xsl:apply-templates></xsl:apply-templates>
                     </div>
                 </a>
             </xsl:when>
