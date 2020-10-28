@@ -1590,13 +1590,25 @@
                         </xsl:if>
                         <!-- otherwise empty -->
                     </td>
-                    <td>
-                        <xsl:if test="@n"> <!-- hvis verset har nummer -->
-                            <span style="color: gray"><xsl:value-of select="@n"/></span>&#x2003; 
+                    <td class="lgNumber">
+                        <xsl:if test="position()=1"> <!-- strofenummer ud for første verselinje -->
+                            <xsl:value-of select="parent::TEI:lg[@rend='romanType' and @n]/@n"/>
                         </xsl:if>
                         <!-- otherwise empty -->
                     </td>
-                    <td class="lg">
+                    <td>
+                        <xsl:if test="@n and not(@rend)"> <!-- hvis verset har nummer -->
+                            <span style="color: gray"><xsl:value-of select="@n"/>&#x2003;</span> <!-- OBS fjern tilsvarende fra TEI:l template, linje 1594-1599 -->
+                        </xsl:if>
+                        <!-- otherwise empty -->
+                    </td>
+                    <td>
+                        <xsl:if test="@n and @rend"> <!-- hvis verset har nummer -->
+                            <span style="color: gray"><xsl:value-of select="@n"/>&#x2003;</span> <!-- OBS fjern tilsvarende fra TEI:l template, linje 1594-1599 -->
+                        </xsl:if>
+                        <!-- otherwise empty -->
+                    </td>
+                    <td class="lg"> <!-- OBS class allerede på table, nok overflødig her -->
                         <xsl:apply-templates select="."/> <!-- TEI:l -->
                     </td>
                 </tr>
@@ -1604,16 +1616,6 @@
         </table>
     </xsl:template>
     
-    <xsl:template name="lNumber">
-        <xsl:choose>
-            <xsl:when test="TEI:l[@n and not(@rend)]">
-                <td>
-                    <span style="color: red"><xsl:value-of select="@n"/>&#x2003;</span>
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-        </xsl:choose>
-    </xsl:template>
     
     <xsl:template match="TEI:l">
         <xsl:choose>
@@ -1625,6 +1627,12 @@
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
+            <!--xsl:when test="@n and not(@rend)">
+                <div>
+                    <span style="color: red"><xsl:value-of select="@n"/>&#x2003;</span>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when-->
             <xsl:when test="@rend='refrain' or @rend='interRefrain' or @rend='varRefrain' and @rendition">
                 <div class="l_{@rendition}">
                     <xsl:apply-templates/>

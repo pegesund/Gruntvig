@@ -205,6 +205,24 @@
         </td>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@type='condition']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='quality']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='pageContent' and (not(@rend='encapsulated'))]">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
     <xsl:template match="TEI:cell[@type='subjectHeader']">
         <h2>
             <xsl:apply-templates/>
@@ -231,11 +249,21 @@
         </xsl:choose>        
     </xsl:template>
     
-    <xsl:template match="TEI:cell[@type='pageContent' and @rend='encapsulated']"/>
-    
+    <xsl:template match="TEI:cell[@type='pageContent' and @rend='encapsulated']"/>    
     
     
     <!-- END note 1839 -->
+    
+    <!-- START andet 1839 -->
+    
+    <xsl:template match="TEI:del">
+        <span class="del">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    
+    <!-- END andet 1839 -->
     
     <!-- END 1839 -->
     

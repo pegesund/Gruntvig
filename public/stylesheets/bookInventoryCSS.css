@@ -42,23 +42,46 @@
         margin: 1em;
         }
 
-#bookinventory .translator
+#bookinventory span.del
         {
         font-size: 100%;
-        text-align: left;
+        text-decoration: line-through
+        }        
+
+#bookinventory span.lineThrough
+        {
+        font-size: 100%;
+        text-decoration: line-through
+        }        
+
+#bookinventory span.underLine
+        {
+        font-size: 100%;
+        text-decoration: underline
+        }
+        
+#bookinventory .noIndent, #bookinventory .center, #bookinventory .translator
+        {
+        margin: 0.5em 0em 0.5em 0em;
         }
 
 #bookinventory .noIndent
         {
-        font-size: 100%;
+        font-size: 18px;
         text-indent: 0em;
         text-align: justify;
         }
 
 #bookinventory .center
         {
-        font-size: 100%;
+        font-size: 18px;
         text-align: center;
+        }
+
+#bookinventory .translator
+        {
+        font-size: 18px;
+        text-align: left;
         }
 
 #bookInventory tr 

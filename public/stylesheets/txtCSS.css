@@ -866,6 +866,7 @@ a.endNoteRef
         font-size: 100%;
         color: gray;
         width: 10%;
+        text-indent: -3em;
         }
 
 #tekst_innhold td.lg
@@ -1422,7 +1423,7 @@ a:active.index
 
 #tekst_innhold div.right
         {
-        text-align: left;
+        text-align: right;
         font-size: 80%;
         }
         
