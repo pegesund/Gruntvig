@@ -29,6 +29,18 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:ref">
+        <xsl:choose>
+            <xsl:when test="@type='pdf'">
+                <a href="img/{@corresp}" target="_blank" onclick="return blank('vejledning',this.href)">
+                    <div>
+                        <xsl:apply-templates/>
+                    </div>
+                </a>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:p">
         <div class="frontPage">
             <xsl:apply-templates/>
@@ -185,13 +197,13 @@
     
     <xsl:template match="TEI:note[@type='pageNumber' and not(@rend='encapsulated')]">
         <td style="color: green">
-            <xsl:text>[s.  </xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+            <xsl:text>[s.]  </xsl:text><xsl:apply-templates/>
         </td>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='pageNumber' and @rend='encapsulated']">
         <td style="color: blue">
-            <xsl:text>[s.  </xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+            <xsl:text>[s.]  </xsl:text><xsl:apply-templates/>
         </td>
     </xsl:template>
     
