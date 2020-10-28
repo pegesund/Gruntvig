@@ -174,38 +174,34 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='subjectHeader']">
-        <td class="nr">
+        <h2>
             <xsl:apply-templates/>
-        </td>
-    </xsl:template>
-    
-    <xsl:template match="TEI:cell[@type='pageContent']">
-        <td class="nr">
-            <xsl:apply-templates/>
-        </td>
+        </h2>
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='format']">
-        <td class="nr">
+        <h2>
             <xsl:apply-templates/>
-        </td>
+        </h2>
     </xsl:template>
     
     <!--END cell div type index-->
     
     <!-- START note 1839 -->
     
-    <xsl:template match="TEI:note[@type='pageNumber' and not(@rend='encapsulated')]">
-        <td style="color: green">
-            <xsl:text>[s.]  </xsl:text><xsl:apply-templates/>
-        </td>
+    <xsl:template match="TEI:note[@type='pageNumber']">
+        <xsl:choose>
+            <xsl:when test="following-sibling::TEI:row[@type='transcript']/TEI:cell">
+                <td style="color: green">
+                    <xsl:text>[s.]  </xsl:text><xsl:apply-templates/> <xsl:text> blank</xsl:text>
+                </td>
+            </xsl:when>
+        </xsl:choose>        
     </xsl:template>
     
-    <xsl:template match="TEI:note[@type='pageNumber' and @rend='encapsulated']">
-        <td style="color: blue">
-            <xsl:text>[s.]  </xsl:text><xsl:apply-templates/>
-        </td>
-    </xsl:template>
+    <xsl:template match="TEI:cell[@type='pageContent' and @rend='encapsulated']"/>
+    
+    
     
     <!-- END note 1839 -->
     
