@@ -42,17 +42,25 @@
     </xsl:template>
     
     <xsl:template match="TEI:p">
-        <div class="frontPage">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="TEI:p[@rend='translator']">
-        <div class="translator">
-            <xsl:text>(oversat af </xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text>)</xsl:text>
-        </div>
+        <xsl:choose>
+            <xsl:when test="@rend='noIndent'">
+                <div class="noIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='center'">
+                <div class="center">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@rend='translator'">
+                <div class="translator">
+                    <xsl:text>(oversat af </xsl:text>
+                    <xsl:apply-templates/>
+                    <xsl:text>)</xsl:text>
+                </div>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="TEI:hi">
@@ -168,6 +176,30 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='subjectMargin']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='titleStock']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='price']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='booktrader']">
+        <td class="nr">
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="TEI:cell[@type='amount']">
         <td class="nr">
             <xsl:apply-templates/>
         </td>
