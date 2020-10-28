@@ -48,6 +48,19 @@
         text-align: left;
         }
 
+#bookinventory .noIndent
+        {
+        font-size: 100%;
+        text-indent: 0em;
+        text-align: justify;
+        }
+
+#bookinventory .center
+        {
+        font-size: 100%;
+        text-align: center;
+        }
+
 #bookInventory tr 
         {
         padding: 3px;
@@ -72,8 +85,10 @@
 
 #bookinventory tr
         {
-        border-bottom: 0px solid black;
-        border-right: 0px solid black;
+        margin: 0.25em;
+        vertical-align: top;
+        table-layout: fixed;
+        border: none;
         }
 
 #bookinventory td
@@ -88,7 +103,7 @@
         
 #bookinventory td.nr
         {
-        width: 10em
+        width: 10em;
         }
 
 #bookinventory td
@@ -110,6 +125,7 @@
 
 #bookinventory td.titleNorm
         {
+        font-size: 100%;
         width: 30em;
         color: green;
         }
