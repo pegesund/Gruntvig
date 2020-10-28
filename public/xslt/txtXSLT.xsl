@@ -1591,7 +1591,7 @@
                         <!-- otherwise empty -->
                     </td>
                     <td>
-                        <xsl:if test="@n and not(@rend)"> <!-- hvis verset har nummer -->
+                        <xsl:if test="@n"> <!-- hvis verset har nummer -->
                             <span style="color: gray"><xsl:value-of select="@n"/></span>&#x2003; 
                         </xsl:if>
                         <!-- otherwise empty -->
@@ -1984,16 +1984,16 @@
     
     <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
-            <xsl:when test="@rend='italic'">
-                <span>
+            <xsl:when test="@rend='italic' and @rendition='plain'">
+                <span class="plain">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
-            <xsl:otherwise>
-                <span class="{@rend}">
+            <xsl:when test="@rend='plain' and @rendition='italic'">
+                <span class="italic">
                     <xsl:apply-templates/>
                 </span>
-            </xsl:otherwise>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     
