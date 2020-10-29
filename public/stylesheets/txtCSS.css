@@ -842,6 +842,21 @@ a.endNoteRef
         text-indent: 1em;
         }
 
+#tekst_innhold .numberColor
+        {
+        color: gray;
+        }
+
+#tekst_innhold .numberColorFirst
+        {
+        color: red;
+        }
+
+#tekst_innhold .numberFirstIndent
+        {
+        text-indent: 1em;
+        }
+
 #tekst_innhold .l_secondIndent
         {
         text-indent: 2em;
