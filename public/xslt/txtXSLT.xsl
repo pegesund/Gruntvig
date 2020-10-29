@@ -1423,9 +1423,9 @@
             <xsl:otherwise>
                 <div class="epigraph">
                     <xsl:apply-templates/>
-                </div>                
+                </div>
             </xsl:otherwise>
-        </xsl:choose>        
+        </xsl:choose>
     </xsl:template>
     
     <!-- titelblad END -->
@@ -1568,31 +1568,39 @@
     </xsl:template>
     
     <xsl:template match="TEI:lg[@rend='romanType']">
-        <table class="lg">            
-            <tr valign="top">
-                <td class="lgNumber">
-                    <xsl:value-of select="@n"/>
-                </td>
-                <td class="lg">
-                    <span class="romanType"><xsl:apply-templates/></span>
-                </td>
-            </tr>
-        </table>
-    </xsl:template>
-    
-    <xsl:template match="TEI:lg">
         <table class="lg">
             <xsl:for-each select="TEI:l">
                 <tr valign="top">
                     <td class="lgNumber">
-                        <xsl:if test="position()=1"> <!-- strofenummer ud for første verselinje -->
+                        <xsl:if test="position()=1">
                             <xsl:value-of select="parent::TEI:lg/@n"/>
                         </xsl:if>
-                        <!-- otherwise empty -->
                     </td>
-                    <td class="lgNumber">
+                    <td>
+                        <xsl:if test="@n and not(@rend)">
+                            <span class="numberColor"><xsl:value-of select="@n"/>&#x2003;</span>
+                        </xsl:if>
+                    </td>
+                    <!--td>
+                        <xsl:if test="@n and @rend='firstIndent'">
+                            <span class="numberColorFirst"><xsl:value-of select="@n"/>&#x2003;</span>
+                        </xsl:if>
+                    </td-->
+                    <td class="lg"> 
+                        <span class="romanType"><xsl:apply-templates select="."/></span>
+                    </td>
+                </tr>
+            </xsl:for-each>
+        </table>
+    </xsl:template>
+    
+    <xsl:template match="TEI:lg[(not(@rend))]">
+        <table class="lg">
+            <xsl:for-each select="TEI:l">
+                <tr valign="top">
+                    <td>
                         <xsl:if test="position()=1"> <!-- strofenummer ud for første verselinje -->
-                            <xsl:value-of select="parent::TEI:lg[@rend='romanType' and @n]/@n"/>
+                            <xsl:value-of select="parent::TEI:lg/@n"/>
                         </xsl:if>
                         <!-- otherwise empty -->
                     </td>
@@ -1622,11 +1630,23 @@
             <xsl:when test="@rend='blank'">
                 <br/>
             </xsl:when>
-            <xsl:when test="not(@rend) and not(@n)">
+            <xsl:when test="not(@n) and not(@rend)">
                 <div class="l_noIndent">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
+            <xsl:when test="not(@n) and @rend">
+                <div class="l_{@rend}">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            
+            <xsl:when test="@n and @rend='firstIndent'">
+                <div class="numberFirstIndent">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            
             <!--xsl:when test="@n and not(@rend)">
                 <div>
                     <span style="color: red"><xsl:value-of select="@n"/>&#x2003;</span>
