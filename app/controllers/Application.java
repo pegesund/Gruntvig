@@ -90,6 +90,10 @@ public class Application extends Controller {
         render();
     }
 
+    public static void salmer() {
+        render();
+    }
+
     
     // eksempel på en register/leksikon side
     public static void register_side() {
