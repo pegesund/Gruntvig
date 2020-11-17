@@ -1,0 +1,304 @@
+<!--
+  Alfabetisk oversigt over salmernes begyndelseslinjer
+  Grundtvigs værker
+  KK 2020-11-16
+-->
+#{extends 'main.html' /}
+#{ header /}
+
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+    
+    $('div.root').hide();
+    
+    alphabet = ['0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å']
+    
+    $.each(alphabet, function(index, value) { 
+    var nodes = [];
+    $('div.work').each(function(index2) {
+    var
+    uri= $(this).find('span.uri').text(),
+    rootName= $(this).find('span.rootName').text(),
+    partName= $(this).find('span.partName'),
+    splitName= rootName.split( "_" ),
+    year= splitName[0],
+    sj= splitName[1];
+    //##########################
+    //console.log(partName.text());
+    if( partName.text().indexOf("\u003c") >= 0 )
+    partName.html( partName.text() );
+    partName.find('desc').each( function() {
+    var partLabel= $(this).find('label').text();
+    
+    if( startsWith(partLabel,value) ){
+    var partUrl= uri + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+    partYear= $(this).find('date').text(),
+    partSj= $(this).find('idno').text(),
+    partNode= '\<!--' + alphabetize( partLabel ) + '--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+        
+    nodes.push(partNode);
+    }
+    })
+    });
+    nodes = nodes.sort().reverse();
+    $(nodes).each( function(index, value2) {
+    $('#' + alphabetize(value)).after(value2);
+    });
+    }); 
+    
+    var loc = String(document.location);
+    var idx = loc.indexOf('#');
+    var href = (idx > 0) ? loc.substring(idx + 1) : "";
+    if (href) $.scrollTo("#" + href, 500);              
+    });
+    
+    function alphabetize( s ) {
+    var zeros= "00000000", //max leading zeros for numbers
+    a= s.replace(/\s*\[[^\]]*\]\s*/g,"").toLowerCase(), a1, num= [];
+    //remove anything in brackets
+    if( /[0-9]/.test(a) ) {//numbers
+    a1= a.replace( /\d+/g, "¤" );
+    num= a.match( /\d+/g )
+    $(num).each( function(i,v) {
+    a1= a1.replace( "¤", zeros.substr(0,zeros.length-v.length)+v )
+    })
+    a= a1;
+    }
+    if( /[z-\uffff]/.test(a) ) {//diacritics, Danish national letters
+    a= a.replace(/z/g,"z0");
+    a= a.replace(/æ/g,"z1");
+    a= a.replace(/ø/g,"z2");
+    a= a.replace(/å/g,"z3");
+    a= a.replace(/ä/g,"z1");
+    a= a.replace(/ö/g,"z2");
+    a= a.replace(/ü/g,"y");
+    a= a.replace(/é/g,"e");
+    a= a.replace(/è/g,"e");
+    a= a.replace(/ê/g,"e");
+    a= a.replace(/á/g,"a");
+    a= a.replace(/à/g,"a");
+    a= a.replace(/œ/g,"oe");
+    a= a.replace(/ç/g,"c");
+    a= a.replace(/ð/g,"d");
+    a= a.replace(/þ/g,"th"); 
+    }
+    a= a.replace(/aa/g,"z3");
+    return a + ' ';
+    }
+    
+    function startsWith( a, b ){ // first letter of a starts with letter b with respect to alphabetization
+    var aa= alphabetize(a).charAt(0), ba= alphabetize(b).charAt(0); 
+    if( aa=="z" ) {
+    aa= alphabetize(a).substr(0,2);
+    if( ba=="z" ) {
+    ba= alphabetize(b).substr(0,2);
+    }
+    }
+    return aa==ba;
+    }
+    
+    
+</script>
+
+
+<div id="main">
+    
+    <div class="container" id="underside_innhold">
+        
+        <div id="submenu">
+            <div id="breadcrumbs"><a href="#">Forside</a> &raquo; <a href="../krono#">Værker</a> &raquo;  Salmer efter førstelinje</div>
+        </div>
+        
+        <div class="kolonne1">
+            <ul id="kolonne1_meny">
+                <li class="header">Værker</li>
+                <li><a href="/krono">Kronologisk</a></li>
+                <li><a href="/alfa">Alfabetisk</a></li>
+                <li><a href="/genre">Genrer</a></li>
+                <li class="last"><a class="selected" href="/salmer">Salmer</a></li>
+            </ul>
+        </div>
+        
+        <div id="kolonne1_bred">
+            
+            <h1>Værker</h1>
+            
+            <div id="innholdsfortegnelse">
+                
+                <a href="../alfa#a">a</a>
+                <a href="../alfa#b">b</a>
+                <a href="../alfa#c">c</a>
+                <a href="../alfa#d">d</a>
+                <a href="../alfa#e">e</a>
+                <a href="../alfa#f">f</a>
+                <a href="../alfa#g">g</a>
+                <a href="../alfa#h">h</a>
+                <a href="../alfa#i">i</a>
+                <a href="../alfa#j">j</a>
+                <a href="../alfa#k">k</a>
+                <a href="../alfa#l">l</a>
+                <a href="../alfa#m">m</a>
+                <a href="../alfa#n">n</a>
+                <a href="../alfa#o">o</a>
+                <a href="../alfa#p">p</a>
+                <a href="../alfa#q">q</a>
+                <a href="../alfa#r">r</a>
+                <a href="../alfa#s">s</a>
+                <a href="../alfa#t">t</a>
+                <a href="../alfa#u">u</a>
+                <a href="../alfa#v">v</a>
+                <a href="../alfa#w">w</a>
+                <a href="../alfa#x">x</a>
+                <a href="../alfa#y">y</a>
+                <a href="../alfa#z0">z</a>
+                <a href="../alfa#z1">æ</a>
+                <a href="../alfa#z2">ø</a>
+                <a href="../alfa#z3" style="text-transform: none">Aa</a>
+            </div>
+            
+            <div id="liste" class="hideroot">
+                
+                <!--div>Her bygges en kronologisk oversigt!</div-->
+                
+                <div class="root">
+                    #{list play.mvc.Scope.RenderArgs.current().sortedAssets, as:'asset'}
+                    <div class="work">
+                        <span class="uri">@{ShowAsset.tekstvisning(asset.id, 0)}</span>
+                        <span class="rootName">${asset.rootName}</span>
+                        <span class="partName">${asset.getXmlElem( asset.xml, "title", "rend", "hymnForm" )}</span>
+                    </div>
+                    #{/list}
+                </div>
+                
+                <table class="alfa">
+                    <tr>
+                        <td class="shortForm">Begyndelseslinje</td>
+                        <td class="definisjon">År</td>
+                        <td class="sjNummer" title="Steen Johansen">SJ</td>
+                    </tr>
+                    
+                    <tr class="bottom_border" id="a">
+                        <td class="shortForm"><h4>A</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="b">
+                        <td class="shortForm"><h4>B</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="c">
+                        <td class="shortForm"><h4>C</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>    
+                    <tr class="bottom_border" id="d">
+                        <td class="shortForm"><h4>D</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="e">
+                        <td class="shortForm"><h4>E</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="f">
+                        <td class="shortForm"><h4>F</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="g">
+                        <td class="shortForm"><h4>G</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="h">
+                        <td class="shortForm"><h4>H</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="i">
+                        <td class="shortForm"><h4>I</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="j">
+                        <td class="shortForm"><h4>J</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="k">
+                        <td class="shortForm"><h4>K</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="l">
+                        <td class="shortForm"><h4>L</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="m">
+                        <td class="shortForm"><h4>M</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="n">
+                        <td class="shortForm"><h4>N</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="o">
+                        <td class="shortForm"><h4>O</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="p">
+                        <td class="shortForm"><h4>P</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="q">
+                        <td class="shortForm"><h4>Q</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="r">
+                        <td class="shortForm"><h4>R</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="s">
+                        <td class="shortForm"><h4>S</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="t">
+                        <td class="shortForm"><h4>T</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="u">
+                        <td class="shortForm"><h4>U</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="v">
+                        <td class="shortForm"><h4>V</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="w">
+                        <td class="shortForm"><h4>W</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="x">
+                        <td class="shortForm"><h4>X</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="y">
+                        <td class="shortForm"><h4>Y</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="z0">
+                        <td class="shortForm"><h4>Z</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="z1">
+                        <td class="shortForm"><h4>Æ</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="z2">
+                        <td class="shortForm"><h4>Ø</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                    <tr class="bottom_border" id="z3">
+                        <td class="shortForm"><h4 style="text-transform: none">Aa</h4></td>
+                        <td class="returnTop"><a class="returnTop" href="../alfa#" title="til toppen">&#x25B2;</a></td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
