@@ -31,8 +31,8 @@
     <xsl:template match="TEI:table">
         <div class="table">
             <xsl:apply-templates select="TEI:row[@n]/TEI:cell[@rend='name' or @rend='altNameDia' or @rend='altNameSyn']">
-                <xsl:sort lang="da"/>
-                <!--xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅáàäâçðéèëêþíìïîóòöôúùüûýỳÿŷÁÀÄÂÇÐÉÈËÊÞÍÌÏÎÓÒÖÔÚÙÜÛÝỲŸŶ ', 'abcdefghijklmnopqrstuvwxyz{|}{|}aaaacdeeeetiiiioooouuuuyyyyaaaacdeeeetiiiioooouuuuyyyy')"/-->
+                <xsl:sort lang="da" select="translate( normalize-space( text() ), ' ł', '0l' )"/>
+                <!-- sort Danish (aa=å), space first, exclude leading article (<del rend="afterComma">) -->
             </xsl:apply-templates>
         </div>
     </xsl:template>
@@ -40,13 +40,19 @@
     <xsl:template match="TEI:head">
     </xsl:template>
 
-    <!--<xsl:template match="TEI:del[@rend='afterComma']"/>
+    <xsl:template match="TEI:cell" mode="afterComma">
+        <!-- put def. art. after comma, to be called in headers  or references <a> -->
+        <xsl:apply-templates/>
+        <xsl:apply-templates select="TEI:del" mode="afterComma"/>
+    </xsl:template>
+
+    <xsl:template match="TEI:del[@rend='afterComma']"/>
     
     <xsl:template match="TEI:del[@rend='afterComma']" mode="afterComma">
         <xsl:text>, </xsl:text>
-        <xsl:apply-templates/>
+        <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
-    -->
+    
     
     <xsl:template match="TEI:cell[@rend='name']">
         <xsl:param name="copy"/>
@@ -56,10 +62,7 @@
             </xsl:if>
             <span class="placeHeader">
                 <span class="placeName">
-                    <xsl:apply-templates/>
-                    <xsl:call-template name="afterComma"/>
-                    
-                    <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
+                    <xsl:apply-templates select="." mode="afterComma"/> <!-- Header, type 1 -->
                 </span>
                 <xsl:call-template name="comma-sep-list">
                     <xsl:with-param name="l" select="substring(parent::TEI:row/@xml:id,1,3)"/>
@@ -80,8 +83,7 @@
 
     <xsl:template match="TEI:cell[@rend='altNameSyn']" mode="comma-sep">
       <xsl:if test="position()=1"> (</xsl:if>
-      <xsl:apply-templates/>
-        <xsl:apply-templates select="TEI:del[@rend='afterComma']" mode="afterComma"/>
+      <xsl:value-of select="."/>
       <xsl:choose>
           <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')]">
             <xsl:text>, </xsl:text>
@@ -99,7 +101,7 @@
             </xsl:if>
             <i>før </i>
         </xsl:if>
-        <xsl:apply-templates/>
+        <xsl:value-of select="."/>
         <xsl:choose>
             <xsl:when test="following-sibling::TEI:cell[starts-with(@rend,'altName')] and position()!=last()">
                 <xsl:text>, </xsl:text>
@@ -141,7 +143,7 @@
     <xsl:template match="@synch">
         <xsl:text> (</xsl:text>
         <a href="steder#{.}">
-            <xsl:value-of select="//TEI:row[@xml:id=current()]/TEI:cell[@rend='name']"/>
+            <xsl:apply-templates select="//TEI:row[@xml:id=current()]/TEI:cell[@rend='name']" mode="afterComma"/>
         </a>
         <xsl:text>)</xsl:text>
     </xsl:template>
@@ -149,7 +151,7 @@
     <xsl:template match="@select">
         <xsl:text>, </xsl:text><i>se også </i>
         <a href="steder#{.}">
-            <xsl:value-of select="//TEI:row[@xml:id=current()]/TEI:cell[@rend='name']"/>
+            <xsl:apply-templates select="//TEI:row[@xml:id=current()]/TEI:cell[@rend='name']" mode="afterComma"/>
         </a>
     </xsl:template>
     
@@ -226,7 +228,7 @@
         <div class="row">
           <span class="placeHeader">  
             <span class="placeAltName">
-                <xsl:apply-templates/>
+                <xsl:apply-templates select="." mode="afterComma"/> <!-- Header, type 2,3 -->
                 <xsl:choose>
                     <xsl:when test="contains(@rend,'Dia')">
                         <xsl:text>, </xsl:text><i>nu: </i><!--#NHB2012-06-20 rettet fra: nu > (hist.), se:-->
@@ -239,8 +241,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <a href="steder#{parent::TEI:row/@xml:id}">
-                    
-                    <xsl:value-of select="preceding-sibling::TEI:cell[@rend='name']"/>
+                    <xsl:apply-templates select="preceding-sibling::TEI:cell[@rend='name']" mode="afterComma"/>
                 </a>
                 <xsl:text></xsl:text><!-- slettet parentes; altNameSyn skal tilpasses -->
             </span>

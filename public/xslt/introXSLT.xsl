@@ -97,7 +97,7 @@
                 <i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='main' and @rendition='supp'">
-                <i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
+                [<i><xsl:apply-templates/></i>]<xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='main' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
                 <xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates/></i><xsl:call-template name="delimiter"/>
@@ -113,7 +113,7 @@
                 &#x201C;<xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='part' and @rendition='supp'">
-                &#x201C;<xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
+                [&#x201C;<xsl:apply-templates/>&#x201D;]<xsl:call-template name="delimiter"/>
             </xsl:when>
             <xsl:when test="@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af'">
                 &#x201C;<xsl:text>[Anmeldelse af] </xsl:text><xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>

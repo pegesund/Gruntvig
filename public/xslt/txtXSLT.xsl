@@ -75,6 +75,12 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.15'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, december 2019</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.16'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, november 2020</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.17'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2021</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
@@ -1196,6 +1202,12 @@
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.15'">
             <xsl:text>, december 2019</xsl:text>
         </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.16'">
+            <xsl:text>, november 2020</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.17'">
+            <xsl:text>, maj 2021</xsl:text>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template name="philologist">
@@ -1219,6 +1231,12 @@
         <xsl:choose>
             <xsl:when test="//TEI:titleStmt/TEI:editor[@xml:id='LCH']">
                 L.C. Hagen (udg.)
+                <i>
+                    <xsl:apply-templates select="//TEI:title[@rend='main']"/>
+                </i>
+            </xsl:when>
+            <xsl:when test="//TEI:titleStmt/TEI:editor[@xml:id='CJB']">
+                C.J. Brandt (udg.)
                 <i>
                     <xsl:apply-templates select="//TEI:title[@rend='main']"/>
                 </i>
@@ -1423,9 +1441,9 @@
             <xsl:otherwise>
                 <div class="epigraph">
                     <xsl:apply-templates/>
-                </div>
+                </div>                
             </xsl:otherwise>
-        </xsl:choose>
+        </xsl:choose>        
     </xsl:template>
     
     <!-- titelblad END -->
@@ -1598,7 +1616,7 @@
         <table class="lg">
             <xsl:for-each select="TEI:l">
                 <tr valign="top">
-                    <td>
+                    <td class="lgNumber">
                         <xsl:if test="position()=1"> <!-- strofenummer ud for første verselinje -->
                             <xsl:value-of select="parent::TEI:lg/@n"/>
                         </xsl:if>
@@ -2102,7 +2120,7 @@
     
     <xsl:template match="//TEI:body//TEI:div[@rendition='schwab']//TEI:hi[@rend and not(@rendition)]">
         <xsl:choose>
-            <xsl:when test="@rend='schwab'">
+            <xsl:when test="@rend='schwab' or @rend='schwabInitial'">
                 <span class="italic">
                     <xsl:apply-templates/>
                 </span>
@@ -2678,13 +2696,18 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
-            <xsl:otherwise>
+            <xsl:when test="parent::TEI:row[@corresp]">
                 <td class="index21{@rend}">
                     <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
-            </xsl:otherwise>
+            </xsl:when>
+            <xsl:when test="parent::TEI:row[(not(@corresp))]">
+                <td class="index21{@rend}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     

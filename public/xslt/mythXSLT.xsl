@@ -45,8 +45,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                   <!-- standardpost -->
-                <xsl:apply-templates
-                  select="TEI:cell[@rend='encyc']"/>
+                <xsl:apply-templates select="TEI:cell[@rend='encyc']"/>
                 <xsl:call-template name="orthography"/>
                 <xsl:if
                   test="//TEI:row[@sameAs=current()/@xml:id and TEI:cell[@rend='saxo']]">
@@ -172,6 +171,11 @@
     <xsl:template match="TEI:cell[@rend='popUp' or @rend='encyc']">
         <div class="{@rend}">
             <xsl:apply-templates/>
+            <xsl:choose>
+                <xsl:when test="TEI:cell[@rend='popUp' or @rend='encyc']/TEI:addName[@type='patronym']">
+                    <xsl:value-of select="."/>
+                </xsl:when>
+            </xsl:choose>
         </div>
     </xsl:template>
     
