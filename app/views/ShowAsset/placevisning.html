@@ -14,12 +14,12 @@
                 $('div.root').hide();
                 
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
-                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07, 2020-11-11
                       if( a.search(/[\u0080-\uffff]/) >= 0 ) {
-                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[ş]/g,"s").replace(/[Țț]/g,"t").replace(/[Þþ]/g,"t").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                          return a.toLowerCase().replace(/[áàâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/[íìïî]/g,"i").replace(/[óòô]/g,"o").replace(/[ş]/g,"s").replace(/[ś]/g,"s").replace(/[Țț]/g,"t").replace(/[Þþ]/g,"t").replace(/[úùû]/g,"u").replace(/[ýỳÿŷü]/g,"y").replace(/[æä]/g,"{").replace(/[øö]/g,"|").replace(/(å|aa)/g,"}");
                       }
                       else { 
-                          return a.toLowerCase();
+                          return a.toLowerCase().replace(/aa/g,"}");
                           }
                 }
                 
@@ -29,9 +29,8 @@
                        
                         nodes = [];
                         $('div.row').not("div.row > div.row").each(function(index2) {
-                    
                             name = $.trim($(this).find('span.placeAltName,span.placeName').first().text());
-                            firstLetter = normAlfa( name.charAt(0) ); 
+                            firstLetter = normAlfa( name ).charAt(0); 
                             //alert(firstLetter);
                             //if( name.search(/me/) > 0 ) alert( firstLetter + firstLetter.toLowerCase() + normAlfa(firstLetter) + firstLetter.charCodeAt(0) + " " + name );
                             
@@ -115,7 +114,7 @@
 				<li><a class="selected" href="../steder">Stedregister</a></li>
                                 <li class=""><a href="../bibel">Bibelstedsregister</a></li>
                                 <li class=""><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
-                                <li class="last"><a class="" href="../bookinvent1839">Bogfortegnelse 1839</a></li>
+                                <li class="last"><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
 		</ul>
 
 	</div>
@@ -350,4 +349,3 @@
 
 	</div>
 </div>
-
