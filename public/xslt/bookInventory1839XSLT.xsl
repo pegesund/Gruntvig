@@ -2,30 +2,22 @@
 <xsl:stylesheet xmlns:TEI="http://www.tei-c.org/ns/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-    <!-- KSR: 2011.05.11 -->
-    <!-- NHB: 2013.01.02 -->
+<!-- KSR: 2011.05.11 -->
 
     <xsl:template match="TEI:TEI">
-
-        <html>
-            <head>
-                 <link rel="stylesheet" href="https://prometheus.statsbiblioteket.dk/gvData/css/bookInventory1839CSS.css" type="text/css"/>
-                <title>
-                    <xsl:apply-templates
-                        select="TEI:teiHeader/TEI:text/TEI:body/TEI:div[@type=starts-with(current(), 'bookInventory')]"/>
-                </title>
-            </head>
-            <body>
-                <xsl:apply-templates select="TEI:text"/>
-            </body>
-        </html>
-
+        
+        <div id="bookinventory">
+            <xsl:apply-templates select="TEI:text"/>
+        </div>
+        
     </xsl:template>
-
+    
     <xsl:template match="TEI:head[@type='bookInventory']">
+        
         <div class="bookInventory">
             <xsl:apply-templates/>
         </div>
+        
         <div class="kbSignatur">
             <xsl:text>Det Kongelige Bibliotek,</xsl:text>
         </div>
@@ -34,23 +26,13 @@
             <xsl:value-of select="//TEI:title[@key='KBsKatalogsignatur']"/>
         </div>
     </xsl:template>
-
+    
     <xsl:template match="TEI:p">
-        <xsl:if test="preceding::TEI:div[@type='bookInventory']">
-            <div class="frontPage">
-                <xsl:apply-templates/>
-            </div>
-        </xsl:if>
-        <xsl:if test="preceding::TEI:div[@type='bookInventory1839']">
-            <p class="{@rend}">
-                    <xsl:apply-templates/>
-                </p>
-        </xsl:if>
+        <div class="frontPage">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
-    <xsl:template match="TEI:lb">
-        <br/>
-    </xsl:template>
-
+    
     <xsl:template match="TEI:p[@rend='translator']">
         <div class="translator">
             <xsl:text>(oversat af </xsl:text>
@@ -58,19 +40,19 @@
             <xsl:text>)</xsl:text>
         </div>
     </xsl:template>
-
+    
     <xsl:template match="TEI:hi">
         <span class="{@rend}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-
+    
     <xsl:template match="TEI:table">
-        <table>
+        <table class="invent">
             <xsl:apply-templates/>
         </table>
     </xsl:template>
-
+    
     <xsl:template match="TEI:head">
         <div class="{@rend}">
             <xsl:apply-templates/>

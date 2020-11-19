@@ -243,7 +243,7 @@
         <xsl:choose>
             <xsl:when test="following-sibling::TEI:row[@type='transcript']/TEI:cell">
                 <td style="color: green">
-                    <xsl:text>[s.]  </xsl:text><xsl:apply-templates/> <xsl:text> blank</xsl:text>
+                    <xsl:text>[s.]  </xsl:text><xsl:apply-templates/> <xsl:text> [blank]</xsl:text>
                 </td>
             </xsl:when>
         </xsl:choose>        
