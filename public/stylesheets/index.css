@@ -2154,9 +2154,9 @@ span.partTitle, span.translatedTitle
 }
 
  
- div.placeContent { visibility: hidden; }
+/* div.placeContent { visibility: hidden; }
  
- div.placeContent .explanation { visibility: hidden }
+ div.placeContent .explanation { visibility: hidden } */
 
  .docOut 
         {

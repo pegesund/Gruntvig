@@ -552,7 +552,7 @@ a.endNoteRef
         font-size: 120%;
         }
 
-#tekst_innhold .initialSpaced
+#tekst_innhold .schwabInitial
         {
         font-style: italic;
         font-size: 120%;
@@ -586,6 +586,11 @@ a.endNoteRef
 #tekst_innhold .schwab
         {
         font-weight: bold;
+        }
+
+#tekst_innhold .schwabInitial
+        {
+        font-style: italic;
         }
 
 #tekst_innhold .size1
