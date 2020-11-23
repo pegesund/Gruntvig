@@ -36,7 +36,7 @@
     var partUrl= uri + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
     partYear= $(this).find('date').text(),
     partSj= $(this).find('idno').text(),
-    partNode= '\<!--' + alphabetize( partLabel ) + '--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
+    partNode= '\<!--' + alphabetize( partLabel ) + rootName +'--><tr><td class="shortForm"><a href=\'' + partUrl + '\'>' + partLabel + '</a></td><td class="definisjon">' + (partYear?partYear:year) + '</td><td class="sjNummer">' + (partSj?partSj:sj) + '</td></tr>';
         
     nodes.push(partNode);
     }
