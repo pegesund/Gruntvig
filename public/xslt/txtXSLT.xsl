@@ -2043,7 +2043,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend and not(@rendition)]">
+    <xsl:template match="TEI:body[@rendition='noFormat']//TEI:hi[@rend]">
         <xsl:choose>
             <xsl:when test="@rend='italic' and @rendition='plain'">
                 <span class="plain">
@@ -2052,6 +2052,11 @@
             </xsl:when>
             <xsl:when test="@rend='plain' and @rendition='italic'">
                 <span class="italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='initial'">
+                <span class="initial">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
