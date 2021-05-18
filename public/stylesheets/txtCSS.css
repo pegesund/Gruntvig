@@ -63,7 +63,7 @@ ul
 
 #tekst_innhold a.footMarker 
         {
-        font-size: 80%;
+        font-size: 12px;
         text-decoration: none;
         vertical-align: baseline;
         position: relative;
@@ -327,8 +327,9 @@ ul
         
 #tekst_innhold .footnote
         {
+        color: red;
         font-size: 80%;
-        margin: 1em 0em 1em 2em;
+        margin: 0em 0em 0em 0em;
         }
         
 a.endNoteRef
@@ -549,6 +550,12 @@ a.endNoteRef
 #tekst_innhold .initial
         {
         font-style: normal;
+        font-size: 120%;
+        }
+
+#tekst_innhold .italic > .initial
+        {
+        font-style: italic;
         font-size: 120%;
         }
 
@@ -1233,6 +1240,12 @@ a:active.index
         }
 
 #tekst_innhold .pbA, .pbGskv, .pbGSV, .pbSS
+        {
+        font-size: 80%;
+        color: #008000;
+        }
+
+#tekst_innhold .pbSV, .pbGSV1, .pbGSV2, .pbGSV3, .pbGSV4, .pbGSV5
         {
         font-size: 80%;
         color: #008000;
