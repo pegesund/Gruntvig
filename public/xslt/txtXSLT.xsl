@@ -338,7 +338,7 @@
                                                                             <xsl:text>, </xsl:text>
                                                                         </xsl:when>
                                                                         <xsl:otherwise>
-                                                                            <xsl:text>, og </xsl:text>
+                                                                            <xsl:text> og </xsl:text>
                                                                         </xsl:otherwise>
                                                                     </xsl:choose>
                                                                 </xsl:if>
@@ -934,9 +934,19 @@
     </xsl:template>
     
     <xsl:template match="TEI:g">
-        <span class="rotate">
-            <xsl:apply-templates/>
-        </span>
+        <xsl:choose>
+            <xsl:when test="@rend='reverse' and @rendition='rotate'">
+                <span class="rotate">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='start' and @rendition='repeat'">
+                <span>//:</span>
+            </xsl:when>
+            <xsl:when test="@rend='end' and @rendition='repeat'">
+                <span>://</span>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template name="dateAddCom">
@@ -1922,6 +1932,7 @@
                                 <xsl:text> &#x2003;</xsl:text>
                             </xsl:for-each>
                             <xsl:value-of select="@type"/>
+                            <!-- &#x2003;<xsl:value-of select="TEI:pb[@type='text']/@n[position()=1]"/> -->
                         </xsl:attribute> 
                     </xsl:if>
                     <div>
@@ -1970,22 +1981,22 @@
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="retur{$id}" href="#note{$id}" class="footMarker">
-            <span>
+        <span>
+            <a id="retur{$id}" href="#note{$id}" class="footMarker">
                 <xsl:value-of select="$id"/>
-            </span>
-        </a>
+            </a>
+        </span>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='footnote']" mode="foot">
         <xsl:variable name="id">
             <xsl:number count="TEI:note[@type='footnote']" level="any" from="TEI:text"/>
         </xsl:variable>
-        <a id="note{$id}" href="#retur{$id}" class="footMarker">
-            <span>
+        <span>
+            <a id="note{$id}" href="#retur{$id}" class="footMarker">
                 <xsl:value-of select="$id"/>
-            </span>
-        </a>
+            </a>
+        </span>
         <span class="footnote">
             <xsl:apply-templates/>
         </span>
