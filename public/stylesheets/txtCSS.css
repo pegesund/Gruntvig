@@ -67,7 +67,7 @@ ul
         text-decoration: none;
         vertical-align: baseline;
         position: relative;
-        top: -0.4em;
+        top: 0.4em;
         }
 
 /* fodnoter END */
@@ -173,6 +173,13 @@ ul
         font-size: 16px;
         }
 
+#tekst_innhold .descA2
+        {
+        font-style: italic;
+        font-size: 16px;
+        text-indent: -1em;
+        }
+
 #tekst_innhold .descList
         {
         font-style: italic;
@@ -196,6 +203,12 @@ ul
         {
         text-align: left;
         width: 30em;
+        }
+        
+#tekst_innhold td.air
+        {
+        text-align: left;
+        width: 2em;
         }
 
 /* kolofonblad end 
@@ -327,7 +340,6 @@ ul
         
 #tekst_innhold .footnote
         {
-        color: red;
         font-size: 80%;
         margin: 0em 0em 0em 0em;
         }
@@ -403,6 +415,14 @@ a.endNoteRef
         {
         text-indent: -1em;
         padding-left: 1em;
+        text-align: justify;
+        }
+
+#tekst_innhold .firstHangingIndent
+        {
+        text-indent: 1em;
+        padding-left: 1em;
+        text-align: justify;
         }
 
 /* grapic START */

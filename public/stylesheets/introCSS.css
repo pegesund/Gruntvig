@@ -297,7 +297,8 @@
 
 .innledningContent li
         {
-        font-size: 90%;
+        font-size: 12px;
+        margin: 1em;
         }
 
 .innledningContent .litList, .innledningContent .webList

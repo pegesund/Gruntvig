@@ -349,6 +349,33 @@
                                                         <xsl:text>)</xsl:text> 
                                                     </xsl:when>
                                                     
+                                                    
+                                                    <xsl:when test="@xml:id='A2'">
+                                                        <span class="desc">
+                                                            <xsl:apply-templates select="TEI:desc"/>
+                                                            <xsl:text>, </xsl:text>
+                                                        </span>
+                                                        <span class="num">
+                                                            <xsl:for-each select="TEI:num">
+                                                                <xsl:value-of select="."/>
+                                                                <xsl:if test="following-sibling::TEI:num">
+                                                                    <xsl:choose>
+                                                                        <xsl:when test="following-sibling::TEI:num[position()!=last()]">
+                                                                            <xsl:text>, </xsl:text>
+                                                                        </xsl:when>
+                                                                        <xsl:otherwise>
+                                                                            <xsl:text> og </xsl:text>
+                                                                        </xsl:otherwise>
+                                                                    </xsl:choose>
+                                                                </xsl:if>
+                                                            </xsl:for-each>
+                                                        </span>
+                                                        <xsl:text> (SJ: </xsl:text>
+                                                        <xsl:apply-templates select="@n"/>
+                                                        <xsl:text>)</xsl:text> 
+                                                    </xsl:when>
+                                                    
+                                                    
                                                     <xsl:when test="starts-with(a,a) and @n">
                                                         <span class="desc2">
                                                             <xsl:choose>
@@ -509,6 +536,7 @@
                                                     </xsl:when>
                                                 </xsl:choose>
                                             </td>
+                                            
                                         </tr>
                                     </table>
                                 </div>
@@ -1656,6 +1684,14 @@
         </table>
     </xsl:template>
     
+    <xsl:template match="TEI:note[@type='footnote']/TEI:p/TEI:lg">
+        <span class="footnote">
+            <xsl:for-each select="TEI:l">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each>
+        </span>
+    </xsl:template>
+    
     <!--<xsl:template match="TEI:lg">
         <table class="lg">            
             <tr valign="top">
@@ -2263,6 +2299,12 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <!--xsl:template match="TEI:p[@rend='firstHangingIndent']">        
+        <div class="firstHangingIndent">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template-->
     
     <xsl:template match="TEI:p[@rend='hangingIndentPro' and not(@n)]">        
         <div class="hangingIndentPro">

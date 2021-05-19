@@ -301,13 +301,15 @@
                     </li>
                 </xsl:for-each>
             </ul>
-        </xsl:if><xsl:if test="@type='addendon' or @type='webList'">
+        </xsl:if>
+        <xsl:if test="@type='addendon' or @type='webList'">
             <div class="litList">
                 <ul>
                     <xsl:for-each select="TEI:item">
-                        <li class="litList">
-                            <xsl:apply-templates/>
-                            <xsl:text>.</xsl:text>
+                        <li class="liOrdered">
+                            <a href="{@target}" target="_blank">                
+                                <xsl:apply-templates/>                
+                            </a>
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -334,20 +336,18 @@
     </xsl:template>
     
     <xsl:template match="TEI:item[@n]">
-        <ul>
-            <li class="litList">
-                <a href="{@target}">
-                    <xsl:apply-templates/>
-                </a>
-                <xsl:text> (</xsl:text>
-                <xsl:number value="substring(@n, 9,2)" format="1"/>
-                <xsl:text>. </xsl:text>
-                <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="substring(@n, 1,4)"/>
-                <xsl:text>)</xsl:text>
-            </li>
-        </ul>
+        <li class="liOrdered">
+            <a href="{@target}" target="_blank">                
+                <xsl:apply-templates/>                
+            </a>
+            <xsl:text> (</xsl:text>
+            <xsl:number value="substring(@n, 9,2)" format="1"/>
+            <xsl:text>. </xsl:text>
+            <xsl:value-of select="substring('&month;',substring(@n,6,2)*10+1,9)"/>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring(@n, 1,4)"/>
+            <xsl:text>).</xsl:text>
+        </li>
     </xsl:template>
     
     <xsl:template match="TEI:note[@type='sic']">
