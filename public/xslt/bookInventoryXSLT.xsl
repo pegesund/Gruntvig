@@ -81,10 +81,16 @@
         </div>     
     </xsl:template>
     
-    <xsl:template match="TEI:row">
+    <xsl:template match="TEI:row[not(@type='pageNumber')]">
         <tr class="row" id="{@xml:id}">
             <xsl:apply-templates/>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="TEI:row[@type='pageNumber']/TEI:cell">
+        <td>
+            <xsl:text>s. </xsl:text><xsl:apply-templates/>
+        </td>
     </xsl:template>
     
     <xsl:template match="TEI:cell[@type='nr']">

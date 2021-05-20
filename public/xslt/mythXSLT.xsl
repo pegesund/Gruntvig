@@ -15,14 +15,14 @@
         <div>
             <xsl:apply-templates select="//TEI:row">
                 <xsl:sort lang="da"/>
-                    <!--xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epithet'], TEI:cell[@rend='latin'], TEI:cell[@rend='greek'], TEI:cell[@rend='pseudoEpithet']), 'æøåÆØÅ', '{|}{|}')"/-->
+                    <!--xsl:sort select="translate(concat(TEI:cell[@rend='normForm'], TEI:cell[@rend='epi thet'], TEI:cell[@rend='latin'], TEI:cell[@rend='greek'], TEI:cell[@rend='pseudo Epithet']), 'æøåÆØÅ', '{|}{|}')"/-->
             </xsl:apply-templates>
         </div>
     </xsl:template>
        
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
-          <xsl:apply-templates select="TEI:cell[1]"/> <!-- indgang: normForm, epithet, e.lign. standardpost -->
+          <xsl:apply-templates select="TEI:cell[1]"/> <!-- indgang: normForm, epi thet, e.lign. standardpost -->
           <xsl:apply-templates select="TEI:cell[@rend='popUp']"/>    <!-- immediately displayed pop-up text -->
           <xsl:if
             test="TEI:cell[@rend='encyc' or @rend='orthography'] or //TEI:row[@sameAs=current()/@xml:id] or not(TEI:cell[@rend='normForm'])">
@@ -180,7 +180,7 @@
     </xsl:template>
     
     <xsl:template match="TEI:cell[@rend='epithet' or @rend='latin' or @rend='greek' or @rend='pseudoEpithet' or @rend='saxo']"> <!-- referencepost -->
-        <div class="{@rend} popUp">
+        <div>
             <xsl:variable name="sameAs" select="../@sameAs"/>
             <xsl:apply-templates/>
             <span class="sameAs">
