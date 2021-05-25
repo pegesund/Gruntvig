@@ -65,8 +65,8 @@ ul
         {
         font-size: 12px;
         text-decoration: none;
-        vertical-align: baseline;
-        position: relative;
+        vertical-align: super;
+/*      position: relative;   */
         top: 0.4em;
         }
 
