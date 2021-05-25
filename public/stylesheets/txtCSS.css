@@ -52,7 +52,7 @@ ul
 #tekst_innhold li.noDot
         {
         list-style-type: none;
-        text-indent: -1.1em;
+        text-indent: -1em;
         }
 
 /* list END */
