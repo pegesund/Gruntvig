@@ -16,7 +16,7 @@ span.uncertain
         background: #FFFF40;        
         }
         
-/*  list START */
+/*  list START  */
 
 ul      
         {
@@ -52,7 +52,7 @@ ul
 #tekst_innhold li.noDot
         {
         list-style-type: none;
-        text-indent: -1em;
+        text-indent: -1.1em;
         }
 
 /* list END */
