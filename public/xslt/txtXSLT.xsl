@@ -1258,7 +1258,7 @@
             <xsl:text>, november 2020</xsl:text>
         </xsl:if>
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.17'">
-            <xsl:text>, maj 2021</xsl:text>
+            <xsl:text>, juni 2021</xsl:text>
         </xsl:if>
     </xsl:template>
     
