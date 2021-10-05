@@ -14,27 +14,32 @@
                 $('div.root').hide();
                 
                 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','æ','ø','å'];
-                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2014.10.07
+                function normAlfa( a ) { // normalise names to lower case without diacritical marks etc., KK 2021-09-15
                       if( a.search(/[\u0080-\uffff]/) >= 0 ) {
-                          return a.toLowerCase().replace(/[áàäâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"t").replace(/[íìïî]/g,"i").replace(/[óòöô]/g,"o").replace(/[úùüû]/g,"u").replace(/[ýỳÿŷ]/g,"y").replace(/æ/g,"{").replace(/ø/g,"|").replace(/å/g,"}");
+                          return a.toLowerCase().replace(/[áàâ]/g,"a").replace(/ç/g,"c").replace(/ð/g,"d").replace(/[éèëê]/g,"e").replace(/þ/g,"th").replace(/[íìïî]/g,"i").replace(/[óòô]/g,"o").replace(/œ/g,"oe").replace(/[úùû]/g,"u").replace(/[ýỳÿŷü]/g,"y").replace(/[æä]/g,"{").replace(/[øö]/g,"|").replace(/å/g,"}");
                       }
                       else { 
-                          return a.toLowerCase();
+                          return a.toLowerCase().replace(/aa/g,"}");
                           }
                 }
                 
                 $.each(alphabet, function(index, value) { 
                         var nodes = [];
                         $('div.person').each(function(index2) {
-                            name = $(this).find('span.name').text();
+                            //name = $(this).find('span.name').text();
                             htmlName=  $(this).find('span.name').html();
-                            // alert("Adding: " + name);
-                            firstLetter = normAlfa(name.charAt(0));
+                            pre= $(this).find('span.pre').text();
+                            if( pre ) pre= pre.replace(/(^| )/g,'-');
+                            name = htmlName.replace(/^\s*/,'').replace(/\x3cspan class="pre">[^\x3c]*\x3c\/span> */,'').replace(/\x3c[^>]*>/g,'');
+                            // (\x3c=venstrehak) skip leading spaces, remove prepositions, remove all tags
+                            if( pre ) name= name.replace(/(^[^,]+)/,'$1'+pre);
+                            // alert("Adding: " + value + " " + name);
+                            firstLetter = normAlfa(name).charAt(0);
                             if(firstLetter == normAlfa(value)){ 
                                 $(this).hide();
                                 year = $(this).find('.row span.year').text() + ', '; 
                                 if( year == ', ') { year = '';};
-                                var addName = $(this).find('.row span.addName').not($('span span')).text();
+                                var addName = $(this).find('.row span.addName').not($('span span')).text();
                                 nation = $(this).find('.row span.nation').text();
                                 about = $(this).find('.row span.encyk').html();
                                 if ($(this).find(".altName").length > 0) {
@@ -44,7 +49,7 @@
                                     var id = $(this).attr("id");
                                     node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + htmlName + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
                                 }
-                                $(this).attr("id", "");
+                                $(this).remove(); // Letter found, don't test for this person again
                                 nodes.push(node);
                             }
                         });
