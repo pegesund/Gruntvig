@@ -58,12 +58,8 @@
         <xsl:apply-templates select="tei:cell[@rend='altName']"/>
     </xsl:template>    
     
-    <xsl:template match="tei:note[@type='firstName']">
+    <xsl:template match="tei:note[@type='firstName' or @type='lastName']">
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='original']"/><!--  and @type!='patronym' and @type!='metronym' -->
-    </xsl:template>
-    
-    <xsl:template match="tei:note[@type='lastName']">
-        <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName' and @type!='orthography' and @type!='original']"/>
     </xsl:template>
     
     <xsl:template match="tei:cell[@rend='name']">
@@ -104,12 +100,21 @@
       </div>      
     </xsl:template>
 
-    <xsl:template name="name">        
-        <xsl:if test="tei:note[@type='lastName']">
+    <xsl:template name="name">
+      <xsl:choose>
+        <xsl:when test="@rendition='icelandic'">
+          <xsl:apply-templates select="tei:note[@type='firstName']"/>
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates select="tei:note[@type='lastName']"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:if test="tei:note[@type='lastName']">
             <xsl:apply-templates select="tei:note[@type='lastName']"/>
             <xsl:text>, </xsl:text>
-        </xsl:if>
-        <xsl:apply-templates select="tei:note[@type='firstName']"/>
+          </xsl:if>
+          <xsl:apply-templates select="tei:note[@type='firstName']"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
     
     <!--
@@ -118,48 +123,57 @@
         <xsl:apply-templates select="text()|tei:hi|tei:addName[@type!='birthName' and @type!='ladyName']"/>
     </xsl:template>
     -->
-    
-     <xsl:template match="tei:addName">
-        <div class="addName">
-            <xsl:if test="@type='birthName'">
-                <xsl:text> f. </xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>, </xsl:text>                
-            </xsl:if>
-            <xsl:if test="@type='epithet'">
-                <xsl:text> (</xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>)</xsl:text>
-            </xsl:if>
-            <xsl:if test="@type='ladyName'">
-                <xsl:text> g. </xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>, </xsl:text>
-            </xsl:if>
-            <xsl:if test="@type='nickName'">
-                <xsl:text> (</xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>)</xsl:text>
-            </xsl:if>
-            <xsl:if test="@type='orthography'">
-                <xsl:text> (eller: </xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>)</xsl:text>
-            </xsl:if>
-            <xsl:if test="@type='original'">
-                <xsl:text> egl. </xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text>, </xsl:text>
-            </xsl:if>
-            <xsl:if test="@type='patronym'">
-                <xsl:apply-templates/>
-            </xsl:if>
-            <xsl:if test="@type='metronym'">
-                <xsl:apply-templates/>
-            </xsl:if>
-        </div>
-    </xsl:template>
-    
+  
+  <xsl:template match="tei:addName[@type='pre']">
+    <span class="pre">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+      
+  <xsl:template match="tei:addName">
+    <span class="addName">
+      <xsl:choose>
+        <xsl:when test="@type='birthName'">
+            <xsl:text> f. </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>, </xsl:text>                
+        </xsl:when>
+        <xsl:when test="@type='ladyName'">
+            <xsl:text> g. </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>, </xsl:text>
+        </xsl:when>
+        <xsl:when test="@type='original'">
+            <xsl:text> egl. </xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>, </xsl:text>
+        </xsl:when>
+        <!-- venstre spalte: -->
+        <xsl:when test="@type='epithet'">
+          <xsl:text> (</xsl:text>
+          <xsl:apply-templates/>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="@type='nickName'">
+          <xsl:text> (</xsl:text>
+          <xsl:apply-templates/>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="@type='orthography'">
+          <xsl:text> (eller: </xsl:text>
+          <xsl:apply-templates/>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="@type='patronym'">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:when test="@type='metronym'">
+          <xsl:apply-templates/>
+        </xsl:when>
+      </xsl:choose>
+    </span>
+  </xsl:template>
+  
     <xsl:template match="tei:cell[@rend='year']">
         <span class="year">
             (<xsl:apply-templates/>
