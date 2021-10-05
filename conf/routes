@@ -37,7 +37,6 @@ GET     /alfa                                   Application.alfa
 GET     /genre                                  Application.genre
 GET     /salmer                                 Application.salmer
 GET     /biblio/{fileName}                      ShowAsset.biblio
-
 GET     /ajax/getKommentar/{assetId}                          Ajax.getKommentar
 GET     /ajax/getVeiledning/{fileName}                        Ajax.getVeiledning
 GET     /ajax/getTxr/{id}                                     Ajax.getTxr
