@@ -44,11 +44,11 @@
                                 about = $(this).find('.row span.encyk').html();
                                 if ($(this).find(".altName").length > 0) {
                                     var gotoName = $(this).find(".gotoName").html();
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + ' ' + gotoName + '</a></td><!--td class="gotoName"></td--></tr>';
+                                    node = '<!--' + normAlfa(name) + ' --><tr><td class="navn"><a class="persNameRef" href="../personer#">' + name + ' ' + gotoName + '</a></td><!--td class="gotoName"></td--></tr>';
                                 } else { 
                                     var id = $(this).attr("id");
-                                    node = '<!--' + normAlfa(name) + '--><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + htmlName + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
-                                }
+                                    node = '<!--' + normAlfa(name) + ' --><tr><td class="navn"><a class="persNameRef" ' + 'id="' + id + '"href="../personer#">' + htmlName + '</a></td><td class="definisjon">' + year + addName + nation + ' ' + about + '<span>.</span></td></tr>';
+                                } // OBS space after normAlfa(name), sorts before hyphen, KK 2021-10-13
                                 $(this).remove(); // Letter found, don't test for this person again
                                 nodes.push(node);
                             }
