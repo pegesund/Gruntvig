@@ -19,6 +19,8 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@rend='edit']"/>
+    
     <xsl:template match="TEI:row">
         <div class="row myth" id="{@xml:id}">
             <xsl:apply-templates select="TEI:cell[1]"/> <!-- indgang: normForm, epithet, e.lign. standardpost -->

@@ -9,6 +9,8 @@
         KK, KSR: 2016.03.30: til netversionen
     -->
     
+    <xsl:template match="TEI:cell[@rend='edit']"/>
+    
     <xsl:template match="TEI:TEI">
         <div>
             <xsl:apply-templates select="//TEI:row"/>

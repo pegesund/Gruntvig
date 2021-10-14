@@ -759,9 +759,9 @@
                                                 <xsl:when test="//TEI:note[@type='minusCom']">
                                                     <xsl:text>GV forsyner ikke dette værk med verbalkommentarer</xsl:text>
                                                 </xsl:when>
-                                                <xsl:otherwise>
+                                                <!--xsl:otherwise>
                                                     <xsl:text>Punktkommentarer er </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
-                                                </xsl:otherwise>
+                                                </xsl:otherwise-->
                                             </xsl:choose>
                                         </div>
                                         <div>
@@ -1150,7 +1150,9 @@
     
     <xsl:template name="author">        
         <xsl:choose>
+            
             <!-- main title -->
+            
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and not(@prev)]">
                 N.F.S. Grundtvig
                 <i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i>
@@ -1167,7 +1169,9 @@
                 N.F.S. Grundtvig
                 <span><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text></span>
             </xsl:when>
+            
             <!-- part title -->
+            
             <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and not(@prev)]">
                 N.F.S. Grundtvig
                 &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
@@ -1183,6 +1187,25 @@
             <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and @next and not(@prev)]">
                 N.F.S. Grundtvig
                 &#x201C;<xsl:apply-templates select="//TEI:title[@rend='part']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='part']/@next"/><xsl:text>]</xsl:text>&#x201D;
+            </xsl:when>
+            
+            <!-- title altForm -->
+            
+            <xsl:when test="//TEI:title[@rend='altForm' and not(@rendition) and not(@next) and not(@prev)]">
+                N.F.S. Grundtvig
+                <xsl:apply-templates select="//TEI:title[@rend='altForm']"/>
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='altForm' and @rendition='supp']">
+                N.F.S. Grundtvig
+                [<xsl:apply-templates select="//TEI:title[@rend='altForm']"/>]
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='altForm' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
+                N.F.S. Grundtvig
+                <xsl:text>[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='altForm' and not(@rendition) and @next and not(@prev)]">
+                N.F.S. Grundtvig
+                <xsl:apply-templates select="//TEI:title[@rend='altForm']"/><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='altForm']/@next"/><xsl:text>]</xsl:text>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
@@ -1960,6 +1983,7 @@
                 </div>
                 <xsl:apply-templates select="TEI:div"/>
             </xsl:when>
+            
             <xsl:otherwise>
                 <div class="chapter">
                     <xsl:if test="@type">   
@@ -1968,7 +1992,6 @@
                                 <xsl:text> &#x2003;</xsl:text>
                             </xsl:for-each>
                             <xsl:value-of select="@type"/>
-                            <!-- &#x2003;<xsl:value-of select="TEI:pb[@type='text']/@n[position()=1]"/> -->
                         </xsl:attribute> 
                     </xsl:if>
                     <div>
