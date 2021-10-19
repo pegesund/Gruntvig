@@ -163,16 +163,16 @@ var hovedtekstSelect = 'Vis variant: #{variantsAsDropDown variants:variants /}';
 
                     </div>
               <span id="hjelp_link">
-                <a href="/pdf/${asset.rootName}_txt.pdf" onclick="return blank('pdf',this.href)" title="Printvenlig værktekst">
-                  <img src="/img/downloadSmall.jpg" alt="Hent"/>
-                  Værk
+                <a href="/pdf/${asset.rootName}_txt.pdf" onclick="return blank('pdf',this.href)" title="Printvenligt værk">
+                  <!--img src="/img/downloadSmall.jpg" alt="Hent"/-->
+                  Værk (PDF)
                 </a>
                 |
                   <a href="/pdf/${asset.xml.indexOf("noIntro")>=0 ? "noIntro" : asset.xml.substring( asset.xml.lastIndexOf( '"', asset.xml.indexOf("_intro.xml") )+1, asset.xml.indexOf( "_intro.xml" )+6 ) }.pdf"
                   onclick="return blank('pdf',this.href)"
                   title="Printvenlig indledning">
-                  <img src="/img/downloadSmall.jpg" alt="Hent"/>
-                  Indledning
+                  <!--img src="/img/downloadSmall.jpg" alt="Hent"/-->
+                  Indledning (PDF)
                 </a> <!-- KK 2021-10-04 -->
                 |
                 <a id="" href="../vejledning/om_udgaven_vej" target="_blank">
