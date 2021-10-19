@@ -1961,7 +1961,53 @@
         <xsl:apply-templates select="TEI:div"/>
     </xsl:template-->
     
-    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div">
+    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div[not(@type='Imprimatur')]">
+        <xsl:choose>
+            <xsl:when test="TEI:body[not(@xml:id) and @style='romanType']//TEI:div">
+                <div class="chapterRomanType">
+                    <xsl:if test="@type">   
+                        <xsl:attribute name="name">
+                            <xsl:for-each select="ancestor::TEI:div">
+                                <xsl:text> &#x2003;</xsl:text>
+                            </xsl:for-each>
+                            <xsl:value-of select="@type"/>
+                        </xsl:attribute> 
+                    </xsl:if>
+                    <div>
+                        <xsl:if test="//TEI:note[@type='marginNote']">
+                            <xsl:attribute name="class">mainColumn</xsl:attribute>
+                        </xsl:if>
+                        <xsl:apply-templates select="node()[local-name()!='div']"/>
+                        <xsl:call-template name="footnote"/>
+                    </div>
+                </div>
+                <xsl:apply-templates select="TEI:div"/>
+            </xsl:when>            
+            <xsl:otherwise>
+                <div class="chapter">
+                    <xsl:if test="@type">   
+                        <xsl:attribute name="name">
+                            <xsl:for-each select="ancestor::TEI:div">
+                                <xsl:text> &#x2003;</xsl:text>
+                            </xsl:for-each>
+                            <xsl:value-of select="@type"/>
+                        </xsl:attribute> 
+                    </xsl:if>
+                    <div>
+                        <xsl:if test="//TEI:note[@type='marginNote']">
+                            <xsl:attribute name="class">mainColumn</xsl:attribute>
+                        </xsl:if>
+                        <!-- otherwise superfluous div -->
+                        <xsl:apply-templates select="node()[local-name()!='div']"/>
+                        <xsl:call-template name="footnote"/>
+                    </div>
+                </div>
+                <xsl:apply-templates select="TEI:div"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:body[not(@xml:id)]//TEI:div[(contains(@type, 'Imprimatur'))]">
         <xsl:choose>
             <xsl:when test="TEI:body[not(@xml:id) and @style='romanType']//TEI:div">
                 <div class="chapterRomanType">
@@ -1983,9 +2029,8 @@
                 </div>
                 <xsl:apply-templates select="TEI:div"/>
             </xsl:when>
-            
             <xsl:otherwise>
-                <div class="chapter">
+                <div style="margin-top: 15em" class="chapter">
                     <xsl:if test="@type">   
                         <xsl:attribute name="name">
                             <xsl:for-each select="ancestor::TEI:div">
