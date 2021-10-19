@@ -450,11 +450,13 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="TEI:p">        
+    <xsl:template match="TEI:p">
         <div class="p">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+    
+    <xsl:template match="TEI:p[@rend='edit']"/>
     
     <xsl:template match="TEI:note[@type='aboutLit']">
         <div class="aboutLit">
@@ -464,12 +466,12 @@
     
     <xsl:template match="TEI:note[@xml:id]">
         <div class="note" id="{@xml:id}">
-            <xsl:apply-templates select="TEI:p"/>
+            <xsl:apply-templates select="TEI:p[@rend='quote' or @rend='centerQuote' or @rend='firstQuote' or not(@rend)]"/>
             <!--<a href="" class="greenarrow_comments"> →</a>-->
         </div>
     </xsl:template>
    
-   <xsl:template match="TEI:note[@xml:id]/TEI:p">
+    <xsl:template match="TEI:note[@xml:id]/TEI:p[@rend='quote' or @rend='centerQuote' or @rend='firstQuote' or not(@rend)]">
        <div class="p">
            <xsl:apply-templates/>
            <xsl:choose>
