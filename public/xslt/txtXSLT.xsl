@@ -2303,7 +2303,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd']">
+    <xsl:template match="TEI:seg[@type and @n and @type!='comStart' and @type!='comEnd' and @type!='notNFSGstart' and @type!='notNFSGend']">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
                 <span class="seg">
@@ -2355,6 +2355,51 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="TEI:seg[@type='notNFSGstart' and @n]">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
+                <span title="Teksten er ikke skrevet af Grundtvig" class="segEnd">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
+                        <xsl:text>_</xsl:text>
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>&#x25B7;<xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="noSeg"><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="TEI:seg[@type='notNFSGend' and @n]">
+        <xsl:choose>
+            <xsl:when test="//TEI:notesStmt/TEI:note[@type='com']">
+                <span title="Teksten er ikke skrevet af Grundtvig" class="segEnd">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="replace(base-uri(), '.*?([0-9].*)_txt.xml$', '$1')" />
+                        <xsl:text>_</xsl:text>
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>&#x25C1;<xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="noSeg"><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!--xsl:template match="TEI:seg[@type='notNFSGstart' or @type='notNFSGend']">
+        <xsl:choose>
+            <xsl:when test="@type='notNFSGstart'">
+                <span title="Teksten er ikke skrevet af Grundtvig">&#x25B7;<xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:when test="@type='notNFSGend'">
+                <span title="Teksten er ikke skrevet af Grundtvig">&#x25C1;<xsl:apply-templates/></span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template-->
     
     <xsl:template match="TEI:p[@rend and not(@rend='hangingIndent') and not(@rend='hangingIndentPro')]">        
         <div class="{@rend}">
