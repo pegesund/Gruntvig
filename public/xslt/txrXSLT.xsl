@@ -982,6 +982,21 @@
         </xsl:choose>        
     </xsl:template>
     
+    <xsl:template match="TEI:cell[@cols or @rows]">
+        <xsl:choose>
+            <xsl:when test="@cols">
+                <td colspan="{@cols}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            <xsl:when test="@rows">
+                <td rowspan="{@rows}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="TEI:persName">
         <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
             <xsl:apply-templates/>
