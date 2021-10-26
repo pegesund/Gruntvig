@@ -37,12 +37,15 @@
                                 </li>
                             </a>
                         </xsl:for-each>
-                        <xsl:for-each select="TEI:item[(contains(@corresp, 'http'))]">
-                            
+                        <xsl:for-each select="TEI:item[@corresp='noPDF']">                            
                             <li class="simple">
                                 <xsl:apply-templates/>
                             </li>
-                            
+                        </xsl:for-each>
+                        <xsl:for-each select="TEI:item[(contains(@corresp, 'http'))]">                            
+                            <li class="simple">
+                                <xsl:apply-templates/>
+                            </li>
                         </xsl:for-each>
                     </ul>
                 </xsl:for-each>
