@@ -332,6 +332,12 @@ ul
         margin-right: 8em;
         text-align: right;
         }
+        
+#tekst_innhold div.blockIndentLeft
+        {        
+        margin-left: 1em;
+        text-align: justify;
+        }
 
 /* indent p END */
         
@@ -357,6 +363,11 @@ a.endNoteRef
 #tekst_innhold .chapter
         {
         margin: 0px 34px;
+        }
+                 
+#tekst_innhold .imprimatur
+        {
+        margin: 35px 34px;
         }
                  
 #tekst_innhold .chapterRomanType
@@ -448,6 +459,12 @@ a.endNoteRef
 #tekst_innhold .asteriskUp
         {
         margin: 1em 0em 0em 1em;
+        }
+
+#tekst_innhold .left
+        {
+        margin: 0em;
+        text-align: left;
         }
 
 /* grapic END */
@@ -1019,6 +1036,14 @@ a:active.index
         width: 15%;
         }
 
+#tekst_innhold td.index21left
+        {
+        border: 0px solid black;        
+        text-align: right;
+        padding: 10px;
+        width: 15%;
+        }
+
 /* table index rendition="21" END */
 
 /* table index rendition="31" START */
@@ -1062,6 +1087,14 @@ a:active.index
         width: 15%;
         }
 
+#tekst_innhold td.index31left
+        {
+        border: 0px solid black;        
+        text-align: right;
+        padding: 10px;
+        width: 15%;
+        }
+
 /* table index rendition="31" END */
 
 /* table index rendition="32" START */
@@ -1090,6 +1123,14 @@ a:active.index
         }
 
 #tekst_innhold td.index32:nth-child(3)
+        {
+        border: 0px solid black;        
+        text-align: right;
+        padding: 10px;
+        width: 15%;
+        }
+
+#tekst_innhold td.index32left
         {
         border: 0px solid black;        
         text-align: right;
@@ -1128,6 +1169,14 @@ a:active.index
         {
         border: 0px solid black;        
         text-align: right;
+        padding: 10px;
+        width: 60%;
+        }
+
+#tekst_innhold td.index33left
+        {
+        border: 0px solid black;        
+        text-align: left;
         padding: 10px;
         width: 60%;
         }

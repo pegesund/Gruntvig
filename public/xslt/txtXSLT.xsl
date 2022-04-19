@@ -95,6 +95,12 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.17'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2021</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.18'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, november 2021</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.19'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2022</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
@@ -163,6 +169,27 @@
                                     <xsl:when test="//TEI:idno[@type='addCom']='1.12'">
                                         <xsl:text>, 3. april 2018</xsl:text>
                                     </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.13'">
+                                        <xsl:text>, 1. november 2018</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.14'">
+                                        <xsl:text>, 1. april 2019</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.15'">
+                                        <xsl:text>, 3. december 2019</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.16'">
+                                        <xsl:text>, 2. november 2020</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.17'">
+                                        <xsl:text>, 7. juni 2021</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.18'">
+                                        <xsl:text>, 1. november 2021</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
+                                        <xsl:text>, 2. maj 2022</xsl:text>
+                                    </xsl:when>
                                 </xsl:choose>
                             </xsl:if>
                         </xsl:variable>
@@ -223,6 +250,21 @@
                                                     </xsl:when>
                                                     <xsl:when test="//TEI:idno[@type='addCom']='1.14'">
                                                         <xsl:text>, april 2019</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.15'">
+                                                        <xsl:text>, december 2019</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.16'">
+                                                        <xsl:text>, november 2020</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.17'">
+                                                        <xsl:text>, juni 2021</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.18'">
+                                                        <xsl:text>, november 2021</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
+                                                        <xsl:text>, maj 2022</xsl:text>
                                                     </xsl:when>
                                                 </xsl:choose>
                                             </xsl:when>
@@ -1029,6 +1071,21 @@
                     <xsl:when test="//TEI:idno[@type='addCom']='1.14'">
                         <xsl:text>, april 2019</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.15'">
+                        <xsl:text>, december 2019</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.16'">
+                        <xsl:text>, november 2020</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.17'">
+                        <xsl:text>, juni 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.18'">
+                        <xsl:text>, november 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
+                        <xsl:text>, maj 2022</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -1085,6 +1142,21 @@
                     </xsl:when>
                     <xsl:when test="//TEI:idno[@type='addIntro']='1.14'">
                         <xsl:text>, april 2019</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.15'">
+                        <xsl:text>, december 2019</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.16'">
+                        <xsl:text>, november 2020</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.17'">
+                        <xsl:text>, juni 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.18'">
+                        <xsl:text>, november 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.19'">
+                        <xsl:text>, maj 2022</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </xsl:when>
@@ -1143,6 +1215,21 @@
                     <xsl:when test="//TEI:idno[@type='addTxr']='1.14'">
                         <xsl:text>, april 2019</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.15'">
+                        <xsl:text>, december 2019</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.16'">
+                        <xsl:text>, november 2020</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.17'">
+                        <xsl:text>, juni 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.18'">
+                        <xsl:text>, november 2021</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.19'">
+                        <xsl:text>, maj 2022</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -1151,7 +1238,7 @@
     <xsl:template name="author">        
         <xsl:choose>
             
-            <!-- main title -->
+            <!-- main title  -->
             
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and not(@prev)]">
                 N.F.S. Grundtvig
@@ -1282,6 +1369,12 @@
         </xsl:if>
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.17'">
             <xsl:text>, juni 2021</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.18'">
+            <xsl:text>, november 2021</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.19'">
+            <xsl:text>, maj 2022</xsl:text>
         </xsl:if>
     </xsl:template>
     
@@ -2872,6 +2965,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            
+            <xsl:when test="@rend">
+                <td class="index21{@rend}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            
             <xsl:when test="following-sibling::TEI:seg">
                 <td class="index21" colspan="{@cols}">
                     <xsl:apply-templates/>
@@ -2933,6 +3033,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            
+            <xsl:when test="@rend">
+                <td class="index31{@rend}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            
             <xsl:when test="following-sibling::TEI:seg">
                 <td class="index31" colspan="{@cols}">
                     <xsl:apply-templates/>
@@ -2989,6 +3096,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            
+            <xsl:when test="@rend">
+                <td class="index32{@rend}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            
             <xsl:when test="following-sibling::TEI:seg">
                 <td class="index32" colspan="{@cols}">
                     <xsl:apply-templates/>
@@ -3045,6 +3159,13 @@
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
+            
+            <xsl:when test="@rend">
+                <td class="index33{@rend}">
+                    <xsl:apply-templates/>
+                </td>
+            </xsl:when>
+            
             <xsl:when test="position()&gt;4">
                 <td class="index33">
                     <xsl:apply-templates/>
@@ -3338,6 +3459,11 @@
         <xsl:choose>
             <xsl:when test="@style='longLine' and @rend='firstIndentRight'">
                 <div class="firstIndentRight">
+                    <hr align="left" width="16%"/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@style='longLine' and @rend='left'">
+                <div class="left">
                     <hr align="left" width="16%"/>
                 </div>
             </xsl:when>
