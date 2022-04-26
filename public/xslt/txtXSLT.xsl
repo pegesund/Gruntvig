@@ -1637,6 +1637,11 @@
             <xsl:when test="@rend='space3'">
                 &#x2003;&#x2003;&#x2003;
             </xsl:when>
+            <xsl:when test="@rend='nGem'">
+                <span style="text-decoration: overline">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     
