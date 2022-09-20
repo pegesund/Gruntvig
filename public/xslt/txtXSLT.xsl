@@ -1000,6 +1000,11 @@
             <xsl:when test="@type='uncertain'">
                 <span class="uncertain" title="Usikker læsning"><xsl:apply-templates/></span>
             </xsl:when>
+            <xsl:when test="@type='lacuna'">
+                <br/>
+                <div style="text-align: center" title="lakune">[...]</div>
+                <br/>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     
