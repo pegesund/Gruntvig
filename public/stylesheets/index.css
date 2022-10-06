@@ -1808,7 +1808,7 @@ span.placeNameRef
 
 /* seg og noSeg START */
 
-.seg
+.seg, .segStart, .segEnd
         {
         color: #4DBC4D;
         cursor: help;
