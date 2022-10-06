@@ -133,7 +133,9 @@
             <xsl:call-template name="listAuthor">
                 <xsl:with-param name="type" select="'translator'"/>
             </xsl:call-template>
-            <xsl:text>.</xsl:text>
+            <xsl:if test="TEI:cell[@type='translator'][position()=last()]='.'">
+                <xsl:text> </xsl:text>
+            </xsl:if>            
         </span>
     </xsl:template>
     
@@ -333,13 +335,13 @@
                     <xsl:text>, </xsl:text>
                 </span>
             </xsl:when>
-            <xsl:otherwise>
+            <!--xsl:otherwise>
                 <span>
                     <xsl:text>bind </xsl:text>
                     <xsl:apply-templates/>
                     <xsl:text>. </xsl:text>
                 </span>
-            </xsl:otherwise>
+            </xsl:otherwise-->
         </xsl:choose>
         <!-- pro END -->
     </xsl:template>

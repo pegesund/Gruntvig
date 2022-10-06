@@ -1257,6 +1257,10 @@
                 N.F.S. Grundtvig
                 <span><xsl:text>[Anmeldelse af] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i></span>
             </xsl:when>
+            <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and not(@next) and @prev='Subskriptionsindbydelse til']">
+                N.F.S. Grundtvig
+                <span><xsl:text>[Subskriptionsindbydelse til] </xsl:text><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i></span>
+            </xsl:when>
             <xsl:when test="//TEI:title[@rend='main' and not(@rendition) and @next and not(@prev)]">
                 N.F.S. Grundtvig
                 <span><i><xsl:apply-templates select="//TEI:title[@rend='main']"/></i><xsl:text> [</xsl:text><xsl:value-of select="//TEI:title[@rend='main']/@next"/><xsl:text>]</xsl:text></span>
@@ -1275,6 +1279,10 @@
             <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Anmeldelse af']">
                 N.F.S. Grundtvig
                 <xsl:text>&#x201C;[Anmeldelse af] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
+            </xsl:when>
+            <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and not(@next) and @prev='Subskriptionsindbydelse til']">
+                N.F.S. Grundtvig
+                <xsl:text>&#x201C;[Subskriptionsindbydelse til] </xsl:text><xsl:apply-templates select="//TEI:title[@rend='part']"/>&#x201D;
             </xsl:when>
             <xsl:when test="//TEI:title[@rend='part' and not(@rendition) and @next and not(@prev)]">
                 N.F.S. Grundtvig
@@ -3103,23 +3111,6 @@
             </xsl:when>
             <xsl:when test="@cols">
                 <td class="index32" colspan="{@cols}">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-            
-            <xsl:when test="@rend">
-                <td class="index32{@rend}">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-            
-            <xsl:when test="following-sibling::TEI:seg">
-                <td class="index32" colspan="{@cols}">
-                    <xsl:apply-templates/>
-                </td>
-            </xsl:when>
-            <xsl:when test="position()&lt;6">
-                <td class="index32">
                     <xsl:apply-templates/>
                 </td>
             </xsl:when>
