@@ -111,7 +111,7 @@
             
             <xsl:when test="@rend='part' and not(@rendition) and not(@next) and not(@prev)">
                 &#x201C;<xsl:apply-templates/>&#x201D;<xsl:call-template name="delimiter"/>
-            </xsl:when>
+            </xsl:when> 
             <xsl:when test="@rend='part' and @rendition='supp'">
                 &#x201C;[<xsl:apply-templates/>]&#x201D;<xsl:call-template name="delimiter"/>
             </xsl:when>
