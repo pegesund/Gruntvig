@@ -801,9 +801,9 @@
                                                 <xsl:when test="//TEI:note[@type='minusCom']">
                                                     <xsl:text>GV forsyner ikke dette værk med verbalkommentarer</xsl:text>
                                                 </xsl:when>
-                                                <!--xsl:otherwise>
+                                                <xsl:otherwise>
                                                     <xsl:text>Punktkommentarer er </xsl:text><xsl:value-of select="$authorCom"/><xsl:value-of select="$editorCom"/>
-                                                </xsl:otherwise-->
+                                                </xsl:otherwise>
                                             </xsl:choose>
                                         </div>
                                         <div>
