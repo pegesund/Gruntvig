@@ -152,16 +152,18 @@ keepOldScrollPosition = function(options) {
  * 
  * Opens up a new column and fills this with content
  * 
+ * <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> KSR: fanen
  * 
+ * newReader +=  '<div id="variant' + num + '"><div class="variant_select">' + hovedtekstSelect + ' <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>'; KSR: selve div med indholdet 
  */
 addNewReader = function(num) {
     var options = arguments[1] || {};
     uriChangeTab(num,0); 
-    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li> <li><a class="variant_tab" href="#variant' + num + '"><span>Varianter</span></a></li> <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Fax.</span></a></li> <li><a href="#txr' + num + '"><span>Tekstred.</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><span class="ui-closable-tab"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></span></li> </ul> ';
+    var newReader = '<span class="tabReader"><div id="tab' + num + '"> <ul> <li class="selected"><a href="#innledning' + num + '"><span>Indledning</span></a></li>  <li><a class="faksimile_tab" href="#faksimile' + num + '"><span>Faksimiler</span></a></li> <li><a href="#txr' + num + '"><span>Tekstredegørelse</span></a></li><li><a class="kommentar_tab" href="#kommentar' + num + '"><span>Kommentarer</span></a></li> <li id="lukk_kolonne_knapp_li"><span class="ui-closable-tab"><a title="Skjul kolonne" href="#skjul' + num + '" class="lukk_kolonne_knapp"></a></span></li> </ul> ';
     newReader += '<div id="innledning' + num + '"> <div class="innledningContent text-resizeable"><p><img src="public/images/wait.gif"></p></div></div>';
-    newReader +=  '<div id="variant' + num + '"><div class="variant_select">' + hovedtekstSelect + ' <a id="variant_vejledning" href="../vejledning/varapp_vej" target="_blank">Vejledning</a></div><div class="variantContent text-resizeable">Variant content</div>  </div>';
+    
     newReader += '<div id="faksimile' + num + '" class="faksimile_frame" ><div class="faksimile_select"><a class="forrige_side" href="#">Forrige side</a> | <a class="neste_side" href="#">Næste side</a></div> <div class="faksimileContent"></div></div>';
-    newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal txr ligge...  </div>';
+    newReader += '<div class="txr text-resizeable" id="txr' + num + '"> Her skal tekstredegørelsen ligge...  </div>';
     newReader += '<div class="kommentar text-resizeable" id="kommentar' + num + '"> Her skal kommentarene ligge...  </div>';
     newReader += '<div class="empty_tab" id="skjul' + num + '"></div>';
     newReader += '</div></span>';
