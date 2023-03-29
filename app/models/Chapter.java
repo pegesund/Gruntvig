@@ -187,7 +187,7 @@ public class Chapter extends GenericModel {
                     Node node = nodes.item(i);
                     // System.out.println("Chapter node: " + Helpers.nodeToString(node));
                     // System.out.println("---------------------------------------------------");
-                    String name = "- afsnit mangler titel - " + (i + 0);
+                    String name = "[Kolofon]";
                     if (i == 0) {
                         name = "[Kolofon]";
                     }
