@@ -441,7 +441,7 @@
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <a href="{@target}" target="_blank">
+                <a href="img/{@target}" target="_blank">
                     <xsl:apply-templates/>
                 </a>
             </xsl:otherwise>
