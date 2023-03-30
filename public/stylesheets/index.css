@@ -392,7 +392,7 @@ a.returnTop
 #footer #logo_footer:hover {opacity: 1;}
 
 #footer #columns{ float:right; height: 200px; }
-#footer #columns ul{ float:left; width: 172px; margin:35px 0 0 20px; height: 150px; }
+#footer #columns ul{ float:left; width: 166px; margin:35px 0 0 20px; height: 150px; }
 #footer #columns ul li{ padding: 4px 0; }
 #footer #columns a { color:#aaa; font-size:1.4em; text-decoration: none; font-weight:normal;}
 #footer #columns a:hover { color:#eee; text-decoration: underline; }
