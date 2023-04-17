@@ -690,7 +690,7 @@ a.endNoteRef
         
 #tekst_innhold .l_refrain
         {
-        margin-left: -1em;
+        margin-left: 0em;
         }
 
 #tekst_innhold .l_secondIndent
@@ -777,7 +777,7 @@ a.endNoteRef
         
 #tekst_innhold .l_refrain
         {
-        margin-left: -1em;
+        margin-left: 0em;
         }
 
 #tekst_innhold .l_secondIndent
