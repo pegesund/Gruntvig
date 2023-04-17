@@ -89,6 +89,12 @@ div.landKort
         font-style: italic;
         }
 
+.raised
+        {
+        font-size: 80%;
+        vertical-align: super;
+        }
+
 .item
         {
         margin: 1em 1em 1em 1em;
