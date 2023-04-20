@@ -32,7 +32,7 @@
     <xsl:template match="TEI:ref">
         <xsl:choose>
             <xsl:when test="@type='pdf'">
-                <a href="img/{@corresp}" target="_blank" onclick="return blank('vejledning',this.href)">
+                <a href="img/{@corresp}" target="_blank">
                     <div>
                         <xsl:apply-templates></xsl:apply-templates>
                     </div>
