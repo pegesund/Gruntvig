@@ -435,7 +435,7 @@
     
     <xsl:template match="TEI:ref[@type='web']">
         <xsl:choose>
-            <xsl:when test="contains(@target, 'pubpub') or starts-with(@target, 'I-1') or starts-with(@target, 'I-2') or starts-with(@target, 'II-1') or starts-with(@target, 'II-2') or starts-with(@target, 'III-') or starts-with(@target, 'IV-') or starts-with(@target, 'V-') or starts-with(@target, 'VI-') or starts-with(@target, 'VII-') or starts-with(@target, 'VIII-') or starts-with(@target, 'IX-') or starts-with(@target, 'X-') or starts-with(@target, 'XI-') or starts-with(@target, 'XII-') or starts-with(@target, 'XIII-') or starts-with(@target, 'XIV-') or starts-with(@target, 'XV-') or starts-with(@target, 'XVI-') or starts-with(@target, 'XVII-') or starts-with(@target, 'XVIII-') or starts-with(@target, 'XIV-') or starts-with(@target, 'XV-') or starts-with(@target, 'XVI-') or starts-with(@target, 'XVII-') or starts-with(@target, 'XVIII-') or starts-with(@target, 'XIX-') or starts-with(@target, 'XX-') or starts-with(@target, 'XXI-') or starts-with(@target, 'XXII-') or starts-with(@target, 'XXIII-') or starts-with(@target, 'XXIV-') or starts-with(@target, 'XXV-') or starts-with(@target, 'XXVI-') or starts-with(@target, 'XXVII-') or starts-with(@target, 'XXVIII-')">
+            <xsl:when test="contains(@target, 'pubpub')">
                 <span>
                     <xsl:apply-templates/>
                 </span>
