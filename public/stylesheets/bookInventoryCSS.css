@@ -12,7 +12,9 @@
         {
         font-size: 24px;
         font-weight: bold;
-        margin: 0.5em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 0.5em;
         vertical-align: middle;
         text-decoration: none;
         }
