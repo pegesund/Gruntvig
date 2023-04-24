@@ -32,10 +32,10 @@
     <xsl:template match="TEI:ref">
         <xsl:choose>
             <xsl:when test="@type='pdf'">
-                <a href="img/{@corresp}" target="_blank">
-                    <div>
+                <a href="img/{@corresp}" target="_blank" style="text-decoration: none">
+                    <span class="PDF">
                         <xsl:apply-templates></xsl:apply-templates>
-                    </div>
+                    </span>
                 </a>
             </xsl:when>
         </xsl:choose>
