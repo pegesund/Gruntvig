@@ -620,6 +620,12 @@
                                                 <xsl:text>, </xsl:text>
                                             </i>                                    
                                         </xsl:if>
+                                        <xsl:if test="TEI:lem/@wit='A'">
+                                            <i>
+                                                <xsl:value-of select="TEI:lem/@wit"/>
+                                                <xsl:text>, </xsl:text>
+                                            </i>                                    
+                                        </xsl:if>
                                         <xsl:if test="TEI:rdg[not(@type) and not(child::TEI:g)]">
                                             <xsl:apply-templates select="TEI:rdg[not(@type) and not(child::TEI:g)]"/>
                                         </xsl:if>
