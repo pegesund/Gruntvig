@@ -180,7 +180,7 @@ ul
 #tekst_innhold .descList
         {
         font-style: italic;
-        margin-left: -1.5em;
+        margin-left: 0.3em;
         }
 
 #tekst_innhold .num, #tekst_innhold .vol
