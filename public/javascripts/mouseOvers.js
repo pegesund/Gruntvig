@@ -142,10 +142,10 @@ var addDocOutListener = function() {
                     openTab = 0;
                     break;
                 case "txr" :
-                    openTab = 3;
+                    openTab = 2;
                     break;
                 case "com" :
-                    openTab = 4;
+                    openTab = 3;
                     break;
             }
             if (/v[0-9]+/.test(link[1]))
