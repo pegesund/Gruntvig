@@ -3005,7 +3005,7 @@
             </xsl:when>
             <xsl:when test="parent::TEI:row[@corresp]">
                 <td class="index21{@rend}">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])-1};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -3073,7 +3073,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <td class="index31{@rend}">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])-1};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -3119,7 +3119,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <td class="index32">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)">
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])-1};gotoChapter(currentTextId,currentChapter)">
                         <xsl:apply-templates/>
                     </a>
                 </td>
@@ -3182,7 +3182,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <td class="index33">
-                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
+                    <a class="index" onclick="currentChapter={$chp-id+count(//TEI:front[@rend])-1};gotoChapter(currentTextId,currentChapter)"> <!-- title="Kap.nr.{$chp-id}+{count(//TEI:front[@rend])}"-->
                         <xsl:apply-templates/>
                     </a>
                 </td>
