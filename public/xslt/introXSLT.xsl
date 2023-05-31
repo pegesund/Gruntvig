@@ -598,14 +598,14 @@
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
-            <xsl:when test="@type='docOut' and starts-with(@target, '18')">
+            <xsl:when test="@type='docOut'">
                 <a class="docOut">
                     <xsl:attribute name="name">
                         <xsl:value-of select="@target"/>
-                    </xsl:attribute>           
-                    <xsl:apply-templates/>         
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
                 </a>
-            </xsl:when>            
+            </xsl:when>
             <xsl:when test="@type='docOut' and contains(@target, 'vej.xml')">
                 <a href="vejledning/{substring-before(@target,'.xml')}" onclick="return blank('vejledning',this.href)">
                     <xsl:apply-templates/>
