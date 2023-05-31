@@ -414,13 +414,13 @@
                         </xsl:attribute>
                     <xsl:apply-templates/>
                     </span>
-                </xsl:when>                   
+                </xsl:when>
                 <xsl:when test="@type='docOut'">
                     <a class="docOut">
                         <xsl:attribute name="name">
                             <xsl:value-of select="@target"/>
-                        </xsl:attribute>           
-                        <xsl:apply-templates/>         
+                        </xsl:attribute>
+                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
                  <xsl:when test="@type='epiText'">
@@ -439,6 +439,11 @@
                 <span>
                     <xsl:apply-templates/>
                 </span>
+            </xsl:when>
+            <xsl:when test="contains(@target, 'http')">
+                <a href="{@target}" target="_blank">
+                    <xsl:apply-templates/>
+                </a>
             </xsl:when>
             <xsl:otherwise>
                 <a href="img/{@target}" target="_blank">
