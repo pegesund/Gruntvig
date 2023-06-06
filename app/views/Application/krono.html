@@ -49,7 +49,7 @@
     nodes.push(node);
     partName.html( partName.text() );
     partName.find('desc').each( function() {
-    var partUrl= url + '#\u007b\"0\":0,\"k\":' + $(this).find('ident').text() + '\u007d',
+    var partUrl= url + '#\u007b\"0\":0,\"k\":' + ($(this).find('ident').text() -1) + '\u007d',
     partLabel= $(this).find('label').text(),
     partYear= $(this).find('date').text(),
     partSj= $(this).find('idno').text(),
