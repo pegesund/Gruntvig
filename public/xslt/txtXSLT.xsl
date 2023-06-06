@@ -104,6 +104,12 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.19'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2022</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.20'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, november 2022</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.21'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2023</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
