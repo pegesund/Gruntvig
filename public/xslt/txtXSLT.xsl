@@ -2614,48 +2614,6 @@
             </tr>
         </table>
     </xsl:template>
-    
-    <!--xsl:template match="TEI:p">
-        <xsl:choose>
-            <xsl:when test="TEI:p[not(contains(@rend, 'space')) and not(@rend='hangingIndent')]">     
-                <div class="{@rend}">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:when test="TEI:p[@rend='hangingIndentPro' and not(@n)]">
-                <div class="hangingIndentPro">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:when test="TEI:p[@rend='hangingIndentPro' and @n]">
-                <table class="proverb">
-                    <tr valign="top">
-                        <td class="proverbNo">
-                            <xsl:value-of select="@n"/>
-                        </td>
-                        <td class="proverb">
-                            <xsl:apply-templates/>
-                        </td>
-                    </tr>
-                </table>
-            </xsl:when>
-            <xsl:when test="TEI:p[(contains(@rend, 'space'))]">
-                <div class="{@rend}">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:when test="TEI:p[@rend='hangingIndent']">
-                <div class="hangingIndent">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <div class="{@rend}">
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template-->
 
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp')]"> 
         <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="A">|</span>
@@ -2677,55 +2635,99 @@
             </span>
     </xsl:template>
     
-    <xsl:template match="TEI:pb[@type='edition']">
-        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="{@ed}">|</span>
-        <span id="{generate-id()}" class="appInvisible">
-            <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-        </span>
-    </xsl:template>
-
+    <!-- sidetal ikke suppleret -->
     <xsl:template match="TEI:pb[@type='text' and not(@rend='supp') and not(parent::TEI:seg)]"> 
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
-            <span class="pb{@ed}">
-            <xsl:text>|</xsl:text>
+            <span class="pb{@ed}" title="sidetal">
+                <xsl:text>|</xsl:text>
                 <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
             </span>
         </a>        
     </xsl:template>
     
+    <!-- sidetal suppleret -->
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
-            <span class="pb{@ed}">
-            <xsl:text>|</xsl:text>
+            <span class="pb{@ed}" title="sidetal">
+                <xsl:text>|</xsl:text>
+                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+            </span>
+        </a>  
+    </xsl:template>
+    
+    <!-- spaltenummer ikke suppleret -->
+    <xsl:template match="TEI:pb[@type='text' and @subtype='column' and not(@rend='supp') and not(parent::TEI:seg)]"> 
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}" title="spaltenummer">
+                <xsl:text>|</xsl:text>
+                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+            </span>
+        </a>        
+    </xsl:template>
+    
+    <!-- spaltenummer suppleret -->
+    <xsl:template match="TEI:pb[@type='text' and @subtype='column' and @rend='supp']">
+        <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
+            <span class="pb{@ed}" title="spaltenummer">
+                <xsl:text>|</xsl:text>
                 [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
             </span>
         </a>  
     </xsl:template>
     
     <xsl:template match="TEI:pb[@type='edition']">
-        <span class="pb{@ed}">
-            <xsl:text>|</xsl:text>
+        <span onclick="showhidePb('{generate-id()}')" style="cursor:pointer" title="{@ed}">|</span>
+        <span id="{generate-id()}" class="appInvisible">
             <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
         </span>
     </xsl:template>
     
-    <!--xsl:template match="TEI:pb[@type='epiText']">
-        <span class="pb{@ed}">
-            <a class="pdf"
-                href="img/{@facs}"
-                onclick="return blank('epi',this.href)">                
-                <xsl:text>|</xsl:text>
-                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>                
-            </a>
-        </span>       
+    <xsl:template match="TEI:pb[@type='edition']">
+        <xsl:choose>
+            <xsl:when test="@ed='Gskv'">
+                <span class="pb{@ed}" title="Grundtvigs skoleverden">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='DU'">
+                <span class="pb{@ed}" title="Dag- og Udtogsbøger">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='GSV'">
+                <span class="pb{@ed}" title="Grundtvigs Sang-Værk">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='PS'">
+                <span class="pb{@ed}" title="Poetiske Skrifter">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='Rønning'">
+                <span class="pb{@ed}" title="Fr. Rønnings oversættelse">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='US'">
+                <span class="pb{@ed}" title="Udvalgte Skrifter">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@ed='VU'">
+                <span class="pb{@ed}" title="Værker i Udvalg">
+                    <xsl:text>|</xsl:text>
+                    <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
-        
-    <xsl:template match="TEI:seg/TEI:pb">
-            <span class="size">
-                <xsl:text>|</xsl:text>
-                <xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>
-            </span>
-    </xsl:template-->
     
     <xsl:template name="delimiterComma">
         <xsl:text>, </xsl:text>
