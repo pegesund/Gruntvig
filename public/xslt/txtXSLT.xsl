@@ -110,6 +110,9 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.21'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2023</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.22'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, november 2023</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
@@ -199,6 +202,15 @@
                                     <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
                                         <xsl:text>, 2. maj 2022</xsl:text>
                                     </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.20'">
+                                        <xsl:text>, 1. november 2022</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.21'">
+                                        <xsl:text>, 15. maj 2023</xsl:text>
+                                    </xsl:when>
+                                    <xsl:when test="//TEI:idno[@type='addCom']='1.22'">
+                                        <xsl:text>, 1. november 2023</xsl:text>
+                                    </xsl:when>
                                 </xsl:choose>
                             </xsl:if>
                         </xsl:variable>
@@ -274,6 +286,15 @@
                                                     </xsl:when>
                                                     <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
                                                         <xsl:text>, maj 2022</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.20'">
+                                                        <xsl:text>, 1. november 2022</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.21'">
+                                                        <xsl:text>, 15. maj 2023</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:when test="//TEI:idno[@type='addCom']='1.22'">
+                                                        <xsl:text>, 1. november 2023</xsl:text>
                                                     </xsl:when>
                                                 </xsl:choose>
                                             </xsl:when>
@@ -1100,6 +1121,15 @@
                     <xsl:when test="//TEI:idno[@type='addCom']='1.19'">
                         <xsl:text>, maj 2022</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.20'">
+                        <xsl:text>, 1. november 2022</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.21'">
+                        <xsl:text>, 15. maj 2023</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addCom']='1.22'">
+                        <xsl:text>, 1. november 2023</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -1172,6 +1202,15 @@
                     <xsl:when test="//TEI:idno[@type='addIntro']='1.19'">
                         <xsl:text>, maj 2022</xsl:text>
                     </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.20'">
+                        <xsl:text>, 1. november 2022</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.21'">
+                        <xsl:text>, 15. maj 2023</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addIntro']='1.22'">
+                        <xsl:text>, 1. november 2023</xsl:text>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
@@ -1243,6 +1282,15 @@
                     </xsl:when>
                     <xsl:when test="//TEI:idno[@type='addTxr']='1.19'">
                         <xsl:text>, maj 2022</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.20'">
+                        <xsl:text>, 1. november 2022</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.21'">
+                        <xsl:text>, 15. maj 2023</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="//TEI:idno[@type='addTxr']='1.22'">
+                        <xsl:text>, 1. november 2023</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </xsl:when>
@@ -1397,6 +1445,15 @@
         </xsl:if>
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.19'">
             <xsl:text>, maj 2022</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.20'">
+            <xsl:text>, november 2022</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.21'">
+            <xsl:text>, maj 2023</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.22'">
+            <xsl:text>, november 2023</xsl:text>
         </xsl:if>
     </xsl:template>
     
