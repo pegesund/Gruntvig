@@ -325,7 +325,7 @@
     <xsl:template match="TEI:figure">
         <xsl:choose>
             <xsl:when test="@type='image'">
-                <img src="public/images/{TEI:graphic/@url}" alt="Billede mangler" width="469" height="645"/>
+                <img src="public/images/{TEI:graphic/@url}" alt="Billede mangler" width="{TEI:graphic/@width}" height="{TEI:graphic/@height}"/>
                 <div style="margin-top: 2em; margin-bottom: 2em">
                     <xsl:call-template name="figDesc"/>
                 </div>
