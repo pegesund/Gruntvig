@@ -355,7 +355,7 @@
     
     <!--
     <xsl:template match="TEI:ref[@target and not(@select)]">
-        <span class="ref">
+        <span class="ref"> 
             <a href="{@target}" target="_blank">
                 <xsl:apply-templates/>
             </a>
