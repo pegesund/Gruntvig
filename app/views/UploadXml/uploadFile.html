@@ -6,7 +6,7 @@
 <br/>
 <p>
     ${asset.fileName} ${asset.type}: Slik ser den ut:
-    #{if asset.type=='root' && !asset.fileName.matches(/^[0-9][0-9][0-9][0-9]_[0-9]+[A-Za-z]?_.*/)}
+    #{if asset.type=='root' && !asset.fileName.matches(/^[0-9][0-9][0-9][0-9]_[0-9]+[A-Za-z]*_.*/)}
        <span style="color:red"> OBS: Filnavn er ikke (år)_(SJ)_...xml</span>
     #{/if}
 </p>
