@@ -152,7 +152,7 @@ h5 {font-size: 1.4em; text-transform: uppercase;}
 
 /* tekst til registre START */
 
-p.alfaText
+p.alfaText, p.kronoText
         {
         font-size: 18px;
         line-height: 145%;
