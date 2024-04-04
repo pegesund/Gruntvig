@@ -113,10 +113,19 @@
                             <xsl:when test="//TEI:idno[@type='firstUpload']='1.22'">
                                 <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, november 2023</xsl:text>
                             </xsl:when>
+                            <xsl:when test="//TEI:idno[@type='firstUpload']='1.23'">
+                                <xsl:text>Offentliggjort i</xsl:text> <i><xsl:text> Grundtvigs Værker </xsl:text></i> <xsl:text>første gang i version </xsl:text><xsl:value-of select="//TEI:idno[@type='firstUpload']"/><xsl:text>, maj 2024</xsl:text>
+                            </xsl:when>
                         </xsl:choose>
                     </div>
                     
                     <div class="kolofon">
+                        
+                        <xsl:variable name="addTxt">
+                            <xsl:if test="//TEI:idno[@type='addTxt']">
+                                <xsl:value-of select="//TEI:idno[@type='addTxt']"/>
+                            </xsl:if>
+                        </xsl:variable>
                         
                         <xsl:variable name="addCom">
                             <xsl:if test="//TEI:idno[@type='addCom']">
@@ -218,6 +227,15 @@
                         <xsl:choose>
                             <!-- 1 AAA -->
                             <xsl:when test="($addCom=$addIntro) and ($addIntro=$addTxr)">
+                                
+                                <xsl:if test="$addTxt!=''">
+                                    <div>
+                                        <xsl:text>Tilføjet SJ:</xsl:text><xsl:value-of select="//TEI:idno[@type='addTxt']/@n"/> <xsl:text> i version </xsl:text>
+                                        <xsl:value-of select="$addTxt"/>
+                                        <xsl:call-template name="dateAddTxt"/>
+                                    </div>
+                                </xsl:if>
+                                
                                 <xsl:if test="$addCom!=''">
                                     <div>
                                         <xsl:text>Tilføjet punktkommentarer, indledning og tekstredegørelse i version </xsl:text><xsl:value-of select="$addCom"/>
@@ -336,6 +354,15 @@
                                     </xsl:when>
                                     <!-- 9 ABB -->
                                     <xsl:when test="$addIntro=$addTxr">
+                                        
+                                        <xsl:if test="$addTxt!=''">
+                                            <div>
+                                                <xsl:text>Tilføjet SJ:</xsl:text><xsl:value-of select="//TEI:idno[@type='addTxt']/@n"/> <xsl:text> i version </xsl:text>
+                                                <xsl:value-of select="$addTxt"/>
+                                                <xsl:call-template name="dateAddTxt"/>
+                                            </div>
+                                        </xsl:if>
+                                        
                                         <xsl:if test="$addCom!=''">
                                             <div>
                                                 <xsl:text>Tilføjet punktkommentarer i version </xsl:text><xsl:value-of select="$addCom"/>
@@ -1054,6 +1081,19 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template name="dateAddTxt">
+        <xsl:choose>
+            <xsl:when test="//TEI:idno[@type='addTxt']">
+                <xsl:choose>
+                    <!-- først taget i brug i version 1.23 -->
+                    <xsl:when test="//TEI:idno[@type='addTxt']='1.23'">
+                        <xsl:text>, maj 2024</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template name="dateAddCom">
         <xsl:choose>
             <xsl:when test="//TEI:idno[@type='addCom']">
@@ -1454,6 +1494,9 @@
         </xsl:if>
         <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.22'">
             <xsl:text>, november 2023</xsl:text>
+        </xsl:if>
+        <xsl:if test="//TEI:idno[@type='changeVersion'][position()=last()]='1.23'">
+            <xsl:text>, maj 2024</xsl:text>
         </xsl:if>
     </xsl:template>
     
