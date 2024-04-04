@@ -137,13 +137,30 @@ div[id=tekst_innhol] * p { font-size: 1em; } /* fix font size i Asset */
 
 /* udkom VTH tekster 206 og 211 TEST p {font-size: 1.7em; }*/
 
-h1, h2, h3, h4, h5 {line-height: 1.2em; font-family: georgia, garamond, serif; margin: 8px 0;}
+h1, h2, h3, h4, h
+        {
+        line-height: 1.2em;
+        font-family: georgia, garamond, serif;
+        margin: 8px 0;
+        }
 
 h1 {font-size: 2.8em;}
 h2 {font-size: 2.4em;}
 h3 {font-size: 2em;}
 h4 {font-size: 1.6em; text-transform: uppercase;}
 h5 {font-size: 1.4em; text-transform: uppercase;}
+
+/* tekst til registre START */
+
+p.alfaText
+        {
+        font-size: 18px;
+        line-height: 145%;
+        text-align: justify;
+        margin: 1.5em 2.5em 2.5em 0;
+        }
+
+/* tekst til registre END */
 
 a:link, a:visited
         {
