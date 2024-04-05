@@ -33,7 +33,7 @@
     sjA= "";
     else
     sj= sj.substr(0,sj.length-1); // fjern evt. A (virker også med B)
-    sj= "    ".concat(sj).substr( -4, 4 ); // forlæng med blanke til 4 tegn
+    sj= "     ".concat(sj).substr( -5, 5 ); // forlæng med blanke til 4 tegn
     if( sjSub) sjSub= "  ".concat(sjSub).substr( -2, 2 ); // forlæng med blanke til 2 tegn
     sj= sj + (sjA ? sjA : "") + (sjSub ? "<!--" + sjSub + "-->" : " ");
     // ***********************************************************************************
