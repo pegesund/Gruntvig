@@ -191,11 +191,11 @@
 
 /* p rend quote START */
         
-.innledningContent .quote, .innledningContent .quoteFirst, .innledningContent .quoteCenter
+.innledningContent .quote, .innledningContent .quoteNo, .innledningContent .quoteFirst, .innledningContent .quoteSecond .innledningContent .quoteCenter
         {
         font-size: 90%;
         line-height: 125%;
-        margin: 1em 2em 1em 2em;
+        margin: 0em 2em 0em 2em;
         }
         
 .innledningContent .quote
