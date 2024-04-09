@@ -1302,6 +1302,7 @@ a:active.index
 
 #tekst_innhold .pbA
         {
+        display: inline-block;
         font-weight: bold;
         }
 
