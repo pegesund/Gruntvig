@@ -250,7 +250,7 @@
     </xsl:template>
     
     <xsl:template name="figDesc">
-        <div style="font-size: 75%; text-align: center">
+        <div style="font-size: 75%; text-align: justify">
             <xsl:apply-templates select="TEI:figDesc"/>
         </div>
     </xsl:template>
