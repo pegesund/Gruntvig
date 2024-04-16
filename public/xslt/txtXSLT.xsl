@@ -2692,8 +2692,7 @@
     <xsl:template match="TEI:pb[@type='text' and @rend='supp']">
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="pb{@ed}" title="sidetal">
-                <xsl:text>|</xsl:text>
-                [<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+                <xsl:text>|</xsl:text><xsl:text>[</xsl:text><xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/><xsl:text>]</xsl:text>
             </span>
         </a>  
     </xsl:template>
@@ -2711,7 +2710,7 @@
     <xsl:template match="TEI:pb[@type='text' and @subtype='column' and @rend='supp']">
         <a hrel="{@facs}" class="app faksimile_viewer" style="cursor:pointer">
             <span class="pb{@ed}" title="spaltenummer">
-                <xsl:text>|</xsl:text>[<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/>]
+                <xsl:text>|</xsl:text>[<xsl:value-of select="@ed"/>:<xsl:value-of select="@n"/><xsl:text>]</xsl:text>
             </span>
         </a>  
     </xsl:template>
