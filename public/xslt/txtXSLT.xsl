@@ -2777,12 +2777,22 @@
         <xsl:text>.</xsl:text>
     </xsl:template>
     
-    <xsl:template match="TEI:persName">
+    <xsl:template match="TEI:persName[@type='persNameStart' or @type='persNameEnd' or not(@ytype)]">
         <xsl:choose>
             <xsl:when test="//TEI:notesStmt/TEI:note[@type='noPersName']">
                 <span>
                     <xsl:apply-templates/>
                 </span>
+            </xsl:when>
+            <xsl:when test="@type='persNameStart'">
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    &#x25BA;<xsl:apply-templates/>
+                </a>
+            </xsl:when>
+            <xsl:when test="@type='persNameEnd'">
+                <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
+                    <xsl:apply-templates/>&#x25C4;
+                </a>
             </xsl:when>
             <xsl:otherwise>
                 <a class="persName" href="ajax/getReference/{@key}" rel="ajax/getReference/{@key}">
