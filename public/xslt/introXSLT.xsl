@@ -590,7 +590,7 @@
                 </a>
             </xsl:when-->
             <xsl:when test="@type='image'">
-                <a href="img/{$newTarget}">
+                <a href="img/{$newTarget}" target="_blank">
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
